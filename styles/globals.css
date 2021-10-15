@@ -14,3 +14,175 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.navigation {
+  font-size: 16px !important;
+  font-family: Facit-BoldItalic !important;
+  margin: 0 30p !important;
+}
+
+.navigation .nav-item .nav-link {
+  color: #fff;
+  margin-right: 15px;
+}
+
+.separador_menu {
+  color: #fff;
+  font-family: Facit-Lightc;
+  font-size: 30px;
+}
+
+.navigation .nav-item .nav-link:hoover {
+  background-color: #03adb6e8;
+
+  color: #fff;
+  border-radius: 5px;
+  transition: ease-in 0.5s;
+  transition-delay: 0.9s;
+}
+
+@font-face {
+  font-family: Facit-Regular;
+  src: url("/fonts/Facit_Regular.otf");
+}
+
+@font-face {
+  font-family: Facit-BoldItalic;
+  src: url("/fonts/Facit_bold_Italic.otf");
+}
+
+@font-face {
+  font-family: Facit-Lightc;
+  src: url("/fonts/Facit_Light.otf");
+}
+
+.vertical_text {
+  /* transform: rotate(-90deg);   */
+  color: #fff;
+
+  position: absolute;
+  z-index: 3;
+}
+
+.rotate {
+  transform: rotate(-90deg);
+
+  /* Legacy vendor prefixes that you probably don't need... */
+  /* Safari */
+  -webkit-transform: rotate(-90deg);
+  /* Firefox */
+  -moz-transform: rotate(-90deg);
+  /* IE */
+  -ms-transform: rotate(-90deg);
+  /* Opera */
+  -o-transform: rotate(-90deg);
+  /* Internet Explorer */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+.iconos {
+  color: rgb(107, 107, 107);
+  position: relative;
+  z-index: 3;
+}
+
+.menu_barras {
+  color: #fff;
+}
+
+.font_facit_title {
+  font-family: Facit-BoldItalic;
+  color: #ffffff;
+  text-align: left;
+  font-size: 90px;
+  line-height: 1;
+  font-weight: 500;
+  /* font-style: italic; */
+  letter-spacing: 4px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-transform: uppercase;
+  selector-locked: false;
+  text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
+}
+
+.font_facit_title_purple {
+  color: #e50067;
+}
+
+.font_facit_text {
+  font-family: Facit-BoldItalic;
+  color: #ffffff;
+  margin-bottom: 100px;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 1px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+  selector-locked: false;
+  text-transform: uppercase;
+}
+
+.font_facit_text1 {
+  font-family: Facit-Regular;
+  color: #ffffff;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.circulo {
+  background: #ffffff;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+.font_facit_text2 {
+  font-family: Facit-Regular;
+  color: #ffffff;
+
+  font-size: 16px;
+  /* font-weight: 400; */
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font_second_line1 {
+  font-family: Facit-BoldItalic;
+  color: #24325a;
+
+  font-size: 50px;
+  font-weight: 700;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font_second_line2 {
+  font-family: Facit-Regular;
+  color: #24325a;
+
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.margen_iconos_izquierda {
+  margin-right: 12px;
+}
