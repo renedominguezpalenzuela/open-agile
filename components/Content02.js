@@ -18,7 +18,8 @@ export default function Content02() {
         <div className="row div_content02 h-100 d-inline-block">
           {/* <div className="div_content02"></div> */}
           <Card01Lista />
-
+          <div className="row m-4">&nbsp;</div>
+          <div className="row m-4">&nbsp;</div>
           <div className="row  m-4 font_title2 justify-content-center">
             Innovation & Tradition
           </div>
