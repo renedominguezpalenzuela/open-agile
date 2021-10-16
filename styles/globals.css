@@ -1,5 +1,6 @@
 html,
 body {
+  overflow-x: hidden; /* Hide horizontal scrollbar */
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -97,7 +98,7 @@ a {
   font-size: 90px;
   line-height: 1;
   font-weight: 500;
-  /* font-style: italic; */
+
   letter-spacing: 4px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -185,4 +186,123 @@ a {
 
 .margen_iconos_izquierda {
   margin-right: 12px;
+}
+
+/* ----------------- Cards  -----------------------------*/
+
+.font_card_title {
+  font-family: Facit-BoldItalic;
+  color: #24325a;
+  /* font-style: italic; */
+  font-size: 30px;
+  /* font-weight: 100; */
+  text-transform: uppercase;
+  line-height: 90%;
+}
+
+.font_card_boton {
+  font-family: Facit-BoldItalic;
+  color: #ffffff;
+  /* font-style: italic; */
+  font-size: 13px;
+  /* font-weight: 100; */
+  text-transform: uppercase;
+  line-height: 250%;
+}
+
+.font_card_texto {
+  font-family: Facit-Regular;
+  color: #e42078;
+  /* font-style: italic; */
+  font-size: 18px;
+  /* font-weight: 100; */
+  text-transform: uppercase;
+  line-height: 90%;
+}
+
+.corte_cards {
+  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+}
+
+.my_card {
+  max-width: 330px;
+  height: 27rem;
+  webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  z-index: 3;
+}
+
+.div_content02 {
+  background-color: #24325a;
+  clip-path: polygon(0 2%, 100% 0%, 100% 97%, 0% 100%);
+  /* width: 100%;
+  height: 100%; */
+  /* height: 500px; */
+  /* top: -30px; */
+  /* position: relative; */
+  /* left: 30px; */
+}
+.boton_card {
+  background-color: #e50067;
+}
+
+.img-rounded {
+  -webkit-border-top-left-radius: 30px;
+  -webkit-border-top-right-radius: 30px;
+  -moz-border-radius-topleft: 30px;
+  -moz-border-radius-topright: 30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.color_background {
+  background-color: #24325a;
+}
+
+/* Debajo de cards */
+
+.font_title2 {
+  font-family: Facit-BoldItalic;
+  color: #ffffff;
+  /* font-style: italic; */
+  font-size: 35px;
+  /* font-weight: 100; */
+  text-transform: uppercase;
+  line-height: 90%;
+}
+
+.font_title3 {
+  font-family: Facit-Regular;
+  color: #e50067;
+
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 90%;
+}
+
+.font_title4 {
+  font-family: Facit-Regular;
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 100;
+
+  line-height: 250%;
+}
+
+.font_title5 {
+  font-family: Facit-Regular;
+  color: #ffffff;
+
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
 }

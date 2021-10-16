@@ -13,11 +13,12 @@ export default function Home() {
     <>
       <Head>
         <title>Main Page title</title>
-        <meta name="description" content="Carpe diem" />
+        <meta name="description" content="Lorem Ipsum" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       {/*Area superior  */}
+
       <div className={styles.banner}>
         <LeftColumnColor />
         <Content01 />

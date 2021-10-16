@@ -16,7 +16,7 @@ export default function MenuFlotante() {
             </h6>
             <button
               type="button"
-              className="btn-close text-reset"
+              className="btn-close"
               data-bs-dismiss="offcanvas"
               aria-label="Close"
             ></button>
@@ -27,77 +27,47 @@ export default function MenuFlotante() {
               id="menu"
             >
               <li className="nav-item">
-                <a href="#" className="nav-link text-truncate">
+                <a href="#second_line" className="nav-link text-truncate">
                   <i className="fs-5 bi-house"></i>
-                  <span className="ms-1 d-none d-sm-inline">Home</span>
+                  <span className="ms-1 d-none d-sm-inline">CRASHKURSE</span>
                 </a>
               </li>
+
               <li>
-                <a
-                  href="#submenu1"
-                  data-bs-toggle="collapse"
-                  className="nav-link text-truncate"
-                >
-                  <i className="fs-5 bi-speedometer2"></i>
-                  <span className="ms-1 d-none d-sm-inline">Dashboard</span>
+                <a href="#content02-final" className="nav-link text-truncate">
+                  <i className="fs-5 bi-table"></i>
+                  <span className="ms-1 d-none d-sm-inline">LEISTUNGEN</span>
                 </a>
               </li>
+
               <li>
                 <a href="#" className="nav-link text-truncate">
                   <i className="fs-5 bi-table"></i>
-                  <span className="ms-1 d-none d-sm-inline">Orders</span>
+                  <span className="ms-1 d-none d-sm-inline">TEAM</span>
                 </a>
-              </li>
-              <li className="dropdown">
-                <a
-                  href="#"
-                  className="nav-link dropdown-toggle  text-truncate"
-                  id="dropdown"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <i className="fs-5 bi-bootstrap"></i>
-                  <span className="ms-1 d-none d-sm-inline">Bootstrap</span>
-                </a>
-                <ul
-                  className="dropdown-menu text-small shadow"
-                  aria-labelledby="dropdown"
-                >
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      New project...
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Settings
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Profile
-                    </a>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Sign out
-                    </a>
-                  </li>
-                </ul>
               </li>
               <li>
                 <a href="#" className="nav-link text-truncate">
                   <i className="fs-5 bi-grid"></i>
-                  <span className="ms-1 d-none d-sm-inline">Products</span>
+                  <span className="ms-1 d-none d-sm-inline">VLOG</span>
                 </a>
               </li>
               <li>
                 <a href="#" className="nav-link text-truncate">
                   <i className="fs-5 bi-people"></i>
-                  <span className="ms-1 d-none d-sm-inline">Customers</span>
+                  <span className="ms-1 d-none d-sm-inline">BLOG</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" className="nav-link text-truncate">
+                  <i className="fs-5 bi-people"></i>
+                  <span className="ms-1 d-none d-sm-inline">NEWS</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" className="nav-link text-truncate">
+                  <i className="fs-5 bi-people"></i>
+                  <span className="ms-1 d-none d-sm-inline">JOBS</span>
                 </a>
               </li>
             </ul>
