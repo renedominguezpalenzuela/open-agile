@@ -4,8 +4,8 @@ import styles from "../styles/Home.module.css";
 
 export default function LeftColumnColor() {
   return (
-    <>
-      <div className={styles.left_column_color}></div>
-    </>
+<>
+  <div className={styles.left_column_color}></div>
+</>
   );
 }

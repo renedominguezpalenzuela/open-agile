@@ -11,6 +11,9 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import { useEffect } from "react";
@@ -18,7 +21,7 @@ import { useEffect } from "react";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false; /* eslint-disable import/first */
 
-library.add(fab, faPhone, faEnvelope, faBars);
+library.add(fab, faPhone, faEnvelope, faBars, faArrowLeft, faArrowRight);
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {

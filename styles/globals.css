@@ -16,6 +16,12 @@ a {
   box-sizing: border-box;
 }
 
+div.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
 .navigation {
   font-size: 16px !important;
   font-family: Facit-BoldItalic !important;
@@ -193,11 +199,11 @@ a {
 .font_card_title {
   font-family: Facit-BoldItalic;
   color: #24325a;
-  /* font-style: italic; */
-  font-size: 30px;
-  /* font-weight: 100; */
-  text-transform: uppercase;
-  line-height: 90%;
+  font-style: italic; 
+   font-size: 30px;
+  font-weight: 100;
+   text-transform: uppercase; 
+   line-height: 90%;
 }
 
 .font_card_boton {
@@ -230,14 +236,28 @@ a {
   object-fit: cover;
 }
 
+.my_card02 {
+  max-width: 80%;
+   height: 27rem; 
+  position: relative;
+ 
+  margin-top: 30px;
+  
+}
+
+.carousel-inner{
+  height: 50vh;
+}
 .my_card {
   max-width: 330px;
   height: 27rem;
-  webkit-border-radius: 30px;
+  /* webkit-border-radius: 30px; */
   -moz-border-radius: 30px;
   border-radius: 30px;
   z-index: 3;
 }
+
+
 
 .div_content02 {
   background-color: #24325a;
@@ -264,6 +284,10 @@ a {
 
 .color_background {
   background-color: #24325a;
+}
+
+.color_carrusel {
+  background-color: #EFF3F7;
 }
 
 /* Debajo de cards */
@@ -306,3 +330,68 @@ a {
   font-weight: 800;
   text-transform: uppercase;
 }
+
+.font_carrusel {
+  font-family: Facit-Regular;
+  color: #666666;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+ 
+}
+
+.img_carrusel {
+  position: relative;
+  left: -420px;
+  width: 35vw;
+  height: 100%;
+  
+  /* height: 380px; */
+  /* z-index: 2000 !important; */
+}
+
+.contenido_card {
+  position: relative;
+  /* top: -350px; */
+  top: -94%;
+  left: 80px;
+}
+
+.dimension_card {
+  left: 25px;
+  position: relative;
+  /* //max-height: min-content; */
+  width:45vw ;
+  height: 80vh;
+}
+
+.alto_carrusel {
+  position: relative;
+  height: 100vh;
+}
+
+
+/* .carousel-control-prev span.carousel-control-prev-icon,
+.carousel-control-next span.carousel-control-next-icon {
+  color: red; 
+} */
+
+
+/* .carousel-control-prev-icon { opacity:1 !important;color:red;} */
+
+
+	
+.carousel-control-prev-icon {
+  
+   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f79caf' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); 
+}
+
+.carousel-control-next-icon {
+
+   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f79caf' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"); 
+} 
+
+
+/* .carousel .carousel-indicators li {  background-color: gray; }
+.carousel .carousel-indicators li.active { background-color: var(--primary); } */

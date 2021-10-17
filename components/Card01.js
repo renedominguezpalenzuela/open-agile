@@ -12,12 +12,8 @@ export default function Card01({
     <>
       <div className="col">
         <div className="card card-rounded my_card">
-          {/* <!-- Image --> */}
-          <img
-            className="card-img-top corte_cards img-rounded "
-            src={`img/${imagen}`}
-            alt={"${texto_alt}"}
-          />
+          {/*                                                 <!-- Image --> */}
+          <img className="card-img-top corte_cards img-rounded "  src={`img/${imagen}`} alt={"${texto_alt}"}/>
           {/* <!-- Text Content --> */}
           <div className="card-body text-center">
             <p className="card-text font_card_title m-1">{titulo}</p>

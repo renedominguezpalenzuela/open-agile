@@ -7,6 +7,8 @@ import MenuFlotante from "../components/MenuFlotante";
 import Footer from "../components/Footer";
 import Content01 from "../components/Content01";
 import Content02 from "../components/Content02";
+import Carousel from "../components/Carousel";
+
 
 export default function Home() {
   return (
@@ -19,15 +21,27 @@ export default function Home() {
 
       {/*Area superior  */}
 
-      <div className={styles.banner}>
-        <LeftColumnColor />
-        <Content01 />
-      </div>
+      <div className="content-fluid">
+        <div className={styles.banner}>
+          <LeftColumnColor />
+          <Content01 />
+             
+        </div>
+        
+        
+      
 
-      <Content02 />
+         <Content02 /> 
 
-      <Footer />
+         
 
+       
+
+        <Carousel />
+
+         <Footer /> 
+
+</div>
       {/*Menu Lateral oculto  */}
       <MenuFlotante />
     </>
