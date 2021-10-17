@@ -6,20 +6,6 @@ let longitud_linea =50;
 
 
 
-
-
-function procesarTextoLargo (texto) {
-
- if (texto.length>longitud_linea)  {
-
-
-     return (<div><p>{texto.substring(0,longitud_linea)}-</p>{texto.substring(longitud_linea)}</div>);
- }
-
- return texto;
- 
-}
-
 export default function Card02({
   id,
   titulo,
@@ -104,3 +90,20 @@ export default function Card02({
 
   </>
   );}
+
+
+
+
+
+
+function procesarTextoLargo (texto) {
+
+ if (texto.length>longitud_linea)  {
+
+
+     return (<div><p>{texto.substring(0,longitud_linea)}-</p>{texto.substring(longitud_linea)}</div>);
+ }
+
+ return texto;
+ 
+}

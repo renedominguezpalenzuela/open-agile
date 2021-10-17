@@ -3,7 +3,7 @@ export default function Footer() {
 <>
       {/*   <!--Footer--> */}
   <footer className="color_background text-center text-md-start mt-5">
-    <div className="row m-4">&nbsp;</div>
+    
     <div className="container p-4">
       <div className="row">
         <div className="col-lg-6 ">

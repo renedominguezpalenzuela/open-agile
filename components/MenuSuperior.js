@@ -1,17 +1,24 @@
+//----------------------------------------------------------------------------------------------------------
+//           Menu superior
+//----------------------------------------------------------------------------------------------------------
+//TODO: Crear  componentes para cada elemento
+
+
 export default function MenuSuperior() {
   return (
 <>
-      {/*     <!-- Menu Superior--> */}
+      {/*       <!-- Menu Superior--> */}
   <div id="row03" className="row mt-3 d-none d-lg-block ">
     <nav className="navbar navbar-expand-lg navbar-light navigation">
-     {/*             <!--Elementos del menu--> */}
+
       <ul className="navbar-nav ">
-       {/*                 <!--Drop Down menu--> */}
+
         <li className="nav-item">
           <a className="nav-link" aria-current="page" href="#second_line">
                 CRASHKURSE
           </a>
         </li>
+
         <li className="nav-item">
           <div className="separador_menu">/</div>
         </li>
@@ -21,6 +28,7 @@ export default function MenuSuperior() {
                 LEISTUNGEN
           </a>
         </li>
+
         <li className="nav-item">
           <div className="separador_menu">/</div>
         </li>

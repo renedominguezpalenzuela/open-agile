@@ -1,16 +1,27 @@
 import styles from "../styles/Home.module.css";
 import Card02 from "./Card02";
 
-export default function Carousel(  ) {
+
+
+//----------------------------------------------------------------------------------------------------------
+//            Area de Contenido: Carousel
+//----------------------------------------------------------------------------------------------------------
+//Contiene: Carrusel
+//TODO: pasar como parametros los datos
+//Responsivo: ERROR, 
+//TODO: Crear reglas para cuando cambia de tamano mostrar cards normales
+
+
+export default function Content05 ( ) {
   return (
 <>
-    <div className="row m-4 ">&nbsp;</div>
+    {/* <div className="row m-4 ">&nbsp;</div> */}
 
-    <div id="MyCarouselTitle" className="row  border color_carrusel">
+    <div id="MyCarouselTitle" className="row   color_carrusel">
 
 
 
-            <div className="font_card_title mt-5 ms-4">UNSER BLOG</div>
+            <div className="font_title mt-5 ms-4">UNSER BLOG</div>
             <div className="font_card_texto mt-2 ms-4">NEW WORK, LEADERSHIP & MORE</div>
 
         <div id="MyCarousel" className="carousel slide " data-bs-ride="carousel" data-mdb-touch="true">
@@ -62,8 +73,8 @@ export default function Carousel(  ) {
 
 
 
-    <div className="row m-4">&nbsp;</div>
-    <div className="row m-4">&nbsp;</div>
+    {/* <div className="row m-4">&nbsp;</div>
+    <div className="row m-4">&nbsp;</div> */}
 
 </>
   );

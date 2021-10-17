@@ -3,7 +3,7 @@ export default function Content02Final() {
 <>
       {/*   <!--Footer--> */}
 
-  <div id="content02-final" className="row justify-content-center">
+  <div id="content02-final " className="row justify-content-center pb-5">
     <div className="col-lg-3 text-center m-2  ">
       <img src="img/heart.png" />
 
@@ -47,8 +47,8 @@ export default function Content02Final() {
             Geschäftsführung.
       </p>
     </div>
-    <div className="row m-4">&nbsp;</div>
-    <div className="row m-4">&nbsp;</div>
+
+    
   </div>
 </>
   );

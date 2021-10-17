@@ -1,7 +1,15 @@
+//----------------------------------------------------------------------------------------------------------
+//            Menu Flotante oculto
+//----------------------------------------------------------------------------------------------------------
+//TODO: poner transparente y de otro color
+//TODO: agregar path de recorte 
+//TODO: Arreglar los links
+//Responsividad: ERROR
+
 export default function MenuFlotante() {
   return (
 <>
-      {/*   <!-- Menu lateral oculto--> */}
+     
   <div className="opacity-40">
     <div className="offcanvas offcanvas-start w-25" tabIndex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
       <div className="offcanvas-header">

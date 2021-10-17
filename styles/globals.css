@@ -63,6 +63,14 @@ div.sticky {
   src: url("/fonts/Facit_Light.otf");
 }
 
+
+@font-face {
+  font-family: Facit-Bold;
+  src: url("/fonts/Facit_Bold.otf");
+}
+
+
+
 .vertical_text {
   /* transform: rotate(-90deg);   */
   color: #fff;
@@ -194,6 +202,17 @@ div.sticky {
   margin-right: 12px;
 }
 
+
+
+.font_title {
+  font-family: Facit-Bold;
+  color: #24325a;
+  
+   font-size: 30px;
+  font-weight: 100;
+   text-transform: uppercase; 
+   line-height: 90%;
+}
 /* ----------------- Cards  -----------------------------*/
 
 .font_card_title {
@@ -259,16 +278,6 @@ div.sticky {
 
 
 
-.div_content02 {
-  background-color: #24325a;
-  clip-path: polygon(0 2%, 100% 0%, 100% 97%, 0% 100%);
-  /* width: 100%;
-  height: 100%; */
-  /* height: 500px; */
-  /* top: -30px; */
-  /* position: relative; */
-  /* left: 30px; */
-}
 .boton_card {
   background-color: #e50067;
 }
@@ -393,5 +402,73 @@ div.sticky {
 } 
 
 
+div.vertical-line{
+  width: 1px; /* Line width */
+  background-color: black; /* Line color */
+  height: 100%; /* Override in-line if you want specific height. */
+  float: left; /* Causes the line to float to left of content. 
+    You can instead use position:absolute or display:inline-block
+    if this fits better with your design */
+}
+
+
 /* .carousel .carousel-indicators li {  background-color: gray; }
 .carousel .carousel-indicators li.active { background-color: var(--primary); } */
+
+
+.color_fondo {
+  background-color: #eff3f7;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  
+}
+
+
+
+
+.div_content02a {
+  background-color: #24325a;
+  clip-path: polygon(0% 2%, 100% 0%, 100% 1000%, 0% 100%);
+  /* width: 100%;
+  height: 100%; */
+  /* height: 500px; */
+  /* top: -30px; */
+  /* position: relative; */
+  /* left: 30px; */
+}
+
+
+.div_content02b {
+  background-color: #24325a;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 97%, 0% 100%);
+  /* width: 100%;
+  height: 100%; */
+  /* height: 500px; */
+  /* top: -30px; */
+  /* position: relative; */
+  /* left: 30px; */
+}
+
+.div_content03a {
+  background-color: #EFF3F7; 
+  /* clip-path: polygon(0 2%, 100% 0%, 100% 97%, 0% 100%); */
+  /* width: 100%;
+  height: 100%; */
+  /* height: 500px; */
+  /* top: -30px; */
+  /* position: relative; */
+  /* left: 30px; */
+}
+
+.div_content03b {
+  background-color: #EFF3F7; 
+   clip-path: polygon(0 0%, 100% 0%, 100% 95%, 0% 100%); 
+  /* width: 100%;
+  height: 100%; */
+  /* height: 500px; */
+  /* top: -30px; */
+  /* position: relative; */
+  /* left: 30px; */
+}
+
+

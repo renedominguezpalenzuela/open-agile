@@ -25,7 +25,7 @@ export default function Card02({
     <div className="col-6">
       <div className="row">
       
-        <div className="col-11 border ">
+        <div className="col-11  ">
          
           <div className="card shadow bg-body m-5 p-5  ">
             <div className="">

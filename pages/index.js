@@ -7,8 +7,13 @@ import MenuFlotante from "../components/MenuFlotante";
 import Footer from "../components/Footer";
 import Content01 from "../components/Content01";
 import Content02 from "../components/Content02";
-import Carousel from "../components/Carousel";
+import Content03 from "../components/Content03";
+import Content04 from "../components/Content04";
+import Content05 from "../components/Content05";
 
+//----------------------------------------------------------------------------------------------------------
+//            Pagina inicial principal
+//----------------------------------------------------------------------------------------------------------
 
 export default function Home() {
   return (
@@ -25,23 +30,26 @@ export default function Home() {
         <div className={styles.banner}>
           <LeftColumnColor />
           <Content01 />
-             
         </div>
-        
-        
-      
 
-         <Content02 /> 
+        {/*Cards  */}
+        <Content02 />
 
-         
 
-       
+        {/*imagen  */}
+        <Content03 imagen="Testimonials_kunden-1.png"/>
 
-        <Carousel />
+        {/*Contenido  */}
+        <Content04/>
 
-         <Footer /> 
+        {/*Carrousel  */}
+        <Content05 />
 
-</div>
+
+        {/*Footer  */}
+        <Footer />
+
+      </div>
       {/*Menu Lateral oculto  */}
       <MenuFlotante />
     </>

@@ -1,10 +1,10 @@
 export default function Content02Texto() {
   return (
 <>
-      {/*           <!--Footer--> */}
+     
 
-  <div className="row justify-content-center">
-    <div className="row m-4">&nbsp;</div>
+  <div className="row mt-3 justify-content-center">
+   
     <div className="col-lg-6 text-center font_title4 m-4">
       <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -26,8 +26,7 @@ export default function Content02Texto() {
             sit…
       </p>
     </div>
-    <div className="row m-4">&nbsp;</div>
-    <div className="row m-4">&nbsp;</div>
+  
   </div>
 </>
   );

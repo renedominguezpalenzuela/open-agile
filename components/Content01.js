@@ -2,6 +2,14 @@ import BotonMenuFlotante from "./BotonMenuFlotante";
 import MenuSuperior from "./MenuSuperior";
 import IconosIzquierda from "./IconosIzquierda";
 
+
+//----------------------------------------------------------------------------------------------------------
+//            Area superior principal
+//----------------------------------------------------------------------------------------------------------
+// Contiene: Menu superior, Texto principal, Iconos de la izquierda, Boton de menu flotante
+//TODO: pasar como parametros el texto
+//TODO: Arreglar boton menu flotante, que no funciona como sticky
+
 export default function Content01() {
   return (
 <>
@@ -30,7 +38,7 @@ export default function Content01() {
                 TRAINING PEOPLE & TRANSFORMING CULTURES
             </p>
           </div>
-            {/*          <a className="btn btn-primary">Let's Start Your Journey </a> */}
+            
         </div>
       </div>
 
