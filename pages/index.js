@@ -13,13 +13,28 @@ import Content05 from "../components/Content05";
 
 import Card01Lista from "../components/Card01Lista";
 
+
+// import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
+
+
+
+
+
 import { servidor_url } from "../config";
+
+
 
 //----------------------------------------------------------------------------------------------------------
 //            Pagina inicial principal
 //----------------------------------------------------------------------------------------------------------
 
 export default function Home({cursos, servicios, blogs}) {
+
+
+
+
+
+
   return (
     <>
       <Head>
@@ -28,9 +43,18 @@ export default function Home({cursos, servicios, blogs}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+     
+
       {/*Area superior  */}
 
+   
+ 
       <div className="content-fluid">
+
+     
+
+    
+     
         <div className={styles.banner}>
           <LeftColumnColor />
           <Content01 />
@@ -50,8 +74,8 @@ export default function Home({cursos, servicios, blogs}) {
         <Content05 />
 
 
-        {/*   */}
-        <div className="row mt-5 pb-5">
+        {/* Servicios  */}
+        <div  id="services" className=" mt-5 ">
         <div className="font_title mt-1 ms-4"> LEISTUNGEN</div>
             <div className="font_card_texto mt-2 ms-4"> Lorem Ipsum</div>
           <Card01Lista lista_cards={servicios} />
@@ -59,8 +83,10 @@ export default function Home({cursos, servicios, blogs}) {
 
         {/*Footer  */}
         <Footer />
-      </div>
+      </div> 
       {/*Menu Lateral oculto  */}
+
+       {/* El menu eimina el scroll vertical */}
       <MenuFlotante />
     </>
   );

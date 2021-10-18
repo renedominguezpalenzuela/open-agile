@@ -6,11 +6,15 @@
 //TODO: Arreglar los links
 //Responsividad: ERROR
 
+
+
 export default function MenuFlotante() {
   return (
 <>
+
+
      
-  <div className="opacity-40">
+
     <div className="offcanvas offcanvas-start w-25" tabIndex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
       <div className="offcanvas-header">
         <h6 className="offcanvas-title d-none d-sm-block" id="offcanvas">
@@ -67,7 +71,7 @@ export default function MenuFlotante() {
         </ul>
       </div>
     </div>
-  </div>
+  
 </>
   );
 }

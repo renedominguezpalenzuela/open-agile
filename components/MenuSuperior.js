@@ -1,3 +1,5 @@
+
+
 //----------------------------------------------------------------------------------------------------------
 //           Menu superior
 //----------------------------------------------------------------------------------------------------------
@@ -10,15 +12,17 @@ export default function MenuSuperior() {
       {/*       <!-- Menu Superior--> */}
 
 
+
+
   <div id="row03" className="row p-3 ">
   <div className="col-10 d-none d-lg-block">
 
      <nav className="navbar navbar-expand-lg navbar-light navigation">
 
-      <ul className="navbar-nav ">
+      <ul className="navbar-nav">
 
         <li className="nav-item">
-          <a className="nav-link" aria-current="page" href="#second_line">
+          <a className="nav-link" aria-current="page" href="#course">
                 CRASHKURSE
           </a>
         </li>
@@ -28,7 +32,7 @@ export default function MenuSuperior() {
         </li>
 
         <li className="nav-item">
-          <a className="nav-link" aria-current="page" href="#content02-final">
+          <a className="nav-link" aria-current="page" href="#services">
                 LEISTUNGEN
           </a>
         </li>
@@ -54,7 +58,7 @@ export default function MenuSuperior() {
           <div className="separador_menu">/</div>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#MyCarousel">
+          <a className="nav-link" href="#blog">
                 BLOG
           </a>
         </li>

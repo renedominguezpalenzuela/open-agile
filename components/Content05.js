@@ -17,7 +17,7 @@ export default function Content05 ( ) {
 <>
     {/* <div className="row m-4 ">&nbsp;</div> */}
 
-    <div id="MyCarouselTitle" className="row   color_carrusel">
+    <div id="MyCarouselTitle" className="   color_carrusel">
 
     {/* <div className="row justify-content-left font_title mt-5 ms-4">
          Das Wichtigste

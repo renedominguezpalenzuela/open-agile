@@ -3,6 +3,7 @@ import Content02Texto from "./Content02Texto";
 import Content02Final from "./Content02Final";
 
 
+
 //----------------------------------------------------------------------------------------------------------
 //            Area de Contenido: Cards: CrashKURSE
 //----------------------------------------------------------------------------------------------------------
@@ -39,19 +40,19 @@ export default function Content02Cursos( {cursos}) {
 
   return (
 <>
-  <div className="column">
-    <div id="second_line" className="row text-center m-3">
+  {/* <div className="column"> */}
+    <div id="course" className="row text-center m-3">
       <h3 className="font_second_line1"> CRASHKURSE</h3>
       <h5 className="font_second_line2">
                 Lorem ipsum, dolor sit amet consectetur.
       </h5>
     </div>
-  </div>
+  {/* </div> */}
 
 
-  
 
-  {/*  <div className="color_fondo"> } */}
+
+
     <div className="row div_content02a h-100 d-inline-block ">
 
       <Card01Lista lista_cards={cursos}/>

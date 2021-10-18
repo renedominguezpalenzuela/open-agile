@@ -1,6 +1,7 @@
-import BotonMenuFlotante from "./BotonMenuFlotante";
+
 import MenuSuperior from "./MenuSuperior";
 import IconosIzquierda from "./IconosIzquierda";
+import MenuFlotanteBoton from "./MenuFlotanteBoton";
 
 
 //----------------------------------------------------------------------------------------------------------
@@ -15,9 +16,11 @@ export default function Content01() {
 <>
      
     <section>
+
+  
       <div id="row01" className="row">
         <div id="col01" className="col-md-1 mt-3 text-center position-relative ">
-          <BotonMenuFlotante />
+        <MenuFlotanteBoton color="white"/>
           <IconosIzquierda />
         </div>
 
