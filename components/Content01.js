@@ -13,7 +13,7 @@ import IconosIzquierda from "./IconosIzquierda";
 export default function Content01() {
   return (
 <>
-      {/*  <div className="container-fluid "> */}
+     
     <section>
       <div id="row01" className="row">
         <div id="col01" className="col-md-1 mt-3 text-center position-relative ">
@@ -21,10 +21,12 @@ export default function Content01() {
           <IconosIzquierda />
         </div>
 
-        <div id="col02" className="col-md-10 ms-4 ">
+        <div id="col02" className="col-md-10 ms-4">
           <MenuSuperior />
-            {/*                               <!-- Contenido Principal --> */}
-          <div className="row ms-3 mt-3">
+            {/* <!-- Contenido Principal --> */}
+
+
+          <div className="row ms-3 mt-3  d-none d-lg-block">
             <h1 id="title">
               <div className="font_facit_title">
                 <p>Dear future,</p>
@@ -38,12 +40,26 @@ export default function Content01() {
                 TRAINING PEOPLE & TRANSFORMING CULTURES
             </p>
           </div>
+
+          <div className="row ms-3 mt-3  d-lg-none">
+            <h1 id="title">
+               <div className="font_facit_title_small"> 
+                <p>Dear future,</p>
+                <p>we are ready</p>
+               </div> 
+               <span className="font_facit_title_small font_facit_title_purple"> 
+                  now.
+               </span> 
+            </h1>
+            <p className="font_facit_text  "> 
+                TRAINING PEOPLE & TRANSFORMING CULTURES
+             </p>
+          </div>
             
         </div>
       </div>
 
-        {/* 
-    </div> */}
+   
   </section>
 </>
   );

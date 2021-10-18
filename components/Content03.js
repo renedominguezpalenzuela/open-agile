@@ -2,7 +2,7 @@ import styles from "../styles/Home.module.css";
 
 
 //----------------------------------------------------------------------------------------------------------
-//            Area de Contenido: Imagen
+//            Area de Contenido: Imagen de Empresas
 //----------------------------------------------------------------------------------------------------------
 
 export default function Content03 ({imagen,texto_alt } ) {

@@ -19,7 +19,7 @@ export default function IconosIzquierda() {
     </div>
 
     <div className="row mt-3 d-none d-lg-block">
-      <a href="mailto:myemail@mail.com">
+      <a href="tel:03020123456">
         {/*        <i className="fa fa-phone   iconos circulo"></i> */}
         <FontAwesomeIcon icon="phone" width="32" className="circulo iconos" />
       </a>

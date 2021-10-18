@@ -1,15 +1,62 @@
- export default function Card03({
-  id,
-  titulo,
-  subtitulo,
-  texto,
-  imagen
-}) {
+import Card03Img from "./Card03Img";
+import Card03Text from "./Card03Text";
+
+
+
+function placeContenido(id, titulo, subtitulo, texto, imagen){
+ 
+
+  if (id % 2 == 0 ){
+     return (
+                <>
+                  <div className="col-5 me-5">
+                    <Card03Img  imagen={imagen} texto_alt={titulo} />
+                  </div>
+
+                
+
+                  <div className="col-6 ms-6">
+                    <Card03Text id={id} titulo={titulo} subtitulo={subtitulo} texto={texto}  />
+                  </div>
+                </>
+     );
+
+
+  } else {
+
+    return (
+               <>
+
+              
+                  <div className="col-6">
+                    <Card03Text id={id} titulo={titulo} subtitulo={subtitulo} texto={texto}  />
+                      
+                  </div>
+               
+
+                  <div className="col-6">
+                    <Card03Img  imagen={imagen} texto_alt={titulo} />
+                  </div>
+
+               </>
+     );
+
+  }
+
+ 
+  return 
+}
+
+
+export default function Card03({ id, titulo, subtitulo, texto, imagen }) {
   return (
-    <>
-      <div className="col">
-       
-      </div>
-    </>
+          <>
+             <div className="row justify-content-center m-4 p-5">
+
+
+                 {placeContenido(id, titulo, subtitulo, texto, imagen)}
+            
+            </div>
+          </>
   );
 }

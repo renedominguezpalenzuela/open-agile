@@ -8,8 +8,12 @@ export default function MenuSuperior() {
   return (
 <>
       {/*       <!-- Menu Superior--> */}
-  <div id="row03" className="row mt-3 d-none d-lg-block ">
-    <nav className="navbar navbar-expand-lg navbar-light navigation">
+
+
+  <div id="row03" className="row p-3 ">
+  <div className="col-10 d-none d-lg-block">
+
+     <nav className="navbar navbar-expand-lg navbar-light navigation">
 
       <ul className="navbar-nav ">
 
@@ -72,7 +76,14 @@ export default function MenuSuperior() {
           </a>
         </li>
       </ul>
-    </nav>
+    </nav> 
+    </div>
+
+
+    <div className="col d-flex  justify-content-center  ">
+      <img className="img-fluid  "  src="img/logo01.png" />
+    </div>
+
   </div>
 </>
   );

@@ -121,6 +121,23 @@ div.sticky {
   text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
 }
 
+.font_facit_title_small {
+  font-family: Facit-BoldItalic;
+  color: #ffffff;
+  text-align: left;
+  font-size: 45px;
+  line-height: 1;
+  font-weight: 500;
+
+  letter-spacing: 4px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-transform: uppercase;
+  selector-locked: false;
+  text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
+}
+
+
 .font_facit_title_purple {
   color: #e50067;
 }
@@ -471,4 +488,170 @@ div.vertical-line{
   /* left: 30px; */
 }
 
+
+
+
+.font_card03_id {
+
+  font-family: Facit-Bold;
+    color: #e50067;
+    margin-bottom: 0;
+    font-size: 50px;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.font_card03_title {
+
+  font-family: Facit-Bold;
+    color: #24325A;
+    margin-bottom: 0;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 39px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.font_card03_subtitle {
+
+  font-family: Facit-Regular;
+    color: #24325A;
+    margin-bottom: 0;
+    font-size: 15px;
+    font-weight: 100;
+    text-transform: uppercase;
+    line-height: 39px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+div.vertical-line{
+  width: 2px; /* Line width */
+  background-color: #E50067; /* Line color */
+  height: 100%; /* Override in-line if you want specific height. */
+  float: right; /* Causes the line to float to left of content. 
+    You can instead use position:absolute or display:inline-block
+    if this fits better with your design */
+    height: 100%;
+}
+
+  
+  
+
+.iconos2 {
+  color: #E50067;
+  /* width: 34px;
+  height: 34px; */
+  /* border-radius: 50%; */
+  /* text-align: center; */
+  /* line-height: 40px; */
+  /* vertical-align: text-top; */
+  /* padding: 10px; */
+}
+
+
+.font_facit_title_very_small {
+  font-family: Facit-BoldItalic;
+  color: #ffffff;
+  text-align: left;
+  font-size: 45px;
+
+  font-weight: 200;
+
+  letter-spacing: 2px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-transform: uppercase;
+  selector-locked: false;
+ 
+}
+
+
+.font_facit_text_small {
+  font-family: Facit-Regular;
+  color: #E50067;
+  text-align: left;
+  font-size: 16px;
+
+  font-weight: 200;
+
+  /* letter-spacing: 2px; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-transform: uppercase;
+  selector-locked: false;
+ 
+}
+
+
+
+.font_facit_text_very_small {
+  font-family: Facit-Regular;
+  color: #ffffff;
+  text-align: left;
+  font-size: 13px;
+
+  font-weight: 200;
+
+  /* letter-spacing: 2px; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  selector-locked: false;
+ 
+}
+
+
+.font_facit_text_very_small_gris {
+  font-family: Facit-Regular;
+  color: #cacaca;
+  text-align: left;
+  font-size: 11px;
+
+  font-weight: 200;
+
+  /* letter-spacing: 2px; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  selector-locked: false;
+ 
+}
+
+
+.font_facit_boton_small {
+  font-family: Facit-Regular;
+  color: #ffffff;
+  text-align: left;
+  font-size: 16px;
+
+  font-weight: 200;
+
+  /* letter-spacing: 2px; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  selector-locked: false;
+ 
+}
+
+.font_facit_text_very_very_small_gris {
+  font-family: Facit-Regular;
+  color: #cacaca;
+  text-align: left;
+  font-size: 11px;
+
+  font-weight: 200;
+
+  /* letter-spacing: 2px; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  selector-locked: false;
+ 
+}
 
