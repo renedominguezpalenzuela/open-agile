@@ -27,8 +27,8 @@ export default function Content05 ( ) {
         Rund um die Akademie     
     </div> */}
 
-            <div className="font_title mt-5 ms-4"> Das Wichtigste</div>
-            <div className="font_card_texto mt-2 ms-4"> Rund um die Akademie</div>
+        <div className="font_title mt-5 ms-4"> Das Wichtigste</div>
+        <div className="font_card_texto mt-2 ms-4"> Rund um die Akademie</div>
 
         <div id="MyCarousel" className="carousel slide " data-bs-ride="carousel" data-mdb-touch="true">
 
