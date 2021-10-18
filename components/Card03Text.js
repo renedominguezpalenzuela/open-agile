@@ -12,7 +12,7 @@ export default function Card03Text({ id, titulo, subtitulo, texto}) {
 
   <div className="row mt-3">
     <div className="col-1">
-      <div class="vertical-line"></div>
+      <div className="vertical-line"></div>
     </div>
     <div className="col">
       <div className="row">

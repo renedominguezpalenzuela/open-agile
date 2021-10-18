@@ -655,3 +655,25 @@ div.vertical-line{
  
 }
 
+.color_contactos {
+  color:#E50067;
+  font-family: Facit-Regular;
+   text-align: left;
+  font-size: 12px;
+
+/* 
+  font-weight: 200;
+
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;  */
+
+
+}
+
+.footer_path {
+  clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+
+

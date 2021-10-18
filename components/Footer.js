@@ -4,9 +4,9 @@ export default function Footer() {
   return (
 <>
 
-  <footer className="  mt-5">
+  <footer className="mt-5 ">
 
-    <div id="rowfoot01" className="row color_background  mt-5 p-5">
+    <div id="rowfoot01" className="row color_background footer_path  mt-5 p-5">
 
       <div id="colfoot01" className="col-4 ">
         <div className="font_facit_title_very_small">TAM NEWSLETTER</div>
@@ -30,7 +30,7 @@ export default function Footer() {
 
                     <input type="text" class="form-control" placeholder="Nachname"></input>
                   </div>
-                  <div class="col">
+                  <div class="col ">
 
                     <input type="text" class="form-control" placeholder="E-Mail-Adresse"></input>
                   </div>
@@ -93,9 +93,12 @@ export default function Footer() {
       </div>
       <div class="col">
         <div className="font_facit_text_very_small mt-3">KONTAKT</div>
-        <div className="mt-3">hello@trainer-akademie.de</div>
-        <div>030 20966749</div>
-        <div class="font_facit_text_very_very_small_gris">Mo-Fr. 10-18Uhr</div>
+      
+
+       <div className="row "> <a className="color_contactos mt-3" href="tel:03012345678">030 12345678</a></div>
+       <div className="row "> <a  className="color_contactos" href="mailto:mail@gmail.de">mail@gmail.de</a></div>
+      
+        {/* <div class="font_facit_text_very_very_small_gris">Mo-Fr. 10-18Uhr</div> */}
       </div>
 
 

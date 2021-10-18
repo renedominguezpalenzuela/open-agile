@@ -11,6 +11,8 @@ import Content03 from "../components/Content03";
 import Content04 from "../components/Content04";
 import Content05 from "../components/Content05";
 
+import Card01Lista from "../components/Card01Lista";
+
 //----------------------------------------------------------------------------------------------------------
 //            Pagina inicial principal
 //----------------------------------------------------------------------------------------------------------
@@ -35,20 +37,22 @@ export default function Home() {
         {/*Cards  */}
         <Content02 />
 
-
         {/*imagen  */}
-        <Content03 imagen="Testimonials_kunden-1.png"/>
+        <Content03 imagen="Testimonials_kunden-1.png" />
 
         {/*Contenido  */}
-        <Content04/>
+
+        <Content04 />
 
         {/*Carrousel  */}
         <Content05 />
 
+        <div className="row mt-5 pb-5">
+          <Card01Lista />
+        </div>
 
         {/*Footer  */}
         <Footer />
-
       </div>
       {/*Menu Lateral oculto  */}
       <MenuFlotante />
