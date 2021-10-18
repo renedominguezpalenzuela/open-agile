@@ -4,7 +4,7 @@ import IconosIzquierda from "./IconosIzquierda";
 
 
 //----------------------------------------------------------------------------------------------------------
-//            Area superior principal
+//            Area superior principal: 
 //----------------------------------------------------------------------------------------------------------
 // Contiene: Menu superior, Texto principal, Iconos de la izquierda, Boton de menu flotante
 //TODO: pasar como parametros el texto

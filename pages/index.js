@@ -6,18 +6,20 @@ import LeftColumnColor from "../components/LeftColumnColor";
 import MenuFlotante from "../components/MenuFlotante";
 import Footer from "../components/Footer";
 import Content01 from "../components/Content01";
-import Content02 from "../components/Content02";
+import Content02Cursos from "../components/Content02Cursos";
 import Content03 from "../components/Content03";
 import Content04 from "../components/Content04";
 import Content05 from "../components/Content05";
 
 import Card01Lista from "../components/Card01Lista";
 
+import { servidor_url } from "../config";
+
 //----------------------------------------------------------------------------------------------------------
 //            Pagina inicial principal
 //----------------------------------------------------------------------------------------------------------
 
-export default function Home() {
+export default function Home({cursos, servicios, blogs}) {
   return (
     <>
       <Head>
@@ -35,20 +37,24 @@ export default function Home() {
         </div>
 
         {/*Cards  */}
-        <Content02 />
+        <Content02Cursos cursos={cursos} />
 
         {/*imagen  */}
         <Content03 imagen="Testimonials_kunden-1.png" />
 
         {/*Contenido  */}
 
-        <Content04 />
+        <Content04  lista_cards={blogs}/>
 
         {/*Carrousel  */}
         <Content05 />
 
+
+        {/*   */}
         <div className="row mt-5 pb-5">
-          <Card01Lista />
+        <div className="font_title mt-1 ms-4"> LEISTUNGEN</div>
+            <div className="font_card_texto mt-2 ms-4"> Lorem Ipsum</div>
+          <Card01Lista lista_cards={servicios} />
         </div>
 
         {/*Footer  */}
@@ -59,3 +65,27 @@ export default function Home() {
     </>
   );
 }
+
+
+//Obteniendo los datos desde el servidor
+export const getServerSideProps = async (context) => {
+
+  const url = `${servidor_url}/api/cursos`;
+  const res = await fetch(url); 
+  const cursos = await res.json();
+
+  const url2 = `${servidor_url}/api/servicios`;
+  const res2 = await fetch(url2); 
+  const servicios = await res2.json();
+
+
+  const url3 = `${servidor_url}/api/blog`;
+  const res3 = await fetch(url3); 
+  const blogs = await res3.json();
+
+  return {
+    props: {
+      cursos, servicios, blogs
+    },
+  };
+};

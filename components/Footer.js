@@ -20,29 +20,29 @@ export default function Footer() {
           <div id="colfoot03" className="col-9">
             <div id="rowfoot04" className="row">
               <form>
-                <div class="row ">
+                <div className="row ">
 
-                  <div class="col">
+                  <div className="col">
 
-                    <input type="text" class="form-control" placeholder="Vorname"></input>
+                    <input type="text" className="form-control" placeholder="Vorname"></input>
                   </div>
-                  <div class="col">
+                  <div className="col">
 
-                    <input type="text" class="form-control" placeholder="Nachname"></input>
+                    <input type="text" className="form-control" placeholder="Nachname"></input>
                   </div>
-                  <div class="col ">
+                  <div className="col ">
 
-                    <input type="text" class="form-control" placeholder="E-Mail-Adresse"></input>
+                    <input type="text" className="form-control" placeholder="E-Mail-Adresse"></input>
                   </div>
 
                 </div>
 
                 <div className="row pt-3">
-                  <div class="col">
+                  <div className="col">
 
                     <div className="form-check">
                       <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"></input>
-                      <label className="form-check-label font_facit_text_very_small" for="defaultCheck1">
+                      <label className="form-check-label font_facit_text_very_small" >
                          Ja, ich bin einverstanden.*
                       </label>
                     </div>
@@ -77,7 +77,7 @@ export default function Footer() {
 
     <div id="rowfoot05" className="row color_background g-5 p-5">
 
-      <div class="col">
+      <div className="col">
         <div>
           <img className="img-fluid  " src='img/logo01.png' />
         </div>
@@ -91,7 +91,7 @@ export default function Footer() {
         </div>
 
       </div>
-      <div class="col">
+      <div className="col">
         <div className="font_facit_text_very_small mt-3">KONTAKT</div>
       
 
@@ -103,9 +103,9 @@ export default function Footer() {
 
 
 
-      <div class="col">
+      <div className="col">
         <div className="font_facit_text_very_small mt-3">DIE TAM</div>
-        <div class="font_facit_text_very_very_small_gris mt-3">
+        <div className="font_facit_text_very_very_small_gris mt-3">
         <div >About TAM</div>
         <div>Trainings</div>
         <div>Das Team</div>
@@ -115,18 +115,18 @@ export default function Footer() {
       </div>
 
 
-      <div class="col">
+      <div className="col">
         <div className="font_facit_text_very_small mt-3">AUSBILDUNGEN & PROGRAMME</div>
-        <div class="font_facit_text_very_very_small_gris mt-3">
+        <div className="font_facit_text_very_very_small_gris mt-3">
         <div>Business Trainer Ausbildung</div>
         <div>Leadership Programm</div>
         <div>New Work Faciliator</div>
         </div>
       </div>
 
-      <div class="col">
+      <div className="col">
          <div className="font_facit_text_very_small mt-3">TRAININGS</div>
-          <div class="font_facit_text_very_very_small_gris mt-3">
+          <div className="font_facit_text_very_very_small_gris mt-3">
         <div>Training as A Service</div>
         <div>Masterclass Organisationscoaching</div>
         </div>
@@ -135,22 +135,22 @@ export default function Footer() {
     </div>
 
     <div id="rowfoot06" className="row color_background p-5 font_facit_text_very_very_small_gris">
-      <div class="col-4">
+      <div className="col-4">
       </div>
-      <div class="col">
+      <div className="col">
          Kontakt
       </div>
-      <div class="col">
+      <div className="col">
          AGB
       </div>
-      <div class="col">
+      <div className="col">
         Impressum
       </div>
-      <div class="col">
+      <div className="col">
         Datenschutz
       </div>
 
-      <div class="col-4">
+      <div className="col-4">
       </div>
 
     </div>

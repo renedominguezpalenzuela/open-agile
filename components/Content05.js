@@ -4,7 +4,7 @@ import Card02 from "./Card02";
 
 
 //----------------------------------------------------------------------------------------------------------
-//            Area de Contenido: Carousel
+//            Area de Contenido: Carousel: BLOG
 //----------------------------------------------------------------------------------------------------------
 //Contiene: Carrusel
 //TODO: pasar como parametros los datos
@@ -19,10 +19,16 @@ export default function Content05 ( ) {
 
     <div id="MyCarouselTitle" className="row   color_carrusel">
 
+    {/* <div className="row justify-content-left font_title mt-5 ms-4">
+         Das Wichtigste
+    </div>
 
+    <div className="row justify-content-left font_card_texto mt-2 ms-4">
+        Rund um die Akademie     
+    </div> */}
 
-            <div className="font_title mt-5 ms-4">UNSER BLOG</div>
-            <div className="font_card_texto mt-2 ms-4">NEW WORK, LEADERSHIP & MORE</div>
+            <div className="font_title mt-5 ms-4"> Das Wichtigste</div>
+            <div className="font_card_texto mt-2 ms-4"> Rund um die Akademie</div>
 
         <div id="MyCarousel" className="carousel slide " data-bs-ride="carousel" data-mdb-touch="true">
 
