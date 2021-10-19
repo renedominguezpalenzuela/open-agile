@@ -104,7 +104,6 @@ export const getServerSideProps = async (context) => {
   const res2 = await fetch(url2); 
   const servicios = await res2.json();
 
-
   const url3 = `${servidor_url}/api/blog`;
   const res3 = await fetch(url3); 
   const blogs = await res3.json();

@@ -6,7 +6,8 @@ export const crashkurse = [
   {id:'1', image:'card01.jpg', title:'Selbstorganisation in agilen Teams', text:'Lorem ipsum dolor sit amet'},
   {id:'2', image:'card02.jpg', title:'Agile Facilitator', text:'Consectetur adipiscing elit, sed do eiusmod tempor'},
   {id:'3', image:'card03.jpg', title:'Agile Coach', text:'Incididunt ut labore et dolore magna aliqua.'},  
-  {id:'4', image:'card05.jpg', title:'Scrum Master', text:'quis nostrud exercitation ullamco laboris'}
+  {id:'4', image:'card05.jpg', title:'Scrum Master', text:'quis nostrud exercitation ullamco laboris'},
+  
  
 ]
 
