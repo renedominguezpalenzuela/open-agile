@@ -31,7 +31,7 @@ export default function Content01() {
 
           <div className="row ms-3 mt-3  d-none d-lg-block">
             <h1 id="title">
-              <div className="font_facit_title">
+              <div className="font_facit_title ">
                 <p>Dear future,</p>
                 <p>we are ready</p>
               </div>

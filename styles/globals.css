@@ -1,6 +1,7 @@
 html,
 body {
   /*overflow-x: hidden;  Hide horizontal scrollbar */
+  font-size: 100%; 
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -48,27 +49,6 @@ div.sticky {
   transition-delay: 0.9s;
 }
 
-@font-face {
-  font-family: Facit-Regular;
-  src: url("/fonts/Facit_Regular.otf");
-}
-
-@font-face {
-  font-family: Facit-BoldItalic;
-  src: url("/fonts/Facit_bold_Italic.otf");
-}
-
-@font-face {
-  font-family: Facit-Lightc;
-  src: url("/fonts/Facit_Light.otf");
-}
-
-
-@font-face {
-  font-family: Facit-Bold;
-  src: url("/fonts/Facit_Bold.otf");
-}
-
 
 
 .vertical_text {
@@ -105,68 +85,6 @@ div.sticky {
   color: #fff;
 } */
 
-.font_facit_title {
-  font-family: Facit-BoldItalic;
-  color: #ffffff;
-  text-align: left;
-  font-size: 90px;
-  line-height: 1;
-  font-weight: 500;
-
-  letter-spacing: 4px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-transform: uppercase;
-  selector-locked: false;
-  text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
-}
-
-.font_facit_title_small {
-  font-family: Facit-BoldItalic;
-  color: #ffffff;
-  text-align: left;
-  font-size: 45px;
-  line-height: 1;
-  font-weight: 500;
-
-  letter-spacing: 4px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-transform: uppercase;
-  selector-locked: false;
-  text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
-}
-
-
-.font_facit_title_purple {
-  color: #e50067;
-}
-
-.font_facit_text {
-  font-family: Facit-BoldItalic;
-  color: #ffffff;
-  margin-bottom: 100px;
-  font-size: 20px;
-  font-weight: 700;
-  font-style: italic;
-  letter-spacing: 1px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: left;
-  selector-locked: false;
-  text-transform: uppercase;
-}
-
-.font_facit_text1 {
-  font-family: Facit-Regular;
-  color: #ffffff;
-
-  font-size: 20px;
-  font-weight: 700;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
 .circulo {
   background: #ffffff;
@@ -179,36 +97,7 @@ div.sticky {
   padding: 10px;
 }
 
-.font_facit_text2 {
-  font-family: Facit-Regular;
-  color: #ffffff;
 
-  font-size: 16px;
-  /* font-weight: 400; */
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.font_second_line1 {
-  font-family: Facit-BoldItalic;
-  color: #24325a;
-
-  font-size: 50px;
-  font-weight: 700;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.font_second_line2 {
-  font-family: Facit-Regular;
-  color: #24325a;
-
-  font-size: 20px;
-  font-weight: 300;
-  text-transform: uppercase;
-}
 
 .row {
   margin-right: 0px;
@@ -221,69 +110,7 @@ div.sticky {
 
 
 
-.font_title {
-  font-family: Facit-Bold;
-  color: #24325a;
-  
-   font-size: 30px;
-  font-weight: 100;
-   text-transform: uppercase; 
-   line-height: 90%;
-}
-/* ----------------- Cards  -----------------------------*/
 
-.font_card_title {
-  font-family: Facit-BoldItalic;
-  color: #24325a;
-  font-style: italic; 
-   font-size: 30px;
-  font-weight: 100;
-   text-transform: uppercase; 
-   line-height: 90%;
-}
-
-
-
-.font_card_boton {
-  font-family: Facit-BoldItalic;
-  color: #ffffff;
-   line-height: 100%; 
-  /* font-style: italic; */
-  /* font-size: 13px; */
-  /* font-size: 3vh; */
-  font-weight: 100; 
-  text-transform: uppercase;
-  /* line-height: 250%; */
-}
-
-/* Landscape phones and portrait tablets */
-@media (max-width: 767px) {
-
-  .font_card_boton {
-    font-family: Facit-BoldItalic;
-    color: #ffffff;
-    /* font-style: italic; */
-    
-     font-size: 3.7vh; 
-    font-weight: 100; 
-    text-transform: uppercase;
-    /* line-height: 250%; */
-  }
-} 
-
-
-
-
-
-.font_card_texto {
-  font-family: Facit-Regular;
-  color: #e42078;
-  /* font-style: italic; */
-  font-size: 18px;
-  /* font-weight: 100; */
-  text-transform: uppercase;
-  line-height: 90%;
-}
 
 .corte_cards {
   clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
@@ -342,65 +169,6 @@ div.sticky {
   background-color: #EFF3F7;
 }
 
-/* Debajo de cards */
-
-.font_title2 {
-  font-family: Facit-BoldItalic;
-  color: #ffffff;
-  /* font-style: italic; */
-  font-size: 35px;
-  /* font-weight: 100; */
-  text-transform: uppercase;
-  line-height: 90%;
-}
-
-.font_title3 {
-  font-family: Facit-Regular;
-  color: #e50067;
-
-  font-size: 20px;
-  font-weight: 500;
-  text-transform: uppercase;
-  line-height: 90%;
-}
-
-.font_title4 {
-  font-family: Facit-Regular;
-  color: #ffffff;
-
-  font-size: 16px;
-  font-weight: 100;
-
-  line-height: 250%;
-}
-
-.font_title5 {
-  font-family: Facit-Regular;
-  color: #ffffff;
-
-  font-size: 24px;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.font_title6 {
-  font-family: Facit-Regular;
-  color: #ffffff;
-
-  font-size: 18px;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.font_carrusel {
-  font-family: Facit-Regular;
-  color: #666666;
-
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 32px;
- 
-}
 
 .img_carrusel {
   position: relative;
@@ -433,13 +201,6 @@ div.sticky {
 }
 
 
-/* .carousel-control-prev span.carousel-control-prev-icon,
-.carousel-control-next span.carousel-control-next-icon {
-  color: red; 
-} */
-
-
-/* .carousel-control-prev-icon { opacity:1 !important;color:red;} */
 
 
 	
@@ -526,43 +287,6 @@ div.vertical-line{
 
 
 
-.font_card03_id {
-
-  font-family: Facit-Bold;
-    color: #e50067;
-    margin-bottom: 0;
-    font-size: 50px;
-    font-weight: 600;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.font_card03_title {
-
-  font-family: Facit-Bold;
-    color: #24325A;
-    margin-bottom: 0;
-    font-size: 30px;
-    font-weight: 600;
-    text-transform: uppercase;
-    line-height: 39px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-
-.font_card03_subtitle {
-
-  font-family: Facit-Regular;
-    color: #24325A;
-    margin-bottom: 0;
-    font-size: 15px;
-    font-weight: 100;
-    text-transform: uppercase;
-    line-height: 39px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
 
 div.vertical-line{
   width: 2px; /* Line width */
@@ -589,123 +313,6 @@ div.vertical-line{
   /* padding: 10px; */
 }
 
-
-.font_facit_title_very_small {
-  font-family: Facit-BoldItalic;
-  color: #ffffff;
-   text-align: left;
-  font-size: 2.5vw;
-
-  font-weight: 200;
-
-  letter-spacing: 2px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-transform: uppercase; 
- 
- 
-}
-
-
-.font_facit_text_small {
-  font-family: Facit-Regular;
-  color: #E50067;
-  text-align: left;
-  font-size: 1.5vw;
-
-  font-weight: 200;
-
-  
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-transform: uppercase;
-  selector-locked: false; 
- 
-}
-
-
-
-.font_facit_text_very_small {
-  font-family: Facit-Regular;
-  color: #ffffff;
-  text-align: left;
-  font-size: 13px;
-
-  font-weight: 200;
-
-  /* letter-spacing: 2px; */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  selector-locked: false;
- 
-}
-
-
-.font_facit_text_very_small_gris {
-  font-family: Facit-Regular;
-  color: #cacaca;
-  text-align: left;
-  font-size: 11px;
-
-  font-weight: 200;
-
-  /* letter-spacing: 2px; */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  selector-locked: false;
- 
-}
-
-
-.font_facit_boton_small {
-  font-family: Facit-Regular;
-  color: #ffffff;
-  text-align: left;
-  font-size: 16px;
-
-  font-weight: 200;
-
-  /* letter-spacing: 2px; */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  selector-locked: false;
- 
-}
-
-.font_facit_text_very_very_small_gris {
-  font-family: Facit-Regular;
-  color: #cacaca;
-  text-align: left;
-  font-size: 11px;
-
-  font-weight: 200;
-
-  /* letter-spacing: 2px; */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  selector-locked: false;
- 
-}
-
-.color_contactos {
-  color:#E50067;
-  font-family: Facit-Regular;
-   text-align: left;
-  font-size: 12px;
-
-/* 
-  font-weight: 200;
-
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;  */
-
-
-}
 
 .footer_path {
   clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
@@ -774,15 +381,6 @@ div.vertical-line{
 }
 /* 
 
-.sidepanel a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-   color: #818181; 
-   display: block; 
-   transition: 0.3s;
-
-} */
 
 
 
@@ -792,24 +390,7 @@ div.vertical-line{
   color: #f1f1f1;
 }
 
-/* Position and style the close button (top right corner) */
-/* .sidepanel .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-} */
 
-/* Style the button that is used to open the sidepanel */
-.boton_abrir_menu {
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #111;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-}
 
 .boton_abrir_menu:hover {
   background-color: #444;

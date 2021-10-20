@@ -14,11 +14,11 @@ export default function Card01({
   return (
     <>
       <div className="col">
-        <div className="card card-rounded my_card">
+         <div className="card card-rounded my_card">
          
-          <img className="card-img-top corte_cards img-rounded "  src={`img/${imagen}`} alt={texto_alt}/>
+          <img className="card-img-top corte_cards img-rounded "  src={`img/${imagen}`} alt={texto_alt}/> 
       
-          <div className="card-body text-center  p-2">
+          <div className="card-body text-center w-100 m-1 p-1 p-2">
             <p className="card-text font_card_title m-1">{titulo}</p>
             <p className="card-text font_card_texto m-3">{texto}</p>
           </div>
@@ -30,7 +30,7 @@ export default function Card01({
           </div>
 
          
-        </div>
+        </div> 
       </div>
     </>
   );

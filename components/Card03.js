@@ -10,13 +10,13 @@ function placeContenido(id, titulo, subtitulo, texto, imagen){
      return (
                 <>
                   <div className="col-5 me-5">
-                    <Card03Img  imagen={imagen} texto_alt={titulo} />
-                  </div>
+                    <Card03Img  imagen={imagen} texto_alt={titulo} /> 
+                                      </div>
 
                 
 
                   <div className="col-6 ms-6">
-                    <Card03Text id={id} titulo={titulo} subtitulo={subtitulo} texto={texto}  />
+                    <Card03Text id={id} titulo={titulo} subtitulo={subtitulo} texto={texto}  /> 
                   </div>
                 </>
      );
@@ -29,13 +29,13 @@ function placeContenido(id, titulo, subtitulo, texto, imagen){
 
               
                   <div className="col-6">
-                    <Card03Text id={id} titulo={titulo} subtitulo={subtitulo} texto={texto}  />
+                     <Card03Text id={id} titulo={titulo} subtitulo={subtitulo} texto={texto}  /> 
                       
                   </div>
                
 
                   <div className="col-6">
-                    <Card03Img  imagen={imagen} texto_alt={titulo} />
+                    <Card03Img  imagen={imagen} texto_alt={titulo} /> 
                   </div>
 
                </>

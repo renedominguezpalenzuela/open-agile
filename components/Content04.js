@@ -24,7 +24,7 @@ export default function Content04 ({lista_cards} ) {
      {lista_cards.map (unCard=>        
            <Card03 key={unCard.id} id={unCard.id} imagen={unCard.image} titulo={unCard.title} texto={unCard.text} />     
          
-     )}  
+     )}   
    
 
 

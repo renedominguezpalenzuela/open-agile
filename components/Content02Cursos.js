@@ -13,35 +13,13 @@ import Content02Final from "./Content02Final";
 
 export default function Content02Cursos( {cursos}) {
 
-//<Card01 imagen="card01.jpg" titulo="Selbstorganisation in agilen Teams" texto="Lorem ipsum dolor sit amet" />
-
-
-
-//TODO: modificar
-  // let datos_cards = [];
-  
-  
-  // cursos.map((unCurso)=>{
-
-  //   let unDato = {};
-  //    unDato.id = unCurso.id
-  //    unDato.imagen = unCurso.imagen;
-  //    unDato.titulo = unCurso.titulo;
-  //    unDato.texto = unCurso.texto;
-
-  //   datos_cards.push(unDato);
-    
-  // })
-
-  
-
 
 
 
   return (
 <>
   {/* <div className="column"> */}
-    <div id="course" className="row text-center m-3 ">
+    <div id="course" className="row  text-center m-3 ">
       <h3 className="font_second_line1"> CRASHKURSE</h3>
       <h5 className="font_second_line2">
                 Lorem ipsum, dolor sit amet consectetur.

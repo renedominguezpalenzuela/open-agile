@@ -57,7 +57,7 @@ export default function Home({cursos, servicios, blogs}) {
 
    
  
-      <div id="principal" className="content-fluid" >
+      <div id="principal" className="content-fluid " >
 {/* <div id="contenedor" > */}
      
  <MenuFlotanteBoton color="white"/>
@@ -70,14 +70,14 @@ export default function Home({cursos, servicios, blogs}) {
         </div>
 
         {/*Cards  */}
-        <Content02Cursos cursos={cursos} />
+        <Content02Cursos cursos={cursos} /> 
 
         {/*imagen  */}
         <Content03 imagen="Testimonials_kunden-1.png" />
 
         {/*Contenido  */}
 
-        <Content04  lista_cards={blogs}/>
+          <Content04  lista_cards={blogs}/>  
 
         {/*Carrousel  */}
         <Content05 />

@@ -1,9 +1,11 @@
 import "bootstrap/dist/css/bootstrap.css";
 import Layout from "../components/Layout";
 //import "../styles/Home.module.css";
-import "../styles/globals.css";
 
-// import "../styles/fuentes.css";
+import "../styles/globals.css";
+import "../styles/fonts.css";
+
+
 
 
 // import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS
@@ -36,9 +38,9 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <Layout>
+    <>
       <Component {...pageProps} />
-    </Layout>
+    </>
   );
 }
 
