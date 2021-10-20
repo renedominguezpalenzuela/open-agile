@@ -13,11 +13,11 @@ export default function Card01({
  
   return (
     <>
-      <div className="col p-3">
+      <div className="col">
         <div className="card card-rounded my_card">
-          {/*                                                 <!-- Image --> */}
+         
           <img className="card-img-top corte_cards img-rounded "  src={`img/${imagen}`} alt={texto_alt}/>
-          {/* <!-- Text Content --> */}
+      
           <div className="card-body text-center  p-2">
             <p className="card-text font_card_title m-1">{titulo}</p>
             <p className="card-text font_card_texto m-3">{texto}</p>

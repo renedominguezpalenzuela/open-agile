@@ -57,13 +57,14 @@ export default function Home({cursos, servicios, blogs}) {
 
    
  
-      <div id="principal" className="content-fluid">
+      <div id="principal" className="content-fluid" >
 {/* <div id="contenedor" > */}
      
  <MenuFlotanteBoton color="white"/>
     
      
         <div className={styles.banner}>
+       
           <LeftColumnColor />
           <Content01 />
         </div>

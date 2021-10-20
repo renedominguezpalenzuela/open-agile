@@ -1,6 +1,8 @@
 import "bootstrap/dist/css/bootstrap.css";
 import Layout from "../components/Layout";
+//import "../styles/Home.module.css";
 import "../styles/globals.css";
+
 // import "../styles/fuentes.css";
 
 

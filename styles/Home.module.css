@@ -1,6 +1,7 @@
 .banner {
   background-size: auto, cover;
   height: 100vh;
+ 
   background-repeat: no-repeat;
   text-align: left;
   -webkit-font-smoothing: antialiased;

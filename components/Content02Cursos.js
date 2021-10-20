@@ -41,7 +41,7 @@ export default function Content02Cursos( {cursos}) {
   return (
 <>
   {/* <div className="column"> */}
-    <div id="course" className="row text-center m-3">
+    <div id="course" className="row text-center m-3 ">
       <h3 className="font_second_line1"> CRASHKURSE</h3>
       <h5 className="font_second_line2">
                 Lorem ipsum, dolor sit amet consectetur.
