@@ -703,4 +703,7 @@ div.vertical-line{
 
 
 
-
+.panel-flotante {
+  clip-path: polygon(0 0, 100% 0, 76% 100%, 0% 100%);
+  background-color: #24325A;
+}
