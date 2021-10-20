@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.css";
 import Layout from "../components/Layout";
 import "../styles/globals.css";
+// import "../styles/fuentes.css";
 
 
 // import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS

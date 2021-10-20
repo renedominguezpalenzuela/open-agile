@@ -1,0 +1,313 @@
+
+
+
+@font-face {
+    font-family: Facit-Regular;
+    src: url("/fonts/Facit_Regular.otf");
+  }
+  
+  @font-face {
+    font-family: Facit-BoldItalic;
+    src: url("/fonts/Facit_bold_Italic.otf");
+  }
+  
+  @font-face {
+    font-family: Facit-Lightc;
+    src: url("/fonts/Facit_Light.otf");
+  }
+  
+  
+  @font-face {
+    font-family: Facit-Bold;
+    src: url("/fonts/Facit_Bold.otf");
+  }
+  
+
+.font_facit_title_very_small {
+    font-family: Facit-BoldItalic;
+    color: #ffffff;
+     text-align: left;
+    font-size: 2.5vw;
+  
+    font-weight: 200;
+  
+    letter-spacing: 2px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-transform: uppercase; 
+   
+   
+  }
+  
+  
+  .font_facit_text_small {
+    font-family: Facit-Regular;
+    color: #E50067;
+    text-align: left;
+    font-size: 1.5vw;
+  
+    font-weight: 200;
+  
+    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-transform: uppercase;
+    selector-locked: false; 
+   
+  }
+  
+   /*Cards Fonts */
+.font_card_title {
+    font-family: Facit-BoldItalic;
+    color: #24325a;
+    font-style: italic; 
+     font-size: 5.5vh;
+    font-weight: 100;
+     text-transform: uppercase; 
+     line-height: 5.5vh;
+  }
+  
+  .font_card_boton {
+    font-family: Facit-BoldItalic;
+    color: #ffffff;
+    /* font-style: italic; */
+    font-size: 2.5vh;
+    /* font-weight: 100; */
+    text-transform: uppercase;
+    /* line-height: 250%; */
+  }
+  
+  .font_card_texto {
+    font-family: Facit-Regular;
+    color: #e42078;
+    /* font-style: italic; */
+    font-size: 4vh;
+    /* font-weight: 100; */
+    text-transform: uppercase;
+    line-height: 4vh;
+  }
+     /*Cards Fonts */
+  
+  .font_facit_text_very_small {
+    font-family: Facit-Regular;
+    color: #ffffff;
+    text-align: left;
+    font-size: 13px;
+  
+    font-weight: 200;
+  
+    /* letter-spacing: 2px; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  
+    selector-locked: false;
+   
+  }
+  
+  
+  .font_facit_text_very_small_gris {
+    font-family: Facit-Regular;
+    color: #cacaca;
+    text-align: left;
+    font-size: 11px;
+  
+    font-weight: 200;
+  
+    /* letter-spacing: 2px; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  
+    selector-locked: false;
+   
+  }
+  
+  
+  .font_facit_boton_small {
+    font-family: Facit-Regular;
+    color: #ffffff;
+    text-align: left;
+    font-size: 16px;
+  
+    font-weight: 200;
+  
+    /* letter-spacing: 2px; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  
+    selector-locked: false;
+   
+  }
+  
+  .font_facit_text_very_very_small_gris {
+    font-family: Facit-Regular;
+    color: #cacaca;
+    text-align: left;
+    font-size: 11px;
+  
+    font-weight: 200;
+  
+    /* letter-spacing: 2px; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  
+    selector-locked: false;
+   
+  }
+
+  .font_title2 {
+    font-family: Facit-BoldItalic;
+    color: #ffffff;
+    /* font-style: italic; */
+    font-size: 35px;
+    /* font-weight: 100; */
+    text-transform: uppercase;
+    line-height: 90%;
+  }
+  
+  .font_title3 {
+    font-family: Facit-Regular;
+    color: #e50067;
+  
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 90%;
+  }
+  
+  .font_title4 {
+    font-family: Facit-Regular;
+    color: #ffffff;
+  
+    font-size: 16px;
+    font-weight: 100;
+  
+    line-height: 250%;
+  }
+  
+  .font_title5 {
+    font-family: Facit-Regular;
+    color: #ffffff;
+  
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  
+  .font_carrusel {
+    font-family: Facit-Regular;
+    color: #666666;
+  
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+   
+  }
+
+
+ 
+
+  .font_title {
+    font-family: Facit-Bold;
+    color: #24325a;
+    
+     font-size: 30px;
+    font-weight: 100;
+     text-transform: uppercase; 
+     line-height: 5vh;
+  }
+
+  
+.font_facit_text2 {
+    font-family: Facit-Regular;
+    color: #ffffff;
+  
+    font-size: 16px;
+    /* font-weight: 400; */
+  
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .font_second_line1 {
+    font-family: Facit-BoldItalic;
+    color: #24325a;
+  
+    font-size: 50px;
+    font-weight: 700;
+  
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .font_second_line2 {
+    font-family: Facit-Regular;
+    color: #24325a;
+  
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  
+.font_facit_title {
+    font-family: Facit-BoldItalic;
+    color: #ffffff;
+    text-align: left;
+    font-size: 90px;
+    line-height: 1;
+    font-weight: 500;
+  
+    letter-spacing: 4px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-transform: uppercase;
+    selector-locked: false;
+    text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
+  }
+  
+  .font_facit_title_small {
+    font-family: Facit-BoldItalic;
+    color: #ffffff;
+    text-align: left;
+    font-size: 45px;
+    line-height: 1;
+    font-weight: 500;
+  
+    letter-spacing: 4px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-transform: uppercase;
+    selector-locked: false;
+    text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
+  }
+  
+  
+  .font_facit_title_purple {
+    color: #e50067;
+  }
+  
+  .font_facit_text {
+    font-family: Facit-BoldItalic;
+    color: #ffffff;
+    margin-bottom: 100px;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 1px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: left;
+    selector-locked: false;
+    text-transform: uppercase;
+  }
+  
+  .font_facit_text1 {
+    font-family: Facit-Regular;
+    color: #ffffff;
+  
+    font-size: 20px;
+    font-weight: 700;
+  
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }

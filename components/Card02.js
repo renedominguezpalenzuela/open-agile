@@ -19,7 +19,7 @@ export default function Card02({
 
 
 
-  {/*  <div className="row g-0 d-flex justify-content-center border "> */}
+  
     <div className="row g-0   ">
 
       <div className="col-4 ">
@@ -38,18 +38,11 @@ export default function Card02({
               </div>
             
 
-
-              <span className="row contenido_card ">
-              
-
-
-
+             {/* Texto del Card */}
+              <span className="  contenido_card ">
+      
                 <div className=" card-title  font_card_title w-75 guion_palabras_largas ">
-
-              {procesarTextoLargo(titulo)} 
-              
-                   
-                  {/* <p>{titulo}</p> */}
+                 {procesarTextoLargo(titulo)} 
                 </div>
                 <div className="ms-2 mt-2 font_card_texto m">
                      NEWSROOM        
@@ -65,11 +58,6 @@ export default function Card02({
                     </button>
                   </div>
                 </div>  
-
-
-        
-
- 
 
               </span>
 
@@ -99,8 +87,6 @@ export default function Card02({
 function procesarTextoLargo (texto) {
 
  if (texto.length>longitud_linea)  {
-
-
      return (<div><p>{texto.substring(0,longitud_linea)}-</p>{texto.substring(longitud_linea)}</div>);
  }
 

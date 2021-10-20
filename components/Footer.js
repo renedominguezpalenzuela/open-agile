@@ -30,7 +30,7 @@ export default function Footer() {
         <div className="row mt-4">
           <div className="col-auto    ">
             <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"></input>
-            <label className="form-check-label font_facit_text_very_small">
+            <label className="ms-2 form-check-label font_facit_text_very_small">
                          Ja, ich bin einverstanden.*
             </label>
           </div>

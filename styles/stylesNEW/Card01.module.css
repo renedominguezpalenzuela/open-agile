@@ -12,6 +12,15 @@
   object-fit: cover;
 }
 
+
+/* .my_card {
+  max-width: 300px;
+  height: 25vh;
+  -webkit-border-radius: 30px; 
+   -moz-border-radius: 30px; 
+   border-radius: 30px;
+} */
+
 .my_card {
   max-width: 300px;
   height: 25rem;
@@ -20,10 +29,10 @@
   /* border-radius: 30px; */
 }
 
+
 .color_div {
   background-color: #24325a;
 }
-
 .boton_card {
   background-color: #e50067;
 }
