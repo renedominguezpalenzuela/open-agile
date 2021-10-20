@@ -3,7 +3,7 @@
 
 window.addEventListener('load', (event) => {
  	
-
+  //mybutton.style.display = "none";
  
   
   
@@ -11,6 +11,8 @@ window.addEventListener('load', (event) => {
      e.preventDefault();
        e.stopPropagation();
        document.getElementById('offcanvas').classList.toggle('show');
+	  
+
 	   //document.getElementById('offcanvas').classList.remove('show');
 	  // document.getElementById('offcanvas').offcanvas('hide');
 	  

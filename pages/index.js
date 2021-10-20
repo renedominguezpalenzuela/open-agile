@@ -13,6 +13,8 @@ import Content05 from "../components/Content05";
 
 import Card01Lista from "../components/Card01Lista";
 
+import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
+
 
 // import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
 
@@ -52,7 +54,7 @@ export default function Home({cursos, servicios, blogs}) {
       <div className="content-fluid">
 {/* <div id="contenedor" > */}
      
-
+ <MenuFlotanteBoton color="white"/>
     
      
         <div className={styles.banner}>

@@ -4,8 +4,8 @@ export default function MenuFlotanteBoton({color, back_color}) {
   return (
 <>
 
-
-<div className="sticky-top ">
+{/* sticky-top */}
+<div className=" mysticky">
 {/* <span className="fixed-top"> */}
  <button id="boton_abrir_menu" className="btn mt-2 " data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
     <FontAwesomeIcon icon="bars" color={color} width="32" />

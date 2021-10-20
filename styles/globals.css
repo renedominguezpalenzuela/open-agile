@@ -740,3 +740,16 @@ div.vertical-line{
   background: rgba(255,255,255,.8);
   z-index: 999;
 }
+
+.mysticky{
+ 
+  position: fixed; /* Fixed/sticky position */
+  left: 25px;
+  top: 12px;
+ 
+  
+  z-index: 99; /* Make sure it does not overlap */
+
+  cursor: pointer; /* Add a mouse pointer on hover */
+
+}
