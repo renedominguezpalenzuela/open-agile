@@ -383,6 +383,15 @@ div.sticky {
   text-transform: uppercase;
 }
 
+.font_title6 {
+  font-family: Facit-Regular;
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
 .font_carrusel {
   font-family: Facit-Regular;
   color: #666666;
@@ -706,4 +715,28 @@ div.vertical-line{
 .panel-flotante {
   clip-path: polygon(0 0, 100% 0, 76% 100%, 0% 100%);
   background-color: #24325A;
+}
+
+.close {
+  color: #fff; 
+  opacity: 1;
+}
+
+
+.blur   {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+}
+#overlay    {
+  position: fixed;
+  display: none;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: rgba(255,255,255,.8);
+  z-index: 999;
 }

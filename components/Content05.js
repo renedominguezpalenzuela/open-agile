@@ -47,8 +47,8 @@ export default function Content05 ( ) {
                 <div className="carousel-item active  ">
 
                     <div className="d-xl-none  ">
-                        <div class="row d-flex justify-content-center">
-                            <div class="col-md-6">
+                        <div className="row d-flex justify-content-center">
+                            <div className="col-md-6">
                                 <Card01 imagen="card09.jpg" titulo="Transformation am Beispiel der Sparkasse Bremen" texto="qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit" />
                             </div>
                         </div>
@@ -64,8 +64,8 @@ export default function Content05 ( ) {
 
                 <div className="carousel-item">
                     <div className="d-xl-none">
-                        <div class="row d-flex justify-content-center">
-                            <div class="col-md-6">
+                        <div className="row d-flex justify-content-center">
+                            <div className="col-md-6">
                                 <Card01 imagen="card02.jpg" titulo="Entwicklung zur evolutionären Zusammenarbeit" texto="qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit" />
                             </div>
                         </div>
@@ -81,8 +81,8 @@ export default function Content05 ( ) {
 
                 <div className="carousel-item">
                     <div className="d-xl-none">
-                        <div class="row d-flex justify-content-center">
-                            <div class="col-md-6">
+                        <div className="row d-flex justify-content-center">
+                            <div className="col-md-6">
                                 <Card01 imagen="card05.jpg" titulo="Gründe für die Selbstorganisation" texto="qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit" />
                             </div>
                         </div>
@@ -98,8 +98,8 @@ export default function Content05 ( ) {
 
                 <div className="carousel-item">
                     <div className="d-xl-none">
-                        <div class="row d-flex justify-content-center">
-                            <div class="col-md-6">
+                        <div className="row d-flex justify-content-center">
+                            <div className="col-md-6">
                                 <Card01 imagen="card06.jpg" titulo="Architektur selbstorganisierter Teams" texto="qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit" />
                             </div>
                         </div>
@@ -113,8 +113,8 @@ export default function Content05 ( ) {
 
                 <div className="carousel-item">
                     <div className="d-xl-none">
-                        <div class="row d-flex justify-content-center">
-                            <div class="col-md-6">
+                        <div className="row d-flex justify-content-center">
+                            <div className="col-md-6">
                                 <Card01 imagen="card07.jpg" titulo="Workhacks für die Selbstorganisation" texto="qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit" />
                             </div>
                         </div>

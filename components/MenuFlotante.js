@@ -6,66 +6,76 @@
 //TODO: Arreglar los links
 //Responsividad: ERROR
 
+import Head from 'next/head'
 
 
 export default function MenuFlotante() {
   return (
 <>
 
+       <Head>
+        <script async src="js/menu.js" />
+      </Head> 
 
 
 
-  <div className="offcanvas offcanvas-start w-25 panel-flotante" tabIndex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
-    <div className="offcanvas-header">
-      <h6 className="offcanvas-title d-none d-sm-block" id="offcanvas">
-              Menu
-      </h6>
-      <button type="button" className="btn-close font_title5" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div className="offcanvas-body px-0  ">
+
+
+
+
+<div className="offcanvas offcanvas-start  w-25 panel-flotante" tabIndex="-1" id="offcanvas"  data-bs-scroll="true" data-bs-backdrop="false" aria-hidden="true" aria-labelledby="offcanvasTopLabel">
+  <div className="offcanvas-header">
+    <h5 id="offcanvasTopLabel" className="font_title5">Menu</h5>
+    <button type="button" id="boton_cerrar_menu" className="btn-close btn-close-white text-reset me-3"  aria-label="Close" ></button>
+
+    {/* <a type="button" className="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></a> */}
+  </div>
+
+    <div className="offcanvas-body ">
       <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
         <li className="nav-item">
-          <a href="#second_line" className="nav-link text-truncate">
-            <i className="fs-5 bi-house"></i>
-            <span className="ms-1 d-none d-sm-inline">CRASHKURSE</span>
+          <a href="#course" className="nav-link text-truncate">
+          
+            <span className="ms-1 d-none d-sm-inline font_title6">CRASHKURSE</span>
           </a>
         </li>
 
         <li>
-          <a href="#content02-final" className="nav-link text-truncate">
-            <i className="fs-5 bi-table"></i>
-            <span className="ms-1 d-none d-sm-inline">LEISTUNGEN</span>
+          <a href="#services" className="nav-link text-truncate">
+
+            <span className="ms-1 d-none d-sm-inline font_title6">LEISTUNGEN</span>
           </a>
         </li>
 
         <li>
           <a href="#" className="nav-link text-truncate">
-            <i className="fs-5 bi-table"></i>
-            <span className="ms-1 d-none d-sm-inline">TEAM</span>
+   
+            <span className="ms-1 d-none d-sm-inline font_title6">TEAM</span>
+          </a>
+        </li>
+        <li>
+               
+          <a href="#" className="nav-link text-truncate">
+   
+            <span className="ms-1 d-none d-sm-inline font_title6">VLOG</span>
+          </a>
+        </li>
+        <li>
+          <a href="#blog" className="nav-link text-truncate">
+       
+            <span className="ms-1 d-none d-sm-inline font_title6">BLOG</span>
           </a>
         </li>
         <li>
           <a href="#" className="nav-link text-truncate">
-            <i className="fs-5 bi-grid"></i>
-            <span className="ms-1 d-none d-sm-inline">VLOG</span>
+       
+            <span className="ms-1 d-none d-sm-inline font_title6">NEWS</span>
           </a>
         </li>
         <li>
           <a href="#" className="nav-link text-truncate">
-            <i className="fs-5 bi-people"></i>
-            <span className="ms-1 d-none d-sm-inline">BLOG</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" className="nav-link text-truncate">
-            <i className="fs-5 bi-people"></i>
-            <span className="ms-1 d-none d-sm-inline">NEWS</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" className="nav-link text-truncate">
-            <i className="fs-5 bi-people"></i>
-            <span className="ms-1 d-none d-sm-inline">JOBS</span>
+   
+            <span className="ms-1 d-none d-sm-inline font_title6">JOBS</span>
           </a>
         </li>
       </ul>

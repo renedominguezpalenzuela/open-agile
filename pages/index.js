@@ -50,7 +50,7 @@ export default function Home({cursos, servicios, blogs}) {
    
  
       <div className="content-fluid">
-
+{/* <div id="contenedor" > */}
      
 
     
@@ -83,7 +83,8 @@ export default function Home({cursos, servicios, blogs}) {
 
         {/*Footer  */}
         <Footer />
-      </div> 
+      {/* </div>  */}
+      </div>
       {/*Menu Lateral oculto  */}
 
        {/* El menu eimina el scroll vertical */}

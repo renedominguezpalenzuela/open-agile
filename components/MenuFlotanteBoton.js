@@ -5,13 +5,13 @@ export default function MenuFlotanteBoton({color, back_color}) {
 <>
 
 
-<span className="sticky-top">
+<div className="sticky-top ">
 {/* <span className="fixed-top"> */}
-
-  <button id="close_menu" className="btn mt-2 " data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
+ <button id="boton_abrir_menu" className="btn mt-2 " data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
     <FontAwesomeIcon icon="bars" color={color} width="32" />
   </button>
-</span> 
+
+</div> 
 
 
 
