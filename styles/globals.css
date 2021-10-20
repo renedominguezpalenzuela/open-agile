@@ -578,9 +578,10 @@ div.vertical-line{
   
 
 .iconos2 {
-  color: #E50067;
-  /* width: 34px;
-  height: 34px; */
+  color: #E50067; 
+   width: 32px;
+   text-align:right;
+  
   /* border-radius: 50%; */
   /* text-align: center; */
   /* line-height: 40px; */

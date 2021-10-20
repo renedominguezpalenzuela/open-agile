@@ -20,10 +20,10 @@ export default function Card03Text({ id, titulo, subtitulo, texto}) {
       </div>
 
       <div className="row mt-4  ">
-        <div className="col-1 d-flex ">
-          <FontAwesomeIcon icon="long-arrow-alt-right" width="32" className="iconos2     " />
+        <div className="col-2 d-flex  flex-row-reverse     ">
+          <FontAwesomeIcon icon="long-arrow-alt-right"  className="iconos2" />
         </div>
-        <div className="col">
+        <div className="col d-flex align-items-center    ">
           <a href="#">Hier gibt’s alle Infos…</a>
         </div>
 
