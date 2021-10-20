@@ -51,7 +51,7 @@ export default function Home({cursos, servicios, blogs}) {
 
    
  
-      <div className="content-fluid">
+      <div id="principal" className="content-fluid">
 {/* <div id="contenedor" > */}
      
  <MenuFlotanteBoton color="white"/>

@@ -712,10 +712,6 @@ div.vertical-line{
 
 
 
-.panel-flotante {
-  clip-path: polygon(0 0, 100% 0, 76% 100%, 0% 100%);
-  background-color: #24325A;
-}
 
 .close {
   color: #fff; 
@@ -753,3 +749,74 @@ div.vertical-line{
   cursor: pointer; /* Add a mouse pointer on hover */
 
 }
+
+/*Menu lateral  */
+ /* The sidepanel menu */
+ .sidepanel {
+  /* height: 250px; Specify a height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /*Stay in place*/
+  z-index: 110; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  overflow-y: hidden; /* Disable horizontal scroll */
+  padding-top: 10px; /* Place content 60px from the top */
+  transition: 0.3s; /*0.5 second transition effect to slide in the sidepanel*/
+  clip-path: polygon(0 0, 100% 0, 76% 100%, 0% 100%);
+  background-color: #24325A;
+  /* box-shadow: 0px 10px 10px -6px black; */
+    /* Sombra superior sin desenfoque */
+    /* box-shadow: 5px -5px 0 2px #444; */
+    box-shadow: 5px 5px 45px #222 inset;
+}
+/* 
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+   color: #818181; 
+   display: block; 
+   transition: 0.3s;
+
+} */
+
+
+
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+/* .sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+} */
+
+/* Style the button that is used to open the sidepanel */
+.boton_abrir_menu {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.boton_abrir_menu:hover {
+  background-color: #444;
+} 
+
+
+.myblur{
+  filter: blur(2px);
+  /* transform: scale(0.95); */
+   /* transition: 0.5s;   */
+  }
