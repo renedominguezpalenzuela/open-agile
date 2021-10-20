@@ -3,9 +3,9 @@ export default function Content02Final() {
 <>
       {/*   <!--Footer--> */}
 
-  <div id="content02-final " className="row d-flex justify-content-center pb-5">
-    <div className="col-lg-3 text-center m-2  ">
-      <img class="img-fluid" src="img/heart.png" />
+  <div id="content02-final " className="row     justify-content-center pb-5">
+    <div className="col-lg-3 text-center  ">
+       <img className="img-fluid" src="img/heart.png" /> 
 
       <p className="font_title5">Dolorem ipsum</p>
       <p className="font_title4">
@@ -18,8 +18,8 @@ export default function Content02Final() {
             Geschäftsführung.
       </p>
     </div>
-    <div className="col-lg-3 text-center  m-2 ">
-      <img class="img-fluid" src="img/arrow.png" />
+    <div className="col-lg-3 text-center   ">
+     <img className="img-fluid" src="img/arrow.png" /> 
 
       <p className="font_title5">dolor sit amet</p>
       <p className="font_title4">
@@ -33,8 +33,8 @@ export default function Content02Final() {
       </p>
     </div>
 
-    <div className="col-lg-3 text-center m-2  ">
-      <img class="img-fluid" src="img/building.png" />
+    <div className="col-lg-3 text-center   ">
+       <img className="img-fluid" src="img/building.png" /> 
 
       <p className="font_title5">consectetur, adipisci</p>
       <p className="font_title4">

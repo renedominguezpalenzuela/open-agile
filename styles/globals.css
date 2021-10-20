@@ -1,6 +1,6 @@
 html,
 body {
-  /*overflow-x: hidden;  Hide horizontal scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
   font-size: 100%; 
   padding: 0;
   margin: 0;
@@ -12,6 +12,13 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* 
+* {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+} */
 
 * {
   box-sizing: border-box;
@@ -254,19 +261,19 @@ div.vertical-line{
 .div_content02b {
   background-color: #24325a;
   clip-path: polygon(0% 0%, 100% 0%, 100% 97%, 0% 100%);
-  /* width: 100%;
-  height: 100%; */
+   /* width: 100%; */
+  /* height: 100%; */ 
   /* height: 500px; */
   /* top: -30px; */
-  /* position: relative; */
+   /* position: relative; */
   /* left: 30px; */
 }
 
 .div_content03a {
   background-color: #EFF3F7; 
   /* clip-path: polygon(0 2%, 100% 0%, 100% 97%, 0% 100%); */
-  /* width: 100%;
-  height: 100%; */
+  /* width: 100%; */
+  /*height: 100%; */
   /* height: 500px; */
   /* top: -30px; */
   /* position: relative; */
@@ -402,3 +409,5 @@ div.vertical-line{
   /* transform: scale(0.95); */
    /* transition: 0.5s;   */
   }
+
+

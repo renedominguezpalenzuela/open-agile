@@ -18,20 +18,20 @@ export default function Content02Cursos( {cursos}) {
 
   return (
 <>
-  {/* <div className="column"> */}
+
     <div id="course" className="row  text-center m-3 ">
       <h3 className="font_second_line1"> CRASHKURSE</h3>
       <h5 className="font_second_line2">
                 Lorem ipsum, dolor sit amet consectetur.
       </h5>
     </div>
-  {/* </div> */}
+ 
 
 
 
 
 
-    <div id="course_blue" className="row div_content02a h-100 d-inline-block ">
+    <div id="course_blue" className="row div_content02a h-100d-inline-block ">
 
       <Card01Lista lista_cards={cursos}/>
 
@@ -47,13 +47,28 @@ export default function Content02Cursos( {cursos}) {
       <Content02Texto />
     </div>
 
-    <div className="div_content03a">
-      <div className="row div_content02b">
-        <Content02Final />
+   
+
+     {/* <div className="row div_content03a "> 
+   
+       <div className="col div_content02b border border-dark"> 
+       
+        <Content02Final /> 
 
 
-      </div>
-    </div>
+       </div>  
+     </div>  */}
+
+     <div className="row div_content03a g-0 "> 
+   
+       <div className="col div_content02b "> 
+       
+        <Content02Final /> 
+
+
+       </div>  
+     </div> 
+
 
 
   </>

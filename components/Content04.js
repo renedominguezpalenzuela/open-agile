@@ -25,14 +25,14 @@ export default function Content04 ({lista_cards} ) {
      {lista_cards.map (unCard=> (     
 <>
            <div className="d-xl-none">
-                        <div className="row d-flex justify-content-center">
+                        <div  key={unCard.id} className="row d-flex justify-content-center">
                             <div className="col-md-6">
-                                <Card01 key={unCard.id} id={unCard.id} imagen={unCard.image} titulo={unCard.title} texto={unCard.text}/>
+                                <Card01 id={unCard.id} imagen={unCard.image} titulo={unCard.title} texto={unCard.text}/>
                             </div>
                         </div>
            </div>  
-          <div className="d-none d-xl-block  ">          
-            <Card03 key={unCard.id} id={unCard.id} imagen={unCard.image} titulo={unCard.title} texto={unCard.text} />     
+          <div key={unCard.id} className="d-none d-xl-block  ">          
+            <Card03  id={unCard.id} imagen={unCard.image} titulo={unCard.title} texto={unCard.text} />     
            </div> 
   </>   )
          

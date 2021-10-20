@@ -19,7 +19,7 @@ export default function Content01() {
 
   
       <div id="row01" className="row">
-        <div id="col01" className="col-md-1 mt-3 text-center position-relative ">
+        <div id="col01" className="col-md-1 mt-3 text-center position-relative  ">
         {/* <MenuFlotanteBoton color="white"/> */}
           <IconosIzquierda />
         </div>
