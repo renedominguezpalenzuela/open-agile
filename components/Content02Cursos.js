@@ -53,7 +53,7 @@ export default function Content02Cursos( {cursos}) {
 
 
 
-    <div className="row div_content02a h-100 d-inline-block ">
+    <div id="course_blue" className="row div_content02a h-100 d-inline-block ">
 
       <Card01Lista lista_cards={cursos}/>
 

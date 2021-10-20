@@ -12,7 +12,7 @@ export default function Content03 ({imagen,texto_alt } ) {
 
 
 
-<div className="color_fondo div_content03b pt-5">
+<div id="empresas" className="color_fondo div_content03b pt-5">
     <div className="row justify-content-center font_title pt-5 ">
         Diese und viele weitere Unternehmen
     </div>
