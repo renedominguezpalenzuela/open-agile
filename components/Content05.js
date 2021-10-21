@@ -23,7 +23,7 @@ export default function Content05 ( ) {
 <>
 
 
-    <div id="MyCarouselTitle" className="   color_carrusel pb-3">
+    <div id="MyCarouselTitle" className="color_carrusel pb-1">
 
 
 
