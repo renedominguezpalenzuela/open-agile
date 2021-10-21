@@ -109,6 +109,7 @@ div.sticky {
 .row {
   margin-right: 0px;
   margin-left: 0px;
+  
 }
 
 .margen_iconos_izquierda {
@@ -323,8 +324,12 @@ div.vertical-line{
 
 .footer_path {
   clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+  
 }
 
+.no-gutter {
+  --bs-gutter-x:0px !important;
+}
 
 
 

@@ -18,7 +18,7 @@ export default function Content04 ({lista_cards} ) {
     <div id="blog" className="font_title mt-5 ms-4">UNSER BLOG</div>
     <div className="font_card_texto mt-2 ms-4">NEW WORK, LEADERSHIP & MORE</div>
 
-  <div className="row g-5"> 
+  <div className="row g-5 pb-3"> 
    
 
 
