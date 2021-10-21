@@ -9,12 +9,12 @@ export default function Footer() {
 
 
     <div id="rowfoot01" className="row color_background footer_path   mt-5 pt-5">
-      <div className="col-auto  ">
-        <div className="font_facit_title_very_small">TAM NEWSLETTER</div>
+      <div className="col-auto pt-4 ">
+        <div className="font_facit_title_small">TAM NEWSLETTER</div>
         <div className="font_facit_text_small">LASS UNS IN KONTAKT BLEIBEN</div>
       </div>
 
-      <div className="col-auto  ">
+      <div className="col-auto pt-4 ">
         <div className="row g-3   align-items-center mt-1">
           <div className="col-auto ">
             <input type="text " className="form-control " placeholder="Vorname"></input>
@@ -27,7 +27,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="row mt-4">
+        <div className="row pt-1">
           <div className="col-auto    ">
             <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"></input>
             <label className="ms-2 form-check-label font_facit_text_very_small">
