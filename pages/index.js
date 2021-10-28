@@ -12,14 +12,7 @@ import Content04 from "../components/Content04";
 import Content05 from "../components/Content05";
 
 import Card01Lista from "../components/Card01Lista";
-
 import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
-
-
-// import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
-
-
-
 
 
 import { servidor_url } from "../config";
@@ -45,24 +38,18 @@ export default function Home({cursos, servicios, blogs}) {
   <title>Main Page title</title>
   <meta name="description" content="Lorem Ipsum" />
   <link rel="icon" href="/favicon.ico" />
-
   <script async src="js/chat.js" />
-
-
 </Head>
 
      
 
-      {/*Area superior  */}
-
-   
- 
-      <div id="principal" className="row content-fluid " >
+      {/*Contenedor*/}
+     <div id="principal" className="row content-fluid " >
 
      
         <MenuFlotanteBoton color="white"/>
     
-     
+        {/*Area superior  */}
         <div className={styles.banner}>
        
           <LeftColumnColor />
@@ -76,8 +63,7 @@ export default function Home({cursos, servicios, blogs}) {
         <Content03 imagen="Testimonials_kunden-1.png" />
 
         {/*Contenido  */}
-
-          <Content04  lista_cards={blogs}/>  
+        <Content04  lista_cards={blogs}/>  
 
         {/*Carrousel  */}
         <Content05 />
@@ -94,9 +80,8 @@ export default function Home({cursos, servicios, blogs}) {
         <Footer />
       {/* </div>  */}
       </div>
-      {/*Menu Lateral oculto  */}
-
-       {/* El menu eimina el scroll vertical */}
+      
+      {/*Menu Lateral oculto  */} 
       <MenuFlotante />
     </>
   );

@@ -75,7 +75,7 @@ export default function Footer() {
 
       <div className="col">
         <div>
-          <img className="img-fluid  " src='img/logo01.png' />
+          <img className="img-fluid  " src='img/logo/1.svg' />
         </div>
         <div className="font_facit_text_very_small">
 
