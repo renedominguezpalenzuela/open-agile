@@ -84,10 +84,11 @@ export default function MenuSuperior() {
     </div>
 
 
-    <div className="col d-flex  justify-content-center  ">
+    <div className="col  ">
       {/* <img className="img-fluid  "  src="img/logo01.png" /> */}
 
-      <img className="img-fluid  "  src="img/logo/1.svg" />
+      <img className="img-fluid logo-img"  src="img/logo/1.svg" />
+   
     </div>
 
   </div>
