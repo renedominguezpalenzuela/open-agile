@@ -28,12 +28,12 @@ export default function Content01() {
           <MenuSuperior />
             {/* <!-- Contenido Principal --> */}
 
-
+{/* Contenido en pantalla ancha */}
           <div className="row ms-3 mt-3  d-none d-lg-block">
             <h1 id="title">
               <div className="font_facit_title ">
-                <p>Dear future,</p>
-                <p>we are ready</p>
+                <p>FOR BETTER WORK</p>
+                {/* <p>we are ready</p> */}
               </div>
               <span className="font_facit_title font_facit_title_purple">
                   now.
@@ -44,11 +44,13 @@ export default function Content01() {
             </p>
           </div>
 
+
+{/* Contenido en pantalla estrecha */}
           <div className="row ms-3 mt-3  d-lg-none">
             <h1 id="title">
                <div className="font_facit_title_small"> 
-                <p>Dear future,</p>
-                <p>we are ready</p>
+                <p>FOR BETTER WORK</p>
+                {/* <p>we are ready</p> */}
                </div> 
                <span className="font_facit_title_small font_facit_title_purple"> 
                   now.

@@ -84,10 +84,11 @@ export default function MenuSuperior() {
     </div>
 
 
-    <div className="col  ">
+    <div className="col     d-flex flex-row-reverse ">
       {/* <img className="img-fluid  "  src="img/logo01.png" /> */}
 
-      <img className="img-fluid logo-img"  src="img/logo/1.svg" />
+     <div> <img className="img-fluid logo-img"  src="img/logo/5.svg" /></div>
+      {/* <div>Texto</div> */}
    
     </div>
 

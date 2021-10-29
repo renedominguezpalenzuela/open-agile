@@ -417,7 +417,12 @@ div.vertical-line{
 
 
   .logo-img {
-    transform: scale(1.4);
+    transform: scale(1.1);
+  }
+
+  
+  .logo-img-footer {
+    transform: scale(1.2);
   }
 
 

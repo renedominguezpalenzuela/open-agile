@@ -18,7 +18,7 @@ export default function Content03 ({imagen,texto_alt } ) {
     </div>
 
     <div className="row justify-content-center font_card_texto mt-2 ">
-        Bilden bei der TAM aus      
+        Bilden bei der Open Agile aus      
     </div>
 
     <div className="row mt-5 mb-5 pb-5">

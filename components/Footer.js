@@ -10,7 +10,7 @@ export default function Footer() {
 
     <div id="rowfoot01" className="row color_background footer_path ps-2  mt-5 pt-5">
       <div className="col-auto ">
-        <div className="font_facit_title_small p-3">TAM NEWSLETTER</div>
+        <div className="font_facit_title_small p-3">OPEN AGILE NEWSLETTER</div>
         <div className="font_facit_text_small ps-3">LASS UNS IN KONTAKT BLEIBEN</div>
       </div>
 
@@ -75,11 +75,11 @@ export default function Footer() {
 
       <div className="col">
         <div>
-          <img className="img-fluid  " src='img/logo/1.svg' />
+          <img className="img-fluid   logo-img-footer" src='img/logo/4.svg' />
         </div>
-        <div className="font_facit_text_very_small">
+        <div className="font_facit_text_very_small mt-1">
 
-           Die TAM hilft Unternehmen dabei, ihre MitarbeiterInnen zu entwickeln und Kulturen zu transformieren. Mit über 40 Jahren Erfahrung und über 1000 ausgebildeten Trainerinnen und Trainern zählt sie zu den renommiertesten Akademien Deutschlands.
+           Die Open Agile hilft Unternehmen dabei, ihre MitarbeiterInnen zu entwickeln und Kulturen zu transformieren. Mit über 40 Jahren Erfahrung und über 1000 ausgebildeten Trainerinnen und Trainern zählt sie zu den renommiertesten Akademien Deutschlands.
         </div>
 
         <div>
@@ -87,8 +87,11 @@ export default function Footer() {
         </div>
 
       </div>
-      <div className="col">
+      <div className="col ">
+
+      <div className="row ">
         <div className="font_facit_text_very_small mt-3">KONTAKT</div>
+        </div>
 
 
         <div className="row ">
@@ -104,9 +107,9 @@ export default function Footer() {
 
 
       <div className="col">
-        <div className="font_facit_text_very_small mt-3">DIE TAM</div>
+        <div className="font_facit_text_very_small mt-3">DIE OPEN AGILE</div>
         <div className="font_facit_text_very_very_small_gris mt-3">
-          <div >About TAM</div>
+          <div >About Open Agile</div>
           <div>Trainings</div>
           <div>Das Team</div>
           <div>Jobs</div>
