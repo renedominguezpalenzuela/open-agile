@@ -1,19 +1,23 @@
 
 @font-face {
-    font-family: Montserrat-Regular;
-    src: url("/fonts/Montserrat-Regular.ttf");
+    font-family: Facit-Regular;
+    src: url("/fonts/Facit_Regular.otf");
+  }
+  
+  @font-face {
+    font-family: Facit-BoldItalic;
+    src: url("/fonts/Facit_bold_Italic.otf");
+  }
+  
+  @font-face {
+    font-family: Facit-Lightc;
+    src: url("/fonts/Facit_Light.otf");
   }
   
   
   @font-face {
-    font-family:Montserrat-Light;
-    src: url("/fonts/Montserrat-Light.ttf");
-  }
-  
-  
-  @font-face {
-    font-family: Montserrat-Bold;
-    src: url("/fonts/Montserrat-Bold.ttf");
+    font-family: Facit-Bold;
+    src: url("/fonts/Facit_Bold.otf");
   }
   
 /* Monserrar */
@@ -21,11 +25,11 @@
     font-family: Montserrat-BoldItalic;
     src: url("/fonts/Montserrat-BoldItalic.ttf");
   }
-
+  /* font_facit_title */
 
 /* Seccion 01 Principal */
   
-.font_title {
+.font_facit_title {
     font-family: Montserrat-BoldItalic;
     color: #ffffff;
     text-align: left;
@@ -33,7 +37,7 @@
     line-height: 1;
     font-weight: 500;
   
-    /* letter-spacing: 4px; */
+    letter-spacing: 4px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-transform: uppercase;
@@ -42,32 +46,17 @@
   }
   
   @media (max-width: 767px) {
-    .font_title {
+    .font_facit_title {
         font-size: 0.5em;
     }
   }
 
-  .font_title_purple {
-    color: #e50067;
-  }
-  
-  .font_title_seccion {
-    font-family:Montserrat-Bold;
-    color: #24325a;
-    
-     font-size: 30px;
-    font-weight: 100;
-     text-transform: uppercase; 
-     line-height: 90%;
-  }
-
 
   .font_facit_title_small {
-    font-family: Montserrat-BoldItalic;
+    font-family: Facit-BoldItalic;
     color: #ffffff;
     text-align: left;
-    /* font-size: 18px; */
-    font-size: 1.5vw;
+    font-size: 25px;
     line-height: 1;
     font-weight: 500;
   
@@ -87,9 +76,12 @@
 
   
   
-
+  .font_facit_title_purple {
+    color: #e50067;
+  }
+  
   .font_facit_text {
-    font-family: Montserrat-BoldItalic;
+    font-family: Facit-BoldItalic;
     color: #ffffff;
     margin-bottom: 100px;
     font-size: 20px;
@@ -104,7 +96,7 @@
   }
   
   .font_facit_text1 {
-    font-family: Montserrat-Regular;
+    font-family: Facit-Regular;
     color: #ffffff;
   
     font-size: 20px;
@@ -117,7 +109,7 @@
 
 /* Content02 - titulo */
 .font_second_line1 {
-    font-family: Montserrat-BoldItalic;
+    font-family: Facit-BoldItalic;
     color: #24325a;
   
     font-size: 50px;
@@ -136,7 +128,7 @@
 
   
   .font_second_line2 {
-    font-family: Montserrat-Regular;
+    font-family: Facit-Regular;
     color: #24325a;
   
     font-size: 20px;
@@ -155,7 +147,7 @@
   /* ----------------- Cards  -----------------------------*/
 
 .font_card_title {
-    font-family: Montserrat-BoldItalic;
+    font-family: Facit-BoldItalic;
     color: #24325a;
     font-style: italic; 
      font-size: 25px;
@@ -176,7 +168,7 @@
   
   
   .font_card_texto {
-    font-family: Montserrat-Regular;
+    font-family: Facit-Regular;
     color: #e42078;
     /* font-style: italic; */
     font-size: 18px;
@@ -193,9 +185,9 @@
 
    
   .font_card_boton {
-    font-family: Montserrat-BoldItalic;
+    font-family: Facit-BoldItalic;
     color: #ffffff;
-     line-height: 90%; 
+     line-height: 100%; 
     /* font-style: italic; */
     /* font-size: 13px; */
     /* font-size: 3vh; */
@@ -208,7 +200,7 @@
   @media (max-width: 767px) {
   
     .font_card_boton {
-      font-family: Montserrat-BoldItalic;
+      font-family: Facit-BoldItalic;
       color: #ffffff;
       /* font-style: italic; */
       
@@ -223,7 +215,7 @@
   /* Debajo de cards */
 
 .font_title2 {
-    font-family: Montserrat-BoldItalic;
+    font-family: Facit-BoldItalic;
     color: #ffffff;
     /* font-style: italic; */
     font-size: 35px;
@@ -243,7 +235,7 @@
 }
   
   .font_title3 {
-    font-family: Montserrat-Regular;
+    font-family: Facit-Regular;
     color: #e50067;
   
     font-size: 20px;
@@ -263,7 +255,7 @@
     }
   
   .font_title4 {
-    font-family: Montserrat-Regular;
+    font-family: Facit-Regular;
     color: #ffffff;
   
     font-size: 16px;
@@ -273,7 +265,7 @@
   }
   
   .font_title5 {
-    font-family: Montserrat-Regular;
+    font-family: Facit-Regular;
     color: #ffffff;
   
     font-size: 24px;
@@ -282,7 +274,7 @@
   }
   
   .font_title6 {
-    font-family: Montserrat-Regular;
+    font-family: Facit-Regular;
     color: #ffffff;
   
     font-size: 18px;
@@ -291,7 +283,7 @@
   }
   
   .font_carrusel {
-    font-family: Montserrat-Regular;
+    font-family: Facit-Regular;
     color: #666666;
   
     font-size: 16px;
@@ -304,7 +296,7 @@
   
 .font_card03_id {
 
-    font-family: Montserrat-Bold;
+    font-family: Facit-Bold;
       color: #e50067;
       margin-bottom: 0;
       font-size: 50px;
@@ -315,7 +307,7 @@
   
   .font_card03_title {
   
-    font-family: Montserrat-Bold;
+    font-family: Facit-Bold;
       color: #24325A;
       margin-bottom: 0;
       font-size: 30px;
@@ -329,7 +321,7 @@
   
   .font_card03_subtitle {
   
-    font-family: Montserrat-Regular;
+    font-family: Facit-Regular;
       color: #24325A;
       margin-bottom: 0;
       font-size: 15px;
@@ -342,7 +334,7 @@
 
   
 .font_facit_title_very_small {
-    font-family: Montserrat-BoldItalic;
+    font-family: Facit-BoldItalic;
     color: #ffffff;
      text-align: left;
     font-size: 2.5vw;
@@ -359,10 +351,10 @@
   
   
   .font_facit_text_small {
-    font-family: Montserrat-Regular;
+    font-family: Facit-Regular;
     color: #E50067;
     text-align: left;
-    font-size: 1.2vw;
+    font-size: 1.5vw;
   
     font-weight: 200;
   
@@ -377,7 +369,7 @@
   
   
   .font_facit_text_very_small {
-    font-family: Montserrat-Regular;
+    font-family: Facit-Regular;
     color: #ffffff;
     text-align: left;
     font-size: 13px;
@@ -394,7 +386,7 @@
   
   
   .font_facit_text_very_small_gris {
-    font-family: Montserrat-Regular;
+    font-family: Facit-Regular;
     color: #cacaca;
     text-align: left;
     font-size: 11px;
@@ -411,7 +403,7 @@
   
   
   .font_facit_boton_small {
-    font-family: Montserrat-Regular;
+    font-family: Facit-Regular;
     color: #ffffff;
     text-align: left;
     font-size: 16px;
@@ -427,7 +419,7 @@
   }
   
   .font_facit_text_very_very_small_gris {
-    font-family: Montserrat-Regular;
+    font-family: Facit-Regular;
     color: #cacaca;
     text-align: left;
     font-size: 11px;
@@ -446,7 +438,7 @@
   
 .color_contactos {
     color:#E50067;
-    font-family: Montserrat-Regular;
+    font-family: Facit-Regular;
      text-align: left;
     font-size: 12px;
   
@@ -473,7 +465,7 @@
 
   
 .font_facit_text2 {
-    font-family: Montserrat-Regular;
+    font-family: Facit-Regular;
     color: #ffffff;
   
     font-size: 16px;
@@ -484,3 +476,12 @@
   }
 
   
+.font_title {
+    font-family: Facit-Bold;
+    color: #24325a;
+    
+     font-size: 30px;
+    font-weight: 100;
+     text-transform: uppercase; 
+     line-height: 90%;
+  }

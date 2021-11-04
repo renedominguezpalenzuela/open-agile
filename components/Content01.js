@@ -31,11 +31,11 @@ export default function Content01() {
 {/* Contenido en pantalla ancha */}
           <div className="row ms-3 mt-3  d-none d-lg-block">
             <h1 id="title">
-              <div className="font_facit_title ">
+              <div className="font_title ">
                 <p>FOR BETTER WORK</p>
                 {/* <p>we are ready</p> */}
               </div>
-              <span className="font_facit_title font_facit_title_purple">
+              <span className="font_title font_title_purple">
                   now.
               </span>
             </h1>

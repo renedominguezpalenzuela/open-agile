@@ -27,7 +27,7 @@ export default function Content05 ( ) {
 
 
 
-        <div className="font_title mt-5 ms-4 pt-5"> Das Wichtigste</div>
+        <div className="font_title_seccion  mt-5 ms-4 pt-5"> Das Wichtigste</div>
         <div className="font_card_texto mt-2 ms-4"> Rund um die Akademie</div>
 
         <div id="MyCarousel" className="carousel slide   " data-bs-ride="carousel" data-mdb-touch="true">

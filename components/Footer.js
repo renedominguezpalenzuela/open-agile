@@ -7,15 +7,15 @@ export default function Footer() {
   <footer id="myfooter" className="mt-5 no-gutter">
 
 
-
-    <div id="rowfoot01" className="row color_background footer_path ps-2  mt-5 pt-5">
+    <div id="rowfoot01" className="row  color_background footer_path ps-2  mt-5 pt-5">
+     
       <div className="col-auto ">
         <div className="font_facit_title_small p-3">OPEN AGILE NEWSLETTER</div>
         <div className="font_facit_text_small ps-3">LASS UNS IN KONTAKT BLEIBEN</div>
       </div>
 
-      <div className="col-auto ps-3 ">
-        <div className="row g-2   align-items-center mt-1">
+      <div className="col-auto   ps-1 ">
+        <div className="row g-2  align-items-center mt-1">
           <div className="col-auto ">
             <input type="text " className="form-control " placeholder="Vorname"></input>
           </div>
@@ -27,7 +27,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="row pt-1 ps-2">
+        <div className="row  pt-1 ps-1">
           <div className="col-auto    ">
             <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"></input>
             <label className="ms-2 form-check-label font_facit_text_very_small">
@@ -36,33 +36,32 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="row mt-2 ps-1 font_facit_text_very_small">
+        <div className="row  mt-2 ps-1 font_facit_text_very_small">
           <div className="col-auto">
             <div>* Wir respektieren deine Daten. Mit Klick auf den oben stehenden Button ‘Ja, ich bin einverstanden’ erklärst du dich</div>
             <div>insbesondere mit dem Punkt 'Kontaktformular' unserer Datenschutzerklärung einverstanden. Weitere Informationen zum</div>
             <div> Datenschutz findest du in unserer Datenschutzerklärung.</div>
           </div>
+          
         </div>
 
-
-
-
-
-
-
-
-
-
-
-      </div>
-
-      <div className="col-auto  mt-4 ms-1 d-flex align-items-center  text-center  ">
+          <div className="row  mt-3 ps-1 font_facit_text_very_small d-flex align-items-center  ">
+          {/* <div className="col-auto me-5 pe-5  mt-4 ms-1 d-flex align-items-center  text-center  "> */}
+          <div className="col-auto ">
         <button type="button" className="btn boton_card rounded-pill shadow-lg   ">
           <div className=" font_facit_boton_small "> ANMELDEN</div>
         </button>
+        </div>
+      {/* </div>  */}
+        </div>
+
       </div>
 
-
+      {/* <div className="col-auto  border mt-4 ms-1 d-flex align-items-center  text-center  ">
+        <button type="button" className="btn boton_card rounded-pill shadow-lg   ">
+          <div className=" font_facit_boton_small "> ANMELDEN</div>
+        </button>
+      </div> */}
 
     </div>
 
