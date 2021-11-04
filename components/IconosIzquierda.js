@@ -8,11 +8,11 @@ export default function IconosIzquierda() {
       <div className="rotate font_facit_text2   ">Let's talk</div>
     </div>
 
-    <div className="row text-start mt-4 d-none d-lg-block margen_iconos_izquierda">
-      <div className="rotate font_facit_text2">_____</div>
+    <div className="row   text-start mt-4 d-none d-lg-block margen_iconos_izquierda">
+      <div className="rotate ps-1 pe-1 font_facit_text2">_____</div>
     </div>
 
-    <div className="row mt-4 d-none d-lg-block">
+    <div className="row mt-4 pt-2 d-none d-lg-block">
       <a href="mailto:myemail@mail.com">
         <FontAwesomeIcon icon="envelope" width="32" className="circulo iconos" />
       </a>
