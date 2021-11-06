@@ -14,10 +14,16 @@ export default function MenuSuperior() {
 
 
 
-  <div id="row03" className="row p-3 ">
+  <div id="row03" className="row ">
   <div className="col-10 d-none d-lg-block">
 
      <nav className="navbar navbar-expand-lg navbar-light navigation">
+
+
+      {/* <a class="navbar-brand" href="#"> */}
+      <img className="img-fluid logo-img navbar-brand"  src="img/logo/5.svg" />
+      
+      {/* </a> */}
 
       <ul className="navbar-nav">
 
@@ -84,13 +90,13 @@ export default function MenuSuperior() {
     </div>
 
 
-    <div className="col     d-flex flex-row-reverse ">
-      {/* <img className="img-fluid  "  src="img/logo01.png" /> */}
+    {/* <div className="col     d-flex flex-row-reverse ">
+    
 
      <div> <img className="img-fluid logo-img"  src="img/logo/5.svg" /></div>
-      {/* <div>Texto</div> */}
+  
    
-    </div>
+    </div> */}
 
   </div>
 </>

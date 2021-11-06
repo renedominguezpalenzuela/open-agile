@@ -57,11 +57,7 @@ export default function Footer() {
 
       </div>
 
-      {/* <div className="col-auto  border mt-4 ms-1 d-flex align-items-center  text-center  ">
-        <button type="button" className="btn boton_card rounded-pill shadow-lg   ">
-          <div className=" font_facit_boton_small "> ANMELDEN</div>
-        </button>
-      </div> */}
+   
 
     </div>
 

@@ -49,15 +49,7 @@ export default function Content02Cursos( {cursos}) {
 
    
 
-     {/* <div className="row div_content03a "> 
-   
-       <div className="col div_content02b border border-dark"> 
-       
-        <Content02Final /> 
-
-
-       </div>  
-     </div>  */}
+    
 
      <div className="row div_content03a g-0 "> 
    

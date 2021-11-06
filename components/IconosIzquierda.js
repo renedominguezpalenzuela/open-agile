@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function IconosIzquierda() {
   return (
 <>
-  <div className="col  d-none d-lg-block position-absolute top-50  ">
+  <div className="col  d-none d-lg-block position-absolute top-50 end-0  ">
 
     <div className="row text-center mt-4 d-none d-lg-block">
       <div className="rotate font_facit_text2   ">Let's talk</div>

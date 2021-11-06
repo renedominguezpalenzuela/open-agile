@@ -12,12 +12,6 @@ a {
   text-decoration: none;
 }
 
-/* 
-* {
-  background: #000 !important;
-  color: #0f0 !important;
-  outline: solid #f00 1px !important;
-} */
 
 * {
   box-sizing: border-box;
@@ -249,12 +243,7 @@ div.vertical-line{
 .div_content02a {
   background-color: #24325a;
   clip-path: polygon(0% 2%, 100% 0%, 100% 1000%, 0% 100%);
-  /* width: 100%;
-  height: 100%; */
-  /* height: 500px; */
-  /* top: -30px; */
-  /* position: relative; */
-  /* left: 30px; */
+ 
 }
 
 
@@ -359,8 +348,11 @@ div.vertical-line{
 .mysticky{
  
   position: fixed; /* Fixed/sticky position */
-  left: 25px;
-  top: 12px;
+   /* left: 25px;  */
+  top: 30px;
+  right: 30px;
+  
+
  
   
   z-index: 99; /* Make sure it does not overlap */

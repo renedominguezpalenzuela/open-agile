@@ -5,7 +5,10 @@ import styles from "../styles/Home.module.css";
 export default function LeftColumnColor() {
   return (
 <>
+
+<div className="d-none d-lg-block">
   <div className={styles.left_column_color}></div>
+  </div>
 </>
   );
 }
