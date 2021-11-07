@@ -29,8 +29,9 @@ export default function Content01() {
         
         </div>
 
-        <div id="col01" className="col-md-9 ms-4">
+        <div id="col01" className="col-md-9 ms-4 pt-5 mt-2 ">
            <Content01Text/>
+         {/* <span class="align-middle">middle</span> */}
         </div>
 
         <div id="col02" className="col-md-1 mt-3 text-center">

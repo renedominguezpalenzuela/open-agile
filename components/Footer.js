@@ -13,11 +13,11 @@ export default function Footer() {
         <div className="font_facit_title_small p-3">OPEN AGILE NEWSLETTER</div>
         <div className="font_facit_text_small ps-3">LASS UNS IN KONTAKT BLEIBEN</div>
         {/* <div className="row d-flex align-items-center "> */}
-       <div className="pt-4 text-center start-25">
+       {/* <div className="pt-4 text-center start-25">
 
         <img className="img-fluid logo-img-footer2"  src="img/logo/5.svg" />
         </div>
-        
+         */}
         {/* </div> */}
          
       </div>
@@ -53,7 +53,7 @@ export default function Footer() {
           
         </div>
 
-          <div className="row  mt-3 ps-1 font_facit_text_very_small d-flex align-items-center  ">
+          <div className="row  mt-3 mb-5 ps-1 font_facit_text_very_small d-flex align-items-center  ">
           {/* <div className="col-auto me-5 pe-5  mt-4 ms-1 d-flex align-items-center  text-center  "> */}
           <div className="col-auto ">
         <button type="button" className="btn boton_card rounded-pill   ">
@@ -88,7 +88,8 @@ export default function Footer() {
 
       <div className="col ">
         <div className="">
-          <img className="img-fluid   logo-img-footer" src='img/logo/4.svg' />
+          {/* <img className="img-fluid   logo-img-footer" src='img/logo/4.svg' /> */}
+              <img className="img-fluid logo-img-footer2"  src="img/logo/5.svg" />
         </div>
         <div className="font_facit_text_very_small mt-1">
 
