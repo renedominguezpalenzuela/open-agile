@@ -15,13 +15,13 @@ export default function MenuSuperior() {
 
 
   <div id="row03" className="row ">
-  <div className="col-10 d-none d-lg-block">
+  <div className="col-10 d-none d-lg-block ps-4">
 
      <nav className="navbar navbar-expand-lg navbar-light navigation">
 
 
       {/* <a class="navbar-brand" href="#"> */}
-      <img className="img-fluid logo-img navbar-brand"  src="img/logo/5.svg" />
+      <img className="img-fluid logo-img navbar-brand "  src="img/logo/5.svg" />
       
       {/* </a> */}
 
