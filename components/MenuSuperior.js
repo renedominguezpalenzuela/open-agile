@@ -92,7 +92,7 @@ export default function MenuSuperior() {
 
 
     <div className="col    d-none d-xl-block ">
-      <div class="row   iconos_blancos ">
+      <div className="row   iconos_blancos ">
         <div className="col">
           <a href="mailto:myemail@mail.com">
             <FontAwesomeIcon icon="envelope" width="32" className="circulo iconos" />
