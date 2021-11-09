@@ -5,7 +5,7 @@ export default function MenuFlotanteBoton({color, back_color}) {
 <>
 
 {/* sticky-top */}
-<div id="panel_abrir_menu" className="border mysticky d-flex justify-content-end  ">
+<div id="panel_abrir_menu" className=" mysticky d-flex justify-content-end  ">
 
    <button id="boton_abrir_menu" className="btn mt-2 "  role="button">
     <FontAwesomeIcon icon="bars" className="botonTresBarras" width="32" />

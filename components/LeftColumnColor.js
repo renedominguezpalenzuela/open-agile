@@ -6,7 +6,7 @@ export default function LeftColumnColor() {
   return (
 <>
 
-<div className="d-none d-lg-block">
+<div className="d-none d-xl-block">
   <div className={styles.left_column_color}></div>
   </div>
 </>

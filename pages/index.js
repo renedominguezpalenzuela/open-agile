@@ -47,7 +47,7 @@ export default function Home({cursos, servicios, blogs}) {
      <div id="principal" className="row content-fluid " >
 
      
-        <MenuFlotanteBoton color="white"/>
+        <MenuFlotanteBoton />
     
         {/*Area superior  */}
         <div className={styles.banner}>

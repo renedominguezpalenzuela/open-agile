@@ -75,6 +75,12 @@ export default function MenuFlotante() {
               <span className="ms-1  font_title6">JOBS</span>
             </a>
         </li>
+
+        <li>
+            <a href="#" className="nav-link text-truncate">
+              <span className="ms-1  font_title6">JOBS</span>
+            </a>
+        </li>
       </ul>
     </div>
 

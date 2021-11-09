@@ -46,53 +46,18 @@ var Y = window.scrollY
 
 var color_fondo = "#24325A";
 
-if (Y < course_top) {
-	boton.style.backgroundColor = 'transparent';
-} else if (Y > course_top && Y <course_blue_top) {
-   boton.style.backgroundColor = color_fondo;	
-} else if ( Y>empresas_top && Y<footer_top) {
-	 boton.style.backgroundColor = color_fondo;
-} else if (Y>footer_top){	 
- boton.style.backgroundColor = 'transparent';
-} else  {
-	 boton.style.backgroundColor = 'transparent';
-}
+// if (Y < course_top) {
+// 	boton.style.backgroundColor = 'transparent';
+// } else if (Y > course_top && Y <course_blue_top) {
+//    boton.style.backgroundColor = color_fondo;	
+// } else if ( Y>empresas_top && Y<footer_top) {
+// 	 boton.style.backgroundColor = color_fondo;
+// } else if (Y>footer_top){	 
+//  boton.style.backgroundColor = 'transparent';
+// } else  {
+// 	 boton.style.backgroundColor = 'transparent';
+// }
 
 
-/*
- if ($(".fixedposition").offset().top < ($(".footer").offset().top - 30)) {
-        $(".fixedposition").css("top", "30px");
-        $(".fixedposition").css("display", "block");
-    } else {
-        $(".fixedposition").css("display", "none");
-    }
-*/
- /*  var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-   if (st > lastScrollTop){
-      // downscroll code
-   } else {
-      // upscroll code
-   }
-   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling*/
+
 }, false);
-
-window.scroll(function(){
-	///console.log('scroll');
- /* var fixed = $("div.fixed");
-  
-  var fixed_position = $("div.fixed").offset().top;
-  var fixed_height = $("div.fixed").height();
-
-  var toCross_position = $(".div-to-cross").offset().top;
-  var toCross_height = $(".div-to-cross").height();
-
-  if (fixed_position + fixed_height  < toCross_position) {
-    fixed.removeClass('white');
-  } else if (fixed_position > toCross_position + toCross_height) {
-    fixed.removeClass('white');
-  } else {
-    fixed.addClass('white');
-  }
-  */
-
-});
