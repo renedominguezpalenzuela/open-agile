@@ -361,6 +361,7 @@ div.vertical-line{
   z-index: 99; /* Make sure it does not overlap */
 
   cursor: pointer; /* Add a mouse pointer on hover */
+  width: fit-content;
 
 }
 
@@ -424,4 +425,8 @@ div.vertical-line{
     transform: scale(1);
   }
 
+
+  .botonTresBarras {
+    color: #F82D7C;
+  }
 
