@@ -90,7 +90,7 @@ export default function MenuSuperior() {
       </nav>
     </div>
 
-
+{/* 
     <div className="col    d-none d-xl-block ">
       <div className="row   iconos_blancos ">
         <div className="col">
@@ -106,7 +106,7 @@ export default function MenuSuperior() {
       </div>
 
 
-    </div>
+    </div> */}
 
 
 
