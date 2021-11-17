@@ -8,21 +8,30 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function MenuSuperior() {
   return (
 <>
-      {/*                 <!-- Menu Superior--> */}
+      {/*                   <!-- Menu Superior--> */}
 
 
-  <div id="row03" className="row menu_superior">
-    <div className="col-9 d-none d-lg-block ms-4">
-
-      <nav className="navbar navbar-expand-lg navbar-light navigation">
 
 
-      {/*        <a class="navbar-brand" href="#"> */}
-          <img className="img-fluid logo-img navbar-brand " src="img/logo/5.svg" />
-      
-      {/* </a> */}
+  <div id="row03" className="row  menu_superior d-flex align-items-center justify-content-center">
 
-        <ul className="navbar-nav ms-3">
+    <div className="col  text-center">
+      <a class="navbar-brand" href="/">
+        <img className="img-fluid logo-img navbar-brand " src="img/logo/5.svg" />
+      </a>
+    </div>
+
+
+    <div className="col d-none d-lg-block   ">
+
+   
+
+      <nav className="navbar navbar-expand-lg navbar-light navigation   ">
+
+
+
+
+        <ul className="navbar-nav " >
 
           <li className="nav-item">
             <a className="nav-link" aria-current="page" href="#course">
@@ -88,6 +97,18 @@ export default function MenuSuperior() {
 
         </ul>
       </nav>
+    </div>
+
+    <div className="col  text-center align-self-center">
+  
+
+      {/* <button type="button" class="btn btn-outline-primary ">Configuration</button> */}
+
+
+ <button type="button" class="btn  btn-outline-primary ">Configuration</button>
+     
+
+     
     </div>
 
 {/* 

@@ -1,5 +1,7 @@
 
  
+ var boton=document.getElementById("boton_abrir_menu");
+  boton.style.display = 'none';
 
 
 window.addEventListener('load', (event) => { 
@@ -34,29 +36,22 @@ window.addEventListener('load', (event) => {
 
 window.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
 
-var boton=document.getElementById("boton_abrir_menu");
 
-var empresas_top=document.getElementById("empresas").offsetTop;
-var footer_top=document.getElementById("myfooter").offsetTop;
-var course_top=document.getElementById("course").offsetTop;
-var course_blue_top=document.getElementById("course_blue").offsetTop;
-var footer_top=document.getElementById("myfooter").offsetTop;
+
+
+var course_top=document.getElementById("course").offsetTop - 100;
+
 
 var Y = window.scrollY
 
 var color_fondo = "#24325A";
 
-// if (Y < course_top) {
-// 	boton.style.backgroundColor = 'transparent';
-// } else if (Y > course_top && Y <course_blue_top) {
-//    boton.style.backgroundColor = color_fondo;	
-// } else if ( Y>empresas_top && Y<footer_top) {
-// 	 boton.style.backgroundColor = color_fondo;
-// } else if (Y>footer_top){	 
-//  boton.style.backgroundColor = 'transparent';
-// } else  {
-// 	 boton.style.backgroundColor = 'transparent';
-// }
+if (Y < course_top) {
+    boton.style.display = 'none';
+
+} else  {
+	 boton.style.display = ''
+}
 
 
 

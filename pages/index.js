@@ -52,7 +52,7 @@ export default function Home({cursos, servicios, blogs}) {
         {/*Area superior  */}
         <div className={styles.banner}>
        
-          <LeftColumnColor />
+          {/* <LeftColumnColor /> */}
           <Content01 />
         </div>
 

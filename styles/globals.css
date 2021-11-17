@@ -441,5 +441,29 @@ div.vertical-line{
 
   .botonTresBarras {
     color: #F82D7C;
+   
   }
 
+
+
+  /* 7dcf29 */
+
+ .btn-outline-primary {
+  background-color: rgba(0, 0, 0, 0) !important;
+  border-color: #F82D7C  !important;
+  color: #F82D7C !important;
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary:visited,
+.btn-outline-primary:focus {
+  /* background-color: white !important; */
+  border-color: white !important;
+  color: white !important;
+}
+
+.iconos-new {
+  width:auto;
+padding: 0px;
+margin: 3px
+}
