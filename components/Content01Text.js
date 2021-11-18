@@ -10,59 +10,83 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function Content01Text() {
   return (
 <>
-      {/*       <!-- Contenido Principal --> */}
-      {/* Contenido en pantalla ancha */}
-      {/*d-none d-lg-block*/}
-  <div className="row  ms-3 mt-3 border">
+      {/*                   <!-- Contenido Principal --> */}
+   
+  <div className="row   mt-3  ">
     <h2>
       <div className="font_title_secundario font_title_purple">
             OPEN AGILE
       </div>
     </h2>
 
-    <h1 id="title">
+    {/*    <h1 id="title"> */}
       <div className="font_title ">
         <p>FOR BETTER WORK</p>
       </div>
-    </h1>
+    {/* 
+    </h1> */}
 
 
   </div>
 
-  <div className="row d-flex align-items-center  ">
-       
-       
-        {/*    <i class="fab fa-facebook"></i> */}
-    <div className="col-1 border iconos-new ">
-      {/* <a href="https://www.facebook.com/OpenAgile21">
-        <FontAwesomeIcon icon="envelope" width="32" className="" />
-      </a> */}
-      AAA
+
+
+
+  <div className="row justify-content-end me-5 ">
+
+
+
+   
+
+    <div className="col-1 iconos-contenedor">
+      <a href="https://www.linkedin.com/company/open-agile">
+        <i className="bi bi-linkedin iconos-social"></i>
+      </a>
     </div>
 
-     <div className="col-1 iconos-new ">
-      {/* <a href="https://www.facebook.com/OpenAgile21">
-        <FontAwesomeIcon icon="envelope" width="32" className="" />
-      </a> */}
-      BBB
+
+
+    <div className="col-1 iconos-contenedor ">
+      <a href="https://www.youtube.com/channel/UCuwf90RVDjbK0Isu1vL1skA">
+        <i className="bi bi-youtube iconos-social"></i>
+      </a>
     </div>
+
+
+    <div className="col-1 iconos-contenedor ">
+      <a href="https://www.instagram.com/open_agile/">
+        <i className="bi bi-instagram iconos-social"></i>
+      </a>
+    </div>
+
+      <div className="col-1 iconos-contenedor mt-2 ">
+      <a href="https://www.xing.com/pages/open-agile" >       
+          <img className="social-img"  src="img/xing-img.svg" /> 
+      </a>
+    </div>
+
+
+
+    <div className="col-1 iconos-contenedor  ">
+      <a href="https://www.facebook.com/OpenAgile21" className="youtube">
+        <i className="bi bi-facebook iconos-social"></i>
+      </a>
+    </div>
+
+
+   
+
+
+
+
+
+
+
+
+
   </div>
 
-      {/* Contenido en pantalla estrecha */}
-      {/*  <div className="row ms-3 mt-3  d-lg-none">
-    <h1 id="title">
-      <div className="font_facit_title_small">
-        <p>FOR BETTER WORK</p>
 
-      </div>
-      <span className="font_facit_title_small font_facit_title_purple"> 
-                  now.
-      </span>
-    </h1>
-    <p className="font_facit_title_small  "> 
-                TRAINING PEOPLE & TRANSFORMING CULTURES
-    </p>
-  </div> */}
 </>
   );
 }

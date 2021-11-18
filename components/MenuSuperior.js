@@ -16,7 +16,7 @@ export default function MenuSuperior() {
   <div id="row03" className="row  menu_superior d-flex align-items-center justify-content-center">
 
     <div className="col  text-center">
-      <a class="navbar-brand" href="/">
+      <a className="navbar-brand" href="/">
         <img className="img-fluid logo-img navbar-brand " src="img/logo/5.svg" />
       </a>
     </div>
@@ -105,7 +105,7 @@ export default function MenuSuperior() {
       {/* <button type="button" class="btn btn-outline-primary ">Configuration</button> */}
 
 
- <button type="button" class="btn  btn-outline-primary ">Configuration</button>
+ <button type="button" className="btn  btn-outline-primary ">Configuration</button>
      
 
      
