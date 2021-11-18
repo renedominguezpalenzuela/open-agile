@@ -2,7 +2,7 @@ import styles from "../styles/Home.module.css";
 
 
 //----------------------------------------------------------------------------------------------------------
-//            Area de Contenido: LEISTUNGEN (Servicios)
+//            
 //----------------------------------------------------------------------------------------------------------
 
 export default function Content06 ({imagen,texto_alt } ) {

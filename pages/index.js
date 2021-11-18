@@ -26,35 +26,35 @@ import { servidor_url } from "../config";
 export default function Home({cursos, servicios, blogs}) {
 
 
-    <Head>
-        <script async src="js/menu.js" />
-      </Head> 
+<Head>
+  <script async src="js/menu.js" />
+</Head> 
 
 
 
   return (
-    <>
-<Head>
-  <title>Main Page title</title>
-  <meta name="description" content="Lorem Ipsum" />
-  <link rel="icon" href="/favicon.ico" />
-  <script async src="js/chat.js" />
-</Head>
+<>
+  <Head>
+    <title>Main Page title</title>
+    <meta name="description" content="Lorem Ipsum" />
+    <link rel="icon" href="/favicon.ico" />
+    <script async src="js/chat.js" />
+  </Head>
 
      
 
       {/*Contenedor*/}
-     <div id="principal" className="row content-fluid " >
+  <div id="principal" className="row content-fluid ">
 
-     
-        <MenuFlotanteBoton />
+
+    <MenuFlotanteBoton />
     
         {/*Area superior  */}
-        <div className={styles.banner}>
+    <div className={styles.banner}>
        
           {/* <LeftColumnColor /> */}
           <Content01 />
-        </div>
+</div>
 
         {/*Cards  */}
         <Content02Cursos cursos={cursos} /> 
@@ -63,18 +63,27 @@ export default function Home({cursos, servicios, blogs}) {
         <Content03 imagen="Testimonials_kunden-1.png" />
 
         {/*Contenido  */}
-        <Content04  lista_cards={blogs}/>  
+    <Content04 lista_cards={blogs}/>  
 
         {/*Carrousel  */}
         <Content05 />
 
 
         {/* Servicios  */}
-        <div  id="services" className=" mt-5 ">
-        <div className="font_title_seccion mt-1 ms-4"> LEISTUNGEN</div>
-            <div className="font_card_texto mt-2 ms-4"> Lorem Ipsum</div>
-          <Card01Lista lista_cards={servicios} />
-        </div>
+        <div id="services" className=" mt-5 ">
+      <div className="font_title_seccion mt-1 ms-4"> LEISTUNGEN</div>
+      <div className="font_card_texto mt-2 ms-4"> Lorem Ipsum</div>
+
+              {/*      <div className="row  g-0"> */}
+
+        <Card01Lista lista_cards={servicios} />
+
+
+
+    
+    {/* </div> */}
+          
+       </div>
 
         {/*Footer  */}
         <Footer />
@@ -83,7 +92,7 @@ export default function Home({cursos, servicios, blogs}) {
       
       {/*Menu Lateral oculto  */} 
       <MenuFlotante />
-    </>
+</>
   );
 }
 

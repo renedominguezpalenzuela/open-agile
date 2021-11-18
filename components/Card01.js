@@ -12,26 +12,33 @@ export default function Card01({
 
  
   return (
-    <>
-      <div className="col p-4">
-         <div className="card card-rounded my_card">
-         
-          <img className="card-img-top corte_cards img-rounded "  src={`img/${imagen}`} alt={texto_alt}/> 
-      
-          <div className="card-body text-center w-100 m-1 p-1 p-2">
-            <p className="card-text font_card_title m-1">{titulo}</p>
-            <p className="card-text font_card_texto m-3">{texto}</p>
-          </div>
+<>
+  <div className="col p-4">
+    <div className="card card-rounded my_card">
 
-          <div className="position-absolute top-100 start-50 translate-middle">
-            <button type="button" className="btn boton_card rounded-pill w-100 h-100">
-              <div className="font_card_boton ps-2 pe-2 pt-1  pb-1 ms-2 me-2">Erfahre mehr...</div>
-            </button>
-          </div>
+      <img className="card-img-top corte_cards img-rounded " src={`img/${imagen}`} alt={texto_alt}/>
 
-         
-        </div> 
+<div className="card-body text-center w-100 m-1 p-1 p-2">
+        <p className="card-text font_card_title m-1">{titulo}</p>
+            {/*        <p className="card-text font_card_texto m-3">{texto}</p> */}
       </div>
-    </>
+
+          {/*      <div className="position-absolute top-75 start-50 translate-middle">
+        <button type="button" className="btn boton_card rounded-pill w-100 h-100">
+          <div className="font_card_boton ps-2 pe-2 pt-1  pb-1 ms-2 me-2">Jetzt lesen...</div>
+        </button>
+      </div> */}
+
+
+      <div class="card-footer text-center pb-4 pt-3">
+        <button type="button" className="btn boton_card rounded-pill w-75 h-100">
+          <div className="font_card_boton ps-2 pe-2 pt-2  pb-2 ms-2 me-2">Jetzt lesen...</div>
+        </button>
+      </div>
+
+
+    </div>
+  </div>
+</>
   );
 }

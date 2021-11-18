@@ -21,9 +21,7 @@ export default function Content01() {
 
 
   <div id="row02" className="row d-flex align-items-center justify-content-center ">
-    {/* <div id="col00" className="col-md-1 mt-3 border">
-
-    </div> */}
+ 
 
     <div id="col01" className="col-md-9 ms-4 pt-5 mt-2 ">
       <Content01Text/>

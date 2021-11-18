@@ -514,3 +514,11 @@ i:hover {
 .social-img:hover, .social-img:focus {
   filter: invert(26%) sepia(92%) saturate(2433%) hue-rotate(320deg) brightness(101%) contrast(95%);
 }
+
+.card-footer {
+  
+padding: 0.5rem 1rem;
+background-color: rgba(255, 255, 255, 0)!important;
+border-top: 1px solid rgba(255, 255, 255, 0)!important;
+ 
+}
