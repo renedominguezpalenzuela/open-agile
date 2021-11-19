@@ -4,6 +4,8 @@ import Layout from "../components/Layout";
 
 import "../styles/globals.css";
 import "../styles/fonts.css";
+import "../styles/animate.css";
+
 
 import 'bootstrap-icons/font/bootstrap-icons.css';
 

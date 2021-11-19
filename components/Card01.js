@@ -30,7 +30,7 @@ export default function Card01({
       </div> */}
 
 
-      <div class="card-footer text-center pb-4 pt-3">
+      <div className="card-footer text-center pb-4 pt-3">
         <button type="button" className="btn boton_card rounded-pill w-75 h-100">
           <div className="font_card_boton ps-2 pe-2 pt-2  pb-2 ms-2 me-2">Jetzt lesen...</div>
         </button>

@@ -5,13 +5,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
+
 export default function MenuSuperior() {
   return (
 <>
-      {/*                   <!-- Menu Superior--> */}
-
-
-
+  {/*                             <!-- Menu Superior--> */}
 
   <div id="row03" className="row  menu_superior d-flex align-items-center justify-content-center">
 
@@ -24,29 +22,91 @@ export default function MenuSuperior() {
 
     <div className="col d-none d-lg-block   ">
 
-   
+      <nav className="navbar navbar-expand-lg navbar-light navigation  ">
 
-      <nav className="navbar navbar-expand-lg navbar-light navigation   ">
-
-
+        <ul className="navbar-nav ">
 
 
-        <ul className="navbar-nav " >
+          <li className="nav-item dropdown2  ">
+            <a className="nav-link">
+              CRASHKURSE
+            </a>
 
-          <li className="nav-item">
+            <ul className="dropdown-content color-dropdown animate__animated animate__fadeInUp no-bullets">
+
+
+              <li className="nav-item">
+                <a className="dropdown-item color-font-dropdown" href="#">CRASHKURS ZUM AGILE COACH</a>
+              </li>
+
+
+              <li className="nav-item">
+                <a className="dropdown-item color-font-dropdown" href="#">CRASHKURS ZUM AGILE FACILITATOR</a>
+              </li>
+              <li className="nav-item">
+                <a className="dropdown-item color-font-dropdown" href="#">CRASHKURS ZUM SCRUM MASTER</a>
+              </li>
+
+            </ul>
+          </li>
+
+          {/*          <li className="nav-item dropdown">
+            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">CRASHKURSE</a>
+            <ul className="dropdown-menu">
+              <li>
+                <a className="dropdown-item" href="#">CRASHKURS ZUM AGILE COACH</a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">CRASHKURS ZUM AGILE FACILITATOR</a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">CRASHKURS ZUM SCRUM MASTER</a>
+              </li>
+            </ul>
+          </li> */}
+
+          {/*          <li className="nav-item">
             <a className="nav-link" aria-current="page" href="#course">
                 CRASHKURSE
             </a>
-          </li>
+          </li> */}
 
           <li className="nav-item">
             <div className="separador_menu">/</div>
           </li>
 
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <a className="nav-link" aria-current="page" href="#services">
                 LEISTUNGEN
             </a>
+          </li> */}
+
+
+            <li className="nav-item dropdown2  ">
+            <a className="nav-link">
+              LEISTUNGEN
+            </a>
+
+            <ul className="dropdown-content color-dropdown animate__animated animate__fadeInUp no-bullets">
+
+
+              <li className="nav-item">
+                <a className="dropdown-item color-font-dropdown" href="#">COACHING </a>
+              </li>
+
+
+              <li className="nav-item">
+                <a className="dropdown-item color-font-dropdown" href="#">MITBESTIMMUNG IM AGILEN KONTEXT</a>
+              </li>
+              <li className="nav-item">
+                <a className="dropdown-item color-font-dropdown" href="#">ORGANISATIONSENTWICKLUNG</a>
+              </li>
+
+               <li className="nav-item">
+                <a className="dropdown-item color-font-dropdown" href="#">INHOUSE TRAINING</a>
+              </li>
+
+            </ul>
           </li>
 
           <li className="nav-item">
@@ -92,46 +152,13 @@ export default function MenuSuperior() {
             </a>
           </li>
 
-
-
-
         </ul>
       </nav>
     </div>
 
     <div className="col  text-center align-self-center">
-  
-
-      {/* <button type="button" class="btn btn-outline-primary ">Configuration</button> */}
-
-
- <button type="button" className="btn  btn-outline-primary ">Configuration</button>
-     
-
-     
+      <button type="button" className="btn  btn-outline-primary ">Configuration</button>
     </div>
-
-{/* 
-    <div className="col    d-none d-xl-block ">
-      <div className="row   iconos_blancos ">
-        <div className="col">
-          <a href="mailto:myemail@mail.com">
-            <FontAwesomeIcon icon="envelope" width="32" className="circulo iconos" />
-          </a>
-        </div>
-        <div className="col">
-          <a href="tel:03020123456">
-            <FontAwesomeIcon icon="phone" width="32" className="circulo iconos" />
-          </a>
-        </div>
-      </div>
-
-
-    </div> */}
-
-
-
-
 
 
   </div>
