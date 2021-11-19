@@ -15,8 +15,8 @@ export default function Content04 ({lista_cards} ) {
 
 
           <section>
-            <div id="blog" className="font_title_seccion mt-5 ms-4">UNSER BLOG</div>
-            <div className="font_card_texto mt-2 ms-4">NEW WORK, LEADERSHIP & MORE</div>
+            <div id="blog" className="row justify-content-center font_title_seccion mt-5 ms-4">UNSER BLOG</div>
+            <div className="row justify-content-center font_card_texto mt-2 ms-4">NEW WORK, LEADERSHIP & MORE</div>
 
           <div className="row g-5 pb-3"> 
           
