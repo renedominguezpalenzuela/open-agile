@@ -35,7 +35,7 @@ export default function Content01andMenu({texto1, texto2}) {
 
     <div className="col mt-4 text-center  ">
       
-        <button type="button" className="btn  btn-outline-primary font_boton  ">Configuration</button>
+        <button type="button" className="btn mt-1 btn-outline-primary font_boton  ">Configuration</button>
       
     </div>
 
