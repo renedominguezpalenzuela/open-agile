@@ -7,32 +7,35 @@
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Content01Text() {
+export default function Content01Text({texto1, texto2}) {
   return (
 <>
       {/*                   <!-- Contenido Principal --> */}
    
-  <div className="row   mt-3  ">
-    <h2>
+   {/* <div className="row   mt-3  border">  */}
+
+
+
+
+    {/* <h2> */}
       <div className="font_title_secundario font_title_purple">
-            OPEN AGILE
+            {/* OPEN AGILE */}
+            {texto1}
       </div>
-    </h2>
+    {/* </h2> */}
 
-    {/*    <h1 id="title"> */}
-      <div className="font_title ">
-        <p>FOR BETTER WORK</p>
+   
+      <div className="font_title mt-2 ">
+        {/* <p>FOR BETTER WORK</p> */}
+        <p>{texto2}</p>
       </div>
-    {/* 
-    </h1> */}
+  
+    
 
 
-  </div>
+  {/* </div> */}
 
-
-
-
-  <div className="row justify-content-end me-5 ">
+  <div className="row justify-content-end  ">
 
 
 
@@ -67,7 +70,7 @@ export default function Content01Text() {
 
 
 
-    <div className="col-1 iconos-contenedor  ">
+    <div className="col-1 iconos-contenedor  me-5">
       <a href="https://www.facebook.com/OpenAgile21" className="youtube">
         <i className="bi bi-facebook iconos-social"></i>
       </a>

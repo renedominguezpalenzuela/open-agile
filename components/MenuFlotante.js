@@ -1,5 +1,5 @@
 //----------------------------------------------------------------------------------------------------------
-//            Menu Flotante oculto
+//          Panel Flotante oculto
 //----------------------------------------------------------------------------------------------------------
 //TODO: poner transparente y de otro color
 //TODO: agregar path de recorte 
@@ -35,7 +35,7 @@ export default function MenuFlotante() {
    <div className="offcanvas-body ">
       <ul className="nav nav-pills flex-column m-auto mb-0 align-items-start" id="menu">
         <li className="nav-item">
-            <a href="#course" className="nav-link text-truncate">
+            <a href="/crashkurse01" className="nav-link text-truncate">
               <span className="ms-1  font_title6">CRASHKURSE</span>
             </a>
         </li>

@@ -1,4 +1,4 @@
-.banner {
+.bannermain {
   background-size: auto, cover;
   height: 100vh;
  
@@ -18,8 +18,7 @@
     ),
     url("/img/image01.jpg");
     clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
-  /* clip-path: polygon(0% 99%, 100% 90%, 100% 0%, 0% 0%); */
-  /* z-index: -1; */
+ 
 }
 
 .left_column_color {

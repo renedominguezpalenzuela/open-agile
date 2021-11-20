@@ -1,4 +1,4 @@
-import styles from "../styles/Home.module.css";
+// import styles from "../styles/Home.module.css";
 
 let ancho = 540;
 let longitud_linea =50;

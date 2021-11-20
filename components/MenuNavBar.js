@@ -1,3 +1,6 @@
+
+
+
 //----------------------------------------------------------------------------------------------------------
 //           Menu superior
 //----------------------------------------------------------------------------------------------------------
@@ -6,23 +9,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 
-export default function MenuSuperior() {
+export default function MenuNavBar() {
   return (
 <>
-  {/*                             <!-- Menu Superior--> */}
-
-  <div id="row03" className="row  menu_superior d-flex align-items-center justify-content-center">
-
-    <div className="col  text-center  ">
-      <a className="navbar-brand " href="/">
-        <img className="img-fluid logo-img   " src="img/logo/5.svg" />
-      </a>
-    </div>
 
 
-    <div className="col d-none d-lg-block   ">
-
-      <nav className="navbar navbar-expand-lg navbar-light navigation  ">
+<nav className="navbar navbar-expand-lg navbar-light navigation   ">
 
         <ul className="navbar-nav ">
 
@@ -32,10 +24,10 @@ export default function MenuSuperior() {
               CRASHKURSE
             </a>
 
-            <ul className="dropdown-content color-dropdown animate__animated animate__fadeInUp no-bullets">
+            <ul className="dropdown-content text-start color-dropdown animate__animated animate__fadeInUp no-bullets">
 
 
-              <li className="nav-item">
+              <li className="nav-item ">
                 <a className="dropdown-item color-font-dropdown" href="/crashkurse01">CRASHKURS ZUM AGILE COACH</a>
               </li>
 
@@ -50,20 +42,24 @@ export default function MenuSuperior() {
             </ul>
           </li>
 
-         
+
           <li className="nav-item">
             <div className="separador_menu">/</div>
           </li>
 
-       
+          {/*          <li className="nav-item">
+            <a className="nav-link" aria-current="page" href="#services">
+                LEISTUNGEN
+            </a>
+          </li> */}
 
 
-            <li className="nav-item dropdown2  ">
+          <li className="nav-item dropdown2  ">
             <a className="nav-link">
               LEISTUNGEN
             </a>
 
-            <ul className="dropdown-content color-dropdown animate__animated animate__fadeInUp no-bullets">
+            <ul className="dropdown-content text-start color-dropdown animate__animated animate__fadeInUp no-bullets">
 
 
               <li className="nav-item">
@@ -78,7 +74,7 @@ export default function MenuSuperior() {
                 <a className="dropdown-item color-font-dropdown" href="#">ORGANISATIONSENTWICKLUNG</a>
               </li>
 
-               <li className="nav-item">
+              <li className="nav-item">
                 <a className="dropdown-item color-font-dropdown" href="#">INHOUSE TRAINING</a>
               </li>
 
@@ -132,20 +128,6 @@ export default function MenuSuperior() {
       </nav>
 
 
-
-    
-
-
-
-
-    </div>
-
-    <div className="col  text-center   ">
-      <button type="button" className="btn  btn-outline-primary ">Configuration</button>
-    </div>
-
-
-  </div>
-</>
+      </>
   );
 }

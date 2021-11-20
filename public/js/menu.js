@@ -39,7 +39,10 @@ window.addEventListener("scroll", function(){ // or window.addEventListener("scr
 
 
 
-var course_top=document.getElementById("course").offsetTop - 100;
+//var course_top=document.getElementById("course").offsetTop - 100;
+// var course_top=document.getElementById("area_superior").offsetTop - 100;
+var course_top = 100;
+
 
 
 var Y = window.scrollY

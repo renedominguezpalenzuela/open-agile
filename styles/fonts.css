@@ -29,7 +29,7 @@
     font-family: Montserrat-BoldItalic;
     color: #ffffff;
     text-align: left;
-    font-size: 88px;
+    font-size: 4.8em;
     line-height: 1;
     font-weight: 500;
     
@@ -505,6 +505,27 @@
   
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+
+
+  
+  
+  .font_small_letter {
+    font-family: Montserrat-Regular;
+    color: #e42078;
+    /* font-style: italic; */
+    font-size: 20px;
+    /* font-weight: 100; */
+
+    
+    line-height: 39px;
+  }
+
+  @media (max-width: 767px) {
+    .font_card_texto{
+    font-size: 1em;
+    }
   }
 
   

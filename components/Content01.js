@@ -1,5 +1,5 @@
-import MenuSuperior from "./MenuSuperior";
-import IconosIzquierda from "./IconosIzquierda";
+
+//import IconosIzquierda from "./IconosIzquierda";
 import MenuFlotanteBoton from "./MenuFlotanteBoton";
 import Content01Text from "./Content01Text";
 
@@ -13,9 +13,7 @@ import Content01Text from "./Content01Text";
 export default function Content01() {
   return (
 <>
-  <div id="row01" className="row  ">
-    <MenuSuperior />
-  </div>
+
       
 
 
@@ -23,7 +21,7 @@ export default function Content01() {
   <div id="row02" className="row d-flex align-items-center justify-content-center ">
  
 
-    <div id="col01" className="col-md-9 ms-4 pt-5 mt-2 ">
+    <div id="col01" className="col-md-9  pt-5 mt-2 ">
       <Content01Text/>
 
     </div>

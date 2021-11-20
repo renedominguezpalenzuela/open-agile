@@ -1,11 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
+// import styles from "../styles/Home.module.css";
 import LeftColumnColor from "../components/LeftColumnColor";
 
 import MenuFlotante from "../components/MenuFlotante";
 import Footer from "../components/Footer";
-import Content01 from "../components/Content01";
+
 import Content02Cursos from "../components/Content02Cursos";
 import Content03 from "../components/Content03";
 import Content04 from "../components/Content04";
@@ -13,6 +13,12 @@ import Content05 from "../components/Content05";
 
 import Card01Lista from "../components/Card01Lista";
 import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
+
+import MenuSuperior from "../components/MenuSuperior";
+
+
+import Content01andMenu from "../components/Content01andMenu";
+
 
 
 import { servidor_url } from "../config";
@@ -48,50 +54,44 @@ export default function Home({cursos, servicios, blogs}) {
 
 
     <MenuFlotanteBoton />
+
+   
     
-        {/*Area superior  */}
-    <div className={styles.banner}>
-       
-          {/* <LeftColumnColor /> */}
-          <Content01 />
-</div>
+    {/*Area superior  */}
+   
+    <div  className="bannermain "> 
+   
+         <Content01andMenu texto1="OPEN AGILE" texto2="FOR BETTER WORK"/> 
+     
+    </div>
 
-        {/*Cards  */}
-        <Content02Cursos cursos={cursos} /> 
+    {/*Cards  */}
+    <Content02Cursos cursos={cursos} /> 
 
-        {/*imagen  */}
-        <Content03 imagen="Testimonials_kunden-1.png" />
+    {/*imagen  */}
+    <Content03 imagen="Testimonials_kunden-1.png" />
 
-        {/*Contenido  */}
+    {/*Contenido  */}
     <Content04 lista_cards={blogs}/>  
 
-        {/*Carrousel  */}
-        <Content05 />
+    {/*Carrousel  */}
+    <Content05 />
 
 
-        {/* Servicios  */}
-        <div id="services" className=" mt-5 ">
+    {/* Servicios  */}
+    <div id="services" className=" mt-5 ">
       <div className="row justify-content-center font_title_seccion mt-1 ms-4"> LEISTUNGEN</div>
       <div className="row justify-content-center font_card_texto mt-2 ms-4"> Lorem Ipsum</div>
+      <Card01Lista lista_cards={servicios} />
+    </div>
 
-              {/*      <div className="row  g-0"> */}
+    {/*Footer  */}
+    <Footer />
 
-        <Card01Lista lista_cards={servicios} />
-
-
-
-    
-    {/* </div> */}
-          
-       </div>
-
-        {/*Footer  */}
-        <Footer />
-      {/* </div>  */}
-      </div>
+  </div>
       
-      {/*Menu Lateral oculto  */} 
-      <MenuFlotante />
+    {/*Menu Lateral oculto  */} 
+    <MenuFlotante />
 </>
   );
 }

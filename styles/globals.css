@@ -386,7 +386,7 @@ div.vertical-line{
 
 
   .logo-img {
-    transform: scale(1.2);
+    transform: scale(1);
   }
 
   .logo-img3 {
@@ -494,6 +494,7 @@ border-top: 1px solid rgba(255, 255, 255, 0)!important;
   color: #fff;
   margin-right: 15px;
   margin-left: 15px;
+  font-size: 1.3vw;
 }
 
 .separador_menu {
@@ -550,4 +551,10 @@ ul.no-bullets {
 
 .color-font-dropdown {
   color: #ffffff;
+}
+
+
+.justificar {
+  text-align: justify;
+  text-justify: inter-word;
 }
