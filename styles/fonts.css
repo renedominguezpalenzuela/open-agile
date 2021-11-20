@@ -529,3 +529,20 @@
   }
 
   
+
+  
+  
+  .font_boton {
+    font-family: Montserrat-BoldItalic;
+    color: #e42078;
+    font-size: 1vw;
+    text-transform: uppercase;
+  }
+
+  /* @media (max-width: 767px) {
+    .font_card_texto{
+    font-size: 1em;
+    }
+  } */
+
+  
