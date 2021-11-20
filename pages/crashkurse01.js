@@ -14,8 +14,8 @@ import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
 import MenuSuperior from "../components/MenuSuperior";
 
 
-import Texto01 from "../components/crashkurse/Texto01";
-import Image01 from "../components/crashkurse/Image01";
+import Texto01 from "../components/crashkurse/texto01";
+import Image01 from "../components/crashkurse/image01";
 import Content01andMenu from "../components/Content01andMenu";
 
 
