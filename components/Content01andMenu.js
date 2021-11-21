@@ -13,9 +13,9 @@ export default function Content01andMenu({texto1, texto2}) {
   return (
 <>
 
-  <div id="row03" className="row  menu_superior mt-2 g-0 ">
+  <div id="row03" className="row  menu_superior mt-2 g-0  ">
 
-    <div className="col-1 ms-5 me-2 text-center  ">
+    <div className="col ms-5 me-2 text-center   ">
       <a className="navbar-brand " href="/">
         <img className="   " src="img/logo/5.svg" />
       </a>
@@ -33,7 +33,7 @@ export default function Content01andMenu({texto1, texto2}) {
     </div>
 
 
-    <div className="col mt-4 text-center  ">
+    <div className="col mt-4 text-center   ">
       
         <button type="button" className="btn mt-1 btn-outline-primary font_boton  ">Configuration</button>
       

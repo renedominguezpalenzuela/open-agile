@@ -17,6 +17,7 @@ import MenuSuperior from "../components/MenuSuperior";
 import Texto01 from "../components/crashkurse/texto01";
 import Image01 from "../components/crashkurse/image01";
 import Content01andMenu from "../components/Content01andMenu";
+import Tabla01 from "../components/crashkurse/tabla01";
 
 
 
@@ -31,57 +32,40 @@ export default function Home({cursos, servicios, blogs}) {
 
 
 <Head>
-    <script async src="js/menu.js" />
+  <script async src="js/menu.js" />
 </Head> 
 
 
 
   return (
 <>
-    <Head>
-        <title>CRASHKURS ZUM AGILE COACH</title>
-        <meta name="description" content="CRASHKURS ZUM AGILE COACH" />
-        <link rel="icon" href="/favicon.ico" />
-        <script async src="js/chat.js" />
-    </Head>
+  <Head>
+    <title>CRASHKURS ZUM AGILE COACH</title>
+    <meta name="description" content="CRASHKURS ZUM AGILE COACH" />
+    <link rel="icon" href="/favicon.ico" />
+    <script async src="js/chat.js" />
+  </Head>
 
      
-     {/*Contenedor*/}
+  {/*Contenedor*/}
   <div id="principal" className="row content-fluid ">
-
-   
-
 
     <MenuFlotanteBoton />
     
     {/*Area superior  */}
-    <div  className="bannermain">
-
-
-  
-   
-         <Content01andMenu texto1="CRASHKURSE" texto2="CRASHKURS ZUM AGILE COACH"/> 
-     
-    
-     {/* Menu principal */}
-     {/* <div id="row01" className="row  ">
-       <MenuSuperior />
-     </div>
-      
-     <AreaPrincipal titulo1="CRASHKURSE" titulo2="CRASHKURS ZUM AGILE COACH" /> */}
+    <div className="bannermain">
+      <Content01andMenu texto1="CRASHKURSE" texto2="CRASHKURS ZUM AGILE COACH"/>
     </div>
 
-
     <Texto01/>
+   
 
 
-    <Image01 image="card01.jpg"/>
+    <Tabla01/>
 
 
-
-
-
-
+ <Texto01/>
+ 
   
 
     {/*Footer  */}
@@ -90,7 +74,7 @@ export default function Home({cursos, servicios, blogs}) {
   </div>
       
     {/*Menu Lateral oculto  */} 
-    <MenuFlotante />
+  <MenuFlotante />
 </>
   );
 }

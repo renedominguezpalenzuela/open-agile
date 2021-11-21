@@ -11,14 +11,13 @@ export default function Content01Text({texto1, texto2}) {
   return (
 <>
       {/*                   <!-- Contenido Principal --> */}
-   
-   {/* <div className="row   mt-3  border">  */}
+  
 
 
 
 
     {/* <h2> */}
-      <div className="font_title_secundario font_title_purple">
+      <div className="font_title_secundario font_title_purple mt-5">
             {/* OPEN AGILE */}
             {texto1}
       </div>
@@ -35,7 +34,7 @@ export default function Content01Text({texto1, texto2}) {
 
   {/* </div> */}
 
-  <div className="row justify-content-end  ">
+  <div className="row justify-content-end g-0  ">
 
 
 
