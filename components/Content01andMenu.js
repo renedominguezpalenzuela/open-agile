@@ -15,7 +15,7 @@ export default function Content01andMenu({texto1, texto2}) {
 
   <div id="row03" className="row  menu_superior mt-2 g-0  ">
 
-    <div className="col ms-5 me-2 text-center   ">
+    <div className="col ms-3  text-center   ">
       <a className="navbar-brand " href="/">
         <img className="   " src="img/logo/5.svg" />
       </a>
