@@ -33,10 +33,10 @@ export default function MenuNavBar() {
 
 
               <li className="nav-item">
-                <a className="dropdown-item color-font-dropdown" href="#">CRASHKURS ZUM AGILE FACILITATOR</a>
+                <a className="dropdown-item color-font-dropdown" href="/crashkurse02">CRASHKURS ZUM AGILE FACILITATOR</a>
               </li>
               <li className="nav-item">
-                <a className="dropdown-item color-font-dropdown" href="#">CRASHKURS ZUM SCRUM MASTER</a>
+                <a className="dropdown-item color-font-dropdown" href="/crashkurse03">CRASHKURS ZUM SCRUM MASTER</a>
               </li>
 
             </ul>

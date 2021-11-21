@@ -29,7 +29,7 @@ export default function MenuSuperior() {
 
           <li className="nav-item dropdown2  ">
             <a className="nav-link">
-              CRASHKURSE
+              CRASHKURSEd
             </a>
 
             <ul className="dropdown-content color-dropdown animate__animated animate__fadeInUp no-bullets">
@@ -41,10 +41,10 @@ export default function MenuSuperior() {
 
 
               <li className="nav-item">
-                <a className="dropdown-item color-font-dropdown" href="#">CRASHKURS ZUM AGILE FACILITATOR</a>
+                <a className="dropdown-item color-font-dropdown" href="/crashkurse02">CRASHKURS ZUM AGILE FACILITATOR</a>
               </li>
               <li className="nav-item">
-                <a className="dropdown-item color-font-dropdown" href="#">CRASHKURS ZUM SCRUM MASTER</a>
+                <a className="dropdown-item color-font-dropdown" href="/crashkurse03">CRASHKURS ZUM SCRUM MASTER</a>
               </li>
 
             </ul>
@@ -63,7 +63,7 @@ export default function MenuSuperior() {
               LEISTUNGEN
             </a>
 
-            <ul className="dropdown-content color-dropdown animate__animated animate__fadeInUp no-bullets">
+            <ul className="dropdown-content color-dropdown animate__animated animate__fadeInUp  no-bullets">
 
 
               <li className="nav-item">

@@ -545,4 +545,23 @@
     }
   } */
 
+
+  .font_titulo_detalles {
+    font-family: Montserrat-BoldItalic;
+    color: #24325a;
+  
+    font-size: 3vw;
+    font-weight: 700;
+  
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  
+  /* @media (max-width: 767px) {
+    .font_titulo_detalles {
+        font-size: 1em;
+    }
+  } */
+
   
