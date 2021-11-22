@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
-export default function Card03Text({ id, titulo, subtitulo, texto}) {
+export default function Card03Text({ id, titulo, subtitulo, texto, link}) {
   return (
 <>
 
@@ -16,7 +16,7 @@ export default function Card03Text({ id, titulo, subtitulo, texto}) {
     </div>
     <div className="col">
       <div className="row">
-      {texto}
+      {/* {texto} */}
       </div>
 
       <div className="row mt-4  ">
@@ -24,7 +24,9 @@ export default function Card03Text({ id, titulo, subtitulo, texto}) {
           <FontAwesomeIcon icon="long-arrow-alt-right"  className="iconos2" />
         </div>
         <div className="col d-flex align-items-center    ">
-          <a href="#">Hier gibt’s alle Infos…</a>
+
+       
+          <a href={`/${link}`}>jetzt lesen…</a>
         </div>
 
       </div>

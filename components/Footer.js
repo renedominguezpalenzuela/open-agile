@@ -109,10 +109,10 @@ export default function Footer() {
 
 
         <div >
-          <a className="color_contactos ms-3" href="tel:03012345678">030 12345678</a>
+          <a className="color_contactos ms-3" href="tel:016097940004">0160 979 40004</a>
         </div>
         <div >
-          <a className="color_contactos ms-3" href="mailto:mail@gmail.de">mail@gmail.de</a>
+          <a className="color_contactos ms-3" href="mailto:andreas.eilers@open-agile.de">andreas.eilers@open-agile.de</a>
         </div>
 
 

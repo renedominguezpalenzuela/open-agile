@@ -10,7 +10,7 @@ export default function Card01Lista({ lista_cards }) {
 
 
    {lista_cards.map (unCard=>{
-        return  <Card01 key={unCard.id} id={unCard.id} imagen={unCard.image} titulo={unCard.title} texto={unCard.text} />
+        return  <Card01 key={unCard.id} id={unCard.id} imagen={unCard.image} titulo={unCard.title} texto={unCard.text} link={unCard.link} />
         }   
    )}
 

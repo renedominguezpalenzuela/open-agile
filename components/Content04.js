@@ -10,6 +10,8 @@ import Card01 from "./Card01";
 
 
 export default function Content04 ({lista_cards} ) {
+
+
   return (
         <>
 
@@ -28,12 +30,12 @@ export default function Content04 ({lista_cards} ) {
                         {/* justify-content-center */}
                                       <div  className="row d-flex ">
                                           {/* <div className="col-md-6"> */}
-                                              <Card01 id={unCard.id} imagen={unCard.image} titulo={unCard.title} texto={unCard.text}/>
+                                              <Card01 id={unCard.id} imagen={unCard.image} titulo={unCard.title} texto={unCard.text} link={unCard.link}/>
                                           {/* </div> */}
                                       </div>
                         </div>  
                         <div  className="d-none d-xl-block  ">          
-                          <Card03 id={unCard.id}  imagen={unCard.image} titulo={unCard.title} texto={unCard.text} />     
+                          <Card03 id={unCard.id}  imagen={unCard.image} titulo={unCard.title} texto={unCard.text} link={unCard.link}/>     
                         </div> 
               </div>  
             )

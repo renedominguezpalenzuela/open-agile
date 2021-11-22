@@ -31,9 +31,10 @@ import Tabla01 from "../components/crashkurse/tabla01";
 export default function Home({cursos, servicios, blogs}) {
 
 
-{/*<Head>
+<Head>
+  <script async src="js/menu.js" />
+</Head> 
 
-</Head>  */}
 
 const titulo1 = "CRASHKURSE";
 const titulo2 = "CRASHKURS ZUM AGILE FACILITATOR";

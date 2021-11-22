@@ -81,7 +81,7 @@ export default function Home({cursos, servicios, blogs}) {
     {/* Servicios  */}
     <div id="services" className=" mt-5 ">
       <div className="row justify-content-center font_title_seccion mt-1 ms-4"> LEISTUNGEN</div>
-      <div className="row justify-content-center font_card_texto mt-2 ms-4"> Lorem Ipsum</div>
+      {/* <div className="row justify-content-center font_card_texto mt-2 ms-4"> Lorem Ipsum</div> */}
       <Card01Lista lista_cards={servicios} />
     </div>
 

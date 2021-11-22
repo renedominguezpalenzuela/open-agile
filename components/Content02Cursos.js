@@ -19,7 +19,7 @@ export default function Content02Cursos( {cursos}) {
   return (
 <>
 
-    <div id="course" className="row  text-center m-3 ">
+    <div id="course_title" className="row  text-center m-3 ">
       <h3 className="font_second_line1 "> CRASHKURSE</h3>
       <h5 className="font_second_line2">
       jetzt fit machen für die Arbeitswelt von morgen
@@ -31,7 +31,7 @@ export default function Content02Cursos( {cursos}) {
 
 
 
-    <div id="course_blue" className="row div_content02a  h-100d-inline-block pb-5 g-0">
+    <div id="course" className="row div_content02a  h-100d-inline-block pb-5 g-0">
 
       <Card01Lista lista_cards={cursos}/>
 
