@@ -1,7 +1,8 @@
 
  
  var boton=document.getElementById("boton_abrir_menu");
-  boton.style.display = 'none';
+//  boton.style.display = 'none';
+
 
 
 window.addEventListener('load', (event) => { 
@@ -54,10 +55,15 @@ var Y = window.pageYOffset
 // var color_fondo = "#24325A";
 
 if (Y < course_top) {
-    boton.style.display = 'none';
+    // boton.style.display = 'none';
+
+	boton.style.visibility='hidden';
 
 } else  {
-	 boton.style.display = ''
+	//  boton.style.display = ''
+
+	 
+	 	boton.style.visibility='visible';
 }
 
 

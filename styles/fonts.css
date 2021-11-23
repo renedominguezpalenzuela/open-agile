@@ -486,6 +486,11 @@
 
   
 /* Style the button that is used to open the sidepanel */
+
+#boton_abrir_menu {
+  visibility: hidden;
+}
+
 .boton_abrir_menu {
     font-size: 20px;
     cursor: pointer;
@@ -493,6 +498,7 @@
     color: white;
     padding: 10px 15px;
     border: none;
+   
   }
 
   
