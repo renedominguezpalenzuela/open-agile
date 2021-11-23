@@ -5,7 +5,7 @@
 //            Area de Contenido: Imagen de Empresas
 //----------------------------------------------------------------------------------------------------------
 
-export default function Content03 ({imagen,texto_alt } ) {
+export default function Content03 ( ) {
   return (
 <>
 
@@ -18,7 +18,7 @@ export default function Content03 ({imagen,texto_alt } ) {
     </div>
 
     <div className="row justify-content-center font_card_texto mt-2 ">
-        Bilden bei der Open Agile aus      
+        Bilden bei Open Agile aus      
     </div>
 
     <div className="row mt-5 mb-5 pb-5 d-flex justify-content-center align-items-center      ">

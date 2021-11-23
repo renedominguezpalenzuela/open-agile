@@ -45,9 +45,13 @@ var course_top = 100;
 
 
 
-var Y = window.scrollY
+// var Y = window.scrollY
+var Y = window.pageYOffset 
+ 
 
-var color_fondo = "#24325A";
+
+
+// var color_fondo = "#24325A";
 
 if (Y < course_top) {
     boton.style.display = 'none';

@@ -65,11 +65,11 @@ export default function Home({cursos, servicios, blogs}) {
      
     </div>
 
-    {/*Cards  */}
+    {/*Cards CRASHKURSE  */}
     <Content02Cursos cursos={cursos} /> 
 
-    {/*imagen  */}
-    <Content03 imagen="Testimonials_kunden-1.png" />
+    {/*imagen de sponsors */}
+    <Content03  />
 
     {/*Contenido  */}
     <Content04 lista_cards={blogs}/>  
