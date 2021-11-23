@@ -31,9 +31,9 @@ import Tabla01 from "../components/crashkurse/tabla01";
 export default function Home() {
 
 
-<Head>
+{/* <Head>
   <script async src="js/menu.js" />
-</Head> 
+</Head>  */}
 
 
 const titulo1 = "LEISTUNGEN";
@@ -67,7 +67,7 @@ const texto03 = ["Interessierst Du dich für einen ersten Austausch, ob eine evo
   <Head>
     <title>{titulo2}</title>
     <meta name="description" content={titulo2} />
-<link rel="icon" href="/favicon.ico" />
+   <link rel="icon" href="/favicon.ico" />
     <script async src="js/chat.js" />
     <script async src="js/menu.js" />
   </Head>

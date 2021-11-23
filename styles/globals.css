@@ -732,4 +732,7 @@ ul.no-bullets {
 }
 
 
-
+.dropdown-item:hover, .dropdown-item:focus {
+  color: #24325a;
+  background-color: #e9ecef;
+}

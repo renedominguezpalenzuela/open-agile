@@ -32,9 +32,7 @@ import { servidor_url } from "../config";
 export default function Home({cursos, servicios, blogs}) {
 
 
-<Head>
-  <script async src="js/menu.js" />
-</Head> 
+
 
 
 
@@ -45,6 +43,7 @@ export default function Home({cursos, servicios, blogs}) {
     <meta name="description" content="Lorem Ipsum" />
     <link rel="icon" href="/favicon.ico" />
     <script async src="js/chat.js" />
+     <script async src="js/menu.js" />
   </Head>
 
      
