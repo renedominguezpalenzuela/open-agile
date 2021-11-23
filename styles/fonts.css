@@ -564,4 +564,21 @@
     }
   } */
 
+  .font_titulo_seccion {
+    font-family: Montserrat-Bold;
+    color: #24325a;
+    /* font-style: italic; */
+    font-size: 60px;
+    /* font-weight: 100; */
+
+    
+    line-height: 39px;
+  }
+
+  @media (max-width: 767px) {
+    .font_card_texto{
+    font-size: 1em;
+    }
+  }
+
   

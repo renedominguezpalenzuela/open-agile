@@ -14,7 +14,7 @@ import Content05 from "../components/Content05";
 import Card01Lista from "../components/Card01Lista";
 import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
 
-import MenuSuperior from "../components/MenuSuperior";
+// import MenuSuperior from "../components/MenuSuperior";
 
 
 import Content01andMenu from "../components/Content01andMenu";

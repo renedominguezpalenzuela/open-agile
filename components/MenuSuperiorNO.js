@@ -67,12 +67,12 @@ export default function MenuSuperior() {
 
 
               <li className="nav-item">
-                <a className="dropdown-item color-font-dropdown" href="#">COACHING </a>
+                <a className="dropdown-item color-font-dropdown" href="/leistungen01">COACHING </a>
               </li>
 
 
               <li className="nav-item">
-                <a className="dropdown-item color-font-dropdown" href="/crashkurse01">MITBESTIMMUNG IM AGILEN KONTEXT</a>
+                <a className="dropdown-item color-font-dropdown" href="/leistungen02">MITBESTIMMUNG IM AGILEN KONTEXT</a>
               </li>
               <li className="nav-item">
                 <a className="dropdown-item color-font-dropdown" href="#">ORGANISATIONSENTWICKLUNG</a>

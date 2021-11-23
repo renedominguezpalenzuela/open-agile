@@ -35,6 +35,7 @@ export default function MenuNavBar() {
               <li className="nav-item">
                 <a className="dropdown-item color-font-dropdown" href="/crashkurse02">CRASHKURS ZUM AGILE FACILITATOR</a>
               </li>
+
               <li className="nav-item">
                 <a className="dropdown-item color-font-dropdown" href="/crashkurse03">CRASHKURS ZUM SCRUM MASTER</a>
               </li>
@@ -47,11 +48,7 @@ export default function MenuNavBar() {
             <div className="separador_menu">/</div>
           </li>
 
-          {/*          <li className="nav-item">
-            <a className="nav-link" aria-current="page" href="#services">
-                LEISTUNGEN
-            </a>
-          </li> */}
+     
 
 
           <li className="nav-item dropdown2  ">
@@ -62,21 +59,28 @@ export default function MenuNavBar() {
             <ul className="dropdown-content text-start color-dropdown animate__animated animate__fadeInUp no-bullets">
 
 
+
               <li className="nav-item">
-                <a className="dropdown-item color-font-dropdown" href="#">COACHING </a>
+                <a className="dropdown-item color-font-dropdown" href="/leistungen01">ORGANISATIONSENTWICKLUNG</a>
+              </li>
+
+              <li className="nav-item">
+                <a className="dropdown-item color-font-dropdown" href="/leistungen02">INHOUSE TRAINING</a>
               </li>
 
 
               <li className="nav-item">
-                <a className="dropdown-item color-font-dropdown" href="/crashkurse01">MITBESTIMMUNG IM AGILEN KONTEXT</a>
-              </li>
-              <li className="nav-item">
-                <a className="dropdown-item color-font-dropdown" href="#">ORGANISATIONSENTWICKLUNG</a>
+                <a className="dropdown-item color-font-dropdown" href="/leistungen03">COACHING </a>
               </li>
 
+
               <li className="nav-item">
-                <a className="dropdown-item color-font-dropdown" href="#">INHOUSE TRAINING</a>
+                <a className="dropdown-item color-font-dropdown" href="/leistungen04">MITBESTIMMUNG IM AGILEN KONTEXT</a>
               </li>
+
+             
+
+             
 
             </ul>
           </li>
@@ -86,7 +90,7 @@ export default function MenuNavBar() {
           </li>
 
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <a className="nav-link" href="/team">
                 TEAM
             </a>
           </li>

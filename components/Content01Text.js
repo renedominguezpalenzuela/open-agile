@@ -7,26 +7,28 @@
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Content01Text({texto1, texto2}) {
+export default function Content01Text({texto1, texto2, texto2a}) {
   return (
 <>
-      {/*                   <!-- Contenido Principal --> */}
+    
   
 
 
 
 
-    {/* <h2> */}
+   
       <div className="font_title_secundario font_title_purple mt-5">
-            {/* OPEN AGILE */}
+       
             {texto1}
       </div>
-    {/* </h2> */}
 
    
       <div className="font_title mt-2 ">
-        {/* <p>FOR BETTER WORK</p> */}
+     
         <p>{texto2}</p>
+
+        {texto2a!=undefined &&  texto2a!="" && <> {texto2a} </>}
+
       </div>
   
     

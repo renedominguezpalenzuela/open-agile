@@ -130,8 +130,8 @@ export default function Tabla01({
 
         <div className="item-texto2 ">
           <ul>
-                {texto_INHALTE.map((untexto) => (
-            <div>
+                {texto_INHALTE.map((untexto, index) => (
+            <div key={index}>
               <li>{untexto.nombre}</li>
               <ul>
                       {untexto.datos.map((undato) => (

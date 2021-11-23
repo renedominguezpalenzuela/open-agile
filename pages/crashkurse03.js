@@ -11,7 +11,7 @@ import AreaPrincipal from "../components/AreaPrincipal";
 
 
 import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
-import MenuSuperior from "../components/MenuSuperior";
+// import MenuSuperior from "../components/MenuSuperior";
 
 
 import Texto01 from "../components/crashkurse/texto01";
