@@ -89,6 +89,20 @@ a {
   object-fit: cover;
 }
 
+
+
+ 
+
+.my_card {
+  max-width: 330px;
+height: 75vh;
+  -webkit-border-radius: 30px; 
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  z-index: 3;
+} 
+
+
 .my_card02 {
   max-width: 80%;
    height: 27rem; 
@@ -100,14 +114,6 @@ a {
 
 .carousel-inner{
   height: 50vh;
-}
-.my_card {
-  max-width: 330px;
-  height: 27rem;
-  /* webkit-border-radius: 30px; */
-  -moz-border-radius: 30px;
-  border-radius: 30px;
-  z-index: 3;
 }
 
 
@@ -303,6 +309,7 @@ div.vertical-line{
   -o-filter: blur(5px);
   -ms-filter: blur(5px);
 }
+
 #overlay    {
   position: fixed;
   display: none;
@@ -353,7 +360,10 @@ div.vertical-line{
   overflow-y: hidden; /* Disable horizontal scroll */
   padding-top: 10px; /* Place content 60px from the top */
   transition: 0.3s; /*0.5 second transition effect to slide in the sidepanel*/
-  clip-path: polygon(0 0, 100% 0, 76% 100%, 0% 100%);
+  /* clip-path: polygon(0 0, 100% 0, 76% 100%, 0% 100%); */
+  clip-path: polygon(76% 0%, 100% 0, 100% 100%, 86% 100%);
+                     
+  
   background-color: #24325A;
   /* box-shadow: 0px 10px 10px -6px black; */
     /* Sombra superior sin desenfoque */
@@ -735,4 +745,30 @@ ul.no-bullets {
 .dropdown-item:hover, .dropdown-item:focus {
   color: #24325a;
   background-color: #e9ecef;
+}
+
+
+/* mixin for multiline */
+.truncate-overflow {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+.card {
+  height: 100%;
+  display: flex;
+}
+
+.card-block {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.card.card-footer {
+  align-self: flex-end;
+  flex: 1 1 auto;
 }

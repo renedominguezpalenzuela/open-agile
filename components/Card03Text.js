@@ -1,3 +1,9 @@
+
+//------------------------------------------------------------------------------------------------
+//     Unser BLOG
+//------------------------------------------------------------------------------------------------
+//card con imagen a la derecha y numero grande encima a la izquierda y raya horizontal
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
