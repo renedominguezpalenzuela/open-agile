@@ -24,22 +24,22 @@ export default function Content03 ( ) {
     <div className="row mt-5 mb-5 pb-5 d-flex justify-content-center align-items-center      ">
       <div className="col-2 m-3">
         <a href="https://www.verbraucher-dienst.de/index.php/impressum" aria-pressed="true">
-          <img className="img-fluid img-sponsors1 grayscale" src="/img/sponsors/logo-verbraucherdienst.png" />
+          <img className="img-fluid img-sponsors1 grayscale border" src="/img/sponsors/logo-verbraucherdienst.png" />
         </a>
       </div>
       <div className="col-2 m-3">
         <a href="https://www.sparkasse.de/" aria-pressed="true">
-          <img className="img-fluid img-sponsors2 grayscale" src="/img/sponsors/logo-sparkasse.png" />
+          <img className="img-fluid img-sponsors2 grayscale " src="/img/sponsors/logo-sparkasse.png" />
         </a>
       </div>
       <div className="col-2 m-3">
         <a href="https://www.nordlb.de/" aria-pressed="true">
-          <img className="img-fluid img-sponsors3 grayscale" src="/img/sponsors/logo-nordlb.png" />
+          <img className="img-fluid img-sponsors3 grayscale " src="/img/sponsors/logo-nordlb.png" />
         </a>
       </div>
         <div className="col-2 m-3">
         <a href="https://www.s-markt-mehrwert.de/" aria-pressed="true">
-          <img className="img-fluid img-sponsors4 grayscale" src="/img/sponsors/logo-markt.png" />
+          <img className=" img-sponsors4 grayscale " src="/img/sponsors/logo-markt.png" />
         </a>
       </div>
 
