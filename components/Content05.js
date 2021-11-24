@@ -41,7 +41,7 @@ export default function Content05 ( ) {
 
 
     <div className=" row justify-content-center"> 
-        <div id="MyCarousel" className="carousel {/*slide*/}   " data-bs-ride="carousel" data-mdb-touch="true">
+        <div id="MyCarousel" className="carousel slide" data-bs-ride="carousel" data-mdb-touch="true">
 
 
             <div className="carousel-indicators">
