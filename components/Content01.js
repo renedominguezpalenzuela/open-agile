@@ -13,20 +13,10 @@ import Content01Text from "./Content01Text";
 export default function Content01() {
   return (
 <>
-
-      
-
-
-
   <div id="row02" className="row d-flex align-items-center justify-content-center ">
- 
-
-    <div id="col01" className="col-md-9  pt-5 mt-2 ">
+     <div id="col01" className="col-md-9  pt-5 mt-2 ">
       <Content01Text/>
-
     </div>
-
-
   </div>
 </>
   );

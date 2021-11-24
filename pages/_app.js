@@ -6,6 +6,7 @@ import "../styles/home.css";
 import "../styles/globals.css";
 import "../styles/fonts.css";
 import "../styles/animate.css";
+import  "../styles/carrusel.css";
 
 
 import 'bootstrap-icons/font/bootstrap-icons.css';

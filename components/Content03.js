@@ -24,7 +24,7 @@ export default function Content03 ( ) {
     <div className="row mt-5 mb-5 pb-5 d-flex justify-content-center align-items-center      ">
       <div className="col-2 m-3">
         <a href="https://www.verbraucher-dienst.de/index.php/impressum" aria-pressed="true">
-          <img className="img-fluid img-sponsors1 grayscale border" src="/img/sponsors/logo-verbraucherdienst.png" />
+          <img className="img-fluid img-sponsors1 grayscale " src="/img/sponsors/logo-verbraucherdienst.png" />
         </a>
       </div>
       <div className="col-2 m-3">

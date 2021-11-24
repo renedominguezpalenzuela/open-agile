@@ -13,70 +13,82 @@ export default function Card02({
   imagen,
   texto_boton,
   texto_alt,
+  link
 }) {
   return (
 <>
 
 
 
-  
-    <div className="row g-0   ">
 
-      <div className="col-4 ">
+  <div className="row g-0   ">
+
+    <div className="col-4  ">
 
 
-      </div>
+    </div>
 
-      <div className="col-6 ">
-        <div className="row ">
+    <div className="col-6 ">
+      <div className="row ">
 
-          <div className="col-11 ">
-            <div className="card shadow bg-body m-5 p-5 dimension_card ">
+        <div className="col-11 ">
+          <div className="card my_card_carrusel shadow bg-body m-5 p-5 dimension_card_carrusel  ">
 
-              <div className="row">
-                <img src={`img/${imagen}`} alt={"${texto_alt}"} className=" img_carrusel " alt="..."/>
-              </div>
+            <div className="row ">
+              <img src={`img/${imagen}`} alt={"${texto_alt}"} className=" img_carrusel " alt="..."/>
+            </div>
             
 
              {/* Texto del Card */}
-              <span className="  contenido_card ">
-      
-                <div className=" card-title  font_card_title w-75 guion_palabras_largas ">
+            <span className="  contenido_card  ">
+
+
+              <div className=" card-title  font_card_title ">
                  {procesarTextoLargo(titulo)} 
-                </div>
-                <div className="ms-2 mt-2 font_card_texto m">
+              </div>
+
+              <div className="ms-2 mt-3 font_card_texto m-3">
                      NEWSROOM        
-                </div>
+              </div>
 
-                <div className="card-body ">
-                  <div className="row font_carrusel w-75 text-wrap ">
+              <div className="card-body h-75 ">
+                <div className="row font_carrusel   ">
                     {texto}
-                  </div>
-                  <div className="row mt-4">
-                    <button type="button" className="btn boton_card rounded-pill w-50">
-                      <div className="font_card_boton ms-1 me-1">Erfahre mehr...</div>
-                    </button>
-                  </div>
-                </div>  
+                </div>
+                  
 
-              </span>
 
-            </div>
+    
+              </div>
+             
+             
+                 <div className=" text-center  ">
+              
+
+                <a href={`/${link}`} className="btn boton_card rounded-pill w-50 h-100" role="button" aria-pressed="true">
+
+                  <div className="font_card_boton p-2  ms-2 me-2">Jetzt lesen...</div>
+                </a>
+
+              </div>
+            </span>
+
           </div>
-
-
         </div>
 
-      </div>
-
-      <div className="col-1">
 
       </div>
+
     </div>
 
+    <div className="col-1 ">
+
+    </div>
+  </div>
 
 
-  </>
+
+</>
   );}
 
 
@@ -87,7 +99,8 @@ export default function Card02({
 function procesarTextoLargo (texto) {
 
  if (texto.length>longitud_linea)  {
-     return (<div><p>{texto.substring(0,longitud_linea)}-</p>{texto.substring(longitud_linea)}</div>);
+     return (<div>
+<p>{texto.substring(0,longitud_linea)}-</p>{texto.substring(longitud_linea)}</div>);
  }
 
  return texto;

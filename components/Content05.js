@@ -1,4 +1,4 @@
-// import styles from "../styles/Home.module.css";
+
 import Card02 from "./Card02";
 import Card01 from "./Card01";
 
@@ -15,6 +15,17 @@ import Card01 from "./Card01";
 
 export default function Content05 ( ) {
 
+
+
+ const datos = [ 
+       {id:'1', image:'card09.jpg', title:'Transformation am Beispiel der Sparkasse Bremen', text:'1qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit', link:'blog01'},
+       {id:'2', image:'card02.jpg', title:'Entwicklung zur evolutionären Zusammenarbeit', text:'2qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit', link:'blog01'},
+       {id:'3', image:'card05.jpg', title:'Gründe für die Selbstorganisation', text:'3qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit', link:'blog01'},
+       {id:'4', image:'card07.jpg', title:'Architektur selbstorganisierter Teams', text:'4qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit', link:'blog01'},
+       {id:'5', image:'card07.jpg', title:'Workhacks für die Selbstorganisation', text:'5qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit', link:'blog01'},
+]
+
+
   
 
 
@@ -23,14 +34,14 @@ export default function Content05 ( ) {
 <>
 
 
-    <div id="MyCarouselTitle" className="color_carrusel pb-1">
+    <div id="MyCarouselTitle" className="color_carrusel pb-1 ">
+
+        <div className=" row justify-content-center font_title_seccion  mt-2  pt-5"> Das Wichtigste</div>
+        <div className=" row justify-content-center font_card_texto mt-2 "> Rund um die Akademie</div>
 
 
-
-        <div className=" row justify-content-center font_title_seccion  mt-5 ms-4 pt-5"> Das Wichtigste</div>
-        <div className=" row justify-content-center font_card_texto mt-2 ms-4"> Rund um die Akademie</div>
-
-        <div id="MyCarousel" className="carousel slide   " data-bs-ride="carousel" data-mdb-touch="true">
+    <div className=" row justify-content-center"> 
+        <div id="MyCarousel" className="carousel {/*slide*/}   " data-bs-ride="carousel" data-mdb-touch="true">
 
 
             <div className="carousel-indicators">
@@ -44,87 +55,39 @@ export default function Content05 ( ) {
 
 
             <div className="carousel-inner  alto_carrusel    ">
-                <div className="carousel-item active  ">
+
+            {datos.map ((unDato, index)=>
+         
+            <div  key={index}   className= { unDato.id==1?" carousel-item active":"carousel-item"} >
 
                     <div className="d-xl-none  ">
                         <div className="row d-flex justify-content-center">
                             <div className="col-md-6">
-                                <Card01 imagen="card09.jpg" titulo="Transformation am Beispiel der Sparkasse Bremen" texto="qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit" />
+                                <Card01 imagen={unDato.image} titulo={unDato.title} texto={unDato.text} />
                             </div>
                         </div>
                     </div>
 
 
-                    <div className="d-none d-xl-block  ">
-                        <Card02 imagen="card09.jpg" titulo="Transformation am Beispiel der Sparkasse Bremen" texto="qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem" />
+                    <div  className="d-none d-xl-block  ">
+                        <Card02 imagen={unDato.image} titulo={unDato.title} texto={unDato.text} />
                     </div>
 
                 </div>
 
 
-                <div className="carousel-item">
-                    <div className="d-xl-none">
-                        <div className="row d-flex justify-content-center">
-                            <div className="col-md-6">
-                                <Card01 imagen="card02.jpg" titulo="Entwicklung zur evolutionären Zusammenarbeit" texto="qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit" />
-                            </div>
-                        </div>
-                    </div>
+            )
+           
+
+            }
 
 
-                    <div className="d-none d-xl-block">
-                        <Card02 imagen="card02.jpg" titulo="Entwicklung zur evolutionären Zusammenarbeit" texto="qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem" />
-                    </div>
+            
 
 
-                </div>
+                
 
-                <div className="carousel-item">
-                    <div className="d-xl-none">
-                        <div className="row d-flex justify-content-center">
-                            <div className="col-md-6">
-                                <Card01 imagen="card05.jpg" titulo="Gründe für die Selbstorganisation" texto="qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="d-none d-xl-block">
-                        <Card02 imagen="card05.jpg" titulo="Gründe für die Selbstorganisation" texto="qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem" />
-                    </div>
-
-
-
-                </div>
-
-                <div className="carousel-item">
-                    <div className="d-xl-none">
-                        <div className="row d-flex justify-content-center">
-                            <div className="col-md-6">
-                                <Card01 imagen="card06.jpg" titulo="Architektur selbstorganisierter Teams" texto="qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="d-none d-xl-block">
-                        <Card02 imagen="card06.jpg" titulo="Architektur selbstorganisierter Teams" texto="qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem" />
-                    </div>
-
-                </div>
-
-                <div className="carousel-item">
-                    <div className="d-xl-none">
-                        <div className="row d-flex justify-content-center">
-                            <div className="col-md-6">
-                                <Card01 imagen="card07.jpg" titulo="Workhacks für die Selbstorganisation" texto="qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="d-none d-xl-block">
-                        <Card02 imagen="card07.jpg" titulo="Workhacks für die Selbstorganisation" texto="qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem" />
-                    </div>
-
-                </div>
+               
 
 
             </div>
@@ -136,6 +99,8 @@ export default function Content05 ( ) {
             <button className="carousel-control-next" type="button" data-bs-target="#MyCarousel" data-bs-slide="next">
                 <span className="carousel-control-next-icon"></span>
             </button>
+
+        </div>
 
         </div>
     </div>

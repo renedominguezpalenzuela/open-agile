@@ -1,0 +1,41 @@
+
+.alto_carrusel {
+    position: relative;
+    height: 45vw;
+    min-height: 500px;
+  }
+
+  .my_card_carrusel {
+   
+    height: 100%;
+    display: flex;
+    z-index: 3;
+  } 
+  
+
+.img_carrusel {
+    position: relative;
+    /* left: -420px; */
+    left: -33vw;
+    width: 35vw;
+    height: 100%;
+}  
+
+   .contenido_card {
+     position: relative;
+     left: 3vw; 
+     top: -26vw; 
+     width: 35vw; 
+     height: 135vw;    
+  }
+   
+  .dimension_card_carrusel {
+    /* left: 25px; */
+    left:3vw;
+    position: relative;
+    max-height: 35vw; 
+    width:45vw ;
+    /* height: 80vh; */
+  }
+  
+  
