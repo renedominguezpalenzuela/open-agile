@@ -137,7 +137,7 @@ export default function Tabla01({
                        <li>{untexto.nombre}</li>
                         <ul>
                              {untexto.datos.map((undato) => (
-                                <div>
+                                <div key={index+1000}>
                                    <li>{undato}</li>
                                </div>
                               ))}

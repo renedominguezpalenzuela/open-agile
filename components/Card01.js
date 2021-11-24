@@ -3,6 +3,7 @@
 export default function Card01({
   id,
   titulo,
+  titulo2,
   texto,
   imagen,
   texto_boton,
@@ -30,6 +31,10 @@ export default function Card01({
       <div className="card-body text-center w-100    ">
      
         <p className="card-text font_card_title m-1">{titulo}</p>
+
+        { titulo!=undefined && titulo2!="" &&
+          <p className="card-text font_card_title2 m-1">{titulo2}</p>
+        }
       </div>
 
      

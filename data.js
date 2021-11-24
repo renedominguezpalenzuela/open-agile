@@ -3,9 +3,9 @@
 //cursos  
 export const crashkurse = [
 
-  {id:'1', image:'crashkurse/image1.jpg', title:'CRASHKURS ZUM AGILE COACH', text:'Lorem ipsum dolor sit amet', link:'crashkurse01'},
-  {id:'2', image:'crashkurse/image2.jpg', title:'CRASHKURS ZUM AGILE FACILITATOR ', text:'Consectetur adipiscing elit, sed do eiusmod tempor', link:'crashkurse02'},
-  {id:'3', image:'crashkurse/image3.jpg', title:'CRASHKURS ZUM SCRUM MASTER', text:'Incididunt ut labore et dolore magna aliqua.',link:'crashkurse03'},  
+  {id:'1', image:'crashkurse/image1.jpg', title:'CRASHKURS',title2:"AGILE COACH", text:'Lorem ipsum dolor sit amet', link:'crashkurse01'},
+  {id:'2', image:'crashkurse/image2.jpg', title:'CRASHKURS',title2:"AGILE FACILITATOR", text:'Consectetur adipiscing elit, sed do eiusmod tempor', link:'crashkurse02'},
+  {id:'3', image:'crashkurse/image3.jpg', title:'CRASHKURS',title2:"SCRUM MASTER", text:'Incididunt ut labore et dolore magna aliqua.',link:'crashkurse03'},  
     
 ]
 
