@@ -25,17 +25,19 @@ export default function Tabla01({
       {/*  <img className="card-img-top corte_cards img-rounded " src={`img/${imagen}`} alt={texto_alt}/> */}
 
       <div className="row  justify-content-center  ">
+
+
     <div className="tabla ">
 
 
       {/* --------------------  Fila 1   -------------------------- */}
-      <div className="item item-1 item-img ">
-        <img className="image " src={`img/${imagen01}`} alt="" />
+      <div className="item item-1 ">
+        <img className="image-tabla " src={`img/${imagen01}`} alt="" />
       </div>
 
 
     
-      <div className="item item-2  item-texto  justificar ">
+      <div className="item item-2  item-texto  justificar  ">
         <div className="item-texto-titulo text-center ">BESCHREIBUNG</div>
 
             {texto_BESCHREIBUNG}
@@ -64,8 +66,8 @@ export default function Tabla01({
 
 
   {texto_ZIELGRUPPE.length > 0 && 
-      <div className="item item-4 item-img   ">
-        <img className="image " src={`img/${imagen02}`} alt="" />
+      <div className="item item-4    ">
+        <img className="image-tabla" src={`img/${imagen02}`} alt="" />
       </div>
 }
 
@@ -74,8 +76,8 @@ export default function Tabla01({
     {/* --------------------- Fila 3 si existe fila 2-------------------  */}
 
       {texto_ZIELGRUPPE.length > 0 && <>
-      <div className="item item-5 item-img ">
-        <img className="image " src={`img/${imagen03}`} alt="" />
+      <div className="item item-5  ">
+        <img className="image-tabla " src={`img/${imagen03}`} alt="" />
       </div>
 
 
@@ -110,8 +112,8 @@ export default function Tabla01({
         </ul>
       </div>
 
-        <div className="item item-4 item-img ">
-        <img className="image " src={`img/${imagen03}`} alt="" />
+        <div className="item item-4 ">
+        <img className="image-tabla " src={`img/${imagen03}`} alt="" />
       </div>
       </>
      }
@@ -129,20 +131,20 @@ export default function Tabla01({
         <div className="item-texto-titulo2 text-center ">INHALTE</div>
 
         <div className="item-texto2 ">
-          <ul>
-                {texto_INHALTE.map((untexto, index) => (
-            <div key={index}>
-              <li>{untexto.nombre}</li>
-              <ul>
-                      {untexto.datos.map((undato) => (
-                <div>
-                  <li>{undato}</li>
-                </div>
-                      ))}
-              </ul>
-            </div>
-                ))}
-          </ul>
+               <ul>
+                   {texto_INHALTE.map((untexto, index) => (
+                    <div key={index}>
+                       <li>{untexto.nombre}</li>
+                        <ul>
+                             {untexto.datos.map((undato) => (
+                                <div>
+                                   <li>{undato}</li>
+                               </div>
+                              ))}
+                        </ul>
+                    </div>
+                   ))}
+                </ul>
         </div>
       </div>
 

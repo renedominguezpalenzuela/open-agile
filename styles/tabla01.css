@@ -1,0 +1,178 @@
+
+.tabla {
+    display: grid;
+    /* grid-template-columns:  repeat(2, minmax(0, 1fr)); */
+    grid-template-columns:  repeat(2, minmax(0, 1fr));
+      grid-template-rows: 1fr; /*total de filas depende de cantidad elementos*/
+      gap: 0px;
+      row-gap: 0px;
+      /* align-items: center; */
+  
+  }
+  
+  
+  .item {
+    width: 35vw;
+  }
+  
+  
+  .item-1 {
+    justify-self:right;  
+   
+  }
+  
+  .item-2 {
+    justify-self:left;  
+  
+  
+  }
+  
+  .item-3 {
+    justify-self:right; 
+  
+  }
+  
+  .item-4 {
+    justify-self:left;  
+  }
+  
+  
+  .item-5 {
+    justify-self:right;  
+  }
+  
+  .item-6 {
+    justify-self:left;  
+  }
+  
+  .item-texto {
+  
+    padding-left: 1.5vw; 
+     padding-right: 1.5vw;
+    font-size: 0.75em;
+    font-family: Montserrat-regular;
+    color: #e42078;
+    
+   
+    /* max-width: 30vw; */
+    line-height: 1.7;
+    /* font-weight: 500; */
+  
+  
+  }
+  
+  
+   @media (max-width: 1200px) {
+    .item-texto  {
+      max-width:45vw;
+    }
+  } 
+  
+  /* @media (max-width:  1047px) {
+    .item-texto  {
+      max-width:42vw;
+    }
+  } */
+  
+  
+  
+  .image-tabla {
+      width: 100%;         
+  }
+  
+  
+  
+  
+  
+  
+  .item-texto-titulo {
+    margin-top: 5vh;
+    padding-bottom: 3vh;   
+    font-size: 1.5em;
+    font-family: Montserrat-bold;
+    color: #24325a;
+  }
+  
+  
+  
+  .tabla2 {
+    display: grid;
+    grid-template-columns:  repeat(1, minmax(0, 1fr));
+    
+      grid-template-rows: 1fr; /*total de filas depende de cantidad elementos*/
+      gap: 0px;
+      row-gap: 0px;
+  
+      margin-top: 5vh;
+      /* align-items: center; */
+  
+  }
+  
+  .item-texto2 {
+  
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    font-size: 1em;
+    font-family: Montserrat-regular;
+    color: #e42078;
+    
+    /* height:100%; */
+    max-width: 70vw;
+    line-height: 1.7;
+    /* font-weight: 500; */
+  
+  
+  }
+  
+  
+  
+  @media (max-width: 1200px) {
+    .item-texto2  {
+      max-width:45vw;
+    }
+  }
+  
+  
+  .item-texto-titulo2 {
+    margin-top: 5vh;
+  
+    padding-bottom: 3vh;
+  
+   
+    font-size: 2.5vw;
+    font-family: Montserrat-bold;
+    color: #e42078;
+    
+  
+    
+    /* overflow: hidden; */
+  }
+  
+  
+  .item-1-tabla2 {
+    justify-self:center;  
+  }
+  
+  
+  .foto-team {
+    max-width: 40vw;
+  
+  }
+  
+  
+  .dropdown-item:hover, .dropdown-item:focus {
+    color: #24325a;
+    background-color: #e9ecef;
+  }
+  
+  
+  /* mixin for multiline */
+  .truncate-overflow {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  
+  

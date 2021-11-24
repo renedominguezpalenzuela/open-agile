@@ -158,7 +158,7 @@ const texto_LEISTUNGEN =[
 <Texto01/>
 
 
-<div id="course" className="row  text-center m-5 ">
+<div id="course" className="row  text-center  mb-5 mt-5 ">
         <h3 className="font_titulo_detalles "> {titulo3}</h3>
 
       </div>
