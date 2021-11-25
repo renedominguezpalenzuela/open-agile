@@ -98,7 +98,7 @@ export default function MenuNavBar() {
             <div className="separador_menu">/</div>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <a className="nav-link" href="/vlog">
                 VLOG
             </a>
           </li>
@@ -106,7 +106,7 @@ export default function MenuNavBar() {
             <div className="separador_menu">/</div>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#blog">
+            <a className="nav-link" href="/#blog">
                 BLOG
             </a>
           </li>
@@ -114,7 +114,7 @@ export default function MenuNavBar() {
             <div className="separador_menu">/</div>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <a className="nav-link" href="/news">
                 NEWS
             </a>
           </li>
@@ -123,7 +123,7 @@ export default function MenuNavBar() {
           </li>
 
           <li className="nav-item me-3">
-            <a className="nav-link" href="#">
+            <a className="nav-link" href="/job">
                 JOBS
             </a>
           </li>

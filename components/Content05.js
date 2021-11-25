@@ -22,7 +22,7 @@ export default function Content05 ( ) {
        {id:'2', image:'card02.jpg', title:'Entwicklung zur evolutionären Zusammenarbeit', text:'2qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit', link:'blog01'},
        {id:'3', image:'card05.jpg', title:'Gründe für die Selbstorganisation', text:'3qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit', link:'blog01'},
        {id:'4', image:'card07.jpg', title:'Architektur selbstorganisierter Teams', text:'4qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit', link:'blog01'},
-       {id:'5', image:'card07.jpg', title:'Workhacks für die Selbstorganisation', text:'5qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit', link:'blog01'},
+       {id:'5', image:'card08.jpg', title:'Workhacks für die Selbstorganisation', text:'5qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit', link:'blog01'},
 ]
 
 
