@@ -27,12 +27,12 @@ export default function MenuFlotante() {
 <div className="sidepanel" tabIndex="-1" id="mySidepanel"   >
 
 
-  <div className="offcanvas-header">
+  <div className="offcanvas-header ">
     <h5 id="offcanvasTopLabel" className="font_title5">Menu</h5>
     <button type="button" id="boton_cerrar_menu" className="btn-close btn-close-white text-reset me-3" aria-label="Close"></button>
   </div>
 
-   <div className="offcanvas-body ">
+   <div className=" ">
       <ul className="nav nav-pills flex-column m-auto mb-0 align-items-start" id="menu">
         <li className="nav-item">
             <a href="/#course" className="nav-link text-truncate">
