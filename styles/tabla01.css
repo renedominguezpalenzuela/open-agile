@@ -51,7 +51,7 @@
      padding-right: 1.5vw;
     font-size: 0.75em;
     font-family: Montserrat-regular;
-    color: #e42078;
+    color: #24325a;
     
    
     /* max-width: 30vw; */
@@ -68,12 +68,7 @@
     }
   } 
   
-  /* @media (max-width:  1047px) {
-    .item-texto  {
-      max-width:42vw;
-    }
-  } */
-  
+ 
   
   
   .image-tabla {
@@ -114,7 +109,7 @@
     padding-right: 1.5vw;
     font-size: 1em;
     font-family: Montserrat-regular;
-    color: #e42078;
+    color: #24325a;
     
     /* height:100%; */
     max-width: 70vw;
@@ -141,7 +136,7 @@
    
     font-size: 2.5vw;
     font-family: Montserrat-bold;
-    color: #e42078;
+    color: #24325a;
     
   
     

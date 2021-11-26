@@ -12,7 +12,7 @@ export default function TextoBloque01({
 <>
 
    {titulo_main!=undefined && titulo_main!="" &&
-  <div id="course" className="row  text-center  ">
+  <div id="course" className="row  text-center mt-5 mb-5  ">
         <h3 className="font_titulo_seccion "> {titulo_main}</h3>
   </div>
 }
@@ -35,7 +35,7 @@ export default function TextoBloque01({
     
     
   {texto_parrafo_array!=undefined && texto_parrafo_array!="" &&
-  <div className="row    ">
+  <div className="row  mt-3  ">
     <div className="col-1">
     </div>
 
