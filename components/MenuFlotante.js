@@ -47,13 +47,13 @@ export default function MenuFlotante() {
         </li>
 
         <li>
-            <a href="#" className="nav-link text-truncate">
+            <a href="/team" className="nav-link text-truncate">
               <span className="ms-1  font_title6">TEAM</span>
             </a>
         </li>
 
         <li>
-            <a href="#" className="nav-link text-truncate">
+            <a href="/vlog" className="nav-link text-truncate">
               <span className="ms-1  font_title6">VLOG</span>
             </a>
         </li>
@@ -65,22 +65,18 @@ export default function MenuFlotante() {
         </li>
 
         <li>
-            <a href="#" className="nav-link text-truncate">
+            <a href="/news" className="nav-link text-truncate">
               <span className="ms-1  font_title6">NEWS</span>
             </a>
         </li>
 
         <li>
-            <a href="#" className="nav-link text-truncate">
+            <a href="/jobs" className="nav-link text-truncate">
               <span className="ms-1  font_title6">JOBS</span>
             </a>
         </li>
 
-        <li>
-            <a href="#" className="nav-link text-truncate">
-              <span className="ms-1  font_title6">JOBS</span>
-            </a>
-        </li>
+    
       </ul>
     </div>
 
