@@ -20,7 +20,7 @@ import Content01andMenu from "../components/Content01andMenu";
 import Tabla01 from "../components/crashkurse/tabla01";
 
 
-import FormularioContacto from "../components/FormularioContacto";
+import FormularioContacto from "../components/formulariocontacto";
 
 
 
