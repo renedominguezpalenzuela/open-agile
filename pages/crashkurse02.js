@@ -37,18 +37,21 @@ export default function Home({cursos, servicios, blogs}) {
 
 
 const titulo1 = "CRASHKURSE";
-const titulo2 = "CRASHKURS ZUM AGILE FACILITATOR";
+const titulo2 = "CRASHKURS ZUM";
+const titulo2a = "AGILE FACILITATOR";
+
+
 const titulo3 = "CRASHKURS ZUM AGILE FACILITATOR (M/W/D)";
 
-const imagen01="card03.jpg";
+const imagen01="crashkurse/image1.jpg";
 const  texto_BESCHREIBUNG = "Als Agile Facilitator begleitest Du Dein Team in die agile Arbeitswelt. Zudem bist Du als Vorbild für eine lösungsorientierte- und zielgerichtete Zusammenarbeit der erste Kontakt, wenn es darum geht innovative Ideen von Anfang an zu begleiten. Daraus resultierende Meetings & Workshops moderierst Du immer mit Blick auf die agilen Werte & Prinzipien. Bei Herausforderungen greifst Du auf Deinen breiten Werkzeugkoffer an agilen Methoden & Workhacks zurück.";      
 
-const imagen02="card04.jpg";  
+const imagen02="crashkurse/image2.jpg";  
 
 const  texto_ZIELGRUPPE = [  ];
 
 
-const imagen03="card05.jpg";  
+const imagen03="crashkurse/image3.jpg";  
 
  const  texto_VORTEILE      = [
     "In unserem 2-tägigen Crashkurs zum Agile Facilitator lernst Du schnell und einfach das Wichtigste, um Eure Zusammenarbeit im Team kontinuierlich, lernend und mit Spaß zu verbessern.",
@@ -152,7 +155,7 @@ const texto_LEISTUNGEN =[
     
     {/*Area superior  */}
     <div className="bannermain">
-      <Content01andMenu texto1={titulo1} texto2={titulo2}/>
+      <Content01andMenu texto1={titulo1} texto2={titulo2} texto2a={titulo2a}/>
 </div>
 
 <Texto01/>

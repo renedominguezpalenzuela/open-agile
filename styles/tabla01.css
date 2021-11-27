@@ -154,9 +154,12 @@
   
   }
   
-  
+
+  /* Color de fuentes de dropdown menu */
   .dropdown-item:hover, .dropdown-item:focus {
-    color: #24325a;
+    color: #F82D7C;
+
+
     background-color: #e9ecef;
   }
   

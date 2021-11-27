@@ -37,13 +37,14 @@ export default function Home({cursos, servicios, blogs}) {
 
 
 const titulo1 = "CRASHKURSE";
-const titulo2 = "CRASHKURS ZUM AGILE COACH";
+const titulo2 = "CRASHKURS ZUM";
+const titulo2a = "AGILE COACH";
 const titulo3 = "CRASHKURS ZUM AGILE COACH (M/W/D)";
 
-const imagen01="card01.jpg";
+const imagen01="crashkurse/image1.jpg";
 const  texto_BESCHREIBUNG = "Agile Coach unterstützt Du einzelne Menschen, Teams und Organisationen auf ihrem Weg zu einer stimmigeren Arbeitswelt. Für Deine Klienten besteht oftmals der Wunsch sich agiler an eine sich immer schneller verändernde Umwelt anzupassen zu können. Für diese und viele weitere Fragestellungen gehst Du ziel- und lösungsorientiert vor und nutzt dafür einen breiten Werkzeugkoffer an Coaching-Modellen und agilen Methoden.";      
 
-const imagen02="card02.jpg";  
+const imagen02="crashkurse/image2.jpg";  
 
  const  texto_ZIELGRUPPE = ["Du bist Mitarbeiter/in einer Organisation, welche sich in der agilen Transformation befindet. Neben Deiner eigentlichen Tätigkeit möchtest Du die Organisation in der Rolle als Agile Coach unterstützen.",
                             "Als Projektmanager/in stößt Du mit den klassischen Methoden an Deine Grenzen. Als Agile Coach möchtest Du ein agiles Projektmanagement etablieren.",
@@ -51,7 +52,7 @@ const imagen02="card02.jpg";
                            ];
 
 
-const imagen03="card03.jpg";  
+const imagen03="crashkurse/image3.jpg";  
 
  const  texto_VORTEILE      = ["In unserem 8-tägigen Crashkurs zum Agile Coach lernst Du schnell und einfach das Wichtigste, um Organisationen, Teams und Individuen im Sinne des agilen Manifests bei ihrer Veränderung zu begleiten.",
                                "Mit unserem hybriden Konzept kannst Du von überall auf der Welt an dem Crashkurs teilnehmen. Selbstverständlich aber auch in Präsenz vor Ort, in unserer schönen Hansestadt Bremen",
@@ -154,7 +155,7 @@ const texto_LEISTUNGEN =[
     
     {/*Area superior  */}
     <div className="bannermain">
-      <Content01andMenu texto1={titulo1} texto2={titulo2}/>
+      <Content01andMenu texto1={titulo1} texto2={titulo2} texto2a={titulo2a}/>
 </div>
 
 <Texto01/>

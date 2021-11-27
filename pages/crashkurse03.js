@@ -37,18 +37,20 @@ export default function Home({cursos, servicios, blogs}) {
 
 
 const titulo1 = "CRASHKURSE";
-const titulo2 = "CRASHKURS ZUM SCRUM MASTER ";
+const titulo2 = "CRASHKURS ZUM";
+const titulo2a = "SCRUM MASTER";
+
 const titulo3 = "CRASHKURS ZUM SCRUM MASTER (M/W/D)";
 
-const imagen01="card06.jpg";
+const imagen01="crashkurse/image1.jpg";
 const  texto_BESCHREIBUNG = "Als Scrum Master arbeitest Du nach den Werten, Prinzipien und Regeln des Agilen Manifests und des Scrum Guides.  Zusammen mit dem Product Owner und dem Entwicklungsteam bist Du Teil eines cross-funktionalen und selbstorganisierten Scrum-Teams. Schwerpunkt Deiner Tätigkeit ist die prozessuale und laterale Führung des Teams durch den Scrum-Prozess.";      
 
-const imagen02="card07.jpg";  
+const imagen02="crashkurse/image2.jpg";  
 
 const  texto_ZIELGRUPPE = [  ];
 
 
-const imagen03="card08.jpg";  
+const imagen03="crashkurse/image3.jpg";  
 
  const  texto_VORTEILE      = [
     "In unserem 2-tägigen Crashkurs zum Scrum Master lernst Du schnell und einfach das Wichtigste, um im Anschluss die Prüfung zum Professional Scrum Master auf scrum.org durchzuführen.",
@@ -151,7 +153,7 @@ const texto_LEISTUNGEN =[
     
     {/*Area superior  */}
     <div className="bannermain">
-      <Content01andMenu texto1={titulo1} texto2={titulo2}/>
+      <Content01andMenu texto1={titulo1} texto2={titulo2} texto2a={titulo2a}/>
 </div>
 
 <Texto01/>
