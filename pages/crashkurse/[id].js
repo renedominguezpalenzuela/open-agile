@@ -50,7 +50,6 @@ const {titulo1, titulo2,titulo2a, titulo3, imagen01, texto_BESCHREIBUNG,
   texto_LEISTUNGEN, kosten, crashkurs_date_title, crashkurs_date } = curso;
 
 
-  console.log(kosten)
 
 
 
@@ -79,7 +78,13 @@ const {titulo1, titulo2,titulo2a, titulo3, imagen01, texto_BESCHREIBUNG,
     </div>
 
 
-    <Texto01/>
+    <Texto01 />
+
+
+    <div id="course" className="row  text-center mb-5 mt-5  ">
+        <h3 className="font_titulo_detalles "> {titulo3}</h3>
+
+      </div>
 
   
 

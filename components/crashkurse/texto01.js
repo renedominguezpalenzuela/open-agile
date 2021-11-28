@@ -18,10 +18,10 @@ export default function Texto01() {
 <div  className="row   mt-5  ">
 <TextoBloque01 titulo_main={titulo_main} texto_parrafo_array={texto_parrafo_array} />;
 </div>
-<div  className="row    ">
-<div  className="col-1">
+<div  className="row   mb-5 ">
+<div  className="col-1 ">
 </div>
-  <div  className="col font_small_letter ms-4 me-3 "> 
+  <div  className="col mb-5 font_small_letter ms-4 me-3 "> 
  <p> Dein Open Agile Team <br/>for better work</p>
   </div>
 </div>  
