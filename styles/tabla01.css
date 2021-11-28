@@ -12,7 +12,7 @@
   
   
   .item {
-    width: 35vw;
+    width: 38vw;
   }
   
   
@@ -103,6 +103,9 @@
   
   }
   
+
+
+
   .item-texto2 {
   
     padding-left: 1.5vw;
@@ -142,6 +145,26 @@
     
     /* overflow: hidden; */
   }
+
+
+  
+  .titulo1-tabla3-01 {
+   
+    font-size: 2.5vw;
+    font-family: Montserrat-bold;
+    color: #24325a;
+
+  }
+
+  .titulo1-tabla3-02 {
+   
+    font-size: 2.5vw;
+    font-family: Montserrat-bold;
+    color: #e42078;
+
+  }
+
+
   
   
   .item-1-tabla2 {
@@ -172,5 +195,28 @@
     overflow: hidden;
   }
   
+
+  
+.texto03 {
+
+
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+  font-size: 1em;
+  font-family: Montserrat-regular;
+  color: #ffffff;
+   /* max-width: 70vw; */
+  /* line-height: 1.7; */
+
+}
+
+
+
+@media (max-width: 1200px) {
+  .texto03  {
+    max-width:45vw;
+  }
+}
+ 
   
   

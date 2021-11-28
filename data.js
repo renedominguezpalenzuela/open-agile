@@ -1,5 +1,3 @@
-
-
 //cursos  
 export const crashkurse = [
 
@@ -8,6 +6,8 @@ export const crashkurse = [
   {id:'3', image:'crashkurse/image3.jpg', title:'CRASHKURS',title2:"SCRUM MASTER", text:'Incididunt ut labore et dolore magna aliqua.',link:'crashkurse03'},  
     
 ]
+
+
 
 //Servicios
 export const leistungen = [

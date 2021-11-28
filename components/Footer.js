@@ -1,5 +1,7 @@
 // Footer
 
+import { servidor_url } from "../config";
+
 export default function Footer() {
   return (
 <>
@@ -12,14 +14,7 @@ export default function Footer() {
       <div className="col-auto  ">
         <div className="font_facit_title_small p-3">OPEN AGILE NEWSLETTER</div>
         <div className="font_facit_text_small ps-3">LASS UNS IN KONTAKT BLEIBEN</div>
-        {/* <div className="row d-flex align-items-center "> */}
-       {/* <div className="pt-4 text-center start-25">
-
-        <img className="img-fluid logo-img-footer2"  src="img/logo/5.svg" />
-        </div>
-         */}
-        {/* </div> */}
-         
+          
       </div>
 
       <div className="col-auto   ps-1 ">
@@ -88,8 +83,8 @@ export default function Footer() {
 
       <div className="col ">
         <div className="">
-          {/* <img className="img-fluid   logo-img-footer" src='img/logo/4.svg' /> */}
-              <img className="img-fluid logo-img-footer2"  src="img/logo/5.svg" />
+        
+              <img className="img-fluid logo-img-footer2" src= {`${servidor_url}/img/logo/5.svg`} />
         </div>
         <div className="font_facit_text_very_small mt-1">
 

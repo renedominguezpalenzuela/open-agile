@@ -25,16 +25,16 @@ export default function MenuNavBar() {
 
 
           <li className="nav-item ">
-            <a className="dropdown-item color-font-dropdown" href="/crashkurse01">CRASHKURS ZUM AGILE COACH</a>
+            <a className="dropdown-item color-font-dropdown" href="/crashkurse/1">CRASHKURS ZUM AGILE COACH</a>
           </li>
 
 
           <li className="nav-item">
-            <a className="dropdown-item color-font-dropdown" href="/crashkurse02">CRASHKURS ZUM AGILE FACILITATOR</a>
+            <a className="dropdown-item color-font-dropdown" href="/crashkurse/2">CRASHKURS ZUM AGILE FACILITATOR</a>
           </li>
 
           <li className="nav-item">
-            <a className="dropdown-item color-font-dropdown" href="/crashkurse03">CRASHKURS ZUM SCRUM MASTER</a>
+            <a className="dropdown-item color-font-dropdown" href="/crashkurse/3">CRASHKURS ZUM SCRUM MASTER</a>
           </li>
 
         </ul>

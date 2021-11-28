@@ -7,6 +7,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Content01Text from "./Content01Text";
 import MenuNavBar from "./MenuNavBar";
 
+import { servidor_url } from "../config";
+
 
 
 export default function Content01andMenu({texto1, texto2, texto2a}) {
@@ -17,7 +19,8 @@ export default function Content01andMenu({texto1, texto2, texto2a}) {
 
     <div className="col ms-3  text-center   ">
       <a className="navbar-brand " href="/">
-        <img className="   " src="img/logo/5.svg" />
+     
+        <img className="   " src= {`${servidor_url}/img/logo/5.svg`} />
       </a>
     </div>
 

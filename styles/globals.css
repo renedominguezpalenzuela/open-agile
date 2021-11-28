@@ -246,6 +246,13 @@ div.vertical-line{
   
 }
 
+.tabla2_path {
+  
+
+  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+  
+}
+
 .no-gutter {
   --bs-gutter-x:0px !important;
 }
@@ -517,3 +524,5 @@ ul.no-bullets {
   align-self: flex-end;
   flex: 1 1 auto;
 }
+
+

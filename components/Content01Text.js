@@ -6,6 +6,7 @@
 //TODO: Arreglar boton menu flotante, que no funciona como sticky
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { servidor_url } from "../config";
 
 export default function Content01Text({texto1, texto2, texto2a}) {
   return (
@@ -64,8 +65,10 @@ export default function Content01Text({texto1, texto2, texto2a}) {
     </div>
 
       <div className="col-1 iconos-contenedor mt-2 ">
-      <a href="https://www.xing.com/pages/open-agile" >       
-          <img className="social-img"  src="img/xing-img.svg" /> 
+      <a href="https://www.xing.com/pages/open-agile" > 
+
+           
+          <img className="social-img"  src= {`${servidor_url}/img/xing-img.svg`}  /> 
       </a>
     </div>
 
