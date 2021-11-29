@@ -107,13 +107,6 @@ a {
 }
 
 
-
-.boton_card {
-  /* background-color: #e50067; */
-  background-color: #24325a;
-
-}
-
 .img-rounded {
   -webkit-border-top-left-radius: 30px;
   -webkit-border-top-right-radius: 30px;
@@ -563,4 +556,39 @@ ul.no-bullets {
 .redondeado-boton{
   border-radius: 7px;
   
+}
+
+
+
+
+
+
+.boton_card {
+  /* background-color: #e50067; */
+  background-color: #24325a;
+
+}
+
+
+.btn-card {
+  background-color:#24325a !important;
+  /* border-color: #3edf0d  !important; */
+  /* color: #ffffff !important; */
+}
+
+
+.btn-card:hover,
+.btn-card:active,
+.btn-card:visited,
+.btn-card:focus {
+   background-color: #e42078 !important; 
+  /* border-color: rgb(245, 4, 4) !important; */
+   color: #ffffff !important; }
+
+
+.font-btn-card {
+  font-family: Montserrat-Bold;
+  color: #ffffff;
+  font-size: 1.25vw;
+ 
 }
