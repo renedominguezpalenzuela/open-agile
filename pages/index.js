@@ -56,9 +56,7 @@ export default function Home({cursos, servicios, blogs}) {
     
     {/*Area superior  */} 
     <div  className="bannermain  border border-dark "> 
-   
-         <Content01andMenuWithButton texto1="OPEN AGILE" texto2="FOR BETTER WORK"/> 
-       
+         <Content01andMenuWithButton texto1="OPEN AGILE" texto2="FOR BETTER WORK"/>        
     </div>
 
     {/*Cards CRASHKURSE  */}
@@ -67,7 +65,7 @@ export default function Home({cursos, servicios, blogs}) {
     {/*imagen de sponsors */}
     <Content03  />
 
-    {/*Contenido  */}
+    {/*Unser Blog  */}
     <Content04 lista_cards={blogs}/>  
 
     {/*Carrousel  */}
@@ -95,11 +93,11 @@ export default function Home({cursos, servicios, blogs}) {
 //Obteniendo los datos desde el servidor
 export const getServerSideProps = async (context) => {
 
-  const url = `${servidor_url}/api/cursos`;
+  const url = `${servidor_url}/api/curso`;
   const res = await fetch(url); 
   const cursos = await res.json();
 
-  const url2 = `${servidor_url}/api/servicios`;
+  const url2 = `${servidor_url}/api/servicio`;
   const res2 = await fetch(url2); 
   const servicios = await res2.json();
 

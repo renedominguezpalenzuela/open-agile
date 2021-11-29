@@ -19,7 +19,7 @@ export default function Card01({
   <div className="col p-4 ">
     <div className="card card-rounded  w-100   my_card ">
 
-      <img className="card-img-top corte_cards img-rounded " src={`img/${imagen}`} alt={texto_alt}/>
+      <img className="card-img-top corte_cards img-rounded  " src={`img/${imagen}`} alt={texto_alt}/>
 
       <div className="card-body text-center w-100    ">
      
@@ -41,8 +41,9 @@ export default function Card01({
           {/* <div className="font_card_boton  ps-2 pe-2 pt-2  pb-2 ms-2 me-2">Jetzt lesen...</div> */}
        {/* </a> */}
 
+     <a href={`/${link}/${id}`} >
         <button type="button" className="btn  ms-2 me-2 w-75 h-100 btn-card font-btn-card rounded-pill  ">Jetzt lesen...</button>
-     
+     </a>
     </div>
 
     </div>

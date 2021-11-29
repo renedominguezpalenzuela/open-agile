@@ -7,24 +7,38 @@ crashkurs_date,
 titulo
 }) {
 
+  // console.log(crashkurs_date);
+
 
 
   return (
 <>
  
-{/* color_background */}
 
-       <div  className="row mt-2 mb-4   ">
+  {/* Titulo */}
+  <div className="row mt-2 mb-4   ">
+    <div className="titulo1-tabla3-01 text-center ">CRASHKURS TERMINE ZUM</div>
+    <div className="titulo1-tabla3-02 text-center ">{titulo}</div>
+  </div>
+
+  {/* Cards */}
+  <div className="row color_background text-center ">
+
+   {
+      crashkurs_date.map ( (unCard, index) => 
+      // fecha1={unCard.date1} fecha2={unCard.date2} dias={unCard}
+       <>
+        <div key={index} className="col">
+         <Card04 key={unCard.id} datos={unCard} />
+        </div>
+       </> 
        
-        <div className="titulo1-tabla3-01 text-center ">CRASHKURS TERMINE ZUM</div>
-           <div className="titulo1-tabla3-02 text-center ">{titulo}</div>
-  
-     
-       </div> 
+      )
+   }
+   
+  </div>
 
-         <div  className="row d-flex align-items-center justify-content-center color_background text-center ">
-           <Card04 texto="dd.mm.yyyy"/>
-         </div>
-      </> 
+
+</> 
   );
 }

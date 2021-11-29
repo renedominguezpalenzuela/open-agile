@@ -208,7 +208,7 @@
 }
 
 @media (max-width: 767px) {
-  .font_card_title {
+  .font_card_title2 {
     font-size: 2.5vh; 
   }
 }
@@ -579,6 +579,34 @@
     font-size: 1em;
     }
   }
+
+
+  
+.font_card_fechas {
+  font-family: Montserrat-BoldItalic;
+  color: #24325a;
+  font-style: italic; 
+  font-size: 3.4vh; 
+  font-weight: 100;
+   text-transform: uppercase; 
+   line-height: 90%;
+}
+
+@media (max-width: 767px) {
+  .font_card_fechas {
+    font-size: 2.5vh; 
+  }
+}
+
+
+.font_card_fechas:hover,
+.font_card_fechas:active,
+.font_card_fechas:visited,
+.font_card_fechas:focus {
+   /* background-color: #e42078 !important;  */
+  /* border-color: rgb(245, 4, 4) !important; */
+   color: #e42078 !important; }
+
 
 
 

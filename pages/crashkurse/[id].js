@@ -77,45 +77,46 @@ const {titulo1, titulo2,titulo2a, titulo3, imagen01, texto_BESCHREIBUNG,
         <Content01andMenu texto1={titulo1} texto2={titulo2} texto2a={titulo2a}/>
     </div>
 
-
+    {/* Texto Crashkurse */}
     <Texto01 />
 
 
+    {/* Tabla 1: imagenes alternas */}
     <div id="course" className="row  text-center mb-5 mt-5  ">
         <h3 className="font_titulo_detalles "> {titulo3}</h3>
+    </div>
 
-      </div>
-
-  
-
-       <Tabla01
+    <Tabla01
        imagen01 = {`${servidor_url}/img/${imagen01}`}
        texto_BESCHREIBUNG = {texto_BESCHREIBUNG}
        imagen02 = {`${servidor_url}/img/${imagen02}`}
        texto_ZIELGRUPPE = {texto_ZIELGRUPPE}
        imagen03 = {`${servidor_url}/img/${imagen03}`}
        texto_VORTEILE      = {texto_VORTEILE     }
-       numero_tabla = "1"
-       
+       numero_tabla = "1"     
     />
 
+
+    {/* Tabla2: tres columnas inhalte, leistungen, kosten */}
     <Tabla02
       texto_INHALTE = {texto_INHALTE}
       texto_LEISTUNGEN = {texto_LEISTUNGEN}
       kosten = {kosten} 
       numero_tabla = "2"
     /> 
+   
 
+   {/* Tabla3 --- Cards con fechas de cursos */}
     <Tabla03 
      crashkurs_date_title= {crashkurs_date_title}
      crashkurs_date= {crashkurs_date}
-     titulo ={titulo2 +" " +titulo2a}
-    
+     titulo ={titulo2 +" " +titulo2a}    
     />
     
 
 
-        <Texto01/>
+    {/* Texto Crashkurse */}
+    <Texto01/>
  
   
 
@@ -127,15 +128,9 @@ const {titulo1, titulo2,titulo2a, titulo3, imagen01, texto_BESCHREIBUNG,
 
   </div>
 
-          {/*Menu Lateral oculto  */} 
+  {/*Menu Lateral oculto  */} 
   <MenuFlotante />
-
-
-
-   
-
-
-    
+  
 
 </>
   )

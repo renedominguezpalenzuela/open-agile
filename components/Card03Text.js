@@ -31,8 +31,10 @@ export default function Card03Text({ id, titulo, subtitulo, texto, link}) {
         </div>
         <div className="col d-flex align-items-center    ">
 
-       
-          <a href={`/${link}`}>jetzt lesen…</a>
+         <a href={`/${link}/${id}`} >
+          <button type="button" className="btn  ps-5 pe-5  h-100 btn-card font-btn-card rounded-pill  ">Jetzt lesen...</button>
+        </a>
+          {/* <a href={`/${link}`}>jetzt lesen…</a> */}
         </div>
 
       </div>

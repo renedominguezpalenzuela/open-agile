@@ -35,10 +35,14 @@ export default function Content01andMenuWithButton({texto1, texto2, texto2a}) {
       </div>
       <div className="row g-0  ms-4 mt-5 p-2 borde_main redondeado me-5 ">
       <div className="col m-4 ">
+       <a href="#" >
        <button type="button" className="btn w-100 mt-1 btn-main-page font_boton_main redondeado-boton ">Ich bin eine Privatperson</button>
+       </a>
       </div>
-            <div className="col m-4 ">
+      <div className="col m-4 ">
+      <a href="#" >
        <button type="button" className="btn w-100 mt-1 btn-main-page font_boton_main redondeado-boton">Ich vertrete ein Unternehmen</button>
+      </a>
       </div>
       
       </div>
@@ -48,9 +52,9 @@ export default function Content01andMenuWithButton({texto1, texto2, texto2a}) {
 
 
     <div className="col mt-4 text-center    ">
-      
-        <button type="button" className="btn mt-1 btn-outline-primary font_boton  ">Configuration</button>
-      
+       <a href="#" >
+        <button type="button" className="btn mt-1 btn-outline-primary font_boton  ">Agile Check</button>
+      </a>
     </div>
 
   </div>

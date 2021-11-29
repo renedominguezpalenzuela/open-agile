@@ -76,11 +76,10 @@ export const crashkurse_details = [
 
  "crashkurs_date_title":"CRASHKURS 2022",
   "crashkurs_date" : [
-   "29.04.2022 / 30.04.2022",
-   "13.05.2022 / 14.05.2022",
-   "13.05.2022 / 14.05.2022",
-   "01.07.2022 / 02.07.2022"
-
+   {"quartal":"1", "date1" : "29.04.2022", "date2":  "30.04.2022", "day":"(Fr. / Sa.)"},
+   {"quartal":"2","date1" : "13.05.2022", "date2":  "14.05.2022", "day":"(Do. / Fr.)"},
+   {"quartal":"3","date1" : "13.05.2022", "date2":  "14.05.2022", "day":"(Fr. / Sa.)"},
+   {"quartal":"4","date1" : "01.07.2022", "date2":  "02.07.2022", "day":"(Do. / Fr.)"}    
  ]
 
                  
@@ -161,11 +160,10 @@ export const crashkurse_details = [
 
  "crashkurs_date_title":"CRASHKURS 2022",
   "crashkurs_date" : [
-  "1. Quartal: 04.02.2022 / 05.02.2022 (Fr. / Sa.)",
-   "2. Quartal:	22.04.2022 / 23.04.2022 (Do. / Fr.)",
-   "3. Quartal: 26.08.2022 / 27.08.2022 (Fr. / Sa.)",
-   "4. Quartal: 11.11.2022 / 12.11.2022 (Do. / Fr.)"
-
+   {"quartal":"1","date1" : "04.02.2022", "date2":  "05.02.2022", "day":"(Fr. / Sa.)"},
+   {"quartal":"2","date1" : "22.04.2022", "date2":  "23.04.2022", "day":"(Do. / Fr.)"},
+   {"quartal":"3","date1" : "26.08.2022", "date2":  "27.08.2022", "day":"(Fr. / Sa.)"},
+   {"quartal":"4","date1" : "11.11.2022", "date2":  "12.11.2022", "day":"(Do. / Fr.)"} 
  ]
     
 
@@ -245,11 +243,10 @@ export const crashkurse_details = [
 
  "crashkurs_date_title":"CRASHKURS 2022",
   "crashkurs_date" : [
-  "1. Quartal: 18.02.2022 / 19.02.2022 (Fr. / Sa.)",
-   "2. Quartal:	13.06.2022 / 14.06.2022 (Do. / Fr.)",
-   "3. Quartal:	09.09.2022 / 10.09.2022 (Fr. / Sa.)",
-   "4. Quartal:	24.11.2022 / 25.11.2022 (Do. / Fr.)"
-
+   {"quartal":"1", "date1" : "18.02.2022 ", "date2":  "19.02.2022", "day":"(Fr. / Sa.)"},
+   {"quartal":"2","date1" : "13.06.2022", "date2":  "14.06.2022", "day":"(Do. / Fr.)"},
+   {"quartal":"3","date1" : "09.09.2022", "date2":  "10.09.2022", "day":"(Fr. / Sa.)"},
+   {"quartal":"4","date1" : "24.11.2022", "date2":  " 25.11.2022", "day":"(Do. / Fr.)"} 
  ]
     
 

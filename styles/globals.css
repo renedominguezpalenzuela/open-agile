@@ -502,6 +502,7 @@ ul.no-bullets {
 } 
 
 
+
 /* 
 .card {
   height: 100%;
@@ -593,3 +594,10 @@ ul.no-bullets {
   font-size: 1.25vw;
  
 }
+
+
+.subrayar{
+  text-decoration: underline;
+}
+
+
