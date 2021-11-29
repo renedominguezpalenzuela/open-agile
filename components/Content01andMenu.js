@@ -31,6 +31,7 @@ export default function Content01andMenu({texto1, texto2, texto2a}) {
       </div>
 
       <div className="row g-0  ms-4 mt-5 ">
+     
         <Content01Text texto1={texto1} texto2={texto2} texto2a={texto2a}/>
       </div>
     </div>

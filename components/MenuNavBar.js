@@ -58,21 +58,21 @@ export default function MenuNavBar() {
 
 
           <li className="nav-item">
-            <a className="dropdown-item color-font-dropdown" href="/leistungen01">ORGANISATIONSENTWICKLUNG</a>
+            <a className="dropdown-item color-font-dropdown" href="/leistungen/1">ORGANISATIONSENTWICKLUNG</a>
           </li>
 
           <li className="nav-item">
-            <a className="dropdown-item color-font-dropdown" href="/leistungen02">INHOUSE TRAINING</a>
-          </li>
-
-
-          <li className="nav-item">
-            <a className="dropdown-item color-font-dropdown" href="/leistungen03">COACHING </a>
+            <a className="dropdown-item color-font-dropdown" href="/leistungen/2">INHOUSE TRAINING</a>
           </li>
 
 
           <li className="nav-item">
-            <a className="dropdown-item color-font-dropdown" href="/leistungen04">MITBESTIMMUNG IM AGILEN KONTEXT</a>
+            <a className="dropdown-item color-font-dropdown" href="/leistungen/3">COACHING </a>
+          </li>
+
+
+          <li className="nav-item">
+            <a className="dropdown-item color-font-dropdown" href="/leistungen/4">MITBESTIMMUNG IM AGILEN KONTEXT</a>
           </li>
 
 

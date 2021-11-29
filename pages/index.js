@@ -17,7 +17,7 @@ import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
 // import MenuSuperior from "../components/MenuSuperior";
 
 
-import Content01andMenu from "../components/Content01andMenu";
+import Content01andMenuWithButton from "../components/Content01andMenuWithButton";
 
 
 
@@ -52,16 +52,13 @@ export default function Home({cursos, servicios, blogs}) {
   <div id="principal" className="row content-fluid ">
 
 
-    <MenuFlotanteBoton />
-
-   
+    <MenuFlotanteBoton />  
     
-    {/*Area superior  */}
-   
+    {/*Area superior  */} 
     <div  className="bannermain "> 
    
-         <Content01andMenu texto1="OPEN AGILE" texto2="FOR BETTER WORK"/> 
-     
+         <Content01andMenuWithButton texto1="OPEN AGILE" texto2="FOR BETTER WORK"/> 
+       
     </div>
 
     {/*Cards CRASHKURSE  */}

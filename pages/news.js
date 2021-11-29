@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import MenuFlotante from "../components/MenuFlotante";
 import Footer from "../components/Footer";
-import AreaPrincipal from "../components/AreaPrincipal";
+
 
 
 

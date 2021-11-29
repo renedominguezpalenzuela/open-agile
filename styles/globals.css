@@ -526,3 +526,41 @@ ul.no-bullets {
 }
 
 
+.borde_main {
+  outline: 4px solid #e42078;
+}
+
+
+
+.btn-main-page {
+  background-color:#e42078 !important;
+  /* border-color: #3edf0d  !important; */
+  color: #ffffff !important;
+}
+.btn-main-page:hover,
+.btn-main-page:active,
+.btn-main-page:visited,
+.btn-main-page:focus {
+   background-color: white !important; 
+  /* border-color: rgb(245, 4, 4) !important; */
+  color: #e42078 !important;
+}
+
+
+.font_boton_main {
+  font-family: Montserrat-Bold;
+  color: #ffffff;
+  font-size: 1.25vw;
+ 
+}
+
+.redondeado{
+  border-radius: 5px;
+  
+}
+
+
+.redondeado-boton{
+  border-radius: 7px;
+  
+}
