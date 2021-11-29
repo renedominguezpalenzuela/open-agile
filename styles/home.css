@@ -29,12 +29,29 @@
 }
 
 
-@media (min-width:  1600px) {
+
+
+
+ 
+@media (min-height:  1500px) {
+  .bannermain {
+    max-height:50vh;
+  }
+}
+
+
+@media (min-height:  1700px) {
+  .bannermain {
+    max-height:45vh;
+  }
+}
+/*
+@media (min-width:  1701px) {
   .bannermain {
     max-height:35vh;
   }
 }
-
+ */
 
 
 .left_column_color {
