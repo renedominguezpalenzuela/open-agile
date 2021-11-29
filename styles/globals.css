@@ -491,7 +491,8 @@ ul.no-bullets {
 
 
 .my_card {
-  max-width: 330px;
+  /* max-width: 330px; */
+  max-width: 200vw;
   height: 100%;
   display: flex;
   -webkit-border-radius: 30px; 

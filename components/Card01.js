@@ -16,8 +16,8 @@ export default function Card01({
   return (
 <>
 
-  <div className="col p-4">
-    <div className="card card-rounded   my_card ">
+  <div className="col p-4 ">
+    <div className="card card-rounded  w-100   my_card ">
 
       <img className="card-img-top corte_cards img-rounded " src={`img/${imagen}`} alt={texto_alt}/>
 

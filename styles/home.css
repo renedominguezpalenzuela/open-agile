@@ -1,8 +1,13 @@
 .bannermain {
   background-size: auto, cover;
-  /* height: 100vh; */
- min-height: 100vh;
-  height: auto;
+  height: 100vh; 
+  max-height: 100vh;
+  
+  /* height: auto important; */
+  /* min-height:max-content !important; */
+  /* min-height: 80vh;
+  
+  /* height: auto; */
  
   background-repeat: no-repeat;
   text-align: left;
@@ -22,6 +27,15 @@
     clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
  
 }
+
+
+@media (min-width:  1600px) {
+  .bannermain {
+    max-height:35vh;
+  }
+}
+
+
 
 .left_column_color {
   transform: skew(3deg);

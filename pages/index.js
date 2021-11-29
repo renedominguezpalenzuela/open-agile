@@ -55,7 +55,7 @@ export default function Home({cursos, servicios, blogs}) {
     <MenuFlotanteBoton />  
     
     {/*Area superior  */} 
-    <div  className="bannermain "> 
+    <div  className="bannermain  border border-dark "> 
    
          <Content01andMenuWithButton texto1="OPEN AGILE" texto2="FOR BETTER WORK"/> 
        
