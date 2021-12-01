@@ -1,4 +1,4 @@
-import { crashkurse } from "../../../data";
+import { crashkurse } from "../../../data/data";
 
 export default function handler(req, res) {
   

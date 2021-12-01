@@ -1,7 +1,7 @@
 
  
  var boton=document.getElementById("boton_abrir_menu");
-//  boton.style.display = 'none';
+
 
 
 
@@ -28,34 +28,16 @@ window.addEventListener('load', (event) => {
 });
 
 
-window.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
+window.addEventListener("scroll", function(){ 
 
-
-
-
-//var course_top=document.getElementById("course").offsetTop - 100;
-// var course_top=document.getElementById("area_superior").offsetTop - 100;
 var course_top = 100;
-
-
-
-// var Y = window.scrollY
 var Y = window.pageYOffset 
  
-
-
-
-// var color_fondo = "#24325A";
-
 if (Y < course_top) {
-    // boton.style.display = 'none';
-
-	boton.style.visibility='hidden';
+   	boton.style.visibility='hidden';
 
 } else  {
-	//  boton.style.display = ''
-
-	 
+		 
 	 	boton.style.visibility='visible';
 }
 

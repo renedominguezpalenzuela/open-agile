@@ -1,4 +1,4 @@
-import { leistungen } from "../../../data";
+import { leistungen } from "../../../data/data";
 
 export default function handler(req, res) {
   

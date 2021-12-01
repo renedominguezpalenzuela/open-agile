@@ -1,4 +1,4 @@
-import { blogs } from "../../../data";
+import { blogs } from "../../../data/data";
 
 export default function handler(req, res) {
   

@@ -1,3 +1,4 @@
+import { RecoilRoot } from "recoil";
 import "bootstrap/dist/css/bootstrap.css";
 import Layout from "../components/Layout";
 //import "../styles/Home.module.css";
@@ -47,7 +48,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <Component {...pageProps} />
+      <RecoilRoot>
+          <Component {...pageProps} />
+      </RecoilRoot> 
     </>
   );
 }

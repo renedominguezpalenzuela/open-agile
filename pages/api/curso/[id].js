@@ -1,5 +1,5 @@
 
-import { crashkurse_details } from "../../../data_crashkurse_details";
+import { crashkurse_details } from "../../../data/data_crashkurse_details";
 
 export default function handler(req, res) {
   

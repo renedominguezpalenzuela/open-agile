@@ -527,6 +527,7 @@ ul.no-bullets {
 
 
 
+
 .btn-main-page {
   background-color:#e42078 !important;
   /* border-color: #3edf0d  !important; */
@@ -580,9 +581,9 @@ ul.no-bullets {
 
 
 .btn-card:hover,
-.btn-card:active,
-.btn-card:visited,
-.btn-card:focus {
+/* .btn-card:active, */
+/* .btn-card:visited, */
+/* .btn-card:focus*/ { 
    background-color: #e42078 !important; 
   /* border-color: rgb(245, 4, 4) !important; */
    color: #ffffff !important; }
@@ -601,3 +602,7 @@ ul.no-bullets {
 }
 
 
+.ancho_fijo {
+  width: 30vw;
+  height: 5vw;
+}

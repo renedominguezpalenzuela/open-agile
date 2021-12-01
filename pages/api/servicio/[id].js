@@ -1,5 +1,5 @@
 
-import { leistungen_details } from "../../../data_leistungen_details";
+import { leistungen_details } from "../../../data/data_leistungen_details";
 
 export default function handler(req, res) {
   
