@@ -21,7 +21,7 @@ import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
 // import MenuSuperior from "../components/MenuSuperior";
 
 
-import Content01andMenuWithQuestions from "../../components/content01andmenuwithquestions.js";
+import Content01andMenuWithQuestions from "../../components/Content01andMenuConfigurator.js";
 
 
 
