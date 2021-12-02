@@ -2,6 +2,8 @@
 //            Area superior principal:
 //----------------------------------------------------------------------------------------------------------
 
+import Link from 'next/link';
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Content01TextSinIcons from "./Content01TextSinIcons";
@@ -38,9 +40,9 @@ export default function Content01andMenuVacio() {
 
 
     <div className="col mt-4 text-center   ">
-      
+        <a href="/quiz">   
         <button type="button" className="btn mt-1 btn-outline-primary font_boton  ">Agile Check</button>
-      
+      </a>
     </div>
 
   </div>

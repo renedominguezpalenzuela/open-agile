@@ -72,7 +72,7 @@ export default function Content01andMenuConfigurator({botones}) {
 
 
       <div className="col mt-4 text-center    ">
-        <a href="#">
+         <a href="/quiz">   
           <button type="button" className="btn mt-1 btn-outline-primary font_boton  ">Agile Check</button>
         </a>
       </div>
