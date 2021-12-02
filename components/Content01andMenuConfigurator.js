@@ -39,49 +39,31 @@ export default function Content01andMenuConfigurator({botones}) {
             <div className="row w-100 mt-5 align-items-bottom  borde_main redondeado d-flex justify-content-center align-items-center ">
 
 
-          {botones.length>2?
-          botones.map (unBoton=>{
-                  return <>
-
-                          <div className="col-6   m-3   ">
-                            <Link href={unBoton.link}>
-                            
-                              <button type="button" className="btn w-100  btn-main-page font_boton_main redondeado-boton ">{unBoton.texto}</button>
-                            </Link>
-                            
-                          </div>
-                   </>
-                  }   
-            )
-          :botones.map (unBoton=>{
-                  return <>
-
-                          <div className="col  m-4   ">
-                            <Link href={unBoton.link}>
-                            
-                              <button type="button" className="btn w-100  btn-main-page font_boton_main redondeado-boton ">{unBoton.texto}</button>
-                            </Link>
-                            
-                          </div>
-                   </>
-                  }   
-            )
-}
+              {botones.length>2?
+                                botones.map (unBoton=>{
+                                        return <>
+                                                <div className="col-6   m-3   ">
+                                                  <Link href={unBoton.link}>                            
+                                                    <button type="button" className="btn w-100  btn-configurator-page font_boton_main redondeado-boton ">{unBoton.texto}</button>
+                                                  </Link>                            
+                                                </div>
+                                              </>
+                                        }   
+                                  )
+                                :botones.map (unBoton=>{
+                                        return <>
+                                                <div className="col  m-4   ">
+                                                  <Link href={unBoton.link}>                            
+                                                    <button type="button" className="btn w-100  btn-configurator-page font_boton_main redondeado-boton ">{unBoton.texto}</button>
+                                                  </Link> 
+                                                </div>
+                                              </>
+                                        }   
+                                  )
+              }
 
            
-          
-            {/* <div className="col m-4  ">
-              <Link href='/configurator/1'>
-                <button type="button" className="btn w-100 mt-1 btn-main-page font_boton_main redondeado-boton ">Ich bin eine Privatperson</button>
-              </Link>
-            </div>
-
-            <div className="col m-4 ">
-              <Link href='/configurator/2'>
-                <button type="button" className="btn w-100 mt-1 btn-main-page font_boton_main redondeado-boton">Ich vertrete ein Unternehmen</button>
-              </Link>
-            </div> */}
-
+         
           </div>
         </div>
 

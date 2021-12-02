@@ -10,6 +10,8 @@ import "../styles/animate.css";
 import  "../styles/carrusel.css";
 import  "../styles/tabla01.css";
 import "../styles/menu-lateral.css";
+import "../styles/formulario.css";
+
 
 
 import 'bootstrap-icons/font/bootstrap-icons.css';

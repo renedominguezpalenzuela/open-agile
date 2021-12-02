@@ -441,7 +441,7 @@
   .font_facit_boton_small {
     font-family: Montserrat-Regular;
     color: #ffffff;
-    text-align: left;
+    /* text-align: left; */
     font-size: 16px;
   
     font-weight: 200;
@@ -606,6 +606,12 @@
    /* background-color: #e42078 !important;  */
   /* border-color: rgb(245, 4, 4) !important; */
    color: #e42078 !important; }
+
+
+   
+ 
+
+
 
 
 

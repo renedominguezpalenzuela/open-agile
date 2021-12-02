@@ -533,15 +533,32 @@ ul.no-bullets {
   /* border-color: #3edf0d  !important; */
   color: #ffffff !important;
 }
-.btn-main-page:hover,
+.btn-main-page:hover/*,
 .btn-main-page:active,
 .btn-main-page:visited,
-.btn-main-page:focus {
+.btn-main-page:focus */{
    background-color: white !important; 
   /* border-color: rgb(245, 4, 4) !important; */
   color: #e42078 !important;
 }
 
+
+
+
+.btn-configurator-page {
+  background-color:#e42078 !important;
+  /* border-color: #3edf0d  !important; */
+  color: #ffffff !important;
+}
+
+ /* .btn-configurator-page:active, */
+/* .btn-configurator-page:visited,  */
+ /* .btn-configurator-page:focus, */
+ .btn-configurator-page:hover{
+   background-color: white !important; 
+  /* border-color: rgb(245, 4, 4) !important; */
+  color: #e42078 !important;
+}
 
 .font_boton_main {
   font-family: Montserrat-Bold;

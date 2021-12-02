@@ -29,7 +29,7 @@ export const configurator_details = [
    {
     "id": "5",
     "botones": [ {"texto": "Leistungen",   "link":"/#services"},
-                   {"texto": "Kontaktformular", "link":"#"}],
+                   {"texto": "Kontaktformular", "link":"/contact"}],
   },
 
   {
@@ -37,7 +37,7 @@ export const configurator_details = [
     "botones": [ {"texto": "Blog",   "link":"/#blog"},
                    {"texto": "VLog", "link":"/vlog"},
                    {"texto": "News", "link":"/news"},
-                   {"texto": "Kontaktformular", "link":"#"}],
+                   {"texto": "Kontaktformular", "link":"/contact"}],
   },
   {
    "id": "7",
@@ -58,9 +58,31 @@ export const configurator_details = [
   },
 {
     "id": "10",
-    "botones": [ {"texto": "Ich begleite mein Team als Agile Coach und  unterstütze die Organisation in Ihrer Entwicklung",   "link":"#"},
-                   {"texto": "Crashkurs Agile Coach", "link":"/crashkurse/1"}],
+    "botones": [ {"texto": "Ich begleite mein Team als Agile Coach und unterstütze die Organisation in Ihrer Entwicklung",   "link":"/configurator/11"},
+                 {"texto": "Ich begleite mein Team in agilen Arbeitsweise. Einen Ansatz als Coach verfolge ich aktuell nicht",   "link":"/configurator/12"}
+                   ],
 
   },
+
+
+
+
+{
+    "id": "11",
+    "botones": [ {"texto": "Gerne helfen wir dir in deiner individuellen Entwicklung: Kontaktformular",   "link":"/contact"},
+                 
+                   ],
+
+  },
+
+  {
+    "id": "12",
+    "botones": [ {"texto": "Crashkurs Agile Coach", "link":"/crashkurse/1"}   ]
+
+  },
+
+
+
+  
 
 ];
