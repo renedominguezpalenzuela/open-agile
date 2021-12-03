@@ -336,13 +336,15 @@ div.vertical-line{
   border-color: #F82D7C  !important;
   color: #F82D7C !important;
 }
-.btn-outline-primary:hover,
-.btn-outline-primary:active,
-.btn-outline-primary:visited,
-.btn-outline-primary:focus {
+
+
+/* .btn-outline-primary:active,
+.btn-outline-primary:visited,*/
+.btn-outline-primary:focus , 
+.btn-outline-primary:hover{
   /* background-color: white !important; */
-  border-color: white !important;
-  color: white !important;
+  border-color: white!important ;
+  color: white!important;
 }
 
 .iconos-contenedor {
@@ -586,6 +588,18 @@ ul.no-bullets {
 .boton_card {
   /* background-color: #e50067; */
   background-color: #24325a;
+
+}
+
+.boton_card_magenta {
+  /* background-color: #e50067; */
+  background-color: #e50067;
+
+}
+
+.color_magenta {
+  color: #e50067;
+
 
 }
 

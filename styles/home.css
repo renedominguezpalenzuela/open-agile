@@ -45,6 +45,57 @@
     max-height:45vh;
   }
 }
+
+
+.bannermain-quiz {
+  background-size: auto, cover;
+  height: 100vh; 
+  max-height: 100vh;
+  
+  /* height: auto important; */
+  /* min-height:max-content !important; */
+  /* min-height: 80vh;
+  
+  /* height: auto; */
+ 
+  background-repeat: no-repeat;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-position: 100% 57%; */
+  background-image: linear-gradient(
+      /* 150deg, */
+      /* to top right, */
+      215deg,
+      rgba(36, 50, 90, 0.95),
+      rgba(67, 183, 174, 0.8)
+      
+     
+    ),
+    url("/img/agilcheckbackground.jpg");
+    clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
+ 
+}
+
+
+
+
+
+ 
+@media (min-height:  1500px) {
+  .bannermain-quiz {
+    max-height:50vh;
+  }
+}
+
+
+@media (min-height:  1700px) {
+  .bannermain-quiz {
+    max-height:45vh;
+  }
+}
+
+
 /*
 @media (min-width:  1701px) {
   .bannermain {

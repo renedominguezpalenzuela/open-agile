@@ -80,7 +80,7 @@ const { titulo1, titulo2,titulo2a, titulo3, titulo4, texto01,texto02 , texto03 }
     <TextoBloque01   titulo={titulo3}  texto_parrafo_array={texto01} />
 
 
-    <TextoBloque01   titulo2={titulo4}  texto_plequitas_array={texto02} />
+    <TextoBloque01   titulo={titulo4}  texto_parrafo_array={texto02} />
 
     <TextoBloque01    texto_parrafo_array={texto03} />
   

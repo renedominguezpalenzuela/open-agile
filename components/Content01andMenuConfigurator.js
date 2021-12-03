@@ -40,9 +40,9 @@ export default function Content01andMenuConfigurator({botones}) {
 
 
               {botones.length>2?
-                                botones.map (unBoton=>{
+                                botones.map ((unBoton, index)=>{
                                         return <>
-                                                <div className="col-6   m-3   ">
+                                                <div key={index} className="col-6   m-3   ">
                                                   <Link href={unBoton.link}>                            
                                                     <button type="button" className="btn w-100  btn-configurator-page font_boton_main redondeado-boton ">{unBoton.texto}</button>
                                                   </Link>                            
@@ -50,9 +50,9 @@ export default function Content01andMenuConfigurator({botones}) {
                                               </>
                                         }   
                                   )
-                                :botones.map (unBoton=>{
+                                :botones.map ((unBoton, index)=>{
                                         return <>
-                                                <div className="col  m-4   ">
+                                                <div key={index+100} className="col  m-4   ">
                                                   <Link href={unBoton.link}>                            
                                                     <button type="button" className="btn w-100  btn-configurator-page font_boton_main redondeado-boton ">{unBoton.texto}</button>
                                                   </Link> 
@@ -72,7 +72,7 @@ export default function Content01andMenuConfigurator({botones}) {
 
 
       <div className="col mt-4 text-center    ">
-         <a href="/quiz">   
+         <a href="/quizstart">  
           <button type="button" className="btn mt-1 btn-outline-primary font_boton  ">Agile Check</button>
         </a>
       </div>

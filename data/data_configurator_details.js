@@ -41,7 +41,7 @@ export const configurator_details = [
   },
   {
    "id": "7",
-    "botones": [ {"texto":"Mitbestimmung im agilen Kontext",    "link":"#"}],
+    "botones": [ {"texto":"Mitbestimmung im agilen Kontext",    "link":"/leistungen/4"}],
   },
 
   {

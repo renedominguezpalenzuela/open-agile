@@ -1,0 +1,98 @@
+
+/* hover sobre las preguntas */
+.radiocontainer:hover {
+    background-color: rgba(251, 251, 251, 0.212);
+}
+
+/* contenedor de las preguntad, letras de las preguntas */
+.radiocontainer {
+    cursor: pointer;
+    font-size: 16px;
+    word-wrap: break-word;
+}
+
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+/* le agrega el checkbox a las preguntas */
+.radiocontainer {
+    background-color: #ffffff;
+    display: block;
+    position: relative;
+    padding: 14px 5px 5px 50px;
+    margin-bottom: px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    word-wrap: break-word;
+}
+
+/* elimina el checkbox original */
+.radiocontainer input {
+    position: absolute;
+    opacity: 10;
+    cursor: pointer;
+}
+
+/* color de fondo del contendor de las preguntas */
+.checkedlabel {
+    background-color: #24325a1a;
+}
+
+/* Contendro de las preguntas alto */
+#altcontainer {
+    font-size: 120%;
+    line-height: 1.7em;
+}
+
+/* checkmark color cuando lo selecciona*/
+.radiocontainer input:checked ~ .checkmark {
+    background-color: #24325a;
+}
+
+.radiocontainer:hover input ~ .checkmark {
+  
+}
+
+/* checkmark color sin seleccionar, deberia ser blanco*/
+.checkmark {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    height: 30px;
+    width: 30px;
+    /* border-radius: 5px; */
+    border-color: cyan;
+    background-color: #fdfdfd;
+    border-radius:60%;
+}
+
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+#quizmain {
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+
+
+
+[type="checkbox"], [type="radio"] {
+    padding: 0;
+}
+button, input {
+    overflow: visible;
+}
+button, input, select, textarea, optgroup {
+    font: inherit;
+    margin: 0;
+}
+*, ::before, ::after {
+    box-sizing: inherit;
+}

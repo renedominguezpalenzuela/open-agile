@@ -2,21 +2,17 @@
 //            Area superior principal:
 //----------------------------------------------------------------------------------------------------------
 
-import Link from 'next/link';
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import Content01TextSinIcons from "./Content01TextSinIcons";
+import Content01Text from "./Content01Text";
 import MenuNavBar from "./MenuNavBar";
 
 import { servidor_url } from "../config";
-
-
-export default function Content01andMenuVacio() {
+import Link from 'next/link';
 
 
 
-  
+export default function Content01andMenuWidthImage({texto1, texto2, texto2a}) {
   return (
 <>
 
@@ -35,15 +31,37 @@ export default function Content01andMenuVacio() {
         <MenuNavBar/>
       </div>
 
+      <div className="row g-0  ms-4 mt-5 ">
+     
+        
+
+   
+      <div className="font_title_secundario font_title_purple mt-5">
        
+            {texto1}
+      </div>
+
+   
+      <div className="font_title mt-2 ">
+     
+        <p>{texto2}</p>
+
+        {texto2a!=undefined &&  texto2a!="" && <> {texto2a} </>}
+
+      </div>
   
+    
+
+
+      </div>
     </div>
 
 
     <div className="col mt-4 text-center   ">
-        <a href="/quizstart">  
+       <a href="/quizstart"> 
+       
         <button type="button" className="btn mt-1 btn-outline-primary font_boton  ">Agile Check</button>
-      </a>
+       </a>
     </div>
 
   </div>

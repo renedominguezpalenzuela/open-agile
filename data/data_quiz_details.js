@@ -24,10 +24,10 @@ export const quiz_details = [
                    { "letter": "a", "answer":  "Autoritärer Führungsstil (Entscheidungen werden top-down vorgesetzt)"},
                    { "letter": "b", "answer":  "Laissez-faire Führungsstil (Es werden wenige bis gar keine Entscheidungen getroffen)"},
                    { "letter": "c", "answer":  "Kooperativer Führungsstil (Das Team wird in Entscheidungen eingebunden)"},
-                   { "letter": "d", "answer":  "d.	Dienender, lateraler Führungsstil (Das Team entscheidet gemeinsam im Konsent) "},
+                   { "letter": "d", "answer":  "Dienender, lateraler Führungsstil (Das Team entscheidet gemeinsam im Konsent) "},
                    ],
      "correct_answer" : "d",                     
-     "next_link" :"/quiz/2" ,
+     "next_link" :"/quiz/3" ,
      "prior_link" :"/quiz/1"                  
   },
 
@@ -139,8 +139,8 @@ export const quiz_details = [
                    { "letter": "d", "answer":  "Jeden Werktag in einem kurzen „Daily“ + einmal die Woche in einem „Weekly“ "},
                    ],
      "correct_answer" : "d",                     
-     "next_link" :"/quiz/8" ,
-     "prior_link" :"/quiz/10"                  
+     "next_link" :"/quiz/10" ,
+     "prior_link" :"/quiz/8"                  
   },
 
    {
@@ -239,7 +239,7 @@ export const quiz_details = [
                    { "letter": "d", "answer":  "Trifft voll zu"},
                    ],
      "correct_answer" : "d",                     
-     "next_link" :"/calification" ,
+     "next_link" :"/quizresult" ,
      "prior_link" :"/quiz/14"                  
   },
 

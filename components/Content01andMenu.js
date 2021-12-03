@@ -39,7 +39,7 @@ export default function Content01andMenu({texto1, texto2, texto2a}) {
 
 
     <div className="col mt-4 text-center   ">
-       <a href="/quiz"> 
+       <a href="/quizstart"> 
         <button type="button" className="btn mt-1 btn-outline-primary font_boton  ">Agile Check</button>
        </a>
     </div>

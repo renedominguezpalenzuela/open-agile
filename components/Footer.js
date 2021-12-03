@@ -2,14 +2,19 @@
 
 import { servidor_url } from "../config";
 
+import FormularioContacto2 from "./formulariocontacto2";
+
 export default function Footer() {
   return (
 <>
 
   <footer id="myfooter" className="mt-5 no-gutter">
+  <div id="rowfoot01" className="row  color_background footer_path ps-2 mb-5 mt-5 pt-5">
+     <FormularioContacto2/>
 
+  </div>   
 
-    <div id="rowfoot01" className="row  color_background footer_path ps-2  mt-5 pt-5">
+    {/* <div id="rowfoot01" className="row  color_background footer_path ps-2  mt-5 pt-5">
      
       <div className="col-auto  ">
         <div className="font_facit_title_small p-3">OPEN AGILE NEWSLETTER</div>
@@ -49,20 +54,20 @@ export default function Footer() {
         </div>
 
           <div className="row  mt-3 mb-5 ps-1 font_facit_text_very_small d-flex align-items-center  ">
-          {/* <div className="col-auto me-5 pe-5  mt-4 ms-1 d-flex align-items-center  text-center  "> */}
+        
           <div className="col-auto ">
         <button type="button" className="btn boton_card rounded-pill   ">
           <div className=" font_facit_boton_small "> ANMELDEN</div>
         </button>
         </div>
-      {/* </div>  */}
+   
         </div>
 
       </div>
 
    
 
-    </div>
+    </div> */}
 
 
 

@@ -3,6 +3,7 @@ export default function TextoBloque01({
   titulo,
   titulo2,
   texto_parrafo_array,
+  texto_parrafo_array_white,
   texto_plequitas_array,
   telefono,
   correo,
@@ -34,25 +35,45 @@ export default function TextoBloque01({
  </div>
     
     
-  {texto_parrafo_array!=undefined && texto_parrafo_array!="" &&
-  <div className="row  mt-3  ">
-    <div className="col-1">
-    </div>
+      {texto_parrafo_array!=undefined && texto_parrafo_array!="" &&
+          <div className="row  mt-3  ">
+                <div className="col-1">
+                </div>
 
-    <div className="col font_small_letter ms-3 me-3 justificar">
-    {texto_parrafo_array.map ((unaLinea, index)=> 
-      <p  key={index}>
-         {unaLinea}
-      </p>                 
-    )}
+                <div className="col font_small_letter ms-3 me-3 justificar">
+                {texto_parrafo_array.map ((unaLinea, index)=> 
+                    <p  key={index}>
+                    {unaLinea}
+                    </p>                 
+                )}
 
 
-        </div>
+                </div>
 
-      <div className="col-1">
-      </div>
-    </div>
-   }
+                <div className="col-1">
+                </div>
+          </div>
+      }
+
+      {texto_parrafo_array_white!=undefined && texto_parrafo_array_white!="" &&
+          <div className="row  mt-3  ">
+                <div className="col-1">
+                </div>
+
+                <div className="col font_small_letter_white ms-3 me-3 justificar">
+                {texto_parrafo_array_white.map ((unaLinea, index)=> 
+                    <p  key={index}>
+                    {unaLinea}
+                    </p>                 
+                )}
+
+
+                </div>
+
+                <div className="col-1">
+                </div>
+          </div>
+      }
 
 
 

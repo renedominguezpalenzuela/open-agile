@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from 'next/router'
+import Link from "next/link";
 
 
 import MenuFlotante from "../../components/MenuFlotante";
@@ -18,10 +19,11 @@ import Tabla03 from "../../components/crashkurse/tabla03";
 import Card01Lista from "../../components/Card01Lista";
 import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
 
+
 // import MenuSuperior from "../components/MenuSuperior";
 
 
-import Content01andMenuWithQuestions from "../../components/Content01andMenuConfigurator.js";
+import Content01andMenuWithQuestions from "../../components/Content01andMenuWithQuestions.js";
 
 
 
@@ -53,18 +55,17 @@ const {titulo, number,question, answers, correct_answer, next_link,
 
 
 
-
  
 
 
   return (
 <>
-  <Head>
+<Head>
     <title>{"Quiz"}</title>
     <meta name="description" content="Quiz" />
     <link rel="icon" href="/favicon.ico" />
     <script async src={`${servidor_url}/js/chat.js`} />
-<script async src={`${servidor_url}/js/menu.js`} />
+    <script async src={`${servidor_url}/js/menu.js`} />
 </Head>
 
 
@@ -74,25 +75,30 @@ const {titulo, number,question, answers, correct_answer, next_link,
       <MenuFlotanteBoton />
     
     {/*Area superior  */}
-      <div className="bannermain">
-     
-        <Content01andMenuWithQuestions answers={answers} />
+      <div className="bannermain-quiz ">
+        <Content01andMenuWithQuestions id={id} question={question} answers={answers} titulo={titulo} />
 
-
-
-
-      </div>
+          <div className="row  text-center mt-5 mb-4 d-flex  justify-content-center   ">
+            <Link href={`${next_link}`}>   
+          
+                <button type="button" className=" btn p-3 ms-2 me-2 w-25 mb-5    btn-card font-btn-card rounded-pill  ">
+                  Next 
+                </button>
+          
+               </Link>  
+           
+          </div>
+     </div>
 
     {/*Footer  */}
-    {/*      <Footer />
- */}
+    {/*  <Footer />   */}
 
-    </div>
+</div>
       
     {/*Menu Lateral oculto  */} 
-    <MenuFlotante />
+<MenuFlotante />
 
-  </>
+</>
   )
 }
 
