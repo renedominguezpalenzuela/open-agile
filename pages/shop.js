@@ -16,7 +16,8 @@ import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
 
 import TextoBloque01 from "../components/textobloque01";
 import Image01 from "../components/crashkurse/image01";
-import Content01andMenu from "../components/Content01andMenu";
+
+import Content01Main from "../components/maincontent/Content01Main";
 import Tabla01 from "../components/crashkurse/tabla01";
 
 
@@ -75,7 +76,7 @@ const  texto02= ['Timebox', 'Post-its', 'Eddings', '2 Open Agile Kaffee-Tassen',
     
     {/*Area superior  */}
     <div className="bannermain">
-      <Content01andMenu texto1={titulo1} texto2={titulo2} texto2a={titulo2a}/>
+      <Content01Main texto1={titulo1} texto2={titulo2} texto2a={titulo2a}/>
     </div>
 
 

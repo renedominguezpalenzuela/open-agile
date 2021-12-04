@@ -9,7 +9,7 @@ export default function handler(req, res) {
 
   const filtered = configurator_details.find(({id}) => id === req.query.id);
 
-  
+
 
   if (filtered) {
     res.status(200).json(filtered);

@@ -235,7 +235,7 @@ div.vertical-line{
 
 
 .footer_path {
-  clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 10%, 100% 0%, 101% 101%, 0% 101%);
   
 }
 
@@ -282,10 +282,14 @@ div.vertical-line{
   position: fixed; /* Fixed/sticky position */
    top:4vh;
    right: 1.6vw;
-   z-index: 99; /* Make sure it does not overlap */
+   z-index:-1; /* Make sure it does not overlap */
   cursor: pointer; /* Add a mouse pointer on hover */
   width: fit-content;
 
+}
+
+.encima-zindex{
+  z-index: 99;
 }
 
 .menu_superior {

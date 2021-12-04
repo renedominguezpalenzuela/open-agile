@@ -102,11 +102,7 @@ const  texto04= ['Wie ist das Unternehmen langfristig strategisch aufgestellt?',
       <Content01andMenuWidthImage texto1={titulo1} texto2={titulo2} texto2a={titulo2a}/>
     </div>
 
-    <div className="row  text-center mb-4 mt-5 d-flex  justify-content-center ">
-       <a href="/quiz/1">   
-        <button type="button" className="btn p-3 ms-2 me-2 w-50 h-100 btn-card font-btn-card rounded-pill  ">AGILE CHECK</button>
-    </a> 
-    </div>
+   
 
 
     <TextoBloque01   titulo2=""  texto_parrafo_array={texto02} />

@@ -26,8 +26,7 @@ import Checkbox from '@mui/material/Checkbox';
 
 
 function replaceItemAtIndex(arr, index, newValue)   { 
-  console.log(index) ;
-  console.log(arr);
+
 
     return [...arr.slice(0, index), newValue, ...arr.slice(index + 1)];
 }
@@ -38,42 +37,28 @@ function replaceItemAtIndex(arr, index, newValue)   {
 export default function Content01andMenuWithQuestions({id, question, answers, titulo}) {
 
 
-   
 
-
-  const [respuestas, setRespuestas] = useRecoilState(respuestasState);
-
-  const [checked1, setChecked1] = React.useState(false);
-
- const cambio_respuesta = (event, id) => {
+const cambio_respuesta = (event, id) => {
     let respuesta_usuario = event.target.value;
-
-    // console.log("respuesta antes");
-    //          console.log(respuestas);
-            
-
-            const newList = replaceItemAtIndex(respuestas, id, respuesta_usuario);
-           
-          //  console.log("new list");
-            setRespuestas(newList);
-
-            // console.log("respuesta despues");
-            // console.log(newList);
+    const newList = replaceItemAtIndex(respuestas, id, respuesta_usuario);     
+    setRespuestas(newList);
  };
 
+
+ const [respuestas, setRespuestas] = useRecoilState(respuestasState);
+
+ const [checked1, setChecked1] = React.useState(false);
   const handleChange1 = (event) => {
     setChecked1(event.target.checked);
     setChecked2(false);
     setChecked3(false);
     setChecked4(false);
-
     cambio_respuesta(event, id);
   };
 
   const [checked2, setChecked2] = React.useState(false);
   const handleChange2 = (event) => {
-    setChecked1(false);
-    
+    setChecked1(false);    
     setChecked2(event.target.checked);
     setChecked3(false);
     setChecked4(false);
@@ -91,7 +76,6 @@ export default function Content01andMenuWithQuestions({id, question, answers, ti
 
   const [checked4, setChecked4] = React.useState(false);
   const handleChange4 = (event) => {
-
     setChecked1(false);
     setChecked2(false);
     setChecked3(false);
@@ -100,24 +84,17 @@ export default function Content01andMenuWithQuestions({id, question, answers, ti
   };
 
 
-
-
-
- 
-
-
  const router = useRouter();
 
-    React.useEffect(() => {
 
+//inicializacion
+  React.useEffect(() => {
     setChecked1(false);
     setChecked2(false);
     setChecked3(false);
     setChecked4(false);
-    }, [router.asPath]);
+  }, [router.asPath]);
 
-
-    
   return (
 <>
 
@@ -192,34 +169,6 @@ export default function Content01andMenuWithQuestions({id, question, answers, ti
 
     </div>
 
-
-     
-{/*      
-      <div id="altcontainer" className="row notranslate g-0  mt-2 ms-5 text-center">
-          <FormControl component="fieldset" >
-          <FormLabel component="legend">{respuesta_usuario}</FormLabel>
-          <RadioGroup  name="radio-buttons-group"  defaultValue="-1"  onChange={e=>{
-            console.log("respuesta antes");
-             console.log(respuestas);
-            respuesta_usuario = e.target.value;
-
-            const newList = replaceItemAtIndex(respuestas, id, e.target.value);
-           
-           console.log("new list");
-            setRespuestas(newList);
-
-            console.log("respuesta despues");
-            console.log(newList);
-          }}>
-              { answers!=undefined && answers!="" && 
-                  answers.map ((unaAnswer, index)=>
-                  <FormControlLabel key={index} value={index} control={<Radio   />} label={unaAnswer.answer}  />                               
-              )} 
-
-              
-          </RadioGroup>
-          </FormControl>
-      </div>  */}
 
 
        

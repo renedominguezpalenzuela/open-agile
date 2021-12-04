@@ -6,10 +6,10 @@ import Link from 'next/link';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import Content01TextSinIcons from "./Content01TextSinIcons";
-import MenuNavBar from "./MenuNavBar";
+import Content01TextSinIcons from "../Content01TextSinIcons";
+import MenuNavBar from "../MenuNavBar";
 
-import { servidor_url } from "../config";
+import { servidor_url } from "../../config";
 
 
 export default function Content01andMenuVacio() {

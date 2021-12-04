@@ -14,10 +14,12 @@
     line-height: 19px;
   }
   
+
+  /* font-size provoca que salga una linea en el formulario inferior */
   .font_texto_formulario {
     font-family:  Montserrat-Regular;
     color: #E40067;
-    font-size: 0.7vw;
+    font-size: 0.7em;
     /* line-height: 39px; */
   }
 
@@ -25,38 +27,76 @@
 
 
    .MuiInput-root {
-    color: #e42078!important;
+    color: #ffffff!important;
     font-family:  Montserrat-Regular !important;
   } 
 
 
   .MuiFormLabel-root.Mui-focused {
-    color:#f8f8f8 !important;   
+    color:#e42078 !important;   
   }
 
 
   .MuiFormLabel-root {
-    color: #e42078!important;
+    color: #ffffff!important;
     font-family:  Montserrat-Regular !important;
    
     
   }
 
   
-  .MuiOutlinedInput-root {
-    border-color: rgb(194, 226, 13) !important;
-  } 
-
-
-
-  .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-    border-color: rgb(194, 226, 13) !important;
-  } 
-
 
 
   .MuiFormControlLabel-root {
     color: #f0ebed!important;
     font-family:  Montserrat-Regular !important;
   }
+
+
+  
+.font_title_formulario {
+  font-family: Montserrat-BoldItalic;
+  color: #ffffff;
+  text-align: left;
+  font-size: 2em;
+  line-height: 1;
+  font-weight: 500;
+  
+
+  /* letter-spacing: 4px; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-transform: uppercase;
+  /* selector-locked: false; */
+  text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
+}
+
+@media (max-width: 767px) {
+  .font_title_formulario {
+    font_title_formulario: 1.8em;
+  }
+}
+
+
+.font_title_secundario_formulario {
+  font-family: Montserrat-BoldItalic;
+
+  text-align: left;
+  font-size: 1.5em;
+  line-height: 1;
+  font-weight: 500;
+
+  /* letter-spacing: 4px; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-transform: uppercase;
+  /* selector-locked: false; */
+  text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
+}
+
+@media (max-width: 767px) {
+  .font_title_secundario_formulario {
+      font-size: 1.5em;
+  }
+}
 

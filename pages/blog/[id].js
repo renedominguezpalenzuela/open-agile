@@ -25,7 +25,7 @@ import TextoBlog02 from "../../components/blogs/TextoBlog02";
 // import MenuSuperior from "../components/MenuSuperior";
 
 
-import Content01andMenu from "../../components/Content01andMenu";
+import Content01Main from "../../components/maincontent/Content01Main";
 
 
 
@@ -76,7 +76,7 @@ const {titulo1, titulo2, titulo2a, texto01, texto02, imagen01 } = blog;
     
     {/*Area superior  */}
     <div className="bannermain">
-        <Content01andMenu texto1={titulo1} texto2={titulo2} texto2a={titulo2a}/>
+        <Content01Main texto1={titulo1} texto2={titulo2} texto2a={titulo2a}/>
     </div>
 
     <TextoBlog01/>

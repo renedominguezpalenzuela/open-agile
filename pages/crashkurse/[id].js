@@ -18,10 +18,11 @@ import Tabla03 from "../../components/crashkurse/tabla03";
 import Card01Lista from "../../components/Card01Lista";
 import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
 
-// import MenuSuperior from "../components/MenuSuperior";
 
 
-import Content01andMenu from "../../components/Content01andMenu";
+
+
+import Content01Main from "../../components/maincontent/Content01Main";
 
 
 
@@ -74,7 +75,7 @@ const {titulo1, titulo2,titulo2a, titulo3, imagen01, texto_BESCHREIBUNG,
     
     {/*Area superior  */}
     <div className="bannermain">
-        <Content01andMenu texto1={titulo1} texto2={titulo2} texto2a={titulo2a}/>
+        <Content01Main texto1={titulo1} texto2={titulo2} texto2a={titulo2a}/>
     </div>
 
     {/* Texto Crashkurse */}

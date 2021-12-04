@@ -35,7 +35,7 @@ export default function Content01andMenuWithButton({texto1, texto2, texto2a}) {
      
         <Content01Text texto1={texto1} texto2={texto2} texto2a={texto2a}/>
       </div>
-      <div className="row g-0  ms-4 mt-5 p-2 borde_main redondeado me-5 ">
+      <div className="row g-0  ms-4 mt-5 p-2   me-5 ">
       <div className="col m-4 ">
        <Link href='/configurator/3'> 
        {/* <a href='/configurator/3' > */}

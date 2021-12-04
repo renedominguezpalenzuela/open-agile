@@ -22,7 +22,9 @@ import TextoBloque01 from "../../components/textobloque01";
 // import MenuSuperior from "../components/MenuSuperior";
 
 
-import Content01andMenu from "../../components/Content01andMenu";
+
+
+import Content01Main from "../../components/maincontent/Content01Main";
 
 
 
@@ -74,7 +76,7 @@ const { titulo1, titulo2,titulo2a, titulo3, titulo4, texto01,texto02 , texto03 }
     
     {/*Area superior  */}
     <div className="bannermain">
-      <Content01andMenu texto1={titulo1} texto2={titulo2} texto2a={titulo2a}/>
+      <Content01Main texto1={titulo1} texto2={titulo2} texto2a={titulo2a}/>
     </div>
 
     <TextoBloque01   titulo={titulo3}  texto_parrafo_array={texto01} />

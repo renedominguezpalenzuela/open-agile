@@ -48,6 +48,8 @@
     }
   }
 
+  
+
 
   .font_title_secundario {
     font-family: Montserrat-BoldItalic;
@@ -474,11 +476,12 @@
    
   }
   
-  .font_facit_text_very_very_small_gris {
+  .font_footer_title {
     font-family: Montserrat-Regular;
-    color: #cacaca;
+    color: #ffffff;
     text-align: left;
-    font-size: 11px;
+    font-size: 15px;
+    text-decoration-line: underline;
   
     font-weight: 200;
   

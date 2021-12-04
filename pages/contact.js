@@ -9,7 +9,8 @@ import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
 
 import TextoBloque01 from "../components/textobloque01";
 import Image01 from "../components/crashkurse/image01";
-import Content01andMenuVacio from "../components/Content01andMenuVacio";
+
+import Content01Main from "../components/maincontent/Content01Main";
 import FormularioContacto2 from "../components/formulariocontacto2";
 
 
@@ -35,11 +36,11 @@ export default function Home() {
     <MenuFlotanteBoton />
     
     {/*Area superior  */}
-    <div className="bannermain">
-      <Content01andMenuVacio texto1="" texto2="" texto2a=""/>
-
-      <FormularioContacto2/>
-    </div>
+    {/* <div className="bannermain"> */}
+      <Content01Main texto1="" texto2="" texto2a="" formulario_contacto={true}/>
+      {/* <Content01Main texto1="" texto2="" texto2a=""/> */}
+    
+    {/* </div> */}
 
     {/*Footer  */}
     {/* <Footer /> */}

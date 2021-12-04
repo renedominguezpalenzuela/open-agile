@@ -7,7 +7,7 @@ crashkurs_date,
 titulo
 }) {
 
-  // console.log(crashkurs_date);
+ 
 
 
 
