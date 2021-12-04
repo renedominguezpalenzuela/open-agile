@@ -8,7 +8,7 @@ import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
 
 import TextoBloque01 from "../components/textobloque01";
 import Image01 from "../components/crashkurse/image01";
-import Content01andMenuVacio from "../components/Content01andMenuVacio";
+// import Content01andMenuVacio from "../components/Content01andMenuVacio";
 import Tabla01 from "../components/crashkurse/tabla01";
 import MenuNavBar from "../components/MenuNavBar";
 
