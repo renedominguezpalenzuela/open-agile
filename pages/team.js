@@ -17,6 +17,8 @@ import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
 import TextoBloque01 from "../components/textobloque01";
 import Image01 from "../components/crashkurse/image01";
 import Content01Main from "../components/maincontent/Content01Main";
+import TeamCarrousel from "../components/TeamCarrousel";
+
 
 import Tabla01 from "../components/crashkurse/tabla01";
 
@@ -75,28 +77,6 @@ const  texto05= ["Wird Sinn maximiert, gilt das auch für den Arbeitsort, die Ar
 
 const titulo_main = "DAS TEAM";
 
-const subtitulo6="Andreas Eilers";
-const  texto06= ["Motto: “Nicht weil es schwer ist, wagen wir es nicht, sondern weil wir es nicht wagen, ist es schwer.” Lucius Annaeus Seneca",
-"Als Experte für agile Organisationsentwicklung und selbstorganisierten Netzwerkorganisationen hat Andreas ein großes Anliegen: Möglichst viele Menschen dabei zu unterstützen, nachhaltige Lösungen für eine stimmige und wertschätzende Zusammenarbeit zu finden.",
-"Um in dem Hinblick möglichst effizient vorzugehen, hat Andreas das Buch „Crashkurs Selbstorganisation in agilen Teams“ geschrieben, welches 2021 im Haufe-Verlag veröffentlicht wurde. Andreas liebt nicht nur als Pilot die Sicht aus der Vogelperspektive",
-"Als zertifizierter Agile Coach & Scrum Master gibt er wichtige Impulse von außen, immer mit der notwendigen Distanz und viel Empathie. In der Beratung und im Training greift Andreas auf die Erfahrung als Leiter eines agilen Entwicklungslabors zurück sowie auf das Fachwissen als Certified Financial Planner. Durch den Betriebswirt mit den Schwerpunkten Personal- und Finanzmanagement sind ihm auch organisationsstrategische Fragestellungen sehr vertraut."];
-
-const telefono1 = "Telefon: 0160 979 40004";
-const correo1 = "E-Mail: andreas.eilers@open-agile.de";
-const foto1 = "/team/andi_Internetseite.png"
-
-const subtitulo7="Alexander Stange";
-const  texto07= ["Motto: „Einfach machen!“", 
-"Als leidenschaftlicher Triathlet geht Alexander immer wieder an seine Belastungsgrenze. Das macht ihn zum Experten, wenn es darum geht mit Motivation die Komfortzone zu verlassen.",
-"Attraktive Ziele sind dabei entscheidet, die nötige Energie für den langen Weg zu mobilisieren. Diese Erfahrung nimmt Alexander in jeden zu begleitenden Veränderungsprozess mit.",
-"Um eine Transformation wirksam begleiten zu können, greift Alexander auf eine Vielzahl an Methoden und Tools zurück. Doch ist das Tool für ihn niemals die Lösung selbst. Sein Ziel ist stets einen messbaren und vor allen Dingen nachhaltigen Wandel zu ermöglichen. Dafür holt Alexander Menschen dort ab, wo sie stehen. Er eröffnet Teams genauso wie Individuen durch professionelle Impulse neue Lösungsräume und inspiriert sie mit positiven Gedanken Veränderungen mitzugehen.",
-"Dabei greift Alexander einerseits auf seine langjährigen Erfahrungen als Trainer & Berater zurück und anderseits nutzt er sein Know-how als zertifizierter Agile Coach & Scrum Master. Insbesondere in schwierigen Situationen besinnt sich Alexander immer wieder auf seine wichtigsten Werte: Mut, Transparenz und Humor. Für viele ist die individuelle Veränderung ein langer Weg mit vielen Meilensteinen. Dabei ist für Alexander viel Verständnis, Geduld und gegenseitige Rücksichtnahme entscheidend."];
-
-const telefono2 = "Telefon: 0171 361 6712";
-const correo2 = "E-Mail: alexander.stange@open-agile.de";
-const foto2 = "/team/alex_Internetseite.png"
-
-
 
 
 
@@ -135,13 +115,13 @@ const foto2 = "/team/alex_Internetseite.png"
 
     <TextoBloque01   titulo_main={titulo_main}   />
 
-
+{/* 
     <TextoBloque01   titulo={subtitulo6}  texto_parrafo_array={texto06} telefono={telefono1} correo={correo1} foto={foto1} />
 
      <TextoBloque01   titulo={subtitulo7}  texto_parrafo_array={texto07} telefono={telefono2} correo={correo2} foto={foto2}/>
+ */}
 
-
-  
+<TeamCarrousel  />
   
 
     {/*Footer  */}

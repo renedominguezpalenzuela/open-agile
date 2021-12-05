@@ -28,7 +28,8 @@ import Checkbox from "@mui/material/Checkbox";
 
   const styles = {
    ".MuiFormControlLabel-label": {
-    textAlign: 'justify'
+    textAlign: 'justify',
+    fontSize: '0.9rem'
    }
 };
 
@@ -48,14 +49,22 @@ const ancho_preguntas =(preguntas) => {
       ancho_maximo=unaPregunta.answer.length;
     }    
   });
+  
+  let otras_clase="  w75"
 
+// console.log(ancho_maximo);
+   if (ancho_maximo>=150) {
+     return 'col-10'+ otras_clase;
+   } else if (ancho_maximo>=70 && ancho_maximo<150) {
+     return 'col-8'+otras_clase;
 
-console.log(ancho_maximo);
-   if (ancho_maximo>70) {
-     return 'col-9';
+  } else if (ancho_maximo>=10 && ancho_maximo<70) {
+     return 'col-3'+otras_clase;
+
    } else  {
-     return 'col-3';
+     return 'col-1'+otras_clase;
    }
+    
 
 }
 
@@ -141,7 +150,7 @@ export default function Content01andMenuWithQuestions({
           </div>
 
           {/* Tema de la pregunta */}
-          <div className="row g-0  mt-2 ">
+          <div className="row g-0   ">
             {titulo != undefined && titulo != "" && (
               <div className="row  text-center mt-3  ">
                 <h3 className="font_second_line1  "> {titulo}</h3>
@@ -150,9 +159,9 @@ export default function Content01andMenuWithQuestions({
           </div>
 
           {/* Pregunta */}
-          <div className="row  g-0  mt-1 ">
+          <div className="row  g-0   ">
             {question != undefined && question != "" && (
-              <div className="row  text-center mt-1  ">
+              <div className="row  text-center   ">
                 <h6 className="font_second_line3  "> {question}</h6>
               </div>
             )}
@@ -160,7 +169,7 @@ export default function Content01andMenuWithQuestions({
     
           {/* Respuestas */}
          <div id="altcontainer" className="row   d-flex align-items-start justify-content-center">
-           <div className={ancho_preguntas(answers)}  >
+           <div className={ancho_preguntas(answers) }  >
 
 
 
@@ -197,7 +206,7 @@ export default function Content01andMenuWithQuestions({
       </div>
 
         {/* Tercera columna, boton agile check arriba derecha */}
-        <div className="col mt-4 text-center   ">
+        <div className="col mt-2 text-center   ">
           <a href="/quizstart">
              <button type="button" className="btn mt-1 btn-outline-primary font_boton  ">
               Agile Check

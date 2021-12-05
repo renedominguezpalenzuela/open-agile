@@ -150,7 +150,7 @@
     font-family: Montserrat-BoldItalic;
     color: #24325a;
   
-    font-size: 50px;
+    font-size: 2.8em;
     font-weight: 700;
   
     -webkit-font-smoothing: antialiased;
@@ -158,11 +158,7 @@
   }
 
   
-  @media (max-width: 767px) {
-    .font_second_line1 {
-        font-size: 1em;
-    }
-  }
+ 
 
   
   .font_second_line2 {
@@ -185,16 +181,11 @@
     font-family: Montserrat-Regular;
     color: #ffffff;
   
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: 300;
     /* text-transform: uppercase; */
   }
 
-  @media (max-width: 767px) {
-    .font_second_line3 {
-        font-size: 1em;
-    }
-  }
 
 
 
@@ -216,6 +207,19 @@
     }
   }
   
+
+  
+.font_card_title_carrusel_team {
+  font-family: Montserrat-BoldItalic;
+  color: #24325a;
+  font-style: italic; 
+  font-size: 2.4vh; 
+  font-weight: 100;
+   text-transform: uppercase; 
+   line-height: 90%;
+}
+
+
  
   
   
@@ -347,6 +351,18 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 32px;
+   
+  }
+
+  
+  .font_carrusel_team {
+    font-family: Montserrat-Regular;
+    color: #24325a; 
+    font-size: 0.7rem;
+
+    text-align: justify;
+    /* font-weight: 400; */
+    /* line-height: 32px; */
    
   }
 
@@ -649,6 +665,11 @@
   /* border-color: rgb(245, 4, 4) !important; */
    color: #e42078 !important; }
 
+
+
+  .color_magenta{
+    color: #e42078!important;
+  }
 
    
  
