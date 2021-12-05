@@ -36,12 +36,12 @@ export default function Footer() {
             </div>
 
             <div>
-              <a className="font_facit_text_very_small ms-3" href="tel:+49 (0) 421 22347567">
+              <a className="font_facit_text_very_small mylinkhoover ms-3" href="tel:+49 (0) 421 22347567">
                 +49 (0) 421 22347567
               </a>
             </div>
             <div>
-            <a className="font_facit_text_very_small ms-3" href="mailto:info@open-agile.de">
+            <a className="font_facit_text_very_small mylinkhoover ms-3" href="mailto:info@open-agile.de">
                 info@open-agile.de
             </a>
             </div>
@@ -53,16 +53,16 @@ export default function Footer() {
             </div>
             <div className="font_facit_text_very_small mt-3">
               <div>
-              <a className="color-font-dropdown" href="/leistungen/1">Organizationsentwicklung</a>
+              <a className="color-font-dropdown mylinkhoover" href="/leistungen/1">Organizationsentwicklung</a>
               </div>
               <div>
-              <a className="color-font-dropdown" href="/leistungen/2">Inhouse Training</a>
+              <a className="color-font-dropdown mylinkhoover" href="/leistungen/2">Inhouse Training</a>
               </div>
               <div>
-              <a className="color-font-dropdown" href="/leistungen/3">Coaching</a>
+              <a className="color-font-dropdown mylinkhoover" href="/leistungen/3">Coaching</a>
               </div>
                <div>
-              <a className="color-font-dropdown" href="/leistungen/4">Mitbestimmung Im Agilen Kontext </a>
+              <a className="color-font-dropdown mylinkhoover" href="/leistungen/4">Mitbestimmung Im Agilen Kontext </a>
               </div>              
 
             </div>
@@ -74,14 +74,14 @@ export default function Footer() {
             </div>
              <div className="font_facit_text_very_small mt-3">
             <div>
-              <a className="color-font-dropdown" href="/crashkurse/1">Crashkurs Zum Agile Coach </a>
+              <a className="color-font-dropdown mylinkhoover" href="/crashkurse/1">Crashkurs zum Agile Coach </a>
             </div>
              <div>
-              <a className="color-font-dropdown" href="/crashkurse/2">Crashkurs Zum Agile Facilitator </a>
+              <a className="color-font-dropdown mylinkhoover" href="/crashkurse/2">Crashkurs zum Agile Facilitator </a>
             </div>
 
              <div>
-              <a className="color-font-dropdown" href="/crashkurse/3">Crashkurs Zum Scrum Master </a>
+              <a className="color-font-dropdown mylinkhoover" href="/crashkurse/3">Crashkurs zum Scrum Master </a>
             </div>
             </div>
           </div>
@@ -92,11 +92,11 @@ export default function Footer() {
              
 
                <div>
-              <a className="color-font-dropdown" href="/team">Team </a>
+              <a className="color-font-dropdown mylinkhoover" href="/team">Team </a>
             </div>
 
                <div>
-              <a className="color-font-dropdown" href="/job">Jobs </a>
+              <a className="color-font-dropdown mylinkhoover" href="/job">Jobs </a>
             </div>
 
 

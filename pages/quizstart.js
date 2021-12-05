@@ -37,8 +37,8 @@ export default function Home() {
 
 
 
-const titulo1 = "Wie agil ist";
-const titulo2 = "Eure Zusammenarbeit?";
+const titulo1 = "Wie agil ist eure";
+const titulo2 = "Zusammenarbeit?";
 const titulo2a = "";
 
 const titulo3="Praktikant (m/w/d) Social Media & Online-Kommunikation ";

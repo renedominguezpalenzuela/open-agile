@@ -1,10 +1,10 @@
 //----------------------------------------------------------------------------------------------------------
 //            Area superior principal:
 //----------------------------------------------------------------------------------------------------------
-import Link from 'next/link';
-import {useRecoilState} from 'recoil';
-import { useRouter } from 'next/router'
-import {respuestasState} from './states/state';
+import Link from "next/link";
+import { useRecoilState } from "recoil";
+import { useRouter } from "next/router";
+import { respuestasState } from "./states/state";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -12,42 +12,69 @@ import TextoBloque01 from "./textobloque01";
 import MenuNavBar from "./MenuNavBar";
 import Respuesta from "./respuesta";
 
-
 import { servidor_url } from "../config";
 
+import * as React from "react";
 
-import * as React from 'react';
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
-import Checkbox from '@mui/material/Checkbox';
-
-
-function replaceItemAtIndex(arr, index, newValue)   { 
+import Radio from "@mui/material/Radio";
+import RadioGroup from "@mui/material/RadioGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import FormControl from "@mui/material/FormControl";
+import FormLabel from "@mui/material/FormLabel";
+import Checkbox from "@mui/material/Checkbox";
 
 
-    return [...arr.slice(0, index), newValue, ...arr.slice(index + 1)];
+
+
+  const styles = {
+   ".MuiFormControlLabel-label": {
+    textAlign: 'justify'
+   }
+};
+
+
+
+function replaceItemAtIndex(arr, index, newValue) {
+  return [...arr.slice(0, index), newValue, ...arr.slice(index + 1)];
 }
 
 //Al contar los resultados solo contar la cantidad de puntos posibles
-  
+const ancho_preguntas =(preguntas) => {
 
-export default function Content01andMenuWithQuestions({id, question, answers, titulo}) {
+  let ancho_maximo =0;
+  preguntas.forEach(unaPregunta => {
+
+    if (unaPregunta.answer.length>ancho_maximo) {
+      ancho_maximo=unaPregunta.answer.length;
+    }    
+  });
 
 
+console.log(ancho_maximo);
+   if (ancho_maximo>70) {
+     return 'col-9';
+   } else  {
+     return 'col-3';
+   }
 
-const cambio_respuesta = (event, id) => {
+}
+
+
+export default function Content01andMenuWithQuestions({
+  id,
+  question,
+  answers,
+  titulo,
+}) {
+  const cambio_respuesta = (event, id) => {
     let respuesta_usuario = event.target.value;
-    const newList = replaceItemAtIndex(respuestas, id, respuesta_usuario);     
+    const newList = replaceItemAtIndex(respuestas, id, respuesta_usuario);
     setRespuestas(newList);
- };
+  };
 
+  const [respuestas, setRespuestas] = useRecoilState(respuestasState);
 
- const [respuestas, setRespuestas] = useRecoilState(respuestasState);
-
- const [checked1, setChecked1] = React.useState(false);
+  const [checked1, setChecked1] = React.useState(false);
   const handleChange1 = (event) => {
     setChecked1(event.target.checked);
     setChecked2(false);
@@ -58,7 +85,7 @@ const cambio_respuesta = (event, id) => {
 
   const [checked2, setChecked2] = React.useState(false);
   const handleChange2 = (event) => {
-    setChecked1(false);    
+    setChecked1(false);
     setChecked2(event.target.checked);
     setChecked3(false);
     setChecked4(false);
@@ -83,11 +110,9 @@ const cambio_respuesta = (event, id) => {
     cambio_respuesta(event, id);
   };
 
+  const router = useRouter();
 
- const router = useRouter();
-
-
-//inicializacion
+  //inicializacion
   React.useEffect(() => {
     setChecked1(false);
     setChecked2(false);
@@ -96,101 +121,92 @@ const cambio_respuesta = (event, id) => {
   }, [router.asPath]);
 
   return (
-<>
+    <>
+     {/* Fila root de todos los elementos */}
+      <div id="row03" className="row  menu_superior mt-2 g-0  ">
 
-
-
-
-  <div id="row03" className="row  menu_superior mt-2 g-0  ">
-
-    <div className="col ms-3  text-center   ">
-      <a className="navbar-brand " href="/">
-     
-        <img className="   " src= {`${servidor_url}/img/logo/5.svg`} />
-      </a>
-    </div>
-
-
-    <div className=" col mt-3 text-center   ">
-      <div className="row g-0 d-none d-lg-block ">
-        <MenuNavBar/>
-      </div>
-
-      <div className="row g-0  mt-2 ">
-      {titulo!=undefined && titulo!="" &&
-          <div className="row  text-center mt-3  ">
-          <h3 className="font_second_line1  "> {titulo}</h3>
-          </div>
-      } 
-
-   
-      
-        
-       
-      </div>
-
-
-        <div className="row g-0  mt-1 ">
-
-
-      
-
-        {question!=undefined && question!="" &&
-
-       
-            <div className="row  text-center mt-1  ">
-                 <h6 className="font_second_line3  "> {question}</h6>
-            </div>
-        } 
-
-    
+        {/* Columna 1 Logo superior */}
+        <div className="col ms-3  text-center   ">
+          <a className="navbar-brand " href="/">
+            <img className="   " src={`${servidor_url}/img/logo/5.svg`} />
+          </a>
         </div>
 
- <div id="altcontainer" className="row notranslate g-0  mt-2 ms-5 ">
-    <FormControlLabel className="p-1"
-      control={<Checkbox checked={checked1} value="1" onChange={handleChange1} />}
-      label={answers[0].answer}
-    />
+        {/* Columna2 central */}
+        <div className=" col mt-3 text-center   ">
 
-    <FormControlLabel className="p-1"
-      control={<Checkbox checked={checked2} value="2" onChange={handleChange2} />}
-      label={answers[1].answer}
-    />
+          {/* navbar */}
+          <div className="row g-0 d-none d-lg-block ">
+            <MenuNavBar />
+          </div>
 
-    <FormControlLabel className="p-1"
-      control={<Checkbox checked={checked3} value="3" onChange={handleChange3} />}
-      label={answers[2].answer}
-    />
+          {/* Tema de la pregunta */}
+          <div className="row g-0  mt-2 ">
+            {titulo != undefined && titulo != "" && (
+              <div className="row  text-center mt-3  ">
+                <h3 className="font_second_line1  "> {titulo}</h3>
+              </div>
+            )}
+          </div>
 
-    <FormControlLabel className="p-1"
-      control={<Checkbox checked={checked4} value="4" onChange={handleChange4} />}
-      label={answers[3].answer}
-    />
-
-    </div>
-
-
-
-       
-    </div>
-
-
-
-    <div className="col mt-4 text-center   ">
-       <a href="/quizstart"> 
-        <button type="button" className="btn mt-1 btn-outline-primary font_boton  ">Agile Check</button>
-       </a>
-    </div>
+          {/* Pregunta */}
+          <div className="row  g-0  mt-1 ">
+            {question != undefined && question != "" && (
+              <div className="row  text-center mt-1  ">
+                <h6 className="font_second_line3  "> {question}</h6>
+              </div>
+            )}
+          </div>
+    
+          {/* Respuestas */}
+         <div id="altcontainer" className="row   d-flex align-items-start justify-content-center">
+           <div className={ancho_preguntas(answers)}  >
 
 
 
+           <div className="row   d-flex justify-content-start">
+          
+            <FormControlLabel className="p-1" sx={styles} control={
+                <Checkbox checked={checked1} value="1" color="primary"  onChange={handleChange1} />
+              } label={answers[0].answer}
+            />
+            </div>
+           <div className="row   d-flex justify-content-start">
+            <FormControlLabel className="p-1" sx={styles} control={
+                <Checkbox checked={checked2} value="2" color="primary"  onChange={handleChange2} />
+              } label={answers[1].answer}
+            />
+            </div>
+            <div className="row  d-flex justify-content-start">
+            <FormControlLabel className="p-1" sx={styles} control={
+                <Checkbox checked={checked3} value="3" color="primary"  onChange={handleChange3} />
+              } label={answers[2].answer}
+            />
+            </div>
+            <div className="row  d-flex justify-content-staendrt">
+            <FormControlLabel className="p-1" sx={styles} control={
+                <Checkbox checked={checked4} value="4" color="primary" onChange={handleChange4} />
+              } label={answers[3].answer}
+            />
+            </div>
 
-  </div>
+            </div>
+            
+          </div>
+
+      </div>
+
+        {/* Tercera columna, boton agile check arriba derecha */}
+        <div className="col mt-4 text-center   ">
+          <a href="/quizstart">
+             <button type="button" className="btn mt-1 btn-outline-primary font_boton  ">
+              Agile Check
+            </button>
+          </a>
+        </div>
 
 
-  
-
-
-            </>
+      </div>
+    </>
   );
 }

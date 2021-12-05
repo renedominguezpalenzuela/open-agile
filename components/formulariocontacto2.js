@@ -1,6 +1,12 @@
+import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 // import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Button from "@mui/material/Button";
+import FormControl from '@mui/material/FormControl';
+import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from '@mui/material/FormControlLabel';
+
+
 // import { withStyles } from '@material-ui/core/styles';
 // import theme from '../src/theme';
 
@@ -25,6 +31,16 @@ import Button from "@mui/material/Button";
 // };
 
 export default function FormularioContacto2() {
+
+   const [checked1, setChecked1] = useState(false);
+
+
+   const handleChange1 = (event) => {
+    setChecked1(event.target.checked);
+    
+  };
+
+
   const styles2 = (theme) => ({
     multilineColor: {
       color: "red",
@@ -46,7 +62,17 @@ export default function FormularioContacto2() {
     ".MuiInput-root:after": {
       borderBottom: "1px solid #ffffff",
     },
+
+  
   };
+
+  const styles3 = {
+   ".MuiFormControlLabel-label": {
+     fontSize: "0.9rem",
+     color:"#e42078"
+   }
+};
+
 
   return (
     <>
@@ -70,15 +96,27 @@ export default function FormularioContacto2() {
                   <TextField id="standard-basic" label="E-Mail eingeben" variant="standard" sx={styles}/>
               </div>
             </div>
-
+{/* 
             <div className="row  d-flex align-items-center   justify-content-center mt-4 ">
               <div className="inputgrupo   d-flex align-items-center   justify-content-center ">
-                <input className="me-2" type="checkbox" value="" />
+                <input className="me-2 custom-checkbox" type="checkbox" value="" />
                 <div className="font_texto_formulario color_magenta">
                   Ja, ich bin mit dem AGBs des Newsletters einverstanden
                 </div>
               </div>
+            </div> */}
+
+          <div className="row  d-flex align-items-center   justify-content-center mt-4 ">
+            <div className="inputgrupo   d-flex align-items-center   justify-content-center ">
+
+              <div className="row  d-flex align-items-center   justify-content-center mt-4 ">
+                <FormControlLabel  sx={styles3} className="p-1  color_magenta" control={
+                       <Checkbox checked={checked1} value="1" color="myColor" onChange={handleChange1} />
+                   } label="Ja, ich bin mit dem AGBs des Newsletters einverstanden" />
+              </div>
             </div>
+          </div>
+
           </div>
           <div className="row g-0  d-flex align-items-center   justify-content-center mt-1 ">
             <div className="group w-25 mt-4 mb-4 ">

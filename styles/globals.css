@@ -641,3 +641,13 @@ ul.no-bullets {
   width: 30vw;
   height: 5vw;
 }
+
+
+.btn:hover {
+  color: #24325a !important;
+   
+}
+
+.mylinkhoover:hover {
+  color: #e42078 !important;
+}

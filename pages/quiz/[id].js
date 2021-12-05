@@ -20,6 +20,9 @@ import Card01Lista from "../../components/Card01Lista";
 import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
 
 
+
+
+
 // import MenuSuperior from "../components/MenuSuperior";
 
 
@@ -75,7 +78,7 @@ const {titulo, number,question, answers, correct_answer, next_link,
       <MenuFlotanteBoton />
     
     {/*Area superior  */}
-      <div className="bannermain-quiz ">
+      <div className="bannermain-quiz  ">
         <Content01andMenuWithQuestions id={id} question={question} answers={answers} titulo={titulo} />
 
           <div className="row  text-center mt-5 mb-4 d-flex  justify-content-center   ">
