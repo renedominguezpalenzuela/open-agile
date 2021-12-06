@@ -85,9 +85,9 @@ export default function TeamCarrousel ( ) {
                     </div> */}
 
 
-                    <div  className="d-none d-xl-block  ">
+                    {/* <div  className="d-none d-xl-block  "> */}
                         <TeamCard02 imagen={unDato.image} titulo={unDato.title} texto={unDato.text} motto={unDato.motto} motto_author={unDato.motto_author} telefono={unDato.telefono} correo={unDato.correo}/>
-                    </div>
+                    {/* </div> */}
 
                 </div>
 
