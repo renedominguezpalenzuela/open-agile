@@ -10,7 +10,7 @@ import Footer from "../../components/Footer";
 import Content01Main from "../../components/maincontent/Content01Main";
 
 import TextoBloque01 from "../../components/textobloque01";
-import TextoSimple from "../../components/TextoSimple";
+import TextoSimple from "../../components/textosimple";
 
 
 
