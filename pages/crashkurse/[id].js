@@ -52,7 +52,7 @@ const {titulo1, titulo2,titulo2a, titulo3, imagen01, texto_BESCHREIBUNG,
 
 
 
-
+// console.log("bbb"+titulo2a)
 
  
 
@@ -111,7 +111,8 @@ const {titulo1, titulo2,titulo2a, titulo3, imagen01, texto_BESCHREIBUNG,
     <Tabla03 
      crashkurs_date_title= {crashkurs_date_title}
      crashkurs_date= {crashkurs_date}
-     titulo ={titulo2 +" " +titulo2a}    
+     titulo ={titulo2 +" " +titulo2a} 
+     titulo2a = {titulo2a}   
     />
     
 

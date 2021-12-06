@@ -4,7 +4,7 @@
 
 
 let ancho = 540;
-let longitud_linea = 14;
+let longitud_linea = 24;
 
 
 
@@ -29,17 +29,17 @@ export default function Card01({
 
       <img className="card-img-top corte_cards img-rounded  " src={`img/${imagen}`} alt={texto_alt}/>
 
-      <div className="card-body text-center w-100    ">
+      <div className="card-body text-center    ">
      
 
         { titulo!=undefined && titulo!="" &&
            <p className="card-text font_card_title  ">{procesarTextoLargo(titulo)}</p>
         }
         { titulo2!=undefined && titulo2!="" &&
-          <div className="   d-flex align-items-center justify-content-center   ">
+           <div className="row   d-flex align-items-center justify-content-center   ">
            
-           <p className="card-text font_card_title2 m-1">{procesarTextoLargo(titulo2)}</p>
-          </div>
+           <p className="text-center font_card_title2 m-1">{procesarTextoLargo(titulo2)}</p>
+             </div> 
         }
       </div>
 
@@ -70,9 +70,9 @@ export default function Card01({
 
 
 function procesarTextoLargo(texto) {
+ return <> {texto}</>;
 
-
-  console.log(texto.substring(longitud_linea, longitud_linea));
+  // console.log(texto.substring(longitud_linea, longitud_linea));
 
   let texto_devolver = "";
   let separador=" ";

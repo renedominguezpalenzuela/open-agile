@@ -28,7 +28,7 @@ export default function Card04({
          {/* <a href={`/${link}/${id}`} > */}
       <div className="card-footer text-center pb-4 pt-4  ">
           <a href="/contact" >
-        <button type="button" className="btn    btn-card font-btn-card   ">Jetzt lesen...</button>
+        <button type="button" className="btn    btn-card font-btn-card   ">Jetzt anmelden...</button>
       </a>
       </div>
     </div>

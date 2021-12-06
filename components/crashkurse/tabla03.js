@@ -4,10 +4,11 @@ export default function Tabla03({
  
 crashkurs_date_title,
 crashkurs_date,
-titulo
+titulo,
+titulo2a
 }) {
 
- 
+//  console.log("aaa"+titulo2a);
 
 
 
@@ -17,8 +18,8 @@ titulo
 
   {/* Titulo */}
   <div className="row mt-2 mb-4   ">
-    <div className="titulo1-tabla3-01 text-center ">CRASHKURS TERMINE ZUM</div>
-    <div className="titulo1-tabla3-02 text-center ">{titulo}</div>
+    <div className="titulo1-tabla3-01 text-center ">WERDE JETZT {titulo2a}</div>
+    <div className="titulo1-tabla3-02 text-center ">UND MELDE DICH ZUM KURS AN</div>
   </div>
 
   {/* Cards */}
