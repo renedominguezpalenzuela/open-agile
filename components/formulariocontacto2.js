@@ -112,7 +112,8 @@ export default function FormularioContacto2() {
               <div className="row  d-flex align-items-center   justify-content-center mt-4 ">
                 <FormControlLabel  sx={styles3} className="p-1  color_magenta" control={
                        <Checkbox checked={checked1} value="1" color="myColor" onChange={handleChange1} />
-                   } label="Ja, ich bin mit dem AGBs des Newsletters einverstanden" />
+                   } label="Ja, ich bin mit den AGBs des Newsletters einverstanden" />
+                            
               </div>
             </div>
           </div>

@@ -17,8 +17,10 @@ export default function MenuNavBar() {
 
 
       <li className="nav-item dropdown2  ">
+      <a href="/crashkurse/main">
         <a className="nav-link">
               CRASHKURSE
+        </a>
         </a>
 
         <ul className="dropdown-content text-start color-dropdown animate__animated animate__fadeInUp no-bullets">

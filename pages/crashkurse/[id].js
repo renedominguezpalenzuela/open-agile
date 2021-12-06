@@ -79,7 +79,7 @@ const {titulo1, titulo2,titulo2a, titulo3, imagen01, texto_BESCHREIBUNG,
     </div>
 
     {/* Texto Crashkurse */}
-    <Texto01 />
+    {/* <Texto01 /> */}
 
 
     {/* Tabla 1: imagenes alternas */}
@@ -117,7 +117,7 @@ const {titulo1, titulo2,titulo2a, titulo3, imagen01, texto_BESCHREIBUNG,
 
 
     {/* Texto Crashkurse */}
-    <Texto01/>
+    {/* <Texto01/> */}
  
   
 
