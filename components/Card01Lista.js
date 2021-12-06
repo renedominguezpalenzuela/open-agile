@@ -1,6 +1,6 @@
 import Card01 from "./Card01";
 
-export default function Card01Lista({ lista_cards }) {
+export default function Card01Lista({ lista_cards, titulo_magenta }) {
 
   return (
 <>
@@ -9,7 +9,16 @@ export default function Card01Lista({ lista_cards }) {
 
 
    {lista_cards.map (unCard=>{
-        return  <Card01 key={unCard.id} id={unCard.id} imagen={unCard.image} titulo={unCard.title} titulo2={unCard.title2} texto={unCard.text} link={unCard.link} />
+        return  (
+           <>
+           
+           {titulo_magenta!=undefined && titulo_magenta &&
+           <Card01 key={unCard.id} id={unCard.id} imagen={unCard.image} titulo2={unCard.title}  texto={unCard.text} link={unCard.link} />}
+
+           { (titulo_magenta===undefined || !titulo_magenta) &&
+           <Card01 key={unCard.id} id={unCard.id} imagen={unCard.image} titulo={unCard.title} titulo2={unCard.title2} texto={unCard.text} link={unCard.link} />}
+        </>
+        ) 
         }   
    )}
 

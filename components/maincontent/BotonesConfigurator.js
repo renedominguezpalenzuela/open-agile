@@ -37,43 +37,20 @@ export default function BotonesConfigurator({botones_configurador}){
 
    
     botones.map ((unBoton, index)=>{
-                                        return <>
+                                        return (
                                                 <div key={index} className={clase_botones(longitud_arreglo)}>
                                                 
-                                                  <Link href={unBoton.link}>                            
+                                                  <Link   href={unBoton.link}>                            
                                                     <button type="button" className="btn w-100  btn-configurator-page font_boton_main redondeado-boton ">{unBoton.texto}</button>
                                                   </Link>                            
                                                 </div>
-                                              </>
+                                        )
                                         }   
                                   )
 }
 
 
-              {/* {botones.length>2?
-                                botones.map ((unBoton, index)=>{
-                                        return <>
-                                                <div key={index} className="col-6  me-4 ms-4  pb-2 ">
-                                                
-                                                  <Link href={unBoton.link}>                            
-                                                    <button type="button" className="btn w-100  btn-configurator-page font_boton_main redondeado-boton ">{unBoton.texto}</button>
-                                                  </Link>                            
-                                                </div>
-                                              </>
-                                        }   
-                                  )
-                                :botones.map ((unBoton, index)=>{
-                                        return <>
-                                                <div key={index+100} className="col   me-4 ms-4   ">
-                                                  <Link href={unBoton.link}>                            
-                                                    <button type="button" className="btn w-100  btn-configurator-page font_boton_main redondeado-boton ">{unBoton.texto}</button>
-                                                  </Link> 
-                                                </div>
-                                              </>
-                                        }   
-                                  )
-              } */}
-
+            
            
          
        

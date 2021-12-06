@@ -1,5 +1,13 @@
 // import styles from "../styles/Home.module.css";
 
+
+
+
+let ancho = 540;
+let longitud_linea = 14;
+
+
+
 export default function Card01({
   id,
   titulo,
@@ -23,12 +31,14 @@ export default function Card01({
 
       <div className="card-body text-center w-100    ">
      
-        <p className="card-text font_card_title  ">{titulo}</p>
 
+        { titulo!=undefined && titulo!="" &&
+           <p className="card-text font_card_title  ">{procesarTextoLargo(titulo)}</p>
+        }
         { titulo2!=undefined && titulo2!="" &&
           <div className="   d-flex align-items-center justify-content-center   ">
            
-           <p className="card-text font_card_title2 m-1">{titulo2}</p>
+           <p className="card-text font_card_title2 m-1">{procesarTextoLargo(titulo2)}</p>
           </div>
         }
       </div>
@@ -55,4 +65,33 @@ export default function Card01({
 
 </>
   );
+}
+
+
+
+function procesarTextoLargo(texto) {
+
+
+  console.log(texto.substring(longitud_linea, longitud_linea));
+
+  let texto_devolver = "";
+  let separador=" ";
+
+  if (texto.substring(longitud_linea, longitud_linea+1) ===" ") {
+    separador="-"
+  }
+
+  //TODO: si coincide el guion con un espaciom no poner
+
+
+  if (texto.length > longitud_linea) {
+    return (
+       <>
+        <p>{texto.substring(0, longitud_linea)}{separador}</p>
+        {texto.substring(longitud_linea)}
+       </>
+    );
+  } else {
+      return <> {texto}</>
+  }
 }

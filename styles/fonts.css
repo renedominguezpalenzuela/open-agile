@@ -192,12 +192,12 @@
   /* ----------------- Cards  -----------------------------*/
 
 .font_card_title {
-    font-family: Montserrat-BoldItalic;
+    font-family: Montserrat-Bold;
     color: #24325a;
     /* font-style: italic;  */
     /* font-size: 3.4vh;  */
-    font-size: 1.5rem;
-    font-weight: 100;
+     font-size: 1.5rem;
+     font-weight: 100;
      text-transform: uppercase; 
      line-height: 90%;
   }
@@ -489,11 +489,11 @@
   }
   
   .font_footer_title {
-    font-family: Montserrat-Regular;
-    color: #e42078;
+    font-family: Montserrat-Bold;
+    color: #ffffff;
     text-align: left;
     font-size: 15px;
-    text-decoration-line: underline;
+ 
   
     font-weight: 200;
   

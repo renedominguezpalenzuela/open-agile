@@ -14,12 +14,12 @@ export default function Footer() {
         </div>
 
         <div id="rowfoot05" className="row  color_background g-5 ps-5 pe-5 pb-5 ">
-          <div className="col ">
-            <div className="">
+          <div className="col  d-flex  justify-content-center">
+       
                 <a href="\">   
               <img className="img-fluid logo-img-footer2" src={`${servidor_url}/img/logo/5.svg`}              />
               </a>
-            </div>
+        
             {/* <div className="font_facit_text_very_small mt-1">
               Die Open Agile hilft Unternehmen dabei, ihre MitarbeiterInnen zu
               entwickeln und Kulturen zu transformieren. Mit über 40 Jahren
