@@ -12,6 +12,7 @@ export default function TeamCard02({
   motto_author,
   telefono,
   correo,
+  link
 }) {
   return (
     <>
@@ -23,11 +24,14 @@ export default function TeamCard02({
             <div className="col-11 ">
               <div className="card  shadow bg-body m-5 p-5 dimension_card_carrusel_team  ">
                 <div className="row ">
+                <a href={`${link}/${id}`} >
                    <img src={`img/${imagen}`} alt={"${texto_alt}"} className=" img_carrusel " alt="..." />
+                </a>   
                 </div>
 
                 {/* Texto del Card */}
                 <span className="  contenido_card_team  ">
+                  <a href={`${link}/${id}`} >
                   <div className=" card-title text-center font_card_title_carrusel_team ">
                     {procesarTextoLargo(titulo)}
                   </div>
@@ -40,8 +44,21 @@ export default function TeamCard02({
                      <div className="row font_carrusel_team    "><span className="text-center">{motto}</span></div>
                    <div className="row font_carrusel_team    "><span className="text-center">{motto_author}</span></div>
                    
-                    <div className="row font_carrusel_team color_magenta  mt-2  "><span className="text-center">{telefono}</span></div>
-                     <div className="row font_carrusel_team  color_magenta  "><span className="text-center">{correo}</span></div>
+                   <a href={`tel:${telefono}`}>
+                    <div className="row font_carrusel_team color_magenta  mt-2  ">
+                     
+                    <span className="text-center">{`Telefon:${telefono}`}</span>
+                    
+                    </div>
+                    </a>
+                    <a href={`mailto:${correo}`}>
+                     <div className="row font_carrusel_team  color_magenta  ">
+                     
+                     <span className="text-center">{`E-Mail:${correo}`}</span>
+                     
+                     </div>
+                     </a>
+                    </a> 
                   {/* </div> */}
 
                  

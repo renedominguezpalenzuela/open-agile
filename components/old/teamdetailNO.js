@@ -101,24 +101,16 @@ const titulo_main = "DAS TEAM";
       <Content01Main texto1={titulo1} texto2={titulo2} texto2a={titulo2a}/>
     </div>
 
-    <TextoBloque01   titulo={subtitulo1}  texto_parrafo_array={texto01} />
+    
 
-    <TextoBloque01   titulo={subtitulo2}  texto_parrafo_array={texto02} />
+   <TextoBloque01   titulo={subtitulo6}  texto_parrafo_array={texto06} telefono={telefono1} correo={correo1} foto={foto1} 
+{/* 
+    <TextoBloque01   titulo={subtitulo6}  texto_parrafo_array={texto06} telefono={telefono1} correo={correo1} foto={foto1} />
 
-    <TextoBloque01   titulo={subtitulo3}  texto_parrafo_array={texto03} />
-
-    <TextoBloque01   titulo={subtitulo4}  texto_parrafo_array={texto04} />
-
-    <TextoBloque01   titulo={subtitulo5}  texto_parrafo_array={texto05} />
-
+     <TextoBloque01   titulo={subtitulo7}  texto_parrafo_array={texto07} telefono={telefono2} correo={correo2} foto={foto2}/>
+ */}
 
 
-    <TextoBloque01   titulo_main={titulo_main}   />
-
-   
-
-
-<TeamCarrousel  />
   
 
     {/*Footer  */}

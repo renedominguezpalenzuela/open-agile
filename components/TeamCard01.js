@@ -1,6 +1,9 @@
 // import styles from "../styles/Home.module.css";
+import { servidor_url } from "../config";
+import Link from "next/link";
+import MenuFlotanteBoton from "./MenuFlotanteBoton";
 
-export default function Card01({
+export default function TeamCard01({
   id,
   titulo,
   titulo2,
@@ -10,6 +13,9 @@ export default function Card01({
   texto_alt,
   link
 }) {
+
+
+  
 
 
  
@@ -35,14 +41,8 @@ export default function Card01({
 
      
    <div className="card-footer text-center pb-4  ">
-      
-       {/* <a href={`/${link}`} className="btn  boton_card rounded-pill w-75 h-100" role="button" aria-pressed="true"> */}
-       
-          {/* <div className="font_card_boton  ps-2 pe-2 pt-2  pb-2 ms-2 me-2">Jetzt lesen...</div> */}
-       {/* </a> */}
-
-
-     <a href={`/${link}/${id}`} >
+ 
+     <a href={`${link}/${id}`} >
         <button type="button" className="btn  ms-2 me-2 w-75 h-100 btn-card font-btn-card rounded-pill  ">Jetzt lesen...</button>
      </a>
     </div>

@@ -5,10 +5,14 @@ export default function TextoBloque01({
   texto_parrafo_array,
   texto_parrafo_array_white,
   texto_plequitas_array,
+  texto,
   telefono,
   correo,
-  foto
+  foto,
+  foto2 //para los que no estan en la raiz
 }) {
+
+  
   return (
 <>
 
@@ -26,6 +30,15 @@ export default function TextoBloque01({
   </div>
  }
 
+  <div className="row  text-center mb-4 d-flex  justify-content-center ">
+{foto2!=undefined && foto!="" &&
+    <img className="img-fluid  foto-team"  src={foto2} />   
+ }
+
+
+ </div>
+
+ 
   <div className="row  text-center mb-4 d-flex  justify-content-center ">
 {foto!=undefined && foto!="" &&
     <img className="img-fluid  foto-team"  src={`img/${foto}`} />   
@@ -108,15 +121,29 @@ export default function TextoBloque01({
    }
 
 
+
+
+<div className="row  text-center  ">
+{texto!=undefined && texto!="" &&
+    <h3 className="font_small_letter  "> {texto}</h3>     
+ }
+ </div>
+
+
+
 {/* correo y relfono */}
 <div className="row  text-center mt-5 mb-4 ">
 {telefono!=undefined && telefono!="" &&
+  <a href={`tel:${telefono}`}>
     <h3 className="font_small_letter  "> {telefono}</h3>     
+  </a>  
  }
 
 
 {correo!=undefined && correo!="" &&
+ <a href={`mailto:${correo}`}>
     <h3 className="font_small_letter  "> {correo}</h3>     
+  </a>  
 } 
 
 
