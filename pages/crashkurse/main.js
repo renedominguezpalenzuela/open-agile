@@ -45,7 +45,7 @@ export default function Home({}) {
 const router = useRouter()
 const {id}  = router.query;
 
-const titulo1="Crashkurse";F
+const titulo1="Crashkurse";
 
 
 
