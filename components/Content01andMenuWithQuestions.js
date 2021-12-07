@@ -136,7 +136,7 @@ export default function Content01andMenuWithQuestions({
             <MenuNavBar />
           </div>
 
-          <div className="row    w-100   my_quiz ">
+          <div className="row  h-100  w-100 border  my_quiz d-flex align-items-center justify-content-center ">
             {/* Tema de la pregunta */}
             <div className="row g-0  my_quiz_titulo  ">
               {titulo != undefined && titulo != "" && (

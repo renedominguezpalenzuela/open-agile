@@ -510,12 +510,10 @@ ul.no-bullets {
 
 .my_quiz {
   /* max-width: 330px; */
-  max-width: 200vw;
+  /* max-width: 200vw; */
  height: 76vh!important;
   /* display: flex; */
-  -webkit-border-radius: 30px; 
-  -moz-border-radius: 30px;
-  border-radius: 30px;
+ 
   z-index: 3;
 } 
 
