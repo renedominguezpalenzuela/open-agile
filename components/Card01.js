@@ -3,6 +3,9 @@
 let ancho = 540;
 let longitud_linea = 24;
 
+
+import { servidor_url } from "../config";
+
 export default function Card01({
   id,
   titulo,
@@ -17,7 +20,7 @@ export default function Card01({
     <>
       <div className="col p-4 " key={id}>
         <div className="card card-rounded  w-100   my_card ">
-          <img className="card-img-top corte_cards img-rounded  " src={`img/${imagen}`} alt={texto_alt}   />
+          <img className="card-img-top corte_cards img-rounded  " src={`${servidor_url}/img/${imagen}`} alt={texto_alt}   />
 
           <div className="card-body text-center    ">
             {titulo != undefined && titulo != "" && (
@@ -51,7 +54,7 @@ export default function Card01({
 function procesarTextoLargo(texto) {
   return <> {texto}</>;
 
-  // console.log(texto.substring(longitud_linea, longitud_linea));
+  
 
   let texto_devolver = "";
   let separador = " ";

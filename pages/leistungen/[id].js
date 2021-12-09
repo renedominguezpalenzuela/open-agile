@@ -76,7 +76,7 @@ const { titulo1, titulo2,titulo2a, titulo3, titulo4, texto01,texto02 , texto03 }
     
     {/*Area superior  */}
     <div className="bannermain">
-      <Content01Main texto1={titulo1} texto2={titulo2} texto2a={titulo2a}/>
+      <Content01Main texto1={titulo2+" "+titulo2a } texto_parrafo_blanco={texto01}  />
     </div>
 
     <TextoBloque01   titulo={titulo3}  texto_parrafo_array={texto01} />

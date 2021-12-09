@@ -25,16 +25,18 @@ export default function Content01Main({
   texto2a,
   formulario_contacto,
   botones_configurador,
-  iconos
+  iconos,
+  texto_parrafo_blanco,
+  firma
 }) {
 
 
-
+ 
  
   return (
     <>
-      <div className="bannermain">
-      <div id="rowtop" className="row  menu_superior mt-2 g-0  ">
+      <div className="bannermain ">
+      <div id="rowtop" className="row h-100  menu_superior mt-2 g-0  ">
 
         {/* Columna izquierda */}
         <div className="col ms-3  text-center   ">
@@ -51,8 +53,10 @@ export default function Content01Main({
 
 
 
+
+
             {/* Contenido Principal */}
-            {contenido_principal(texto1, texto2, texto2a, formulario_contacto, botones_configurador, iconos)}
+            {contenido_principal(texto1, texto2, texto2a, formulario_contacto, botones_configurador, iconos, texto_parrafo_blanco, firma)}
 
 
          
@@ -74,9 +78,11 @@ export default function Content01Main({
 }
 
 
-const contenido_principal = ( texto1,  texto2,  texto2a, formulario_contacto, botones_configurador, iconos)=>{
+const contenido_principal = ( texto1,  texto2,  texto2a, formulario_contacto, botones_configurador, iconos, texto_parrafo_blanco, firma)=>{
 
  
+
+
 let id = -1;
 
 if (botones_configurador != undefined) {
@@ -96,7 +102,7 @@ return (
     {/* Texto Principal */}
     {((texto1 != undefined && texto1 != "") || (texto2 != undefined && texto2 != "")) && (
         <>
-          <div className="row g-0  ms-4 mt-3 ">
+          <div className="row g-0  ms-4  ">
             <Content01TextSinIcons texto1={texto1} texto2={texto2} texto2a={texto2a} />
           </div>
         </>
@@ -109,6 +115,42 @@ return (
         )
       } 
 
+
+       {(texto_parrafo_blanco != undefined && texto_parrafo_blanco.length>0 )  && (
+        <>
+        
+           <div className="row font_smaller_letter_white ms-3 me-3 justificar">
+                {texto_parrafo_blanco.map ((unaLinea, index)=> 
+                    <p  key={index}>
+                    {unaLinea}
+                    </p>                 
+                )}
+                </div>
+           
+          
+        </>
+      )}
+
+
+       {(firma != undefined && firma.length>0 )  && (
+        <>
+         
+        
+           <div className="row font_smaller_letter_white ms-3 me-3 justificar">
+                {firma.map ((unaLinea, index)=> (
+                   
+                    <div>{unaLinea}</div>
+                )
+                    
+                )}
+                </div>
+           
+          
+        </>
+      )}
+
+
+
       
 
     {/*Formulario de contacto  */}
@@ -120,17 +162,20 @@ return (
 
        {
         botones_configurador != undefined && botones_configurador && id_botones_configurador!=undefined &&(
-
+            
+  
           id_botones_configurador==1?
-           (<div>
+           (<div className="mt-5">
           
            <BotonesConfigurator botones_configurador={botones_configurador}/>
            </div>)
            :
-           (<div className="row mt-5">
+           (<div className="d-flex justify-content-center align-items-center row  h-75 ">
            
            <BotonesConfigurator botones_configurador={botones_configurador}/>
            </div>)
+
+          
 
         ) 
         

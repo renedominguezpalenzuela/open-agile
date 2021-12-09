@@ -51,6 +51,22 @@
   
 
 
+  .font_title_secundario_quiz {
+    font-family: Montserrat-BoldItalic;
+    color: #ffffff;
+    text-align: left;
+    font-size: 2.5em;
+    line-height: 1;
+    font-weight: 500;
+  
+    /* letter-spacing: 4px; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-transform: uppercase;
+    /* selector-locked: false; */
+    text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
+  }
+
   .font_title_secundario {
     font-family: Montserrat-BoldItalic;
     color: #ffffff;
@@ -597,6 +613,22 @@
     }
   }
 
+
+  
+  .font_smaller_letter_white {
+    font-family: Montserrat-Regular;
+    /* color: #e42078; */
+    color: #ffffff;
+    /* font-style: italic; */
+    font-size: 1vw;
+    /* font-weight: 100; */
+
+    
+    /* line-height: 1.4vw; */
+  }
+
+  
+
   
 
   
@@ -656,9 +688,9 @@
 
   
 .font_card_fechas {
-  font-family: Montserrat-BoldItalic;
+  font-family: Montserrat-Bold;
   color: #24325a;
-  font-style: italic; 
+  /* font-style: italic;  */
   font-size: 3.4vh; 
   font-weight: 100;
    text-transform: uppercase; 

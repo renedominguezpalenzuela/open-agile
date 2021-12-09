@@ -50,7 +50,7 @@ const {titulo1, titulo2,titulo2a, titulo3, imagen01, items_tabla, crashkurs_date
 
 
 
-// console.log("bbb"+titulo2a)
+
 
  
 

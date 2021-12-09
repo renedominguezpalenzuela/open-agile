@@ -8,7 +8,7 @@ titulo,
 titulo2a
 }) {
 
-//  console.log("aaa"+titulo2a);
+
 
 
 

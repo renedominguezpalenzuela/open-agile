@@ -30,6 +30,8 @@ const styles = {
   },
 };
 
+ const stylesCuadrado = { color: "#ffffff",  "&.Mui-checked": {color: "#e42078",  }};
+
 function replaceItemAtIndex(arr, index, newValue) {
   return [...arr.slice(0, index), newValue, ...arr.slice(index + 1)];
 }
@@ -45,7 +47,7 @@ const ancho_preguntas = (preguntas) => {
 
   let otras_clase = "  w75";
 
-  // console.log(ancho_maximo);
+ 
   if (ancho_maximo >= 150) {
     return "col-10" + otras_clase;
   } else if (ancho_maximo >= 70 && ancho_maximo < 150) {
@@ -163,28 +165,28 @@ export default function Content01andMenuWithQuestions({
                 <div className={ancho_preguntas(answers)}>
                   <div className="row   d-flex justify-content-start">
                     <FormControlLabel className="p-1" sx={styles} control={
-                        <Checkbox checked={checked1} value="1" color="primary" onChange={handleChange1}
+                        <Checkbox checked={checked1} value="1" color="primary" onChange={handleChange1} sx={stylesCuadrado }
                         />
                       } label={answers[0].answer}
                     />
                   </div>
                   <div className="row   d-flex justify-content-start">
                      <FormControlLabel className="p-1" sx={styles} control={
-                        <Checkbox checked={checked2} value="2" color="primary" onChange={handleChange2}
+                        <Checkbox checked={checked2} value="2" color="primary" onChange={handleChange2} sx={stylesCuadrado }
                         />
                       } label={answers[1].answer}
                     />
                   </div>
                   <div className="row  d-flex justify-content-start">
                      <FormControlLabel className="p-1" sx={styles} control={
-                        <Checkbox checked={checked3} value="3" color="primary" onChange={handleChange3}
+                        <Checkbox checked={checked3} value="3" color="primary" onChange={handleChange3} sx={stylesCuadrado }
                         />
                       } label={answers[2].answer}
                     />
                   </div>
                   <div className="row  d-flex justify-content-staendrt">
                     <FormControlLabel className="p-1" sx={styles} control={
-                        <Checkbox checked={checked4} value="4" color="primary" onChange={handleChange4}
+                        <Checkbox checked={checked4} value="4" color="primary" onChange={handleChange4} sx={stylesCuadrado }
                         />
                       } label={answers[3].answer}
                     />

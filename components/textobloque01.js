@@ -79,8 +79,6 @@ export default function TextoBloque01({
                     {unaLinea}
                     </p>                 
                 )}
-
-
                 </div>
 
                 <div className="col-1">

@@ -17,7 +17,7 @@ export const leistungen_details = [
     {
          "id":"2",       
         "titulo1" : "LEISTUNGEN",
-        "titulo2" : "INHOUSE TRAINING-",
+        "titulo2" : "INHOUSE TRAINING",
         "titulo2a" : "",
         "titulo3" : "INHOUSE TRAINING",
         "titulo4" : "Beispiel Vorgehen",

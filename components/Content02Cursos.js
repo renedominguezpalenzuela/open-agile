@@ -11,6 +11,10 @@ import Content02Final from "./Content02Final";
 //TODO: pasar como parametros los datos
 //Responsivo OK
 
+
+
+
+
 export default function Content02Cursos( {cursos}) {
 
 

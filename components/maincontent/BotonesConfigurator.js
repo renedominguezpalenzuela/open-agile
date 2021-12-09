@@ -29,7 +29,7 @@ export default function BotonesConfigurator({botones_configurador}){
   return <>
 
      {/* Area de botones 2 botones en una row, 4 botones en una columna*/}
-          <div className="row h-75 mt-5 d-flex justify-content-center align-items-top w-100">
+          <div className="row   d-flex justify-content-center align-items-center w-100">
       
 
 

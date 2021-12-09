@@ -38,6 +38,14 @@ export default function Content01andMenuWidthImage({
               {texto2a != undefined && texto2a != "" && <> {texto2a} </>}
             </div>
 
+
+            
+                <div className="font_title_secundario_quiz font_title_purple mt-2">
+              <p>Mache jetzt den Agile check!</p>
+
+              
+            </div>
+
             <div className="row  text-center mb-4 mt-5 d-flex  justify-content-center ">
               <a href="/quiz/1">
                 <button
