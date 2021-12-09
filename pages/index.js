@@ -30,6 +30,7 @@ export default function Home({
   servicios,
   blogs,
   botones_configurador,
+  vlog
 }) {
   return (
     <>
@@ -58,7 +59,7 @@ export default function Home({
         <Content04 lista_cards={blogs} />
 
         {/*Carrousel  */}
-        <Content05 />
+        <Content05 datos={vlog}/>
 
         {/* Servicios  */}
         <div id="services" className=" mt-5 ">
@@ -96,12 +97,17 @@ export const getServerSideProps = async (context) => {
   const res4 = await fetch(url4);
   const botones_configurador = await res4.json();
 
+  const url5 = `${servidor_url}/api/vlog`;
+  const res5 = await fetch(url5);
+  const vlog = await res5.json();
+
   return {
     props: {
       cursos,
       servicios,
       blogs,
       botones_configurador,
+      vlog
     },
   };
 };

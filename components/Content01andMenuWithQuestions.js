@@ -136,7 +136,7 @@ export default function Content01andMenuWithQuestions({
             <MenuNavBar />
           </div>
 
-          <div className="row  h-100  w-100 border  my_quiz d-flex align-items-center justify-content-center ">
+          <div className="row  h-100  w-100   my_quiz d-flex align-items-center justify-content-center ">
             {/* Tema de la pregunta */}
             <div className="row g-0  my_quiz_titulo  ">
               {titulo != undefined && titulo != "" && (
@@ -209,7 +209,7 @@ export default function Content01andMenuWithQuestions({
         </div>
 
         {/* Tercera columna, boton agile check arriba derecha */}
-        <div className="col mt-2 text-center   ">
+        <div className="col mt-4 text-center   ">
           <a href="/quizstart">
             <button
               type="button"

@@ -1,7 +1,22 @@
-input[type="checkbox"] +label {
+/* input[type="checkbox"] +label {
     color: #ffffff;
 }
 
 input[type="checkbox"]:checked+label {
     color: #428bca;
-}
+} */
+
+/* .MuiCheckbox-colorPrimary.Mui-checked {
+    color: #e82997 !important;
+    } */
+/* 
+    .MuiIconButton-label {
+        fontSize: 24,
+        border: "1px solid #bbbbbb",
+        width: 20,
+        height: 20,
+        borderRadius: 3,
+        "& .MuiSvgIcon-root": {
+            fill: "#fff",
+            },
+        }, */

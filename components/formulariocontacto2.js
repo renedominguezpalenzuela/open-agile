@@ -6,6 +6,9 @@ import FormControl from '@mui/material/FormControl';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
+import { pink } from '@mui/material/colors';
+
+
 
 // import { withStyles } from '@material-ui/core/styles';
 // import theme from '../src/theme';
@@ -41,6 +44,8 @@ export default function FormularioContacto2() {
   };
 
 
+const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+
   const styles2 = (theme) => ({
     multilineColor: {
       color: "red",
@@ -50,6 +55,9 @@ export default function FormularioContacto2() {
   // '& .MuiInput-underline:before': { borderBottom: `1px solid #e50067` },
   // '& .MuiInput-underline:after': { borderBottom: `1px solid #ffffff` },
   //  '& .MuiInput-underline:hover': { borderBottom: `1px solid  #00ffffff` },
+
+
+
 
   const styles = {
     ".MuiInput-root": {
@@ -70,8 +78,16 @@ export default function FormularioContacto2() {
    ".MuiFormControlLabel-label": {
      fontSize: "0.9rem",
      color:"#e42078"
-   }
-};
+   }};
+
+
+  const stylesCuadrado = { color: "#ffffff",  "&.Mui-checked": {color: "#e42078",  }};
+
+
+
+  //  ".MuiCheckbox-colorPrimary": {
+  //    color:"#e42078"
+  //  }
 
 
   return (
@@ -89,14 +105,24 @@ export default function FormularioContacto2() {
           <div className="row  g-0 d-flex align-items-center    justify-content-center mt-1">
             <div className="col-4   ">
               <div className="group row ">
-               <TextField id="standard-basic" label="Name eingeben" variant="standard" sx={styles} />
+                <TextField
+                  id="standard-basic"
+                  label="Name eingeben"
+                  variant="standard"
+                  sx={styles}
+                />
               </div>
 
               <div className="group mt-4 row">
-                  <TextField id="standard-basic" label="E-Mail eingeben" variant="standard" sx={styles}/>
+                <TextField
+                  id="standard-basic"
+                  label="E-Mail eingeben"
+                  variant="standard"
+                  sx={styles}
+                />
               </div>
             </div>
-{/* 
+            {/* 
             <div className="row  d-flex align-items-center   justify-content-center mt-4 ">
               <div className="inputgrupo   d-flex align-items-center   justify-content-center ">
                 <input className="me-2 custom-checkbox" type="checkbox" value="" />
@@ -106,24 +132,30 @@ export default function FormularioContacto2() {
               </div>
             </div> */}
 
-          <div className="row  d-flex align-items-center   justify-content-center mt-4 ">
-            <div className="inputgrupo   d-flex align-items-center   justify-content-center ">
+            <div className="row  d-flex align-items-center   justify-content-center mt-4 ">
+              <div className="inputgrupo   d-flex align-items-center   justify-content-center ">
+                <div className="row  d-flex align-items-center   justify-content-center mt-4 ">
+                  <FormControlLabel sx={styles3} className="p-1  color_magenta"
+                    control={
+                       <Checkbox checked={checked1} value="1" color="primary"   sx={stylesCuadrado }
+                        onChange={handleChange1}
+                      />
+                    }
+                    label="Ja, ich bin mit den AGBs des Newsletters einverstanden"
+                  />
 
-              <div className="row  d-flex align-items-center   justify-content-center mt-4 ">
-                <FormControlLabel  sx={styles3} className="p-1  color_magenta" control={
-                       <Checkbox checked={checked1} value="1" color="myColor" onChange={handleChange1} />
-                   } label="Ja, ich bin mit den AGBs des Newsletters einverstanden" />
-                            
+                  
+                </div>
               </div>
             </div>
           </div>
-
-          </div>
           <div className="row g-0  d-flex align-items-center   justify-content-center mt-1 ">
             <div className="group w-25 mt-4 mb-4 ">
-            <button type="button" className="btn boton_card_magenta  w-100 font_facit_boton_small">
+              <button
+                type="button"
+                className="btn boton_card_magenta  w-100 font_facit_boton_small">
                 ANMELDEN
-            </button>
+              </button>
             </div>
           </div>
         </div>
