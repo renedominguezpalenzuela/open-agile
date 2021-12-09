@@ -2,9 +2,9 @@
 .tabla {
     display: grid;
     /* grid-template-columns:  repeat(2, minmax(0, 1fr)); */
-    grid-template-columns:  repeat(2, minmax(0, 1fr));
+      grid-template-columns:  repeat(2, minmax(0, 1fr));
       grid-template-rows: 1fr; /*total de filas depende de cantidad elementos*/
-      gap: 0px;
+      gap: 3px;
       row-gap: 0px;
       /* align-items: center; */
   
@@ -13,6 +13,7 @@
   
   .item {
     width: 38vw;
+    height: 95vh;
   }
   
   
@@ -44,30 +45,63 @@
   .item-6 {
     justify-self:left;  
   }
-  
+
+  .item-7 {
+    justify-self:right;  
+  }
+
+  .item-8 {
+    justify-self:left;  
+  }
+
+  .item-9 {
+    justify-self:right;  
+  }
+
+  .item-10 {
+    justify-self:left;  
+  }
+
+  .item-11 {
+    justify-self:right;  
+  }
+
+  .item-12 {
+    justify-self:left;  
+  }
+
+  .item-derecha {
+    justify-self:right;  
+  }
+
+  .item-izquierda {
+    justify-self:left;  
+  }
+
+
   .item-texto {
   
-    padding-left: 1.5vw; 
-     padding-right: 1.5vw;
-    font-size: 0.75em;
+    padding-left: 1.3vw; 
+    padding-right: 1.3vw;
+    font-size: 1em;
     font-family: Montserrat-regular;
     color: #24325a;
     
    
     /* max-width: 30vw; */
-    line-height: 1.7;
+    /* line-height: 0.8em; */
     /* font-weight: 500; */
   
   
   }
   
-  
+/*   
    @media (max-width: 1200px) {
     .item-texto  {
       max-width:45vw;
     }
   } 
-  
+   */
  
   
   

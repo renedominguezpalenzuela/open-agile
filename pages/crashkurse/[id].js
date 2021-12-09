@@ -46,9 +46,7 @@ const router = useRouter()
 const {id}  = router.query;
 
 
-const {titulo1, titulo2,titulo2a, titulo3, imagen01, texto_BESCHREIBUNG,
- imagen02, texto_ZIELGRUPPE, imagen03, texto_VORTEILE, texto_INHALTE,
-  texto_LEISTUNGEN, kosten, crashkurs_date_title, crashkurs_date } = curso;
+const {titulo1, titulo2,titulo2a, titulo3, imagen01, items_tabla, crashkurs_date_title, crashkurs_date } = curso;
 
 
 
@@ -87,7 +85,7 @@ const {titulo1, titulo2,titulo2a, titulo3, imagen01, texto_BESCHREIBUNG,
         <h3 className="font_titulo_detalles "> {titulo3}</h3>
     </div>
 
-    <Tabla01
+    {/* <Tabla01
        imagen01 = {`${servidor_url}/img/${imagen01}`}
        texto_BESCHREIBUNG = {texto_BESCHREIBUNG}
        imagen02 = {`${servidor_url}/img/${imagen02}`}
@@ -95,16 +93,25 @@ const {titulo1, titulo2,titulo2a, titulo3, imagen01, texto_BESCHREIBUNG,
        imagen03 = {`${servidor_url}/img/${imagen03}`}
        texto_VORTEILE      = {texto_VORTEILE     }
        numero_tabla = "1"     
+    /> */}
+
+
+     <Tabla01
+     items_tabla={items_tabla}
+      
+       numero_tabla = "1"     
     />
 
 
     {/* Tabla2: tres columnas inhalte, leistungen, kosten */}
-    <Tabla02
+    {/* <Tabla02
       texto_INHALTE = {texto_INHALTE}
       texto_LEISTUNGEN = {texto_LEISTUNGEN}
       kosten = {kosten} 
       numero_tabla = "2"
-    /> 
+    />  */}
+
+  
    
 
    {/* Tabla3 --- Cards con fechas de cursos */}

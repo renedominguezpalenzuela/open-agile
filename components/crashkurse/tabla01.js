@@ -1,120 +1,82 @@
+import { servidor_url } from "../../config";
+
+const show_imagen = (img, index) => {
+
+
+  
+
+  let alineado = index % 2 == 0 ? "item-derecha" : "item-izquierda";
+
+  return (
+    <div  key={`i${index}`} className={`item  ${alineado}`}>
+      <img className="image-tabla" src={`${servidor_url}/img/${img}`} alt="" />
+    </div>
+  );
+};
+
+const show_texto = (titulo, texto, index) => {
+
+  let alineado = index % 2 != 0 ? "item-derecha" : "item-izquierda";
+
+  return (
+    <div key={`t${index}`} className={`item  item-texto ${alineado}  `}>
+      <div className="item-texto-titulo text-center  justificar">{titulo}</div>
+      {texto != undefined &&
+        texto.length > 0 &&
+        texto.map((untexto, index) =>
+         
+           <div className="justificar text-center" key={index}>{untexto}</div>
+        )}
+    </div>
+  );
+};
+
+const fila = (index, id_tabla, titulo, img, texto) => {
+  
+  let alineado = index % 2 == 0 ? "item-derecha" : "item-izquierda";
+
+  return (
+    <>
+      {index % 2 == 0 ? (
+        <>
+          {show_imagen( img, index )}
+           {show_texto( titulo, texto, index )} 
+        </>
+      ) : (
+        <>
+           {show_texto( titulo, texto, index )} 
+          {show_imagen( img, index )}
+        </>
+      )}
+    </>
+  );
+};
+
 export default function Tabla01({
-  imagen01,
-  texto_BESCHREIBUNG,
-  imagen02,
-  texto_ZIELGRUPPE,
-  imagen03,
-  texto_VORTEILE,
-  texto_INHALTE,
-  texto_LEISTUNGEN,
-  kosten,
   CRASHKURS_title,
   CRASHKURS,
-  numero_tabla
-}
-
-) {
-
-
-
+  numero_tabla,
+  items_tabla,
+}) {
   //TODO: refactorizar las filas
+
   return (
-<>
-  <div className="row mb-5 justify-content-center  ">
+    <>
+      {items_tabla != undefined && items_tabla.length > 0 && (
+        <div className="row mb-5 justify-content-center  ">
+          <div className="tabla ">
+            {items_tabla.map((unItem, index) => {
 
-  <div className="tabla ">
-
-
-        {/* --------------------  Fila 1   -------------------------- */}
-        <div className="item item-1 ">
-          <img className="image-tabla " src={imagen01} alt="" />
-        </div>
-
-        <div className="item item-2  item-texto  justificar  ">
-          <div className="item-texto-titulo text-center ">BESCHREIBUNG</div>
-
-              {texto_BESCHREIBUNG}
-        </div>
-
-
-
-        {/* --------------------- Fila 2 -------------------  */}
-        {texto_ZIELGRUPPE.length > 0 &&                 
-          <div className="item item-3  item-texto justificar">
-            <div className="item-texto-titulo text-center ">ZIELGRUPPE</div>
-            {/* <ul> */}
-              {texto_ZIELGRUPPE.map((untexto, index) => (
-              <div key={index+numero_tabla*1}>
-                  {untexto}
               
-                  {/* <li>{untexto}</li> */}
-              </div>
-              ))}
-            {/* </ul> */}
-        </div>
-        }
-
-
-
-      {texto_ZIELGRUPPE.length > 0 && 
-        <div className="item item-4    ">
-            <img className="image-tabla" src={imagen02} alt="" />
-        </div>
-      }
-
-
-
-    {/* --------------------- Fila 3 si existe fila 2-------------------  */}
-
-      {texto_ZIELGRUPPE.length > 0 && <>
-          <div className="item item-5  ">
-            <img className="image-tabla " src={imagen03} alt="" />
+              return (
+                <>
+                  {fila( index, unItem.id_tabla, unItem.titulo, unItem.image, unItem.texto)}
+                </>
+              );
+            })}
           </div>
-
-
-          <div className="item item-6  item-texto justificar">
-            <div className="item-texto-titulo text-center ">VORTEILE</div>
-
-            {/* <ul> */}
-              {texto_VORTEILE.map((untexto, index) => (
-              <div key={index+numero_tabla*2}>
-
-              {untexto}
-                   {/* <li>{untexto}</li> */}
-                </div>
-                              ))}
-                        {/* </ul> */}
-                </div>
-      </>
-     } 
-
-    {/* --------------------- Fila 3 si NO existe fila 2-------------------  */}
-    {texto_ZIELGRUPPE.length<=0  &&   <>
-        <div className="item item-3  item-texto justificar">
-          <div className="item-texto-titulo text-center ">VORTEILE</div>
-
-                  {/* <ul> */}
-                    {texto_VORTEILE.map((untexto, index) => (
-                    <div key={index+numero_tabla*3}>
-                      {/* <li>{untexto}</li> */}
-                             {untexto}
-                      </div>
-                          ))}
-                  {/* </ul> */}
-              </div>
-
-             <div className="item item-4 ">
-              <img className="image-tabla " src={imagen03} alt="" />
-            </div>
-      </>
-    }
-
-
-
-
-    </div>
-  </div>
-
-     </>
+        </div>
+      )}
+    </>
   );
 }

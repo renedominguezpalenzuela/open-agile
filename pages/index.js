@@ -35,8 +35,8 @@ export default function Home({
   return (
     <>
       <Head>
-        <title>Main Page title</title>
-        <meta name="description" content="Lorem Ipsum" />
+        <title>OPEN AGILE</title>
+        <meta name="description" content="OPEN AGILE" />
         <link rel="icon" href="/favicon.ico" />
         <script async src="js/chat.js" />
         <script async src="js/menu.js" />

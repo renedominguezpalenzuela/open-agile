@@ -17,18 +17,9 @@ export default function Respuesta({
 
 
 
-        {/* <FormControlLabel value="female" control={<Radio />} label={texto} />         */}
- {/*onChange={handleChange} */} 
          <Radio  checked="true"    value="a"    name="radio-buttons"  label={texto}  inputProps={{ 'aria-label': 'A' }} />
 
 
-
-{/*     
-    <label class="radiocontainer checkedlabel" id="label3"> 
-        {texto}
-        <input type="radio" name="quiz" id={id}  value={valor}/>
-        <span class="checkmark"></span>
-    </label> */}
 
 
 
