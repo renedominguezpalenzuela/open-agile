@@ -18,8 +18,9 @@ a {
 }
 
 .vertical_text {
-  /* transform: rotate(-90deg);   */
+  transform: rotate(-90deg);   
   color: #fff;
+  font-family: Montserrat-Light;
 
   position: absolute;
   z-index: 3;
@@ -287,6 +288,8 @@ div.vertical-line{
   width: fit-content;
 
 }
+
+
 
 .encima-zindex{
   z-index: 99;

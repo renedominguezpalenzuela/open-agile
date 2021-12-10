@@ -98,10 +98,10 @@ export default function Content05 ({datos} ) {
             </div>
 
 
-            <button className="carousel-control-prev" type="button" data-bs-target="#MyCarousel" data-bs-slide="prev">
+            <button className="carousel-control-prev zindex-3000" type="button" data-bs-target="#MyCarousel" data-bs-slide="prev">
                 <span className="carousel-control-prev-icon"></span>
             </button>
-            <button className="carousel-control-next" type="button" data-bs-target="#MyCarousel" data-bs-slide="next">
+            <button className="carousel-control-next zindex-3000" type="button" data-bs-target="#MyCarousel" data-bs-slide="next">
                 <span className="carousel-control-next-icon"></span>
             </button>
 

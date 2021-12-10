@@ -44,7 +44,7 @@ export default function Card02({
             {video!=undefined && video!="" &&
                   <div className="embed-responsive embed-responsive-4by3 ">
 
-                  <iframe width="430vw" height="380vh" src={video}  frameBorder="3" allowFullScreen></iframe> 
+                  <iframe width="500vw" height="380vh" src={video}  frameBorder="3" allowFullScreen></iframe> 
                     
                  </div>
 

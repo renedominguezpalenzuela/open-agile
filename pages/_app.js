@@ -12,6 +12,9 @@ import  "../styles/tabla01.css";
 import "../styles/menu-lateral.css";
 import "../styles/formulario.css";
 import "../styles/checkbox.css";
+import "../styles/iconos.css";
+
+
 
 // import "../styles/respuesta.css";
 

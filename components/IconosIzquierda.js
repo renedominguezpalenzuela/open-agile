@@ -2,26 +2,28 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function IconosIzquierda() {
   return (
 <>
-  <div className="col  d-none d-lg-block position-absolute top-50 end-0  ">
+{/* position-absolute top-50 end-0 */}
+  <div className="col  mystickyiconos      ">
 
-    <div className="row text-center mt-4 d-none d-lg-block">
-      <div className="rotate font_facit_text2   ">Let's talk</div>
+    <div className="row text-center   ">
+      <div className="rotate font_facit_text2   ">Kontakt</div>
     </div>
 
-    <div className="row   text-start mt-4 d-none d-lg-block margen_iconos_izquierda">
+    <div className="row   text-start mt-4  margen_iconos_izquierda">
       <div className="rotate ps-1 pe-1 font_facit_text2">_____</div>
     </div>
 
-    <div className="row mt-4 pt-2 d-none d-lg-block">
-      <a href="mailto:myemail@mail.com">
-        <FontAwesomeIcon icon="envelope" width="32" className="circulo iconos" />
+{/* className="circulo iconos" */}
+    <div className="row  mt-4 pt-2 text-center ">
+      <a href="mailto:info@open-agile.de">
+        <FontAwesomeIcon icon="envelope" width="25" color="white" className=" mylinkhoover" />
       </a>
     </div>
 
-    <div className="row mt-3 d-none d-lg-block">
-      <a href="tel:03020123456">
-        {/*        <i className="fa fa-phone   iconos circulo"></i> */}
-        <FontAwesomeIcon icon="phone" width="32" className="circulo iconos" />
+    <div className="row  mt-3 text-center ">
+      <a href="tel:+49 (0) 421 22347567">
+ 
+        <FontAwesomeIcon icon="phone" width="25" color="white" className=" mylinkhoover" />
       </a>
     </div>
   </div>

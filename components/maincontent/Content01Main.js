@@ -12,6 +12,8 @@ import BotonesConfigurator from "./BotonesConfigurator";
 import Content01Iconos from "./Content01Iconos";
 
 import Content01TextSinIcons from "./Content01TextSinIcons";
+import IconosIzquierda from "../IconosIzquierda";
+
 
 
 
@@ -35,6 +37,7 @@ export default function Content01Main({
  
   return (
     <>
+
       <div className="bannermain ">
       <div id="rowtop" className="row h-100  menu_superior mt-2 g-0  ">
 
@@ -69,9 +72,13 @@ export default function Content01Main({
               Agile Check
             </button>
           </a>
+
+       
         </div>
       </div>
       </div>
+
+         <IconosIzquierda/>
    
     </>
   );

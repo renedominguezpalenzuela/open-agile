@@ -1,0 +1,13 @@
+
+.mystickyiconos{
+ 
+    position: fixed; /* Fixed/sticky position */
+     top:45vh;
+     right: 1.6vw;
+     z-index:2000; /* Make sure it does not overlap */
+    cursor: pointer; /* Add a mouse pointer on hover */
+     width: fit-content; 
+         /* width: 5vw; */
+     /* height: 50vh;  */
+  
+  }
