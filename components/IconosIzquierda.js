@@ -4,6 +4,7 @@ export default function IconosIzquierda() {
 <>
 {/* position-absolute top-50 end-0 */}
   <div className="col  mystickyiconos      ">
+ 
 
     <div className="row text-center   ">
       <div className="rotate font_facit_text2   ">Kontakt</div>
