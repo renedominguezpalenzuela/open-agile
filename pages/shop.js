@@ -98,4 +98,3 @@ const  texto02= ['Timebox', 'Post-its', 'Eddings', '2 Open Agile Kaffee-Tassen',
 </>
   );
 }
-

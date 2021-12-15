@@ -7,7 +7,7 @@ export default function Image01({image}) {
   return (
 <>
 
-{/* style={{maxWidth: ancho+'px'}}> */}
+
 
     <div className="row mt-5 d-flex align-items-center ">
     <div className="col-2">

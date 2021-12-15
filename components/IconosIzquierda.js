@@ -2,6 +2,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function IconosIzquierda() {
   return (
 <>
+
+
 {/* position-absolute top-50 end-0 */}
   <div className="col  mystickyiconos      ">
  
