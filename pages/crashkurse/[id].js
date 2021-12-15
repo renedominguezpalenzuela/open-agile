@@ -96,7 +96,7 @@ const {titulo1, titulo2,titulo2a, titulo3, imagen01, items_tabla, crashkurs_date
     /> */}
 
 
-     <Tabla01
+     <Tabla01 className=""
      items_tabla={items_tabla}
       
        numero_tabla = "1"     
@@ -115,7 +115,7 @@ const {titulo1, titulo2,titulo2a, titulo3, imagen01, items_tabla, crashkurs_date
    
 
    {/* Tabla3 --- Cards con fechas de cursos */}
-    <Tabla03 
+    <Tabla03 className="mt-5"
      crashkurs_date_title= {crashkurs_date_title}
      crashkurs_date= {crashkurs_date}
      titulo ={titulo2 +" " +titulo2a} 

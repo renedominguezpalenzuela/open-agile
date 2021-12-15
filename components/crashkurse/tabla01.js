@@ -1,51 +1,51 @@
 import { servidor_url } from "../../config";
 
-const show_imagen = (img, index) => {
-  let alineado = index % 2 == 0 ? "item-derecha" : "item-izquierda";
+// const show_imagen = (img, index) => {
+//   let alineado = index % 2 == 0 ? "item-derecha" : "item-izquierda";
 
-  return (
-    <div key={`i${index}`} className={`item  ${alineado}`}>
-      <img className="image-tabla" src={`${servidor_url}/img/${img}`} alt="" />
-    </div>
-  );
-};
+//   return (
+//     <div key={`i${index}`} className={`item  ${alineado}`}>
+//       <img className="image-tabla" src={`${servidor_url}/img/${img}`} alt="" />
+//     </div>
+//   );
+// };
 
-const show_texto = (titulo, texto, index) => {
-  let alineado = index % 2 != 0 ? "item-derecha" : "item-izquierda";
+// const show_texto = (titulo, texto, index) => {
+//   let alineado = index % 2 != 0 ? "item-derecha" : "item-izquierda";
 
-  return (
-    <div key={`t${index}`} className={`item  item-texto ${alineado}  `}>
-      <div className="item-texto-titulo text-center  justificar">{titulo}</div>
-      {texto != undefined &&
-        texto.length > 0 &&
-        texto.map((untexto, index) => (
-          <div className="justificar text-center" key={index}>
-            {untexto}
-          </div>
-        ))}
-    </div>
-  );
-};
+//   return (
+//     <div key={`t${index}`} className={`item  item-texto ${alineado}  `}>
+//       <div className="item-texto-titulo text-center  justificar">{titulo}</div>
+//       {texto != undefined &&
+//         texto.length > 0 &&
+//         texto.map((untexto, index) => (
+//           <div className="justificar text-center" key={index}>
+//             {untexto}
+//           </div>
+//         ))}
+//     </div>
+//   );
+// };
 
-const filaOLD = (index, id_tabla, titulo, img, texto) => {
-  let alineado = index % 2 == 0 ? "item-derecha" : "item-izquierda";
+// const filaOLD = (index, id_tabla, titulo, img, texto) => {
+//   let alineado = index % 2 == 0 ? "item-derecha" : "item-izquierda";
 
-  return (
-    <>
-      {index % 2 == 0 ? (
-        <>
-          {show_imagen(img, index)}
-          {show_texto(titulo, texto, index)}
-        </>
-      ) : (
-        <>
-          {show_texto(titulo, texto, index)}
-          {show_imagen(img, index)}
-        </>
-      )}
-    </>
-  );
-};
+//   return (
+//     <>
+//       {index % 2 == 0 ? (
+//         <>
+//           {show_imagen(img, index)}
+//           {show_texto(titulo, texto, index)}
+//         </>
+//       ) : (
+//         <>
+//           {show_texto(titulo, texto, index)}
+//           {show_imagen(img, index)}
+//         </>
+//       )}
+//     </>
+//   );
+// };
 
 
 const fila = (index, id_tabla, titulo, img, texto) => {
@@ -58,22 +58,22 @@ const fila = (index, id_tabla, titulo, img, texto) => {
       {index % 2 == 0 ? (
         <>
         
-         <div class="contenedor_tabla">
-          <div class="mask_right pe-3  d-flex   justify-content-end">
+         <div className="contenedor_tabla ">
+          <div className="mask_right me-5  d-flex   justify-content-end">
              <img className="image-tabla  sombra_right" src={`${servidor_url}/img/${img}`} alt="" />
           </div>
-            <div className="item-texto-titulo text-center  justificar">{titulo}</div>
+            <div className="tabla-titulo text-center   justificar">{titulo}</div>
           <p>{texto}</p>
         </div>
         </>
       ) : (
         <>
-        <div class="contenedor_tabla">
+        <div className="contenedor_tabla">
         
-          <div class="mask_left ps-3 d-flex   justify-content-start">
+          <div className="mask_left ps-3 d-flex   justify-content-start">
              <img className="image-tabla sombra_left" src={`${servidor_url}/img/${img}`} alt="" />
           </div>
-            <div className="item-texto-titulo text-center  justificar">{titulo}</div>
+            <div className="tabla-titulo text-center  justificar">{titulo}</div>
           <p>{texto}</p>
         </div>
 
@@ -95,7 +95,7 @@ export default function Tabla01({
 
   return (
     <>
-    <div className="row d-flex   justify-content-center">
+    <div className="row d-flex   justify-content-center mb-5">
       {items_tabla != undefined && items_tabla.length > 0 && (
       
             items_tabla.map((unItem, index) => {
