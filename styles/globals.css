@@ -419,15 +419,15 @@ border-top: 1px solid rgba(255, 255, 255, 0)!important;
 
 .navigation .nav-item .nav-link , .dropdown2 {
   color: #fff;
-  margin-right: 15px;
-  margin-left: 15px;
-  font-size: 1.3vw;
+  margin-right: 0.8vw;
+  margin-left: 0.8vw;
+  font-size: 1.4vw;
 }
 
 .separador_menu {
   color: #fff;
   font-family: Montserrat-Light;
-  font-size: 30px;
+  font-size: 2.5vw;
 }
 
 

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 
+
 import MenuFlotante from "../components/MenuFlotante";
 import Footer from "../components/Footer";
 

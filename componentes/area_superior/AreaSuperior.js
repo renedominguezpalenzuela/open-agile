@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { servidor_url } from "../../config";
 
 import MenuNavBar from "./MenuNavBar";
@@ -23,6 +25,7 @@ export default function AreaSuperior({
   iconos,
   texto_parrafo_blanco,
   firma,
+  boton_inicio_quiz
 }) {
   return (
     <>
@@ -32,17 +35,17 @@ export default function AreaSuperior({
         </div>
 
         {/*    <div className="row d-none d-lg-block "> */}
-        <div className="item-menu d-flex align-items-center justify-content-start">
+        <div className="item-menu  d-flex align-items-center justify-content-center">
           <MenuNavBar />
         </div>
-        <div className="item-boton  d-flex align-items-center justify-content-center">
+        <div className="item-boton   d-flex align-items-center justify-content-center">
           <BotonAgileCheck />
         </div>
 
-        <div className="item-titulo">
+        <div className="item-titulo ">
           
             {/* Contenido Principal */}
-            {contenido_principal(texto1, texto2, texto2a, formulario_contacto, botones_configurador, iconos, texto_parrafo_blanco, firma)}
+            {contenido_principal(texto1, texto2, texto2a, formulario_contacto, botones_configurador, iconos, texto_parrafo_blanco, firma, boton_inicio_quiz)}
 
 
         
@@ -66,7 +69,7 @@ function getFondo(fondo) {
 
 
 
-const contenido_principal = ( texto1,  texto2,  texto2a, formulario_contacto, botones_configurador, iconos, texto_parrafo_blanco, firma)=>{
+const contenido_principal = ( texto1,  texto2,  texto2a, formulario_contacto, botones_configurador, iconos, texto_parrafo_blanco, firma, boton_inicio_quiz)=>{
 
  
 
@@ -90,7 +93,7 @@ return (
     {/* Texto Principal */}
     {((texto1 != undefined && texto1 != "") || (texto2 != undefined && texto2 != "")) && (
         <>
-          <div className="row g-0  ms-4  ">
+          <div className="row g-0  ms-5  ">
             <Content01TextSinIcons texto1={texto1} texto2={texto2} texto2a={texto2a} />
           </div>
         </>
@@ -107,7 +110,7 @@ return (
        {(texto_parrafo_blanco != undefined && texto_parrafo_blanco.length>0 )  && (
         <>
         
-           <div className="row font_smaller_letter_white ms-3 me-3 justificar">
+           <div className="row font_smaller_letter_white ms-5 me-3 justificar">
                 {texto_parrafo_blanco.map ((unaLinea, index)=> 
                     <p  key={index}>
                     {unaLinea}
@@ -124,7 +127,7 @@ return (
         <>
          
         
-           <div className="row font_smaller_letter_white ms-3 me-3 justificar">
+           <div className="row font_smaller_letter_white ms-5 me-3 justificar">
                 {firma.map ((unaLinea, index)=> (
                    
                     <div>{unaLinea}</div>
@@ -168,6 +171,16 @@ return (
         ) 
         
       } 
+
+ {boton_inicio_quiz != undefined && boton_inicio_quiz  &&(
+       <div className="row mt-5 text-center mb-4 d-flex  justify-content-center ">
+          <Link href="/quiz/1">
+            <button type="button" className="btn p-3 ms-2 me-2 w-50 h-100 btn-card font-btn-card rounded-pill  ">
+              AGILE CHECK
+            </button>
+          </Link>
+        </div>
+ )}
 
 
   </>
