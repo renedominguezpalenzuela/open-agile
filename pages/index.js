@@ -38,7 +38,9 @@ export default function Home({
       </Head>
 
       <div id="principal" className="container-fluid g-0">
+      
         <MenuFlotanteBoton />
+
         <AreaSuperior fondo="gris" texto1="OPEN AGILE" texto2="FOR BETTER WORK" botones_configurador={botones_configurador} iconos={true} />
 
         {/*Cards CRASHKURSE  */}
@@ -55,9 +57,7 @@ export default function Home({
 
         {/* Servicios  */}
         <div id="services" className=" mt-5 ">
-          <div className="row justify-content-center font_title_seccion mt-1 ms-4">
-            LEISTUNGEN
-          </div>
+          <div className="row justify-content-center font_title_seccion mt-1 ms-4"> LEISTUNGEN </div>
           <Card01Lista lista_cards={servicios} titulo_magenta={true} />
         </div>
 

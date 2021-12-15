@@ -4,15 +4,15 @@
 import Link from "next/link";
 import { useRecoilState } from "recoil";
 import { useRouter } from "next/router";
-import { respuestasState } from "./states/state";
+import { respuestasState } from "../states/state";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import TextoBloque01 from "./textobloque01";
+import TextoBloque01 from "../../components/textobloque01";
 import MenuNavBar from "./MenuNavBar";
-import Respuesta from "./respuesta";
+import Respuesta from "../../components/respuesta";
 
-import { servidor_url } from "../config";
+import { servidor_url } from "../../config";
 
 import * as React from "react";
 

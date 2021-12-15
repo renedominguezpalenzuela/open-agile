@@ -19,7 +19,7 @@
   /* height: auto; */
  
   background-repeat: no-repeat;
-  text-align: left;
+  /* text-align: left; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background-position: 100% 57%; */
@@ -57,15 +57,21 @@
 
 
 .bannermain-quiz {
+
+  display: grid;
+
+  grid-template-columns: 12% 75% 10%;  /*tres columnas de igual ancho*/
+  grid-template-rows: 15% 75%; /*total de filas depende de cantidad elementos*/
+  /* gap: 1em; */
+  /* row-gap: 1em; */
+
+
+
   background-size: auto, cover;
   height: 100vh; 
   max-height: 100vh;
-  display: grid;
 
-  grid-template-columns: 10% 78% 10%;  /*tres columnas de igual ancho*/
-  grid-template-rows: 15% 15%; /*total de filas depende de cantidad elementos*/
-  /* gap: 1em;
-  row-gap: 1em; */
+  
 
   
   /* height: auto important; */
@@ -75,7 +81,7 @@
   /* height: auto; */
  
   background-repeat: no-repeat;
-  text-align: left;
+  /* text-align: left; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background-position: 100% 57%; */

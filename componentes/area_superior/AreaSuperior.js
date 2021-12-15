@@ -25,7 +25,9 @@ export default function AreaSuperior({
   iconos,
   texto_parrafo_blanco,
   firma,
-  boton_inicio_quiz
+  boton_inicio_quiz,
+  titulo_quiz_result,
+  texto_quiz_result
 }) {
   return (
     <>
@@ -45,7 +47,7 @@ export default function AreaSuperior({
         <div className="item-titulo ">
           
             {/* Contenido Principal */}
-            {contenido_principal(texto1, texto2, texto2a, formulario_contacto, botones_configurador, iconos, texto_parrafo_blanco, firma, boton_inicio_quiz)}
+            {contenido_principal(texto1, texto2, texto2a, formulario_contacto, botones_configurador, iconos, texto_parrafo_blanco, firma, boton_inicio_quiz, titulo_quiz_result, texto_quiz_result)}
 
 
         
@@ -69,7 +71,7 @@ function getFondo(fondo) {
 
 
 
-const contenido_principal = ( texto1,  texto2,  texto2a, formulario_contacto, botones_configurador, iconos, texto_parrafo_blanco, firma, boton_inicio_quiz)=>{
+const contenido_principal = ( texto1,  texto2,  texto2a, formulario_contacto, botones_configurador, iconos, texto_parrafo_blanco, firma, boton_inicio_quiz,titulo_quiz_result, texto_quiz_result)=>{
 
  
 
@@ -106,8 +108,36 @@ return (
         )
       } 
 
+       {/*Texto_quiz_result */}
+
+       {titulo_quiz_result!=undefined &&  titulo_quiz_result!="" && (
+              <div className="font_title_secundario font_centrar font_title_purple mt-5">
+                {titulo_quiz_result}
+              </div>
+       )
+       }       
+
+ {(texto_quiz_result != undefined && texto_quiz_result.length>0 )  && (
+
+         
+        <>
+        
+           <div className="row mt-4 font_small_letter font_small_letter_white ms-5 me-3 justificar">
+                {texto_quiz_result.map ((unaLinea, index)=> 
+                    <p  key={index}>
+                    {unaLinea}
+                    </p>                 
+                )}
+                </div>
+           
+          
+        </>
+      )}
+
 
        {(texto_parrafo_blanco != undefined && texto_parrafo_blanco.length>0 )  && (
+
+         
         <>
         
            <div className="row font_smaller_letter_white ms-5 me-3 justificar">
@@ -121,6 +151,8 @@ return (
           
         </>
       )}
+
+      
 
 
        {(firma != undefined && firma.length>0 )  && (
