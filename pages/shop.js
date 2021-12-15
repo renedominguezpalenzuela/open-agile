@@ -20,6 +20,8 @@ import Image01 from "../components/crashkurse/image01";
 import Content01Main from "../components/maincontent/Content01Main";
 import Tabla01 from "../components/crashkurse/tabla01";
 
+import AreaSuperior from "../componentes/area_superior/AreaSuperior";
+
 
 
 
@@ -69,15 +71,17 @@ const  texto02= ['Timebox', 'Post-its', 'Eddings', '2 Open Agile Kaffee-Tassen',
   </Head>
 
      
-  {/*Contenedor*/}
-  <div id="principal" className="row content-fluid ">
 
-    <MenuFlotanteBoton />
+
+      {/*Contenedor*/}
+ <div id="principal" className="container-fluid g-0">
+
+      <MenuFlotanteBoton />
+  
+        <AreaSuperior fondo="gris" texto1={titulo1} texto2={titulo2} texto2a={titulo2a} />
+
+
     
-    {/*Area superior  */}
-    <div className="bannermain">
-      <Content01Main texto1={titulo1} texto2={titulo2} texto2a={titulo2a}/>
-    </div>
 
 
 <div className="mt-5">

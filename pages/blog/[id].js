@@ -23,6 +23,7 @@ import TextoBlog01 from "../../components/blogs/TextoBlog01";
 import TextoBlog02 from "../../components/blogs/TextoBlog02";
 
 // import MenuSuperior from "../components/MenuSuperior";
+import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
 
 
 import Content01Main from "../../components/maincontent/Content01Main";
@@ -69,15 +70,17 @@ const {titulo1, titulo2, titulo2a, texto01, texto02, imagen01 } = blog;
   </Head>
 
 
-  {/*Contenedor principal*/}
-  <div id="principal" className="row content-fluid ">
 
-    <MenuFlotanteBoton />
+
+   
     
-    {/*Area superior  */}
-    <div className="bannermain">
-        <Content01Main texto1={titulo1} texto2={titulo2} texto2a={titulo2a}/>
-    </div>
+  
+     <div id="principal" className="container-fluid g-0">
+
+      <MenuFlotanteBoton />
+  
+        <AreaSuperior fondo="gris" texto1={titulo1} texto2={titulo2} texto2a={titulo2a} />
+
 
     <TextoBlog01/>
   

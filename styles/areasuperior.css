@@ -1,0 +1,19 @@
+.item-logo {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.item-menu {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.item-boton {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+
+.item-titulo {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}

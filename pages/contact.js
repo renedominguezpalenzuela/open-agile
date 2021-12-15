@@ -7,11 +7,8 @@ import Footer from "../components/Footer";
 import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
 // import MenuSuperior from "../components/MenuSuperior";
 
-import TextoBloque01 from "../components/textobloque01";
-import Image01 from "../components/crashkurse/image01";
 
-import Content01Main from "../components/maincontent/Content01Main";
-import FormularioContacto2 from "../components/formulariocontacto2";
+import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 
 
 //----------------------------------------------------------------------------------------------------------
@@ -31,19 +28,12 @@ export default function Home() {
   </Head>
      
   {/*Contenedor*/}
-    <div id="principal" className="row content-fluid ">
 
-    <MenuFlotanteBoton />
-    
-    {/*Area superior  */}
-    {/* <div className="bannermain"> */}
-      <Content01Main texto1="" texto2="" texto2a="" formulario_contacto={true}/>
-      {/* <Content01Main texto1="" texto2="" texto2a=""/> */}
-    
-    {/* </div> */}
+    <div id="principal" className="container-fluid g-0">
+        <MenuFlotanteBoton />
+        <AreaSuperior fondo="gris"  texto1="" texto2="" texto2a="" formulario_contacto={true} />
 
-    {/*Footer  */}
-    {/* <Footer /> */}
+
 
     </div>
       

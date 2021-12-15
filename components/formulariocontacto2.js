@@ -92,7 +92,7 @@ const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
   return (
     <>
-      <div className="row mt-5 p-3 d-flex  justify-content-center encima-zindex">
+      <div className="row  p-3 d-flex  justify-content-center encima-zindex">
         <div className="col-9 color_background  ">
           <div className="row d-flex mt-4 font_title_formulario justify-content-center">
             LASS UNS IN KONTAKT BLEIBEN

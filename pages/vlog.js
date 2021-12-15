@@ -21,6 +21,9 @@ import Content01Main from "../components/maincontent/Content01Main";
 import Tabla01 from "../components/crashkurse/tabla01";
 
 
+import AreaSuperior from "../componentes/area_superior/AreaSuperior";
+
+
 
 
 
@@ -72,14 +75,11 @@ const texto03 = []
 
      
   {/*Contenedor*/}
-  <div id="principal" className="row content-fluid ">
+ <div id="principal" className="container-fluid g-0">
 
-    <MenuFlotanteBoton />
-    
-    {/*Area superior  */}
-    <div className="bannermain">
-      <Content01Main texto1={titulo1} texto2={titulo2} texto2a={titulo2a}/>
-    </div>
+      <MenuFlotanteBoton />
+  
+        <AreaSuperior fondo="gris" texto1={titulo1} texto2={titulo2} texto2a={titulo2a} />
 
     <TextoBloque01   titulo={titulo3}  texto_parrafo_array={texto01} />
 

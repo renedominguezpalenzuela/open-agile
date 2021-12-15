@@ -22,6 +22,8 @@ import TeamCarrousel from "../../components/TeamCarrousel";
 
 import Tabla01 from "../../components/crashkurse/tabla01";
 
+import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
+
 
 
 
@@ -92,14 +94,16 @@ const titulo_main = "DAS TEAM";
 
      
   {/*Contenedor*/}
-  <div id="principal" className="row content-fluid ">
 
-    <MenuFlotanteBoton />
-    
-    {/*Area superior  */}
-    <div className="bannermain">
-      <Content01Main texto1={titulo1} texto2={titulo2} texto2a={titulo2a}/>
-    </div>
+
+       <div id="principal" className="container-fluid g-0">
+
+      <MenuFlotanteBoton />
+  
+        <AreaSuperior fondo="gris" texto1={titulo1} texto2={titulo2} texto2a={titulo2a} />
+
+
+   
 
     {/* <TextoBloque01   titulo={subtitulo1}  texto_parrafo_array={texto01} />
 

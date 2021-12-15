@@ -3,7 +3,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import Layout from "../components/Layout";
 //import "../styles/Home.module.css";
 
-import "../styles/main.css";
+import "../styles/main_css_grid.css";
+
 import "../styles/globals.css";
 import "../styles/fonts.css";
 import "../styles/animate.css";
@@ -13,6 +14,8 @@ import "../styles/menu-lateral.css";
 import "../styles/formulario.css";
 import "../styles/checkbox.css";
 import "../styles/iconos.css";
+import "../styles/areasuperior.css";
+
 
 
 

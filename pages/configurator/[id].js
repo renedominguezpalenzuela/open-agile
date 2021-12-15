@@ -10,7 +10,8 @@ import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
 // import MenuSuperior from "../components/MenuSuperior";
 
 // import Content01andMenuConfigurator from "../../components/Content01andMenuConfigurator";
-import Content01Main from "../../components/maincontent/Content01Main";
+// import Content01Main from "../../components/maincontent/Content01Main";
+import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
 
 import { servidor_url } from "../../config";
 
@@ -35,14 +36,10 @@ export default function Configurator_Main({ configurator }) {
       </Head>
 
       {/*Contenedor principal*/}
-      <div id="principal" className="row content-fluid ">
-        <MenuFlotanteBoton />
 
-        {/*Area superior  */}
-        <div className="bannermain ">
-          {/* <Content01andMenuConfigurator botones={botones} /> */}
-          <Content01Main botones_configurador={configurator} />
-        </div>
+      <div id="principal" className="container-fluid g-0">
+        <MenuFlotanteBoton />
+        <AreaSuperior fondo="gris" botones_configurador={configurator} />
 
         {/*Footer  */}
         <Footer />

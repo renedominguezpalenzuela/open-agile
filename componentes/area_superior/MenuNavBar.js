@@ -21,7 +21,7 @@ export default function MenuNavBar() {
         <a className="nav-link">
               CRASHKURSE
         </a>
-        </a>
+      </a>
 
         <ul className="dropdown-content text-start color-dropdown animate__animated animate__fadeInUp no-bullets">
 
@@ -88,8 +88,10 @@ export default function MenuNavBar() {
         <div className="separador_menu">/</div>
       </li>
       <li className="nav-item dropdown2  ">
+       <a href="/team/main">
         <a className="nav-link">
               TEAM
+        </a>
         </a>
 
         <ul className="dropdown-content text-start color-dropdown animate__animated animate__fadeInUp no-bullets">

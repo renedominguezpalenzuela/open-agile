@@ -16,7 +16,7 @@ import TextoSimple from "../../components/textosimple";
 
 // import MenuSuperior from "../components/MenuSuperior";
 
-
+import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
 
 
 
@@ -63,16 +63,16 @@ let foto2 = servidor_url + '/img/'+image;
 
 
 {/*Contenedor*/}
-    <div id="principal" className="row content-fluid ">
+
+
+         <div id="principal" className="container-fluid g-0">
 
       <MenuFlotanteBoton />
-    
-    {/*Area superior  */}
+  
+        <AreaSuperior fondo="gris" texto1="Team" texto2={title} texto2a="" />
 
-     <div className="bannermain">
-          <Content01Main texto1="Team" texto2={title} texto2a=""  />
-         
-        </div>
+
+
 
          <TextoBloque01   titulo={title}  texto_parrafo_array={text}  foto2={foto2} /> 
          <TextoSimple    texto={motto} />

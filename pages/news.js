@@ -15,6 +15,9 @@ import Tabla01 from "../components/crashkurse/tabla01";
 
 import FormularioContacto2 from "../components/formulariocontacto2";
 
+//Componentes
+import AreaSuperior from "../componentes/area_superior/AreaSuperior";
+
 //----------------------------------------------------------------------------------------------------------
 //           CRASHKURSE \ CRASHKURS ZUM AGILE COACH
 //----------------------------------------------------------------------------------------------------------
@@ -60,14 +63,12 @@ export default function Home() {
       </Head>
 
       {/*Contenedor*/}
-      <div id="principal" className="row content-fluid ">
-        <MenuFlotanteBoton />
 
-        {/*Area superior  */}
-        <div className="bannermain">
-          <Content01Main texto1="" texto2="" texto2a="" formulario_contacto={true} />
-      
-        </div>
+      <div id="principal" className="container-fluid g-0">
+   <MenuFlotanteBoton />
+        <AreaSuperior fondo="gris" texto1="" texto2="" texto2a="" formulario_contacto={true}/>
+
+
 
       
         <TextoBloque01 titulo={titulo3} texto_parrafo_array={texto01} />

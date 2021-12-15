@@ -1,9 +1,10 @@
-import { servidor_url } from "../config";
 import Head from "next/head";
 import Image from "next/image";
+// import styles from "../styles/Home.module.css";
+import LeftColumnColor from "../components/LeftColumnColor";
 
-//Componentes
-import AreaSuperior from "../componentes/area_superior/AreaSuperior";
+import MenuFlotante from "../components/MenuFlotante";
+import Footer from "../components/Footer";
 
 import Content02Cursos from "../components/Content02Cursos";
 import Content03 from "../components/Content03";
@@ -13,8 +14,12 @@ import Content05 from "../components/Content05";
 import Card01Lista from "../components/Card01Lista";
 import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
 
-import MenuFlotante from "../components/MenuFlotante";
-import Footer from "../components/Footer";
+// import MenuSuperior from "../components/MenuSuperior";
+
+// import Content01andMenuWithButton from "../components/Content01andMenuWithButton";
+import Content01Main from "../components/maincontent/Content01Main";
+
+import { servidor_url } from "../config";
 
 //----------------------------------------------------------------------------------------------------------
 //            Pagina inicial principal
@@ -25,7 +30,7 @@ export default function Home({
   servicios,
   blogs,
   botones_configurador,
-  vlog,
+  vlog
 }) {
   return (
     <>
@@ -37,9 +42,12 @@ export default function Home({
         <script async src="js/menu.js" />
       </Head>
 
-      <div id="principal" className="container-fluid g-0">
+      {/*Contenedor*/}
+      <div id="principal" className="row content-fluid ">
         <MenuFlotanteBoton />
-        <AreaSuperior fondo="gris" texto1="OPEN AGILE" texto2="FOR BETTER WORK" botones_configurador={botones_configurador} iconos={true} />
+
+        {/*Area superior  */}
+        <Content01Main texto1="OPEN AGILE" texto2="FOR BETTER WORK" botones_configurador={botones_configurador} iconos={true} />
 
         {/*Cards CRASHKURSE  */}
         <Content02Cursos cursos={cursos} />
@@ -51,14 +59,14 @@ export default function Home({
         <Content04 lista_cards={blogs} />
 
         {/*Carrousel  */}
-        <Content05 datos={vlog} />
+        <Content05 datos={vlog}/>
 
         {/* Servicios  */}
         <div id="services" className=" mt-5 ">
           <div className="row justify-content-center font_title_seccion mt-1 ms-4">
             LEISTUNGEN
           </div>
-          <Card01Lista lista_cards={servicios} titulo_magenta={true} />
+          <Card01Lista lista_cards={servicios} titulo_magenta={true}/>
         </div>
 
         {/*Footer  */}
@@ -99,7 +107,7 @@ export const getServerSideProps = async (context) => {
       servicios,
       blogs,
       botones_configurador,
-      vlog,
+      vlog
     },
   };
 };

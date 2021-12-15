@@ -5,7 +5,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Content01Text from "./Content01Text";
-import MenuNavBar from "./MenuNavBar";
+import MenuNavBar from "../componentes/area_superior/MenuNavBar";
 
 import { servidor_url } from "../config";
 import Link from "next/link";

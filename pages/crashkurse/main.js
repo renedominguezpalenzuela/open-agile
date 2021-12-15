@@ -15,6 +15,8 @@ import Content01Main from "../../components/maincontent/Content01Main";
 
 import { servidor_url } from "../../config";
 
+import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
+
 //----------------------------------------------------------------------------------------------------------
 //            Pagina inicial principal
 //----------------------------------------------------------------------------------------------------------
@@ -49,15 +51,13 @@ export default function Home({cursos}) {
         <script async src={`${servidor_url}/js/menu.js`} />
       </Head>
 
-      {/*Contenedor principal*/}
-      <div id="principal" className="row content-fluid ">
-        <MenuFlotanteBoton />
+   
+         <div id="principal" className="container-fluid g-0">
 
-        {/*Area superior  */}
-        <div className="bannermain">
-          <Content01Main texto1={titulo1} texto_parrafo_blanco={texto_parrafo_array} firma={[ "Dein Open Agile Team"," for better work" ]}/>
-         
-        </div>
+      <MenuFlotanteBoton />
+  
+        <AreaSuperior fondo="gris" texto1={titulo1} texto_parrafo_blanco={texto_parrafo_array} firma={[ "Dein Open Agile Team"," for better work" ]} />
+
 
     
          {/*Cards CRASHKURSE  */}

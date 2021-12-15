@@ -1,4 +1,13 @@
 .bannermain {
+  display: grid;
+
+  grid-template-columns: 12% 75% 10%;  /*tres columnas de igual ancho*/
+  grid-template-rows: 15% 75%; /*total de filas depende de cantidad elementos*/
+  /* gap: 1em; */
+  /* row-gap: 1em; */
+
+
+
   background-size: auto, cover;
   height: 100vh; 
   max-height: 100vh;
@@ -51,6 +60,13 @@
   background-size: auto, cover;
   height: 100vh; 
   max-height: 100vh;
+  display: grid;
+
+  grid-template-columns: 10% 78% 10%;  /*tres columnas de igual ancho*/
+  grid-template-rows: 15% 15%; /*total de filas depende de cantidad elementos*/
+  /* gap: 1em;
+  row-gap: 1em; */
+
   
   /* height: auto important; */
   /* min-height:max-content !important; */

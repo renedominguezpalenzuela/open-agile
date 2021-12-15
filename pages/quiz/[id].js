@@ -19,7 +19,7 @@ import Tabla03 from "../../components/crashkurse/tabla03";
 import Card01Lista from "../../components/Card01Lista";
 import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
 
-
+import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
 
 
 
@@ -85,6 +85,8 @@ const {titulo, number,question, answers, correct_answer, next_link,
 
         
      </div>
+
+     
 
     {/*Footer  */}
     {/*  <Footer />   */}

@@ -21,6 +21,8 @@ import TextoBloque01 from "../../components/textobloque01";
 
 // import MenuSuperior from "../components/MenuSuperior";
 
+import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
+
 
 
 
@@ -70,15 +72,12 @@ const { titulo1, titulo2,titulo2a, titulo3, titulo4, texto01,texto02 , texto03 }
 
      
   {/*Contenedor*/}
-  <div id="principal" className="row content-fluid ">
 
-    <MenuFlotanteBoton />
-    
-    {/*Area superior  */}
-    <div className="bannermain">
-      <Content01Main texto1={titulo2+" "+titulo2a } texto_parrafo_blanco={texto01}  />
-    </div>
+    <div id="principal" className="container-fluid g-0">
+  
+        <AreaSuperior fondo="gris" texto1={titulo2+" "+titulo2a } texto_parrafo_blanco={texto01}  />
 
+   
     <TextoBloque01   titulo={titulo3}  texto_parrafo_array={texto01} />
 
 

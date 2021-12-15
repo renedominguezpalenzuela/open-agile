@@ -49,3 +49,52 @@
     clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
  
 }
+
+
+
+img.grayscale {
+  transition: all 0.1s linear;
+  filter: gray  opacity(20%); /* IE6-9 */
+  -webkit-filter: grayscale(100%)  opacity(20%); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(100%) opacity(20%);/* Microsoft Edge and Firefox 35+ */
+  /* filter: opacity(20%); */
+  
+}
+
+img.grayscale:hover {
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
+
+
+.img-sponsors1 {
+  height: 7.5vw;
+}
+
+.img-sponsors2 {
+  height: 7.8vw;
+}
+
+
+.img-sponsors3 {
+  height: 8.7vw;
+}
+
+.img-sponsors4 {
+  width: 15vw;
+}
+
+.img-sponsors5 {
+  height: 7.5vw;
+}
+
+.img-sponsors6 {
+  height: 5vw;
+}
+
+
+
+.img-blogs {
+  max-width: 500px;
+  /* height: 20vw; */
+}
