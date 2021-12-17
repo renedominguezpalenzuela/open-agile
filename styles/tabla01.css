@@ -297,6 +297,10 @@
  
 }
 
+.image-tabla-estrecho {
+  width: 100%;
+}
+
 
 
   
@@ -309,6 +313,15 @@
   color: #24325a;
 }
 
+
+  
+.tabla-titulo-estrecho {
+  /* margin-top: 5vh; */
+  padding-bottom: 0vh;   
+  font-size: 1.5em;
+  font-family: Montserrat-bold;
+  color: #24325a;
+}
 
 .position-celda-imagen-left {
   position: relative;
