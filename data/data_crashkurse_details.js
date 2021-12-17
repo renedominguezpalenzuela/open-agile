@@ -76,16 +76,12 @@ export const crashkurse_details = [
           'Das Buch "Crashkurs Selbstorganisation in Agilen Teams“',
           'Begleitetes Buddy-Programm', 
           '2 Stunden individuelle Supervision', 
-          'Fotoprotokoll & Screenshots']
+          'Fotoprotokoll & Screenshots',
+          'KOSTEN','4.790,- Euro netto (zzgl. 19% USt)'
+          ]
       },
 
-       {
-        "id_tabla":"6",
-        "titulo":"KOSTEN",
-        "image":"crashkurse/image6.jpg",
-        "tipo_texto":"1",
-        "texto":[ "4.790,- Euro netto (zzgl. 19% USt)"]
-      },
+       
 
 
     ],
@@ -239,16 +235,8 @@ export const crashkurse_details = [
            '2 Tage Crashkurs remote oder vor Ort möglich (Do. / Fr. oder Fr. / Sa.)',
                     'Zertifikat "Agile Facilitator"',
                     'Das Buch "Crashkurs Selbstorganisation in Agilen Teams"',
-                    'Fotoprotokoll & Screenshots']
-      },
-
-       {
-        "id_tabla":"5",
-        "titulo":"KOSTEN",
-        "image":"crashkurse/image6.jpg",
-        "tipo_texto":"1",
-        "texto":[ "1.190,- Euro netto (zzgl. 19% USt)"]
-      },
+                    'Fotoprotokoll & Screenshots', 'KOSTEN', '1.190,- Euro netto (zzgl. 19% USt)']
+      }
 
 
     ],
@@ -396,16 +384,8 @@ export const crashkurse_details = [
            '2 Tage Crashkurs remote oder vor Ort möglich (Do. / Fr. oder Fr. / Sa.)',
                     'Zertifikat "Agile Facilitator"',
                     'Das Buch "Crashkurs Selbstorganisation in Agilen Teams"',
-                    'Fotoprotokoll & Screenshots']
-      },
-
-       {
-        "id_tabla":"5",
-        "titulo":"KOSTEN",
-        "image":"crashkurse/image6.jpg",
-        "tipo_texto":"1",
-        "texto":[ "1.190,- Euro netto (zzgl. 19% USt)"]
-      },
+                    'Fotoprotokoll & Screenshots', 'KOSTEN', '1.190,- Euro netto (zzgl. 19% USt)']
+      }
 
 
     ],

@@ -15,6 +15,7 @@ export default function Tabla01({
         {items_tabla != undefined &&
           items_tabla.length > 0 &&
           items_tabla.map((unItem, index) => {
+            
             return (
               <>
                {fila( index, unItem.id_tabla, unItem.titulo, unItem.image, unItem.texto    )}
@@ -45,7 +46,15 @@ const fila = (index, id_tabla, titulo, img, texto) => {
               <div className="tabla-titulo text-start   justificar">
                 {titulo}
               </div>
-              <p className="text-start">{texto}</p>
+
+              {texto.map((unaLinea, index)=>(
+                                              <>
+                                               <div className="text-start ">{unaLinea}</div>
+                                                {unaLinea==="<br>"?"<br/>":""}
+                                              </>
+                         )
+              )}
+
             </div>
             </div>
           </>
@@ -57,10 +66,22 @@ const fila = (index, id_tabla, titulo, img, texto) => {
                <img className="image-tabla sombra_left" src={`${servidor_url}/img/${img}`} alt="" />
 
               </div>
-              <div className="tabla-titulo  text-end  justificar">
+              <div className="tabla-titulo  text-start  justificar">
                 {titulo}
               </div>
-              <p className="text-end">{texto}</p>
+              
+
+                 {texto.map((unaLinea, index)=>(
+                                              <>
+                                                <div className="text-start ">{unaLinea}</div>
+                                                {/* <div className="text-end ">{unaLinea}</div> */}
+                                                {unaLinea==="<br>"?"<br/>":""}
+                                              </>
+                         )
+              )}
+          
+            
+             
             </div>
             </div>
           </>
