@@ -15,6 +15,7 @@ import "../styles/formulario.css";
 import "../styles/checkbox.css";
 import "../styles/iconos.css";
 import "../styles/areasuperior.css";
+import "../styles/navbarmobil.css";
 
 
 
@@ -63,6 +64,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false; /* eslint-disable import/first */
 
 library.add(fab, faPhone, faEnvelope, faBars, faArrowLeft, faArrowRight, faLongArrowAltRight);
+
 
 
 // Client-side cache, shared for the whole session of the user in the browser.

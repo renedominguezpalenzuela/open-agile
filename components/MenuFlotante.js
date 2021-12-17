@@ -14,9 +14,9 @@ export default function MenuFlotante() {
   return (
 <>
 
-       <Head>
+       {/* <Head>
         <script async src="js/menu.js" />
-      </Head> 
+      </Head>  */}
 {/* panel-flotante */}
 
 

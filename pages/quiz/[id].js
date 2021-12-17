@@ -119,12 +119,12 @@ const {
       <div id="principal" className="bannermain-quiz">
         <MenuFlotanteBoton />
 
-        <div className="item-logo border d-flex align-items-center justify-content-center">
+        <div className="item-logo  d-flex align-items-center justify-content-center">
           <Logo />
         </div>
 
         {/*    <div className="row d-none d-lg-block "> */}
-        <div className="item-menu border d-flex align-items-center justify-content-center">
+        <div className="item-menu  d-flex align-items-center justify-content-center">
           <MenuNavBar />
         </div>
 
@@ -234,9 +234,9 @@ export const getServerSideProps = async (context) => {
         
 
 
-          <div className="border  item-titulo my_quiz ">
+          <div className="  item-titulo my_quiz ">
           
-            <div className="row border g-0  my_quiz_titulo  ">
+            <div className="row  g-0  my_quiz_titulo  ">
               {titulo != undefined && titulo != "" && (
                 <div className="row  text-center mt-3  ">
                   <h3 className="font_quiz_line1  "> {titulo}</h3>

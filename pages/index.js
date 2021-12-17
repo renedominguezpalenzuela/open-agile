@@ -27,6 +27,8 @@ export default function Home({
   botones_configurador,
   vlog,
 }) {
+
+  // console.log(process.env.NEXT_PUBLIC_ANALYTICS_ID);
   return (
     <>
       <Head>
@@ -36,6 +38,8 @@ export default function Home({
         <script async src="js/chat.js" />
         <script async src="js/menu.js" />
       </Head>
+
+      
 
       <div id="principal" className="container-fluid g-0">
       

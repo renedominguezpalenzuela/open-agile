@@ -11,7 +11,7 @@ export default function Titulo({ texto1, texto2, texto2a }) {
       
 
         {/*    <div className="row d-none d-lg-block "> */}
-        <div className=" ps-3 pe-3  border border-dark">
+        <div className=" ps-3 pe-3 ">
           <div className="font_title_secundario font_title_purple mt-5">
             {texto1}
           </div>

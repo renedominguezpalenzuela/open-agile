@@ -10,29 +10,6 @@ import { pink } from '@mui/material/colors';
 
 
 
-// import { withStyles } from '@material-ui/core/styles';
-// import theme from '../src/theme';
-
-// const styles = {
-//     root: {                           // - The TextField-root
-//         border: 'solid 3px #0ff',     // - For demonstration: set the TextField-root border
-//         padding: '3px',               // - Make the border more distinguishable
-
-//         // (Note: space or no space after & matters. See SASS "parent selector".)
-//         '& .MuiOutlinedInput-root': {  // - The Input-root, inside the TextField-root
-//             '& fieldset': {            // - The <fieldset> inside the Input-root
-//                 borderColor: 'pink',   // - Set the Input border
-//             },
-//             '&:hover fieldset': {
-//                 borderColor: 'yellow', // - Set the Input border when parent has :hover
-//             },
-//             '&.Mui-focused fieldset': { // - Set the Input border when parent is focused
-//                 borderColor: 'green',
-//             },
-//         },
-//     },
-// };
-
 export default function FormularioContacto2() {
 
    const [checked1, setChecked1] = useState(false);

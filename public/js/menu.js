@@ -1,4 +1,6 @@
 var boton = document.getElementById("boton_abrir_menu");
+var boton2 = document.getElementById("boton_abrir_menu2");
+
 var contendor_boton = document.getElementById("panel_abrir_menu");
 
 window.addEventListener("load", (event) => {
@@ -28,6 +30,25 @@ window.addEventListener("load", (event) => {
 
     });
   }
+
+
+   if (document.getElementById("boton_abrir_menu2")) {
+
+    
+  document
+    .getElementById("boton_abrir_menu2")
+    .addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      document.getElementById("mySidepanel").style.width = "250px";
+      document.getElementById("panel_abrir_menu").style.visibility = "hidden";
+      document.getElementById("principal").classList.add("myblur");
+
+    });
+  }
+
+
 });
 
 window.addEventListener(

@@ -200,3 +200,8 @@ img.grayscale:hover {
   max-width: 500px;
   /* height: 20vw; */
 }
+
+.letra_chica {
+  font-size: 0.8rem;
+  color: #e42078;
+}

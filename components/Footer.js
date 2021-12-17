@@ -5,36 +5,24 @@ import Link from "next/link";
 
 import FormularioContacto2 from "./formulariocontacto2";
 
-
-
-
 export default function Footer() {
+
+  // console.log('version '+process.env.NEXT_PUBLIC_VER)
   return (
     <>
       <footer id="myfooter" className="mt-5 no-gutter">
-        <div
-          id="rowfoot01"
-          className="row   color_background footer_path ps-2 mb-5 mt-5 pt-5">
-          <FormularioContacto2 />
-        </div>
+      <div id="rowfoot01" className="row   color_background footer_path ps-2 mb-5 mt-5 pt-5">
+        <FormularioContacto2 />
+      </div>
 
-        <div
-          id="rowfoot05"
-          className="row  color_background g-5 ps-5 pe-5 pb-5 ">
+       <div id="rowfoot05" className="row  color_background g-5 ps-5 pe-5 pb-3 ">
           <div className="col  d-flex  justify-content-center">
             <a href="\">
-              <img
-                className="img-fluid logo-img-footer2"
-                src={`${servidor_url}/img/logo/5.svg`}
+              <img className="img-fluid logo-img-footer2" src={`${servidor_url}/img/logo/5.svg`}
               />
             </a>
 
-            {/* <div className="font_facit_text_very_small mt-1">
-              Die Open Agile hilft Unternehmen dabei, ihre MitarbeiterInnen zu
-              entwickeln und Kulturen zu transformieren. Mit über 40 Jahren
-              Erfahrung und über 1000 ausgebildeten Trainerinnen und Trainern
-              zählt sie zu den renommiertesten Akademien Deutschlands.
-            </div> */}
+     
           </div>
 
           <div className="col ">
@@ -140,7 +128,7 @@ export default function Footer() {
                   AGBs
                 </a> */}
 
-                <Link href="/doc/agbs.pdf" download >
+                <Link href="/doc/agbs.pdf" download>
                   <a target="_blank">AGBs</a>
                 </Link>
               </div>
@@ -150,11 +138,9 @@ export default function Footer() {
                   Datenschutz
                 </a> */}
 
-                 <Link href="/docview02" >
+                <Link href="/docview02">
                   <a target="_blank">Datenschutz</a>
                 </Link>
-
-
               </div>
 
               <div>
@@ -162,14 +148,19 @@ export default function Footer() {
                   Impressum
                 </a> */}
 
-                  <Link href="/docview03"  >
+                <Link href="/docview03">
                   <a target="_blank">Impressum</a>
                 </Link>
-
               </div>
             </div>
           </div>
+
+           <div className="row mt-5 d-flex  justify-content-center letra_chica g-0">
+         {`test version: ${process.env.NEXT_PUBLIC_VER}`}
         </div>
+        </div>
+
+       
       </footer>
     </>
   );
