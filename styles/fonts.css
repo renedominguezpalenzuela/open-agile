@@ -22,6 +22,44 @@
     src: url("/fonts/Montserrat-BoldItalic.ttf");
   }
 
+  /* Monserrar */
+  @font-face {
+    font-family: Montserrat-MediumItalic;
+    src: url("/fonts/Montserrat-MediumItalic.ttf");
+  }
+
+
+    /* Monserrar */
+    @font-face {
+      font-family: Montserrat-ExtraBoldItalic;
+      src: url("/fonts/Montserrat-ExtraBoldItalic.ttf");
+    }
+  
+  
+
+
+ 
+ 
+
+  @font-face {
+    font-family: Montserrat-ExtraBold;
+    src: url("/fonts/Montserrat-ExtraBold.ttf");
+  }
+
+
+  @font-face {
+    font-family: Montserrat-Black;
+    src: url("/fonts/Montserrat-Black.ttf");
+  }
+
+
+  @font-face {
+    font-family: Montserrat-SemiBold;
+    src: url("/fonts/Montserrat-SemiBold.ttf");
+  }
+
+
+
 
 /* Seccion 01 Principal */
   

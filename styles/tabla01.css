@@ -180,16 +180,19 @@
   .titulo1-tabla3-01 {
    
     font-size: 2.5vw;
-    font-family: Montserrat-bold;
-    color: #24325a;
+    font-family: Montserrat-ExtraBoldItalic;
+    color: #243A78;
+    letter-spacing: 0.1vw;
 
   }
 
   .titulo1-tabla3-02 {
    
     font-size: 2.5vw;
-    font-family: Montserrat-bold;
-    color: #e42078;
+    font-family: Montserrat-MediumItalic;
+    color: #F82D7C;
+    line-height: 7vh;
+    letter-spacing: 0.1vw;
 
   }
 
@@ -252,30 +255,32 @@
   border: 1px none black;
 }
 
+/* Texto a la izquierda */
 .mask_left    {
   border-style: none;
   border-width: 0 0 1px 1px;
   position: relative;
-  float: right;
+  float: right; /*Desplaza la imagen a la derecha*/
   clear: none;
-  right: -5px;
+  right: -40px;  /*Ajusta deplazamiento de la imagen a la derecha*/
   top: -15px;
   background-color: white;
   width: 55%;
-  height: 25vw;
+  height: 28vw; /*Alto de la Pata de la L*/
 }
 
+/* Texto a la derecha */
 .mask_right     {
   border-style: none;
   border-width: 0 1px 1px 0;
   position: relative;
-  float: left;
+  float: left;/*Desplaza la imagen a la izquierda*/
   clear: none;
-  left: -20px;
+  left: -18px; /*Ajusta deplazamiento de la imagen a la izquierda*/
   top: -15px;
   background-color: white;
   width: 55%;
-  height: 25vw;
+  height: 28vw;/*Alto de la Pata de la L*/
 }
 
 .sombra_right{
@@ -323,20 +328,77 @@
   color: #24325a;
 }
 
+
+/*  --------  Posicion de la Celda completa ---------- */
+/*Posicion de la celda completa*/
 .position-celda-imagen-left {
   position: relative;
-  left:-4vw;
-  width: 85vw!important;
+  left:2vw!important; 
+  width: 80vw!important;
 }
 
 
+/*Posicion y Ancho de la celda completa*/
 .position-celda-imagen-right  {
   position: relative;
-  left:4vw;
-  width: 85vw!important;
+  left: 6vw !important;
+  width: 80vw!important;
 }
 
 
-new-line {
+@media (max-width: 1440px) {
+  .position-celda-imagen-left  {
+    left:2vw!important; 
+    width: 80vw!important;
+  }
+}
+
+
+@media (max-width:1440px) {
+  .position-celda-imagen-right  {
+    left:6vw!important; 
+    width: 80vw!important;
+  }
+}
+
+@media (max-width: 992px) {
+  .position-celda-imagen-left  {
+    left:1vw!important; 
+    width: 80vw!important;
+  }
+}
+
+
+@media (max-width:992px) {
+  .position-celda-imagen-right  {
+    left:3vw!important; 
+    width: 80vw!important;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .position-celda-imagen-left  {
+    left:0vw!important; 
+    width: 80vw!important;
+  }
+}
+
+
+@media (max-width:768px) {
+  .position-celda-imagen-right  {
+    left:1vw!important; 
+  }
+}
+
+/* new-line {
   white-space: pre-line;
+} */
+
+
+.fuente-texto-tabla {
+  font-family:  Montserrat-Regular;
+  color: #686868;
+  /* #686868 */
 }

@@ -1,39 +1,41 @@
 // import styles from "../styles/Home.module.css";
 
-export default function Card04({
-  
-  datos,
- 
-}) {
+export default function Card04({ datos }) {
+  const { id, quartal, date1, date2, day, link } = datos;
 
-  const {id, quartal, date1,  date2,  day, link  } = datos;
-
- 
- 
   return (
-<>
+    <>
+      <div className="  pt-5 pb-5 mb-5 d-flex justify-content-center ">
+        <div class="card text-center my_card-crashkurse ">
+          <div class="card-header  ">
+          
+          <div className="row titulo-card-crashkurse  d-flex justify-content-center">
+             {quartal}. Quartal 
+          </div>
 
-  <div className="  pt-5 pb-5  d-flex justify-content-center ">
-    <div className="card h-100 p-3  card-rounded  my_card m-3">
-      <div className="row mt-3 d-flex justify-content-center  font_card_title subrayar ">{quartal}. Quartal</div>
-      
-      <div className="card-body text-center ">
-       <a href="/contact" className="font_card_fechas">
-        <div className="row d-flex justify-content-center  m-2">{date1}</div>
-        <div className="row d-flex justify-content-center  m-2">{date2}</div>
-       </a> 
-        <div className="row d-flex justify-content-center font_card_title mt-4">{day}</div>
+           <div className="row  subtitulo-card-crashkurse   d-flex justify-content-center">
+              {day}
+            </div>
+
+          </div>
+          <div class="card-body color-body ">
+           <a href="/contact" className="font_card_fechas ">
+              <div className="row  fechas-card-crashkurse d-flex justify-content-center pt-2 m-2">
+                {date1}
+              </div>
+              <div className="row fechas-card-crashkurse d-flex justify-content-center pb-2 m-2">
+                {date2}
+              </div>
+            </a>
+           
+          </div>
+           <a href="/contact">
+          <div class="card-footer card-footer-crashkurse">JETZT AMNELDEN...</div>
+          </a>
+        </div>
       </div>
-
-         {/* <a href={`/${link}/${id}`} > */}
-      <div className="card-footer text-center pb-4 pt-4  ">
-          <a href="/contact" >
-        <button type="button" className="btn    btn-card font-btn-card   ">Jetzt anmelden...</button>
-      </a>
-      </div>
-    </div>
-  </div>
-
-</>
+    </>
   );
 }
+
+

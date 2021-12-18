@@ -400,12 +400,18 @@ i:hover {
   filter: invert(26%) sepia(92%) saturate(2433%) hue-rotate(320deg) brightness(101%) contrast(95%);
 }
 
-.card-footer {
+.card-footer-my-card {
   
 padding: 0.5rem 1rem;
 background-color: rgba(255, 255, 255, 0)!important;
 border-top: 1px solid rgba(255, 255, 255, 0)!important;
  
+}
+
+
+.card.card-footer-my-card {
+  align-self: flex-end;
+  flex: 1 1 auto;
 }
 
 /* Menu */
@@ -553,10 +559,6 @@ ul.no-bullets {
   flex-direction: column;
 }
 
-.card.card-footer {
-  align-self: flex-end;
-  flex: 1 1 auto;
-}
 
 
 .borde_main {

@@ -16,6 +16,8 @@ import "../styles/checkbox.css";
 import "../styles/iconos.css";
 import "../styles/areasuperior.css";
 import "../styles/navbarmobil.css";
+import "../styles/cardscrashkurse.css";
+
 
 
 

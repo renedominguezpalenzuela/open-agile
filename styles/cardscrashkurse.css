@@ -1,0 +1,82 @@
+
+.my_card-crashkurse {
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    z-index: 3;
+    border: 0px !important;
+    width: 20vw;
+    /* height: 14vw; */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+
+
+
+.card-footer-crashkurse {
+  /* padding: 0.5rem 1rem; */
+
+  color: #f82d7c;
+  /* border: 1px solid blue!important;  */
+
+  background-color: rgba(248, 45, 124, 42%) !important;
+
+  /* -webkit-border-radius: 12px!important; 
+    -moz-border-radius: 12px!important; */
+
+  -webkit-border-bottom-left-radius: 12px !important;
+  -webkit-border-bottom-right-radius: 12px !important;
+
+  -moz-border-bottom-left-radius: 12px !important;
+  -moz-border-bottom-right-radius: 12px !important;
+
+  border-bottom-left-radius: 12px !important;
+  border-bottom-right-radius: 12px !important;
+
+  font-family: Montserrat-Bold;
+  font-size: 1vw;
+
+  border: 2px solid #f82d7c;
+}
+
+.card-footer-crashkurse:hover {
+  color: white !important;
+  background-color: #f82d7c !important;
+}
+
+.card-footer-crashkurse:active,
+.card-footer-crashkurse:visited {
+  color: white !important;
+  background-color: rgba(248, 45, 124, 70%) !important;
+  /* background-color: rgba(235, 248, 45, 0.7) !important;  */
+}
+
+
+@media (max-width: 767px) {
+  .my_card-crashkurse {
+    width: 28vw;
+  }
+}
+
+.color-body {
+  background-color: #e9e9f0 !important;
+}
+
+.titulo-card-crashkurse {
+  font-family: Montserrat-Black;
+  font-size: 1.3vw !important;
+  color: #243a78;
+  text-transform: uppercase;
+}
+
+.subtitulo-card-crashkurse {
+  font-family: Montserrat-ExtraBold;
+  font-size: 1vw !important;
+  color: #f82d7c;
+}
+
+.fechas-card-crashkurse {
+  font-family: Montserrat-SemiBold;
+  font-size: 1.6vw !important;
+  line-height: 3vh;
+  color: #243a78;
+}

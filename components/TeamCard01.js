@@ -40,7 +40,7 @@ export default function TeamCard01({
       </div>
 
      
-   <div className="card-footer text-center pb-4  ">
+   <div className="card-footer-my-card text-center pb-4  ">
  
      <a href={`${link}/${id}`} >
         <button type="button" className="btn  ms-2 me-2 w-75 h-100 btn-card font-btn-card rounded-pill  ">Jetzt lesen...</button>

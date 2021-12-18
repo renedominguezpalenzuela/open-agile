@@ -19,7 +19,7 @@ export default function Card01({
   return (
     <>
       <div className="col p-4 " key={id}>
-        <div className="card card-rounded  w-100   my_card ">
+        <div className="card  w-100   my_card ">
           <img className="card-img-top corte_cards img-rounded  " src={`${servidor_url}/img/${imagen}`} alt={texto_alt}   />
 
           <div className="card-body text-center    ">
@@ -37,7 +37,7 @@ export default function Card01({
             )}
           </div>
 
-          <div className="card-footer text-center pb-4  ">
+          <div className="card-footer-my-card text-center pb-4  ">
      
             <a href={`/${link}/${id}`}>
               <button type="button" className="btn  ms-2 me-2 w-75 h-100 btn-card font-btn-card rounded-pill  ">

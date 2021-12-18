@@ -23,20 +23,21 @@ titulo2a
   </div>
 
   {/* Cards */}
-  <div className="row color_background text-center ">
+  <div className="row color_background text-center d-flex   justify-content-center ">
+
 
    {
       crashkurs_date.map ( (unCard, index) => 
       // fecha1={unCard.date1} fecha2={unCard.date2} dias={unCard}
        <>
-        <div key={index} className="col">
+        <div key={index} className="col-lg-2 ms-3 me-3 ">
          <Card04 key={unCard.id} datos={unCard} />
         </div>
        </> 
        
       )
    }
-   
+ 
   </div>
 
 

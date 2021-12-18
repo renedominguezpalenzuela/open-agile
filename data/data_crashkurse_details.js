@@ -43,25 +43,10 @@ export const crashkurse_details = [
         "image":"crashkurse/image4.jpg",
         "tipo_texto":"1",
         "texto":[
-          "Block 1",
-           "Tätigkeitsfeld eines agilen Coaches",
-           "Werte und Prinzipien im agilen Kontext",
-           "Mindset (Ich) und Haltung (Du)",
-           "",
-          "Block 2",
-           "Architektur agiler Netzwerkorganisationen",
-           "Agile Methoden und Prozesse",
-           "Bewährte agile Coaching-Modelle",
-           "",
-           "Block 3",
-           "Entscheidungen & Konflikte: Initiatoren von innovativen Ideen stärken und begleiten im agilen Kontext",
-           "Agile Projektarbeit: Entwicklung und Moderation von agilen Workshops",
-           "Bewährte agile Coaching-Modelle",
-           "",
-           "Block 4",
-            "Remote Work: Fallstricke und geeignete Lösungen in der Zusammenarbeit",
-            "Selbstorganisation mit Workhacks",
-            "Bewährte agile Coaching-Modelle"
+          "Block 1: Tätigkeitsfeld eines agilen Coaches. Werte und Prinzipien im agilen Kontext. Mindset (Ich) und Haltung (Du). ",
+          "Block 2: Architektur agiler Netzwerkorganisationen. Agile Methoden und Prozesse. Bewährte agile Coaching-Modelle.",
+          "Block 3: Entscheidungen & Konflikte: Initiatoren von innovativen Ideen stärken und begleiten im agilen Kontext. Agile Projektarbeit: Entwicklung und Moderation von agilen Workshops. Bewährte agile Coaching-Modelle.",
+          "Block 4: Remote Work: Fallstricke und geeignete Lösungen in der Zusammenarbeit. Selbstorganisation mit Workhacks. Bewährte agile Coaching-Modelle"
             ],
       },
 
@@ -202,28 +187,11 @@ export const crashkurse_details = [
         "image":"crashkurse/image4.jpg",
         "tipo_texto":"1",
         "texto":[
-         "Einführung in die agile Arbeitswelt",
-         "Kurzer Schulterblick auf das Agile Manifest",
-         "Überblick agiler Projektmanagement-Methoden",
-         "Vor- und Nachteile agiler Vorgehensweisen",
-           "",
-          "Coaching & Facilitation",
-           "Tipps und Tricks für eine gute Moderation",
-           "Gewaltfreie Kommunikation (GFK)",
-           "Entscheidungsprozesse im Team begleiten",
-           "Feedback-Methoden & Konfliktmanagement",
-           "Bewährte agile Coaching-Modelle nutzen",
-           "",
-           "Agile Projekte begleiten",
-             "Von Start bis an Ziel -> Der Prozess",
-              "Agile Prozesse & Methoden kennenlernen",
-               "Initiatoren von neuen Ideen unterstützen",
-           "",
-           "Remote Work",
-             "Bewährte Tools für Remote-Work nutzen",
-              "Agile Spiele remote durchführen",
-              "Fallstricke in der Praxis und geeignete Lösungen"
-            ],
+         "Einführung in die agile Arbeitswelt: Kurzer Schulterblick auf das Agile Manifest. Überblick agiler Projektmanagement-Methoden. Vor- und Nachteile agiler Vorgehensweisen.",        
+         "Coaching & Facilitation: Tipps und Tricks für eine gute Moderation. Gewaltfreie Kommunikation (GFK). Entscheidungsprozesse im Team begleiten. Feedback-Methoden & Konfliktmanagement, Bewährte agile Coaching-Modelle nutzen.",         
+         "Agile Projekte begleiten: Von Start bis an Ziel -> Der Prozess. Agile Prozesse & Methoden kennenlernen. Initiatoren von neuen Ideen unterstützen.",         
+         "Remote Work: Bewährte Tools für Remote-Work nutzen. Agile Spiele remote durchführen. Fallstricke in der Praxis und geeignete Lösungen."
+         ],
       },
 
       {
@@ -352,26 +320,13 @@ export const crashkurse_details = [
         "image":"crashkurse/image4.jpg",
         "tipo_texto":"1",
         "texto":[
-        "Einführung in die agile Welt",
-         "Kurzer Schulterblick auf das Agile Manifest",
-         "Überblick agiler Projektmanagement-Methoden",
-         "Vor- und Nachteile agiler Vorgehensweisen",
-           "",
-         "Der Scrum-Guide als Richtschnur",
-           "To	Wann macht Scrum Sinn?",
-           "Werte, Prinzipien & Regeln",
-           "Scrum Rollen (PO, SM, Entwicklungs-Team)",
-           "Ereignisse und Artefakte",
-           "",
-           "Selbstorganisation im Scrum-Team mit Workhacks",
-            "Entscheidungen treffen im Scrum-Team",
-                          "Konflikte souverän lösen ",
-                          "Einführung in Kanban",
-           "",
-           "Coaching & Facilitation",
-             "Bewährte agile Coaching-Modelle",
-                          "Scrum Events professionell moderieren",
-                          "Häufige Fallstricke und praktische Lösungen im Scrum-Prozess"
+        "Einführung in die agile Welt: Kurzer Schulterblick auf das Agile Manifest. Überblick agiler Projektmanagement-Methoden. Vor- und Nachteile agiler Vorgehensweisen.",
+         
+         "Der Scrum-Guide als Richtschnur: To	Wann macht Scrum Sinn?. Werte, Prinzipien & Regeln, Scrum Rollen (PO, SM, Entwicklungs-Team). Ereignisse und Artefakte.",
+           
+           "Selbstorganisation im Scrum-Team mit Workhacks: Entscheidungen treffen im Scrum-Team. Konflikte souverän lösen. Einführung in Kanban.",
+           
+           "Coaching & Facilitation: Bewährte agile Coaching-Modelle. Scrum Events professionell moderieren. Häufige Fallstricke und praktische Lösungen im Scrum-Prozess."
             ],
       },
 

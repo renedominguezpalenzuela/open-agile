@@ -50,7 +50,7 @@ const fila_dispositivo_ancho = (index, id_tabla, titulo, img, texto) => {
           <>
           <div className=" m-5 w-75 position-celda-imagen-left ">
             <div className="contenedor_tabla  ">
-              <div className="mask_right me-5  d-flex   justify-content-end">
+              <div className="mask_right pe-4  d-flex   justify-content-end">
                <img className="image-tabla  sombra_right" src={`${servidor_url}/img/${img}`} alt="" />
               </div>
               <div className="tabla-titulo text-start   justificar">
@@ -59,7 +59,7 @@ const fila_dispositivo_ancho = (index, id_tabla, titulo, img, texto) => {
 
               {texto.map((unaLinea, index)=>(
                                               <>
-                                               <div className="text-start  ">{unaLinea}</div>
+                                               <div className="text-start  fuente-texto-tabla   ">{unaLinea}</div>
                                                 {unaLinea==="<br>"?"<br/>":""}
                                               </>
                          )
@@ -72,23 +72,24 @@ const fila_dispositivo_ancho = (index, id_tabla, titulo, img, texto) => {
           <>
           <div className=" m-5 w-75 position-celda-imagen-right pb-5 ">
             <div className="contenedor_tabla ">
-              <div className="mask_left ps-3 d-flex   justify-content-start">
+              <div className="mask_left  d-flex   justify-content-start">
                <img className="image-tabla sombra_left" src={`${servidor_url}/img/${img}`} alt="" />
 
               </div>
-              <div className="tabla-titulo  text-start  justificar">
+              <div className="tabla-titulo  text-end  justificar">
                 {titulo}
               </div>
               
-
+              
                  {texto.map((unaLinea, index)=>(
                                               <>
-                                                <div className="text-start ">{unaLinea}</div>
+                                                <div className="text-end fuente-texto-tabla  ">{unaLinea}</div>
                                                 {/* <div className="text-end ">{unaLinea}</div> */}
                                                 {unaLinea==="<br>"?"<br/>":""}
                                               </>
                          )
-              )}
+                  )}
+              
           
             
              
