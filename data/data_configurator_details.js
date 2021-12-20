@@ -29,7 +29,7 @@ export const configurator_details = [
    {
     "id": "5",
     "botones": [ {"texto": "Leistungen",   "link":"/#services"},
-                   {"texto": "Kontaktformular", "link":"/contact"}],
+                   {"texto": "Kontaktformular", "link":"/#rowfoot01"}],
   },
 
   {
@@ -37,7 +37,7 @@ export const configurator_details = [
     "botones": [ {"texto": "Blog",   "link":"/#blog"},
                    {"texto": "VLog", "link":"/vlog"},
                    {"texto": "News", "link":"/news"},
-                   {"texto": "Kontaktformular", "link":"/contact"}],
+                   {"texto": "Kontaktformular", "link":"/#rowfoot01"}],
   },
   {
    "id": "7",
@@ -69,7 +69,7 @@ export const configurator_details = [
 
 {
     "id": "11",
-    "botones": [ {"texto": "Gerne helfen wir dir in deiner individuellen Entwicklung: Kontaktformular",   "link":"/contact"},
+    "botones": [ {"texto": "Gerne helfen wir dir in deiner individuellen Entwicklung: Kontaktformular",   "link":"/#rowfoot01"},
                  
                    ],
 
