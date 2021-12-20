@@ -144,7 +144,7 @@
   grid-column: 9/ 11;
   grid-row: 5/6;
   justify-self: center;
-  align-self: flex-start;
+  /* align-self: flex-start; */
 }
 
 .item-check {
@@ -213,7 +213,7 @@
   grid-column: 2/ 3;
   grid-row: 7/8;
   justify-self: center;
-  align-self: flex-start;
+  /* align-self: flex-start; */
 }
 
 .item-check {

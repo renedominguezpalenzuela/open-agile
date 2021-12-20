@@ -602,9 +602,9 @@
     font-family: Montserrat-ExtraBold;
     color: #F82D7C;
     /* text-align: left; */
-    font-size: 1.5vw;
+    font-size: 0.95rem;
   
-    font-weight: 200;
+    /* font-weight: 200; */
   
     /* letter-spacing: 2px; */
     -webkit-font-smoothing: antialiased;
@@ -656,7 +656,7 @@
   
 .font_facit_text2 {
     font-family: Montserrat-Regular;
-    color: #ffffff;
+    color: #e50067;
   
     font-size: 16px;
     /* font-weight: 400; */

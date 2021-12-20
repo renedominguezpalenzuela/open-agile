@@ -19,14 +19,14 @@ export default function IconosIzquierda() {
 {/* className="circulo iconos" */}
     <div className="row  mt-4 pt-2 text-center ">
       <a href="mailto:info@open-agile.de">
-        <FontAwesomeIcon icon="envelope" width="25" color="white" className=" mylinkhoover" />
+        <FontAwesomeIcon icon="envelope" width="25" color="#e50067" className=" mylinkhoover2" />
       </a>
     </div>
 
     <div className="row  mt-3 text-center ">
       <a href="tel:+49 (0) 421 22347567">
  
-        <FontAwesomeIcon icon="phone" width="25" color="white" className=" mylinkhoover" />
+        <FontAwesomeIcon icon="phone" width="25" color="#e50067" className=" mylinkhoover2" />
       </a>
     </div>
   </div>

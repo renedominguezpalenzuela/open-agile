@@ -716,6 +716,11 @@ ul.no-bullets {
 }
 
 
+.mylinkhoover2:hover {
+  color: #24325a !important;
+}
+
+
 .linea_blanca_footer {
   height:1px;
    
