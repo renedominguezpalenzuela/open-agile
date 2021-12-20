@@ -1,0 +1,32 @@
+
+.color-body-modal{
+    /* background-color: #F6F6F6; */
+    background-color: #F6F6F6!important;
+  }
+
+
+  .titulo-modal {
+      font-family: Montserrat-SemiBold;
+      color: #243A78;
+      font-size: 1.5vw;
+  }
+
+
+  .ancho-edit2 {
+    width: 100% !important;
+  }
+  
+
+  .texto-email{
+    font-family: Montserrat-Regular;
+      color: #243A78;
+      font-size: 0.9vw;
+      text-align: left;
+  }
+
+  
+  .privacy-modal {
+    font-family: Montserrat-SemiBold;
+    color: #243A78;
+    font-size: 1vw;
+}

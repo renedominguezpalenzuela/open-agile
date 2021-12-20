@@ -18,7 +18,7 @@ export default function Card01({
 }) {
   return (
     <>
-      <div className="col p-4 " key={id}>
+      <div className="col p-4 d-flex justify-content-center " key={id}>
         <div className="card  w-100   my_card ">
           <img className="card-img-top corte_cards img-rounded  " src={`${servidor_url}/img/${imagen}`} alt={texto_alt}   />
 

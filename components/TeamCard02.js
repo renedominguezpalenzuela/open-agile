@@ -25,7 +25,7 @@ export default function TeamCard02({
               <div className="card  shadow bg-body m-5 p-5 dimension_card_carrusel_team  ">
                 <div className="row ">
                 <a href={`${link}/${id}`} >
-                   <img src={`img/${imagen}`} alt={"${texto_alt}"} className=" img_carrusel " alt="..." />
+                   <img src={`img/${imagen}`} alt={"${texto_alt}"} className=" img_carrusel-team " alt="..." />
                 </a>   
                 </div>
 

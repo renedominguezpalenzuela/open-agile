@@ -17,13 +17,24 @@
   }
 
 .img_carrusel {
-    position: relative;
+  position: relative;
     /* left: -420px; */
     left: -43vw;
     width: 33vw;
     height: 100%;
 }  
 
+
+
+.img_carrusel-team {
+  position: relative;
+  
+  top:-10px;
+  /* left: -420px; */
+  left: -33vw;
+  width: 33vw;
+  height: 100%;
+}  
 
 .video_carrusel {
   position: relative;

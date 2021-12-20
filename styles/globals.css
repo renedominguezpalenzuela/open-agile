@@ -526,7 +526,7 @@ ul.no-bullets {
 
 .my_card {
   /* max-width: 330px; */
-  max-width: 200vw;
+  max-width: 60vw;
   height: 100%;
   display: flex;
   -webkit-border-radius: 30px; 
@@ -684,8 +684,14 @@ ul.no-bullets {
 .font-btn-card {
   font-family: Montserrat-Bold;
   color: #ffffff;
-  font-size: 1.25vw;
+  font-size: 1.2vw;
  
+}
+
+@media (max-width: 767px) {
+  .font-btn-card {
+    font-size: 2.5vw;
+  }
 }
 
 

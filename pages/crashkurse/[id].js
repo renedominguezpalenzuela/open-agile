@@ -73,6 +73,9 @@ export default function Home({ curso }) {
 
       {/*Menu Lateral oculto  */}
       <MenuFlotante />
+
+
+
     </>
   );
 }
