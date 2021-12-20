@@ -16,23 +16,30 @@
     src: url("/fonts/Montserrat-Bold.ttf");
   }
   
-/* Monserrar */
+
   @font-face {
     font-family: Montserrat-BoldItalic;
     src: url("/fonts/Montserrat-BoldItalic.ttf");
   }
 
-  /* Monserrar */
+
   @font-face {
     font-family: Montserrat-MediumItalic;
     src: url("/fonts/Montserrat-MediumItalic.ttf");
   }
 
 
-    /* Monserrar */
+
     @font-face {
       font-family: Montserrat-ExtraBoldItalic;
       src: url("/fonts/Montserrat-ExtraBoldItalic.ttf");
+    }
+  
+
+    
+    @font-face {
+      font-family: Montserrat-SemiBoldItalic;
+      src: url("/fonts/Montserrat-SemiBoldItalic.ttf");
     }
   
   
@@ -51,6 +58,14 @@
     font-family: Montserrat-Black;
     src: url("/fonts/Montserrat-Black.ttf");
   }
+
+
+  @font-face {
+    font-family:  Montserrat-BlackItalic;
+    src: url("/fonts/Montserrat-BlackItalic.ttf");
+  }
+
+ 
 
 
   @font-face {
@@ -512,12 +527,31 @@
   
   
   .font_facit_text_very_small {
-    font-family: Montserrat-Regular;
+    font-family: Montserrat-Light;
     color: #ffffff;
     text-align: left;
-    font-size: 13px;
+    font-size: 0.7rem;
   
     font-weight: 200;
+  
+    /* letter-spacing: 2px; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* selector-locked: false; */
+   
+  }
+
+  
+  
+  .font_footer_very_small {
+    font-family: Montserrat-Light;
+    color: #ffffff;
+    line-height: 1vh;
+    
+    font-size: 0.7rem;
+  
+    /* font-weight: 200; */
   
     /* letter-spacing: 2px; */
     -webkit-font-smoothing: antialiased;
@@ -560,6 +594,27 @@
     /* selector-locked: false; */
    
   }
+
+
+  
+  
+  .font_boton_formulario {
+    font-family: Montserrat-ExtraBold;
+    color: #F82D7C;
+    /* text-align: left; */
+    font-size: 1.5vw;
+  
+    font-weight: 200;
+  
+    /* letter-spacing: 2px; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* selector-locked: false; */
+   
+  }
+
+
   
   .font_footer_title {
     font-family: Montserrat-Bold;

@@ -8,15 +8,53 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { servidor_url } from "../../config";
 
-export default function Content01Iconos() {
+
+const justificar =(footer)=>{
+
+  if (footer!=undefined && footer) {
+    return 'justify-content-center';
+  } else {
+    return 'justify-content-end';
+  }
+}
+
+
+const iconos_size =(footer)=>{
+
+  if (footer!=undefined && footer) {
+    return 'bi-footer';
+  } else {
+    return 'bi';
+  }
+}
+
+const iconos_img_size =(footer)=>{
+
+  if (footer!=undefined && footer) {
+    return 'social-img-footer';
+  } else {
+    return 'social-img';
+  }
+}
+
+
+
+
+
+export default function Content01Iconos({footer}) {
+  
+
+
+
   return (
 <>
 
-  <div className="row justify-content-end g-0  ">
+  {/* <div className="row justify-content-end g-0  "> */}
+  <div className={`row  g-0 ${justificar(footer)}`}>
 
     <div className="col-1 iconos-contenedor">
       <a href="https://www.linkedin.com/company/open-agile">
-        <i className="bi bi-linkedin iconos-social"></i>
+        <i className={`${iconos_size(footer)} bi-linkedin iconos-social`}></i>
       </a>
     </div>
 
@@ -24,14 +62,16 @@ export default function Content01Iconos() {
 
     <div className="col-1 iconos-contenedor ">
       <a href="https://www.youtube.com/channel/UCuwf90RVDjbK0Isu1vL1skA">
-        <i className="bi bi-youtube iconos-social"></i>
+        
+         <i className={`${iconos_size(footer)} bi-youtube iconos-social`}></i>
       </a>
     </div>
 
 
     <div className="col-1 iconos-contenedor ">
       <a href="https://www.instagram.com/open_agile/">
-        <i className="bi bi-instagram iconos-social"></i>
+        
+         <i className={`${iconos_size(footer)} bi-instagram iconos-social`}></i>
       </a>
     </div>
 
@@ -39,7 +79,9 @@ export default function Content01Iconos() {
       <a href="https://www.xing.com/pages/open-agile" > 
 
            
-          <img className="social-img"  src= {`${servidor_url}/img/xing-img.svg`}  /> 
+          <img className={iconos_img_size(footer)}  src= {`${servidor_url}/img/xing-img.svg`}  /> 
+          {/* "social-img"   */}
+
       </a>
     </div>
 
@@ -47,7 +89,8 @@ export default function Content01Iconos() {
 
     <div className="col-1 iconos-contenedor  me-5">
       <a href="https://www.facebook.com/OpenAgile21" className="youtube">
-        <i className="bi bi-facebook iconos-social"></i>
+        
+         <i className={`${iconos_size(footer)} bi-facebook iconos-social`}></i>
       </a>
     </div>
 

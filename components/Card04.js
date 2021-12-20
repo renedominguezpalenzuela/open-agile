@@ -6,8 +6,8 @@ export default function Card04({ datos }) {
   return (
     <>
       <div className="  pt-5 pb-5 mb-5 d-flex justify-content-center ">
-        <div class="card text-center my_card-crashkurse ">
-          <div class="card-header  ">
+        <div className="card text-center my_card-crashkurse ">
+          <div className="card-header  ">
           
           <div className="row titulo-card-crashkurse  d-flex justify-content-center">
              {quartal}. Quartal 
@@ -18,7 +18,7 @@ export default function Card04({ datos }) {
             </div>
 
           </div>
-          <div class="card-body color-body ">
+          <div className="card-body color-body ">
            <a href="/contact" className="font_card_fechas ">
               <div className="row  fechas-card-crashkurse d-flex justify-content-center pt-2 m-2">
                 {date1}
@@ -30,7 +30,7 @@ export default function Card04({ datos }) {
            
           </div>
            <a href="/contact">
-          <div class="card-footer card-footer-crashkurse">JETZT AMNELDEN...</div>
+          <div className="card-footer card-footer-crashkurse">JETZT AMNELDEN...</div>
           </a>
         </div>
       </div>
