@@ -266,13 +266,15 @@ export default function Card04({ datos }) {
                 />
               </div>
 
-              <div className="row mt-3 ps-3 pe-3 d-flex justify-content-center   "></div>
+              <div className="row mt-2 mb-2 ps-3 pe-3 d-flex justify-content-center  texto-email  ">
+              Wir senden Dir binnen 48h eine Bestätigung und weitere Informationen zu dem Seminar.
+              </div>
 
               <div className="row d-flex justify-content-start privacy-modal ps-3 pe-3 mt-1">
                 AGBS
               </div>
 
-              <div className="row d-flex justify-content-start texto-email  ps-3 pe-3 ">
+              <div className="row d-flex justify-content-start texto-AGBS  ps-3 pe-3 ">
                 Ich bin mit der Übermittlung meiner Daten zur internen
                 Verarbeitung der Open Agile GmbH einverstanden.
               </div>

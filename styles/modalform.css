@@ -26,6 +26,14 @@
       text-align: left;
   }
 
+
+  .texto-AGBS{
+    font-family: Montserrat-Regular;
+      color: #243A78;
+      font-size: 0.8vw;
+      text-align: left;
+  }
+
   
   .privacy-modal {
     font-family: Segoe-UI;
@@ -53,6 +61,6 @@
 }
 
 .boton_modal_form:hover {
-  color: #FDCDE0;
+  color: #ffffff!important;
   background-color:#F82D7C; 
 }
