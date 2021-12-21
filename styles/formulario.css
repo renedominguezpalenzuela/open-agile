@@ -18,7 +18,7 @@
   font-size: 0.7em;
   /* line-height: 39px; */
 }
-
+/* 
 .MuiInput-root {
   color: #ffffff !important;
   font-family: Montserrat-Regular !important;
@@ -30,13 +30,21 @@
 
 .MuiFormLabel-root {
   color: #ffffff !important;
-  font-family: Montserrat-Regular !important;
-}
+   font-family: Montserrat-Regular !important;
+   
+  
+} */
 
-.MuiFormControlLabel-root {
-  color: #f0ebed !important;
-  font-family: Montserrat-Regular !important;
-}
+
+/* .MuiFormControlLabel-root { */
+   /* color: #067AB2 !important;  */
+  
+
+   /* color: #067AB2 !important;  */
+   
+   /* font-family: Segoe-UI !important;  */
+  /* font-size: 0.1em!important;  */
+/* }  */
 
 .font_title_formulario {
   font-family: Montserrat-BlackItalic;
@@ -87,9 +95,10 @@
 
 .bannerformulario {
   display: grid;
+  max-height: 440px;
 
   grid-template-columns: repeat(14, 1fr); /*tres columnas de igual ancho*/
-  grid-template-rows: 20% 8% 8% 15% 11% 15%; /*total de filas depende de cantidad elementos*/
+  grid-template-rows: 25% 8% 8% 15% 11% ; /*total de filas depende de cantidad elementos*/
   gap: 1.5vw;
   row-gap: 0px;
   /*  gap: 1vw;  row-gap: 1em; */
@@ -106,6 +115,13 @@
   -moz-osx-font-smoothing: grayscale;
   /* background-position: 100% 57%; */
 }
+ 
+@media (min-height: 1900px) {
+  .bannerformulario {
+  max-height: 740px;
+  grid-template-rows: 35% 8% 8% 15% 11% ; 
+  }
+} 
 
 .boton_formulario {
   /* background-color: #e50067; */

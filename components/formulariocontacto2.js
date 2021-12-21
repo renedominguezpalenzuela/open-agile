@@ -17,6 +17,8 @@ export default function FormularioContacto2() {
 
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
+  
+
   // const styles2 = (theme) => ({
   //   multilineColor: {
   //     color: "red",
@@ -44,7 +46,25 @@ export default function FormularioContacto2() {
         borderColor: "#e42078",
       },
     },
+
+    "& .MuiFormLabel-root": {
+      color: "#ffffff"                  //Color del label
+    }
+    
   };
+
+
+const fuentes1 = {
+    style: { //fontSize: 11
+    fontSize: 10 ,
+     textAlign: "left", ///Text Align
+        letterSpacing: "0.06vw", //espaciado de letras luego d escribir
+        color: "#ffffff",
+        fontFamily: "Montserrat-Light"
+    
+     },
+  };
+
 
   const fuentes = {
     style: { fontSize: 10 },
@@ -60,7 +80,18 @@ export default function FormularioContacto2() {
   const stylesCuadrado = {
     color: "#ffffff",
     "&.Mui-checked": { color: "#e42078" },
+
+    
   };
+
+  const stiloTexto = {
+    "MuiFormControlLabel-root":{
+       color: "#ffffff",
+     "& .MuiFormControlLabel-label": {
+        color: "#ffffff",
+     }
+    }
+  }
 
   return (
     <>
@@ -81,7 +112,7 @@ export default function FormularioContacto2() {
               className="ancho-edit"
               variant="outlined"
               sx={styles}
-              inputProps={fuentes}
+              inputProps={fuentes1}
               InputLabelProps={fuentes}
             />
           </div>
@@ -92,7 +123,7 @@ export default function FormularioContacto2() {
               className="ancho-edit"
               variant="outlined"
               sx={styles}
-              inputProps={fuentes}
+              inputProps={fuentes1}
               InputLabelProps={fuentes}
             />
           </div>{" "}
@@ -118,6 +149,7 @@ export default function FormularioContacto2() {
                 />
               }
               label="Ja, ich bin mit den AGBs des Newsletters einverstanden"
+              sx={stiloTexto}
             />
           </div>
         

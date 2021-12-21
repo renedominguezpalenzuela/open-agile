@@ -17,6 +17,8 @@
   }
   
 
+  
+
   .texto-email{
     font-family: Montserrat-Regular;
       color: #243A78;
@@ -26,7 +28,31 @@
 
   
   .privacy-modal {
-    font-family: Montserrat-SemiBold;
+    font-family: Segoe-UI;
     color: #243A78;
     font-size: 1vw;
+}
+
+ /* color del checkbox en el formulario  */
+.MuiTypography-root{
+  /* color: #243A78 !important;  */
+     color: #ffffff ;  
+  /* font-family: Segoe-UI !important;  */
+  font-size: 0.8rem!important; 
+}
+
+
+
+.boton_modal_form {
+  /* background-color: #e50067; */
+  color: #F82D7C;
+  background-color: #FDCDE0;
+  border-color:#F82D7C ;
+  border-radius: 6px;
+  
+}
+
+.boton_modal_form:hover {
+  color: #FDCDE0;
+  background-color:#F82D7C; 
 }

@@ -36,7 +36,7 @@ export default function Content05 ({datos} ) {
 
     <div id="MyCarouselTitle" className="color_carrusel pb-1 ">
 
-        <div className=" row justify-content-center font_title_seccion  mt-2  pt-5"> Das Wichtigste</div>
+        <div className=" row justify-content-center font_title_seccion  mt-2  pt-5"> VLOG</div>
         <div className=" row justify-content-center font_card_texto mt-2 "> Rund um die Akademie</div>
 
 

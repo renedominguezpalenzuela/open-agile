@@ -74,6 +74,13 @@
   }
 
 
+  @font-face {
+    font-family: Segoe-UI;
+    src: url("/fonts/segoe-ui-bold.ttf");
+  }
+
+  
+
 
 
 /* Seccion 01 Principal */
