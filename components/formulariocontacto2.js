@@ -32,6 +32,8 @@ export default function FormularioContacto2() {
   const styles = {
     width: { sm: 250, md: 350 },
 
+  
+
     "& .MuiInputBase-root": {
       height: 42,
     },
@@ -72,7 +74,8 @@ const fuentes1 = {
 
   const styles3 = {
     ".MuiFormControlLabel-label": {
-      fontSize: "0.9vw",
+        fontFamily: "Montserrat-Regular",
+      fontSize: 12,
       color: "#ffffff",
     },
   };
@@ -85,9 +88,13 @@ const fuentes1 = {
   };
 
   const stiloTexto = {
+
+    
     "MuiFormControlLabel-root":{
-       color: "#ffffff",
+      fontSize: 100,
+     
      "& .MuiFormControlLabel-label": {
+     
         color: "#ffffff",
      }
     }
@@ -112,7 +119,7 @@ const fuentes1 = {
               className="ancho-edit"
               variant="outlined"
               sx={styles}
-              inputProps={fuentes1}
+               inputProps={fuentes1}
               InputLabelProps={fuentes}
             />
           </div>
@@ -149,8 +156,12 @@ const fuentes1 = {
                 />
               }
               label="Ja, ich bin mit den AGBs des Newsletters einverstanden"
-              sx={stiloTexto}
+          
+
+
             />
+
+
           </div>
         
       </div>

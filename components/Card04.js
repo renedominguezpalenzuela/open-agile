@@ -31,7 +31,9 @@ const StyledFormControlLabel = styled((props) => (
   <FormControlLabel {...props} />
 ))(({ theme, checked }) => ({
   ".MuiFormControlLabel-label": {
-    color: "#243A78",
+    color: "#243A78", //color de la letra
+      fontSize: 12,  //tamano de la letra
+    
      
 
   },
@@ -78,7 +80,7 @@ export default function Card04({ datos }) {
     height: "7px",
     padding: "0.2vw",
 
-    //  fontSize: "0.9vw",
+      // fontSize: "0.9vw",
     //  color: "#00ff00", //color del icono
 
     "& .MuiSvgIcon-root": {
