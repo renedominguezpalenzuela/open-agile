@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import { useRouter } from 'next/router'
-
+import { useRouter } from "next/router";
 
 import MenuFlotante from "../../components/MenuFlotante";
 import Footer from "../../components/Footer";
@@ -23,106 +22,77 @@ import TextoBloque01 from "../../components/textobloque01";
 
 import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
 
-
-
-
 import Content01Main from "../../components/maincontent/Content01Main";
 
-
+import BarraConTextoDerecha from "../../components/BarraConTextoDerecha";
+import BarraConTextoIzquierda from "../../components/BarraConTextoIzquierda";
 
 import { servidor_url } from "../../config";
-
-
 
 //----------------------------------------------------------------------------------------------------------
 //            Pagina inicial principal
 //----------------------------------------------------------------------------------------------------------
 
+export default function Home({ servicios }) {
+  const router = useRouter();
+  const { id } = router.query;
 
-
-
-
-
-
-export default function Home({servicios}) {
-
-const router = useRouter()
-const {id}  = router.query;
-
-
-const { titulo1, titulo2,titulo2a, titulo3, titulo4, texto01,texto02 , texto03 } = servicios;
-
-
-
-
-
- 
-
+  const {
+    titulo1,
+    titulo2,
+    titulo2a,
+    titulo3,
+    titulo4,
+    texto01,
+    texto02,
+    texto03,
+  } = servicios;
 
   return (
-<>
-   <Head>
-    <title>{titulo2+" "+titulo2a}</title>
-    <meta name="description" content={titulo2} />
-    <link rel="icon" href="/favicon.ico" />
-    <script async src={`${servidor_url}/js/chat.js`} />
-    <script async src={`${servidor_url}/js/menu.js`} />
-  </Head>
+    <>
+      <Head>
+        <title>{titulo2 + " " + titulo2a}</title>
+        <meta name="description" content={titulo2} />
+        <link rel="icon" href="/favicon.ico" />
+        <script async src={`${servidor_url}/js/chat.js`} />
+        <script async src={`${servidor_url}/js/menu.js`} />
+      </Head>
 
+      {/*Contenedor*/}
 
-     
-  {/*Contenedor*/}
+      <div id="principal" className="container-fluid g-0">
+        <AreaSuperior fondo="gris" texto1={titulo2 + " " + titulo2a} texto_parrafo_blanco={texto01} />
 
-    <div id="principal" className="container-fluid g-0">
-  
-        <AreaSuperior fondo="gris" texto1={titulo2+" "+titulo2a } texto_parrafo_blanco={texto01}  />
+        <div className="mt-5"> </div>
+        <BarraConTextoDerecha titulo={titulo3} texto={texto01} />
 
-   
-    <TextoBloque01   titulo={titulo3}  texto_parrafo_array={texto01} />
+        <div className="mt-5"> </div>
+        <BarraConTextoIzquierda titulo={titulo4} texto={texto02} /> 
 
+        <div className="mt-5"> </div>
+        <TextoBloque01 texto_parrafo_array={texto03} />
 
-    <TextoBloque01   titulo={titulo4}  texto_parrafo_array={texto02} />
+        <div className="mb-5"> </div>
+        <Footer />
+      </div>
 
-    <TextoBloque01    texto_parrafo_array={texto03} />
-  
-
-    {/*Footer  */}
-    <Footer />
-
-</div>
-      
-    {/*Menu Lateral oculto  */} 
-  <MenuFlotante />
-
-   
-
-
-    
-
-</>
-  )
+      {/*Menu Lateral oculto  */}
+      <MenuFlotante />
+    </>
+  );
 }
 
-
 export const getServerSideProps = async (context) => {
+  const { id } = context.query;
+  const url = `${servidor_url}/api/servicio/${encodeURIComponent(id)}`;
 
-const { id } = context.query;
-const url = `${servidor_url}/api/servicio/${encodeURIComponent(id)}`;
-
-
-const res = await fetch(url); 
-
-
-
+  const res = await fetch(url);
 
   const servicios = await res.json();
 
-
-
   return {
     props: {
-      servicios
+      servicios,
     },
   };
 };
-

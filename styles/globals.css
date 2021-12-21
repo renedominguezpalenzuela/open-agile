@@ -139,15 +139,6 @@ a {
 } 
 
 
-div.vertical-line{
-  width: 1px; /* Line width */
-  background-color: black; /* Line color */
-  height: 100%; /* Override in-line if you want specific height. */
-  float: left; /* Causes the line to float to left of content. 
-    You can instead use position:absolute or display:inline-block
-    if this fits better with your design */
-}
-
 
 /* .carousel .carousel-indicators li {  background-color: gray; }
 .carousel .carousel-indicators li.active { background-color: var(--primary); } */

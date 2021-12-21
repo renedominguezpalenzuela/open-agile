@@ -22,6 +22,9 @@ import Tabla01 from "../components/crashkurse/tabla01";
 
 import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 
+import BarraConTextoDerecha from "../components/BarraConTextoDerecha";
+import BarraConTextoIzquierda from "../components/BarraConTextoIzquierda";
+
 
 
 
@@ -89,7 +92,12 @@ const  texto02= ['Timebox', 'Post-its', 'Eddings', '2 Open Agile Kaffee-Tassen',
     </div>
 
 
-    <TextoBloque01   titulo2={texto01}  texto_plequitas_array={texto02} />
+
+       <div className="mt-5"> </div>
+        <BarraConTextoDerecha titulo={texto01} texto={texto02} />
+
+
+  
 
 
     {/*Footer  */}

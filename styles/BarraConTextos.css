@@ -1,0 +1,91 @@
+div.vertical-line-leinstungen {
+  width: 12px; /* Line width */
+  background-color: #243a78; /* Line color */
+  height: 100%; /* Override in-line if you want specific height. */
+  float: center; /* Causes the line to float to left of content. */
+}
+
+.barra-con-texto-derecha {
+  display: grid;
+  /* max-height: 440px; */
+
+  grid-template-columns: 42% 5% 42% 5%; /*tres columnas de igual ancho*/
+  grid-template-rows: auto;
+  /* gap: 1.5vw; */
+  /* row-gap: 0px; */
+  /*  gap: 1vw;  row-gap: 1em; */
+
+  /* height: 90vh; */
+}
+
+.barra-texto-derecha-titulo {
+  grid-column: 1/ 2;
+  grid-row: 1/2;
+  justify-self: end;
+  align-self: flex-start;
+}
+
+.barra-texto-derecha-barra {
+  grid-column: 2/ 3;
+  grid-row: 1/2;
+  justify-self: center;
+  align-self: flex-center;
+}
+
+.barra-texto-derecha-texto {
+  grid-column: 3/ 4;
+  grid-row: 1/2;
+  justify-self: start;
+  align-self: flex-start;
+}
+
+.font-barra-titulo {
+  font-family: Montserrat-ExtraBoldItalic;
+  color: #243a78;
+  font-size: 2vw;
+}
+
+.font-barra-texto {
+  font-family: Montserrat-Regular;
+  color: #686868;
+  font-size: 1.5vw;
+  line-height: 6vh;
+}
+
+.barra-con-texto-izquierda {
+  display: grid;
+  /* max-height: 440px; */
+
+  grid-template-columns: 5% 45% 5% 40% ; /*tres columnas de igual ancho*/
+  grid-template-rows: auto; /*total de filas depende de cantidad elementos*/
+  /* gap: 1.5vw; */
+  /* row-gap: 0px; */
+  /*  gap: 1vw;  row-gap: 1em; */
+
+  /* height: 90vh; */
+}
+
+.barra-texto-izquierda-barra {
+  grid-column: 3/ 4;
+  grid-row: 1/2;
+  justify-self: center;
+  align-self: flex-start;
+}
+
+
+
+.barra-texto-izquierda-titulo {
+    grid-column: 4/ 5;
+    grid-row: 1/2;
+    justify-self: start;
+    align-self: flex-start;
+  }
+
+
+  
+.barra-texto-izquierda-texto {
+    grid-column: 2/ 3;
+    grid-row: 1/2;
+    justify-self: end;
+    align-self: flex-start;
+  }

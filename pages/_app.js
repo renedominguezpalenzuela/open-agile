@@ -18,6 +18,8 @@ import "../styles/areasuperior.css";
 import "../styles/navbarmobil.css";
 import "../styles/cardscrashkurse.css";
 import "../styles/modalform.css";
+import "../styles/BarraConTextos.css";
+
 
 
 

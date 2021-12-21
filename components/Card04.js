@@ -207,7 +207,7 @@ export default function Card04({ datos }) {
       </div>
 
       {/* <!-- Modal --> */}
-      <div className="modal fade" id={`contactForm${quartal}`} tabindex="-1">
+      <div className="modal fade" id={`contactForm${quartal}`} tabIndex="-1">
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
