@@ -1,0 +1,78 @@
+
+
+  .my_card_carrusel {
+    left: 4.5vw !important;
+    height: 76%;
+
+    display: flex;
+    z-index: 3;
+  } 
+
+
+  .font_card_title_video {
+    font-family: Montserrat-Bold;
+    color: #24325a;
+    /* font-style: italic;  */
+    /* font-size: 3.4vh;  */
+     font-size: 1.2vw;
+     font-weight: 100;
+     text-transform: uppercase; 
+     line-height: 90%;
+     text-align: left;
+  }
+
+  
+  .font_carrusel_video {
+    font-family: Montserrat-Regular;
+    color: #24325a;
+  
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 32px;
+
+    text-align: left;
+    /* text-justify: inter-word; */
+   
+  }
+  
+
+
+  
+  .contenido_card_video {
+    position: relative;
+    left: 1vw; 
+    top: -23vw; 
+    width: 34vw; 
+    height: 145vw;    
+    align-self: center;
+ }
+
+.container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 75%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    left:   3vw;
+  }
+  
+  /* Then style the iframe to fit in the container div with full height and width */
+  .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  
+  .dimension_card_carrusel {
+    /* left: 25px; */
+    left:-1vw;
+    position: relative;
+    max-height: 35vw; 
+    width:45vw ;
+    /* height: 80vh; */
+  }
+  

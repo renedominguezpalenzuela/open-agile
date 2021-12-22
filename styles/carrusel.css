@@ -5,12 +5,6 @@
     min-height: 500px;
   }
 
-  .my_card_carrusel {
-    left: 4.5vw !important;
-    height: 100%;
-    display: flex;
-    z-index: 3;
-  } 
   
   .zindex-3000 {
     z-index: 3000!important;
@@ -64,15 +58,6 @@
   
 
 
-  .dimension_card_carrusel {
-    /* left: 25px; */
-    left:-1vw;
-    position: relative;
-    max-height: 35vw; 
-    width:45vw ;
-    /* height: 80vh; */
-  }
-  
 
   
   .dimension_card_carrusel_team {

@@ -42,11 +42,14 @@ export default function Card02({
             }
 
             {video!=undefined && video!="" &&
-                  <div className="embed-responsive embed-responsive-4by3 ">
+                //   <div className="embed-responsive embed-responsive-4by3 ">
 
-                  <iframe width="500vw" height="380vh" src={video}  frameBorder="3" allowFullScreen></iframe> 
+                //   <iframe width="500vw" height="380vh" src={video}  frameBorder="3" allowFullScreen></iframe> 
                     
-                 </div>
+                //  </div>
+              <div className="container">
+                <iframe className="responsive-iframe" src={video}  frameBorder="3" allowFullScreen></iframe>
+              </div>
 
               //  <img src={`img/${imagen}`} alt={"${texto_alt}"} className=" img_carrusel " alt="..."/> 
             }
@@ -58,17 +61,17 @@ export default function Card02({
             
 
              {/* Texto del Card */}
-            <span className="  contenido_card   ">
+            <span className="  contenido_card_video   ">
 
 
-              <div className=" card-title  font_card_title ">
+              <div className=" card-title  font_card_title_video ">
                  {/* {procesarTextoLargo(titulo)}  */}
                  {procesarTextoLargo(titulo)}
               </div>
 
 
               <div className="card-body h-75 ">
-                <div className="row font_carrusel   ">
+                <div className="row font_carrusel_video   ">
                     {texto}
                 </div>
                   

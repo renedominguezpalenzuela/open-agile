@@ -19,6 +19,7 @@ import "../styles/navbarmobil.css";
 import "../styles/cardscrashkurse.css";
 import "../styles/modalform.css";
 import "../styles/BarraConTextos.css";
+import "../styles/videos.css";
 
 
 
