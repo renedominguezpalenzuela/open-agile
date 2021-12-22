@@ -68,7 +68,7 @@ a {
 }
 
 .margen_iconos_izquierda {
-  margin-right: 12px;
+  margin-right: 19px;
 }
 
 .corte_cards {
@@ -652,7 +652,7 @@ ul.no-bullets {
   
   animation-fill-mode: both;
 
-  animation-timing-function: ease-out;
+  animation-timing-function: ease-in-out;
   /* animation-name: example; */
   /* animation-duration: 0.1s; */
   animation-delay: 0.1s;

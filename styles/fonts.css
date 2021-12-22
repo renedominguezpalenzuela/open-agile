@@ -721,6 +721,20 @@
   }
 
 
+  
+.letras_iconos_izquierda{
+  font-family: Montserrat-Regular;
+  color:white;
+
+  font-size: 16px;
+  /* font-weight: 400; */
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
 
   
   

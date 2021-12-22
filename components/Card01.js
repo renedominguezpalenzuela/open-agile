@@ -20,9 +20,7 @@ export default function Card01({
 }) {
   return (
     <>
-    <head>
-      <link rel="stylesheet" href="css/animate.min.css"/>
-    </head>
+    
 
 
 
