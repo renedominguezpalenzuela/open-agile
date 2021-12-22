@@ -62,7 +62,7 @@ export default function Home({
 
         {/* Servicios  */}
         <div id="services" className=" mt-5 ">
-          <div className="row justify-content-center font_title_seccion_leistungen  mt-1 ms-4"> LEISTUNGEN </div>
+          <div className="row justify-content-center font_title_seccion_sombra  mt-1 ms-4"> LEISTUNGEN </div>
           <Card01Lista lista_cards={servicios} titulo_magenta={true} />
         </div>
 

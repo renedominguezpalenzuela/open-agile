@@ -24,7 +24,7 @@ export default function Content02Cursos( {cursos}) {
 <>
 
     <div id="course_title" className="row  text-center m-3 ">
-      <h3 className="font_second_line1 "> CRASHKURSE</h3>
+      <h3 className="font_title_seccion_sombra "> CRASHKURSE</h3>
       <h5 className="font_second_line2">
       jetzt fit machen für die Arbeitswelt von morgen
       </h5>

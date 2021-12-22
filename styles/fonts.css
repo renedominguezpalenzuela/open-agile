@@ -146,6 +146,41 @@
     text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
   }
 
+
+  .sombra_cards{
+       /* letter-spacing: 4px; */
+       -webkit-font-smoothing: antialiased;
+       -moz-osx-font-smoothing: grayscale;
+    
+       /* selector-locked: false; */
+       /* shadow: 1px 3px 5px rgb(0 0 0 / 40%); */
+       
+      /* offset-x | offset-y | blur-radius | spread-radius | color */
+       box-shadow: 2px 2px 8px rgb(0 0 0 / 30%);
+  
+
+
+      
+  }
+
+  
+  .font_title_seccion_sombra{
+    font-family: Montserrat-BoldItalic;
+    color: #e50067;
+    text-align: center;
+    font-size: 3.8rem;
+    line-height: 1;
+    font-weight: 500;
+  
+    /* letter-spacing: 4px; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-transform: uppercase;
+    /* selector-locked: false; */
+    text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
+  }
+
+
   
   .font_title_largo {
     font-family: Montserrat-BoldItalic;

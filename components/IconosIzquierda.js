@@ -13,7 +13,7 @@ export default function IconosIzquierda() {
     </div>
 
     <div className="row   text-start mt-4  margen_iconos_izquierda">
-      <div id="linea_iconos_izquierda" className="rotate ps-1 pe-1 letras_iconos_izquierda">_____</div>
+      <div id="linea_iconos_izquierda" className="rotate ps-1 pe-1 pt-1 letras_iconos_izquierda">_____</div>
     </div>
 
 {/* className="circulo iconos" */}
