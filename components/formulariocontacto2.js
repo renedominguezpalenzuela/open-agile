@@ -138,7 +138,7 @@ const fuentes1 = {
           <div className="group  item-boton1  ">
             <button
               type="button"
-              className="btn boton_formulario ancho-boton alto-boton font_boton_formulario">
+              className="btn boton_formulario ancho-boton alto-boton">
               ANMELDEN
             </button>
           </div>

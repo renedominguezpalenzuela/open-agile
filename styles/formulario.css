@@ -124,7 +124,28 @@
 } 
 
 .boton_formulario {
+
+  background-color: #e42078;
+
+  font-family: Montserrat-ExtraBold;
+    color: white;
+    /* text-align: left; */
+    font-size: 0.95rem;
+  
+    /* font-weight: 200; */
+  
+    /* letter-spacing: 2px; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* selector-locked: false; */
+}
+
+
+.boton_formulario:hover {
   /* background-color: #e50067; */
+ 
+  color: #e42078!important;
   background-color: #ffffff;
 }
 

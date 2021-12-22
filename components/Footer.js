@@ -33,20 +33,24 @@ export default function Footer() {
                   <div className="font_footer_title mt-3 mb-3">Kontakt</div>
                 </div>
 
-                <div>
-                  <a className="font_facit_text_very_small-kontack mylinkhoover ps-2" href="tel:+49 (0) 421 22347567">
+                <div className="font_facit_text_very_small-kontack ps-2">
+                   <a className=" mylinkhoover " href="tel:+49 (0) 421 22347567"> 
                     +49 (0) 421 22347567
-                  </a>
+                   </a> 
                 </div>
 
-                <p>
-                  <a className="font_facit_text_very_small-kontack mylinkhoover ps-2" href="mailto:info@open-agile.de">
+
+                <div className="font_facit_text_very_small-kontack ps-2">
+                
+                  <a className="mylinkhoover " href="mailto:info@open-agile.de">
                     info@open-agile.de
                   </a>
-                </p>
+                
+
+                </div>
 
                 <div>
-                  <div className="font_facit_text_very_small-kontack ps-2" >
+                  <div className="font_facit_text_very_small-kontack ps-2 pt-2" >
                     <div>OPEN Agile GmbH </div>
                     <div>Faulenstr. 67</div>
                     <div>D-28195 Bremen</div>

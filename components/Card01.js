@@ -24,7 +24,7 @@ export default function Card01({
 
 
 
-      <div className="col  d-flex justify-content-center  " key={id}>
+      <div className="col mt-2 d-flex justify-content-center  " key={id}>
         <div className="card  w-100   my_card myanimacion sombra_cards">
           <img className="card-img-top corte_cards img-rounded  " src={`${servidor_url}/img/${imagen}`} alt={texto_alt}   />
 
@@ -34,9 +34,12 @@ export default function Card01({
                 {procesarTextoLargo(titulo)}
               </p>
             )}
+
+
+            {/* font_card_title2  */}
             {titulo2 != undefined && titulo2 != "" && (
               <div className="row   d-flex align-items-center justify-content-center   ">
-                <p className="text-center font_card_title2 m-1">
+                <p className="text-center font_cards_magenta m-1">
                   {procesarTextoLargo(titulo2)}
                 </p>
               </div>
