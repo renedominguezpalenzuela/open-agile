@@ -42,7 +42,7 @@ export default function BotonesConfigurator({botones_configurador}){
    
     botones.map ((unBoton, index)=>{
                                         return (
-                                                <>
+                                                
                                                 <div key={index} className={clase_botones(longitud_arreglo)}>
 
                                                  
@@ -63,7 +63,7 @@ export default function BotonesConfigurator({botones_configurador}){
                                                 </div>
 
                                                
-                                                </>
+                                                
 
 
 
