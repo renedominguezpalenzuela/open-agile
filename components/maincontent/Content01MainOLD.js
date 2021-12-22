@@ -69,7 +69,7 @@ export default function Content01Main({
         <div className="col mt-4 text-center    ">
           <a href="/quizstart">
             <button type="button" className="btn mt-1 btn-outline-primary font_boton  ">
-              Agile Check
+              Agile Check 
             </button>
           </a>
 

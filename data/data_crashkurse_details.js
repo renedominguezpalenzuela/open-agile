@@ -144,10 +144,10 @@ export const crashkurse_details = [
 
  "crashkurs_date_title":"CRASHKURS 2022",
   "crashkurs_date" : [
-   {"quartal":"1", "date1" : "29.04.2022", "date2":  "30.04.2022", "day":"(Fr. / Sa.)"},
-   {"quartal":"2","date1" : "13.05.2022", "date2":  "14.05.2022", "day":"(Do. / Fr.)"},
-   {"quartal":"3","date1" : "13.05.2022", "date2":  "14.05.2022", "day":"(Fr. / Sa.)"},
-   {"quartal":"4","date1" : "01.07.2022", "date2":  "02.07.2022", "day":"(Do. / Fr.)"}    
+   {"id":"1", "quartal":"1", "date1" : "29.04.2022", "date2":  "30.04.2022", "day":"(Fr. / Sa.)"},
+   {"id":"2","quartal":"2","date1" : "13.05.2022", "date2":  "14.05.2022", "day":"(Do. / Fr.)"},
+   {"id":"3","quartal":"3","date1" : "13.05.2022", "date2":  "14.05.2022", "day":"(Fr. / Sa.)"},
+   {"id":"4","quartal":"4","date1" : "01.07.2022", "date2":  "02.07.2022", "day":"(Do. / Fr.)"}    
  ]
 
                  
@@ -280,10 +280,10 @@ export const crashkurse_details = [
 
  "crashkurs_date_title":"CRASHKURS 2022",
   "crashkurs_date" : [
-   {"quartal":"1","date1" : "04.02.2022", "date2":  "05.02.2022", "day":"(Fr. / Sa.)"},
-   {"quartal":"2","date1" : "22.04.2022", "date2":  "23.04.2022", "day":"(Do. / Fr.)"},
-   {"quartal":"3","date1" : "26.08.2022", "date2":  "27.08.2022", "day":"(Fr. / Sa.)"},
-   {"quartal":"4","date1" : "11.11.2022", "date2":  "12.11.2022", "day":"(Do. / Fr.)"} 
+   {"id":"1","quartal":"1","date1" : "04.02.2022", "date2":  "05.02.2022", "day":"(Fr. / Sa.)"},
+   {"id":"2","quartal":"2","date1" : "22.04.2022", "date2":  "23.04.2022", "day":"(Do. / Fr.)"},
+   {"id":"3","quartal":"3","date1" : "26.08.2022", "date2":  "27.08.2022", "day":"(Fr. / Sa.)"},
+   {"id":"4","quartal":"4","date1" : "11.11.2022", "date2":  "12.11.2022", "day":"(Do. / Fr.)"} 
  ]
     
 
@@ -416,10 +416,10 @@ export const crashkurse_details = [
 
  "crashkurs_date_title":"CRASHKURS 2022",
   "crashkurs_date" : [
-   {"quartal":"1", "date1" : "18.02.2022 ", "date2":  "19.02.2022", "day":"(Fr. / Sa.)"},
-   {"quartal":"2","date1" : "13.06.2022", "date2":  "14.06.2022", "day":"(Do. / Fr.)"},
-   {"quartal":"3","date1" : "09.09.2022", "date2":  "10.09.2022", "day":"(Fr. / Sa.)"},
-   {"quartal":"4","date1" : "24.11.2022", "date2":  " 25.11.2022", "day":"(Do. / Fr.)"} 
+   {"id":"1","quartal":"1", "date1" : "18.02.2022 ", "date2":  "19.02.2022", "day":"(Fr. / Sa.)"},
+   {"id":"2","quartal":"2","date1" : "13.06.2022", "date2":  "14.06.2022", "day":"(Do. / Fr.)"},
+   {"id":"3","quartal":"3","date1" : "09.09.2022", "date2":  "10.09.2022", "day":"(Fr. / Sa.)"},
+   {"id":"4","quartal":"4","date1" : "24.11.2022", "date2":  " 25.11.2022", "day":"(Do. / Fr.)"} 
  ]
     
 

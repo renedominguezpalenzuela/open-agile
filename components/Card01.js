@@ -1,5 +1,7 @@
 // import styles from "../styles/Home.module.css";
 
+import Head from "next/head";
+
 let ancho = 540;
 let longitud_linea = 24;
 
@@ -18,8 +20,14 @@ export default function Card01({
 }) {
   return (
     <>
-      <div className="col p-4 d-flex justify-content-center " key={id}>
-        <div className="card  w-100   my_card ">
+    <head>
+      <link rel="stylesheet" href="css/animate.min.css"/>
+    </head>
+
+
+
+      <div className="col  d-flex justify-content-center  " key={id}>
+        <div className="card  w-100   my_card myanimacion">
           <img className="card-img-top corte_cards img-rounded  " src={`${servidor_url}/img/${imagen}`} alt={texto_alt}   />
 
           <div className="card-body text-center    ">

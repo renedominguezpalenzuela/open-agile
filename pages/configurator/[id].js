@@ -7,13 +7,12 @@ import Footer from "../../components/Footer";
 
 import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
 
-// import MenuSuperior from "../components/MenuSuperior";
 
-// import Content01andMenuConfigurator from "../../components/Content01andMenuConfigurator";
-// import Content01Main from "../../components/maincontent/Content01Main";
 import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
 
 import { servidor_url } from "../../config";
+
+import ModalForm from "../../components/ModalForm";
 
 //----------------------------------------------------------------------------------------------------------
 //            Pagina inicial principal
@@ -22,6 +21,8 @@ import { servidor_url } from "../../config";
 export default function Configurator_Main({ configurator }) {
   const router = useRouter();
   const { id } = router.query;
+  const {botones} = configurator;
+
 
   // const { botones } = configurator;
 
@@ -40,6 +41,18 @@ export default function Configurator_Main({ configurator }) {
       <div id="principal" className="container-fluid g-0">
         <MenuFlotanteBoton />
         <AreaSuperior fondo="gris" botones_configurador={configurator} />
+
+
+        
+          {botones.map ((unBoton, index)=>
+                                          (                                                        
+                                              unBoton.tipo==="2" && (                                                    
+                                                  <ModalForm  titulo="KONTAKTFORMULAR" frase="Jetzt Kontakt aufnehmen!" id={unBoton.id} quartal={index}   />
+                                              )                                                     
+                                          )
+                                          
+                       )
+          }
 
         {/*Footer  */}
         <Footer />

@@ -17,7 +17,7 @@ import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
 import TextoBloque01 from "../components/textobloque01";
 import Image01 from "../components/crashkurse/image01";
 
-import Content01Main from "../components/maincontent/Content01Main";
+
 import Tabla01 from "../components/crashkurse/tabla01";
 
 import AreaSuperior from "../componentes/area_superior/AreaSuperior";

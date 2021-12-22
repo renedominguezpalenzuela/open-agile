@@ -11,7 +11,7 @@ import Content02Cursos from "../../components/Content02Cursos";
 
 import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
 
-import Content01Main from "../../components/maincontent/Content01Main";
+
 
 import { servidor_url } from "../../config";
 
@@ -56,7 +56,7 @@ export default function Home({cursos}) {
 
       <MenuFlotanteBoton />
   
-        <AreaSuperior fondo="gris" texto1={titulo1} texto_parrafo_blanco={texto_parrafo_array} firma={[ "Dein Open Agile Team"," for better work" ]} />
+        <AreaSuperior fondo="variable" texto1={titulo1} texto_parrafo_blanco_cursos={texto_parrafo_array} cursos={true}  firma={[ "Dein Open Agile Team"," for better work" ]} />
 
 
     

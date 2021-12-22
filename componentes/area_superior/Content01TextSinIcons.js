@@ -10,7 +10,21 @@ import { servidor_url } from "../../config";
 
 
 
-const formato_titulo1=(vista_movil)=>{
+const formato_titulo1=(vista_movil, cursos, titulo_largo)=>{
+
+
+
+
+if (titulo_largo!=undefined && titulo_largo) {
+    return "font_title_largo font_title_purple mt-5 mb-5"
+  }
+
+
+
+if (cursos!=undefined && cursos) {
+    return "font_title_secundario font_title_purple mt-3"
+  }
+
 
   if (vista_movil===undefined || !vista_movil) {
     return "font_title_secundario font_title_purple mt-5"
@@ -33,7 +47,7 @@ const formato_titulo2=(vista_movil)=>{
   }
 }
 
-export default function Content01TextSinIcons({ texto1, texto2, texto2a, vista_movil}) {
+export default function Content01TextSinIcons({ texto1, texto2, texto2a, vista_movil, cursos, titulo_largo}) {
 
 
   return (
@@ -42,8 +56,8 @@ export default function Content01TextSinIcons({ texto1, texto2, texto2a, vista_m
 
   
       {texto1 != undefined && texto1 != "" && (
-        <div className={formato_titulo1(vista_movil)}>
-          {texto1}
+        <div className={formato_titulo1(vista_movil, cursos, titulo_largo)}>
+          {texto1} 
         </div>
       )}
 

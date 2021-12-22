@@ -2,8 +2,9 @@ export default function BotonAgileCheck() {
   return (
     <>
       <a href="/quizstart">
-        <button type="button" className="btn btn-outline-primary font_boton  ">
-          Agile Check
+      {/*  btn-outline-primary */}
+        <button type="button" className="  btn-agile-check font_boton  ">
+          Agile Check 
         </button>
       </a>
     </>

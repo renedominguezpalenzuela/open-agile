@@ -22,7 +22,7 @@ import TextoBloque01 from "../../components/textobloque01";
 
 import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
 
-import Content01Main from "../../components/maincontent/Content01Main";
+
 
 import BarraConTextoDerecha from "../../components/BarraConTextoDerecha";
 import BarraConTextoIzquierda from "../../components/BarraConTextoIzquierda";
@@ -61,7 +61,7 @@ export default function Home({ servicios }) {
       {/*Contenedor*/}
 
       <div id="principal" className="container-fluid g-0">
-        <AreaSuperior fondo="gris" texto1={titulo2 + " " + titulo2a} texto_parrafo_blanco={texto01} />
+        <AreaSuperior fondo="gris" cursos={true}  leistungen={true}  texto1={titulo3} texto_parrafo_blanco_cursos={texto01} titulo_largo={true} />
 
         <div className="mt-5"> </div>
         <BarraConTextoDerecha titulo={titulo3} texto={texto01} />

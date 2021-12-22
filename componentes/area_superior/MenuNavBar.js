@@ -128,15 +128,15 @@ export default function MenuNavBar() {
                 BLOG
         </a>
       </li>
-      <li className="nav-item">
+      {/* <li className="nav-item">
         <div className="separador_menu">/</div>
-      </li>
+      </li> */}
 
-      <li className="nav-item">
+      {/* <li className="nav-item">
         <a className="nav-link" href="/news">
                 NEWS
         </a>
-      </li>
+      </li> */}
 
 
 

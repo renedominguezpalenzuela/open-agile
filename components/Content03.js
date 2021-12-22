@@ -18,7 +18,7 @@ export default function Content03 ( ) {
     </div>
 
     <div className="row justify-content-center font_card_texto mt-2 ">
-        Bilden bei Open Agile aus      
+        VERTRAUEN OPEN AGILE   
     </div>
 
     <div className="row mt-5 mb-5 pb-5 d-flex justify-content-center align-items-center      ">

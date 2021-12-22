@@ -26,7 +26,7 @@ import TextoBlog02 from "../../components/blogs/TextoBlog02";
 import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
 
 
-import Content01Main from "../../components/maincontent/Content01Main";
+
 
 
 

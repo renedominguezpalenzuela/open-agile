@@ -167,22 +167,6 @@ const fuentes1 = {
       </div>
 
    
-      {/* <div class="row border border-dark  d-lg-none">
-
-           <div class="d-none  d-lg-block">
-      <div className="  bannerformulario2  ">
-
-        <div className="row font_title_formulario  item-titulo1-formulario">
-             LASS UNS IN KONTAKT BLEIBEN
-            </div>
-
-            <div className="row font_title_secundario_formulario  item-titulo2-formulario">
-            OPEN AGILE NEWSLETTER
-            </div>
-         
-</div>
-</div>
-</div> */}
 
     </>
   );

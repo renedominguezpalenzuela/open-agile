@@ -16,13 +16,17 @@ import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
 
 import TextoBloque01 from "../../components/textobloque01";
 import Image01 from "../../components/crashkurse/image01";
-import Content01Main from "../../components/maincontent/Content01Main";
+
 import TeamCarrousel from "../../components/TeamCarrousel";
 
 
 import Tabla01 from "../../components/crashkurse/tabla01";
 
 import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
+
+
+import BarraConTextoDerecha from "../../components/BarraConTextoDerecha";
+import BarraConTextoIzquierda from "../../components/BarraConTextoIzquierda";
 
 
 
@@ -104,6 +108,39 @@ const titulo_main = "DAS TEAM";
 
 
    
+
+
+   
+        <div className="mt-5 ps-5">
+          <BarraConTextoDerecha titulo={subtitulo1} texto={texto01} />
+        </div>
+
+        <div className="mt-5">
+          <BarraConTextoIzquierda titulo={subtitulo2} texto={texto02} />
+        </div>
+        <div className="mt-5 ps-5">
+          <BarraConTextoDerecha titulo={subtitulo3} texto={texto03} />
+        </div>
+        <div className="mt-5">
+          <BarraConTextoIzquierda titulo={subtitulo4} texto={texto04} />
+        </div>
+
+        <div className="mt-5 ms-5">
+          <BarraConTextoDerecha titulo={subtitulo5} texto={texto05} />
+        </div>
+
+        {/* 
+    <TextoBloque01   titulo={subtitulo1}  texto_parrafo_array={texto01} />
+
+    <TextoBloque01   titulo={subtitulo2}  texto_parrafo_array={texto02} />
+
+    <TextoBloque01   titulo={subtitulo3}  texto_parrafo_array={texto03} />
+
+    <TextoBloque01   titulo={subtitulo4}  texto_parrafo_array={texto04} />
+
+    <TextoBloque01   titulo={subtitulo5}  texto_parrafo_array={texto05} /> */}
+
+        {/* <TextoBloque01 titulo_main={titulo_main} /> */}
 
     {/* <TextoBloque01   titulo={subtitulo1}  texto_parrafo_array={texto01} />
 

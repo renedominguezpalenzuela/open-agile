@@ -35,6 +35,7 @@ export default function Home({
         <title>OPEN AGILE</title>
         <meta name="description" content="OPEN AGILE" />
         <link rel="icon" href="/favicon.ico" />
+        
         <script async src="js/chat.js" />
         <script async src="js/menu.js" />
       </Head>
@@ -61,7 +62,7 @@ export default function Home({
 
         {/* Servicios  */}
         <div id="services" className=" mt-5 ">
-          <div className="row justify-content-center font_title_seccion mt-1 ms-4"> LEISTUNGEN </div>
+          <div className="row justify-content-center font_title_seccion_leistungen  mt-1 ms-4"> LEISTUNGEN </div>
           <Card01Lista lista_cards={servicios} titulo_magenta={true} />
         </div>
 

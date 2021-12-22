@@ -25,10 +25,13 @@ export default function AreaSuperior({
   botones_configurador,
   iconos,
   texto_parrafo_blanco,
+  texto_parrafo_blanco_cursos,
   firma,
   boton_inicio_quiz,
   titulo_quiz_result,
   texto_quiz_result,
+  cursos,
+  titulo_largo
   
 }) {
 
@@ -56,7 +59,7 @@ let vista_movil = false;
 
           <div className="item-titulo ">
             {/* Contenido Principal */}
-            {contenido_principal( texto1, texto2,  texto2a,  formulario_contacto, botones_configurador,  iconos, texto_parrafo_blanco,  firma,  boton_inicio_quiz,  titulo_quiz_result, texto_quiz_result,vista_movil)}
+            {contenido_principal( texto1, texto2,  texto2a,  formulario_contacto, botones_configurador,  iconos, texto_parrafo_blanco, texto_parrafo_blanco_cursos, firma,  boton_inicio_quiz,  titulo_quiz_result, texto_quiz_result,vista_movil, cursos, titulo_largo)}
           </div>
         </div>
 
@@ -78,7 +81,7 @@ let vista_movil = false;
 
          <div className="item-titulo   ">
             {/* Contenido Principal */}
-            {contenido_principal( texto1,texto2,texto2a,formulario_contacto,botones_configurador,iconos,texto_parrafo_blanco,firma,boton_inicio_quiz,titulo_quiz_result,texto_quiz_result,vista_movil)}
+            {contenido_principal( texto1,texto2,texto2a,formulario_contacto,botones_configurador,iconos,texto_parrafo_blanco, texto_parrafo_blanco_cursos, firma,boton_inicio_quiz,titulo_quiz_result,texto_quiz_result,vista_movil, cursos, titulo_largo)}
           </div>
          </div>
       </div>
@@ -95,6 +98,11 @@ function getFondo(fondo) {
     fondo_por_defecto = "bannermain-quiz";
   }
 
+    if (fondo === "variable") {
+    fondo_por_defecto = "bannermain-variable";
+  }
+
+
   return fondo_por_defecto;
 }
 
@@ -106,11 +114,15 @@ const contenido_principal = (
   botones_configurador,
   iconos,
   texto_parrafo_blanco,
+  texto_parrafo_blanco_cursos,
   firma,
   boton_inicio_quiz,
   titulo_quiz_result,
   texto_quiz_result,
-  vista_movil
+  vista_movil,
+  cursos,
+  titulo_largo,
+  leistungen
  
 ) => {
   let id = -1;
@@ -133,10 +145,14 @@ const contenido_principal = (
         <>
           <div className=" g-0  ms-5  ">
             <Content01TextSinIcons
-              texto1={texto1}
+              texto1={texto1} 
               texto2={texto2}
               texto2a={texto2a}
               vista_movil={vista_movil}
+              cursos={cursos}
+              titulo_largo={titulo_largo}
+
+              
 
               
             />
@@ -174,11 +190,31 @@ const contenido_principal = (
         </>
       )}
 
+
+        {texto_parrafo_blanco_cursos != undefined && texto_parrafo_blanco_cursos.length > 0 && (
+        <>
+          
+            {/* mostrar solo en pantalla grande - espacio con el titulo mt-*/}
+        
+            <div className="row font_smaller_letter_white_cursos ms-5 mt-3 me-3 justificar margen_superior">
+              {texto_parrafo_blanco_cursos.map((unaLinea, index) => (
+                <p key={index}>{unaLinea}</p>
+              ))}
+            </div>
+        
+
+
+
+        </>
+      )}
+
+
+
       {firma != undefined && firma.length > 0 && (
         <>
-          <div className="row font_smaller_letter_white ms-5 me-3 justificar">
+          <div className="row font_smaller_letter_white_cursos ms-5 me-3 justificar">
             {firma.map((unaLinea, index) => (
-              <div>{unaLinea}</div>
+              <div  key={index}>{unaLinea}</div>
             ))}
           </div>
         </>
@@ -212,7 +248,7 @@ const contenido_principal = (
             <button
               type="button"
               className="btn p-3 ms-2 me-2 w-50 h-100 btn-card font-btn-card rounded-pill  ">
-              AGILE CHECK
+              AGILE CHECK 
             </button>
           </Link>
         </div>

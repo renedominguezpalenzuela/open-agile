@@ -34,15 +34,25 @@ export default function Footer() {
                 </div>
 
                 <div>
-                  <a className="font_facit_text_very_small mylinkhoover ps-2" href="tel:+49 (0) 421 22347567">
+                  <a className="font_facit_text_very_small-kontack mylinkhoover ps-2" href="tel:+49 (0) 421 22347567">
                     +49 (0) 421 22347567
                   </a>
                 </div>
-                <div>
-                  <a className="font_facit_text_very_small mylinkhoover ps-2" href="mailto:info@open-agile.de">
+
+                <p>
+                  <a className="font_facit_text_very_small-kontack mylinkhoover ps-2" href="mailto:info@open-agile.de">
                     info@open-agile.de
                   </a>
+                </p>
+
+                <div>
+                  <div className="font_facit_text_very_small-kontack ps-2" >
+                    <div>OPEN Agile GmbH </div>
+                    <div>Faulenstr. 67</div>
+                    <div>D-28195 Bremen</div>
+                  </div>
                 </div>
+
               </div>
             </div>
           </div>
@@ -120,7 +130,7 @@ export default function Footer() {
                 </a> */}
 
                 <Link href="/doc/agbs.pdf" download>
-                  <a target="_blank">AGBs</a>
+                  <a target="_blank" className="mylinkhoover">AGBs</a>
                 </Link>
               </div>
 
@@ -130,7 +140,7 @@ export default function Footer() {
                 </a> */}
 
                 <Link href="/docview02">
-                  <a target="_blank">Datenschutz</a>
+                  <a target="_blank" className="mylinkhoover">Datenschutz</a>
                 </Link>
               </div>
 
@@ -140,7 +150,7 @@ export default function Footer() {
                 </a> */}
 
                 <Link href="/docview03">
-                  <a target="_blank">Impressum</a>
+                  <a target="_blank" className="mylinkhoover">Impressum</a>
                 </Link>
               </div>
             </div>
@@ -152,19 +162,12 @@ export default function Footer() {
     
           </div>
 
-          <div className="row  mt-4 d-flex   g-0">
+          <div className="row  mt-4 d-flex pb-3  g-0">
           <Content01Iconos footer={true}/>
     
           </div>
 
-            <div className="row  mt-3 d-flex justify-content-center mylinkhoover font_footer_very_small g-0">
-              Privacy | Terms
-    
-          </div>
-
-            <a className="font_footer_very_small mylinkhoover d-flex justify-content-center ps-2" href="mailto:info@open-agile.de">
-                    info@open-agile.de
-                  </a>
+           
 
 
           {/* <div className="row mt-5 d-flex  justify-content-center letra_chica g-0">

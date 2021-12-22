@@ -145,6 +145,23 @@
     /* selector-locked: false; */
     text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
   }
+
+  
+  .font_title_largo {
+    font-family: Montserrat-BoldItalic;
+    color: #ffffff;
+    text-align: left;
+    font-size: 2.8rem;
+    line-height: 1;
+    font-weight: 500;
+  
+    /* letter-spacing: 4px; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-transform: uppercase;
+    /* selector-locked: false; */
+    text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
+  }
   
   @media (max-width: 767px) {
     .font_title_secundario {
@@ -170,6 +187,17 @@
      line-height: 90%;
   }
 
+
+  
+  .font_title_seccion_leistungen {
+    font-family:Montserrat-Bold;
+    color: #24325a;
+    
+     font-size: 2.8em;
+    font-weight: 100;
+     text-transform: uppercase; 
+     line-height: 90%;
+  }
 
   .font_facit_title_small {
     font-family: Montserrat-BoldItalic;
@@ -288,7 +316,7 @@
     color: #24325a;
     /* font-style: italic;  */
     /* font-size: 3.4vh;  */
-     font-size: 1.5rem;
+     font-size: 1.3rem;
      font-weight: 100;
      text-transform: uppercase; 
      line-height: 90%;
@@ -323,10 +351,10 @@
   font-family: Montserrat-BoldItalic;
   color: #F82D7C;
   font-style: italic; 
-  font-size: 1.3rem; 
-  font-weight: 100;
+  font-size: 1.5rem; 
+  /* font-weight: 100; */
    text-transform: uppercase; 
-   line-height: 90%;
+   /* line-height: 90%; */
 }
 
   
@@ -553,6 +581,23 @@
   }
 
   
+  .font_facit_text_very_small-kontack {
+    font-family: Montserrat-Light;
+    color: #ffffff;
+    text-align: left;
+    font-size: 0.7rem;
+  
+    /* font-weight: 200; */
+  
+    /* letter-spacing: 2px; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* selector-locked: false; */
+   
+  }
+
+  
   
   .font_footer_very_small {
     font-family: Montserrat-Light;
@@ -723,7 +768,7 @@
     /* color: #e42078; */
     color: #ffffff;
     /* font-style: italic; */
-    font-size: 1vw;
+    font-size: 1rem;
     /* font-weight: 100; */
 
     
@@ -733,6 +778,63 @@
   
 
   
+  .font_smaller_letter_white_cursos {
+    font-family: Montserrat-Regular;
+    color: #ffffff;
+    font-size: 80%;
+  }
+
+
+
+  
+ /* Solo para sizes mayores a 1300 */
+ @media (min-width: 1024px) {
+   
+  .font_smaller_letter_white_cursos {
+    
+    font-size: 75%;
+  }
+
+  
+}
+
+
+  
+ /* Solo para sizes mayores a 1300 */
+ @media (min-width: 1300px) {
+   
+  .font_smaller_letter_white_cursos {
+    
+    font-size: 100%;
+  }
+
+  .margen_superior {
+    
+    padding-top:  4vh;
+  }
+}
+
+ 
+ /* Solo para sizes mayores a 1300 */
+ @media (min-width: 1600px) {
+   
+     
+  .font_smaller_letter_white_cursos {
+    
+    font-size: 120%;
+  }
+
+  .margen_superior {
+    
+    padding-top:  4vh;
+  }
+}
+
+
+
+
+ 
+    
 
   
   

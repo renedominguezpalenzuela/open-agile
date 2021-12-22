@@ -19,7 +19,7 @@ import Tabla03 from "../../components/crashkurse/tabla03";
 import Card01Lista from "../../components/Card01Lista";
 import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
 
-import Content01Main from "../../components/maincontent/Content01Main";
+
 
 import { servidor_url } from "../../config";
 

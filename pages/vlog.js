@@ -1,3 +1,4 @@
+import { servidor_url } from "../config";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -17,7 +18,7 @@ import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
 import TextoBloque01 from "../components/textobloque01";
 import Image01 from "../components/crashkurse/image01";
 
-import Content01Main from "../components/maincontent/Content01Main";
+
 import Tabla01 from "../components/crashkurse/tabla01";
 
 
@@ -25,6 +26,8 @@ import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 
 import BarraConTextoDerecha from "../components/BarraConTextoDerecha";
 import BarraConTextoIzquierda from "../components/BarraConTextoIzquierda";
+
+import Content05 from "../components/Content05";
 
 
 
@@ -35,7 +38,9 @@ import BarraConTextoIzquierda from "../components/BarraConTextoIzquierda";
 //           CRASHKURSE \ CRASHKURS ZUM AGILE COACH
 //----------------------------------------------------------------------------------------------------------
 
-export default function Home() {
+export default function Home(
+  {vlog}
+) {
 
 
 
@@ -63,8 +68,14 @@ const  texto02= ["Interviews zu New Work & Co. ",
 
 
 
-const texto03 = []
+const texto03 = [
 
+
+ "Ob interessante Interviews zum Thema New Work, kurze Fachbeiträge oder einfach mal ein paar spannende Impulse für die persönliche Weiterentwicklung. In diesem Vlog wirst Du regelmäßig auf dem Laufenden gehalten. Wir freuen uns auf die Arbeitswelt von morgen! Du auch? Willst Du keinen neuen Beitrag verpassen, dann abonniere unseren YouTube-Kanal „Open Agile” und unseren Newsletter.",
+ "Interviews zu New Work & Co.",
+ "Crashkurs Selbstorganisation in agilen Teams",
+ "Impulse für Deine persönliche Weiterentwicklung"
+]
 
 
 
@@ -86,19 +97,11 @@ const texto03 = []
 
       <MenuFlotanteBoton />
   
-        <AreaSuperior fondo="gris" texto1={titulo1} texto2={titulo2} texto2a={titulo2a} />
+        <AreaSuperior fondo="gris" texto1={titulo1} texto2={titulo2} texto2a={titulo2a}  texto_parrafo_blanco_cursos={texto03} />
 
-    {/* <TextoBloque01   titulo={titulo3}  texto_parrafo_array={texto01} />
-
-
-    <TextoBloque01   titulo2={titulo4}  texto_plequitas_array={texto02} /> */}
-
-       <div className="mt-5"> </div>
-        <BarraConTextoDerecha titulo={titulo3} texto={texto01} />
-
-        {/* <div className="mt-5"> </div> */}
-        {/* <BarraConTextoIzquierda titulo={titulo4} texto={texto02} />  */}
-
+   
+  {/*Carrousel  */}
+        <Content05 datos={vlog} />
 
     <div className="mt-5"> </div>
 
@@ -112,4 +115,24 @@ const texto03 = []
 </>
   );
 }
+
+
+
+//Obteniendo los datos desde el servidor
+export const getServerSideProps = async (context) => {
+
+
+  const url5 = `${servidor_url}/api/vlog`;
+  const res5 = await fetch(url5);
+  const vlog = await res5.json();
+
+
+ 
+  return {
+    props: {
+      
+      vlog,
+    },
+  };
+};
 
