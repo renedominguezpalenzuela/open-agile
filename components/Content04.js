@@ -2,6 +2,11 @@
 //import Card03 from "./Card03";
 import Card03 from "./Card03";
 import Card01 from "./Card01";
+import Card05UserBlog from "./Card05UserBlog";
+import React from "react";
+
+
+
 
 //----------------------------------------------------------------------------------------------------------
 //            Area de Contenido:  Blog
@@ -11,6 +16,7 @@ import Card01 from "./Card01";
 
 export default function Content04 ({lista_cards} ) {
 
+  console.log(lista_cards);
 
   return (
         <>
@@ -18,27 +24,27 @@ export default function Content04 ({lista_cards} ) {
 
           <section>
             <div id="blog" className="row justify-content-center font_title_seccion mt-5 ms-4">UNSER BLOG</div>
-            <div className="row justify-content-center font_card_texto mt-2 ms-4">NEW WORK, LEADERSHIP & MORE</div>
+            <div className="row justify-content-center font_card_texto mt-2 ms-4 mb-5">NEW WORK, LEADERSHIP & MORE</div>
 
-          <div className="row g-5 pb-3"> 
+          <div className="row border g-0  d-flex justify-content-center  "> 
           
 
 
             {lista_cards.map (unCard=> (     
-              <div  key={unCard.id}>
+              <React.Fragment  key={unCard.id}>
                           {/* Vista movil  */}
-                        <div className="d-xl-none">                      
-                                      <div  className="row d-flex justify-content-center ">
-                                          <div className="col-md-6">
-                                              <Card01 id={unCard.id} imagen={unCard.image} titulo={unCard.title} texto={unCard.text} link={unCard.link}/>
-                                          </div>
-                                      </div>
+                        <div className="col d-xl-none">                      
+                                  
+                                    
+                                              <Card01 id={unCard.id} imagen={unCard.image} titulo={unCard.title} texto={unCard.titulo2} link={unCard.link}/>
+                                      
                         </div>  
                         {/* Vista normal  */}
-                        <div  className="d-none d-xl-block  ">          
-                          <Card03 id={unCard.id}  imagen={unCard.image} titulo={unCard.title} texto={unCard.text} link={unCard.link}/>     
+                        <div  className="col-4 p-4 border border-dark d-none d-xl-block  ">    
+                         
+                          <Card05UserBlog id={unCard.id}  imagen={unCard.image} titulo={unCard.title} texto={unCard.titulo2} link={unCard.link}/>     
                         </div> 
-              </div>  
+              </React.Fragment>  
             )
                 
             )}   

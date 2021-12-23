@@ -478,6 +478,18 @@ ul.no-bullets {
   z-index: 3;
 }
 
+
+
+.my_card_blog {
+  /* max-width: 330px; */
+  /* width: 40vw; */
+  /* height: 20vh; */
+  display: flex;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  z-index: 3;
+}
 .my_quiz {
   /* max-width: 330px; */
   /* max-width: 200vw; */

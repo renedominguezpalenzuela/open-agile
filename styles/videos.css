@@ -53,6 +53,7 @@
     width: 100%;
     padding-top: 75%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
     left:   3vw;
+   
   }
   
   /* Then style the iframe to fit in the container div with full height and width */
