@@ -21,8 +21,8 @@ export default function Card05UserBlog({
   
   return (
     <>
-      <div className="card myanimacion sombra_cards redondear-card">
-        <div className="row   g-0 ">
+      <div className="card myanimacion sombra_cards redondear-card pb-2">
+        <div className="row   g-0 pb-2">
           <img   className=" imagen-blog "  src={`${servidor_url}/img/${imagen}`}  alt={texto_alt} />
         </div>
 
