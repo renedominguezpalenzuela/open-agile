@@ -17,50 +17,45 @@ export default function Card05UserBlog({
   texto_alt,
   link,
 }) {
+
+  console.log(titulo2);
   return (
     <>
-      <div className="card  myanimacion sombra_cards">
+      <div className="card myanimacion sombra_cards redondear-card">
         <div className="row   g-0 ">
-          <img   className=" imagen-blog "  src={`${servidor_url}/img/${imagen}`}  alt={texto_alt}
-          />
+          <img   className=" imagen-blog "  src={`${servidor_url}/img/${imagen}`}  alt={texto_alt} />
         </div>
 
-        {/* <div className="card-body text-center    "> */}
-          <div className="row pt-2 pb-2  g-0   ">
+      
 
-            <div className="col-8  d-flex justify-content-start ps-2">
-              {titulo != undefined && titulo != "" && (
-                <p className="card-text font-card-blog  ">
-                  {procesarTextoLargo(titulo)} 
-                </p>
-              )}
+        <div className="h-100 d-flex  align-items-center  ">
+          <div className="row w-100 g-0 ">
+
+            <div className="col-9 pt-1 ps-1   ">
+               {titulo != undefined && titulo != "" && (<>
+                   <div className="ps-1 font1-card-blog ">
+                      {titulo} 
+                   </div>
+               </>)}
 
               {/* font_card_title2  */}
-              {titulo2 != undefined && titulo2 != "" && (
-                <div className="row border  d-flex align-items-center justify-content-start   ">
-                  <p className="text-center font_cards_magenta m-1 ps-2">
-                    {procesarTextoLargo(titulo2)}
-                  </p>
-                </div>
-              )}
+              {titulo2 != undefined && titulo2 != "" && (<>              
+                    <div className="ps-1 font2-card-blog ">
+                        {titulo2}
+                    </div>              
+              </>)}
             </div>
 
-            <div className="col-4 pt-1 pb-1 pe-2 ">
-              <a href={`/${link}/${id}`}   className=" d-flex  justify-content-end"> 
-                <button
-                  type="button"
-                  className="btn  btn-card font-btn-card-blog ">
-                  JETZT LESEN...
+            <div className="col-3   d-flex  align-items-center justify-content-center ">
+              <a href={`/${link}/${id}`}   className="  "> 
+                <button type="button" className="btn  btn-card-blog font-btn-card-blog ">
+                  JETZT LESEN
                 </button>
               </a>
             </div>
           </div>
-        {/* </div> */}
-
-        {/* <div className="card-footer-my-card text-center pb-4  ">
-     
-           
-          </div> */}
+         </div> 
+        
       </div>
     </>
   );
