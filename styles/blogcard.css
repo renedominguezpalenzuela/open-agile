@@ -30,7 +30,7 @@
  .redondear-card {
     border-radius:8px 8px 8px 8px;
     max-height: 50vh;
-    height: 50vh;
+    /* height: 50vh; */
 
  }
 

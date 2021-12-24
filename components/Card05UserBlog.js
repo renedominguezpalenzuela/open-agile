@@ -18,7 +18,7 @@ export default function Card05UserBlog({
   link,
 }) {
 
-  console.log(titulo2);
+  
   return (
     <>
       <div className="card myanimacion sombra_cards redondear-card">

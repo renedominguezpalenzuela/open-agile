@@ -32,7 +32,7 @@ export default function Content04 ({lista_cards} ) {
             {lista_cards.map (unCard=> (     
               <React.Fragment  key={unCard.id}>
                           {/* Vista movil  */}
-                        <div className="col d-xl-none">                      
+                        <div className="col-4 d-xl-none">                      
                                   
                                     
                                               <Card01 id={unCard.id} imagen={unCard.image} titulo={unCard.title} texto={unCard.titulo2} link={unCard.link}/>
