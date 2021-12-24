@@ -19,19 +19,16 @@ export default function Card05UserBlog({
 }) {
   return (
     <>
-      <div className="card   myanimacion sombra_cards">
-        <div className="row  g-0">
-          <img
-            className=" imgagen-blog"
-            src={`${servidor_url}/img/${imagen}`}
-            alt={texto_alt}
+      <div className="card  myanimacion sombra_cards">
+        <div className="row   g-0 ">
+          <img   className=" imagen-blog "  src={`${servidor_url}/img/${imagen}`}  alt={texto_alt}
           />
         </div>
 
-        <div className="card-body text-center    ">
-          <div className="row g-0   ">
+        {/* <div className="card-body text-center    "> */}
+          <div className="row pt-2 pb-2  g-0   ">
 
-            <div className="col-8 border border-dark d-flex justify-content-center">
+            <div className="col-8  d-flex justify-content-start ps-2">
               {titulo != undefined && titulo != "" && (
                 <p className="card-text font-card-blog  ">
                   {procesarTextoLargo(titulo)} 
@@ -40,16 +37,16 @@ export default function Card05UserBlog({
 
               {/* font_card_title2  */}
               {titulo2 != undefined && titulo2 != "" && (
-                <div className="row   d-flex align-items-center justify-content-center   ">
-                  <p className="text-center font_cards_magenta m-1">
+                <div className="row border  d-flex align-items-center justify-content-start   ">
+                  <p className="text-center font_cards_magenta m-1 ps-2">
                     {procesarTextoLargo(titulo2)}
                   </p>
                 </div>
               )}
             </div>
 
-            <div className="col-4 border border-dark">
-              <a href={`/${link}/${id}`}>
+            <div className="col-4 pt-1 pb-1 pe-2 ">
+              <a href={`/${link}/${id}`}   className=" d-flex  justify-content-end"> 
                 <button
                   type="button"
                   className="btn  btn-card font-btn-card-blog ">
@@ -58,7 +55,7 @@ export default function Card05UserBlog({
               </a>
             </div>
           </div>
-        </div>
+        {/* </div> */}
 
         {/* <div className="card-footer-my-card text-center pb-4  ">
      

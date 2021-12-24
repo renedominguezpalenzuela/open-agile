@@ -8,7 +8,7 @@ import Content01Iconos from "../componentes/area_superior/Content01Iconos";
 
 
 export default function Footer() {
-  // console.log('version '+process.env.NEXT_PUBLIC_VER)
+ 
   return (
     <>
       <footer id="myfooter" className="mt-5 no-gutter color_background">

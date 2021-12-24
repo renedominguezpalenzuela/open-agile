@@ -31,7 +31,7 @@ export default function Home({
 
 
  
-  // console.log(process.env.NEXT_PUBLIC_ANALYTICS_ID);
+  
   return (
     <>
       <Head>
