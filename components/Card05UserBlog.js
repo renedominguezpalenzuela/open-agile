@@ -48,9 +48,14 @@ export default function Card05UserBlog({
 
             <div className="col-3   d-flex  align-items-center justify-content-center ">
               <a href={`/${link}/${id}`}   className="  "> 
-                <button type="button" className="btn  btn-card-blog font-btn-card-blog ">
-                  JETZT LESEN
+                <button type="button" className="btn  btn-card-blog font-btn-card-blog rounded-pill  ">
+                  Jetzt lesen...
                 </button>
+
+
+                 {/* <button type="button" className="btn  ms-2 me-2 w-75 h-100 btn-card font-btn-card rounded-pill  ">
+                Jetzt lesen...
+              </button> */}
               </a>
             </div>
           </div>

@@ -11,9 +11,9 @@ export default function Content03 ( ) {
 
 
 
-
+ {/* font_title_seccion */}
   <div id="empresas" className="color_fondo div_content03b pt-5">
-    <div className="row justify-content-center font_title_seccion  pt-5 ">
+    <div className="row justify-content-center font_title_seccion_sombra   pt-5 ">
         Diese und viele weitere Unternehmen
     </div>
 
