@@ -39,7 +39,7 @@ export default function Home({cursos}) {
   const router = useRouter();
   const { id } = router.query;
 
-  const titulo1 = "Crashkurse";
+  const titulo1 = "CRASHKURSE";
 
   return (
     <>

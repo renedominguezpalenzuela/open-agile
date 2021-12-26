@@ -98,7 +98,7 @@ export default function MenuNavBar() {
 
 
           <li className="nav-item ">
-            <a className="dropdown-item color-font-dropdown" href="/team">WIR</a>
+            <a className="dropdown-item color-font-dropdown" href="/wir">WIR</a>
           </li>
 
 

@@ -5,7 +5,7 @@ export default function BarraConTextoIzquierda({
 }) {
 
 
-  console.log(texto[0])
+ 
   return (
     <>
       {((texto != undefined && texto != "")||(titulo != undefined && titulo != ""))  && (

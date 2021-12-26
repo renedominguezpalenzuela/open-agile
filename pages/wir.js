@@ -10,10 +10,13 @@ import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
 import TextoBloque01 from "../components/textobloque01";
 import Image01 from "../components/crashkurse/image01";
 
-import TeamCarrousel from "../components/TeamCarrousel";
+import Content06Team from "../components/Content06Team";
 
 import Tabla01 from "../components/crashkurse/tabla01";
 import AreaSuperior from "../componentes/area_superior/AreaSuperior";
+
+
+import { servidor_url } from "../config";
 
 
 
@@ -21,12 +24,12 @@ import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 //           CRASHKURSE \ CRASHKURS ZUM AGILE COACH
 //----------------------------------------------------------------------------------------------------------
 
-export default function Home() {
+export default function Home({team}) {
   // <Head>
   //   <script async src="js/menu.js" />
   // </Head>
 
-  const titulo1 = "TEAM";
+  const titulo1 = "Open Agile Team";
   const titulo2 = "UNSERE WERTE";
   const titulo2a = "";
 
@@ -48,14 +51,13 @@ export default function Home() {
         <MenuFlotanteBoton />
 
         <AreaSuperior
-          fondo="gris"
+          fondo="ajustable"
           texto1={titulo1}
-          texto2={titulo2}
-          texto2a={titulo2a}
+        
         />
 
 
-        <TeamCarrousel />
+       <Content06Team lista_cards={team}/>
 
         {/*Footer  */}
         <Footer />
@@ -66,3 +68,25 @@ export default function Home() {
     </>
   );
 }
+
+
+
+//Obteniendo los datos desde el servidor
+export const getServerSideProps = async (context) => {
+
+
+  const url5 = `${servidor_url}/api/team`;
+  const res5 = await fetch(url5);
+  const team = await res5.json();
+
+
+
+
+  return {
+    props: {
+      team
+     
+    },
+  };
+};
+

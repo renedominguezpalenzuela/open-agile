@@ -16,6 +16,18 @@ import Content01TextSinIcons from "./Content01TextSinIcons";
 
 import FormularioContacto2 from "../../components/formulariocontacto2";
 
+
+// fondo --- define el tipo de fondo del area superior
+/*
+si no se especifica fondo = bannermain
+
+  si fondo="barco"  --- se pone el fondo con un barco "bannermain-quiz";
+  
+
+  si fondo = "variable"  --- el fondo crece para contener el texto
+
+
+ */
 export default function AreaSuperior({
   fondo,
   texto1,
@@ -39,7 +51,7 @@ let vista_movil = false;
   return (
     <>
       {/*--------------- Mostrar si mayor o igual a lg ≥992px ------------------ */}
-      <div className=" d-none  d-lg-block">
+      <div className=" d-none d-lg-block">
 
         {vista_movil=false}
         <div className={`${getFondo(fondo)}`}>
@@ -98,9 +110,21 @@ function getFondo(fondo) {
     fondo_por_defecto = "bannermain-quiz";
   }
 
+
+
+  //varia con el contenido crece, el contenido es texto grande
+
     if (fondo === "variable") {
     fondo_por_defecto = "bannermain-variable";
   }
+
+
+//varia con el contenido se reduce, el contenido es solo titulo
+  if (fondo === "ajustable") {
+    fondo_por_defecto = "bannermain-ajustable";
+  }
+
+
 
 
   return fondo_por_defecto;
