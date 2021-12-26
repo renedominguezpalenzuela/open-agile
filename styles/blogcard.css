@@ -14,9 +14,11 @@
 }
 
 .imagen-blog{
-    /* width:100%; */
+    
     width: 100%;
-    height:240px;
+    /* aspect-ratio: 1 / 0.5; */
+     height:240px; 
+     /* height: 8vh; */
 
     border-radius:8px 8px 0px 0px;
  
@@ -29,7 +31,7 @@
 
  .redondear-card {
     border-radius:8px 8px 8px 8px;
-    max-height: 50vh;
+    /* max-height: 50vh; */
     /* height: 50vh; */
 
  }
