@@ -21,10 +21,9 @@ import FormularioContacto2 from "../../components/formulariocontacto2";
 /*
 si no se especifica fondo = bannermain
 
-  si fondo="barco"  --- se pone el fondo con un barco "bannermain-quiz";
-  
-
-  si fondo = "variable"  --- el fondo crece para contener el texto
+  barco   --- se pone el fondo con un barco "bannermain-quiz";
+  variable  ---- texto -- fondo crece en funcion del contenido
+  ajustable ---- bannermain-ajustable -- funcion se redudce en funcion del contenido
 
 
  */
@@ -38,16 +37,25 @@ export default function AreaSuperior({
   iconos,
   texto_parrafo_blanco,
   texto_parrafo_blanco_cursos,
+   texto_parrafo_blanco_team,
   firma,
   boton_inicio_quiz,
   titulo_quiz_result,
   texto_quiz_result,
   cursos,
-  titulo_largo
+  titulo_largo,
+  img_team_top
   
 }) {
 
+
+
+
+  
+
 let vista_movil = false;
+
+
   return (
     <>
       {/*--------------- Mostrar si mayor o igual a lg ≥992px ------------------ */}
@@ -71,14 +79,21 @@ let vista_movil = false;
 
           <div className="item-titulo ">
             {/* Contenido Principal */}
-            {contenido_principal( texto1, texto2,  texto2a,  formulario_contacto, botones_configurador,  iconos, texto_parrafo_blanco, texto_parrafo_blanco_cursos, firma,  boton_inicio_quiz,  titulo_quiz_result, texto_quiz_result,vista_movil, cursos, titulo_largo)}
+            {contenido_principal( texto1, texto2,  texto2a,  formulario_contacto, botones_configurador, 
+               iconos, texto_parrafo_blanco, texto_parrafo_blanco_cursos,texto_parrafo_blanco_team, firma,  boton_inicio_quiz,
+                 titulo_quiz_result, texto_quiz_result,vista_movil, cursos, titulo_largo)}
           </div>
+
+           <div className="item-img-team-top ">
+             <img className=" img-team-top  " src={`${servidor_url}/img/${img_team_top}`} />
+             
+           </div>
         </div>
 
         <IconosIzquierda />
       </div>
 
-      {/* -------------------- Mostrar si menor a lg<992px  ----------------------------------------*/}
+      {/* --------------------Vista movil Mostrar si menor a lg<992px  ----------------------------------------*/}
       <div className=" mb-5  d-lg-none">
         {vista_movil=true}
         <MenuNavBar2 />
@@ -93,7 +108,9 @@ let vista_movil = false;
 
          <div className="item-titulo   ">
             {/* Contenido Principal */}
-            {contenido_principal( texto1,texto2,texto2a,formulario_contacto,botones_configurador,iconos,texto_parrafo_blanco, texto_parrafo_blanco_cursos, firma,boton_inicio_quiz,titulo_quiz_result,texto_quiz_result,vista_movil, cursos, titulo_largo)}
+            {contenido_principal( texto1,texto2,texto2a,formulario_contacto,botones_configurador,iconos,texto_parrafo_blanco,
+               texto_parrafo_blanco_cursos,texto_parrafo_blanco_team, firma,boton_inicio_quiz,titulo_quiz_result,texto_quiz_result,vista_movil, cursos,
+                titulo_largo)}
           </div>
          </div>
       </div>
@@ -125,6 +142,10 @@ function getFondo(fondo) {
   }
 
 
+ if (fondo === "team") {
+    fondo_por_defecto = "bannermain-team";
+  }
+
 
 
   return fondo_por_defecto;
@@ -139,6 +160,7 @@ const contenido_principal = (
   iconos,
   texto_parrafo_blanco,
   texto_parrafo_blanco_cursos,
+  texto_parrafo_blanco_team, 
   firma,
   boton_inicio_quiz,
   titulo_quiz_result,
@@ -146,9 +168,16 @@ const contenido_principal = (
   vista_movil,
   cursos,
   titulo_largo,
-  leistungen
+  leistungen,
+
  
 ) => {
+
+
+
+  console.log(texto_parrafo_blanco_team);
+
+
   let id = -1;
 
   if (botones_configurador != undefined) {
@@ -215,22 +244,33 @@ const contenido_principal = (
       )}
 
 
-        {texto_parrafo_blanco_cursos != undefined && texto_parrafo_blanco_cursos.length > 0 && (
+      {texto_parrafo_blanco_cursos != undefined && texto_parrafo_blanco_cursos.length > 0 && (
         <>
-          
             {/* mostrar solo en pantalla grande - espacio con el titulo mt-*/}
-        
             <div className="row font_smaller_letter_white_cursos ms-5 mt-3 me-3 justificar margen_superior">
               {texto_parrafo_blanco_cursos.map((unaLinea, index) => (
                 <p key={index}>{unaLinea}</p>
               ))}
             </div>
-        
-
-
-
         </>
       )}
+
+
+      {texto_parrafo_blanco_team != undefined && texto_parrafo_blanco_team.length > 0 && (
+        <>
+            {/* mostrar solo en pantalla grande - espacio con el titulo mt-*/}
+            <div className="row font_smaller_letter_white_cursos ms-5 mt-3 me-3  margen_superior texto_parrafo_blanco_team">
+              {texto_parrafo_blanco_team.map((unaLinea, index) => (
+                <p key={index}>{unaLinea}</p>
+              ))}
+            </div>
+        </>
+      )}
+
+          
+    
+          
+
 
 
 
