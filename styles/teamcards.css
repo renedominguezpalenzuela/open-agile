@@ -17,7 +17,7 @@
 .font3-card-team{
     font-family: Montserrat-Black;
     color: #030066;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 
@@ -71,3 +71,107 @@
     font-size: 1vw;
         
 }
+
+
+
+.font_titulo_team {
+    font-family: Montserrat-BlackItalic; 
+    color: #243A78;
+    font-size: 1.8vw;
+    letter-spacing: 0.2vw;
+}
+
+
+.font_erfahrum{
+    font-family: Montserrat-Regular; 
+    color: #243A78;
+    font-size: 1.8vw;
+   
+}
+
+.font_erfahrum_detalles{
+    font-family: Montserrat-Regular; 
+    color: #1F397C;
+    font-size: 1.2vw;
+}
+
+
+div.horizontal-line{
+    /* width: fit-content; Line width */
+    background-color: #243A78; /* Line color */
+    height: 2px; /* Override in-line if you want specific height. */
+    
+  }
+
+
+  .font_weiterbildungen {
+    font-family: Montserrat-ExtraBold; 
+    color: #243A78;
+    font-size: 1.7vw;
+
+
+  }
+
+
+  .font_texto_inferior_team{
+    font-family: Montserrat-SemiBold; 
+    color: #243A78;
+    font-size: 1.1vw;
+  }
+
+
+  .fondo_team_seccion {
+
+    background-color: #14979E;
+  }
+
+
+  .font_motto_team{
+    font-family: Montserrat-Light; 
+    color: #ffffff;
+    /* line-height: 0.2vh; */
+    font-size: 1.6vw;  
+  }
+
+
+  .font_title1-team-seccion {
+      
+
+    font-family: Montserrat-BoldItalic;
+    color: #ffffff;
+    text-align: left;
+    font-size: 1.8em;
+    line-height: 1;
+    font-weight: 500;
+    
+  
+    /* letter-spacing: 4px; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* text-transform: uppercase; */
+    /* selector-locked: false; */
+    text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
+
+  
+  }
+
+   /* font_title_purple */
+  .font_title2-team-seccion {
+
+
+
+    font-family: Montserrat-BoldItalic;
+    /* color: #ffffff; */
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1;
+    font-weight: 500;
+  
+    /* letter-spacing: 4px; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* text-transform: uppercase; */
+    /* selector-locked: false; */
+    text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
+  
+  }

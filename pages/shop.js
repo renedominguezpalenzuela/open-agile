@@ -97,7 +97,7 @@ const  texto02= ['Timebox', 'Post-its', 'Eddings', '2 Open Agile Kaffee-Tassen',
         <BarraConTextoDerecha titulo={texto01} texto={texto02} />
 
 
-  
+  <div className="mt-5"> </div>
 
 
     {/*Footer  */}

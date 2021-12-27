@@ -64,7 +64,7 @@ export default function Home({
         <Content05 datos={vlog} />
 
         {/* Servicios  */}
-        <div id="services" className=" mt-5 ">
+        <div id="services" className=" mt-5 mb-5 pb-5">
           <div className="row justify-content-center font_title_seccion_sombra  mt-1 ms-4"> LEISTUNGEN </div>
           <Card01Lista lista_cards={servicios} titulo_magenta={true} />
         </div>

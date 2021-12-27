@@ -11,9 +11,9 @@ export default function Footer() {
  
   return (
     <>
-      <footer id="myfooter" className="mt-5 no-gutter color_background">
+      <footer id="myfooter" className=" no-gutter color_background">
         {/* <div id="rowfoot01" className="row   color_background footer_path ps-2 mb-5 mt-5 pt-5"> */}
-         <div id="rowfoot01" className="row    mb-5 mt-5 "> 
+         <div id="rowfoot01" className="row    mb-5  "> 
           <FormularioContacto2 />
         </div>
 

@@ -125,7 +125,7 @@ const titulo_main = "DAS TEAM";
           <BarraConTextoIzquierda titulo={subtitulo4} texto={texto04} />
         </div>
 
-        <div className="mt-5 ms-5">
+        <div className="mt-5 ms-5 mb-5">
           <BarraConTextoDerecha titulo={subtitulo5} texto={texto05} />
         </div>
 
