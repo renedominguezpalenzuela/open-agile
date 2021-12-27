@@ -30,6 +30,9 @@ si no se especifica fondo = bannermain
 
 
  */
+
+
+//  titulo_largo ={true} --- reduce el fonts del titulo texto1 magenta para que quepa en una linea
 export default function AreaSuperior({
   fondo,
   texto1,

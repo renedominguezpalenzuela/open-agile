@@ -58,9 +58,9 @@ export default function Home({ curso }) {
         <AreaSuperior fondo="gris" texto1={titulo1} texto2={titulo2} texto2a={titulo2a} />
 
         {/* Tabla 1: imagenes alternas */}
-        <div id="course" className="row  text-center mb-5 mt-5  ">
+        {/* <div id="course" className="row  text-center mb-5 mt-5  ">
           <h3 className="font_titulo_detalles "> {titulo3}</h3>
-        </div>
+        </div> */}
 
         <Tabla01 className="" items_tabla={items_tabla} numero_tabla="1" />
 

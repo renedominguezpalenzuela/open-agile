@@ -22,6 +22,10 @@ import "../styles/BarraConTextos.css";
 import "../styles/videos.css";
 import "../styles/blogcard.css";
 import "../styles/teamcards.css";
+import "../styles/krashkurse.css";
+
+
+
 
 
 

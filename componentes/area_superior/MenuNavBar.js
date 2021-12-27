@@ -27,16 +27,16 @@ export default function MenuNavBar() {
 
 
           <li className="nav-item ">
-            <a className="dropdown-item color-font-dropdown" href="/crashkurse/1">CRASHKURS ZUM AGILE COACH</a>
+            <a className="dropdown-item color-font-dropdown" href="/crashkurse/beschreibung/1">CRASHKURS ZUM AGILE COACH</a>
           </li>
 
 
           <li className="nav-item">
-            <a className="dropdown-item color-font-dropdown" href="/crashkurse/2">CRASHKURS ZUM AGILE FACILITATOR</a>
+            <a className="dropdown-item color-font-dropdown" href="/crashkurse/beschreibung/2">CRASHKURS ZUM AGILE FACILITATOR</a>
           </li>
 
           <li className="nav-item">
-            <a className="dropdown-item color-font-dropdown" href="/crashkurse/3">CRASHKURS ZUM SCRUM MASTER</a>
+            <a className="dropdown-item color-font-dropdown" href="/crashkurse/beschreibung/3">CRASHKURS ZUM SCRUM MASTER</a>
           </li>
 
         </ul>
@@ -72,10 +72,10 @@ export default function MenuNavBar() {
             <a className="dropdown-item color-font-dropdown" href="/leistungen/3">COACHING </a>
           </li>
 
-
+{/* 
           <li className="nav-item">
             <a className="dropdown-item color-font-dropdown" href="/leistungen/4">MITBESTIMMUNG IM AGILEN KONTEXT</a>
-          </li>
+          </li> */}
 
 
 

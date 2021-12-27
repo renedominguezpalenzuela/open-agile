@@ -33,7 +33,7 @@ export default function IconosTeam({ phone, email, linkedin }) {
           />
         </a>
 
-        <a href={email}>
+        <a href={`mailto:${email}`}>
           <img
             className=" ms-4 social-img-team "
             src={`${servidor_url}/img/team/email.svg`}
