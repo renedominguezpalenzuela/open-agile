@@ -93,10 +93,12 @@ let vista_movil = false;
                  titulo_quiz_result, texto_quiz_result,vista_movil, cursos, titulo_largo, iconos_team, email, phone,  linkedin)}
           </div>
 
+
+           {img_team_top!=undefined && img_team_top!="" && (
            <div className="item-img-team-top ">
-             <img className=" img-team-top  " src={`${servidor_url}/img/${img_team_top}`} />
-             
+             <img className=" img-team-top  " src={`${servidor_url}/img/${img_team_top}`} />             
            </div>
+           )}
         </div>
 
         <IconosIzquierda />
