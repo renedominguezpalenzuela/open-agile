@@ -40,7 +40,7 @@ const router = useRouter()
 const {id}  = router.query;
 
 
-const { image, title, motto, motto_author, text, telefono, correo, imagetop} = team;
+const { image, title, motto, motto_author, text, telefono, correo, imagetop, linkedin} = team;
 
 
 
@@ -70,8 +70,10 @@ let foto2 = servidor_url + '/img/'+image;
          <div id="principal" className="container-fluid g-0">
 
       <MenuFlotanteBoton />
+
+
   
-        <AreaSuperior fondo="team" texto2={title} texto_parrafo_blanco_team={text} img_team_top={imagetop} />
+        <AreaSuperior fondo="team" texto2={title} texto_parrafo_blanco_team={text} img_team_top={imagetop} iconos_team={true} email={correo}  linkedin={linkedin}  phone={telefono} />
 
 
 

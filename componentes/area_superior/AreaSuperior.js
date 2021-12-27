@@ -11,6 +11,9 @@ import IconosIzquierda from "../../components/IconosIzquierda";
 
 import BotonesConfigurator from "./BotonesConfigurator";
 import Content01Iconos from "./Content01Iconos";
+import IconosTeam from "./IconosTeam";
+
+
 
 import Content01TextSinIcons from "./Content01TextSinIcons";
 
@@ -44,7 +47,13 @@ export default function AreaSuperior({
   texto_quiz_result,
   cursos,
   titulo_largo,
-  img_team_top
+  img_team_top,
+
+  iconos_team,
+  email,
+  phone,
+  linkedin
+
   
 }) {
 
@@ -55,7 +64,7 @@ export default function AreaSuperior({
 
 let vista_movil = false;
 
-
+ 
   return (
     <>
       {/*--------------- Mostrar si mayor o igual a lg ≥992px ------------------ */}
@@ -81,7 +90,7 @@ let vista_movil = false;
             {/* Contenido Principal */}
             {contenido_principal( texto1, texto2,  texto2a,  formulario_contacto, botones_configurador, 
                iconos, texto_parrafo_blanco, texto_parrafo_blanco_cursos,texto_parrafo_blanco_team, firma,  boton_inicio_quiz,
-                 titulo_quiz_result, texto_quiz_result,vista_movil, cursos, titulo_largo)}
+                 titulo_quiz_result, texto_quiz_result,vista_movil, cursos, titulo_largo, iconos_team, email, phone,  linkedin)}
           </div>
 
            <div className="item-img-team-top ">
@@ -110,7 +119,7 @@ let vista_movil = false;
             {/* Contenido Principal */}
             {contenido_principal( texto1,texto2,texto2a,formulario_contacto,botones_configurador,iconos,texto_parrafo_blanco,
                texto_parrafo_blanco_cursos,texto_parrafo_blanco_team, firma,boton_inicio_quiz,titulo_quiz_result,texto_quiz_result,vista_movil, cursos,
-                titulo_largo)}
+                titulo_largo, iconos_team, email, phone,  linkedin)}
           </div>
          </div>
       </div>
@@ -168,14 +177,14 @@ const contenido_principal = (
   vista_movil,
   cursos,
   titulo_largo,
-  leistungen,
+  iconos_team,
+  email, phone,  linkedin
 
  
 ) => {
 
 
 
-  console.log(texto_parrafo_blanco_team);
 
 
   let id = -1;
@@ -214,6 +223,9 @@ const contenido_principal = (
       )}
 
       {iconos != undefined && iconos && <Content01Iconos />}
+
+
+    
 
       {/*Texto_quiz_result */}
 
@@ -267,6 +279,8 @@ const contenido_principal = (
         </>
       )}
 
+
+   {iconos_team != undefined && iconos_team && <IconosTeam   email={email} phone={phone}  linkedin={linkedin} />}
           
     
           
