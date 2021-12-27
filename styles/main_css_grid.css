@@ -291,7 +291,8 @@ img.grayscale:hover {
 
  padding-top: 5vh; 
  /* height: 50%; */
- padding-bottom: 0vh;
+
+padding-bottom: 4vh;
 
 
   background-size: auto, cover;
