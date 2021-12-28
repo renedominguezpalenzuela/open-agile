@@ -7,10 +7,12 @@ import MenuKraskurse from "../../../componentes/krashkurse/MenuKrashkurse";
 
 
 import AreaSuperior from "../../../componentes/area_superior/AreaSuperior";
+import KurseContent01 from "../../../componentes/krashkurse/KurseContent01";
 
 import MenuFlotante from "../../../components/MenuFlotante";
 import Footer from "../../../components/Footer";
 import MenuFlotanteBoton from "../../../components/MenuFlotanteBoton";
+
 
 
 
@@ -52,9 +54,11 @@ export default function Home({ curso }) {
 
         <div class="row pt-5 pb-5">
           <div class="col-4">
-            <MenuKraskurse />
+            <MenuKraskurse link_beschreibung={link_beschreibung}/>
           </div>
-          <div class="col-8">
+          <div class="col-7  pe-5">
+
+          <KurseContent01 imagen={image1} titulo={titulo_seccion} texto={texto_beschreibung} />
             
           </div>
         </div>
