@@ -5,19 +5,19 @@ import KurseButtons from "./KurseButtons";
 
  
 
-export default function KurseContent01({imagen, titulo, texto, imagen_botones,titulo_botones, text_termine, link_weitere_infos, link_termine, link_pdf}) {
+export default function KurseContent02({imagen, titulo, texto, imagen_botones,titulo_botones, text_termine, link_weitere_infos, link_termine, link_pdf}) {
   return (
     <>
        <div className="row  ">
                   <img className="img-fluid ms-3 " src={`${servidor_url}/img/${imagen}`} alt="" />
 
 
-                  <div className="tabla-titulo-cursos mt-4 ms-3 ">
+                  {/* <div className="tabla-titulo-cursos mt-4 ms-3 ">
                          {titulo} 
-                  </div>
+                  </div> */}
                   {texto.map((unaLinea, index)=>(
                                                       <>
-                                                      <div className=" mt-2 ms-3 fuente-texto-cursos   ">{unaLinea}</div>
+                                                      <div className=" mt-2 ms-3 p-3 fuente-leistungen  bordes_leistungen d-flex justify-content-center ">{unaLinea}</div>
                                                         {unaLinea==="<br>"?"<br/>":""}
                                                       </>
                                 )

@@ -6,13 +6,16 @@ import { useRouter } from "next/router";
 import MenuKraskurse from "../../../componentes/krashkurse/MenuKrashkurse";
 
 import AreaSuperior from "../../../componentes/area_superior/AreaSuperior";
-import KurseContent01 from "../../../componentes/krashkurse/KurseContent01";
+import KurseContent03 from "../../../componentes/krashkurse/KurseContent03";
 
 import MenuFlotante from "../../../components/MenuFlotante";
 import Footer from "../../../components/Footer";
 import MenuFlotanteBoton from "../../../components/MenuFlotanteBoton";
 
 import Tabla03 from "../../../components/crashkurse/tabla03";
+
+
+
 
 export default function Home({ curso }) {
   const router = useRouter();
@@ -22,8 +25,8 @@ export default function Home({ curso }) {
     titulo_area_superior,
     titulo_dates,
     image2,
-    image_vorteile,
-    texto_vorteile,
+    image_kosten,
+    texto_kosten,
     link_beschreibung,
     link_vorteile,
     link_inhalte,
@@ -62,25 +65,26 @@ export default function Home({ curso }) {
               link_beschreibung={link_beschreibung}
               link_vorteile={link_vorteile}
               link_inhalte={link_inhalte}
-                 link_leistungen={link_leistungen}
+              link_leistungen={link_leistungen}
               link_kosten={link_kosten}
+
             />
           </div>
-          <div class="col-md-7  pe-5">
+          <div class="col-md-7   pe-5">
 
-            <KurseContent01
-              imagen={image_vorteile}
-              titulo="VORTEILE"
-              texto={texto_vorteile}
+            <KurseContent03
+              imagen={image_kosten}
+              titulo="KOSTEN"
+              texto={texto_kosten}
               imagen_botones={image2}
               titulo_botones={crashkurs_date_title}
               text_termine={text_termine}
-              link_weitere_infos={link_inhalte}
-              link_termine={`${servidor_url}/${link_vorteile}${link_termine}`}
+              link_weitere_infos={link_beschreibung}
+              link_termine={`${servidor_url}/${link_kosten}${link_termine}`}
               link_pdf={link_pdf}
             />
 
-
+            
           </div>
         </div>
         <Tabla03

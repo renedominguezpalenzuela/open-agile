@@ -57,3 +57,107 @@
     cursor: pointer;
   }
   
+
+  
+.fuente-texto-cursos {
+    font-family:  Montserrat-Regular;
+    color: #233978;
+    /* #686868 */
+  }
+  
+
+  
+.tabla-titulo-cursos {
+   
+    font-size: 1.5em;
+    font-family: Montserrat-bold;
+    color: #24325a;
+  }
+  
+
+
+  
+.btn-cursos {
+  background-color: #24325a !important;
+  /* border-radius:30px 30px 30px 30px; */
+  
+  /* border-color: #3edf0d  !important; */
+  /* color: #ffffff !important; */
+}
+
+
+.btn1-cursos {
+  height: 4.5rem;
+  width: 9.5rem;
+}
+
+
+.btn2-cursos {
+  height: 5rem;
+  width: 9.5rem;
+}
+
+
+
+.btn3-cursos {
+  height: 7.5rem;
+  width: 9.5rem;
+}
+
+
+.redondo-bordes{
+  border-radius: 50px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+}
+
+.btn-cursos:hover
+/* .btn-card:active, */
+/* .btn-card:visited, */
+/* .btn-card:focus*/ {
+  background-color: #e42078 !important;
+  /* border-color: rgb(245, 4, 4) !important; */
+  color: #ffffff !important;
+}
+
+
+.font-btn-cursos{
+  font-family: Montserrat-Bold;
+  color: #ffffff;
+  /* font-size: 1em; */
+  font-size:1.1rem;
+  text-overflow: ellipsis;
+      
+}
+
+
+
+.fuente-leistungen{
+  font-family: Montserrat-BoldItalic;
+  color: #ffffff;
+  /* font-size: 1em; */
+  font-size:1rem;
+  border-radius: 50px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+}
+
+.bordes_leistungen {
+  background-color: #009AA0;
+}
+
+
+
+.font-kosten-cursos{
+  font-family: Montserrat-Regular;
+  color: #24325a;
+  /* font-size: 1em; */
+  font-size:1.1rem;
+  text-overflow: ellipsis;
+      
+}
+
+
+.espacio {
+  height:19vh;
+}

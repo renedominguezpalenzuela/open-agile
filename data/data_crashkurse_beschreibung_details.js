@@ -12,12 +12,30 @@ export const crashkurse_beschreibung_details = [
         "link_beschreibung":"crashkurse/beschreibung/1",
         "link_vorteile":"crashkurse/vorteile/1",
         "link_inhalte":"crashkurse/inhalte/1",
-        "link_leistungen":"",
-        "link_kosten":"",
-        "link_weitere_infos":"",
-        "text_termine":"",
-        "link_termine":"",
-        "link_pdf":""   
+        "link_leistungen":"crashkurse/leistungen/1",
+        "link_kosten":"crashkurse/kosten/1",
+        "text_termine":"2022",
+        "link_termine":"/#dates_section",
+        "link_pdf":"/doc/lorem-ipsum.pdf",                                                     
+        "texto_leistungen" :[
+            '8 Tage Crashkurs in 4 x 2 Tagesblöcken',
+            'Zertifikat "Agile Coach"',
+            'Das Buch "Crashkurs Selbstorganisation in Agilen Teams“',
+            'Begleitetes Buddy-Programm', 
+            '2 Stunden individuelle Supervision', 
+            'Fotoprotokoll & Screenshots'
+        ],
+
+        "texto_kosten" : ["4.790,- Euro netto (zzgl. 19% USt)"],
+
+
+        "crashkurs_date_title":"AGILE COACH",
+        "crashkurs_date" : [
+        {"id":"1", "quartal":"1", "date1" : "29.04.2022", "date2":  "30.04.2022", "day":"(Fr. / Sa.)"},
+        {"id":"2","quartal":"2","date1" : "13.05.2022", "date2":  "14.05.2022", "day":"(Do. / Fr.)"},
+        {"id":"3","quartal":"3","date1" : "13.05.2022", "date2":  "14.05.2022", "day":"(Fr. / Sa.)"},
+        {"id":"4","quartal":"4","date1" : "01.07.2022", "date2":  "02.07.2022", "day":"(Do. / Fr.)"}    
+        ]   
     },
      {
         "id":"2",
@@ -32,12 +50,25 @@ export const crashkurse_beschreibung_details = [
         "link_beschreibung":"crashkurse/beschreibung/2",
          "link_vorteile":"crashkurse/vorteile/2",
         "link_inhalte":"crashkurse/inhalte/2",
-        "link_leistungen":"",
-        "link_kosten":"",
-        "link_weitere_infos":"",
-        "text_termine":"",
-        "link_termine":"",
-        "link_pdf":""   
+        "link_leistungen":"crashkurse/leistungen/2",
+        "link_kosten":"crashkurse/kosten/2",
+        "text_termine":"2022",
+        "link_termine":"/#dates_section",
+        "link_pdf":"/doc/lorem-ipsum.pdf",                               
+        "texto_leistungen" :[
+                            '2 Tage Crashkurs remote oder vor Ort möglich (Do. / Fr. oder Fr. / Sa.)',
+                            'Zertifikat "Agile Facilitator"',
+                            'Das Buch "Crashkurs Selbstorganisation in Agilen Teams"',
+                            'Fotoprotokoll & Screenshots'
+                            ],
+        "texto_kosten" : ["1.190,- Euro netto (zzgl. 19% USt)"],
+        "crashkurs_date_title":"AGILE FACILITATOR",
+        "crashkurs_date" : [
+        {"id":"1","quartal":"1","date1" : "04.02.2022", "date2":  "05.02.2022", "day":"(Fr. / Sa.)"},
+        {"id":"2","quartal":"2","date1" : "22.04.2022", "date2":  "23.04.2022", "day":"(Do. / Fr.)"},
+        {"id":"3","quartal":"3","date1" : "26.08.2022", "date2":  "27.08.2022", "day":"(Fr. / Sa.)"},
+        {"id":"4","quartal":"4","date1" : "11.11.2022", "date2":  "12.11.2022", "day":"(Do. / Fr.)"} 
+        ]   
     },
     {
         "id":"3",
@@ -52,12 +83,25 @@ export const crashkurse_beschreibung_details = [
         "link_beschreibung":"crashkurse/beschreibung/3",
         "link_vorteile":"crashkurse/vorteile/3",
         "link_inhalte":"crashkurse/inhalte/3",
-        "link_leistungen":"",
-        "link_kosten":"",
-        "link_weitere_infos":"",
-        "text_termine":"",
-        "link_termine":"",
-        "link_pdf":""   
+        "link_leistungen":"crashkurse/leistungen/3",
+        "link_kosten":"crashkurse/kosten/3",
+        "text_termine":"2022",
+        "link_termine":"/#dates_section",
+        "link_pdf":"/doc/lorem-ipsum.pdf",                          
+        "texto_leistungen" :[
+                            '2 Tage Crashkurs an einem Wochenende (Fr. und Sa.)',
+                            'Vorbereitung auf die Scrum- Zertifizierung auf srum.org',
+                            'Das Buch "Crashkurs Selbstorganisation in Agilen Teams“',
+                            'Fotoprotokoll bzw. Screenshots'
+                            ],
+        "texto_kosten" : ["1.190,- Euro netto (zzgl. 19% USt)"],
+        "crashkurs_date_title":"SCRUM MASTER",
+        "crashkurs_date" : [
+        {"id":"1","quartal":"1", "date1" : "18.02.2022 ", "date2":  "19.02.2022", "day":"(Fr. / Sa.)"},
+        {"id":"2","quartal":"2","date1" : "13.06.2022", "date2":  "14.06.2022", "day":"(Do. / Fr.)"},
+        {"id":"3","quartal":"3","date1" : "09.09.2022", "date2":  "10.09.2022", "day":"(Fr. / Sa.)"},
+        {"id":"4","quartal":"4","date1" : "24.11.2022", "date2":  " 25.11.2022", "day":"(Do. / Fr.)"} 
+        ]   
     }
 
 

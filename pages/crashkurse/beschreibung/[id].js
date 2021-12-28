@@ -13,6 +13,8 @@ import MenuFlotante from "../../../components/MenuFlotante";
 import Footer from "../../../components/Footer";
 import MenuFlotanteBoton from "../../../components/MenuFlotanteBoton";
 
+import Tabla03 from "../../../components/crashkurse/tabla03";
+
 
 
 
@@ -30,10 +32,11 @@ export default function Home({ curso }) {
     link_inhalte,
     link_leistungen,
     link_kosten,
-    link_weitere_infos,
     text_termine,
     link_termine,
     link_pdf,
+    crashkurs_date_title,
+    crashkurs_date
   } = curso;
 
   return (
@@ -53,14 +56,20 @@ export default function Home({ curso }) {
 
         <div class="row pt-5 pb-5">
           <div class="col-md-4 ">
-            <MenuKraskurse link_beschreibung={link_beschreibung} link_vorteile={link_vorteile} link_inhalte={link_inhalte}  />
+            <MenuKraskurse link_beschreibung={link_beschreibung} link_vorteile={link_vorteile} link_inhalte={link_inhalte}    link_leistungen={link_leistungen}
+              link_kosten={link_kosten}  />
           </div>
           <div class="col-md-7  pe-5">
 
-          <KurseContent01 imagen={image_beschreibung} titulo="BESCHREIBUNG" texto={texto_beschreibung} />
+          <KurseContent01 imagen={image_beschreibung} titulo="BESCHREIBUNG" texto={texto_beschreibung} imagen_botones={image2} titulo_botones={crashkurs_date_title}  text_termine={text_termine} link_weitere_infos={link_vorteile}  link_termine={`${servidor_url}/${link_beschreibung}${link_termine}`} link_pdf={link_pdf}/>
             
           </div>
         </div>
+
+
+
+        <Tabla03 className="mt-5" crashkurs_date_title={crashkurs_date_title} crashkurs_date={crashkurs_date} titulo2a={crashkurs_date_title} />
+
 
         {/*Footer  */}
         <Footer />
