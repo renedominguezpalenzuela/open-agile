@@ -14,7 +14,7 @@ export default function KurseButtons({
  
   return (
     <>
-      <div className="row   ">
+      <div className="row g-0  ">
         <div className="col-6   ">
           <img
             className="img-fluid   "
@@ -24,11 +24,11 @@ export default function KurseButtons({
         </div>
 
 
-        <div className="col-5">
+        <div className="col-6 ">
 
-          <div class="row   h-100 d-flex align-items-center justify-content-center">
+          <div className="row w-100 h-100 d-flex align-items-center justify-content-center">
 
-            <div className="col-12 tabla-titulo-cursos d-flex align-items-center justify-content-center ">{titulo_botones}</div>
+            <div className="col-12 tabla-titulo-botones-cursos d-flex align-items-center justify-content-center ">{titulo_botones}</div>
           
             <div className="col-12">
               <a

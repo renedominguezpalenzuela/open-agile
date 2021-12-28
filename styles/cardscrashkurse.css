@@ -15,10 +15,11 @@
 .card-footer-crashkurse {
   /* padding: 0.5rem 1rem; */
 
-  color: #f82d7c;
+  color: #ffffff;
   /* border: 1px solid blue!important;  */
 
-  background-color: rgba(248, 45, 124, 42%) !important;
+  /* background-color: rgba(248, 45, 124, 42%) !important; */
+  background-color: #24325a!important;
 
   /* -webkit-border-radius: 12px!important; 
     -moz-border-radius: 12px!important; */

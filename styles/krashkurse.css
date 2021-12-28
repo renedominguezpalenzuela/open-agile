@@ -25,7 +25,7 @@
 .font-card-menu-crashkurse-titulo{
     font-family: Montserrat-Bold;
     /* color: #24325a; */
-    color: #233978;
+    color: #e42078;
     font-size: 1rem;
 }
 
@@ -74,6 +74,16 @@
     color: #24325a;
   }
   
+
+
+  
+  
+.tabla-titulo-botones-cursos {
+   
+  font-size: 1.5em;
+  font-family: Montserrat-bold;
+  color: #e42078;
+}
 
 
   

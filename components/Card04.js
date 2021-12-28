@@ -39,9 +39,7 @@ export default function Card04({ datos }) {
             JETZT AMNELDEN...
           </button>
 
-          {/* <a href="/contact"> */}
-          {/* <div className="card-footer card-footer-crashkurse">JETZT AMNELDEN...</div> */}
-          {/* </a> */}
+        
         </div>
       </div>
 
