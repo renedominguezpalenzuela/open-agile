@@ -1,4 +1,5 @@
 import { servidor_url } from "../../config";
+import React from "react";
 
 
 export default function Tabla01({
@@ -17,7 +18,7 @@ export default function Tabla01({
           items_tabla.map((unItem, index) => {
             
             return (
-              <>
+              <React.Fragment key={index}>
               <div className="d-none ms-4 d-md-block pb-5 ">
                {fila_dispositivo_ancho( index, unItem.id_tabla, unItem.titulo, unItem.image, unItem.texto    )}
               </div>
@@ -29,7 +30,7 @@ export default function Tabla01({
               </div>
 
 
-              </>
+              </React.Fragment>
             );
           })}
       </div>
@@ -58,10 +59,10 @@ const fila_dispositivo_ancho = (index, id_tabla, titulo, img, texto) => {
               </div>
 
               {texto.map((unaLinea, index)=>(
-                                              <>
+                                              <React.Fragment key={index}>
                                                <div className="text-start  fuente-texto-tabla   ">{unaLinea}</div>
                                                 {unaLinea==="<br>"?"<br/>":""}
-                                              </>
+                                              </React.Fragment>
                          )
               )}
 
@@ -82,11 +83,11 @@ const fila_dispositivo_ancho = (index, id_tabla, titulo, img, texto) => {
               
               
                  {texto.map((unaLinea, index)=>(
-                                              <>
+                                               <React.Fragment key={index}>
                                                 <div className="text-end fuente-texto-tabla  ">{unaLinea}</div>
                                                 {/* <div className="text-end ">{unaLinea}</div> */}
                                                 {unaLinea==="<br>"?"<br/>":""}
-                                              </>
+                                               </React.Fragment>
                          )
                   )}
               
@@ -125,10 +126,10 @@ const fila_dispositivo_estrecho = (index, id_tabla, titulo, img, texto) => {
             
               <div className="mt-1 ps-4 pe-4">
               {texto.map((unaLinea, index)=>(
-                                              <>
+                                               <React.Fragment key={index}>
                                                <div className="text-start ">{unaLinea}</div>
                                                 {unaLinea==="<br>"?"<br/>":""}
-                                              </>
+                                               </React.Fragment>
                          )
               )}
              </div>   

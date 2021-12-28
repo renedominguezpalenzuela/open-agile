@@ -22,9 +22,9 @@ export default function Home({ curso }) {
 
   const {
     titulo_area_superior,    
-    image2,    
-    image_beschreibung,   
-    texto_beschreibung,
+    image_inhalte,
+    texto_inhalte,    
+    image2,
     link_beschreibung,
     link_vorteile,
     link_inhalte,
@@ -57,7 +57,7 @@ export default function Home({ curso }) {
           </div>
           <div class="col-md-7  pe-5">
 
-          <KurseContent01 imagen={image_beschreibung} titulo="BESCHREIBUNG" texto={texto_beschreibung} />
+          <KurseContent01 imagen={image_inhalte} titulo="INHALTE" texto={texto_inhalte} />
             
           </div>
         </div>
