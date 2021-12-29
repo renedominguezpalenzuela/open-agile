@@ -50,6 +50,7 @@ export default function AreaSuperior({
   texto_quiz_result,
   cursos,
   titulo_largo,
+  titulo_muy_largo,
   img_team_top,
 
   iconos_team,
@@ -93,7 +94,7 @@ let vista_movil = false;
             {/* Contenido Principal */}
             {contenido_principal( texto1, texto2,  texto2a,  formulario_contacto, botones_configurador, 
                iconos, texto_parrafo_blanco, texto_parrafo_blanco_cursos,texto_parrafo_blanco_team, firma,  boton_inicio_quiz,
-                 titulo_quiz_result, texto_quiz_result,vista_movil, cursos, titulo_largo, iconos_team, email, phone,  linkedin)}
+                 titulo_quiz_result, texto_quiz_result,vista_movil, cursos, titulo_largo,titulo_muy_largo, iconos_team, email, phone,  linkedin)}
           </div>
 
 
@@ -124,7 +125,7 @@ let vista_movil = false;
             {/* Contenido Principal */}
             {contenido_principal( texto1,texto2,texto2a,formulario_contacto,botones_configurador,iconos,texto_parrafo_blanco,
                texto_parrafo_blanco_cursos,texto_parrafo_blanco_team, firma,boton_inicio_quiz,titulo_quiz_result,texto_quiz_result,vista_movil, cursos,
-                titulo_largo, iconos_team, email, phone,  linkedin)}
+                titulo_largo,titulo_muy_largo, iconos_team, email, phone,  linkedin)}
           </div>
          </div>
       </div>
@@ -182,6 +183,7 @@ const contenido_principal = (
   vista_movil,
   cursos,
   titulo_largo,
+  titulo_muy_largo,
   iconos_team,
   email, phone,  linkedin
 
@@ -218,6 +220,7 @@ const contenido_principal = (
               vista_movil={vista_movil}
               cursos={cursos}
               titulo_largo={titulo_largo}
+              titulo_muy_largo={titulo_muy_largo}
 
               
 

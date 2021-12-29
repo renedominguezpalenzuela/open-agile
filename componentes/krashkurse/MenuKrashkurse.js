@@ -12,6 +12,7 @@ export default function MenuKrashkurse({ link_beschreibung, link_vorteile, link_
 
         <div id="container" className="ms-4 me-3">
           <table className="w-100">
+           <tbody>
             <tr className=" font-card-menu-crashkurse">
               <td>
                 <a href={`${servidor_url}/${link_beschreibung}`}>
@@ -60,6 +61,7 @@ export default function MenuKrashkurse({ link_beschreibung, link_vorteile, link_
               </td>
               <td align="right">></td>
             </tr>
+            </tbody>
           </table>
         </div>
       </div>

@@ -16,10 +16,9 @@ export default function KurseContent01({imagen, titulo, texto, imagen_botones,ti
                          {titulo} 
                   </div>
                   {texto.map((unaLinea, index)=>(
-                                                      <>
-                                                      <div className=" mt-2  fuente-texto-cursos   ">{unaLinea}</div>
-                                                        {unaLinea==="<br>"?"<br/>":""}
-                                                      </>
+                                                      
+                                                      <div key={index} className=" mt-2  fuente-texto-cursos   ">{unaLinea}</div>
+                                                     
                                 )
                       )}
 

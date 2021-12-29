@@ -1,112 +1,94 @@
 import Head from "next/head";
-import Image from "next/image";
-
-
-
-import MenuFlotante from "../components/MenuFlotante";
 import Footer from "../components/Footer";
 
 
 
-
-
+import MenuFlotante from "../components/MenuFlotante";
 import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
-// import MenuSuperior from "../components/MenuSuperior";
-
-
-import TextoBloque01 from "../components/textobloque01";
-import Image01 from "../components/crashkurse/image01";
-
-
-import Tabla01 from "../components/crashkurse/tabla01";
-
 import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 
-import BarraConTextoDerecha from "../components/BarraConTextoDerecha";
-import BarraConTextoIzquierda from "../components/BarraConTextoIzquierda";
 
+import Card07Shop from "../components/Card07Shop";
 
-
-
-
+import { servidor_url } from "../config";
 
 //----------------------------------------------------------------------------------------------------------
 //           CRASHKURSE \ CRASHKURS ZUM AGILE COACH
 //----------------------------------------------------------------------------------------------------------
-
-export default function Home() {
-
-
-
-
-const titulo1 = "SHOP ";
-const titulo2 = "Über Amazon FBA";
-const titulo2a = "Fulfillment by Amazon";
-
-const titulo3="Hole Dir das agile Starterpaket für nur 99 Euro!";
-
-
-const titulo4 = "";
-
-
-const  texto01 = ["Das sind Deine Stärken:"];      
-
-const  texto02= ['Timebox', 'Post-its', 'Eddings', '2 Open Agile Kaffee-Tassen', 'Das Open Agile Mindset-Poster','Das Gefühle-Poster'     ];
-
-
+//https://www.amazon.de/Crashkurs-Selbstorganisation-agilen-Teams-wertschätzende/dp/3648151509/ref=sr_1_2?__mk_de_DE=ÅMÅŽÕÑ&crid=3PL0Y0OIVCT4Y&keywords=crashkurs+agil&qid=1640623312&sprefix=crashkurs+agil%2Caps%2C97&sr=8-2
+export default function Home({shop}) {
+  const titulo_area_superior = "Agilität für zuhause und unterwegs";
+  const titulo_area_superior2 = "DER OPEN AGILE SHOP";
   
-
-
-
-
-
 
 
 
   return (
-<>
-  <Head>
-    <title>{titulo2}</title>
-    <meta name="description" content={titulo2} />
-   <link rel="icon" href="/favicon.ico" />
-    <script async src="js/chat.js" />
-    <script async src="js/menu.js" />
-  </Head>
+    <>
+     <>
+      <Head>
+        <title>{titulo_area_superior}</title>
+        <meta name="description" content={titulo_area_superior} />
+        <link rel="icon" href="/favicon.ico" />
+        <script async src={`${servidor_url}/js/chat.js`} />
+        <script async src={`${servidor_url}/js/menu.js`} />
+      </Head>
 
-     
+      <div id="principal" className="container-fluid g-0">
+        <MenuFlotanteBoton />
 
-
-      {/*Contenedor*/}
- <div id="principal" className="container-fluid g-0">
-
-      <MenuFlotanteBoton />
-  
-        <AreaSuperior fondo="gris" texto1={titulo1} texto2={titulo2} texto2a={titulo2a} />
+        <AreaSuperior fondo="ajustable" texto1={titulo_area_superior} texto2={titulo_area_superior2} titulo_muy_largo={true} />
 
 
-    
+ <div className="row  mt-5 mb-5 pt-5  d-flex justify-content-center ">
+             
+              
+                 {shop.map((oneShop, index) => (
+                  <div key={index} className="col-md-4 p-3 d-flex justify-content-center">
+                  
+                     <Card07Shop  
+                         id={oneShop.id}   
+                         titulo={oneShop.titulo}
+                         texto={oneShop.texto}
+                         imagen={oneShop.imagen}
+                         texto_boton1={oneShop.texto_boton1}
+                         texto_boton2={oneShop.texto_boton2}
+                         texto_alt={oneShop.texto_alt}
+                         link1={oneShop.link1}
+                         link2={oneShop.link2}
+                        /> 
+                  </div> 
+                ))} 
+            
+            </div>
+ 
 
+        {/*Footer  */}
+        <Footer />
+      </div>
 
-<div className="mt-5">
-    <TextoBloque01   titulo={titulo3}   />
-    </div>
-
-
-
-       <div className="mt-5"> </div>
-        <BarraConTextoDerecha titulo={texto01} texto={texto02} />
-
-
-  <div className="mt-5"> </div>
-
-
-    {/*Footer  */}
-    <Footer />
-
-</div>
-      
-    {/*Menu Lateral oculto  */} 
-  <MenuFlotante />
-</>
+      {/*Menu Lateral oculto  */}
+      <MenuFlotante />
+    </>
+    </>
   );
 }
+
+
+
+
+
+export const getServerSideProps = async (context) => {
+
+  const url = `${servidor_url}/api/shop`;
+  const res = await fetch(url);
+
+  const shop = await res.json();
+
+  return {
+    props: {
+      shop,
+    },
+  };
+};
+

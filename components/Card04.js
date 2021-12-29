@@ -36,7 +36,7 @@ export default function Card04({ datos }) {
             className="card-footer card-footer-crashkurse"
             data-bs-toggle="modal"
             data-bs-target={`#contactForm${quartal}`}>
-            JETZT AMNELDEN...
+            JETZT ANMELDEN...
           </button>
 
         

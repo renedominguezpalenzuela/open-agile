@@ -56,8 +56,8 @@ export default function Home({ curso }) {
           titulo_largo={true}
         />
 
-        <div class="row pt-5 pb-5">
-          <div class="col-md-4 ">
+        <div className="row pt-5 pb-5">
+          <div className="col-md-4 ">
             <MenuKraskurse
               link_beschreibung={link_beschreibung}
               link_vorteile={link_vorteile}
@@ -66,7 +66,7 @@ export default function Home({ curso }) {
               link_kosten={link_kosten}
             />
           </div>
-          <div class="col-md-7  pe-5">
+          <div className="col-md-7  pe-5">
 
             <KurseContent01
               imagen={image_vorteile}

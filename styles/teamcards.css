@@ -7,6 +7,14 @@
 }
 
 
+
+.font1-card-shop{
+  font-family: Montserrat-Black;
+  color: #030066;
+  font-size: 0.8rem;
+}
+
+
 .font2-card-team{
     font-family: Montserrat-Medium;
     color: #030066;
@@ -18,6 +26,16 @@
     font-family: Montserrat-Black;
     color: #030066;
     font-size: 1rem;
+}
+
+
+
+.font3-card-shop{
+  font-family: Montserrat-Medium;
+  color: #030066;
+  font-size: 0.6rem;
+  /* line-height:3vh;
+  text-justify: inter-word; */
 }
 
 
@@ -70,6 +88,15 @@
     color: #ffffff;
     font-size: 1vw;
         
+}
+
+
+
+.font-btn-card-shop{
+  font-family: Montserrat-SemiBold;
+  color: #ffffff;
+  font-size: 0.7rem;
+      
 }
 
 
@@ -174,4 +201,10 @@ div.horizontal-line{
     /* selector-locked: false; */
     text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
   
+  }
+
+
+  .fondo_card_shop{
+
+    background-color: #7292932f;
   }

@@ -197,7 +197,7 @@
     
 
     color: #e42078;
-    font-size: 1.1vw;
+    font-size: 1vw;
 
     line-height: 28px;
     font-weight: 500;
@@ -245,6 +245,41 @@
     .font_cards_magenta {
         font-size: 4.5vw;
     }
+  }
+
+
+  
+  .font_title_muy_largo {
+    font-family: Montserrat-BoldItalic;
+    color: #ffffff;
+    text-align: left;
+    font-size: 2.5rem;
+    line-height: 1;
+    font-weight: 500;
+  
+    /* letter-spacing: 4px; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* text-transform: uppercase; */
+    /* selector-locked: false; */
+    text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
+  }
+
+  
+  .font_title_muy_largo2 {
+    font-family: Montserrat-BoldItalic;
+    color: #ffffff;
+    text-align: left;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 500;
+  
+    /* letter-spacing: 4px; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* text-transform: uppercase; */
+    /* selector-locked: false; */
+    text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
   }
 
   
