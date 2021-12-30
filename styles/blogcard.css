@@ -3,7 +3,7 @@
 .font1-card-blog{
     font-family: Montserrat-Bold;
     color: #030066;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
 }
 
 
@@ -16,8 +16,8 @@
 .imagen-blog{
     
     width: 100%;
-    /* aspect-ratio: 1 / 0.5; */
-     height:240px; 
+    aspect-ratio: 1 / 0.5; 
+     /* height:240px;  */
      /* height: 8vh; */
 
     border-radius:8px 8px 0px 0px;
@@ -28,6 +28,10 @@
  
  }
 
+
+ .size_blog_card {
+     height: 9vh;
+ }
 
  .redondear-card {
     border-radius:8px 8px 8px 8px;

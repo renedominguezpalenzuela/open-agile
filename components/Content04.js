@@ -25,21 +25,21 @@ export default function Content04 ({lista_cards} ) {
             <div id="blog" className="row justify-content-center font_title_seccion_sombra   mt-5 ms-4">BLOG</div>
             <div className="row justify-content-center font_card_texto mt-2 ms-4 mb-5">NEW WORK, LEADERSHIP & MORE</div>
 
-          <div className="row  g-4 pb-5  d-flex justify-content-center  "> 
+          <div className="row  g-0 pb-5 ps-5 pe-5 d-flex justify-content-center  "> 
           
 
 
             {lista_cards.map (unCard=> (     
               <React.Fragment  key={unCard.id}>
                           {/* Vista movil  */}
-                        <div className="col-4 d-xl-none">                      
+                        <div className="col-4 g-5 d-xl-none">                      
                                   
                                     
                                               <Card01 id={unCard.id} imagen={unCard.image} titulo={unCard.title} texto={unCard.titulo2} link={unCard.link}/>
                                       
                         </div>  
                         {/* Vista normal  */}
-                        <div  className="col-4   d-none d-xl-block  ">    
+                        <div  className="col-4 g-5  d-none d-xl-block  ">    
                          
                           <Card05UserBlog id={unCard.id}  imagen={unCard.image} titulo={unCard.title} titulo2={unCard.titulo2} link={unCard.link}/>     
                         </div> 
