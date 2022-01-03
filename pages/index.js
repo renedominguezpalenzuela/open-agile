@@ -63,9 +63,19 @@ export default function Home({
         {/*Carrousel  */}
         <Content05 datos={vlog} />
 
-        {/* Servicios  */}
+        {/* Servicios Leistungen  */}
         <div id="services" className=" mt-5 mb-5 pb-5">
-          <div className="row justify-content-center font_title_seccion_sombra  mt-1 ms-4"> LEISTUNGEN </div>
+
+         <h3 className="font_title_seccion_sombra "> LEISTUNGEN</h3>
+      <h5 className="font_second_line2 d-flex justify-content-center">
+       Beratung, Training & Coaching im agilen Kontext
+      </h5>
+
+
+          {/* <div className="row d-flex justify-content-center font_title_seccion_sombra  mt-1 ms-4">  </div>
+           <h5 className="font_second_line2 d-flex justify-content-center mt-2">
+           
+          </h5> */}
           <Card01Lista lista_cards={servicios} titulo_magenta={true} />
         </div>
 

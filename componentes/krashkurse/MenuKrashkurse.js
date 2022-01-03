@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function MenuKrashkurse({ link_beschreibung, link_vorteile, link_inhalte, link_leistungen, link_kosten }) {
   return (
     <>
-      <div className="card ms-5 me-5 pt-4 mb-5 pb-5 ps-4 pe-4  shadow">
+      <div className="card ms-5 me-5 pt-4 mb-1 pb-4 ps-4 pe-4  shadow">
         <h4 className="card-title ms-3 mb-3 font-card-menu-crashkurse-titulo">
           Was Dich erwartet!
         </h4>
@@ -62,7 +62,16 @@ export default function MenuKrashkurse({ link_beschreibung, link_vorteile, link_
               <td align="right">></td>
             </tr>
             </tbody>
+            
+            
           </table>
+ <a href="#dates_section">
+          <div className="mt-4 font-card-menu-crashkurse-foot">
+             
+              JETZT ANMELDEN
+             
+            </div>
+             </a>
         </div>
       </div>
     </>

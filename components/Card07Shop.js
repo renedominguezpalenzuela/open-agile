@@ -52,9 +52,9 @@ export default function Card07Shop({
             </div>
 
 
-  <div className="row mt-3 mb-2 d-flex justify-content-start">
-            <div className="col-6   ">
-              <a href={link1}   className="  "> 
+  <div className="row mt-3 mb-2 ps-3 d-flex justify-content-start  g-0">
+            <div className="col-5 d-flex justify-content-start me-1 ">
+              <a href={link1}   className="   "> 
                 <button type="button" className="btn ps-2 pe-2  btn-card-blog font-btn-card-shop rounded-pill  ">
                   {texto_boton1}
                 </button>               

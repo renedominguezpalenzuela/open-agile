@@ -66,7 +66,7 @@ export default function Home({ curso }) {
          <KurseContent01
               imagen={image_inhalte}
               titulo="INHALTE"
-              texto={texto_inhalte}
+               texto_plequitas_titulos={texto_inhalte}
               imagen_botones={image2}
               titulo_botones={crashkurs_date_title}
               text_termine={text_termine}

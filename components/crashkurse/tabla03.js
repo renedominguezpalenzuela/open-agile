@@ -17,6 +17,10 @@ titulo2a
  
 
   {/* Titulo */}
+
+
+  {crashkurs_date.length>0 && (
+    <>
   <div className="row mt-2 mb-4   " id="dates_section">
     <div className="titulo1-tabla3-01 text-center ">WERDE JETZT {titulo2a}</div>
     <div className="titulo1-tabla3-02 text-center ">UND MELDE DICH ZUM KURS AN</div>
@@ -38,6 +42,8 @@ titulo2a
    }
  
   </div>
+
+  </>)}
 
 
 </> 

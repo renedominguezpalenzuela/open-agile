@@ -426,6 +426,15 @@ export const crashkurse_details = [
 
   },
 
+
+   {
+    "id":"4",
+    "titulo1": "CRASHKURSE",
+    "titulo2": "CRASHKURS ZUM",
+    "titulo2a": "AGILEN ARBEITSWELT",
+    "titulo3": "CRASHKURS ZUM AGILE COACH (M/W/D)",
+   }
+
   
 ]
 

@@ -17,8 +17,7 @@ window.addEventListener("load", (event) => {
         e.preventDefault();
         e.stopPropagation();
         document.getElementById("mySidepanel").style.width = "0";
-        document.getElementById("panel_abrir_menu").style.visibility =
-          "visible";
+        document.getElementById("panel_abrir_menu").style.visibility =  "visible";
         document.getElementById("principal").classList.remove("myblur");
       });
   }
@@ -30,7 +29,7 @@ window.addEventListener("load", (event) => {
         e.preventDefault();
         e.stopPropagation();
 
-        document.getElementById("mySidepanel").style.width = "250px";
+        document.getElementById("mySidepanel").style.width = "350px";
         document.getElementById("panel_abrir_menu").style.visibility = "hidden";
         document.getElementById("principal").classList.add("myblur");
       });

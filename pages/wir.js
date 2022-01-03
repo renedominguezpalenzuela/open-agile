@@ -29,7 +29,7 @@ export default function Home({team}) {
   //   <script async src="js/menu.js" />
   // </Head>
 
-  const titulo1 = "Open Agile Team";
+  const titulo1 = "OPEN AGILE TEAM";
   const titulo2 = "UNSERE WERTE";
   const titulo2a = "";
 

@@ -2,7 +2,9 @@
 export const crashkurse = [
   {id:'1', image:'crashkurse/image1.jpg', title:'CRASHKURS',title2:"AGILE COACH", text:'Lorem ipsum dolor sit amet', link:'crashkurse'},
   {id:'2', image:'crashkurse/image2.jpg', title:'CRASHKURS',title2:"AGILE FACILITATOR", text:'Consectetur adipiscing elit, sed do eiusmod tempor', link:'crashkurse'},
-  {id:'3', image:'crashkurse/image3.jpg', title:'CRASHKURS',title2:"SCRUM MASTER", text:'Incididunt ut labore et dolore magna aliqua.',link:'crashkurse'}    
+  {id:'3', image:'crashkurse/image3.jpg', title:'CRASHKURS',title2:"SCRUM MASTER", text:'Incididunt ut labore et dolore magna aliqua.',link:'crashkurse'},    
+  {id:'4', image:'crashkurse/image7.jpg', title:'CRASHKURS',title2:"MITBESTIMMUNG IN DER AGILEN ARBEITSWELT", text:'Incididunt ut labore et dolore magna aliqua.',link:'crashkurse'},    
+  {id:'5', image:'crashkurse/image8.jpg', title:'ONLINE CRASHKURS',title2:"SELBSTORGANISATION IN AGILEN TEAMS", text:'Incididunt ut labore et dolore magna aliqua.',link:'crashkurse'}    
 ]
 
 //Servicios

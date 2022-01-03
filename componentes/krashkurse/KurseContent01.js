@@ -3,32 +3,80 @@ import Image from "next/image";
 import Link from "next/link";
 import KurseButtons from "./KurseButtons";
 
- 
-
-export default function KurseContent01({imagen, titulo, texto, imagen_botones,titulo_botones, text_termine, link_weitere_infos, link_termine, link_pdf}) {
+export default function KurseContent01({
+  imagen,
+  titulo,
+  texto,
+  texto_plequitas_titulos,
+  texto_plequitas,
+  imagen_botones,
+  titulo_botones,
+  text_termine,
+  link_weitere_infos,
+  link_termine,
+  link_pdf,
+}) {
   return (
     <>
-       <div className="row  ">
-                  <img className="img-fluid  " src={`${servidor_url}/img/${imagen}`} alt="" />
+      <div className="row  ">
+        <img
+          className="img-fluid  "
+          src={`${servidor_url}/img/${imagen}`}
+          alt=""
+        />
+
+        <div className="tabla-titulo-cursos mt-4  ">{titulo}</div>
+        {texto != undefined &&
+          texto != "" &&
+          texto.map((unaLinea, index) => (
+            <div key={index} className=" mt-2  fuente-texto-cursos   ">
+              {unaLinea}
+            </div>
+          ))}
+
+        {texto_plequitas_titulos != undefined && texto_plequitas_titulos != "" && 
+           texto_plequitas_titulos.map((unItem, index) => (
+            <>
+              {unItem.title!=undefined && unItem.title!="" && (
+              <div key={index} className=" mt-2 fuente-titulo-cursos    ">
+                {unItem.title}
+              </div>
+              )
+              }
+              <div className="">
+                {unItem.text.map((unTexto, index) => (
+                  
+                    <div  key={index} className="     ">
+                     <span className="fuente-bullet-cursos">•</span><span className="fuente-texto-cursos"> {unTexto}</span>
+                    </div>
+                  
+                ))}
+              </div>
+            </>
+          ))}
 
 
-                  <div className="tabla-titulo-cursos mt-4  ">
-                         {titulo} 
-                  </div>
-                  {texto.map((unaLinea, index)=>(
-                                                      
-                                                      <div key={index} className=" mt-2  fuente-texto-cursos   ">{unaLinea}</div>
-                                                     
-                                )
-                      )}
+          
+        {texto_plequitas != undefined && texto_plequitas != "" && 
+           texto_plequitas.map((unItem, index) => (
+            <>
+                <div  key={index} className="     ">
+                     <span className="fuente-bullet-cursos">•</span><span className="fuente-texto-cursos"> {unItem}</span>
+                </div> 
+            </>
+          ))}
 
-                  <div className="mt-5  ">
-                      <KurseButtons titulo_botones={titulo_botones} imagen ={imagen_botones} text_termine={text_termine} link_weitere_infos={link_weitere_infos}  link_termine={link_termine} link_pdf={link_pdf}/>
-                  </div> 
-       </div>
-    
-
-      
+        <div className="mt-5  ">
+          <KurseButtons
+            titulo_botones={titulo_botones}
+            imagen={imagen_botones}
+            text_termine={text_termine}
+            link_weitere_infos={link_weitere_infos}
+            link_termine={link_termine}
+            link_pdf={link_pdf}
+          />
+        </div>
+      </div>
     </>
   );
 }

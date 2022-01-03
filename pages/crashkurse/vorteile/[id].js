@@ -71,7 +71,7 @@ export default function Home({ curso }) {
             <KurseContent01
               imagen={image_vorteile}
               titulo="VORTEILE"
-              texto={texto_vorteile}
+              texto_plequitas={texto_vorteile}
               imagen_botones={image2}
               titulo_botones={crashkurs_date_title}
               text_termine={text_termine}

@@ -39,6 +39,20 @@ export default function MenuNavBar() {
             <a className="dropdown-item color-font-dropdown" href="/crashkurse/beschreibung/3">CRASHKURS ZUM SCRUM MASTER</a>
           </li>
 
+
+            <li className="nav-item">
+            <a className="dropdown-item color-font-dropdown" href="/crashkurse/beschreibung/4"> CRASHKURS MITBESTIMMUNG IN DER AGILEN ARBEITSWELT</a>
+          </li>
+
+
+
+            <li className="nav-item">
+            <a className="dropdown-item color-font-dropdown" href="/crashkurse/beschreibung/5"> ONLINE CRASHKURS SELBSTORGANISATION IN AGILEN TEAMS</a>
+          </li>
+
+
+         
+
         </ul>
       </li>
 

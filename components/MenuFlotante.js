@@ -14,29 +14,45 @@ export default function MenuFlotante() {
   return (
 <>
 
-       {/* <Head>
-        <script async src="js/menu.js" />
-      </Head>  */}
-{/* panel-flotante */}
 
 
-
-
-
-
-<div className="sidepanel" tabIndex="-1" id="mySidepanel"   >
-
-
+{/* <div  className="sidepanel offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div className="offcanvas-header ">
-    <h5 id="offcanvasTopLabel" className="font_title5">Menu</h5>
-    <button type="button" id="boton_cerrar_menu" className="btn-close btn-close-white text-reset me-3" aria-label="Close"></button>
+    <h5 id="offcanvasRightLabel" className="ms-5 w-75 text-end ">Offcanvas rights</h5>
+    <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+    </button>
+  </div>
+  
+  <div  id="mySidepanel"  className=" offcanvas-body">
+    ...
+  </div>
+</div> */}
+
+
+
+<div className="sidepanel " tabIndex="-1" id="mySidepanel"   >
+
+  <div className="row  d-flex justify-content-end align-items-center">
+
+
+  {/* <div className="ms-5   titulo_menu_flotante"> */}
+    <div className="col-8   me-2 d-flex justify-content-end ">
+     <h5 id="offcanvasTopLabel" className="font_menu_title pt-2">Menu</h5>   
+    </div>
+    <div className="col-2 ">
+     <button type="button" id="boton_cerrar_menu" className="btn-close text-reset  me-3" aria-label="Close"></button>
+    </div>  
+
+    
+  {/* </div> */}
+
   </div>
 
-   <div className=" ">
-      <ul className="nav nav-pills flex-column m-auto mb-0 align-items-start" id="menu">
+   <div className="row  ">
+      <ul className="nav nav-pills flex-column m-auto mb-0 align-items-end" id="menu">
         <li className="nav-item">
             <a href="/#course" className="nav-link text-truncate">
-              <span className="ms-1  font_title6">CRASHKURSE</span>
+              <span className="ms-1  font_title6">CRASHKURSEss</span>
             </a>
         </li>
 
@@ -47,7 +63,7 @@ export default function MenuFlotante() {
         </li>
 
         <li>
-            <a href="/team" className="nav-link text-truncate">
+            <a href="/team/main" className="nav-link text-truncate">
               <span className="ms-1  font_title6">TEAM</span>
             </a>
         </li>
@@ -64,11 +80,7 @@ export default function MenuFlotante() {
            </a>
         </li>
 
-        <li>
-            <a href="/news" className="nav-link text-truncate">
-              <span className="ms-1  font_title6">NEWS</span>
-            </a>
-        </li>
+        
 
         <li>
             <a href="/jobs" className="nav-link text-truncate">
@@ -80,7 +92,7 @@ export default function MenuFlotante() {
       </ul>
     </div>
 
-  </div>
+  </div> 
 
 </>
   );

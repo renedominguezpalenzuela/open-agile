@@ -20,33 +20,35 @@
 /*Menu lateral  */
  /* The sidepanel menu */
  .sidepanel {
-    /* height: 250px; Specify a height */
-    width: 0; /* 0 width - change this with JavaScript */
-    height: 100%;
-    position: fixed; /*Stay in place*/
-    z-index: 110; /* Stay on top */
+    
+    width: 0px;
+         height: 100%;
+    position: fixed;
+    z-index: 110; 
     top: 0;
-    left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    overflow-y: hidden; /* Disable horizontal scroll */
+    right: 0; 
+   
+   overflow-x: hidden; /* Disable horizontal scroll */
+   overflow-y: hidden;/* Disable horizontal scroll*/
     padding-top: 10px; /* Place content 60px from the top */
     transition: 0.3s; /*0.5 second transition effect to slide in the sidepanel*/
-    clip-path: polygon(0 0, 100% 0, 76% 100%, 0% 100%);
+    clip-path: polygon(36% 0, 100% 0%, 100% 100%, 61% 100%);
+    /* clip-path: polygon(0 0, 100% 0, 76% 100%, 0% 100%); */
 
-    right: -300px;
-    /* clip-path: polygon(76% 0%, 100% 0, 100% 100%, 86% 100%); */
-  
-     /* clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);  */
+    /* right: -300px;  */
+   
                        
     
-    background-color: #24325A;
-    /* box-shadow: 0px 10px 10px -6px black; */
-      /* Sombra superior sin desenfoque */
-      /* box-shadow: 5px -5px 0 2px #444; */
-      box-shadow: 5px 5px 45px #222 inset;
+    background-color: white!important;
+   
+  }
+
+  .titulo_menu_flotante {
+    width: 200px;
   }
   /* 
+
+
   
   
   

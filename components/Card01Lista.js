@@ -6,7 +6,7 @@ export default function Card01Lista({ lista_cards, titulo_magenta }) {
   return (
 <>
 
- <div className="row mt-5 pt-5  row-cols-1 row-cols-md-4  justify-content-center"> 
+ <div className="row mt-5 pt-3   justify-content-center"> 
 
 
    {lista_cards.map ((unCard, index)=>{

@@ -29,6 +29,20 @@
     font-size: 1rem;
 }
 
+
+.font-card-menu-crashkurse-foot {
+  font-family: Montserrat-Bold;
+  /* color: #24325a; */
+  color: #e42078;
+  font-size: 0.8rem;
+}
+
+.font-card-menu-crashkurse-foot:hover{
+
+  /* color: #24325a; */
+  color:#24325a ;
+}
+
 .font-card-menu-crashkurse{
     font-family: Montserrat-Bold;
     /* color: #24325a; */
@@ -58,13 +72,31 @@
   }
   
 
+
+    
+.fuente-titulo-cursos {
+  font-family:  Montserrat-Bold;
+  color: #24325a;
+  /* #686868 */
+}
   
 .fuente-texto-cursos {
     font-family:  Montserrat-Regular;
-    color: #233978;
+    color: #24325a ;
+    font-size: 1rem;
+   
     /* #686868 */
   }
   
+
+  
+.fuente-bullet-cursos {
+  font-family:  Montserrat-Bold;
+  color: #e42078 ;
+  font-size: 1.2rem;
+  /* #686868 */
+}
+
 
   
 .tabla-titulo-cursos {
@@ -171,3 +203,5 @@
 .espacio {
   height:19vh;
 }
+
+
