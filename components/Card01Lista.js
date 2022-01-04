@@ -4,11 +4,16 @@ import React from "react";
 export default function Card01Lista({ lista_cards, titulo_magenta, total_card_en_row }) {
 
 
-  let formato_row = " row row-cols-4 d-flex  justify-content-center g-3";
+  let formato_row = " row row-cols-4 d-flex  justify-content-center ";
 
   if(total_card_en_row===3) {
     formato_row = " row row-cols-3 d-flex  justify-content-center";
   }
+
+  if(total_card_en_row===2) {
+    formato_row = " row row-cols-2 d-flex w-75 ";
+  }
+
 
   // let columnas="row-cols-4";
   // if (total_card_en_row!=undefined) {
@@ -22,7 +27,7 @@ export default function Card01Lista({ lista_cards, titulo_magenta, total_card_en
   return (
 <>
 
- <div className=" mt-5 pt-3   "> 
+ <div className=" mt-5 pt-3   d-flex justify-content-center "> 
 
 
          <div className={formato_row}> 

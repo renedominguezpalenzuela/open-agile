@@ -35,7 +35,7 @@ export default function Content02Cursos( {cursos}) {
 
 
 
-    <div id="course" className="row div_content02a  h-100d-inline-block pb-5 g-0">
+    <div id="course" className=" div_content02a   pb-5 pt-3 g-0">
 
       <Card01Lista lista_cards={cursos} total_card_en_row={3}/>
 
