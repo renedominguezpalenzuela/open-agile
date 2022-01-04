@@ -87,6 +87,15 @@
    
     /* #686868 */
   }
+
+
+   
+.fuente-titulo-servicios {
+  font-family:  Montserrat-SemiBold;
+  color: #24325a;
+  font-size: 2rem;
+  /* #686868 */
+}
   
 
   
@@ -205,4 +214,9 @@
 }
 
 
-.cards-columns {column-count: 2;}
+
+
+
+.boton_flecha{
+  width: auto;
+}

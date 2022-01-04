@@ -22,7 +22,7 @@ import TextoBloque01 from "../../components/textobloque01";
 
 import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
 
-
+import LeistungenTabs from "../../componentes/leistungen/LeistungenTabs";
 
 import BarraConTextoDerecha from "../../components/BarraConTextoDerecha";
 import BarraConTextoIzquierda from "../../components/BarraConTextoIzquierda";
@@ -38,11 +38,10 @@ export default function Home({ servicios }) {
   const { id } = router.query;
 
   const {
-    titulo1,
     titulo2,
-    titulo2a,
     titulo3,
-    titulo4,
+    titulo2a,
+    titulo,
     texto01,
     texto02,
     texto03,
@@ -61,9 +60,17 @@ export default function Home({ servicios }) {
       {/*Contenedor*/}
 
       <div id="principal" className="container-fluid g-0">
-        <AreaSuperior fondo="gris" cursos={true}  leistungen={true}  texto1={titulo3} texto_parrafo_blanco_cursos={texto01} titulo_largo={true} />
+        {/* <AreaSuperior fondo="gris" cursos={true}  leistungen={true}  texto1={titulo3} texto_parrafo_blanco_cursos={texto01} titulo_largo={true} /> */}
+        <AreaSuperior fondo="ajustable" texto1={titulo} titulo_largo={true} />
+        <div className="row  mt-5 d-flex justify-content-center ">
+          <LeistungenTabs
+            texto01={texto01}
+            texto02={texto02}
+            texto03={texto03}
+          />
+        </div>
 
-        <div className="mt-5"> </div>
+        {/* <div className="mt-5"> </div>
         <BarraConTextoDerecha titulo={titulo3} texto={texto01} />
 
         <div className="mt-5"> </div>
@@ -72,7 +79,7 @@ export default function Home({ servicios }) {
         <div className="mt-5"> </div>
         <TextoBloque01 texto_parrafo_array={texto03} />
 
-        <div className="mb-5"> </div>
+        <div className="mb-5"> </div> */}
         <Footer />
       </div>
 
