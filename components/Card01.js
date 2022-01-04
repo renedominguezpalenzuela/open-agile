@@ -28,9 +28,9 @@ export default function Card01({
 
   return (
     <>
-    
-      <div className="col-md-3 mt-2 d-flex justify-content-center  " key={id}>
-        <div className="card  w-100   my_card myanimacion sombra_cards">
+    {/* col-md-3 */}
+      <div className=" mt-5 d-flex justify-content-center  " key={id}>
+        <div className="card ms-2 me-2 w-100  my_card myanimacion sombra_cards">
           <img className="card-img-top corte_cards img-rounded  " src={`${servidor_url}/img/${imagen}`} alt={texto_alt}   />
 
           <div className="card-body text-center    ">
