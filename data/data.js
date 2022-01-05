@@ -12,7 +12,7 @@ export const leistungen = [
   {id:'1', image:'leistungen/organisationsentwicklung.jpg', title:'ORGANISATIONSENTWICKLUNG', text:'Incididunt ut labore et dolore magna', link:"leistungen"} ,
   {id:'2', image:'leistungen/inhouse_trainning.jpg', title:'INHOUSE TRAINING', text:'Incididunt ut labore et dolore magna', link:"leistungen"},
   {id:'3', image:'leistungen/coaching.jpg', title:'COACHING', text:'Lorem ipsum dolor sit amet', link:"leistungen"},
-  {id:'4', image:'leistungen/mitbestimmung.jpg', title:'MITBESTIMMUNG IM AGILEN KONTEXT ', text:'Consectetur adipiscing elit, sed do eiusmod tempor', link:"leistungen"}
+  // {id:'4', image:'leistungen/mitbestimmung.jpg', title:'MITBESTIMMUNG IM AGILEN KONTEXT ', text:'Consectetur adipiscing elit, sed do eiusmod tempor', link:"leistungen"}
 ]
 
 export const blogs = [

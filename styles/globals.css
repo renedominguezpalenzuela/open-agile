@@ -469,10 +469,11 @@ ul.no-bullets {
 
 .my_card {
   /* max-width: 330px; */
-  width: 29vw;
-  /* aspect-ratio: 1 / 1.25; */
- 
-  height: 100%;
+  width: 26vw;
+  
+  min-height: 450px; 
+  /* aspect-ratio: 1 / 1.25;  */
+  /* height: 50vh; */
   display: flex;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
@@ -480,6 +481,13 @@ ul.no-bullets {
   z-index: 3;
 }
 
+@media only screen and (max-width: 767px) {
+  
+.my_card {
+  width: 85%;
+}
+  }
+  
 
 
 .my_card_blog {
