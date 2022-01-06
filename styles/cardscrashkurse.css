@@ -58,6 +58,16 @@
   }
 }
 
+
+
+.ancho-modal-cursos {
+ position: relative; 
+ align-content: center;
+ width: 50vw;
+ left:-5vw;
+
+ }
+
 .color-body {
   background-color: #e9e9f0 !important;
 }
@@ -68,6 +78,16 @@
   color: #243a78;
   text-transform: uppercase;
 }
+
+
+
+.titulo-card-crashkurse-new {
+  font-family: Montserrat-Black;
+  font-size: 1vw !important;
+  color: #243a78;
+  text-transform: uppercase;
+}
+
 
 .subtitulo-card-crashkurse {
   font-family: Montserrat-ExtraBold;
