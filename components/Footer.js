@@ -51,7 +51,7 @@ export default function Footer() {
 
                 <div>
                   <div className="row font_facit_text_very_small-kontack  pt-2" >
-                    <div>OPEN Agile GmbH </div>
+                    <div>Open Agile GmbH </div>
                     <div>Faulenstr. 67</div>
                     <div>D-28195 Bremen</div>
                   </div>
