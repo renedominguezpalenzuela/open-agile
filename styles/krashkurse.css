@@ -99,6 +99,14 @@
   
 
   
+.fuente-titulo-team-tab {
+  font-family:  Montserrat-SemiBold;
+  color: #24325a;
+  font-size: 1.5rem;
+  /* #686868 */
+}
+
+  
 .fuente-bullet-cursos {
   font-family:  Montserrat-Bold;
   color: #e42078 ;
@@ -220,3 +228,4 @@
 .boton_flecha{
   width: auto;
 }
+

@@ -60,7 +60,7 @@ export default function Home({ servicios }) {
       {/*Contenedor*/}
 
       <div id="principal" className="container-fluid g-0">
-        {/* <AreaSuperior fondo="gris" cursos={true}  leistungen={true}  texto1={titulo3} texto_parrafo_blanco_cursos={texto01} titulo_largo={true} /> */}
+      
         <AreaSuperior fondo="ajustable" texto1={titulo} titulo_largo={true} />
         <div className="row  mt-5 d-flex justify-content-center ">
           <LeistungenTabs
@@ -70,16 +70,7 @@ export default function Home({ servicios }) {
           />
         </div>
 
-        {/* <div className="mt-5"> </div>
-        <BarraConTextoDerecha titulo={titulo3} texto={texto01} />
-
-        <div className="mt-5"> </div>
-        <BarraConTextoIzquierda titulo={titulo4} texto={texto02} /> 
-
-        <div className="mt-5"> </div>
-        <TextoBloque01 texto_parrafo_array={texto03} />
-
-        <div className="mb-5"> </div> */}
+       
         <Footer />
       </div>
 

@@ -65,9 +65,13 @@ export default function MenuNavBar() {
 
 
       <li className="nav-item dropdown2  ">
-        <a className="nav-link">
+
+        <a href="/leistungen/main">
+        <div className="nav-link">
               LEISTUNGEN
+        </div>      
         </a>
+
 
         <ul className="dropdown-content text-start color-dropdown animate__animated animate__fadeInUp no-bullets">
 

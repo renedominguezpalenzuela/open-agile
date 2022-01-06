@@ -8,17 +8,41 @@
 
 
 
-.font1-card-shop{
+.font1-card-job{
   font-family: Montserrat-Black;
-  color: #030066;
+  color: #24325a   ;
   font-size: 0.8rem;
 }
 
+
+.font2-card-job{
+  font-family: Montserrat-Bold;
+  color: #24325a   ;
+  font-size: 0.75rem;
+}
 
 .font2-card-team{
     font-family: Montserrat-Medium;
     color: #030066;
     font-size: 1.1rem;
+}
+
+
+.font3-card-job {
+  font-family:  Montserrat-Regular;
+  color: #24325a ;
+  font-size: 0.75rem;
+  
+}
+
+
+
+  
+.fuente-bullet-job {
+  font-family:  Montserrat-Bold;
+  color: #e42078 ;
+  font-size: 1rem;
+  
 }
 
 
@@ -67,6 +91,7 @@
  
 .btn-card-blog {
     background-color: #24325a !important;
+    
     /* border-radius:30px 30px 30px 30px; */
     /* height: 40px; */
     /* border-color: #3edf0d  !important; */
@@ -81,6 +106,29 @@
     /* border-color: rgb(245, 4, 4) !important; */
     color: #ffffff !important;
   }
+
+
+  
+ 
+.btn-card-job {
+  background-color: #24325a !important;
+  width: 90%;
+  height: 5vh;
+  
+  /* border-radius:30px 30px 30px 30px; */
+  /* height: 40px; */
+  /* border-color: #3edf0d  !important; */
+  /* color: #ffffff !important; */
+}
+
+.btn-card-job:hover
+/* .btn-card:active, */
+/* .btn-card:visited, */
+/* .btn-card:focus*/ {
+  background-color: #e42078 !important;
+  /* border-color: rgb(245, 4, 4) !important; */
+  color: #ffffff !important;
+}
 
 
   .font-btn-card-team{

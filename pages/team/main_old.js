@@ -24,15 +24,10 @@ import Tabla01 from "../../components/crashkurse/tabla01";
 
 import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
 
-import TeamTabs from "../../componentes/team/TeamTabs";
-
-
 
 import BarraConTextoDerecha from "../../components/BarraConTextoDerecha";
 import BarraConTextoIzquierda from "../../components/BarraConTextoIzquierda";
 
-
-import { servidor_url } from "../../config";
 
 
 
@@ -91,38 +86,90 @@ const titulo_main = "DAS TEAM";
 
 
 
-return (
+  return (
 <>
   <Head>
-        <title>{titulo2 + " " + titulo2a}</title>
-        <meta name="description" content={titulo2} />
-        <link rel="icon" href="/favicon.ico" />
-        <script async src={`${servidor_url}/js/chat.js`} />
-        <script async src={`${servidor_url}/js/menu.js`} />
-      </Head>
+    <title>{titulo2}</title>
+    <meta name="description" content={titulo2} />
+<link rel="icon" href="/favicon.ico" />
+    <script async src="js/chat.js" />
+    <script async src="js/menu.js" />
+  </Head>
 
-      {/*Contenedor*/}
+     
+  {/*Contenedor*/}
 
-      <div id="principal" className="container-fluid g-0">
-      
-        <AreaSuperior fondo="ajustable" texto1={titulo1} texto1={titulo2} titulo_largo={true} />
-        <div className="row  mt-5 d-flex justify-content-center ">
-          <TeamTabs
-            texto01={texto01}
-            texto02={texto02}
-            texto03={texto03}
-            texto04={texto04}
-            texto05={texto05}
-          />
+
+       <div id="principal" className="container-fluid g-0">
+
+      <MenuFlotanteBoton />
+  
+        <AreaSuperior fondo="gris" texto1={titulo1} texto2={titulo2} texto2a={titulo2a} />
+
+
+   
+
+
+   
+        <div className="mt-5 ps-5">
+          <BarraConTextoDerecha titulo={subtitulo1} texto={texto01} />
         </div>
 
-       
-        <Footer />
-      </div>
+        <div className="mt-5">
+          <BarraConTextoIzquierda titulo={subtitulo2} texto={texto02} />
+        </div>
+        <div className="mt-5 ps-5">
+          <BarraConTextoDerecha titulo={subtitulo3} texto={texto03} />
+        </div>
+        <div className="mt-5">
+          <BarraConTextoIzquierda titulo={subtitulo4} texto={texto04} />
+        </div>
 
-      {/*Menu Lateral oculto  */}
-      <MenuFlotante />
+        <div className="mt-5 ms-5 mb-5">
+          <BarraConTextoDerecha titulo={subtitulo5} texto={texto05} />
+        </div>
+
+        {/* 
+    <TextoBloque01   titulo={subtitulo1}  texto_parrafo_array={texto01} />
+
+    <TextoBloque01   titulo={subtitulo2}  texto_parrafo_array={texto02} />
+
+    <TextoBloque01   titulo={subtitulo3}  texto_parrafo_array={texto03} />
+
+    <TextoBloque01   titulo={subtitulo4}  texto_parrafo_array={texto04} />
+
+    <TextoBloque01   titulo={subtitulo5}  texto_parrafo_array={texto05} /> */}
+
+        {/* <TextoBloque01 titulo_main={titulo_main} /> */}
+
+    {/* <TextoBloque01   titulo={subtitulo1}  texto_parrafo_array={texto01} />
+
+    <TextoBloque01   titulo={subtitulo2}  texto_parrafo_array={texto02} />
+
+    <TextoBloque01   titulo={subtitulo3}  texto_parrafo_array={texto03} />
+
+    <TextoBloque01   titulo={subtitulo4}  texto_parrafo_array={texto04} />
+
+    <TextoBloque01   titulo={subtitulo5}  texto_parrafo_array={texto05} />
+
+
+
+    <TextoBloque01   titulo_main={titulo_main}   />
+
+   
+
+
+<TeamCarrousel  /> */}
+  
+
+    {/*Footer  */}
+    <Footer />
+
+</div>
+      
+    {/*Menu Lateral oculto  */} 
+  <MenuFlotante />
 </>
-);
+  );
 }
 

@@ -17,23 +17,24 @@ import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 
 import BarraConTextoDerecha from "../components/BarraConTextoDerecha";
 import BarraConTextoIzquierda from "../components/BarraConTextoIzquierda";
+import Card08Job from "../components/Card08Job";
+
 
 //----------------------------------------------------------------------------------------------------------
 //           CRASHKURSE \ CRASHKURS ZUM AGILE COACH
 //----------------------------------------------------------------------------------------------------------
 
 export default function Home() {
-  const titulo1 = "JOBS";
-  const titulo2 = "Hier findest Du";
-  const titulo2a = "aktuelle Jobangebote";
+  const texto1 = "JOBS";
+  // const titulo2 = "Hier findest Du aktuelle Jobangebote";
+  const texto2 = "HIER FINDEST DU AKTUELLE JOBANGEBOTE";
 
-  const titulo3 = "Praktikant (m/w/d) Social Media & Online-Kommunikation ";
+  const titulo1 = "Praktikant (m/w/d)";
+  const titulo2 ="Social Media & Online-Kommunikation";
+  const titulo_parrafo1 =  ["Das sind Deine Stärken"];
 
-  const titulo4 = "";
 
-  const texto01 = ["Das sind Deine Stärken"];
-
-  const texto02 = [
+  const parrafo1 = [
     "Praktische Erfahrungen im Bereich Social-Media & Online-Kommunikation",
     "„Digital Native“ mit großer Social-Networks-Affinität",
     "Fehlerfreier, stilsicherer und fachlich korrekter Schreibstil",
@@ -41,9 +42,9 @@ export default function Home() {
     "Selbstständiger, kreativer und lösungsorientierter Arbeitsstil",
   ];
 
-  const texto03 = ["Spannende Aufgaben erwarten Dich"];
+  const titulo_parrafo2 = ["Spannende Aufgaben erwarten Dich"];
 
-  const texto04 = [
+  const parrafo2 = [
     "Weiterentwicklung der Social-Media-Kanäle",
     "Gemeinsame Erarbeitung und Umsetzung von Social-Media-Strategien",
     "Unterstützung bei Video-Produktionen",
@@ -51,9 +52,9 @@ export default function Home() {
     "Unterstützung bei Präsentationen im Aufbau und Design",
   ];
 
-  const texto05 = ["Warum Open Agile?"];
+  const titulo_parrafo3 = ["Warum Open Agile?"];
 
-  const texto06 = [
+  const parrafo3 = [
     "Bei uns kannst Du direkt eine verantwortungsvolle Rolle mit einem hohen Maß an Autonomie und Eigenverantwortung übernehmen",
     "Hier kannst Du Dein Potential zu 100% entfalten",
     "Du hast einen großen strategischen und konzeptionellen Freiraum, um deine Vision des idealen Kundenerlebnisses zu verwirklichen",
@@ -76,8 +77,23 @@ export default function Home() {
       <div id="principal" className="container-fluid g-0">
         <MenuFlotanteBoton />
 
-        <AreaSuperior fondo="gris" texto1={titulo1} texto2={titulo2} texto2a={titulo2a} />
+        
+        
+        <AreaSuperior fondo="ajustable" texto1={texto1} texto2={texto2} titulo_muy_largo={true} />
 
+
+
+
+  <div className="row d-flex justify-content-center mt-5 mb-5">
+  <div className="col-md-5  " >
+  
+        <Card08Job titulo1={titulo1} titulo2={titulo2} titulo_parrafo1={titulo_parrafo1} parrafo1={parrafo1} titulo_parrafo2={titulo_parrafo2} parrafo2={parrafo2} titulo_parrafo3={titulo_parrafo3} parrafo3={parrafo3}/>
+  </div>
+  </div>
+    
+
+
+{/* 
         <TextoBloque01 titulo={titulo3} />
 
 
@@ -90,14 +106,8 @@ export default function Home() {
 
 
     <div className="mt-5"> </div>
-        <BarraConTextoDerecha titulo={texto05} texto={texto06} />
+        <BarraConTextoDerecha titulo={texto05} texto={texto06} /> */}
 
-
-        {/* <TextoBloque01 titulo2={texto01} texto_plequitas_array={texto02} />
-
-        <TextoBloque01 titulo2={texto03} texto_plequitas_array={texto04} />
-
-        <TextoBloque01 titulo2={texto05} texto_plequitas_array={texto06} /> */}
 
         {/*Footer  */}
           <div className="mt-5"> </div>

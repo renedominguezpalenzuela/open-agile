@@ -2,6 +2,7 @@ import { servidor_url } from "../../config";
 import Image from "next/image";
 import Link from "next/link";
 import KurseButtons from "./KurseButtons";
+import React from "react";
 
  
 
@@ -14,10 +15,10 @@ export default function KurseContent02({imagen, titulo, texto, imagen_botones,ti
 
                 
                   {texto.map((unaLinea, index)=>(
-                                                      <>
+                                                      <React.Fragment key={index}>
                                                       <div className=" mt-2  p-3 fuente-leistungen  bordes_leistungen d-flex justify-content-center ">{unaLinea}</div>
                                                         {unaLinea==="<br>"?"<br/>":""}
-                                                      </>
+                                                      </React.Fragment>
                                 )
                       )}
 
