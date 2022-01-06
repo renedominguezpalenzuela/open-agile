@@ -58,13 +58,8 @@ export default function Home({ curso }) {
 
         <div className="row pt-5 pb-5">
           <div className="col-md-4 ">
-            <MenuKraskurse
-              link_beschreibung={link_beschreibung}
-              link_vorteile={link_vorteile}
-              link_inhalte={link_inhalte}
-                 link_leistungen={link_leistungen}
-              link_kosten={link_kosten}
-            />
+          <MenuKraskurse link_beschreibung={link_beschreibung} link_vorteile={link_vorteile} link_inhalte={link_inhalte}    link_leistungen={link_leistungen}
+              link_kosten={link_kosten}  link_termine={`${servidor_url}/${link_beschreibung}${link_termine}`} link_pdf={link_pdf} />
           </div>
           <div className="col-md-7  pe-5">
 

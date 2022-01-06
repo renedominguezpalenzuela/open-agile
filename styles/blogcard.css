@@ -42,22 +42,6 @@
 
 
  
-.btn-card-blog {
-    background-color: #24325a !important;
-    /* border-radius:30px 30px 30px 30px; */
-    /* height: 40px; */
-    /* border-color: #3edf0d  !important; */
-    /* color: #ffffff !important; */
-  }
-  
-  .btn-card-blog:hover,
-  /* .btn-card:active, */
-  /* .btn-card:visited, */
-  /* .btn-card:focus*/ {
-    background-color: #e42078 !important;
-    /* border-color: rgb(245, 4, 4) !important; */
-    color: #ffffff !important;
-  }
 
 
   .font-btn-card-blog{

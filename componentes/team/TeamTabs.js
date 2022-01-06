@@ -21,7 +21,7 @@ export default function TeamTabs({ texto01, texto02, texto03, texto04, texto05 }
 
       // MuiButtonBase-root-MuiTab-root
   "& .MuiButtonBase-root.MuiTab-root": {
-    fontSize: 13
+    fontSize: 11
   },
 
   
@@ -48,11 +48,11 @@ export default function TeamTabs({ texto01, texto02, texto03, texto04, texto05 }
       </Box>
 
 
-     <OneTab  indice={0}  titulo='SELBSTORGANISATION UND SELBSTVERANTWORTUNG'  texto={texto01} value={value} />
-     <OneTab  indice={1}  titulo='PARTNERSCHAFTLICHER UMGANG'  texto={texto02} value={value} />
-     <OneTab  indice={2}  titulo='EMPOWERMENT UND ENTWICKLUNG'  texto={texto03} value={value} />
-     <OneTab  indice={3}  titulo='TRANSPARENZ'  texto={texto04} value={value} />
-     <OneTab  indice={4}  titulo='EFFIZIENZ, EFFEKTIVITÄT UND PRAGMATISMUS'  texto={texto05} value={value} />
+     <OneTab  indice={0}  titulo='SELBSTORGANISATION UND SELBSTVERANTWORTUNG'  texto={texto01} value={value} setValue={setValue} />
+     <OneTab  indice={1}  titulo='PARTNERSCHAFTLICHER UMGANG'  texto={texto02} value={value} setValue={setValue} />
+     <OneTab  indice={2}  titulo='EMPOWERMENT UND ENTWICKLUNG'  texto={texto03} value={value} setValue={setValue} />
+     <OneTab  indice={3}  titulo='TRANSPARENZ'  texto={texto04} value={value} setValue={setValue} />
+     <OneTab  indice={4}  titulo='EFFIZIENZ, EFFEKTIVITÄT UND PRAGMATISMUS'  texto={texto05} value={value} setValue={setValue}/>
 
     
     </Box>
@@ -99,7 +99,18 @@ function a11yProps(index) {
 }
 
 
-function OneTab({indice, titulo, texto, value}) {
+function OneTab({indice, titulo, texto, value, setValue}) {
+
+
+  
+  const myfuncion = () => {   
+    let proximo_indice = indice+1;
+    if (proximo_indice>4) {proximo_indice=0;}
+
+    setValue(proximo_indice) 
+  
+  };
+
 
  return (
     <>
@@ -119,19 +130,23 @@ function OneTab({indice, titulo, texto, value}) {
             ))}
 
 
-            <div   className="mt-3 mb-5"  data-bs-toggle="modal"   data-bs-target={`#contactForm${indice}`}>
-       
+            {/* <div   className="mt-3 mb-5" > */}
+              <div onClick={ myfuncion } className="mt-3 mb-5" > 
             <img
               className="boton_flecha  "
               src={`${servidor_url}/img/leistungen/boton_flecha.png`}
               alt=""
             />
+
+            </div>
        
-          </div>
+          {/* </div> */}
         </div>
       </TabPanel>
 
-      <ModalForm  id={indice} quartal={indice} titulo={""} frase="Jetzt anmelden!" day={""} link={""} />
+    
    </>
   )
 }
+
+

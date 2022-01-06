@@ -48,6 +48,14 @@ export default function LeistungenTabs({ texto01, texto02, texto03 }) {
     setValue(newValue);
   };
 
+    
+  const myfuncion = (proximo_indice) => {   
+   
+    setValue(proximo_indice) 
+   
+  };
+
+
   return (
       <>
     <Box className="" sx={{ width: "100%" }}>
@@ -79,7 +87,7 @@ export default function LeistungenTabs({ texto01, texto02, texto03 }) {
             ))}
 
 
-            <div   className="mt-3 mb-5"  data-bs-toggle="modal"   data-bs-target={"#contactForm1"}>
+            <div   className="mt-3 mb-5"  onClick={ ()=>myfuncion(1) } >
        
             <img
               className="boton_flecha  "
@@ -100,14 +108,14 @@ export default function LeistungenTabs({ texto01, texto02, texto03 }) {
           {texto02 != undefined &&
             texto02.length > 0 &&
             texto02.map((unaLinea, index) => (
-              <div className="fuente-texto-cursos" key={index}>
-                <span className="fuente-bullet-cursos">•</span>
-                <span className="fuente-texto-cursos"> {unaLinea}</span>
+              <div className="row   g-0 fuente-texto-cursos" key={index}>
+                <span className="col-1 ps-4  fuente-bullet-tabs">•</span>
+                <span className="col  fuente-texto-cursos"> {unaLinea}</span>
 
                 <p />
               </div>
             ))}
-         <div   className="mt-3 mb-5"  data-bs-toggle="modal"   data-bs-target={"#contactForm1"}>
+         <div   className="mt-3 mb-5"  onClick={ ()=>myfuncion(2) } >
        
             <img
               className="boton_flecha  "
@@ -135,7 +143,7 @@ export default function LeistungenTabs({ texto01, texto02, texto03 }) {
               eine Mail. Wir freuen uns auf Dich!
             </p>
 
-           <div   className="mt-3 mb-5"  data-bs-toggle="modal"   data-bs-target={"#contactForm1"}>
+           <div   className="mt-3 mb-5"  onClick={ ()=>myfuncion(0) } >
        
             <img
               className="boton_flecha  "

@@ -17,8 +17,8 @@ import { servidor_url } from "../config";
 //----------------------------------------------------------------------------------------------------------
 //https://www.amazon.de/Crashkurs-Selbstorganisation-agilen-Teams-wertschätzende/dp/3648151509/ref=sr_1_2?__mk_de_DE=ÅMÅŽÕÑ&crid=3PL0Y0OIVCT4Y&keywords=crashkurs+agil&qid=1640623312&sprefix=crashkurs+agil%2Caps%2C97&sr=8-2
 export default function Home({shop}) {
-  const titulo_area_superior = "AGILITÄT FÜR ZUHAUSE UND UNTERWEGS";
-  const titulo_area_superior2 = "DER OPEN AGILE SHOP";
+  const titulo_area_superior2 = "AGILITÄT FÜR ZUHAUSE UND UNTERWEGS";
+  const titulo_area_superior = "DER OPEN AGILE SHOP";
   
 
 

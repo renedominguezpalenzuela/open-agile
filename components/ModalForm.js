@@ -274,12 +274,12 @@ export default function ModalForm({ id, titulo, quartal, date1, date2, day, fras
               </div>
 
               <div className="row d-flex justify-content-start privacy-modal ps-3 pe-3 mt-1">
-                AGBS
+                AGBs 
               </div>
 
               <div className="row d-flex justify-content-start texto-AGBS  ps-3 pe-3 ">
-                Ich bin mit der Übermittlung meiner Daten zur internen
-                Verarbeitung der Open Agile GmbH einverstanden.
+                Ich bin mit den AGBs und der Übermittlung meiner Daten zur internen Verarbeitung der Open Agile GmbH einverstanden
+                
               </div>
 
               <div className="row d-flex justify-content-start ps-3 pe-3 mt-1">

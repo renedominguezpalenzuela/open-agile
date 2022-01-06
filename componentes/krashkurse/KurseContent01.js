@@ -65,7 +65,7 @@ export default function KurseContent01({
                 </div> 
             </>
           ))}
-
+{/* 
         <div className="mt-5  ">
           <KurseButtons
             titulo_botones={titulo_botones}
@@ -75,7 +75,7 @@ export default function KurseContent01({
             link_termine={link_termine}
             link_pdf={link_pdf}
           />
-        </div>
+        </div> */}
       </div>
     </>
   );

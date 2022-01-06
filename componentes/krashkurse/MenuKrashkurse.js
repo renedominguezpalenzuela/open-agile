@@ -2,7 +2,7 @@ import { servidor_url } from "../../config";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function MenuKrashkurse({ link_beschreibung, link_vorteile, link_inhalte, link_leistungen, link_kosten }) {
+export default function MenuKrashkurse({ link_beschreibung, link_vorteile, link_inhalte, link_leistungen, link_kosten, link_termine,link_pdf }) {
   return (
     <>
       <div className="card ms-5 me-5 pt-4 mb-1 pb-4 ps-4 pe-4  shadow">
@@ -61,6 +61,37 @@ export default function MenuKrashkurse({ link_beschreibung, link_vorteile, link_
               </td>
               <td align="right">></td>
             </tr>
+
+             <tr className="font-card-menu-crashkurse">
+              <td>
+               <a  href={link_termine} > 
+                <div className="myanimacioncursos">TERMINE</div>
+                </a>
+              </td>
+              <td align="right">></td>
+            </tr>
+
+              <tr className="font-card-menu-crashkurse">
+              <td>
+
+                <Link
+                href={link_pdf}
+                className=""
+                download>
+
+               <a target="_blank" > 
+                <div className="myanimacioncursos">PDFs</div>
+                </a>
+                </Link>
+              </td>
+              <td align="right">></td>
+            </tr>
+
+
+
+
+
+
             </tbody>
             
             

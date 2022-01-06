@@ -85,6 +85,7 @@
     color: #24325a ;
     font-size: 1rem;
    
+   
     /* #686868 */
   }
 
@@ -108,9 +109,22 @@
 
   
 .fuente-bullet-cursos {
+  
   font-family:  Montserrat-Bold;
   color: #e42078 ;
   font-size: 1.2rem;
+ 
+  /* #686868 */
+}
+
+
+  
+.fuente-bullet-tabs {
+  
+  font-family:  Montserrat-Bold;
+  color: #e42078 ;
+  font-size: 1.2rem;
+  padding-left: 35px;
   /* #686868 */
 }
 
