@@ -58,7 +58,7 @@ export default function Card06Team({
 
             <div className="col-6 ms-2 mt-2 mb-3 d-flex  align-items-center justify-content-center ">
               <a href={`/${link}/${id}`}   className="  "> 
-                <button type="button" className="btn ps-4 pe-4 btn-card-blog font-btn-card-team rounded-pill  ">
+                <button type="button" className="btn ps-4 pe-4 btn-card-team-new  font-btn-card-team rounded-pill  ">
                     {texto_boton}
                 </button>
               </a>
