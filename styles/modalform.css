@@ -53,16 +53,16 @@
 
 .boton_modal_form {
   /* background-color: #e50067; */
-  color: #F82D7C;
-  background-color: #FDCDE0;
-  border-color:#F82D7C ;
+  color: white;
+  background-color: #24325a   ;
+  border-color:#24325a ;
   border-radius: 6px;
   
 }
 
 .boton_modal_form:hover {
   color: #ffffff!important;
-  background-color:#F82D7C; 
+  background-color:#e42078; 
 }
 
 

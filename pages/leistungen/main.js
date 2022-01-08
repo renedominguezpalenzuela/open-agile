@@ -7,7 +7,7 @@ import Footer from "../../components/Footer";
 
 import Content02Cursos from "../../components/Content02Cursos";
 
-// import Tabla03 from "../../components/crashkurse/tabla03";
+
 
 import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
 

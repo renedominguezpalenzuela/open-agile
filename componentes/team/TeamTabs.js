@@ -7,11 +7,13 @@ import Box from "@mui/material/Box";
 import ModalForm from "../../components/ModalForm";
 
 
+
 import { servidor_url } from "../../config";
 
 
 export default function TeamTabs({ texto01, texto02, texto03, texto04, texto05 }) {
   const [value, setValue] = React.useState(0);
+ 
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -50,9 +52,9 @@ export default function TeamTabs({ texto01, texto02, texto03, texto04, texto05 }
 
      <OneTab  indice={0}  titulo='SELBSTORGANISATION UND SELBSTVERANTWORTUNG'  texto={texto01} value={value} setValue={setValue} />
      <OneTab  indice={1}  titulo='PARTNERSCHAFTLICHER UMGANG'  texto={texto02} value={value} setValue={setValue} />
-     <OneTab  indice={2}  titulo='EMPOWERMENT UND ENTWICKLUNG'  texto={texto03} value={value} setValue={setValue} />
-     <OneTab  indice={3}  titulo='TRANSPARENZ'  texto={texto04} value={value} setValue={setValue} />
-     <OneTab  indice={4}  titulo='EFFIZIENZ, EFFEKTIVITÄT UND PRAGMATISMUS'  texto={texto05} value={value} setValue={setValue}/>
+     <OneTab  indice={2}  titulo='EMPOWERMENT UND ENTWICKLUNG'  texto={texto03} value={value} setValue={setValue}  />
+     <OneTab  indice={3}  titulo='TRANSPARENZ'  texto={texto04} value={value} setValue={setValue}  />
+     <OneTab  indice={4}  titulo='EFFIZIENZ, EFFEKTIVITÄT UND PRAGMATISMUS'  texto={texto05} value={value} setValue={setValue} />
 
     
     </Box>
@@ -112,6 +114,9 @@ function OneTab({indice, titulo, texto, value, setValue}) {
   };
 
 
+  const [isShown, setIsShown] = React.useState(false);
+
+  
  return (
     <>
      <TabPanel value={value} index={indice} >
@@ -132,11 +137,25 @@ function OneTab({indice, titulo, texto, value, setValue}) {
 
             {/* <div   className="mt-3 mb-5" > */}
               <div onClick={ myfuncion } className="mt-3 mb-5" > 
+               {isShown && (
             <img
               className="boton_flecha  "
-              src={`${servidor_url}/img/leistungen/boton_flecha.png`}
+              src={`${servidor_url}/img/leistungen/boton_flecha_magenta.png`}
               alt=""
-            />
+               onMouseEnter={() => setIsShown(true)}
+               onMouseLeave={() => setIsShown(false)}
+            />)}
+
+
+            {!isShown && (
+            <img
+              className="boton_flecha  "
+              src={`${servidor_url}/img/leistungen/boton_flecha_blue.png`}
+              alt=""
+               onMouseEnter={() => setIsShown(true)}
+               onMouseLeave={() => setIsShown(false)}
+            />)}
+       
 
             </div>
        

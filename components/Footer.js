@@ -79,11 +79,7 @@ export default function Footer() {
                   Coaching
                 </a>
               </div>
-              <div>
-                <a  className="color-font-dropdown mylinkhoover"  href="/leistungen/4">
-                  Mitbestimmung Im Agilen Kontext{" "}
-                </a>
-              </div>
+              
             </div>
           </div>
 
@@ -91,25 +87,37 @@ export default function Footer() {
             <div className="font_footer_title mt-3">Crashkurse</div>
             <div className="font_facit_text_very_small mt-3">
               <div>
-                <a  className="color-font-dropdown mylinkhoover"   href="/crashkurse/1">
+                <a  className="color-font-dropdown mylinkhoover"   href="/crashkurse/beschreibung/1">
                   Crashkurs zum Agile Coach{" "}
                 </a>
               </div>
               <div>
-                <a
-                  className="color-font-dropdown mylinkhoover"
-                  href="/crashkurse/2">
+                <a className="color-font-dropdown mylinkhoover"  href="/crashkurse/beschreibung/2">
                   Crashkurs zum Agile Facilitator{" "}
                 </a>
               </div>
 
               <div>
-                <a
-                  className="color-font-dropdown mylinkhoover"
-                  href="/crashkurse/3">
+                <a className="color-font-dropdown mylinkhoover" href="/crashkurse/beschreibung/3">
                   Crashkurs zum Scrum Master{" "}
                 </a>
               </div>
+
+              
+              <div>
+                <a className="color-font-dropdown mylinkhoover" href="/crashkurse/beschreibung/4">
+                  Crashkurs mitbestimmung in der agilen arbeitswelt{" "}
+                </a>
+              </div>
+
+              
+              <div>
+                <a className="color-font-dropdown mylinkhoover" href="/crashkurse/beschreibung/5">
+                  Online crashkurs selbstorganisation in agilen teams{" "}
+                </a>
+              </div>
+
+
             </div>
           </div>
 

@@ -65,7 +65,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>{titulo2}</title>
+        <title>Jobs</title>
         <meta name="description" content={titulo2} />
         <link rel="icon" href="/favicon.ico" />
         <script async src="js/chat.js" />

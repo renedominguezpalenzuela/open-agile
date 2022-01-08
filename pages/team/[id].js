@@ -40,6 +40,7 @@ export default function Home({ team }) {
     erfahrung,
     weiterbildungen,
     imageround,
+    cargo
  
   } = team;
 
@@ -50,8 +51,8 @@ export default function Home({ team }) {
   return (
     <>
       <Head>
-        <title>{"Quiz"}</title>
-        <meta name="description" content="Quiz" />
+        <title>{"Wir"}</title>
+        <meta name="description" content="Wir" />
         <link rel="icon" href="/favicon.ico" />
         <script async src={`${servidor_url}/js/chat.js`} />
         <script async src={`${servidor_url}/js/menu.js`} />
@@ -82,7 +83,7 @@ export default function Home({ team }) {
         {erfahrung != undefined && erfahrung != "" && (
           <>
             <div className="row d-flex justify-content-center">
-              <div className="col-6  font_erfahrum">Erfahrung</div>
+              <div className="col-6  font_weiterbildungen">Qualifikationen</div>
             </div>
 
             <div className="row d-flex justify-content-center ">
@@ -91,7 +92,7 @@ export default function Home({ team }) {
                 {erfahrung.map((unErfarung, index) => (
                   <div key={index} className="font_erfahrum_detalles  ">
                    
-                    <li> {unErfarung} </li>
+                    <li className="mybullets"> {unErfarung} </li>
                   </div>
                 ))}
 
@@ -109,7 +110,7 @@ export default function Home({ team }) {
          {weiterbildungen != undefined && weiterbildungen != "" && (
           <>
             <div className="row mt-5 d-flex justify-content-center">
-              <div className="col-6  font_weiterbildungen">Weiterbildungen</div>
+              <div className="col-6  font_weiterbildungen">Projekterfahrungen</div>
             </div>
 
             <div className="row d-flex justify-content-center ">
@@ -164,7 +165,7 @@ export default function Home({ team }) {
 
                <div className=" row  mt-3 font_title1-team-seccion ">{motto_author}</div>
 
-                <div className="row  mt-2 font_title2-team-seccion font_title_purple ">CEO Open Agile</div>
+                <div className="row  mt-2 font_title2-team-seccion font_title_purple ">{cargo}</div>
 
 
 

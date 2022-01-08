@@ -7,7 +7,7 @@ let longitud_linea = 24;
 
 import { servidor_url } from "../config";
 
-import ModalForm from "./ModalForm";
+import ModalFormJob from "./ModalFormJob";
 
 export default function Card08Job({
   id,
@@ -112,7 +112,7 @@ export default function Card08Job({
       </div>
 
 
-         <ModalForm  id={1} quartal={1} titulo={"BEWERBUNG"} frase="Jetzt Kontakt aufnehmen!"  day={""} link={""} />
+         <ModalFormJob  id={1} quartal={1} titulo={"BEWERBUNG"} frase="Jetzt Kontakt aufnehmen!"  day={""} link={""} />
     </>
   );
 }

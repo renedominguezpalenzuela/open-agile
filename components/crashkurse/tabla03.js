@@ -5,7 +5,10 @@ export default function Tabla03({
 crashkurs_date_title,
 crashkurs_date,
 titulo,
-titulo2a
+titulo2a,
+precio,
+
+  nombre_curso
 }) {
 
 
@@ -35,7 +38,7 @@ titulo2a
     
         <div key={index} className="col-lg-2 ms-3 me-3 ">
        
-         <Card04 key={unCard.id} datos={unCard} />
+         <Card04 key={unCard.id} datos={unCard} precio={precio}  nombre_curso={nombre_curso}/>
         </div>
       
        

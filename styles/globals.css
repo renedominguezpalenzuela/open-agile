@@ -168,6 +168,7 @@ div.vertical-line {
   height: 100%;
 }
 
+
 .iconos2 {
   color: #e50067;
   width: 32px;
@@ -693,7 +694,8 @@ ul.no-bullets {
 .btn-leinstungen {
   /* background-color: rgba(0, 0, 0, 0) !important; */
   border-color: #e42078 !important;
-  color: #e42078 !important;
+  background-color: #24325a!important   ;
+  color: white!important; 
   font-family: Montserrat-SemiBold;
 
   /* width: calc(100%+22vw); */
@@ -732,9 +734,9 @@ ul.no-bullets {
 .btn-leinstungen:visited,
 .btn-leinstungen:focus,
 .btn-leinstungen:hover {
-  /* background-color: white !important;  */
-  border-color: #24325a !important ;
-  color: #24325a !important;
+  background-color: #e42078!important;  
+  /* border-color: #24325a !important ; */
+  /* color: #24325a !important; */
 }
 
 

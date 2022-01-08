@@ -1,11 +1,13 @@
 
 import ModalFormCursos from "./ModalFormCursos";
 
-export default function Card04({ datos }) {
+export default function Card04({ datos, precio, nombre_curso }) {
   // const classes = useStyles();
 
   const { id, quartal, date1, date2, day, link } = datos;
 
+
+  
   
 
   return (
@@ -45,7 +47,8 @@ export default function Card04({ datos }) {
 
 
 
-      <ModalFormCursos  id={id} quartal={quartal} titulo={`${quartal}. Quartal`} frase="Jetzt anmelden!" date1={date1} date2={date2} day={day} link={link} />
+      <ModalFormCursos  id={id} quartal={quartal} titulo={`${quartal}. Quartal`} frase="Jetzt anmelden!" date1={date1} date2={date2} day={day} link={link} precio={precio}
+        nombre_curso={nombre_curso} />
 
      
     </>

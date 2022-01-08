@@ -40,6 +40,8 @@ export default function Home({ curso }) {
     items_tabla,
     crashkurs_date_title,
     crashkurs_date,
+    texto_kosten,
+    titulo_area_superior
   } = curso;
 
   return (
@@ -65,7 +67,7 @@ export default function Home({ curso }) {
         <Tabla01 className="" items_tabla={items_tabla} numero_tabla="1" />
 
         {/* Tabla3 --- Cards con fechas de cursos */}
-        <Tabla03 className="mt-5" crashkurs_date_title={crashkurs_date_title} crashkurs_date={crashkurs_date} titulo={titulo2 + " " + titulo2a} titulo2a={titulo2a}/>
+        <Tabla03 className="mt-5" crashkurs_date_title={crashkurs_date_title} crashkurs_date={crashkurs_date} titulo={titulo2 + " " + titulo2a} titulo2a={titulo2a} precio={texto_kosten}  nombre_curso={titulo_area_superior}/>
 
         {/*Footer  */}
         <Footer />

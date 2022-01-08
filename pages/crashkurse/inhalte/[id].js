@@ -37,7 +37,9 @@ export default function Home({ curso }) {
     link_termine,
     link_pdf,
       crashkurs_date_title,
-    crashkurs_date
+    crashkurs_date,
+     texto_kosten
+
   } = curso;
 
   return (
@@ -80,7 +82,7 @@ export default function Home({ curso }) {
         </div>
 
 
-            <Tabla03 className="mt-5" crashkurs_date_title={crashkurs_date_title} crashkurs_date={crashkurs_date} titulo2a={crashkurs_date_title} />
+            <Tabla03 className="mt-5" crashkurs_date_title={crashkurs_date_title} crashkurs_date={crashkurs_date} titulo2a={crashkurs_date_title} precio={texto_kosten}  nombre_curso={titulo_area_superior}/>
 
 
 

@@ -41,7 +41,7 @@ function a11yProps(index) {
   };
 }
 
-export default function LeistungenTabs({ texto01, texto02, texto03 }) {
+export default function LeistungenTabs({ texto01, texto02, texto03 , titulo}) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -56,6 +56,9 @@ export default function LeistungenTabs({ texto01, texto02, texto03 }) {
   };
 
 
+   const [isShown, setIsShown] = React.useState(false);
+
+
   return (
       <>
     <Box className="" sx={{ width: "100%" }}>
@@ -65,7 +68,7 @@ export default function LeistungenTabs({ texto01, texto02, texto03 }) {
           onChange={handleChange}
           aria-label="basic tabs example"
           centered>
-          <Tab label="01. ORGANISATIONSENTWICKLUNG" {...a11yProps(0)} />
+          <Tab label={`01. ${titulo}`} {...a11yProps(0)} />
           <Tab label="02. BEISPIEL VORGEHEN" {...a11yProps(1)} />
           <Tab label="03. KONTAKT AUFNEHMEN" {...a11yProps(2)} />
         </Tabs>
@@ -74,7 +77,7 @@ export default function LeistungenTabs({ texto01, texto02, texto03 }) {
       <TabPanel value={value} index={0}>
         <div className="ps-5 ms-5 row w-50  ">
           <div className=" fuente-titulo-servicios mt-2 mb-4   ">
-            ORGANISATIONSENTWICKLUNG
+            {titulo}
           </div>
 
           {texto01 != undefined &&
@@ -88,12 +91,24 @@ export default function LeistungenTabs({ texto01, texto02, texto03 }) {
 
 
             <div   className="mt-3 mb-5"  onClick={ ()=>myfuncion(1) } >
-       
+           {isShown && (
             <img
               className="boton_flecha  "
-              src={`${servidor_url}/img/leistungen/boton_flecha.png`}
+              src={`${servidor_url}/img/leistungen/boton_flecha_magenta.png`}
               alt=""
-            />
+               onMouseEnter={() => setIsShown(true)}
+               onMouseLeave={() => setIsShown(false)}
+            />)}
+
+
+            {!isShown && (
+            <img
+              className="boton_flecha  "
+              src={`${servidor_url}/img/leistungen/boton_flecha_blue.png`}
+              alt=""
+               onMouseEnter={() => setIsShown(true)}
+               onMouseLeave={() => setIsShown(false)}
+            />)}
        
           </div>
         </div>
@@ -119,11 +134,25 @@ export default function LeistungenTabs({ texto01, texto02, texto03 }) {
 
          <div   className="mt-3 mb-5"  onClick={ ()=>myfuncion(2) } >
        
+              {isShown && (
             <img
               className="boton_flecha  "
-              src={`${servidor_url}/img/leistungen/boton_flecha.png`}
+              src={`${servidor_url}/img/leistungen/boton_flecha_magenta.png`}
               alt=""
-            />
+               onMouseEnter={() => setIsShown(true)}
+               onMouseLeave={() => setIsShown(false)}
+            />)}
+
+
+            {!isShown && (
+            <img
+              className="boton_flecha  "
+              src={`${servidor_url}/img/leistungen/boton_flecha_blue.png`}
+              alt=""
+               onMouseEnter={() => setIsShown(true)}
+               onMouseLeave={() => setIsShown(false)}
+            />)}
+       
        
           </div>
         </div>
@@ -132,7 +161,7 @@ export default function LeistungenTabs({ texto01, texto02, texto03 }) {
       
       <TabPanel value={value} index={2}>
         <div className="ps-5 ms-5 mb-5 row w-100 h-100  ">
-          <div className="col-6 fuente-texto-cursos ">
+          <div className="col-6   fuente-texto-cursos ">
             <div className=" fuente-titulo-servicios mt-2 mb-4   ">
               KONTAKT AUFNEHMEN
             </div>
@@ -149,18 +178,36 @@ export default function LeistungenTabs({ texto01, texto02, texto03 }) {
 
            <div   className="mt-3 mb-5"  onClick={ ()=>myfuncion(0) } >
        
+              {isShown && (
             <img
               className="boton_flecha  "
-              src={`${servidor_url}/img/leistungen/boton_flecha.png`}
+              src={`${servidor_url}/img/leistungen/boton_flecha_magenta.png`}
               alt=""
-            />
+               onMouseEnter={() => setIsShown(true)}
+               onMouseLeave={() => setIsShown(false)}
+            />)}
+
+
+            {!isShown && (
+            <img
+              className="boton_flecha  "
+              src={`${servidor_url}/img/leistungen/boton_flecha_blue.png`}
+              alt=""
+               onMouseEnter={() => setIsShown(true)}
+               onMouseLeave={() => setIsShown(false)}
+            />)}
        
           </div>
           </div>
 
-          <div className="col-5    d-flex  align-items-center">
+          <div className="col-5    d-flex  align-items-start">
+          
             <div class="row ms-5 ps-3">
               <div class="col-12  ">
+                <div className=" fuente-titulo-servicios mt-2 mb-4   ">
+          &nbsp;
+            </div>
+
                 <a href="#">
                   {/*  btn-outline-primary font_boton  */}
                   <button

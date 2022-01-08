@@ -68,6 +68,8 @@ export default function ModalFormCursos({
   date2,
   day,
   frase,
+  precio,
+  nombre_curso,
 }) {
   //Texto que aparece en el edit luego de que el usuario escribe
   //inputProps={fuentes1}
@@ -154,24 +156,23 @@ export default function ModalFormCursos({
   //       fontFamily: "Montserrat-Light", //Tipo de fuuente al escribir
   //     },
   //   },
-    
+
   //   "& .MuiOutlinedInput-root": {
   //     height: 48,
   //     color: "#6B6B74", //Color de la fuente al escribir
   //     backgroundColor: "#ECE7E7", //Color de fondo del edit
   //     fontFamily: "Montserrat-Light", //Tipo de fuuente al escribir
-      
+
   //     // borderColor: "#ECE7E7",
   //   },
 
-    
   //    "& .MuiOutlinedInput-root:hover": {
   //     "& > fieldset": {
   //       borderColor: "#e4207864", //Color del borde al hacer hoover
   //     }
   //    }
   const stilos_combo = {
-//  input: { color: 'blue'}, //Color de la fuente al escribir
+    //  input: { color: 'blue'}, //Color de la fuente al escribir
 
     // width: { sm: 250, md: 350 }, //Ancho del control
 
@@ -208,7 +209,7 @@ export default function ModalFormCursos({
     "& .MuiFormLabel-root": {
       // color: "#ffffff", //Color del label
       fontFamily: "Montserrat-Regular",
-      fontSize: 13
+      fontSize: 13,
     },
   };
   const styles = {
@@ -453,6 +454,22 @@ export default function ModalFormCursos({
                       InputLabelProps={fuentes2}
                     />
                   </div>
+
+                  <div className="row   mt-4 g-0 ">
+                    <div className="col-1  ">
+                      <div className="vertical-line-left"></div>
+                    </div>
+                    <div className="col-10  d-flex justify-content-start">
+                   
+                      <div className="row  pt-2  pb-2 ">
+                         
+                         <div className="col-12  titulo_curso   ">
+                          {nombre_curso}
+                        </div>
+                        <div className="col-12 titulo_curso   ">{precio}</div> 
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -462,7 +479,7 @@ export default function ModalFormCursos({
                     type="button"
                     className="btn btn-secondary boton_modal_form"
                     data-bs-dismiss="modal">
-                    ABSENDEN
+                    Jetzt kostenpflichtig anmelden
                   </button>
                 </div>
               </div>

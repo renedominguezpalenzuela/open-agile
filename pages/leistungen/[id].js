@@ -12,7 +12,7 @@ import Content05 from "../../components/Content05";
 import Texto01 from "../../components/crashkurse/texto01";
 import Tabla01 from "../../components/crashkurse/tabla01";
 import Tabla02 from "../../components/crashkurse/tabla02";
-import Tabla03 from "../../components/crashkurse/tabla03";
+
 
 import Card01Lista from "../../components/Card01Lista";
 import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
@@ -67,6 +67,7 @@ export default function Home({ servicios }) {
             texto01={texto01}
             texto02={texto02}
             texto03={texto03}
+            titulo={titulo}
           />
         </div>
 
