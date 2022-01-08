@@ -76,8 +76,8 @@ export default function Home() {
         <title>Quiz Result</title>
         <meta name="description" content="Quiz Result" />
         <link rel="icon" href="/favicon.ico" />
-        <script async src="js/chat.js" />
-        <script async src="js/menu.js" />
+        {/* <script async src="js/chat.js" />
+        <script async src="js/menu.js" /> */}
       </Head>
 
       <div id="principal" className="container-fluid g-0">

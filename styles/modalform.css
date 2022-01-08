@@ -64,3 +64,19 @@
   color: #ffffff!important;
   background-color:#F82D7C; 
 }
+
+
+
+.boton_modal_form2 {
+  /* background-color: #e50067; */
+  color: #ffffff;
+  background-color: #24325a;
+  border-color:#24325a ;
+  border-radius: 6px;
+  
+}
+
+.boton_modal_form2:hover {
+  color: #ffffff!important;
+  background-color:#F82D7C; 
+}

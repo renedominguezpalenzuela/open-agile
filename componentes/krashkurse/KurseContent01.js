@@ -43,28 +43,35 @@ export default function KurseContent01({
               </div>
               )
               }
-              <div className="">
+              <ul className="">
                 {unItem.text.map((unTexto, index) => (
-                  
-                    <div  key={index} className="     ">
-                     <span className="fuente-bullet-cursos">•</span><span className="fuente-texto-cursos"> {unTexto}</span>
+                   
+                    <div  key={index} className=" ms-4    ">
+
+                     {/* <span className="fuente-bullet-cursos">•</span><span className="fuente-texto-cursos"> {unTexto}</span> */}
+                        <li className="fuente-texto-cursos mybullets"> {unTexto}</li> 
+
+
                     </div>
                   
                 ))}
-              </div>
+              </ul>
             </>
           ))}
 
 
-          
+          <ul>
         {texto_plequitas != undefined && texto_plequitas != "" && 
            texto_plequitas.map((unItem, index) => (
             <>
-                <div  key={index} className="     ">
-                     <span className="fuente-bullet-cursos">•</span><span className="fuente-texto-cursos"> {unItem}</span>
+                <div  key={index} className=" ms-4    ">
+                     {/* <span className="fuente-bullet-cursos">•</span><span className="fuente-texto-cursos"> {unItem}</span> */}
+                       <li className="fuente-texto-cursos mybullets"> {unItem}</li> 
+
                 </div> 
             </>
           ))}
+          </ul>
 {/* 
         <div className="mt-5  ">
           <KurseButtons

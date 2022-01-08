@@ -104,17 +104,19 @@ export default function LeistungenTabs({ texto01, texto02, texto03 }) {
           <div className=" fuente-titulo-servicios mt-2 mb-4   ">
             BEISPIEL VORGEHEN
           </div>
-
+              <ul>
+           
           {texto02 != undefined &&
             texto02.length > 0 &&
             texto02.map((unaLinea, index) => (
-              <div className="row   g-0 fuente-texto-cursos" key={index}>
-                <span className="col-1 ps-4  fuente-bullet-tabs">•</span>
-                <span className="col  fuente-texto-cursos"> {unaLinea}</span>
+             
+                 <li className="fuente-texto-cursos mybullets"> {unaLinea}</li> 
 
-                <p />
-              </div>
+                // <p />
+            
             ))}
+              </ul>
+
          <div   className="mt-3 mb-5"  onClick={ ()=>myfuncion(2) } >
        
             <img
@@ -126,6 +128,8 @@ export default function LeistungenTabs({ texto01, texto02, texto03 }) {
           </div>
         </div>
       </TabPanel>
+
+      
       <TabPanel value={value} index={2}>
         <div className="ps-5 ms-5 mb-5 row w-100 h-100  ">
           <div className="col-6 fuente-texto-cursos ">

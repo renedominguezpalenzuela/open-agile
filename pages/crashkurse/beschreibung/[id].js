@@ -54,12 +54,12 @@ export default function Home({ curso }) {
 
         <AreaSuperior fondo="ajustable" texto1={titulo_area_superior} titulo_largo={true} />
 
-        <div className="row pt-5 pb-5">
+        <div className="row  pt-5 pb-5">
           <div className="col-md-4 ">
             <MenuKraskurse link_beschreibung={link_beschreibung} link_vorteile={link_vorteile} link_inhalte={link_inhalte}    link_leistungen={link_leistungen}
               link_kosten={link_kosten}  link_termine={`${servidor_url}/${link_beschreibung}${link_termine}`} link_pdf={link_pdf} />
           </div>
-          <div className="col-md-7  pe-5">
+          <div className="col-md-7 pt-5 pe-5 ">
 
           <KurseContent01 imagen={image_beschreibung} titulo="BESCHREIBUNG" texto={texto_beschreibung} imagen_botones={image2} titulo_botones={crashkurs_date_title}  text_termine={text_termine} link_weitere_infos={link_vorteile}  link_termine={`${servidor_url}/${link_beschreibung}${link_termine}`} link_pdf={link_pdf}/>
             

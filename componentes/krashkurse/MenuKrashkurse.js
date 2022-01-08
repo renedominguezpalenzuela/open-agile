@@ -5,7 +5,9 @@ import Link from "next/link";
 export default function MenuKrashkurse({ link_beschreibung, link_vorteile, link_inhalte, link_leistungen, link_kosten, link_termine,link_pdf }) {
   return (
     <>
-      <div className="card ms-5 me-5 pt-4 mb-1 pb-4 ps-4 pe-4  shadow">
+    <div id="menukurs" className=" p-4" >
+    </div>
+      <div  className="card ms-5 me-5 pt-4 mb-1 pb-4 ps-4 pe-4  shadow">
         <h4 className="card-title ms-3 mb-3 font-card-menu-crashkurse-titulo">
           Was Dich erwartet!
         </h4>
@@ -15,9 +17,9 @@ export default function MenuKrashkurse({ link_beschreibung, link_vorteile, link_
            <tbody>
             <tr className=" font-card-menu-crashkurse">
               <td>
-                <a href={`${servidor_url}/${link_beschreibung}`}>
+                <Link href={`${servidor_url}/${link_beschreibung}#menukurs`}>
                   <div className="myanimacioncursos">BESCHREIBUNG</div>
-                </a>
+                </Link>
               </td>
 
               <td align="right"> > </td>
@@ -25,9 +27,9 @@ export default function MenuKrashkurse({ link_beschreibung, link_vorteile, link_
             <tr className="font-card-menu-crashkurse">
           
               <td>
-                   <a href={`${servidor_url}/${link_vorteile}`}>
+                   <Link href={`${servidor_url}/${link_vorteile}#menukurs`}>
                 <div className="myanimacioncursos">VORTEILE</div>
-               </a>
+               </Link>
               </td>
                
               <td align="right">></td>
@@ -35,9 +37,9 @@ export default function MenuKrashkurse({ link_beschreibung, link_vorteile, link_
             <tr className="font-card-menu-crashkurse">
              
               <td>   
-               <a href={`${servidor_url}/${link_inhalte}`}>                       
+               <Link href={`${servidor_url}/${link_inhalte}#menukurs`}>                       
                 <div className="myanimacioncursos">INHALTE</div>
-                  </a>
+                  </Link>
               </td>
             
               <td align="right">></td>
@@ -46,27 +48,28 @@ export default function MenuKrashkurse({ link_beschreibung, link_vorteile, link_
 
             <tr className="font-card-menu-crashkurse">
               <td>
-                 <a href={`${servidor_url}/${link_leistungen}`}>     
+                 <Link href={`${servidor_url}/${link_leistungen}#menukurs`}>     
                 <div className="myanimacioncursos">LEISTUNGEN</div>
-                </a>
+                </Link>
               </td>
               <td align="right">></td>
             </tr>
 
             <tr className="font-card-menu-crashkurse">
               <td>
-               <a href={`${servidor_url}/${link_kosten}`}> 
+               <Link href={`${servidor_url}/${link_kosten}#menukurs`}> 
                 <div className="myanimacioncursos">KOSTEN</div>
-                </a>
+                </Link>
               </td>
               <td align="right">></td>
             </tr>
 
              <tr className="font-card-menu-crashkurse">
               <td>
-               <a  href={link_termine} > 
+              
+               <Link  href={`${link_termine}`} > 
                 <div className="myanimacioncursos">TERMINE</div>
-                </a>
+                </Link>
               </td>
               <td align="right">></td>
             </tr>
@@ -96,13 +99,13 @@ export default function MenuKrashkurse({ link_beschreibung, link_vorteile, link_
             
             
           </table>
- <a href="#dates_section">
+ <Link href="#dates_section">
           <div className="mt-4 font-card-menu-crashkurse-foot">
              
               JETZT ANMELDEN
              
             </div>
-             </a>
+             </Link>
         </div>
       </div>
     </>

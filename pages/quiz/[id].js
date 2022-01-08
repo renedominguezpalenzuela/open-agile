@@ -47,6 +47,7 @@ const styles = {
   ".MuiFormControlLabel-label": {
     textAlign: "justify",
     fontSize: "0.9rem",
+    color: "white"
   },
 };
 
@@ -111,8 +112,8 @@ const {
         <title>{"Quiz"}</title>
         <meta name="description" content="Quiz" />
         <link rel="icon" href="/favicon.ico" />
-        <script async src={`${servidor_url}/js/chat.js`} />
-        <script async src={`${servidor_url}/js/menu.js`} />
+        {/* <script async src={`${servidor_url}/js/chat.js`} /> */}
+        {/* <script async src={`${servidor_url}/js/menu.js`} /> */}
       </Head>
 
       {/*Contenedor*/}

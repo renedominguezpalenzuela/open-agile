@@ -12,7 +12,7 @@ import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
 
 import { servidor_url } from "../../config";
 
-import ModalForm from "../../components/ModalForm";
+import ModalFormConfigurator from "../../components/ModalFormConfigurator";
 
 //----------------------------------------------------------------------------------------------------------
 //            Pagina inicial principal
@@ -47,7 +47,10 @@ export default function Configurator_Main({ configurator }) {
           {botones.map ((unBoton, index)=>
                                           (                                                        
                                               unBoton.tipo==="2" && (                                                    
-                                                  <ModalForm  titulo="KONTAKTFORMULAR" frase="Jetzt Kontakt aufnehmen!" id={unBoton.id} quartal={index}   />
+                                                  // <ModalForm  titulo="KONTAKTFORMULAR" frase="Jetzt Kontakt aufnehmen!" id={unBoton.id} quartal={index}/>
+
+                                                  <ModalFormConfigurator  titulo="KONTAKTFORMULAR" frase="Jetzt Kontakt aufnehmen!" id={unBoton.id} quartal={index}/>
+                                                  
                                               )                                                     
                                           )
                                           

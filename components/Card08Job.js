@@ -44,15 +44,17 @@ export default function Card08Job({
                 </>
               )}
 
+              <ul>
               {parrafo1 != undefined &&
                 parrafo1.length > 0 &&
                 parrafo1.map((unaLinea, index) => (
-                  <div key={index}  className="   font3-card-job ">
-                    <span className=" fuente-bullet-job me-1">•</span>
-                    <span className=" font3-card-job"> {unaLinea}</span>
+                  <div key={index}  className="">
+                    {/* <span className=" fuente-bullet-job me-1">•</span> */}
+                    {/* <span className=" font3-card-job"> {unaLinea}</span> */}
+                          <li className="font3-card-job mybullets2"> {unaLinea}</li>
                   </div>
                 ))}
-
+                </ul>   
 
                 {titulo_parrafo2 != undefined && titulo_parrafo2 != "" && (
                 <>
@@ -60,15 +62,17 @@ export default function Card08Job({
                 </>
               )}
 
+ <ul>
               {parrafo2 != undefined &&
                 parrafo2.length > 0 &&
                 parrafo2.map((unaLinea, index) => (
-                  <div key={index}  className="   font3-card-job ">
-                    <span className=" fuente-bullet-job me-1">•</span>
-                    <span className=" font3-card-job"> {unaLinea}</span>
+                  <div key={index}  className="">
+                    {/* <span className=" fuente-bullet-job me-1">•</span> */}
+                    {/* <span className=" font3-card-job"> {unaLinea}</span> */}
+                                   <li className=" font3-card-job mybullets2"> {unaLinea}</li>
                   </div>
                 ))}
-
+</ul>
 
                   {titulo_parrafo3 != undefined && titulo_parrafo3 != "" && (
                 <>
@@ -76,16 +80,17 @@ export default function Card08Job({
                 </>
               )}
 
+       <ul>
               {parrafo3 != undefined &&
                 parrafo3.length > 0 &&
                 parrafo3.map((unaLinea, index) => (
                   <div key={index}  className="   font3-card-job ">
                     {/* <span className=" fuente-bullet-job me-1">•</span> */}
-                    <span className=" font3-card-job"> {unaLinea}</span>
+                    <li className=" font3-card-job mybullets2"> {unaLinea}</li>
                   </div>
                 ))}
 
-
+</ul>
 
             
             </div>

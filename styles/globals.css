@@ -516,7 +516,7 @@ ul.no-bullets {
   height: 76vh !important;
   /* display: flex; */
 
-  z-index: 3;
+  /* z-index: 3; */
 }
 
 .my_quiz_titulo {
@@ -735,4 +735,30 @@ ul.no-bullets {
   /* background-color: white !important;  */
   border-color: #24325a !important ;
   color: #24325a !important;
+}
+
+
+ul {
+  list-style: none; /* Remove default bullets */
+}
+
+ul li.mybullets::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color:#F82D7C;/* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 0.8em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+  font-size:1.5rem;
+}
+
+
+ul li.mybullets2::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color:#F82D7C;/* Change the color */
+  font-weight: bold; /*If you want it to be bold*/
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 2em; /* Also needed for space (tweak if needed) */
+  margin-left: -2.3em; /*Also needed for space (tweak if needed)-*/
+  /* font-size:0.5rem; */
 }
