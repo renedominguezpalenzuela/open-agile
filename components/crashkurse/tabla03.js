@@ -34,6 +34,7 @@ titulo2a
       crashkurs_date.map ( (unCard, index) => 
     
         <div key={index} className="col-lg-2 ms-3 me-3 ">
+       
          <Card04 key={unCard.id} datos={unCard} />
         </div>
       

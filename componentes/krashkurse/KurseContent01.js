@@ -2,6 +2,7 @@ import { servidor_url } from "../../config";
 import Image from "next/image";
 import Link from "next/link";
 import KurseButtons from "./KurseButtons";
+import React from "react";
 
 export default function KurseContent01({
   imagen,
@@ -19,12 +20,11 @@ export default function KurseContent01({
   return (
     <>
       <div className="row  ">
-        <img
-          className="img-fluid  "
-          src={`${servidor_url}/img/${imagen}`}
-          alt=""
-        />
 
+      {imagen!=undefined && imagen!="" &&
+                     <img className="img-fluid  " src={`${servidor_url}/img/${imagen}`} alt="" />
+                  }
+        
         <div className="tabla-titulo-cursos mt-4  ">{titulo}</div>
         {texto != undefined &&
           texto != "" &&
@@ -36,19 +36,19 @@ export default function KurseContent01({
 
         {texto_plequitas_titulos != undefined && texto_plequitas_titulos != "" && 
            texto_plequitas_titulos.map((unItem, index) => (
-            <>
+            <React.Fragment key={index}>
               {unItem.title!=undefined && unItem.title!="" && (
-              <div key={index} className=" mt-2 fuente-titulo-cursos    ">
+              <div  className=" mt-2 fuente-titulo-cursos    ">
                 {unItem.title}
               </div>
               )
               }
               <ul className="">
-                {unItem.text.map((unTexto, index) => (
+                {unItem.text.map((unTexto, index2) => (
                    
-                    <div  key={index} className=" ms-4    ">
+                    <div  key={index2} className=" ms-4    ">
 
-                     {/* <span className="fuente-bullet-cursos">•</span><span className="fuente-texto-cursos"> {unTexto}</span> */}
+                  
                         <li className="fuente-texto-cursos mybullets"> {unTexto}</li> 
 
 
@@ -56,7 +56,7 @@ export default function KurseContent01({
                   
                 ))}
               </ul>
-            </>
+            </React.Fragment>
           ))}
 
 
