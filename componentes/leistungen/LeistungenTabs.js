@@ -91,25 +91,15 @@ export default function LeistungenTabs({ texto01, texto02, texto03 , titulo}) {
 
 
             <div   className="mt-3 mb-5"  onClick={ ()=>myfuncion(1) } >
-           {isShown && (
+         
             <img
               className="boton_flecha  "
-              src={`${servidor_url}/img/leistungen/boton_flecha_magenta.png`}
+              src={`${servidor_url}/img/leistungen/boton_flecha_magenta.svg`}
               alt=""
-               onMouseEnter={() => setIsShown(true)}
-               onMouseLeave={() => setIsShown(false)}
-            />)}
+          
+            />
 
 
-            {!isShown && (
-            <img
-              className="boton_flecha  "
-              src={`${servidor_url}/img/leistungen/boton_flecha_blue.png`}
-              alt=""
-               onMouseEnter={() => setIsShown(true)}
-               onMouseLeave={() => setIsShown(false)}
-            />)}
-       
           </div>
         </div>
       </TabPanel>
@@ -134,25 +124,12 @@ export default function LeistungenTabs({ texto01, texto02, texto03 , titulo}) {
 
          <div   className="mt-3 mb-5"  onClick={ ()=>myfuncion(2) } >
        
-              {isShown && (
             <img
               className="boton_flecha  "
-              src={`${servidor_url}/img/leistungen/boton_flecha_magenta.png`}
+              src={`${servidor_url}/img/leistungen/boton_flecha_magenta.svg`}
               alt=""
-               onMouseEnter={() => setIsShown(true)}
-               onMouseLeave={() => setIsShown(false)}
-            />)}
-
-
-            {!isShown && (
-            <img
-              className="boton_flecha  "
-              src={`${servidor_url}/img/leistungen/boton_flecha_blue.png`}
-              alt=""
-               onMouseEnter={() => setIsShown(true)}
-               onMouseLeave={() => setIsShown(false)}
-            />)}
-       
+          
+            />
        
           </div>
         </div>
@@ -178,25 +155,12 @@ export default function LeistungenTabs({ texto01, texto02, texto03 , titulo}) {
 
            <div   className="mt-3 mb-5"  onClick={ ()=>myfuncion(0) } >
        
-              {isShown && (
-            <img
+              <img
               className="boton_flecha  "
-              src={`${servidor_url}/img/leistungen/boton_flecha_magenta.png`}
+              src={`${servidor_url}/img/leistungen/boton_flecha_magenta.svg`}
               alt=""
-               onMouseEnter={() => setIsShown(true)}
-               onMouseLeave={() => setIsShown(false)}
-            />)}
-
-
-            {!isShown && (
-            <img
-              className="boton_flecha  "
-              src={`${servidor_url}/img/leistungen/boton_flecha_blue.png`}
-              alt=""
-               onMouseEnter={() => setIsShown(true)}
-               onMouseLeave={() => setIsShown(false)}
-            />)}
-       
+          
+            />
           </div>
           </div>
 

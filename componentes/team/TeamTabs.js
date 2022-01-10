@@ -137,25 +137,12 @@ function OneTab({indice, titulo, texto, value, setValue}) {
 
             {/* <div   className="mt-3 mb-5" > */}
               <div onClick={ myfuncion } className="mt-3 mb-5" > 
-               {isShown && (
-            <img
+              <img
               className="boton_flecha  "
-              src={`${servidor_url}/img/leistungen/boton_flecha_magenta.png`}
+              src={`${servidor_url}/img/leistungen/boton_flecha_magenta.svg`}
               alt=""
-               onMouseEnter={() => setIsShown(true)}
-               onMouseLeave={() => setIsShown(false)}
-            />)}
-
-
-            {!isShown && (
-            <img
-              className="boton_flecha  "
-              src={`${servidor_url}/img/leistungen/boton_flecha_blue.png`}
-              alt=""
-               onMouseEnter={() => setIsShown(true)}
-               onMouseLeave={() => setIsShown(false)}
-            />)}
-       
+          
+            />
 
             </div>
        

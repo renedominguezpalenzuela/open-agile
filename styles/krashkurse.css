@@ -241,12 +241,12 @@
 
 .boton_flecha{
   width: auto;
+  filter:brightness(0) saturate(100%) invert(18%) sepia(11%) saturate(2965%) hue-rotate(187deg) brightness(98%) contrast(95%); 
 }
 
-
-
-.boton_flecha{
+.boton_flecha:hover{
   width: auto;
+  filter:brightness(0) saturate(100%) invert(31%) sepia(44%) saturate(4320%) hue-rotate(318deg) brightness(97%) contrast(101%);
 }
 
 
