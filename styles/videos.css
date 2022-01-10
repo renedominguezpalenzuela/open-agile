@@ -16,9 +16,9 @@
     /* font-style: italic;  */
     /* font-size: 3.4vh;  */
      font-size: 1.2vw;
-     font-weight: 100;
+     /* font-weight: 100; */
      text-transform: uppercase; 
-     line-height: 90%;
+     /* line-height: 90%; */
      text-align: left;
   }
 
@@ -28,8 +28,8 @@
     color: #24325a;
   
     font-size: 0.9rem;
-    font-weight: 400;
-    line-height: 32px;
+    /* font-weight: 400; */
+    /* line-height: 32px; */
 
     text-align: left;
     /* text-justify: inter-word; */
@@ -39,7 +39,7 @@
 
 
   
-  .contenido_card_video {
+  .texto_video {
     position: relative;
     left: 1vw; 
     top: -23vw; 
@@ -48,25 +48,47 @@
     align-self: center;
  }
 
-.container {
+.container_video {
+
+  position: relative;
+  /* top: -0vw; */
+   left: -10vw;  
+  
+  /* width: 45vw; */
+
+
     position: relative;
     overflow: hidden;
-    width: 100%;
-    padding-top: 75%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-    left:   3vw;
+    width: 100%; 
+    height: 100%;
+   /* padding-top: 75%; *//*16:9 Aspect Ratio (divide 9 by 16 = 0.5625)*/
+    /* right:   3vw; */
    
   }
   
   /* Then style the iframe to fit in the container div with full height and width */
   .responsive-iframe {
-    position: absolute;
-    top: 0;
+    
+
+   
+
+    position: relative; 
+     /* padding: 15px; */
+     /* top: -80vh; */
     left: 0;
     bottom: 0;
-    right: 0;
-    width: 100%;
-    /* aspect-ratio: 16 / 9;  */
-   height: 100%;
+    right: 0; 
+     width: 100%; 
+
+    /* height: 900px; */
+     /* object-fit: scale-down;  */
+
+      /* width: 46vw;   */
+     /* width: auto; */
+
+      aspect-ratio: 16 / 9;    
+      /* height:100%;      */
+     /* object-fit: contain; */
   }
 
   
@@ -74,10 +96,29 @@
     /* left: 25px; */
     left:-1vw;
     position: relative;
-    max-height: 35vw; 
+    /* max-height: 35vw;  */
     width:45vw ;
+    
      /* aspect-ratio: 1 / 0.75;  */
      /* aspect-ratio: 16 / 9; */
    /* height: 80vh; */ 
+  }
+  
+
+  
+  
+  .texto_video_fondo {
+    /* left: 25px; */
+    right:-10vw;
+    
+    position: relative;
+    /* max-height: 35vw;  */
+    width:35vw ;
+
+    background-color: white;
+     /* aspect-ratio: 1 / 0.75;  */
+     /* aspect-ratio: 16 / 9; */
+   height: 90% 
+   
   }
   
