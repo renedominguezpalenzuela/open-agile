@@ -11,15 +11,21 @@
 
 
   .font_card_title_video {
+    position: relative;
     font-family: Montserrat-Bold;
     color: #24325a;
     /* font-style: italic;  */
     /* font-size: 3.4vh;  */
-     font-size: 1.2vw;
+     font-size: 0.9vw;
      /* font-weight: 100; */
      text-transform: uppercase; 
      /* line-height: 90%; */
      text-align: left;
+
+     margin-right: 7vw ;
+     margin-left:1vw;
+      /* padding: 4vw;  */
+     /* left:-40px; */
   }
 
   
@@ -27,12 +33,14 @@
     font-family: Montserrat-Regular;
     color: #24325a;
   
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     /* font-weight: 400; */
     /* line-height: 32px; */
 
     text-align: left;
     /* text-justify: inter-word; */
+    margin-right: 6.5vw ;
+    margin-left:0.5vw;
    
   }
   
@@ -49,59 +57,28 @@
  }
 
 .container_video {
-
-  position: relative;
-  /* top: -0vw; */
-   left: -10vw;  
+   position: relative;
+   left: -10vw;   
+   overflow: hidden;
+   width: 100%; 
+   height: 100%;   
+}
   
-  /* width: 45vw; */
-
-
-    position: relative;
-    overflow: hidden;
-    width: 100%; 
-    height: 100%;
-   /* padding-top: 75%; *//*16:9 Aspect Ratio (divide 9 by 16 = 0.5625)*/
-    /* right:   3vw; */
-   
-  }
   
-  /* Then style the iframe to fit in the container div with full height and width */
   .responsive-iframe {
-    
-
-   
-
     position: relative; 
-     /* padding: 15px; */
-     /* top: -80vh; */
     left: 0;
     bottom: 0;
     right: 0; 
-     width: 100%; 
-
-    /* height: 900px; */
-     /* object-fit: scale-down;  */
-
-      /* width: 46vw;   */
-     /* width: auto; */
-
-      aspect-ratio: 16 / 9;    
-      /* height:100%;      */
-     /* object-fit: contain; */
+    width: 100%; 
+    aspect-ratio: 16 / 9;         
   }
 
   
   .dimension_card_carrusel {
-    /* left: 25px; */
     left:-1vw;
     position: relative;
-    /* max-height: 35vw;  */
     width:45vw ;
-    
-     /* aspect-ratio: 1 / 0.75;  */
-     /* aspect-ratio: 16 / 9; */
-   /* height: 80vh; */ 
   }
   
 
@@ -121,4 +98,26 @@
    height: 90% 
    
   }
+
   
+  
+  .texto_video {
+    /* left: 25px; */
+    left:-10vw;
+    
+    /* position: relative; */
+    /* max-height: 35vw;  */
+    /* width:35vw ; */
+
+    /* background-color: white; */
+     /* aspect-ratio: 1 / 0.75;  */
+     /* aspect-ratio: 16 / 9; */
+   /* height: 90%  */
+   
+  }
+/* 
+  .color_indicadores_debajo {
+     color: #F3C8D3; 
+    color: chartreuse!important;
+  }
+   */

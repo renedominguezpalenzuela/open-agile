@@ -60,7 +60,7 @@ export default function Home({
         {/*Unser Blog  */}
         <Content04 lista_cards={blogs} />
 
-        {/*Carrousel  */}
+        {/*Carrousel videos */}
         <Content05 datos={vlog} />
 
         {/* Servicios Leistungen  */}

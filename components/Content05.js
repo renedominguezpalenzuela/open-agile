@@ -30,20 +30,14 @@ export default function Content05({ datos }) {
             data-bs-ride="carousel"
             data-mdb-touch="true">
             {/* TODO: crear de forma dinamica */}
-            <div className="carousel-indicators">
-              <button
-                type="button"
-                data-bs-target="#MyCarousel"
-                data-bs-slide-to="0"
-                className="active"
-                aria-current="true"
-                aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#MyCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#MyCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#MyCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#MyCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                <button type="button" data-bs-target="#MyCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                <button type="button" data-bs-target="#MyCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+            <div className="carousel-indicators ">
+              <button type="button" data-bs-target="#MyCarousel" data-bs-slide-to="0" className="active " aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#MyCarousel" data-bs-slide-to="1" className="" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#MyCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#MyCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#MyCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              <button type="button" data-bs-target="#MyCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+              <button type="button" data-bs-target="#MyCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
             </div>
 
             <div className="carousel-inner  alto_carrusel    ">
@@ -73,7 +67,7 @@ export default function Content05({ datos }) {
                       <Card02
                         video={unDato.link}
                         titulo={unDato.title}
-                        texto={unDato.text[0]}
+                        texto={unDato.text}
                       />
                     </div>
                   </div>
