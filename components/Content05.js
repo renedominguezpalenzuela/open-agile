@@ -46,29 +46,17 @@ export default function Content05({ datos }) {
 
               {datos.map((unDato, index) => {
                 return (
-                  <div
-                    key={index}
-                    className={
-                      unDato.id == 1 ? " carousel-item active" : "carousel-item"
-                    }>
+                  <div key={index} className={ unDato.id == 1 ? " carousel-item active" : "carousel-item"  }>
                     <div className="d-xl-none  ">
                       <div className="row d-flex justify-content-center">
                         <div className="col-md-6">
-                          <Card01
-                            imagen={unDato.image}
-                            titulo={unDato.title}
-                            texto={unDato.text}
-                          />
+                          <Card01 imagen={unDato.image} titulo={unDato.title} texto={unDato.text} />
                         </div>
                       </div>
                     </div>
 
                     <div className="d-none d-xl-block  ">
-                      <Card02
-                        video={unDato.link}
-                        titulo={unDato.title}
-                        texto={unDato.text}
-                      />
+                      <Card02 video={unDato.link} titulo={unDato.title} texto={unDato.text} />
                     </div>
                   </div>
                 );

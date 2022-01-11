@@ -55,7 +55,7 @@
     height: 145vw;    
     align-self: center;
  }
-
+/* 
 .container_video {
    position: relative;
    left: -10vw;   
@@ -72,7 +72,26 @@
     right: 0; 
     width: 100%; 
     aspect-ratio: 16 / 9;         
-  }
+  } */
+
+
+  
+.container_video {
+  position: relative;
+  left: -10vw;   
+  /* overflow: hidden; */
+  /* width: 100%;  */
+  /* height: 100%;    */
+
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  
+ /* padding-top: 56.25%; 16:9 Aspect Ratio*/
+}
+ 
+ 
+
 
   
   .dimension_card_carrusel {
