@@ -37,7 +37,7 @@ export default function MenuFlotante() {
 
   {/* <div className="ms-5   titulo_menu_flotante"> */}
     <div className="col-8   me-2 d-flex justify-content-end ">
-     <h5 id="offcanvasTopLabel" className="font_menu_title pt-2">Menu</h5>   
+     <h5 id="offcanvasTopLabel" className=" font-title-side-menu pt-2">MENU</h5>   
     </div>
     <div className="col-2 ">
      <button type="button" id="boton_cerrar_menu" className="btn-close text-reset  me-3" aria-label="Close"></button>
@@ -52,7 +52,7 @@ export default function MenuFlotante() {
       <ul className="nav nav-pills flex-column m-auto mb-0 align-items-end" id="menu">
         <li className="nav-item">
             <a href="/#course" className="nav-link text-truncate">
-              <span className="ms-1  font_title6">CRASHKURSEss</span>
+              <span className="ms-1  font_title6 ">CRASHKURSE</span>
             </a>
         </li>
 
