@@ -44,6 +44,7 @@ export default function AreaSuperior({
   texto_parrafo_blanco,
   texto_parrafo_blanco_cursos,
    texto_parrafo_blanco_team,
+   texto_parrafo_plequitas,
   firma,
   boton_inicio_quiz,
   titulo_quiz_result,
@@ -93,7 +94,7 @@ let vista_movil = false;
           <div className="item-titulo ">
             {/* Contenido Principal */}
             {contenido_principal( texto1, texto2,  texto2a,  formulario_contacto, botones_configurador, 
-               iconos, texto_parrafo_blanco, texto_parrafo_blanco_cursos,texto_parrafo_blanco_team, firma,  boton_inicio_quiz,
+               iconos, texto_parrafo_blanco, texto_parrafo_blanco_cursos,texto_parrafo_blanco_team, texto_parrafo_plequitas,firma,  boton_inicio_quiz,
                  titulo_quiz_result, texto_quiz_result,vista_movil, cursos, titulo_largo,titulo_muy_largo, iconos_team, email, phone,  linkedin)}
           </div>
 
@@ -124,7 +125,7 @@ let vista_movil = false;
          <div className="item-titulo   ">
             {/* Contenido Principal */}
             {contenido_principal( texto1,texto2,texto2a,formulario_contacto,botones_configurador,iconos,texto_parrafo_blanco,
-               texto_parrafo_blanco_cursos,texto_parrafo_blanco_team, firma,boton_inicio_quiz,titulo_quiz_result,texto_quiz_result,vista_movil, cursos,
+               texto_parrafo_blanco_cursos,texto_parrafo_blanco_team,texto_parrafo_plequitas, firma,boton_inicio_quiz,titulo_quiz_result,texto_quiz_result,vista_movil, cursos,
                 titulo_largo,titulo_muy_largo, iconos_team, email, phone,  linkedin)}
           </div>
          </div>
@@ -176,6 +177,7 @@ const contenido_principal = (
   texto_parrafo_blanco,
   texto_parrafo_blanco_cursos,
   texto_parrafo_blanco_team, 
+  texto_parrafo_plequitas,
   firma,
   boton_inicio_quiz,
   titulo_quiz_result,
@@ -253,6 +255,10 @@ const contenido_principal = (
         </>
       )}
 
+
+
+
+
       {texto_parrafo_blanco != undefined && texto_parrafo_blanco.length > 0 && (
         <>
           <div className="row font_smaller_letter_white ms-5 me-3 justificar">
@@ -262,6 +268,12 @@ const contenido_principal = (
           </div>
         </>
       )}
+
+
+
+
+
+
 
 
       {texto_parrafo_blanco_cursos != undefined && texto_parrafo_blanco_cursos.length > 0 && (
@@ -284,6 +296,20 @@ const contenido_principal = (
                 <p key={index}>{unaLinea}</p>
               ))}
             </div>
+        </>
+      )}
+
+
+      
+      {texto_parrafo_plequitas != undefined && texto_parrafo_plequitas.length > 0 && (
+        <>
+          <div className="row font_smaller_letter_white ms-5 me-3 pb-3 justificar">
+            <ul>
+            {texto_parrafo_plequitas.map((unaLinea, index) => (
+              <li key={index} className="mybullets3">{unaLinea}</li>
+            ))}
+            </ul>
+          </div>
         </>
       )}
 

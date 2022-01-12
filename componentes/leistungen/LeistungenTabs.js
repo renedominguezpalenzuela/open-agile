@@ -4,7 +4,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import ModalForm from "../../components/ModalForm";
+import ModalFormConfigurator from "../../components/ModalFormConfigurator";
 
 
 import { servidor_url } from "../../config";
@@ -200,8 +200,8 @@ export default function LeistungenTabs({ texto01, texto02, texto03 , titulo}) {
     </Box>
 
 
-    
-      <ModalForm  id={1} quartal={1} titulo={"title"} frase="Jetzt anmelden!" date1={"01.01.2022"} date2={"01.02.2022"} day={""} link={""} />
+      <ModalFormConfigurator  titulo="KONTAKTFORMULAR" frase="Jetzt Kontakt aufnehmen!" id={1}/>
+      {/* <ModalForm  id={1} quartal={1} titulo={"title"} frase="Jetzt anmelden!" date1={"01.01.2022"} date2={"01.02.2022"} day={""} link={""} /> */}
  </>
   );
 }

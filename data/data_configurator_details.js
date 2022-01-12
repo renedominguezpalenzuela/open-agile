@@ -6,7 +6,7 @@ export const configurator_details = [
   },
  {
     "id": "2",
-    "botones": [ { "id": "3","texto": "Wir möchten unsere Mitarbeitenden weiterqualifizier en",   "link":"/configurator/4", "tipo":"1"},
+    "botones": [ { "id": "3","texto": "Wir möchten unsere Mitarbeitenden weiterqualifizieren",   "link":"/configurator/4", "tipo":"1"},
                    { "id": "4","texto": "Wir benötigen Unterstützung in der Transformation", "link":"/configurator/5", "tipo":"1"},
                     { "id": "5","texto": "Wir haben Fragen zur Mitbestimmung in der agilen Arbeitswelt", "link":"/configurator/7", "tipo":"1"},
                      { "id": "6","texto": "Wir haben Fragen und/oder möchten uns informieren", "link":"/configurator/6", "tipo":"1"}],

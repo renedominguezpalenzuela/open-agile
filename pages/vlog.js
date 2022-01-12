@@ -72,7 +72,11 @@ const texto03 = [
 
 
  "Ob interessante Interviews zum Thema New Work, kurze Fachbeiträge oder einfach mal ein paar spannende Impulse für die persönliche Weiterentwicklung. In diesem Vlog wirst Du regelmäßig auf dem Laufenden gehalten. Wir freuen uns auf die Arbeitswelt von morgen! Du auch? Willst Du keinen neuen Beitrag verpassen, dann abonniere unseren YouTube-Kanal „Open Agile” und unseren Newsletter.",
- "Interviews zu New Work & Co.",
+
+];
+
+const text04_bullets = [
+   "Interviews zu New Work & Co.",
  "Crashkurs Selbstorganisation in agilen Teams",
  "Impulse für Deine persönliche Weiterentwicklung"
 ]
@@ -97,7 +101,7 @@ const texto03 = [
 
       <MenuFlotanteBoton />
   
-        <AreaSuperior fondo="gris" texto1={titulo1} texto2={titulo2} texto2a={titulo2a}  texto_parrafo_blanco_cursos={texto03} />
+        <AreaSuperior fondo="ajustable" texto1={titulo1} texto2={titulo2} texto2a={titulo2a}  texto_parrafo_blanco_cursos={texto03} texto_parrafo_plequitas={text04_bullets} />
 
    
   {/*Carrousel  */}
