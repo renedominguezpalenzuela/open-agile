@@ -429,10 +429,12 @@ export default function ModalFormCursos({
                     />
                   </div>
 
+
+
                   <div className="row d-flex justify-content-start ps-3 mt-2 pe-3  ">
                     <TextField
                       id="outlined-multiline-flexible"
-                      label="Rechnungsadresse"
+                      label="Straße"
                       multiline
                       maxRows={4}
                       className="ancho-edit2 "
@@ -442,6 +444,47 @@ export default function ModalFormCursos({
                     />
                   </div>
 
+                   <div className="row d-flex justify-content-start ps-3 mt-2 pe-3  ">
+                    <TextField
+                      id="outlined-multiline-flexible"
+                      label="Hausnummer"
+                      multiline
+                      maxRows={4}
+                      className="ancho-edit2 "
+                      sx={styles}
+                      inputProps={fuentes1}
+                      InputLabelProps={fuentes2}
+                    />
+                  </div>
+
+
+ <div className="row d-flex justify-content-start ps-3 mt-2 pe-3  ">
+                    <TextField
+                      id="outlined-multiline-flexible"
+                      label="Postleitzahl"
+                      multiline
+                      maxRows={4}
+                      className="ancho-edit2 "
+                      sx={styles}
+                      inputProps={fuentes1}
+                      InputLabelProps={fuentes2}
+                    />
+                  </div>
+
+                  
+ <div className="row d-flex justify-content-start ps-3 mt-2 pe-3  ">
+                    <TextField
+                      id="outlined-multiline-flexible"
+                      label="Ort"
+                      multiline
+                      maxRows={4}
+                      className="ancho-edit2 "
+                      sx={styles}
+                      inputProps={fuentes1}
+                      InputLabelProps={fuentes2}
+                    />
+                  </div>
+                
                   <div className="row d-flex justify-content-start ps-3 mt-2 pe-3  ">
                     <TextField
                       id="outlined-multiline-flexible"

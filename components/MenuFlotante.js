@@ -52,31 +52,31 @@ export default function MenuFlotante() {
       <ul className="nav nav-pills flex-column m-auto mb-0 align-items-end" id="menu">
         <li className="nav-item">
             <a href="/#course" className="nav-link text-truncate">
-              <span className="ms-1  font_title6 ">CRASHKURSE</span>
+              <span className="ms-1  font-items-side-menu ">CRASHKURSE</span>
             </a>
         </li>
 
         <li>
             <a href="/#services" className="nav-link text-truncate">
-              <span className="ms-1  font_title6">LEISTUNGEN</span>
+              <span className="ms-1  font-items-side-menu">LEISTUNGEN</span>
             </a>
         </li>
 
         <li>
             <a href="/team/main" className="nav-link text-truncate">
-              <span className="ms-1  font_title6">TEAM</span>
+              <span className="ms-1  font-items-side-menu">TEAM</span>
             </a>
         </li>
 
         <li>
             <a href="/vlog" className="nav-link text-truncate">
-              <span className="ms-1  font_title6">VLOG</span>
+              <span className="ms-1  font-items-side-menu">VLOG</span>
             </a>
         </li>
 
         <li>
            <a href="#blog" className="nav-link text-truncate">
-             <span className="ms-1  font_title6">BLOG</span>
+             <span className="ms-1  font-items-side-menu">BLOG</span>
            </a>
         </li>
 
@@ -84,7 +84,7 @@ export default function MenuFlotante() {
 
         <li>
             <a href="/jobs" className="nav-link text-truncate">
-              <span className="ms-1  font_title6">JOBS</span>
+              <span className="ms-1  font-items-side-menu">JOBS</span>
             </a>
         </li>
 

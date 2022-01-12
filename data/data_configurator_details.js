@@ -36,7 +36,6 @@ export const configurator_details = [
     "id": "6",
     "botones": [ { "id": "14","texto": "Blog",   "link":"/#blog", "tipo":"1"},
                    { "id": "15","texto": "VLog", "link":"/vlog", "tipo":"1"},
-                   { "id": "16","texto": "News", "link":"/news", "tipo":"1"},
                    { "id": "17","texto": "Kontaktformular", "link":"", "tipo":"2"}],
   },
   {

@@ -239,8 +239,25 @@ export default function ModalFormJob({ id, titulo, quartal, date1, date2, day, f
 
 
 
+
+
                
               </div>
+
+
+                <div className="row mt-3 ps-3 pe-3 d-flex justify-content-center   ">
+ <TextField
+                  id="telefone"
+                  label="Telefonnummer"
+                   multiline
+                   maxRows={4}
+                  className="ancho-edit2 "
+                  sx={styles}
+                    inputProps={fuentes1}
+                   InputLabelProps={fuentes2}
+                />
+
+                   </div>
 
               <div className="row mt-2 mb-2 ps-3 pe-3 d-flex justify-content-center  texto-email  ">
               Wir senden Dir binnen 72h eine Bestätigung und weitere Informationen

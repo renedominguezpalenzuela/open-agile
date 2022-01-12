@@ -360,7 +360,7 @@ const contenido_principal = (
             <button
               type="button"
               className="btn p-3 ms-2 me-2 w-50 h-100 btn-card font-btn-card rounded-pill  ">
-              AGILE CHECK 
+              JETZT CHECK STARTEN
             </button>
           </Link>
         </div>

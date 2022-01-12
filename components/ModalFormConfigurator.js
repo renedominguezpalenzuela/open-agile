@@ -210,8 +210,7 @@ export default function ModalFormConfigurator({ id, titulo, quartal, date1, date
                <TextField
                   id="name"
                   label="Name, Vorname oder Firma"
-                   multiline
-                   maxRows={4}
+                
                   className="ancho-edit2 "
                   sx={styles}
                     inputProps={fuentes1}
@@ -220,21 +219,7 @@ export default function ModalFormConfigurator({ id, titulo, quartal, date1, date
 
 
 
-                {/* <TextField
-                  id="input-with-icon-textfield"
-                  label="Name, Vorname oder Firma"
-                  InputProps={{
-                    startAdornment: (
-                      <InputAdornment position="start">
-                        <AccountCircle />
-                      </InputAdornment>
-                    ),
-                  }}
-                  sx={styles}
-                  variant="outlined"
-                 
-                   InputLabelProps={fuentes2}
-                /> */}
+               
               </div>
 
               <div className="row mt-3 ps-3 pe-3 d-flex justify-content-center   ">
@@ -243,8 +228,7 @@ export default function ModalFormConfigurator({ id, titulo, quartal, date1, date
                <TextField
                   id="address"
                   label="E-Mail Adresse"
-                   multiline
-                   maxRows={4}
+               
                   className="ancho-edit2 "
                   sx={styles}
                     inputProps={fuentes1}
@@ -253,21 +237,28 @@ export default function ModalFormConfigurator({ id, titulo, quartal, date1, date
 
 
 
-                {/* <TextField
-                  id="input-with-icon-textfield"
-                  label="E-Mail Adresse"
-                  InputProps={{
-                    startAdornment: (
-                      <InputAdornment position="start">
-                        <Email />
-                      </InputAdornment>
-                    ),
-                  }}
-                  sx={styles}
-                  variant="outlined"
-                   InputLabelProps={fuentes2}
-                /> */}
+              
               </div>
+
+
+               <div className="row mt-3 ps-3 pe-3 d-flex justify-content-center   ">
+
+
+               <TextField
+                  id="address"
+                  label="Telefonnummer"
+                
+                  className="ancho-edit2 "
+                  sx={styles}
+                    inputProps={fuentes1}
+                   InputLabelProps={fuentes2}
+                />
+
+
+
+              
+              </div>
+
 
               <div className="row mt-2 mb-2 ps-3 pe-3 d-flex justify-content-start  texto-email  ">
               {/* Wir senden Dir binnen 48h eine Bestätigung und weitere Informationen zu dem Seminar. */}
@@ -289,10 +280,7 @@ export default function ModalFormConfigurator({ id, titulo, quartal, date1, date
                   <MyFormControlLabel value="Nein" label="Nein" control={<Radio  sx={radio_button}/>} />
                 </RadioGroup>
  
-                {/* <RadioGroup  aria-label="gender"  defaultValue="Ja" name="radio-buttons-group ">
-                  <FormControlLabel value="Ja" control={<Radio sx={radio_button} />} label="Ja" />
-                  <FormControlLabel value="Nein" control={<Radio sx={radio_button} />} label="Nein" />
-                </RadioGroup> */}
+                
               </div>
 
               <div className="row d-flex justify-content-start ps-3 mt-3 pe-3  ">

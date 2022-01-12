@@ -28,13 +28,13 @@ export default function Card08Job({
             <div className="col-12 pt-1 ps-3 pe-3   ">
               {titulo1 != undefined && titulo1 != "" && (
                 <>
-                  <div className="font1-card-job pt-3">{titulo1}</div>
+                  <div className="font1-card-job-new pt-3">{titulo1}</div>
                 </>
               )}
 
               {titulo2 != undefined && titulo2 != "" && (
                 <>
-                  <div className="font1-card-job pt-1">{titulo2}</div>
+                  <div className="font1-card-job-new pt-1">{titulo2}</div>
                 </>
               )}
 
@@ -102,7 +102,7 @@ export default function Card08Job({
                   <button
                     type="button"
                     className="btn  btn-card-job font-btn-card-shop rounded-pill  "  data-bs-toggle="modal"   data-bs-target={"#contactForm1"}>
-                    KOMM INS TEAM! JETZT BEWERBEN.
+                    JETZT BEWERBEN
                   </button>
                 
               </div>

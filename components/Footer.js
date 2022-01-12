@@ -66,7 +66,8 @@ export default function Footer() {
             <div className="font_facit_text_very_small mt-3">
               <div>
                 <a className="color-font-dropdown mylinkhoover" href="/leistungen/1">
-                  Organizationsentwicklung
+                  
+                  Organisationsentwicklung
                 </a>
               </div>
               <div>

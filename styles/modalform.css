@@ -63,6 +63,7 @@
 .boton_modal_form:hover {
   color: #ffffff!important;
   background-color:#e42078; 
+  border-color:#e42078 ;
 }
 
 
@@ -79,4 +80,5 @@
 .boton_modal_form2:hover {
   color: #ffffff!important;
   background-color:#F82D7C; 
+  border-color:#F82D7C ;
 }

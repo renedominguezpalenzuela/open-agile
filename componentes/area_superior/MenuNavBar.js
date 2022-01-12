@@ -115,6 +115,12 @@ export default function MenuNavBar() {
         <ul className="dropdown-content text-start color-dropdown animate__animated animate__fadeInUp no-bullets">
 
 
+
+          <li className="nav-item ">
+            <a className="dropdown-item color-font-dropdown" href="/team/main">UNSERE WERTE</a>
+          </li>
+
+
           <li className="nav-item ">
             <a className="dropdown-item color-font-dropdown" href="/wir">WIR</a>
           </li>
