@@ -50,12 +50,17 @@ export const crashkurse_beschreibung_details = [
 
 
         "crashkurs_date_title":"AGILE COACH",
+        
         "crashkurs_date" : [
-        {"id":"1", "quartal":"1", "date1" : "29.04.2022", "date2":  "30.04.2022", "day":"(Fr. / Sa.)"},
-        {"id":"2","quartal":"2","date1" : "13.05.2022", "date2":  "14.05.2022", "day":"(Do. / Fr.)"},
-        {"id":"3","quartal":"3","date1" : "13.05.2022", "date2":  "14.05.2022", "day":"(Fr. / Sa.)"},
-        {"id":"4","quartal":"4","date1" : "01.07.2022", "date2":  "02.07.2022", "day":"(Do. / Fr.)"}    
-        ]   
+        {"id":"1", "quartal":"1",  "date_list" : [
+            { "date1" : "29.04.2022", "date2":  "30.04.2022"},
+            {"date1" : "13.05.2022", "date2":  "14.05.2022"},
+            {"date1" : "13.05.2022", "date2":  "14.05.2022"},
+            {"date1" : "01.07.2022", "date2":  "02.07.2022"}            
+            ],"form_title":"Agile Coach 2022", "day":"(Fr. / Sa.)"}
+       
+        ] ,
+       
     },
      {
         "id":"2",
@@ -103,12 +108,14 @@ export const crashkurse_beschreibung_details = [
                             ],
         "texto_kosten" : ["1.190,- Euro netto (zzgl. 19% USt)"],
         "crashkurs_date_title":"AGILE FACILITATOR",
+        "form_title":"",
         "crashkurs_date" : [
-        {"id":"1","quartal":"1","date1" : "04.02.2022", "date2":  "05.02.2022", "day":"(Fr. / Sa.)"},
-        {"id":"2","quartal":"2","date1" : "22.04.2022", "date2":  "23.04.2022", "day":"(Do. / Fr.)"},
-        {"id":"3","quartal":"3","date1" : "26.08.2022", "date2":  "27.08.2022", "day":"(Fr. / Sa.)"},
-        {"id":"4","quartal":"4","date1" : "11.11.2022", "date2":  "12.11.2022", "day":"(Do. / Fr.)"} 
-        ]   
+        {"id":"1","quartal":"1", "date_list" : [{"date1" : "04.02.2022", "date2":  "05.02.2022"}],"form_title":"", "day":"(Fr. / Sa.)"},
+        {"id":"2","quartal":"2","date_list" : [{"date1" : "22.04.2022", "date2":  "23.04.2022"}],"form_title":"", "day":"(Do. / Fr.)"},
+        {"id":"3","quartal":"3","date_list" : [{"date1" : "26.08.2022", "date2":  "27.08.2022"}],"form_title":"", "day":"(Fr. / Sa.)"},
+        {"id":"4","quartal":"4","date_list" : [{"date1" : "11.11.2022", "date2":  "12.11.2022"}],"form_title":"", "day":"(Do. / Fr.)"} 
+        ] ,
+        
     },
     {
         "id":"3",
@@ -161,12 +168,14 @@ export const crashkurse_beschreibung_details = [
                             ],
         "texto_kosten" : ["1.190,- Euro netto (zzgl. 19% USt)"],
         "crashkurs_date_title":"SCRUM MASTER",
+        "form_title":"",
         "crashkurs_date" : [
-        {"id":"1","quartal":"1", "date1" : "18.02.2022 ", "date2":  "19.02.2022", "day":"(Fr. / Sa.)"},
-        {"id":"2","quartal":"2","date1" : "13.06.2022", "date2":  "14.06.2022", "day":"(Do. / Fr.)"},
-        {"id":"3","quartal":"3","date1" : "09.09.2022", "date2":  "10.09.2022", "day":"(Fr. / Sa.)"},
-        {"id":"4","quartal":"4","date1" : "24.11.2022", "date2":  " 25.11.2022", "day":"(Do. / Fr.)"} 
-        ]   
+        {"id":"1","quartal":"1","date_list" : [{ "date1" : "18.02.2022 ", "date2":  "19.02.2022"}],"form_title":"", "day":"(Fr. / Sa.)"},
+        {"id":"2","quartal":"2","date_list" : [{"date1" : "13.06.2022", "date2":  "14.06.2022"}],"form_title":"", "day":"(Do. / Fr.)"},
+        {"id":"3","quartal":"3","date_list" : [{"date1" : "09.09.2022", "date2":  "10.09.2022"}],"form_title":"", "day":"(Fr. / Sa.)"},
+        {"id":"4","quartal":"4","date_list" : [{"date1" : "24.11.2022", "date2":  " 25.11.2022"}],"form_title":"", "day":"(Do. / Fr.)"} 
+        ] ,
+         
     },
     {
         "id":"4",
@@ -209,11 +218,13 @@ export const crashkurse_beschreibung_details = [
 
 
         "crashkurs_date_title":"MITBESTIMMUNG IN DER AGILEN ARBEITSWELT",
+        "form_title":"",
         "crashkurs_date" : [
-        {"id":"1", "quartal":"2", "date1" : "20.04.2022", "date2":  "21.04.2022", "day":"(Mi. / Do.)"},
-		{"id":"2", "quartal":"4", "date1" : "21.09.2022", "date2":  "22.09.2022", "day":"(Mi. / Do.)"}
+        {"id":"1", "quartal":"2","date_list" : [{ "date1" : "20.04.2022", "date2":  "21.04.2022"}],"form_title":"", "day":"(Mi. / Do.)"},
+		{"id":"2", "quartal":"4","date_list" : [{ "date1" : "21.09.2022", "date2":  "22.09.2022"}],"form_title":"", "day":"(Mi. / Do.)"}
           
-        ]   
+        ]  ,
+        
     },
 
 
@@ -257,10 +268,12 @@ export const crashkurse_beschreibung_details = [
 
 
         "crashkurs_date_title":"",
+        "form_title":"",
         "crashkurs_date" : [
        
           
-        ]   
+        ]   ,
+        "date_list":[]
     }
 
 

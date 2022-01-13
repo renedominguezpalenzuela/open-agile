@@ -60,9 +60,12 @@
   
 }
 
-.boton_modal_form:hover {
+
+
+
+.boton_modal_form:hover, boton_modal_form:active , boton_modal_form:visited , boton_modal_form:focus    {
   color: #ffffff!important;
-  background-color:#e42078; 
+  background-color:#e42078!important; 
   border-color:#e42078 ;
 }
 

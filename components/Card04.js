@@ -1,14 +1,35 @@
-
+import React from "react";
 import ModalFormCursos from "./ModalFormCursos";
 
 export default function Card04({ datos, precio, nombre_curso }) {
   // const classes = useStyles();
 
-  const { id, quartal, date1, date2, day, link } = datos;
+  const { id, quartal, date_list,form_title, day, link } = datos;
+
+  let date1 = "";
+  let date2 = "";
+
+  if (date_list.length === 1) {
+    date1 = date_list[0].date1;
+    date2 = date_list[0].date2;
+  }
 
 
+ let titulo_formulario ="";
+
+  if (form_title!='') {
+    titulo_formulario=form_title;
+
+
+  } else {
+    titulo_formulario = `${quartal}. Quartal`;
+  }
+
+ 
+
   
-  
+
+
 
   return (
     <>
@@ -24,14 +45,19 @@ export default function Card04({ datos, precio, nombre_curso }) {
             </div>
           </div>
           <div className="card-body color-body ">
-            <a href="/contact" className="font_card_fechas ">
-              <div className="row  fechas-card-crashkurse d-flex justify-content-center pt-2 m-2">
-                {date1}
-              </div>
-              <div className="row fechas-card-crashkurse d-flex justify-content-center pb-2 m-2">
-                {date2}
-              </div>
-            </a>
+            {date_list.map((UnaParejaFechas, index) => (
+              <React.Fragment key={index}>
+                <div className="row  fechas-card-crashkurse d-flex justify-content-center pt-2 m-2">
+                  {UnaParejaFechas.date1}
+                </div>
+                <div className="row fechas-card-crashkurse d-flex justify-content-center pb-2 m-2">
+                  {UnaParejaFechas.date2}
+                </div>
+              </React.Fragment>
+            ))}
+            {/* <a href="/contact" className="font_card_fechas "> */}
+
+            {/* </a> */}
           </div>
           <button
             type="button"
@@ -40,17 +66,21 @@ export default function Card04({ datos, precio, nombre_curso }) {
             data-bs-target={`#contactForm${id}`}>
             JETZT ANMELDEN...
           </button>
-
-        
         </div>
       </div>
 
-
-
-      <ModalFormCursos  id={id} quartal={quartal} titulo={`${quartal}. Quartal`} frase="Jetzt anmelden!" date1={date1} date2={date2} day={day} link={link} precio={precio}
-        nombre_curso={nombre_curso} />
-
-     
+      <ModalFormCursos
+        id={id}
+        quartal={quartal}
+        titulo={titulo_formulario}
+        frase="Jetzt anmelden!"
+        date1={date1}
+        date2={date2}
+        day={day}
+        link={link}
+        precio={precio}
+        nombre_curso={nombre_curso}
+      />
     </>
   );
 }

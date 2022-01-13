@@ -309,8 +309,6 @@ export default function ModalFormCursos({
                     <TextField
                       id="name"
                       label="Vorname"
-                      multiline
-                      maxRows={4}
                       className="ancho-edit2 "
                       sx={styles}
                       inputProps={fuentes1}
@@ -321,8 +319,6 @@ export default function ModalFormCursos({
                     <TextField
                       id="name"
                       label="Nachname"
-                      multiline
-                      maxRows={4}
                       className="ancho-edit2 "
                       sx={styles}
                       inputProps={fuentes1}
@@ -334,8 +330,6 @@ export default function ModalFormCursos({
                     <TextField
                       id="address"
                       label="E-Mail Adresse"
-                      multiline
-                      maxRows={4}
                       className="ancho-edit2 "
                       sx={styles}
                       inputProps={fuentes1}
@@ -347,8 +341,6 @@ export default function ModalFormCursos({
                     <TextField
                       id="address"
                       label="Telefonnummer"
-                      multiline
-                      maxRows={4}
                       className="ancho-edit2 "
                       sx={styles}
                       inputProps={fuentes1}
@@ -389,8 +381,6 @@ export default function ModalFormCursos({
                     <TextField
                       id="outlined-multiline-flexible"
                       label="Sende uns eine Nachricht"
-                      multiline
-                      maxRows={4}
                       className="ancho-edit2 "
                       sx={styles}
                       inputProps={fuentes1}
@@ -420,23 +410,17 @@ export default function ModalFormCursos({
                     <TextField
                       id="outlined-multiline-flexible"
                       label="Unternehmen"
-                      multiline
-                      maxRows={4}
                       className="ancho-edit2 "
                       sx={styles}
                       inputProps={fuentes1}
                       InputLabelProps={fuentes2}
                     />
                   </div>
-
-
 
                   <div className="row d-flex justify-content-start ps-3 mt-2 pe-3  ">
                     <TextField
                       id="outlined-multiline-flexible"
                       label="Straße"
-                      multiline
-                      maxRows={4}
                       className="ancho-edit2 "
                       sx={styles}
                       inputProps={fuentes1}
@@ -444,12 +428,10 @@ export default function ModalFormCursos({
                     />
                   </div>
 
-                   <div className="row d-flex justify-content-start ps-3 mt-2 pe-3  ">
+                  <div className="row d-flex justify-content-start ps-3 mt-2 pe-3  ">
                     <TextField
                       id="outlined-multiline-flexible"
                       label="Hausnummer"
-                      multiline
-                      maxRows={4}
                       className="ancho-edit2 "
                       sx={styles}
                       inputProps={fuentes1}
@@ -457,13 +439,10 @@ export default function ModalFormCursos({
                     />
                   </div>
 
-
- <div className="row d-flex justify-content-start ps-3 mt-2 pe-3  ">
+                  <div className="row d-flex justify-content-start ps-3 mt-2 pe-3  ">
                     <TextField
                       id="outlined-multiline-flexible"
                       label="Postleitzahl"
-                      multiline
-                      maxRows={4}
                       className="ancho-edit2 "
                       sx={styles}
                       inputProps={fuentes1}
@@ -471,26 +450,21 @@ export default function ModalFormCursos({
                     />
                   </div>
 
-                  
- <div className="row d-flex justify-content-start ps-3 mt-2 pe-3  ">
+                  <div className="row d-flex justify-content-start ps-3 mt-2 pe-3  ">
                     <TextField
                       id="outlined-multiline-flexible"
                       label="Ort"
-                      multiline
-                      maxRows={4}
                       className="ancho-edit2 "
                       sx={styles}
                       inputProps={fuentes1}
                       InputLabelProps={fuentes2}
                     />
                   </div>
-                
+
                   <div className="row d-flex justify-content-start ps-3 mt-2 pe-3  ">
                     <TextField
                       id="outlined-multiline-flexible"
                       label="Rabattcode (Optional)"
-                      multiline
-                      maxRows={4}
                       className="ancho-edit2 "
                       sx={styles}
                       inputProps={fuentes1}
@@ -503,13 +477,11 @@ export default function ModalFormCursos({
                       <div className="vertical-line-left"></div>
                     </div>
                     <div className="col-10  d-flex justify-content-start">
-                   
                       <div className="row  pt-2  pb-2 ">
-                         
-                         <div className="col-12  titulo_curso   ">
+                        <div className="col-12  titulo_curso   ">
                           {nombre_curso}
                         </div>
-                        <div className="col-12 titulo_curso   ">{precio}</div> 
+                        <div className="col-12 titulo_curso   ">{precio}</div>
                       </div>
                     </div>
                   </div>

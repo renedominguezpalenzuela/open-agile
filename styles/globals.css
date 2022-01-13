@@ -777,3 +777,7 @@ ul li.mybullets3::before {
   margin-left: 0em; /*Also needed for space (tweak if needed)-*/
   /* font-size:0.5rem; */
 }
+
+.ocultar {
+  display: none;
+}

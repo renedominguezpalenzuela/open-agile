@@ -1,4 +1,5 @@
-import * as React from "react";
+
+import  React, { useRef } from 'react';
 
 import Radio from "@mui/material/Radio";
 // import RadioGroup from "@mui/material/RadioGroup";
@@ -18,7 +19,6 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import Email from "@mui/icons-material/Email";
 
-
 // import styles from "../styles/Home.module.css";
 
 import TextField from "@mui/material/TextField";
@@ -30,15 +30,13 @@ import Box from "@mui/material/Box";
 
 
 
+
 const StyledFormControlLabel = styled((props) => (
   <FormControlLabel {...props} />
 ))(({ theme, checked }) => ({
   ".MuiFormControlLabel-label": {
     color: "#243A78", //color de la letra
-      fontSize: 12,  //tamano de la letra
-    
-     
-
+    fontSize: 12, //tamano de la letra
   },
 }));
 
@@ -61,29 +59,33 @@ MyFormControlLabel.propTypes = {
   // value: PropTypes.any,
 };
 
-
-
-export default function ModalFormJob({ id, titulo, quartal, date1, date2, day, frase}){
-
-
-    //Texto que aparece en el edit luego de que el usuario escribe
+export default function ModalFormJob({
+  id,
+  titulo,
+  quartal,
+  date1,
+  date2,
+  day,
+  frase,
+}) {
+  //Texto que aparece en el edit luego de que el usuario escribe
   //inputProps={fuentes1}
 
   const fuentes1 = {
-    style: { //fontSize: 11
-     textAlign: "left", ///Text Align
-        letterSpacing: "0.06vw", //espaciado de letras luego d escribir
-        color: "#6B6B74",
-        fontFamily: "Montserrat-Light"
-    
-     },
+    style: {
+      //fontSize: 11
+      textAlign: "left", ///Text Align
+      letterSpacing: "0.06vw", //espaciado de letras luego d escribir
+      color: "#6B6B74",
+      fontFamily: "Montserrat-Light",
+    },
   };
 
   const radio_button = {
     height: "7px",
     padding: "0.2vw",
 
-      // fontSize: "0.9vw",
+    // fontSize: "0.9vw",
     //  color: "#00ff00", //color del icono
 
     "& .MuiSvgIcon-root": {
@@ -118,6 +120,7 @@ export default function ModalFormJob({ id, titulo, quartal, date1, date2, day, f
 
   const [value2, setValue2] = React.useState("Controlled");
   const [value3, setValue3] = React.useState("Controlled");
+    const [value4, setValue4] = React.useState(". . .");
 
   const handleChange1 = (event) => {
     setValue1(event.target.value);
@@ -130,6 +133,39 @@ export default function ModalFormJob({ id, titulo, quartal, date1, date2, day, f
   const handleChange3 = (event) => {
     setValue3(event.target.value);
   };
+
+
+const handleChange4 = (event) => {
+    setValue4(event.target.value);
+  };
+
+
+const hiddenFileInput = useRef(null);
+
+  const handleChange = event => {
+
+    if (event.target.files && event.target.files[0]) {
+      const i = event.target.files[0];
+
+      console.log(i.name);
+     setValue4(i.name);
+
+
+       const body = new FormData();
+       body.append("image", i);
+
+
+    }
+  };
+
+
+  const handleClick = event => {
+    hiddenFileInput.current.click();
+  };
+
+
+
+
 
   const styles = {
     //  input: { color: 'blue'}, //Color de la fuente al escribir
@@ -172,9 +208,9 @@ export default function ModalFormJob({ id, titulo, quartal, date1, date2, day, f
     },
   };
 
-
-  return(<>
-   {/* <!-- Modal --> */}
+  return (
+    <>
+      {/* <!-- Modal --> */}
       <div className="modal fade" id={`contactForm${id}`} tabIndex="-1">
         <div className="modal-dialog">
           <div className="modal-content">
@@ -185,12 +221,14 @@ export default function ModalFormJob({ id, titulo, quartal, date1, date2, day, f
 
                   <div className="row">{titulo}</div>
                 </div>
-                 {date1!=undefined && date2!=undefined && date1!=""  && date2!="" && (  
-                <div className="col subtitulo-card-crashkurse d-flex justify-content-start align-items-center ">
-                  {`${eliminar_anno(date1)} - ${date2}`}
-                </div>
-                 )
-                }
+                {date1 != undefined &&
+                  date2 != undefined &&
+                  date1 != "" &&
+                  date2 != "" && (
+                    <div className="col subtitulo-card-crashkurse d-flex justify-content-start align-items-center ">
+                      {`${eliminar_anno(date1)} - ${date2}`}
+                    </div>
+                  )}
               </div>
 
               <button
@@ -206,94 +244,102 @@ export default function ModalFormJob({ id, titulo, quartal, date1, date2, day, f
               </div>
 
               <div className="row mt-3 ps-3 pe-3 d-flex justify-content-center   ">
-
-               <TextField
+                <TextField
                   id="name"
                   label="Name, Vorname"
-                   multiline
-                   maxRows={4}
+  
                   className="ancho-edit2 "
                   sx={styles}
-                    inputProps={fuentes1}
-                   InputLabelProps={fuentes2}
+                  inputProps={fuentes1}
+                  InputLabelProps={fuentes2}
                 />
-
-
-
-              
               </div>
 
               <div className="row mt-3 ps-3 pe-3 d-flex justify-content-center   ">
-
-
-               <TextField
+                <TextField
                   id="address"
                   label="E-Mail Adresse"
-                   multiline
-                   maxRows={4}
+  
                   className="ancho-edit2 "
                   sx={styles}
-                    inputProps={fuentes1}
-                   InputLabelProps={fuentes2}
+                  inputProps={fuentes1}
+                  InputLabelProps={fuentes2}
                 />
-
-
-
-
-
-               
               </div>
 
-
-                <div className="row mt-3 ps-3 pe-3 d-flex justify-content-center   ">
- <TextField
+              <div className="row mt-3 ps-3 pe-3 d-flex justify-content-center   ">
+                <TextField
                   id="telefone"
                   label="Telefonnummer"
-                   multiline
-                   maxRows={4}
+   
                   className="ancho-edit2 "
                   sx={styles}
-                    inputProps={fuentes1}
-                   InputLabelProps={fuentes2}
+                  inputProps={fuentes1}
+                  InputLabelProps={fuentes2}
                 />
-
-                   </div>
+              </div>
 
               <div className="row mt-2 mb-2 ps-3 pe-3 d-flex justify-content-center  texto-email  ">
-              Wir senden Dir binnen 72h eine Bestätigung und weitere Informationen
+                Wir senden Dir binnen 72h eine Bestätigung und weitere
+                Informationen
               </div>
 
               <div className="row d-flex justify-content-start privacy-modal ps-3 pe-3 mt-1">
-                AGBs 
+                AGBs
               </div>
 
               <div className="row d-flex justify-content-start texto-AGBS  ps-3 pe-3 ">
-                Ich bin mit den AGBs und der Übermittlung meiner Daten zur internen Verarbeitung der Open Agile GmbH einverstanden
-                
+                Ich bin mit den AGBs und der Übermittlung meiner Daten zur
+                internen Verarbeitung der Open Agile GmbH einverstanden
               </div>
 
               <div className="row d-flex justify-content-start ps-3 pe-3 mt-1">
                 <RadioGroup name="use-radio-group" defaultValue="Ja">
-                  <MyFormControlLabel value="Ja" label="Ja" control={<Radio  sx={radio_button}/>} />
-                  <MyFormControlLabel value="Nein" label="Nein" control={<Radio  sx={radio_button}/>} />
+                  <MyFormControlLabel
+                    value="Ja"
+                    label="Ja"
+                    control={<Radio sx={radio_button} />}
+                  />
+                  <MyFormControlLabel
+                    value="Nein"
+                    label="Nein"
+                    control={<Radio sx={radio_button} />}
+                  />
                 </RadioGroup>
- 
-               
               </div>
 
               <div className="row d-flex justify-content-start ps-3 mt-3 pe-3  ">
                 <TextField
                   id="outlined-multiline-flexible"
                   label="Erzähle uns von Dir und Deiner Erfahrung in dem gesuchten Bereich"
-                   multiline
-                   maxRows={4}
+
                   className="ancho-edit2 "
                   sx={styles}
-                    inputProps={fuentes1}
-                   InputLabelProps={fuentes2}
+                  inputProps={fuentes1}
+                  InputLabelProps={fuentes2}
                 />
+              </div>
 
-        
+              <div className="row  g-0 ms-3 mt-4  mb-2  d-flex justify-content-start">
+
+                {/* <input type="file" className="ocultar" id="customFile" onChange={handleChange4} />      */}
+                 <input type="file"
+                  ref={hiddenFileInput}
+                  onChange={handleChange}
+className="ocultar"
+                 
+                 />
+  
+
+                <div className="col-md-5  d-flex justify-content-start">
+                  <button type="button" className="btn  boton_modal_form" 
+                  onClick={handleClick}>
+                    Lebenslauf hochladen
+                  </button>
+                </div>
+                <div className="col-md-6 ms-2 d-flex justify-content-start align-items-center texto-AGBS">                 
+                       {value4}     
+                </div>
               </div>
 
               <div className="row    mt-4  mb-2  d-flex justify-content-end">
@@ -304,19 +350,17 @@ export default function ModalFormJob({ id, titulo, quartal, date1, date2, day, f
                     data-bs-dismiss="modal">
                     Jetzt Bewerbung absenden
                   </button>
-
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </>);
+    </>
+  );
 }
 
-
-
 const eliminar_anno = (fecha) => {
-  if (fecha===undefined) return "";
+  if (fecha === undefined) return "";
   return fecha.substring(0, 6);
 };
