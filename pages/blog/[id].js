@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import React from "react";
+import Link from "next/link";
 
 import MenuFlotante from "../../components/MenuFlotante";
 import Footer from "../../components/Footer";
@@ -52,6 +54,12 @@ export default function Home({ blog }) {
     autor,
     fecha,
     content,
+    link_anterior,
+    link_anterior_nombre,
+    link_anterior_nombre2,
+    link_siguiente,
+    link_siguiente_nombre,
+    link_siguiente_nombre2,
   } = blog;
 
   return (
@@ -165,17 +173,72 @@ export default function Home({ blog }) {
               </div>
             </div>
 
+            <div className="row  mt-4 mb-5  ">
+              {content != undefined &&
+                content.map((unContenido, index1) => (
+                  <React.Fragment key={index1}>
+                    {contenido(unContenido)}
+                  </React.Fragment>
+                ))}
+            </div>
+          </div>
+        </div>
 
-              <div className="row  mt-1 mb-2  ">
-                 {content!=undefined &&
-                    content.map((unTexto, index1)=>(<>
-                      
+        <div className="row mt-5 mb-5  d-flex align-items-center justify-content-center">
+          <div className="contenido-flechas-blog">
+            <div className="item-1-flechas-blog texto-flechas-blogs ">
+              <Link href={`${servidor_url}${link_anterior}`}>
+                Vorheriger Artikel
+              </Link>
+            </div>
 
-                    </>))
-                 }
-              </div>
+            <div className="item-2-flechas-blog texto-flechas-blogs ">
+            <Link href={`${servidor_url}${link_siguiente}`}>
+              Nächster Artikel
+             </Link> 
+            </div>
 
+            <div className="item-3-flechas-blog ">
+              <Link href={`${servidor_url}${link_anterior}`}>
+                <img
+                  className="img-fluid "
+                  src={`${servidor_url}/img/blogs/flecha_azul_left.svg`}
+                />
+              </Link>
+            </div>
 
+            <div className="item-5-flechas-blog texto-flechas-blogs2">
+              <Link href={`${servidor_url}${link_anterior}`}>
+                {link_anterior_nombre}
+              </Link>
+            </div>
+
+            <div className="item-6-flechas-blog texto-flechas-blogs2 ">
+              <Link href={`${servidor_url}${link_anterior}`}>
+                {link_anterior_nombre2}
+              </Link>
+            </div>
+
+            <div className="item-4-flechas-blog ">
+              <Link href={`${servidor_url}${link_siguiente}`}>
+                <img
+                  className="img-fluid "
+                  src={`${servidor_url}/img/blogs/flecha_azul_rigth.svg`}
+                />
+              </Link>
+            </div>
+
+            <div className="item-7-flechas-blog texto-flechas-blogs2 ">
+            <Link href={`${servidor_url}${link_siguiente}`}>
+              {link_siguiente_nombre}
+              </Link>
+            </div>
+
+            <div className="item-8-flechas-blog texto-flechas-blogs2 ">
+            <Link href={`${servidor_url}${link_siguiente}`}>
+              {link_siguiente_nombre2}
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -188,6 +251,82 @@ export default function Home({ blog }) {
     </>
   );
 }
+
+const contenido = (contenido) => {
+  if (contenido.tipo === "parrafo") {
+    return (
+      <>
+        {contenido.text.map((unTexto, index2) => (
+          <React.Fragment key={index2}>
+            <div className="letra-parrafo-blog">{unTexto}</div>
+          </React.Fragment>
+        ))}
+      </>
+    );
+  }
+
+  if (contenido.tipo === "puntos") {
+    return (
+      <>
+        <div className="row mt-3">
+          {contenido.titulo != undefined && contenido.titulo != "" && (
+            <div className="letra-titulo-puntos-blog">{contenido.titulo}</div>
+          )}
+
+          <ul>
+            {contenido.text.map((unTexto, index2) => (
+              <React.Fragment key={index2}>
+                <li className="letra-parrafo-blog mybullets3">{unTexto}</li>
+              </React.Fragment>
+            ))}
+          </ul>
+        </div>
+      </>
+    );
+  }
+
+  if (contenido.tipo === "numeros") {
+    return (
+      <>
+        <div className="row mt-3">
+          {contenido.titulo != undefined && contenido.titulo != "" && (
+            <div className="letra-titulo-puntos-blog">{contenido.titulo}</div>
+          )}
+
+          <ol>
+            {contenido.text.map((unTexto, index2) => (
+              <React.Fragment key={index2}>
+                <li className="letra-parrafo-blog mybullets3">{unTexto}</li>
+              </React.Fragment>
+            ))}
+          </ol>
+        </div>
+      </>
+    );
+  }
+
+  if (contenido.tipo === "numero_corchetes") {
+    return (
+      <>
+        <div className="row mt-3">
+          {contenido.titulo != undefined && contenido.titulo != "" && (
+            <div className="letra-titulo-puntos-blog">{contenido.titulo}</div>
+          )}
+
+          <ul>
+            {contenido.text.map((unTexto, index2) => (
+              <React.Fragment key={index2}>
+                <li className="letra-parrafo-blog ">{unTexto}</li>
+              </React.Fragment>
+            ))}
+          </ul>
+        </div>
+      </>
+    );
+  }
+
+  return <></>;
+};
 
 export const getServerSideProps = async (context) => {
   const { id } = context.query;
