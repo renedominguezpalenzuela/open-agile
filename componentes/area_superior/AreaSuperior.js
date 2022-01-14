@@ -26,7 +26,7 @@ si no se especifica fondo = bannermain
 
   barco   --- se pone el fondo con un barco "bannermain-quiz";
   variable  ---- texto -- fondo crece en funcion del contenido
-  ajustable ---- bannermain-ajustable -- funcion se redudce en funcion del contenido
+  ajustable ---- bannermain-ajustable -- fondo se redudce en funcion del contenido
 
 
  */

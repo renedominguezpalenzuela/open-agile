@@ -142,39 +142,9 @@ export default function ModalFormCursos({
     setAge(event.target.value);
   };
 
-  // // { width: 350,  backgroundColor:'blue'}
 
-  //   "& .MuiInputBase-root": {
-  //     //Aqui arriba es el elemento base - root
-  //     height: 45, //Ancho del edit
-
-  //     "& input": {
-  //       //Luego de escribir (Elemento)
-  //       textAlign: "left", ///Text Align
-  //       letterSpacing: "0.06vw", //espaciado de letras luego d escribir
-  //       color: "#6B6B74",
-  //       fontFamily: "Montserrat-Light", //Tipo de fuuente al escribir
-  //     },
-  //   },
-
-  //   "& .MuiOutlinedInput-root": {
-  //     height: 48,
-  //     color: "#6B6B74", //Color de la fuente al escribir
-  //     backgroundColor: "#ECE7E7", //Color de fondo del edit
-  //     fontFamily: "Montserrat-Light", //Tipo de fuuente al escribir
-
-  //     // borderColor: "#ECE7E7",
-  //   },
-
-  //    "& .MuiOutlinedInput-root:hover": {
-  //     "& > fieldset": {
-  //       borderColor: "#e4207864", //Color del borde al hacer hoover
-  //     }
-  //    }
   const stilos_combo = {
-    //  input: { color: 'blue'}, //Color de la fuente al escribir
 
-    // width: { sm: 250, md: 350 }, //Ancho del control
 
     "& .MuiInputBase-root": {
       //Aqui arriba es el elemento base - root
@@ -274,6 +244,9 @@ export default function ModalFormCursos({
           <div className="modal-content ancho-modal-cursos">
             {/* Header */}
             <div className="modal-header">
+
+
+
               <div className="row   ms-2 me-2   w-100 d-flex justify-content-center">
                 <div className="col-4  titulo-card-crashkurse-new d-flex justify-content-center align-items-center">
                   <div className="row">{titulo}</div>
@@ -287,6 +260,8 @@ export default function ModalFormCursos({
                     </div>
                   )}
               </div>
+
+              
 
               <button
                 type="button"

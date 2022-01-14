@@ -780,4 +780,13 @@ ul li.mybullets3::before {
 
 .ocultar {
   display: none;
+
+
+
+}
+
+
+.texto_total_preguntas {
+  font-size: .9rem;
+  color: white;
 }

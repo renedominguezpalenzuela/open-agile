@@ -23,6 +23,7 @@ import "../styles/videos.css";
 import "../styles/blogcard.css";
 import "../styles/teamcards.css";
 import "../styles/krashkurse.css";
+import "../styles/blogs.css";
 
 
 
@@ -76,6 +77,9 @@ import { useEffect } from "react";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false; /* eslint-disable import/first */
+
+
+
 
 library.add(fab, faPhone, faEnvelope, faBars, faArrowLeft, faArrowRight, faLongArrowAltRight);
 

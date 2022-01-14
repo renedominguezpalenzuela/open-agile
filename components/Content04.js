@@ -41,7 +41,7 @@ export default function Content04 ({lista_cards} ) {
                         {/* Vista normal  */}
                         <div  className="col-md-4 g-4  d-none d-md-block  ">    
                          
-                          <Card05UserBlog id={unCard.id}  imagen={unCard.image} titulo={unCard.title} titulo2={unCard.titulo2} link={unCard.link}/>     
+                          <Card05UserBlog id={unCard.id}  imagen={unCard.image} titulo={unCard.title} titulo2={unCard.titulo2} link={`blog/${unCard.id}`}/>     
                         </div> 
               </React.Fragment>  
             )

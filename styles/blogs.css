@@ -1,0 +1,134 @@
+
+  .font_title_blogs_articles {
+    font-family: Montserrat-BoldItalic;
+    color: #F82D7C;
+    text-align: left;
+    font-size: 4rem;
+    line-height: 1;
+    font-weight: 500;
+  
+    /* letter-spacing: 4px; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* text-transform: uppercase; */
+    /* selector-locked: false; */
+    text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
+  }
+
+
+  .font_autor_fecha {
+    font-family: Montserrat-Regular;
+    color: #24325a   ;
+    font-size: 1.4rem;
+      /* letter-spacing: 4px; */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      /* text-transform: uppercase; */
+      /* selector-locked: false; */
+      text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
+
+  }
+
+  .iconos-blogs{
+    color: #A2A0A0   ;
+    width: 1vw;
+    height: 100%;
+  }
+
+
+  .texto-iconos-blogs {
+    color: #A2A0A0   ;
+    font-size: 0.7rem;
+    font-family: Montserrat-Regular;
+    
+  }
+
+  .contenedor-iconos-blog {
+    display: grid;
+    /* width: 100%; */
+
+    grid-template-columns: 15% 3% 7% 3% 7% 3% 7% 3% 7% 3% 7% 3% 7% 20%;  /*tres columnas de igual ancho*/
+    grid-template-rows: auto; 
+    gap: .4em;
+    align-items:center; 
+    
+    
+
+}
+
+.item-1-iconos-blog {
+    grid-column: 2/3;
+    justify-self:end;
+    
+}
+
+.item-2-iconos-blog {
+    grid-column: 3/4;
+    justify-self:left;
+    align-self: center;       
+}
+
+
+.item-3-iconos-blog {
+    grid-column: 4/5;
+    justify-self:end;
+    
+}
+
+.item-4-iconos-blog {
+    grid-column: 5/6;
+    justify-self:left;
+    align-self: center;       
+}
+
+
+.item-5-iconos-blog {
+    grid-column: 6/7;
+    justify-self:end;
+    
+}
+
+.item-6-iconos-blog {
+    grid-column: 7/8;
+    justify-self:left;
+    align-self: center;       
+}
+
+
+.item-7-iconos-blog {
+    grid-column: 8/9;
+    justify-self:end;
+    
+}
+
+.item-8-iconos-blog {
+    grid-column: 9/10;
+    justify-self:left;
+    align-self: center;       
+}
+
+
+.item-9-iconos-blog {
+    grid-column: 10/11;
+    justify-self:end;
+    
+}
+
+.item-10-iconos-blog {
+    grid-column: 11/12;
+    justify-self:left;
+    align-self: center;       
+}
+
+
+.item-11-iconos-blog {
+    grid-column: 12/13;
+    justify-self:end;
+    
+}
+
+.item-12-iconos-blog {
+    grid-column: 13/14;
+    justify-self:left;
+    align-self: center;       
+}

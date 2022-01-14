@@ -9,20 +9,27 @@ export default function Card04({ datos, precio, nombre_curso }) {
   let date1 = "";
   let date2 = "";
 
+
+  let dias = "";
+
   if (date_list.length === 1) {
     date1 = date_list[0].date1;
     date2 = date_list[0].date2;
   }
 
+ let titulo_especial = false;
 
  let titulo_formulario ="";
 
   if (form_title!='') {
     titulo_formulario=form_title;
+    titulo_especial = true;
+   
 
 
   } else {
     titulo_formulario = `${quartal}. Quartal`;
+    dias = day;
   }
 
  
@@ -37,11 +44,13 @@ export default function Card04({ datos, precio, nombre_curso }) {
         <div className="card text-center my_card-crashkurse ">
           <div className="card-header  ">
             <div className="row titulo-card-crashkurse  d-flex justify-content-center">
-              {quartal}. Quartal
+   
+              {titulo_formulario}
             </div>
 
             <div className="row  subtitulo-card-crashkurse   d-flex justify-content-center">
-              {day}
+         
+              {dias}
             </div>
           </div>
           <div className="card-body color-body ">
@@ -73,6 +82,7 @@ export default function Card04({ datos, precio, nombre_curso }) {
         id={id}
         quartal={quartal}
         titulo={titulo_formulario}
+      
         frase="Jetzt anmelden!"
         date1={date1}
         date2={date2}

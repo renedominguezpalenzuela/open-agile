@@ -90,7 +90,7 @@ import { servidor_url } from "../../config";
 //            Pagina inicial principal
 //----------------------------------------------------------------------------------------------------------
 
-export default function Home({ quiz }) {
+export default function Home({ quiz, todas_preguntas }) {
   const router = useRouter();
   const { id } = router.query;
 
@@ -103,6 +103,11 @@ const {
     next_link,
     prior_link,
   } = quiz;
+
+
+ const total_preguntas  =todas_preguntas.length; 
+
+
 
  
 
@@ -135,7 +140,7 @@ const {
 
         {/*Area superior  */}
 
-        <Content01andMenuWithQuestions id={id} question={question} answers={answers} titulo={titulo} next_link={next_link} />
+        <Content01andMenuWithQuestions id={id} question={question} answers={answers} titulo={titulo} next_link={next_link} total_questions={total_preguntas} />
 
         {/*Footer  */}
         {/*  <Footer />   */}
@@ -151,14 +156,21 @@ export const getServerSideProps = async (context) => {
   const { id } = context.query;
   const url = `${servidor_url}/api/quiz/${encodeURIComponent(id)}`;
   const res = await fetch(url);
+const quiz = await res.json();
+
+  const url2 = `${servidor_url}/api/quiz`;
+  const res2 = await fetch(url2);
 
 
+  const todas_preguntas = await res2.json();
 
-  const quiz = await res.json();
+
+  
 
   return {
     props: {
       quiz,
+      todas_preguntas
     },
   };
 };
@@ -172,6 +184,7 @@ export const getServerSideProps = async (context) => {
   answers,
   titulo,
   next_link,
+  total_questions
 }) {
   const cambio_respuesta = (event, id) => {
     let respuesta_usuario = event.target.value;
@@ -254,7 +267,7 @@ export const getServerSideProps = async (context) => {
               )}
             </div>
 
-            <div className="row text-center mt-3 my_quiz_respuestas w-100  ">
+            <div className="row text-center mt-2 my_quiz_respuestas w-100  ">
              
               <div
                 id="altcontainer"
@@ -292,10 +305,15 @@ export const getServerSideProps = async (context) => {
               </div>
             </div>
 
+
+              <div className="row text-center mt-4  d-flex  justify-content-center texto_total_preguntas">
+               {id} / {total_questions}
+              </div>
+
             <div className="row text-center pb-4 my_quiz_boton ">
             
-              <div className="row  text-center mt-5 mb-4 d-flex  justify-content-center   ">
-                <Link href={`${next_link}`}>
+              <div className="row  text-center mt-2 mb-4 d-flex  justify-content-center   ">
+                <Link href={`${next_link}`} className=" d-flex align-items-start ">
                   <button
                     type="button"
                     className=" btn p-3 ms-2 me-2 w-25 mb-5    btn-card font-btn-card rounded-pill  ">

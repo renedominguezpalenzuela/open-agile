@@ -2,6 +2,10 @@ var boton = document.getElementById("boton_abrir_menu");
 var boton2 = document.getElementById("boton_abrir_menu2");
 var contendor_boton = document.getElementById("panel_abrir_menu");
 
+var color_magenta = "#e42078";
+var color_white = "#ffffff";
+var color = color_white;
+
 var boton_contacto_telefono = document.getElementById(
   "boton_contacto_telefono"
 );
@@ -59,29 +63,37 @@ var pagina = window.location.pathname;
 function setColor(Y, pagina) {
 
 
-  var Y_Area_Superior = 126;
-  var Y_Crashkurse_Titulo = 311;
-  var Y_CrashkurseKards = 500;
-  var Y_Empresas = 873;
-  var Y_Footer = 3922;
+  var Y_Area_SuperiorEnd = 114;
+  var Y_CrashkurseStart = 506;
+  var Y_CrashkurseKardsEnd = 1407;
+  var Y_EmpresasStart = 1399;
+  var Y_Footer = 4134;
 
-  var color = "white";
 
+  
+  
+
+
+
+
+// Main
   if (pagina === "/") {
     if (boton_contacto_telefono != undefined) {
-      if (Y < Y_Area_Superior) {
+      if (Y < Y_Area_SuperiorEnd) {
         color = color_white;
       }
 
-      if (Y >= Y_Area_Superior && Y < Y_CrashkurseKards) {
+      if (Y >= Y_Area_SuperiorEnd && Y < Y_CrashkurseStart) {
         color = color_magenta;
       }
 
-      if (Y >= Y_CrashkurseKards && Y < Y_Empresas) {
+      if (Y >= Y_CrashkurseStart && Y < Y_CrashkurseKardsEnd) {
         color = color_white;
       }
 
-      if (Y >= Y_Empresas && Y < Y_Footer) {
+
+
+      if (Y >= Y_EmpresasStart && Y < Y_Footer) {
         color = color_magenta;
       }
 
@@ -89,59 +101,63 @@ function setColor(Y, pagina) {
         color = color_white;
       }
     }
+  } else {
+     color = color_magenta;
   }
 
-  
-  const r = /\/crashkurse\/[a-z]*\/[0-9]/;
-  if (r.test(pagina)) {
+  // Cursos
+  // const r = /\/crashkurse\/[a-z]*\/[0-9]/;
+  // if (r.test(pagina)) {
     
 
-       Y_Area_Superior = 66;
-       Y_Footer =1476; 
+  //      Y_Area_Superior = 66;
+  //      Y_Footer =1476; 
 
 
-       if (Y < Y_Area_Superior) {
-        color = color_magenta;
-      }
+  //      if (Y < Y_Area_Superior) {
+  //       color = color_magenta;
+  //     }
 
 
-      if (Y >= Y_Area_Superior && Y < Y_Footer) {
-        color = color_magenta;
-      }
+  //     if (Y >= Y_Area_Superior && Y < Y_Footer) {
+  //       color = color_magenta;
+  //     }
 
-       if (Y >= Y_Footer) {
-        color = color_white;
-      }
+  //      if (Y >= Y_Footer) {
+  //       color = color_white;
+  //     }
    
 
-  }
+  // }
 
 
   /*   /shop    */
-  const s = /\/shop/;
+  // const s = /\/shop/;
 
-   if (s.test(pagina)) {
+  //  if (s.test(pagina)) {
     
 
-       Y_Area_Superior = 10;
-       Y_Footer =629; 
+  //      Y_Area_Superior = 10;
+  //      Y_Footer =629; 
 
        
-       if (Y < Y_Area_Superior) {
-        color = color_magenta;
-      }
+  //      if (Y < Y_Area_Superior) {
+  //       color = color_magenta;
+  //     }
 
 
-      if (Y >= Y_Area_Superior && Y < Y_Footer) {
-        color = color_magenta;
-      }
+  //     if (Y >= Y_Area_Superior && Y < Y_Footer) {
+  //       color = color_magenta;
+  //     }
 
-       if (Y >= Y_Footer) {
-        color = color_white;
-      }
+  //      if (Y >= Y_Footer) {
+  //       color = color_white;
+  //     }
    
 
-  }
+  // }
+
+
 
 
 
@@ -153,8 +169,7 @@ function setColor(Y, pagina) {
   boton_contacto_correo.style.color = color;
 }
 
-const color_magenta = "#e42078";
-const color_white = "#ffffff";
+
 
 window.addEventListener(
   "scroll",
