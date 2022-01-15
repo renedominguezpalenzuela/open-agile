@@ -258,7 +258,12 @@ const contenido = (contenido) => {
       <>
         {contenido.text.map((unTexto, index2) => (
           <React.Fragment key={index2}>
-            <div className="letra-parrafo-blog">{unTexto}</div>
+            {(index2===0) 
+                ?<div className="letra-parrafo-blog primera-parrafo-blog">{unTexto}</div>
+                :<div className="letra-parrafo-blog">{unTexto}</div>
+            }
+
+            
           </React.Fragment>
         ))}
       </>

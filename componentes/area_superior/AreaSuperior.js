@@ -74,16 +74,22 @@ let vista_movil = false;
     <>
       {/*--------------- Mostrar si mayor o igual a lg ≥992px ------------------ */}
       <div className=" d-none d-lg-block">
+      
 
         {vista_movil=false}
-        <div className={`${getFondo(fondo)}`}>
+
+       
+        <div className={`${getFondo(fondo)} `}>
+
+         <div className="linea_lateral_inferior item-fondo border border-dark"> </div>
+      
           {/* Logo */}
           <div className="item-logo   d-flex align-items-center justify-content-center">
             <Logo />
           </div>
 
           {/*    <div className="row d-none d-lg-block "> */}
-          <div className="item-menu  d-flex align-items-center justify-content-center">
+          <div className="item-menu  d-flex align-items-center justify-content-center ">
             <MenuNavBar />
           </div>
 
@@ -104,6 +110,8 @@ let vista_movil = false;
              <img className=" img-team-top  " src={`${servidor_url}/img/${img_team_top}`} />             
            </div>
            )}
+
+          
         </div>
 
         <IconosIzquierda />

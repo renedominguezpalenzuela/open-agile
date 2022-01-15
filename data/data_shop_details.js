@@ -5,7 +5,7 @@ export const shop_details = [
             "id":"1",
             "titulo":"Crashkurs Selbstorganisation in agilen Teams",
             "texto":"Silodenken, Innovationsstau und starre hierarchische Strukturen lassen Mitarbeitende frustriert und resigniert zurück. Mit diesem Crashkurs begeben Sie sich auf den Weg zu einer stimmigeren Zusammenarbeit, in der Menschen sich nicht nur privat, sondern auch in Organisationen auf Augenhöhe begegnen. ",
-            "imagen":"blogs/blog01.png",
+            "imagen":"shop/book.png",
             "texto_boton1":"für 29,95€ jetzt kaufen",
             "texto_boton2":"mehr erfahren",
             "texto_alt":"",
