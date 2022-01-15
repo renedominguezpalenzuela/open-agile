@@ -69,7 +69,7 @@ export default function Home() {
 
       <div id="principal" className="container-fluid g-0">
         <MenuFlotanteBoton />
-        <AreaSuperior fondo="barco" texto1={titulo1} texto2={titulo2} texto2a={titulo2a} boton_inicio_quiz={true} />
+        <AreaSuperior fondo="barco" texto1={titulo1} texto2={titulo2} texto2a={titulo2a} boton_inicio_quiz={true} area_gris_nueva={false} />
 
         <TextoBloque01 titulo2="" texto_parrafo_array={texto02} />
 

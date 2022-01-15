@@ -79,7 +79,7 @@ export default function Home() {
 
         
         
-        <AreaSuperior fondo="ajustable" texto1={texto1} texto2={texto2} titulo_muy_largo={true} />
+        <AreaSuperior fondo="ajustable" texto1={texto1} texto2={texto2} titulo_muy_largo={true} area_gris_nueva={true} />
 
 
 

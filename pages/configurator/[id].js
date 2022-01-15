@@ -40,7 +40,7 @@ export default function Configurator_Main({ configurator }) {
 
       <div id="principal" className="container-fluid g-0">
         <MenuFlotanteBoton />
-        <AreaSuperior fondo="gris" botones_configurador={configurator} />
+        <AreaSuperior fondo="gris" botones_configurador={configurator} area_gris_nueva={true} />
 
 
         

@@ -54,7 +54,7 @@ export default function Home({ curso }) {
         <AreaSuperior
           fondo="ajustable"
           texto1={titulo_area_superior}
-          titulo_largo={true}
+          titulo_largo={true} area_gris_nueva={true}
         />
 
         <div className="row pt-5 pb-5">

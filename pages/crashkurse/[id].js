@@ -57,7 +57,7 @@ export default function Home({ curso }) {
       <div id="principal" className="container-fluid g-0">
         <MenuFlotanteBoton />
 
-        <AreaSuperior fondo="gris" texto1={titulo1} texto2={titulo2} texto2a={titulo2a} />
+        <AreaSuperior fondo="gris" texto1={titulo1} texto2={titulo2} texto2a={titulo2a}  area_gris_nueva={true}/>
 
         {/* Tabla 1: imagenes alternas */}
         {/* <div id="course" className="row  text-center mb-5 mt-5  ">

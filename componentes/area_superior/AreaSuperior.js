@@ -57,7 +57,8 @@ export default function AreaSuperior({
   iconos_team,
   email,
   phone,
-  linkedin
+  linkedin,
+  area_gris_nueva
 
   
 }) {
@@ -80,8 +81,9 @@ let vista_movil = false;
 
        
         <div className={`${getFondo(fondo)} `}>
-
-         <div className="linea_lateral_inferior item-fondo border border-dark"> </div>
+          {area_gris_nueva!=undefined && area_gris_nueva!=false &&
+         <div className="linea_lateral_inferior item-fondo "> </div>
+        }
       
           {/* Logo */}
           <div className="item-logo   d-flex align-items-center justify-content-center">
@@ -240,6 +242,9 @@ const contenido_principal = (
         </>
       )}
 
+
+      <div className="mb-5">
+
       {iconos != undefined && iconos && <Content01Iconos />}
 
 
@@ -339,6 +344,9 @@ const contenido_principal = (
           </div>
         </>
       )}
+
+
+      </div>
 
       {/*Formulario de contacto  */}
       {formulario_contacto != undefined && formulario_contacto && (

@@ -101,11 +101,11 @@ const text04_bullets = [
 
       <MenuFlotanteBoton />
   
-        <AreaSuperior fondo="ajustable" texto1={titulo1} texto2={titulo2} texto2a={titulo2a}  texto_parrafo_blanco_cursos={texto03} texto_parrafo_plequitas={text04_bullets} />
+        <AreaSuperior fondo="ajustable"  texto_parrafo_blanco_cursos={texto03} texto_parrafo_plequitas={text04_bullets}  area_gris_nueva={true}/>
 
    
   {/*Carrousel  */}
-        <Content05 datos={vlog} />
+        <Content05 datos={vlog} color_fondo="blanco"/>
 
     <div className="mt-5"> </div>
 

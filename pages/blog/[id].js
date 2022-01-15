@@ -75,7 +75,7 @@ export default function Home({ blog }) {
       <div id="principal" className="container-fluid g-0">
         <MenuFlotanteBoton />
 
-        <AreaSuperior fondo="ajustable" />
+        <AreaSuperior fondo="ajustable" area_gris_nueva={true}/>
 
         <div className="row   d-flex align-items-center justify-content-center">
           <div className="col-9">

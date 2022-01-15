@@ -37,7 +37,7 @@ export default function Home({shop}) {
       <div id="principal" className="container-fluid g-0">
         <MenuFlotanteBoton />
 
-        <AreaSuperior fondo="ajustable" texto1={titulo_area_superior} texto2={titulo_area_superior2} titulo_muy_largo={true} />
+        <AreaSuperior fondo="ajustable" texto1={titulo_area_superior} texto2={titulo_area_superior2} titulo_muy_largo={true} area_gris_nueva={true} />
 
 
  <div className="row  mt-5 mb-5 pt-5  d-flex justify-content-center ">

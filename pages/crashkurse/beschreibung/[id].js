@@ -55,7 +55,7 @@ export default function Home({ curso }) {
       <div id="principal" className="container-fluid g-0">
         <MenuFlotanteBoton />
 
-        <AreaSuperior fondo="ajustable" texto1={titulo_area_superior} titulo_largo={true} />
+        <AreaSuperior fondo="ajustable" texto1={titulo_area_superior} titulo_largo={true} area_gris_nueva={true} />
 
         <div className="row  pt-5 pb-5">
           <div className="col-md-4 ">

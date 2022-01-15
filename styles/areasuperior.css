@@ -1,26 +1,35 @@
 .item-logo {
     grid-column: 1/2;
     grid-row: 1/2;
+    z-index: 100;
 }
 
 .item-menu {
     grid-column: 2/3;
     grid-row: 1/2;
+    z-index: 1000;
 }
 
 .item-boton {
     grid-column: 3/4;
     grid-row: 1/2;
+    z-index: 100;
 }
 
 .item-titulo {
+    position: relative;
     grid-column: 2/3;
     grid-row: 2/3;
+    z-index: 100;
+    align-self:flex-start;
+
 }
 
 .item-logo-movil {
+    position: relative;
     grid-column: 1/2;
     grid-row: 2/3;
+    z-index: 100;
 
 }
 
@@ -33,6 +42,7 @@
     color: #ffffff;
     font-size: 9.5vw;
     text-shadow: 1px 3px 15px rgb(0 0 0 / 40%);
+    z-index: 100;
 }
 
 .titulo2_vista_movil {
@@ -40,6 +50,7 @@
     color: #FF599A;
     font-size: 4.8vw;
     text-shadow: 1px 3px 15px rgb(0 0 0 / 40%);
+    z-index: 100;
 }
 
 .item-img-team-top {
@@ -48,15 +59,18 @@
     grid-row: 2/4;
     justify-self: end;
     align-self: flex-end;
+    z-index: 100;
 
 }
 
 .texto_parrafo_blanco_team {
     width: 55vw;
+    z-index: 100;
 }
 
 .img-team-top {
     height: 80vh;
+    z-index: 100;
 }
 
 .item-iconos-team {
@@ -65,7 +79,7 @@
 
     justify-self: start;
     align-self: end;
-
+    z-index: 100;
 }
 
 .social-img-team {
@@ -73,7 +87,7 @@
     height: 2rem;
     font-size: 1.8rem;
     filter: brightness(0) saturate(100%)  invert(96%) sepia(4%) saturate(15%) hue-rotate(109deg) brightness(103%) contrast(105%);
-
+    z-index: 100;
     
     /* filter: invert(100%) sepia(0%) saturate(7454%) hue-rotate(84deg) brightness(115%) contrast(104%); */
 

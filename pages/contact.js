@@ -32,7 +32,7 @@ export default function Home() {
 
     <div id="principal" className="container-fluid g-0">
         <MenuFlotanteBoton />
-        <AreaSuperior fondo="gris"  texto1="" texto2="" texto2a="" formulario_contacto={true} />
+        <AreaSuperior fondo="gris"  texto1="" texto2="" texto2a="" formulario_contacto={true} area_gris_nueva={true} />
 
 
 

@@ -82,7 +82,7 @@ export default function Home() {
 
       <div id="principal" className="container-fluid g-0">
         <MenuFlotanteBoton />
-        <AreaSuperior fondo="barco" titulo_quiz_result="Ergebnis" texto_quiz_result={mensaje} />       
+        <AreaSuperior fondo="barco" titulo_quiz_result="Ergebnis" texto_quiz_result={mensaje} area_gris_nueva={false} />       
       </div>
 
       {/*Menu Lateral oculto  */}

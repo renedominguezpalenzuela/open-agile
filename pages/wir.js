@@ -53,6 +53,7 @@ export default function Home({team}) {
         <AreaSuperior
           fondo="ajustable"
           texto1={titulo1}
+          area_gris_nueva={true}
         
         />
 

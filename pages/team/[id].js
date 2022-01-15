@@ -72,6 +72,7 @@ export default function Home({ team }) {
           email={correo}
           linkedin={linkedin}
           phone={telefono}
+          area_gris_nueva={true}
         />
 
         {title3 != undefined && title3 != "" && (

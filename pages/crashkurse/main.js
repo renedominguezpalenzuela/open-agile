@@ -56,9 +56,9 @@ export default function Home({cursos}) {
 
       <MenuFlotanteBoton />
   
-        <AreaSuperior fondo="variable"  texto_parrafo_blanco_cursos={texto_parrafo_array} cursos={true}  firma={[ "Dein Open Agile Team"," for better work" ]} />
+        <AreaSuperior fondo="variable"  texto_parrafo_blanco_cursos={texto_parrafo_array} cursos={true} area_gris_nueva={true} firma={[ "Dein Open Agile Team"," for better work" ]} />
 
-
+{/* variable */}
     
          {/*Cards CRASHKURSE  */}
         <Content02Cursos cursos={cursos} /> 

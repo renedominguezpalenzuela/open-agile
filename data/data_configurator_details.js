@@ -51,8 +51,8 @@ export const configurator_details = [
 
   {
     "id": "9",
-    "botones": [ { "id": "21","texto": "Crashkurs Agile Facilitator",   "link":"/crashkurse/2", "tipo":"1"},
-                   { "id": "22","texto": "Crashkurs Agile Coach", "link":"/crashkurse/1", "tipo":"1"}],
+    "botones": [ { "id": "21","texto": "Crashkurs Agile Facilitator",   "link":"/crashkurse/beschreibung/2", "tipo":"1"},
+                   { "id": "22","texto": "Crashkurs Agile Coach", "link":"/crashkurse/beschreibung/1", "tipo":"1"}],
 
   },
 {
@@ -76,7 +76,7 @@ export const configurator_details = [
 
   {
     "id": "12",
-    "botones": [ {"texto": "Crashkurs Agile Coach", "link":"/crashkurse/1", "tipo":"1"}   ]
+    "botones": [ {"texto": "Crashkurs Agile Coach", "link":"/crashkurse/beschreibung/1", "tipo":"1"}   ]
 
   },
 

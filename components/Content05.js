@@ -9,10 +9,18 @@ import Card01 from "./Card01";
 //Responsivo: ERROR,
 //TODO: Crear reglas para cuando cambia de tamano mostrar cards normales
 
-export default function Content05({ datos }) {
+export default function Content05({ datos, color_fondo }) {
+
+ let clase_color_carrusel='color_carrusel';
+ if (color_fondo==='blanco') {
+   clase_color_carrusel='color_carrusel_blanco';
+ }
+
   return (
     <>
-      <div id="MyCarouselTitle" className="color_carrusel pb-1 ">
+      <div id="MyCarouselTitle" className={`${clase_color_carrusel} pb-1`}>
+
+       {/* <div id="MyCarouselTitle" className="color_carrusel pb-1 ">  */}
         <div className=" row justify-content-center font_title_seccion_sombra   mt-2  pt-5">
           {" "}
           VLOG

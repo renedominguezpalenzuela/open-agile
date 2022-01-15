@@ -104,7 +104,7 @@ const titulo_main = "DAS TEAM";
 
       <MenuFlotanteBoton />
   
-        <AreaSuperior fondo="gris" texto1={titulo1} texto2={titulo2} texto2a={titulo2a} />
+        <AreaSuperior fondo="gris" texto1={titulo1} texto2={titulo2} texto2a={titulo2a} area_gris_nueva={true}/>
 
 
    

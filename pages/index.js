@@ -49,7 +49,7 @@ export default function Home({
       
         <MenuFlotanteBoton />
 
-        <AreaSuperior fondo="gris" texto1="OPEN AGILE" texto2="FOR BETTER WORK" botones_configurador={botones_configurador} iconos={true} />
+        <AreaSuperior fondo="gris" texto1="OPEN AGILE" texto2="FOR BETTER WORK" botones_configurador={botones_configurador} iconos={true} area_gris_nueva={true}/>
 
         {/*Cards CRASHKURSE  */}
         <Content02Cursos cursos={cursos} />
