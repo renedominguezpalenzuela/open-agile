@@ -143,7 +143,7 @@ export default function MenuNavBar() {
             <div className="separador_menu">/</div>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/#blog">
+            <a className="nav-link" href="/blog">
               BLOG
             </a>
           </li>

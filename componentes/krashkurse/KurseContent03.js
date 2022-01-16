@@ -32,7 +32,7 @@ export default function KurseContent03({
         <div className="tabla-titulo-cursos mt-4  ">{titulo}</div>
 
         {titulo_kosten != undefined && (
-          <div className="tabla-titulo-cursos-kosten mt-1  ">
+          <div className=" mt-1  ">
             {titulo_kosten}
           </div>
         )}

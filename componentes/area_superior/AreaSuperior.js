@@ -292,7 +292,7 @@ const contenido_principal = (
       {texto_parrafo_blanco_cursos != undefined && texto_parrafo_blanco_cursos.length > 0 && (
         <>
             {/* mostrar solo en pantalla grande - espacio con el titulo mt-*/}
-            <div className="row font_smaller_letter_white_cursos ms-5 mt-3 me-3 justificar margen_superior">
+            <div className="row font_smaller_letter_white_cursos ms-5 mt-3 me-5 justificar margen_superior">
               {texto_parrafo_blanco_cursos.map((unaLinea, index) => (
                 <p key={index}>{unaLinea}</p>
               ))}
@@ -316,7 +316,7 @@ const contenido_principal = (
       
       {texto_parrafo_plequitas != undefined && texto_parrafo_plequitas.length > 0 && (
         <>
-          <div className="row font_smaller_letter_white ms-5 me-3 pb-3 justificar">
+          <div className="row font_smaller_letter_white_cursos ms-5 me-3 pb-3 justificar">
             <ul>
             {texto_parrafo_plequitas.map((unaLinea, index) => (
               <li key={index} className="mybullets3">{unaLinea}</li>

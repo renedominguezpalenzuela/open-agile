@@ -10,7 +10,16 @@ export default function MenuKrashkurse({
   link_kosten,
   link_termine,
   link_pdf,
+  link_boton
 }) {
+
+let link_boton_new="#dates_section";
+if (link_boton!=undefined && link_boton.length>0) {
+  link_boton_new = link_boton;
+}
+ 
+
+
   return (
     <>
       <div id="menukurs" className=" p-4"></div>
@@ -68,14 +77,18 @@ export default function MenuKrashkurse({
                 <td align="right">></td>
               </tr>
 
-              <tr className="font-card-menu-crashkurse">
-                <td>
-                  <Link href={`${link_termine}`}>
-                    <div className="myanimacioncursos">TERMINE</div>
-                  </Link>
-                </td>
-                <td align="right">></td>
-              </tr>
+
+
+             {link_termine!=undefined && link_termine!="" &&
+                <tr className="font-card-menu-crashkurse">
+                  <td>
+                    <Link href={`${link_termine}`}>
+                      <div className="myanimacioncursos">TERMINE</div>
+                    </Link>
+                  </td>
+                  <td align="right">></td>
+                </tr>
+              }
 
               <tr className="font-card-menu-crashkurse">
                 <td>
@@ -89,17 +102,17 @@ export default function MenuKrashkurse({
               </tr>
             </tbody>
           </table>
-          <Link href="#dates_section">
-            {/* <div className="mt-4 font-card-menu-crashkurse-foot">
-              JETZT ANMELDEN
-            </div> */}
 
+
+          <Link href={link_boton_new}>
              <button
                     type="button"
                     className="btn  btn-cursos2 font-btn-card-shop rounded-pill mt-4 "  >
                      JETZT ANMELDEN
                   </button>
           </Link>
+
+
         </div>
       </div>
     </>

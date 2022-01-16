@@ -38,8 +38,17 @@ export default function Home({ curso }) {
     link_pdf,
     crashkurs_date_title,
     crashkurs_date,
-     texto_kosten
+     texto_kosten,
+     link_boton
   } = curso;
+
+   let link_termine_new ="";
+ 
+   
+  if (link_termine != undefined && link_termine.length > 0) {
+       link_termine_new=servidor_url+"/"+link_leistungen+link_termine;                  
+   }
+   
 
   return (
     <>
@@ -63,7 +72,7 @@ export default function Home({ curso }) {
         <div className="row pt-5 pb-5">
           <div className="col-md-4 ">
            <MenuKraskurse link_beschreibung={link_beschreibung} link_vorteile={link_vorteile} link_inhalte={link_inhalte}    link_leistungen={link_leistungen}
-              link_kosten={link_kosten}  link_termine={`${servidor_url}/${link_beschreibung}${link_termine}`} link_pdf={link_pdf} />
+              link_kosten={link_kosten}  link_termine={link_termine_new} link_pdf={link_pdf} link_boton={link_boton} />
           </div>
           <div className="col-md-7 pt-5   pe-5">
 
@@ -75,7 +84,7 @@ export default function Home({ curso }) {
               titulo_botones={crashkurs_date_title}
               text_termine={text_termine}
               link_weitere_infos={link_kosten}
-              link_termine={`${servidor_url}/${link_leistungen}${link_termine}`}
+             
               link_pdf={link_pdf}
             />
 

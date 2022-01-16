@@ -26,7 +26,7 @@ import ModalFormCookie from "../components/ModalFormCookie";
 //----------------------------------------------------------------------------------------------------------
 
 const myfunc = (first_time) => {
-  console.log("I was activated 5 seconds later " + first_time);
+ 
 
   return <>
    

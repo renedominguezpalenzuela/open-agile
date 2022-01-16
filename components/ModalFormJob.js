@@ -1,5 +1,4 @@
-
-import  React, { useRef } from 'react';
+import React, { useRef } from "react";
 
 import Radio from "@mui/material/Radio";
 // import RadioGroup from "@mui/material/RadioGroup";
@@ -27,9 +26,6 @@ import Button from "@mui/material/Button";
 import FormControl from "@mui/material/FormControl";
 
 import Box from "@mui/material/Box";
-
-
-
 
 const StyledFormControlLabel = styled((props) => (
   <FormControlLabel {...props} />
@@ -120,7 +116,7 @@ export default function ModalFormJob({
 
   const [value2, setValue2] = React.useState("Controlled");
   const [value3, setValue3] = React.useState("Controlled");
-    const [value4, setValue4] = React.useState(". . .");
+  const [value4, setValue4] = React.useState(". . .");
 
   const handleChange1 = (event) => {
     setValue1(event.target.value);
@@ -134,38 +130,27 @@ export default function ModalFormJob({
     setValue3(event.target.value);
   };
 
-
-const handleChange4 = (event) => {
+  const handleChange4 = (event) => {
     setValue4(event.target.value);
   };
 
+  const hiddenFileInput = useRef(null);
 
-const hiddenFileInput = useRef(null);
-
-  const handleChange = event => {
-
+  const handleChange = (event) => {
     if (event.target.files && event.target.files[0]) {
       const i = event.target.files[0];
 
-      console.log(i.name);
-     setValue4(i.name);
+      
+      setValue4(i.name);
 
-
-       const body = new FormData();
-       body.append("image", i);
-
-
+      const body = new FormData();
+      body.append("image", i);
     }
   };
 
-
-  const handleClick = event => {
+  const handleClick = (event) => {
     hiddenFileInput.current.click();
   };
-
-
-
-
 
   const styles = {
     //  input: { color: 'blue'}, //Color de la fuente al escribir
@@ -204,6 +189,38 @@ const hiddenFileInput = useRef(null);
 
     "& .MuiFormLabel-root": {
       color: "#ffffff", //Color del label
+      fontFamily: "Montserrat-Regular",
+    },
+  };
+
+  const styles2 = {
+    "& .MuiInputBase-root": {
+      // minHeight: 100
+
+      "& input": {
+        textAlign: "left",
+        letterSpacing: "0.06vw",
+        color: "#6B6B74",
+        fontFamily: "Montserrat-Light",
+      },
+    },
+
+    "& .MuiOutlinedInput-root": {
+      color: "#6B6B74",
+      backgroundColor: "#ECE7E7",
+
+      "& > fieldset": {
+        borderColor: "#ECE7E7",
+      },
+    },
+    "& .MuiOutlinedInput-root:hover": {
+      "& > fieldset": {
+        borderColor: "#e4207864",
+      },
+    },
+
+    "& .MuiFormLabel-root": {
+      color: "#ffffff",
       fontFamily: "Montserrat-Regular",
     },
   };
@@ -247,7 +264,6 @@ const hiddenFileInput = useRef(null);
                 <TextField
                   id="name"
                   label="Name, Vorname"
-  
                   className="ancho-edit2 "
                   sx={styles}
                   inputProps={fuentes1}
@@ -259,7 +275,6 @@ const hiddenFileInput = useRef(null);
                 <TextField
                   id="address"
                   label="E-Mail Adresse"
-  
                   className="ancho-edit2 "
                   sx={styles}
                   inputProps={fuentes1}
@@ -271,7 +286,6 @@ const hiddenFileInput = useRef(null);
                 <TextField
                   id="telefone"
                   label="Telefonnummer"
-   
                   className="ancho-edit2 "
                   sx={styles}
                   inputProps={fuentes1}
@@ -311,34 +325,36 @@ const hiddenFileInput = useRef(null);
               <div className="row d-flex justify-content-start ps-3 mt-3 pe-3  ">
                 <TextField
                   id="outlined-multiline-flexible"
-                  label="Erzähle uns von Dir und Deiner Erfahrung in dem gesuchten Bereich"
-
-                  className="ancho-edit2 "
-                  sx={styles}
+                  label="Erzähle uns von Dir und Deinen Hard Skills"
+                  multiline
+                  maxRows={2}
+                  rows={2}
+                  className=""
+                  sx={styles2}
                   inputProps={fuentes1}
                   InputLabelProps={fuentes2}
                 />
               </div>
 
               <div className="row  g-0 ms-3 mt-4  mb-2  d-flex justify-content-start">
-
                 {/* <input type="file" className="ocultar" id="customFile" onChange={handleChange4} />      */}
-                 <input type="file"
+                <input
+                  type="file"
                   ref={hiddenFileInput}
                   onChange={handleChange}
-className="ocultar"
-                 
-                 />
-  
+                  className="ocultar"
+                />
 
                 <div className="col-md-5  d-flex justify-content-start">
-                  <button type="button" className="btn  boton_modal_form" 
-                  onClick={handleClick}>
+                  <button
+                    type="button"
+                    className="btn  boton_modal_form"
+                    onClick={handleClick}>
                     Lebenslauf hochladen
                   </button>
                 </div>
-                <div className="col-md-6 ms-2 d-flex justify-content-start align-items-center texto-AGBS">                 
-                       {value4}     
+                <div className="col-md-6 ms-2 d-flex justify-content-start align-items-center texto-AGBS">
+                  {value4}
                 </div>
               </div>
 
