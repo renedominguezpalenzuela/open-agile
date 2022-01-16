@@ -19,7 +19,7 @@
 
 .font1-card-job-new{
 
-  color: #24325a   ;
+  color: #F82D7C      ;
   font-family: Montserrat-BoldItalic;
   /* color: #ffffff; */
   text-align: left;
@@ -189,6 +189,23 @@
   /* color: #ffffff !important; */
 }
 
+
+
+ 
+.btn-cursos2 {
+  background-color: #e21d75 !important;
+  width: 90%;
+  color:white;
+
+}
+
+.btn-cursos2:hover {
+  background-color: #24325a !important;
+  color: white !important;
+}
+
+
+
 .btn-card-job:hover
 /* .btn-card:active, */
 /* .btn-card:visited, */
@@ -326,7 +343,7 @@ div.horizontal-line{
 
 
     color: #24325a   ;
-    font-family: Montserrat-BoldItalic;
+    font-family: Montserrat-Bold;
     /* color: #ffffff; */
     text-align: left;
     font-size: 1.7rem;

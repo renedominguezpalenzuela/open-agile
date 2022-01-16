@@ -83,8 +83,8 @@ export default function MenuFlotante() {
         
 
         <li>
-            <a href="/jobs" className="nav-link text-truncate">
-              <span className="ms-1  font-items-side-menu">JOBS</span>
+            <a href="/shop" className="nav-link text-truncate">
+              <span className="ms-1  font-items-side-menu">SHOP</span>
             </a>
         </li>
 

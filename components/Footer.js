@@ -126,13 +126,13 @@ export default function Footer() {
             <div className="font_footer_title mt-3">Open Agile </div>
             <div className="font_facit_text_very_small mt-3">
               <div>
-                <a className="color-font-dropdown mylinkhoover" href="/team">
+                <a className="color-font-dropdown mylinkhoover" href="/team/main">
                   Team
                 </a>
               </div>
 
               <div>
-                <a className="color-font-dropdown mylinkhoover" href="/job">
+                <a className="color-font-dropdown mylinkhoover" href="/team/jobs">
                   Jobs
                 </a>
               </div>

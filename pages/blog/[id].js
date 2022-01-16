@@ -18,9 +18,6 @@ import Tabla02 from "../../components/crashkurse/tabla02";
 import Card01Lista from "../../components/Card01Lista";
 import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
 
-import TextoBlog01 from "../../components/blogs/TextoBlog01";
-import TextoBlog02 from "../../components/blogs/TextoBlog02";
-
 // import MenuSuperior from "../components/MenuSuperior";
 import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
 
@@ -30,10 +27,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { faPinterestP } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faShareAlt } from "@fortawesome/free-solid-svg-icons";
+
+import { faLongArrowAltLeft } from "@fortawesome/free-solid-svg-icons";
+
+
 
 //----------------------------------------------------------------------------------------------------------
 //            Pagina inicial principal
@@ -75,7 +76,7 @@ export default function Home({ blog }) {
       <div id="principal" className="container-fluid g-0">
         <MenuFlotanteBoton />
 
-        <AreaSuperior fondo="ajustable" area_gris_nueva={true}/>
+        <AreaSuperior fondo="ajustable" area_gris_nueva={true} />
 
         <div className="row   d-flex align-items-center justify-content-center">
           <div className="col-9">
@@ -96,79 +97,83 @@ export default function Home({ blog }) {
 
             <div className="row  mt-1 mb-2  ">
               <div className="contenedor-iconos-blog ">
-                <div className="item-1-iconos-blog">
-                  <a href="https://www.facebook.com/OpenAgile21" className="">
+               
+
+                  <div className="item-1-iconos-blog  ">
+                  <a
+                    href={`http://www.facebook.com/share.php?u=${servidor_url}/blog/${id}`}
+                    className="items-en-linea-padre"  target="_blank">
                     <FontAwesomeIcon
                       icon={faFacebookF}
-                      className="iconos-blogs"
+                      className="iconos-blogs items-en-linea-hijo"
                     />
+
+                    <div className="ms-1 texto-iconos-blogs items-en-linea-hijo ">
+                      Facebook
+                    </div>
+
+                  
                   </a>
                 </div>
 
-                <div className="item-2-iconos-blog texto-iconos-blogs ">
-                  Facebook
-                </div>
-
-                <div className="item-3-iconos-blog">
-                  <a href="https://www.facebook.com/OpenAgile21" className="">
+                <div className="item-2-iconos-blog  ">
+                  <a
+                    href="https://www.facebook.com/OpenAgile21"
+                    className="items-en-linea-padre ">
                     <FontAwesomeIcon
                       icon={faTwitter}
-                      className="iconos-blogs"
+                      className="iconos-blogs items-en-linea-hijo"
                     />
+
+                    <div className="ms-1 texto-iconos-blogs items-en-linea-hijo ">
+                      Twitter
+                    </div>
                   </a>
                 </div>
 
-                <div className="item-4-iconos-blog texto-iconos-blogs ">
-                  Twitter
-                </div>
-
-                <div className="item-5-iconos-blog">
-                  <a href="https://www.facebook.com/OpenAgile21" className="">
+                <div className="item-3-iconos-blog  ">
+                  <a
+                    href="https://www.facebook.com/OpenAgile21"
+                    className="items-en-linea-padre ">
                     <FontAwesomeIcon
-                      icon={faPinterestP}
-                      className="iconos-blogs"
+                      icon={faLinkedinIn}
+                      className="iconos-blogs items-en-linea-hijo"
                     />
+
+                    <div className="ms-1 texto-iconos-blogs items-en-linea-hijo ">
+                      Linkedln
+                    </div>
                   </a>
                 </div>
 
-                <div className="item-6-iconos-blog texto-iconos-blogs ">
-                  Pinterest
-                </div>
-
-                <div className="item-7-iconos-blog">
-                  <a href="https://www.facebook.com/OpenAgile21" className="">
-                    <FontAwesomeIcon icon={faHeart} className="iconos-blogs" />
-                  </a>
-                </div>
-
-                <div className="item-8-iconos-blog texto-iconos-blogs ">
-                  Love This
-                </div>
-
-                <div className="item-9-iconos-blog">
-                  <a href="https://www.facebook.com/OpenAgile21" className="">
+                <div className="item-4-iconos-blog  ">
+                  <a
+                    href="https://www.facebook.com/OpenAgile21"
+                    className="items-en-linea-padre ">
                     <FontAwesomeIcon
                       icon={faWhatsapp}
-                      className="iconos-blogs"
+                      className="iconos-blogs items-en-linea-hijo"
                     />
+
+                    <div className="ms-1 texto-iconos-blogs items-en-linea-hijo ">
+                      WhatsApp
+                    </div>
                   </a>
                 </div>
 
-                <div className="item-10-iconos-blog texto-iconos-blogs ">
-                  WhatsApp
-                </div>
-
-                <div className="item-11-iconos-blog">
-                  <a href="https://www.facebook.com/OpenAgile21" className="">
+                <div className="item-5-iconos-blog  ">
+                  <a
+                    href="https://www.facebook.com/OpenAgile21"
+                    className="items-en-linea-padre ">
                     <FontAwesomeIcon
                       icon={faShareAlt}
-                      className="iconos-blogs"
+                      className="iconos-blogs items-en-linea-hijo"
                     />
-                  </a>
-                </div>
 
-                <div className="item-12-iconos-blog texto-iconos-blogs ">
-                  Share
+                    <div className="ms-1 texto-iconos-blogs items-en-linea-hijo ">
+                      Share
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -186,59 +191,51 @@ export default function Home({ blog }) {
 
         <div className="row mt-5 mb-5  d-flex align-items-center justify-content-center">
           <div className="contenido-flechas-blog">
-            <div className="item-1-flechas-blog texto-flechas-blogs ">
-              <Link href={`${servidor_url}${link_anterior}`}>
-                Vorheriger Artikel
-              </Link>
-            </div>
 
-            <div className="item-2-flechas-blog texto-flechas-blogs ">
-            <Link href={`${servidor_url}${link_siguiente}`}>
-              Nächster Artikel
-             </Link> 
-            </div>
+              <div className="item-1-flechas-blog flecha">
+                <a href={`${servidor_url}${link_anterior}`} className="items-en-linea-padre ">
+                  <div className="texto-flechas-blogs">
+                      Vorheriger Artikel
+                  </div>
 
-            <div className="item-3-flechas-blog ">
-              <Link href={`${servidor_url}${link_anterior}`}>
-                <img
-                  className="img-fluid "
-                  src={`${servidor_url}/img/blogs/flecha_azul_left.svg`}
-                />
-              </Link>
-            </div>
 
-            <div className="item-5-flechas-blog texto-flechas-blogs2">
-              <Link href={`${servidor_url}${link_anterior}`}>
-                {link_anterior_nombre}
-              </Link>
-            </div>
+                   {/* <FontAwesomeIcon
+                      icon={faLongArrowAltLeft}
+                      className="iconos-blogs items-en-linea-hijo "
+                    /> */}
+                   <div className="">
+                        <img className="img-fluid " src={`${servidor_url}/img/blogs/flecha_azul_left.svg`}  />
+                  </div> 
 
-            <div className="item-6-flechas-blog texto-flechas-blogs2 ">
-              <Link href={`${servidor_url}${link_anterior}`}>
-                {link_anterior_nombre2}
-              </Link>
-            </div>
+                  <div className=" texto-flechas-blogs2 ">
+                        {link_anterior_nombre2}
+                  </div>
 
-            <div className="item-4-flechas-blog ">
-              <Link href={`${servidor_url}${link_siguiente}`}>
-                <img
-                  className="img-fluid "
-                  src={`${servidor_url}/img/blogs/flecha_azul_rigth.svg`}
-                />
-              </Link>
-            </div>
+                  <div className=" texto-flechas-blogs2">                
+                        {link_anterior_nombre}                
+                  </div>
+                </a>
+              </div>
 
-            <div className="item-7-flechas-blog texto-flechas-blogs2 ">
-            <Link href={`${servidor_url}${link_siguiente}`}>
-              {link_siguiente_nombre}
-              </Link>
-            </div>
+           <div className="item-2-flechas-blog flecha" >
+            <a href={`${servidor_url}${link_siguiente}`} className="items-en-linea-padre "  >
+              <div className="texto-flechas-blogs ">           
+                  Nächster Artikel             
+              </div>
 
-            <div className="item-8-flechas-blog texto-flechas-blogs2 ">
-            <Link href={`${servidor_url}${link_siguiente}`}>
-              {link_siguiente_nombre2}
-              </Link>
-            </div>
+              <div className="">          
+                  <img className="img-fluid flecha" src={`${servidor_url}/img/blogs/flecha_azul_rigth.svg`} />
+              </div>
+
+              <div className="texto-flechas-blogs2 ">              
+                {link_siguiente_nombre}
+              </div>
+
+              <div className="texto-flechas-blogs2 ">
+                  {link_siguiente_nombre2}
+              </div>
+            </a>
+            </div>   
           </div>
         </div>
 
@@ -258,12 +255,13 @@ const contenido = (contenido) => {
       <>
         {contenido.text.map((unTexto, index2) => (
           <React.Fragment key={index2}>
-            {(index2===0) 
-                ?<div className="letra-parrafo-blog primera-parrafo-blog">{unTexto}</div>
-                :<div className="letra-parrafo-blog">{unTexto}</div>
-            }
-
-            
+            {index2 === 0 ? (
+              <div className="letra-parrafo-blog primera-parrafo-blog">
+                {unTexto}
+              </div>
+            ) : (
+              <div className="letra-parrafo-blog">{unTexto}</div>
+            )}
           </React.Fragment>
         ))}
       </>

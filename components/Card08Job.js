@@ -40,7 +40,7 @@ export default function Card08Job({
 
               {titulo_parrafo1 != undefined && titulo_parrafo1 != "" && (
                 <>
-                  <div className="font2-card-job pt-2">{titulo_parrafo1}</div>
+                  <div className="font2-card-job pt-2 mt-3">{titulo_parrafo1}</div>
                 </>
               )}
 
@@ -95,8 +95,8 @@ export default function Card08Job({
             
             </div>
 
-            <div className="row mt-3 mb-2    g-0   ">
-              <div className="col   w-100  d-flex justify-content-center ">
+            <div className="row mt-3 mb-2    g-0   d-flex justify-content-center">
+              <div className="col-6      d-flex justify-content-center ">
                
                  
                   <button
