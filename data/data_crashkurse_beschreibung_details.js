@@ -49,7 +49,7 @@ export const crashkurse_beschreibung_details = [
         "texto_kosten" : ["4.790,- Euro netto (zzgl. 19% USt)"],
 
 
-        "crashkurs_date_title":"AGILE COACH",
+        "crashkurs_date_title":"agile coach",
         
         "crashkurs_date" : [
         {"id":"1", "quartal":"1",  "date_list" : [
@@ -107,7 +107,7 @@ export const crashkurse_beschreibung_details = [
                             'Fotoprotokoll & Screenshots'
                             ],
         "texto_kosten" : ["1.190,- Euro netto (zzgl. 19% USt)"],
-        "crashkurs_date_title":"AGILE FACILITATOR",
+        "crashkurs_date_title":"agile facilitator",
         "form_title":"",
         "crashkurs_date" : [
         {"id":"1","quartal":"1", "date_list" : [{"date1" : "04.02.2022", "date2":  "05.02.2022"}],"form_title":"", "day":"(Fr. / Sa.)"},

@@ -184,7 +184,7 @@ export default function LeistungenTabs({ texto01, texto02, texto03 , titulo}) {
                 </a>
               </div>
               <div class="col-12 mt-4">
-                <a href="#">
+                <a href="tel:+49 (0) 421 22347567">
                   {/*  btn-outline-primary font_boton  */}
                   <button
                     type="button"

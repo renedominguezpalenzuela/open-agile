@@ -27,9 +27,6 @@ export default function KurseContent02({imagen, titulo, texto, imagen_botones,ti
                                 )
                       )}
 
-                  {/* <div className="mt-5  ">
-                      <KurseButtons titulo_botones={titulo_botones} imagen ={imagen_botones} text_termine={text_termine} link_weitere_infos={link_weitere_infos}  link_termine={link_termine} link_pdf={link_pdf}/>
-                  </div>  */}
        </div>
     
 

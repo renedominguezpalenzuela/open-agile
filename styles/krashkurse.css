@@ -139,6 +139,20 @@
   
 
 
+
+  
+.tabla-titulo-cursos-kosten {
+
+  
+   
+  font-size: 1em;
+  font-family: Montserrat-SemiBold;
+  color: #24325a;
+  text-transform:capitalize!important;
+}
+
+
+
   
   
 .tabla-titulo-botones-cursos {
@@ -220,6 +234,16 @@
 }
 
 
+.font-kosten-cursos-titulo{
+  font-family: Montserrat-Bold;
+  color: #24325a;
+  /* font-size: 1em; */
+  font-size:1.1rem;
+  text-overflow: ellipsis;
+      
+}
+
+
 
 .font-kosten-cursos{
   font-family: Montserrat-Regular;
@@ -255,7 +279,7 @@
   color: #24325a;
   /* font-size: 1em; */
   font-size:0.7rem;
-  /* text-transform: lowercase; */
+  text-transform: uppercase;
   text-align: left;
 
 }

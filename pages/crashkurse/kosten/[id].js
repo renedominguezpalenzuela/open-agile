@@ -37,7 +37,8 @@ export default function Home({ curso }) {
     link_termine,
     link_pdf,
     crashkurs_date_title,
-    crashkurs_date
+    crashkurs_date,
+    texto_leistungen
   } = curso;
 
   return (
@@ -72,10 +73,13 @@ export default function Home({ curso }) {
               texto={texto_kosten}
               imagen_botones={image2}
               titulo_botones={crashkurs_date_title}
+              titulo_kosten = {crashkurs_date_title}
               text_termine={text_termine}
               link_weitere_infos={link_beschreibung}
               link_termine={`${servidor_url}/${link_kosten}${link_termine}`}
               link_pdf={link_pdf}
+              texto_leistungen={texto_leistungen}
+              
             />
 
             
