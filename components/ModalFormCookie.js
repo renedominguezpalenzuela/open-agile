@@ -116,7 +116,7 @@ export default function ModalFormCookie({ id, mostrar }) {
             <div className="col-6">
               <FormControlLabel
                 control={<IOSSwitch sx={{ m: 1 }} defaultChecked />}
-                label="Funktional"
+                label="Notwendig"
                    sx={styles3}
               />
             </div>
@@ -124,7 +124,7 @@ export default function ModalFormCookie({ id, mostrar }) {
             <div className="col-6">
               <FormControlLabel
                 control={<IOSSwitch sx={{ m: 1 }} defaultChecked />}
-                label="Funktional"
+                label="Performance"
                    sx={styles3}
               />
             </div>
@@ -149,11 +149,11 @@ export default function ModalFormCookie({ id, mostrar }) {
             </div>
           </div>
 
-          <div className="row d-flex g-0 justify-content-center mb-2 mt-1">
+          <div className="row d-flex g-0 justify-content-center mb-2 mt-1 ms-2 me-2">
             <div className="col-6  d-flex  justify-content-center">
               <button
                 type="button"
-                className="card-footer m-2 boton-form-cookies "
+                className="card-footer  boton-form-cookies "
                 onClick={ocultar}>
                 Alle akzeptieren
               </button>
@@ -162,14 +162,14 @@ export default function ModalFormCookie({ id, mostrar }) {
             <div className="col-6  d-flex  justify-content-center">
               <button
                 type="button"
-                className="card-footer m-2 boton-form-cookies "
+                className="card-footer  boton-form-cookies "
                 onClick={ocultar}>
-                Ablehnen.
+                Ablehnen
               </button>
             </div>
           </div>
 
-          <div className="row d-flex g-0  mt-3 justify-content-start ms-4 fuente_footer_texto_form_cookie">
+          <div className="row d-flex g-0  mt-4 justify-content-start ms-4 fuente_footer_texto_form_cookie">
             Datenschutz | Impressum
           </div>
         </div>

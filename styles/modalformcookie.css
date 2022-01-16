@@ -2,7 +2,7 @@
     position: fixed; /* Sit on top of the page content */
     
     width: 29vw; /* Full width (cover the whole page) */
-    height: 74vh; /* Full height (cover the whole page) */
+    height: 72vh; /* Full height (cover the whole page) */
     
    right: 10vw;
     bottom: 7vh; 
@@ -56,21 +56,17 @@
     /* background-color: rgba(248, 45, 124, 42%) !important; */
     background-color: #e42078!important;
   
-    /* -webkit-border-radius: 12px!important; 
-    -moz-border-radius: 12px!important; 
+    -webkit-border-radius: 7px!important; 
+    -moz-border-radius: 7px!important; 
   
-    -webkit-border-radius: --radio !important;
-    -webkit-border-radius: --radio !important;
-  
-    -moz-border-radius: --radio !important;
-    -moz-border-radius: --radio !important;*/
+    
    
     border-radius:  7px !important;
     
 
        font-family: Montserrat-Bold;
-    font-size: .9vw;
-    width: 11vw;
+    font-size: 1vw;
+    width: 12.5vw;
   
     /* border: 0px solid #f82d7c; */
   }
