@@ -16,9 +16,23 @@ import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
 import MenuFlotante from "../components/MenuFlotante";
 import Footer from "../components/Footer";
 
+import Cookies from "js-cookie";
+import { useEffect, useState  } from "react";
+
+import ModalFormCookie from "../components/ModalFormCookie";
+
 //----------------------------------------------------------------------------------------------------------
 //            Pagina inicial principal
 //----------------------------------------------------------------------------------------------------------
+
+const myfunc = (first_time) => {
+  console.log("I was activated 5 seconds later " + first_time);
+
+  return <>
+   
+  </>
+  
+};
 
 export default function Home({
   cursos,
@@ -28,17 +42,45 @@ export default function Home({
   vlog,
 }) {
 
+  const [mostrarVentanaCookies, SetmostrarVentanaCookies] = useState(false);
 
 
- 
+  let first_time = Cookies.get("first_time");
+
+  if (first_time === undefined) {
+    first_time = true;
+  } 
+
+
   
+  
+  //solo para ruebas
+    first_time=true;
+  
+
+   
+
+  useEffect(() => {
+    if (first_time === true) {
+   
+     
+      setTimeout(() => {
+        myfunc(first_time);
+        SetmostrarVentanaCookies(true);
+           Cookies.set("first_time", false, { expires: 7 });
+      }, 3000);
+    }
+  }, []);
+
+  //TODO:  mostrar la ventana al cabo de 5 s
+
   return (
     <>
       <Head>
         <title>OPEN AGILE</title>
         <meta name="description" content="OPEN AGILE" />
         <link rel="icon" href="/favicon.ico" />
-        
+
         <script async src="js/chat.js" />
         <script async src="js/menu.js" />
       </Head>
@@ -46,10 +88,17 @@ export default function Home({
       
 
       <div id="principal" className="container-fluid g-0">
-      
-        <MenuFlotanteBoton />
+       <ModalFormCookie id={1} mostrar={mostrarVentanaCookies}/>
+        <MenuFlotanteBoton  />
 
-        <AreaSuperior fondo="gris" texto1="OPEN AGILE" texto2="FOR BETTER WORK" botones_configurador={botones_configurador} iconos={true} area_gris_nueva={true}/>
+        <AreaSuperior
+          fondo="gris"
+          texto1="OPEN AGILE"
+          texto2="FOR BETTER WORK"
+          botones_configurador={botones_configurador}
+          iconos={true}
+          area_gris_nueva={true}
+        />
 
         {/*Cards CRASHKURSE  */}
         <Content02Cursos cursos={cursos} />
@@ -65,17 +114,15 @@ export default function Home({
 
         {/* Servicios Leistungen  */}
         <div id="services" className=" mt-5 mb-5 pb-5">
+          <h3 className="font_title_seccion_sombra "> LEISTUNGEN</h3>
+          <h5 className="font_second_line2 d-flex justify-content-center">
+            Beratung, Training & Coaching im agilen Kontext
+          </h5>
 
-         <h3 className="font_title_seccion_sombra "> LEISTUNGEN</h3>
-      <h5 className="font_second_line2 d-flex justify-content-center">
-       Beratung, Training & Coaching im agilen Kontext
-      </h5>
+          {/*      <div className="row d-flex justify-content-center font_title_seccion_sombra  mt-1 ms-4"></div>
+      <h5 className="font_second_line2 d-flex justify-content-center mt-2">
 
-
-          {/* <div className="row d-flex justify-content-center font_title_seccion_sombra  mt-1 ms-4">  </div>
-           <h5 className="font_second_line2 d-flex justify-content-center mt-2">
-           
-          </h5> */}
+      </h5> */}
           <Card01Lista lista_cards={servicios} titulo_magenta={true} />
         </div>
 
@@ -85,6 +132,10 @@ export default function Home({
 
       {/*Menu Lateral oculto  */}
       <MenuFlotante />
+
+     
+
+     
     </>
   );
 }

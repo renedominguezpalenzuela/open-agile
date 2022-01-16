@@ -800,3 +800,12 @@ ul li.mybullets3::before {
   font-size: .9rem;
   color: white;
 }
+
+
+.mostrar_formulario_cookies {
+  display: block;
+}
+
+.ocultar_formulario_cookies {
+  display: none;
+}

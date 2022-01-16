@@ -24,6 +24,8 @@ import "../styles/blogcard.css";
 import "../styles/teamcards.css";
 import "../styles/krashkurse.css";
 import "../styles/blogs.css";
+import "../styles/modalformcookie.css";
+
 
 
 

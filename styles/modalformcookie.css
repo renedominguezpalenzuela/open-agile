@@ -1,0 +1,94 @@
+.modalformcookie {
+    position: fixed; /* Sit on top of the page content */
+    
+    width: 29vw; /* Full width (cover the whole page) */
+    height: 74vh; /* Full height (cover the whole page) */
+    
+   right: 10vw;
+    bottom: 7vh; 
+    /* color: blue; */
+ 
+    z-index: 9999; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+
+    background-color: #fff;
+
+    box-shadow: 0px 0px 16px 1px #0ff;
+    /* in order: x offset, y offset, blur size, spread size, color */
+    /* blur size and spread size are optional (they default to 0) */
+}
+
+.mostrar {
+    display: block;
+
+}
+
+.ocultar{
+ display: none;
+}
+
+.fuente_titulo_form_cookie {
+    
+    color: #24325a!important   ;
+    font-size: 1rem;
+    
+    font-family: Montserrat-Bold;
+}
+
+
+.fuente_texto_form_cookie {
+    
+    color: #24325a!important   ;
+    font-size: .7rem;
+    
+    font-family: Montserrat-Regular;
+}
+
+
+
+
+.boton-form-cookies {
+    /* padding: 0.5rem 1rem; */
+   --radio: 20px;
+    color: #ffffff;
+     border: 0px solid blue!important;  
+  
+    /* background-color: rgba(248, 45, 124, 42%) !important; */
+    background-color: #e42078!important;
+  
+    /* -webkit-border-radius: 12px!important; 
+    -moz-border-radius: 12px!important; 
+  
+    -webkit-border-radius: --radio !important;
+    -webkit-border-radius: --radio !important;
+  
+    -moz-border-radius: --radio !important;
+    -moz-border-radius: --radio !important;*/
+   
+    border-radius:  7px !important;
+    
+
+       font-family: Montserrat-Bold;
+    font-size: .9vw;
+    width: 11vw;
+  
+    /* border: 0px solid #f82d7c; */
+  }
+
+  .boton-form-cookies:hover {
+    background-color: #24325a   !important;
+  }
+  
+
+  .fuente_footer_texto_form_cookie{
+    font-family: Montserrat-Regular;
+    font-size: 1vw;
+    color:#24325a   ;
+  }
+
+  
+  .fuente_switch_form_cookie{
+    font-family: Montserrat-Regular;
+    width: 1rem;
+    color:#24325a   ;
+  }
