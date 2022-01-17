@@ -809,3 +809,12 @@ ul li.mybullets3::before {
 .ocultar_formulario_cookies {
   display: none;
 }
+
+
+.enlinea-hijo {
+  display: inline-block; 
+}
+
+.enlinea-padre {
+  white-space: nowrap; 
+}

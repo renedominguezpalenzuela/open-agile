@@ -15,6 +15,8 @@ import { styled } from "@mui/material/styles";
 
 import FormLabel from "@mui/material/FormLabel";
 
+import Link from "next/link";
+
 
 
   const styles3 = {
@@ -98,7 +100,7 @@ export default function ModalFormCookie({ id, mostrar }) {
       {showMe && (
         <div className={clases(showMe)} id="cookie-form">
           <div className="row  d-flex justify-content-start ms-4 ps-1 mt-4 fuente_titulo_form_cookie">
-            Wir verwenden
+            Wir verwenden Cookies
           </div>
 
           <div className="row mt-2 ps-1 ms-3 me-3 fuente_texto_form_cookie ">
@@ -169,8 +171,19 @@ export default function ModalFormCookie({ id, mostrar }) {
             </div>
           </div>
 
-          <div className="row d-flex g-0  mt-4 justify-content-start ms-4 fuente_footer_texto_form_cookie">
-            Datenschutz | Impressum
+          <div className=" d-flex g-0  mt-3 pb-2 justify-content-start ms-4 fuente_footer_texto_form_cookie enlinea-padre">
+
+          
+                <Link href="/docview02" className="enlinea-hijo">
+                  <a target="_blank" className="mylinkhoover">Datenschutz</a>
+                </Link>
+
+    <div  className="enlinea-hijo ms-1 me-1"> | </div>
+                <Link href="/docview03" className="enlinea-hijo">
+                  <a target="_blank" className="mylinkhoover">Impressum</a>
+                </Link>
+
+            {/* Datenschutz | Impressum */}
           </div>
         </div>
       )}

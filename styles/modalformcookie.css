@@ -1,8 +1,17 @@
 .modalformcookie {
+
+    --ratio: 2.483;
     position: fixed; /* Sit on top of the page content */
     
     width: 29vw; /* Full width (cover the whole page) */
-    height: 72vh; /* Full height (cover the whole page) */
+    height: -webkit-calc(29vw * --ratio);
+    height: -moz-calc(29vw * --ratio);
+    height: calc(29vw * --ratio);
+
+    
+
+    /* height:72vh; */
+    /*72vh;  Full height (cover the whole page) */
     
    right: 10vw;
     bottom: 7vh; 
