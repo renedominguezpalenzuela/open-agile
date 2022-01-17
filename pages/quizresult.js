@@ -21,6 +21,10 @@ import { useRecoilValue } from "recoil";
 
 import { respuestasState } from "../componentes/states/state";
 
+import ModalFormConfigurator from "../components/ModalFormConfigurator";
+
+
+
 //----------------------------------------------------------------------------------------------------------
 //           CRASHKURSE \ CRASHKURS ZUM AGILE COACH
 //----------------------------------------------------------------------------------------------------------
@@ -82,8 +86,14 @@ export default function Home() {
 
       <div id="principal" className="container-fluid g-0">
         <MenuFlotanteBoton />
-        <AreaSuperior fondo="barco" titulo_quiz_result="Ergebnis" texto_quiz_result={mensaje} area_gris_nueva={false} />       
+        <AreaSuperior fondo="barco" titulo_quiz_result="Ergebnis" texto_quiz_result={mensaje} area_gris_nueva={false} botones_contacto={true} /> 
+
+
+
       </div>
+
+       <ModalFormConfigurator    titulo="KONTAKTFORMULAR"   frase="Jetzt Kontakt aufnehmen!"     id={1}    />
+
 
       {/*Menu Lateral oculto  */}
       <MenuFlotante />

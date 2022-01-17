@@ -30,7 +30,12 @@ export default function Content01TextSinIcons({ texto1, texto2, texto2a, vista_m
 
           {texto2a != undefined && texto2a != "" && <> {texto2a} </>}
         </div>
-      )}      
+      )}     
+
+
+      
+
+
  </div>
  
   </>
@@ -87,4 +92,5 @@ const formato_titulo2=(vista_movil, titulo_muy_largo)=>{
   }
 
 }
+
 

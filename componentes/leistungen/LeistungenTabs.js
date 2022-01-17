@@ -115,7 +115,7 @@ export default function LeistungenTabs({ texto01, texto02, texto03 , titulo}) {
             texto02.length > 0 &&
             texto02.map((unaLinea, index) => (
              
-                 <li className="fuente-texto-cursos mybullets"> {unaLinea}</li> 
+                 <li key={index} className="fuente-texto-cursos mybullets"> {unaLinea}</li> 
 
                 // <p />
             
