@@ -870,10 +870,10 @@ ul li.mybullets3::before {
 
 
 .alto-leistungen-tab{
-  height: 580px;
+  height: 75vh;
 }
 
 .ubicacion-boton{
-  position: absolute;
-  bottom: -150px;
+  position: relative;
+  bottom:0vh;
 }
