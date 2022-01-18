@@ -89,18 +89,9 @@ export default function LeistungenTabs({ texto01, texto02, texto03 , titulo}) {
               </div>
             ))}
 
-
-            <div   className="mt-3 mb-5"  onClick={ ()=>myfuncion(1) } >
-         
-            <img
-              className="boton_flecha  "
-              src={`${servidor_url}/img/leistungen/boton_flecha_magenta.svg`}
-              alt=""
-          
-            />
-
-
-          </div>
+            <div   className="ubicacion-boton"  onClick={ ()=>myfuncion(1) } >         
+               <img className="boton_flecha" src={`${servidor_url}/img/leistungen/boton_flecha_magenta.svg`} alt="" />
+            </div>
         </div>
       </TabPanel>
 
@@ -122,7 +113,7 @@ export default function LeistungenTabs({ texto01, texto02, texto03 , titulo}) {
             ))}
               </ul>
 
-         <div   className="mt-3 mb-5"  onClick={ ()=>myfuncion(2) } >
+         <div   className="ubicacion-boton"  onClick={ ()=>myfuncion(2) } >
        
             <img
               className="boton_flecha  "
@@ -153,7 +144,7 @@ export default function LeistungenTabs({ texto01, texto02, texto03 , titulo}) {
               eine Mail. Wir freuen uns auf Dich!
             </p>
 
-           <div   className="mt-3 mb-5"  onClick={ ()=>myfuncion(0) } >
+           <div   className="ubicacion-boton"  onClick={ ()=>myfuncion(0) } >
        
               <img
               className="boton_flecha  "

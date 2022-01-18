@@ -77,7 +77,7 @@ export default function Home({ team }) {
 
         {title3 != undefined && title3 != "" && (
           <div className="row mt-5 mb-5 text-center  ">
-            <h3 className="font_titulo_team  "> {title3}</h3>
+            <h3 className="font_titulo_team  "> {title3} </h3>
           </div>
         )}
 
@@ -146,6 +146,7 @@ export default function Home({ team }) {
 
           <div className="row h-100  fondo_team_seccion">
           <div className="col-3  d-flex justify-content-center">
+         
               <img className="img-fluid  pt-4 pb-4 " src={`${servidor_url}/img/${imageround}`} />
           </div>
 

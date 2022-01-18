@@ -87,8 +87,8 @@ export const crashkurse_beschreibung_details = [
                         "date1": "13.05.2022",
                         "date2": "14.05.2022"
                     }, {
-                        "date1": "13.05.2022",
-                        "date2": "14.05.2022"
+                        "date1": "17.06.2022",
+                        "date2": "18.06.2022"
                     }, {
                         "date1": "01.07.2022",
                         "date2": "02.07.2022"

@@ -117,7 +117,7 @@ export default function AreaSuperior({
           </div>
 
           {img_team_top != undefined && img_team_top != "" && (
-            <div className="item-img-team-top ">
+            <div className="item-img-team-top me-5">
               <img
                 className=" img-team-top  "
                 src={`${servidor_url}/img/${img_team_top}`}

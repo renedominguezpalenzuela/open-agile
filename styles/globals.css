@@ -867,3 +867,13 @@ ul li.mybullets3::before {
 .enlinea-padre {
   white-space: nowrap; 
 }
+
+
+.alto-leistungen-tab{
+  height: 580px;
+}
+
+.ubicacion-boton{
+  position: absolute;
+  bottom: -150px;
+}

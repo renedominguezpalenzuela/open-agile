@@ -62,13 +62,9 @@ export default function Home({ servicios }) {
       <div id="principal" className="container-fluid g-0">
       
         <AreaSuperior fondo="ajustable" texto1={titulo} titulo_largo={true} area_gris_nueva={true} />
-        <div className="row  mt-5 d-flex justify-content-center ">
-          <LeistungenTabs
-            texto01={texto01}
-            texto02={texto02}
-            texto03={texto03}
-            titulo={titulo}
-          />
+
+        <div className="row  mt-5 d-flex justify-content-center alto-leistungen-tab">
+          <LeistungenTabs texto01={texto01} texto02={texto02}  texto03={texto03}  titulo={titulo}  />
         </div>
 
        

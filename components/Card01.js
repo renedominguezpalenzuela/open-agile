@@ -31,7 +31,9 @@ export default function Card01({
     {/* col-md-3 */}
       {/* <div className="  d-flex justify-content-center  " key={id}> */}
         <div className="card  my_card myanimacion sombra_cards">
+          {imagen!=undefined && imagen!="" &&
           <img className="card-img-top corte_cards img-rounded  " src={`${servidor_url}/img/${imagen}`} alt={texto_alt}   />
+          }
 
           <div className="card-body text-center    ">
             {titulo != undefined && titulo != "" && (
