@@ -10,14 +10,14 @@ import { servidor_url } from "../../config";
 
 
 
-export default function Content01TextSinIcons({ texto1, texto2, texto2a, vista_movil, cursos, titulo_largo, titulo_muy_largo}) {
+export default function Content01TextSinIcons({ texto1, texto2, texto2a, vista_movil, cursos, titulo_largo, titulo_muy_largo, team}) {
 
 
   return (
     <>
    
-
-  <div className="mb-5 pb-3">
+  
+  <div className={`${team?"":"mb-5 pb-3"}`}  >
       {texto1 != undefined && texto1 != "" && (
         <div className={formato_titulo1(vista_movil, cursos, titulo_largo, titulo_muy_largo)}>
           {texto1} 

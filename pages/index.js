@@ -68,7 +68,7 @@ export default function Home({
         myfunc(first_time);
         SetmostrarVentanaCookies(true);
            Cookies.set("first_time", false, { expires: 7 });
-      }, 3000);
+      }, 1000);
     }
   }, []);
 
