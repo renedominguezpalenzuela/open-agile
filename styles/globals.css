@@ -869,11 +869,29 @@ ul li.mybullets3::before {
 }
 
 
-.alto-leistungen-tab{
-  height: 75vh;
+.alto-leistungen-tab-contenedor{
+
+  /* height:70vh!important; */
+  /* height:90%!important;  */
+  height: 590px;
+  position: relative;
+  
+}
+
+.alto-tab{
+   height: 100%!important;
 }
 
 .ubicacion-boton{
-  position: relative;
-  bottom:0vh;
+  
+  
+
+  position: absolute;
+
+  bottom: 60px;
+  left: 140px;
+  
+  
 }
+
+

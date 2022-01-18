@@ -63,7 +63,8 @@ export default function Home({ servicios }) {
       
         <AreaSuperior fondo="ajustable" texto1={titulo} titulo_largo={true} area_gris_nueva={true} />
 
-        <div className="row  mt-5 d-flex justify-content-center alto-leistungen-tab">
+        <div className="  mt-5 pb-3 alto-leistungen-tab-contenedor  ">
+      
           <LeistungenTabs texto01={texto01} texto02={texto02}  texto03={texto03}  titulo={titulo}  />
         </div>
 
