@@ -418,7 +418,7 @@ const fn_botones_contacto = () => {
             {/*  btn-outline-primary font_boton  */}
             <button
               type="button"
-              className=" btn-leinstungen rounded-pill"
+              className=" btn-leinstungen-magenta rounded-pill"
               data-bs-toggle="modal"
               data-bs-target={"#contactForm1"}>
               KONTAKTFORMULAR
@@ -428,7 +428,7 @@ const fn_botones_contacto = () => {
         <div className="col-md-5  ">
           <a href="tel:+49 (0) 421 22347567" className="d-flex justify-content-center ">
             {/*  btn-outline-primary font_boton  */}
-            <button type="button" className=" btn-leinstungen rounded-pill   ">
+            <button type="button" className=" btn-leinstungen-magenta rounded-pill   ">
               JETZT ANRUFEN
             </button>
           </a>

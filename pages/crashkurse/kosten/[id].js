@@ -86,8 +86,7 @@ export default function Home({ curso }) {
               titulo_kosten = {crashkurs_date_title}
               text_termine={text_termine}
               link_weitere_infos={link_beschreibung}
-            
-              link_pdf={link_pdf}
+          
               texto_leistungen={texto_leistungen}
               
             />

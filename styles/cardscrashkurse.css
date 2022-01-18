@@ -116,6 +116,14 @@
 }
 
 
+.fechas-card-titulos {
+  font-family: Montserrat-SemiBold;
+  font-size: 1.6vw !important;
+  line-height: 3vh;
+  color: #e42078;
+}
+
+
 .fondo-titulos {
   background-color: white;
 }

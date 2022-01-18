@@ -85,7 +85,7 @@ export default function Home({ curso }) {
               titulo_botones={crashkurs_date_title}
               text_termine={text_termine}
               link_weitere_infos={link_vorteile}
-              link_pdf={link_pdf}
+              
             />
           </div>
         </div>

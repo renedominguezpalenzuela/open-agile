@@ -1,12 +1,12 @@
 import { servidor_url } from "../../config";
 import Image from "next/image";
 import Link from "next/link";
-import KurseButtons from "./KurseButtons";
+
 import React from "react";
 
  
 
-export default function KurseContent02({imagen, titulo, texto, imagen_botones,titulo_botones, text_termine, link_weitere_infos, link_termine, link_pdf}) {
+export default function KurseContent02({imagen, titulo, texto, imagen_botones,titulo_botones, text_termine, link_weitere_infos, link_termine}) {
   return (
     <>
        <div className="row  ">

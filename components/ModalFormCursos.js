@@ -325,7 +325,7 @@ export default function ModalFormCursos({
 
                   <div className="row mt-2 mb-2 ps-3 pe-3 d-flex justify-content-center  texto-email  ">
                     Wir senden Dir binnen 48h eine Bestätigung und weitere
-                    Informationen zu dem Seminar.
+                    Informationen zu dem Crashkurs.
                   </div>
 
                   <div className="row d-flex justify-content-start privacy-modal ps-3 pe-3 mt-1">

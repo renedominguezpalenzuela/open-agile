@@ -60,7 +60,7 @@ export const crashkurse_beschreibung_details = [
         "link_kosten": "crashkurse/kosten/1",
         "text_termine": "2022",
         "link_termine": "/#dates_section",
-        "link_pdf": "/doc/lorem-ipsum.pdf",
+        "link_pdf": ["/doc/Anmeldung_zum_Crashkurs_Agile_Coach.pdf","/doc/Onepager_Crashkurs_Agile_Coach.pdf", "/doc/Prospekt_Crashkurs_Agile_Coach.pdf"],
         "link_boton": "",
         "texto_leistungen": [
             '8 Tage Crashkurs in 4 x 2 Tagesblöcken',
@@ -146,7 +146,7 @@ export const crashkurse_beschreibung_details = [
         "link_kosten": "crashkurse/kosten/2",
         "text_termine": "2022",
         "link_termine": "/#dates_section",
-        "link_pdf": "/doc/lorem-ipsum.pdf",
+        "link_pdf": ["/doc/Anmeldung_zum_Crashkurs_Agile_Facilitator.pdf","/doc/Onepager_Crashkurs_Agile_Facilitator.pdf"],
         "link_boton": "",
         "texto_leistungen": [
             '2 Tage Crashkurs remote oder vor Ort möglich (Do. / Fr. oder Fr. / Sa.)', 'Zertifikat "Agile Facilitator"', 'Das Buch "Crashkurs Selbstorganisation in Agilen Teams"', 'Fotoprotokoll & Screenshots'
@@ -246,7 +246,7 @@ export const crashkurse_beschreibung_details = [
         "link_kosten": "crashkurse/kosten/3",
         "text_termine": "2022",
         "link_termine": "/#dates_section",
-        "link_pdf": "/doc/lorem-ipsum.pdf",
+        "link_pdf": ["/doc/Anmeldung_zum_Crashkurs_Scrum_Master.pdf","/doc/Onepager_Crashkurs_Scrum_Master.pdf"],
         "link_boton": "",
         "texto_leistungen": [
             '2 Tage Crashkurs an einem Wochenende (Fr. und Sa.)', 'Vorbereitung auf die Scrum- Zertifizierung auf srum.org', 'Das Buch "Crashkurs Selbstorganisation in Agilen Teams“', 'Fotoprotokoll bzw. Screenshots'
@@ -365,7 +365,7 @@ export const crashkurse_beschreibung_details = [
         "link_kosten": "crashkurse/kosten/4",
         "text_termine": "2022",
         "link_termine": "/#dates_section",
-        "link_pdf": "/doc/Crashkurs_Mitbestimmung_in_der_agilen_Arbeitswelt.pdf",
+        "link_pdf": ["/doc/Anmeldung_zum_Crashkurs_Mitbestimmung_in_der_agilen_Arbeitswelt.pdf","/doc/Onepager_Crashkurs_Mitbestimmung_in_der_agilen_Arbeitswelt.pdf"],
         "link_boton": "",
         "texto_leistungen": [
             "2 Tage Crashkurs remote oder vor Ort möglich (Mi. / Do.)", "Methodenkoffer für die agile Zusammenarbeit", "Das Buch “Crashkurs Selbstorganisation in Agilen Teams”", "Fotoprotokoll & Screenshots"
@@ -471,7 +471,7 @@ export const crashkurse_beschreibung_details = [
         "link_kosten": "crashkurse/kosten/5",
         "text_termine": "2022",
         "link_termine": "",
-        "link_pdf": "/doc/Crashkurs_Selbstorganisation_in_agilen_Teams.pdf",
+        "link_pdf": ["/doc/Onepager_Crashkurs_Selbstorganisation_in_agilen_Teams.pdf"],
         "link_boton": "https://open-agile-academy.teachable.com/p/online-crashkurs-selbstorganisation-in-agilen-teams",
         "texto_leistungen": [
             "12 Video-Clips zur Architektur selbstorganisierter Teams", "21 Video-Clips mit verschiedenen Workhacks für die konkrete Selbstorganisation", "Online-Zugang zum Crashkurs Selbstorganisation in agilen Teams", "2 Stunden Supervision mit einem unserer Agile Coaches (vor dem Crashkurs und dan" +

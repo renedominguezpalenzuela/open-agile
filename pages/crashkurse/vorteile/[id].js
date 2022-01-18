@@ -83,7 +83,6 @@ export default function Home({ curso }) {
               text_termine={text_termine}
               link_weitere_infos={link_inhalte}
         
-              link_pdf={link_pdf}
             />
 
 

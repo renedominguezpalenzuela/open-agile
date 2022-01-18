@@ -2,6 +2,7 @@ import { servidor_url } from "../../config";
 import Image from "next/image";
 import Link from "next/link";
 
+
 export default function MenuKrashkurse({
   link_beschreibung,
   link_vorteile,
@@ -18,6 +19,8 @@ if (link_boton!=undefined && link_boton.length>0) {
   link_boton_new = link_boton;
 }
  
+
+
 
 
   return (
@@ -92,11 +95,11 @@ if (link_boton!=undefined && link_boton.length>0) {
 
               <tr className="font-card-menu-crashkurse">
                 <td>
-                  <Link href={link_pdf} className="" download>
-                    <a target="_blank">
-                      <div className="myanimacioncursos">PDFs</div>
-                    </a>
-                  </Link>
+                  {/* <Link href={link_pdf} className="" download> */}
+                    {/* <a target="_blank" onClick={() => botonAbrirPDF(link_pdf)}> */}
+                      <div className="myanimacioncursos" onClick={() => botonAbrirPDF(link_pdf)}>PDFs</div>
+                    {/* </a> */}
+                  {/* </Link> */}
                 </td>
                 <td align="right">></td>
               </tr>
@@ -118,3 +121,21 @@ if (link_boton!=undefined && link_boton.length>0) {
     </>
   );
 }
+
+
+
+  const botonAbrirPDF = ( link_pdf) => {
+      //  event.preventDefault();
+
+
+for (let unPdf of link_pdf)  {
+  
+          window.open(unPdf,"_blank");
+         
+}         
+
+      
+
+  }
+
+

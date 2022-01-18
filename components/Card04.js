@@ -107,10 +107,10 @@ const card_ancho = (id, titulo_formulario, date_list) => {
             <div className="row titulo-card-crashkurse  d-flex justify-content-center">
               {titulo_formulario}
             </div>
-            <div className="row  fechas-card-crashkurse d-flex justify-content-center pt-2">
+            <div className="row  fechas-card-titulos d-flex justify-content-center pt-2">
               {date_list.map((UnaParejaFechas, index) => (
-                <React.Fragment key={index}>
-                  <div className="col-3 ">{`BLOCK ${index}`}</div>
+                <React.Fragment key={index  }>
+                  <div className="col-3 ">{`BLOCK ${index + 1}`}</div>
                 </React.Fragment>
               ))}
             </div>

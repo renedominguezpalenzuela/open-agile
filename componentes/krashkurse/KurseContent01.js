@@ -1,7 +1,6 @@
 import { servidor_url } from "../../config";
 import Image from "next/image";
 import Link from "next/link";
-import KurseButtons from "./KurseButtons";
 import React from "react";
 
 export default function KurseContent01({
@@ -15,7 +14,6 @@ export default function KurseContent01({
   text_termine,
   link_weitere_infos,
   link_termine,
-  link_pdf,
 }) {
   return (
     <>

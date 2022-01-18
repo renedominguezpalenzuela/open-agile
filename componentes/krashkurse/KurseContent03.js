@@ -1,7 +1,7 @@
 import { servidor_url } from "../../config";
 import Image from "next/image";
 import Link from "next/link";
-import KurseButtons from "./KurseButtons";
+
 import React from "react";
 
 // Contenidou
@@ -15,7 +15,6 @@ export default function KurseContent03({
   text_termine,
   link_weitere_infos,
   link_termine,
-  link_pdf,
   texto_leistungen,
 }) {
   return (
