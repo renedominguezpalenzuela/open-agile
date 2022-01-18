@@ -118,7 +118,7 @@ export default function Home({ blog }) {
 
                 <div className="item-2-iconos-blog  ">
                   <a
-                    href="https://www.facebook.com/OpenAgile21"
+                    href={`https://twitter.com/share?url=${servidor_url}/blog/${id}/&text=${titulo2}`}
                     className="items-en-linea-padre ">
                     <FontAwesomeIcon
                       icon={faTwitter}
@@ -133,7 +133,7 @@ export default function Home({ blog }) {
 
                 <div className="item-3-iconos-blog  ">
                   <a
-                    href="https://www.facebook.com/OpenAgile21"
+                    href={`https://www.linkedin.com/shareArticle?url=${servidor_url}/blog/${id}/&title=${titulo2}`}
                     className="items-en-linea-padre ">
                     <FontAwesomeIcon
                       icon={faLinkedinIn}
@@ -146,9 +146,9 @@ export default function Home({ blog }) {
                   </a>
                 </div>
 
-                <div className="item-4-iconos-blog  ">
+                {/* <div className="item-4-iconos-blog  ">
                   <a
-                    href="https://www.facebook.com/OpenAgile21"
+                    href={`https://wa.me/?text=${servidor_url}/blog/${id}`}
                     className="items-en-linea-padre ">
                     <FontAwesomeIcon
                       icon={faWhatsapp}
@@ -159,9 +159,9 @@ export default function Home({ blog }) {
                       WhatsApp
                     </div>
                   </a>
-                </div>
+                </div> */}
 
-                <div className="item-5-iconos-blog  ">
+                <div className="item-4-iconos-blog  ">
                   <a
                     href="https://www.facebook.com/OpenAgile21"
                     className="items-en-linea-padre ">

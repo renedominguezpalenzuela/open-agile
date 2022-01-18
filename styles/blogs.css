@@ -48,7 +48,7 @@
     display: grid;
     /* width: 100%; */
 
-    grid-template-columns: 23% 10% 10% 10% 10% 10%  23%;  /*tres columnas de igual ancho*/
+    grid-template-columns: 30% 10% 10% 10% 10%   30%;  /*tres columnas de igual ancho*/
     grid-template-rows: auto; 
     gap: .4em;
     align-items:center; 
