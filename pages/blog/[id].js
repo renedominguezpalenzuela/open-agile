@@ -84,9 +84,9 @@ export default function Home({ blog }) {
               {title}
             </div>
 
-            <div className="row   me-5 mt-5 mb-2 d-flex  justify-content-end font_autor_fecha">
+            {/* <div className="row   me-5 mt-5 mb-2 d-flex  justify-content-end font_autor_fecha">
               {autor != undefined && autor != "" && `von ${autor} ${fecha}`}
-            </div>
+            </div> */}
 
             <div className="row   d-flex align-items-center justify-content-center">
               <img
