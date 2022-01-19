@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import React from "react";
+import * as React from "react";
 import Link from "next/link";
 
 import MenuFlotante from "../../components/MenuFlotante";
@@ -17,6 +17,8 @@ import Tabla02 from "../../components/crashkurse/tabla02";
 
 import Card01Lista from "../../components/Card01Lista";
 import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
+
+
 
 // import MenuSuperior from "../components/MenuSuperior";
 import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
@@ -35,14 +37,44 @@ import { faShareAlt } from "@fortawesome/free-solid-svg-icons";
 import { faLongArrowAltLeft } from "@fortawesome/free-solid-svg-icons";
 
 
+import Tooltip from '@mui/material/Tooltip';
+import ClickAwayListener from '@mui/material/ClickAwayListener';
+
 
 //----------------------------------------------------------------------------------------------------------
 //            Pagina inicial principal
 //----------------------------------------------------------------------------------------------------------
 
 export default function Home({ blog }) {
+
+
+   const [open, setOpen] = React.useState(false);
+
+  const handleTooltipClose = () => {
+    if (open) {
+      setOpen(false);
+    }
+
+   
+  };
+
+  const handleTooltipOpen = () => {
+    setOpen(true);
+  };
+
+  
   const router = useRouter();
   const { id } = router.query;
+
+  
+const copyURLtoClipboard=(url)=>{
+  console.log(url);
+
+   setOpen(true);
+
+
+  navigator.clipboard.writeText(url)
+}
 
   const {
     title,
@@ -162,8 +194,21 @@ export default function Home({ blog }) {
                 </div> */}
 
                 <div className="item-4-iconos-blog  ">
-                  <a
-                    href="https://www.facebook.com/OpenAgile21"
+                {/* <Tooltip title="Copy post url to clipboard" placement="top-start"> */}
+
+                <Tooltip  PopperProps={{ disablePortal: true, }}
+                // onClose={handleTooltipClose}
+                open={open}
+                disableFocusListener
+                disableHoverListener
+                // disableTouchListener
+                title="Post url copied to clipboard" placement="top-start"
+                 leaveDelay={2000}
+                
+                onMouseOut={handleTooltipClose}
+              >
+                  <div onClick={()=>copyURLtoClipboard(`${servidor_url}/blog/${id}`)}
+                    // href="#"
                     className="items-en-linea-padre ">
                     <FontAwesomeIcon
                       icon={faShareAlt}
@@ -173,7 +218,8 @@ export default function Home({ blog }) {
                     <div className="ms-1 texto-iconos-blogs items-en-linea-hijo ">
                       Share
                     </div>
-                  </a>
+                  </div>
+                   </Tooltip>
                 </div>
               </div>
             </div>
@@ -344,3 +390,4 @@ export const getServerSideProps = async (context) => {
     },
   };
 };
+

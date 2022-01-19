@@ -182,13 +182,14 @@
     display: inline-block;   
 }
 
- a.items-en-linea-padre{
+ a.items-en-linea-padre, div.items-en-linea-padre{
     white-space: nowrap; 
      color:  #24325a     ;
+     cursor:pointer;
      /* color: yellow!important; */     
  }
 
- a.items-en-linea-padre:hover{
+ a.items-en-linea-padre:hover, div.items-en-linea-padre:hover{
      color: #F82D7C !important;   
      /* filter:brightness(0) saturate(100%)  invert(27%) sepia(75%) saturate(6500%) hue-rotate(353deg) brightness(101%) contrast(132%); */
  }
