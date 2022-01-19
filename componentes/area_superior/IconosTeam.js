@@ -5,7 +5,7 @@ export default function IconosTeam({ phone, email, linkedin }) {
   return (
     <>
       {/* <div className="row  g-0 item-iconos-team "> */}
-      <div className="ms-4">
+      <div className="ms-4 pb-4">
         {/* <a href="https://www.linkedin.com/company/open-agile">
           <i className="ms-5 social-img-team bi-telephone-fill "></i>
         </a>
