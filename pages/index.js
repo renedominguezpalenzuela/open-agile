@@ -11,6 +11,8 @@ import Content04 from "../components/Content04";
 import Content05 from "../components/Content05";
 
 import Card01Lista from "../components/Card01Lista";
+import ContentVideo from "../components/ContentVideo";
+
 import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
 
 import MenuFlotante from "../components/MenuFlotante";
@@ -100,6 +102,8 @@ export default function Home({
           area_gris_nueva={true}
         />
 
+        <ContentVideo/>
+
         {/*Cards CRASHKURSE  */}
         <Content02Cursos cursos={cursos} />
 
@@ -119,10 +123,7 @@ export default function Home({
             Beratung, Training & Coaching im agilen Kontext
           </h5>
 
-          {/*      <div className="row d-flex justify-content-center font_title_seccion_sombra  mt-1 ms-4"></div>
-      <h5 className="font_second_line2 d-flex justify-content-center mt-2">
-
-      </h5> */}
+       
           <Card01Lista lista_cards={servicios} titulo_magenta={true} />
         </div>
 

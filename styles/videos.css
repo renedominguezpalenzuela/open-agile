@@ -113,7 +113,30 @@ flex-direction: column; /*added*/
   .texto_video {
     /* left: 25px; */
     left:-10vw;
-    
-   
+      
    
   }
+
+
+  .contenedor_video {
+     position: relative;
+    /* height:auto; */
+    top:-30vh;
+    /* width: 100%; */
+    
+    z-index: 1;
+    /* background-color: chartreuse; */
+  }
+
+
+
+  .icono_volumen {
+    position: relative; 
+    top: -10vh;
+    left: -44vw;
+    cursor: pointer;
+    z-index: 10! important; 
+    /* background-color: chartreuse; */
+  }
+
+  

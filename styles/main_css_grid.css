@@ -11,7 +11,7 @@
   height: 100vh;
    max-height: 100vh; 
   
-
+ 
 
 
   background-repeat: no-repeat;
@@ -214,6 +214,7 @@ img.grayscale:hover {
   url("/img/image01.jpg");
   clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
   height: 100%;
+  z-index: 2;
 }
 
 
@@ -258,4 +259,9 @@ img.grayscale:hover {
     ),
     url("/img/image01.jpg");
   clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
+}
+
+
+.volumen_icon_size{
+  font-size: 1px!important;
 }
