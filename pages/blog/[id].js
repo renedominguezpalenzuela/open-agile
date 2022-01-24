@@ -18,6 +18,8 @@ import Tabla02 from "../../components/crashkurse/tabla02";
 import Card01Lista from "../../components/Card01Lista";
 import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
 
+import ModalFormCookie from "../../components/ModalFormCookie";
+
 
 
 // import MenuSuperior from "../components/MenuSuperior";
@@ -106,6 +108,10 @@ const copyURLtoClipboard=(url)=>{
       </Head>
 
       <div id="principal" className="container-fluid g-0">
+
+         <ModalFormCookie id={1} tiempo={10}/>
+
+
         <MenuFlotanteBoton />
 
         <AreaSuperior fondo="ajustable" area_gris_nueva={true} />

@@ -18,6 +18,8 @@ import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 
 import { servidor_url } from "../config";
 
+import ModalFormCookie from "../components/ModalFormCookie";
+
 
 
 //----------------------------------------------------------------------------------------------------------
@@ -48,6 +50,7 @@ export default function Home({team}) {
       {/*Contenedor*/}
 
       <div id="principal" className="container-fluid g-0">
+      <ModalFormCookie id={1} tiempo={10}/>
         <MenuFlotanteBoton />
 
         <AreaSuperior

@@ -19,6 +19,8 @@ import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
 
 import Card01Lista from "../../components/Card01Lista";
 
+import ModalFormCookie from "../../components/ModalFormCookie";
+
 //----------------------------------------------------------------------------------------------------------
 //            Pagina inicial principal
 //----------------------------------------------------------------------------------------------------------
@@ -52,6 +54,7 @@ export default function Home({servicios}) {
 
    
          <div id="principal" className="container-fluid g-0">
+         <ModalFormCookie id={1} tiempo={10}/>
 
       <MenuFlotanteBoton />
   

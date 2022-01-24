@@ -14,6 +14,8 @@ import MenuFlotanteBoton from "../../../components/MenuFlotanteBoton";
 
 import Tabla03 from "../../../components/crashkurse/tabla03";
 
+import ModalFormCookie from "../../../components/ModalFormCookie";
+
 export default function Home({ curso }) {
   const router = useRouter();
   const { id } = router.query;
@@ -54,6 +56,7 @@ export default function Home({ curso }) {
       </Head>
 
       <div id="principal" className="container-fluid g-0">
+        <ModalFormCookie id={1} tiempo={10}/>
         <MenuFlotanteBoton />
 
         <AreaSuperior

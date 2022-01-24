@@ -14,6 +14,8 @@ import MenuFlotanteBoton from "../../../components/MenuFlotanteBoton";
 
 import Tabla03 from "../../../components/crashkurse/tabla03";
 
+import ModalFormCookie from "../../../components/ModalFormCookie";
+
 
 
 
@@ -62,6 +64,7 @@ export default function Home({ curso }) {
       </Head>
 
       <div id="principal" className="container-fluid g-0">
+        <ModalFormCookie id={1} tiempo={10}/>
         <MenuFlotanteBoton />
 
         <AreaSuperior
@@ -79,8 +82,8 @@ export default function Home({ curso }) {
 
             <KurseContent03
               imagen={image_kosten}
-              titulo="KOSTEN"
-              texto={texto_kosten}
+             
+              
               imagen_botones={image2}
               titulo_botones={crashkurs_date_title}
               titulo_kosten = {crashkurs_date_title}
@@ -88,6 +91,7 @@ export default function Home({ curso }) {
               link_weitere_infos={link_beschreibung}
           
               texto_leistungen={texto_leistungen}
+              texto_kosten={texto_kosten}
               
             />
 

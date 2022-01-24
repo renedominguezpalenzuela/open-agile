@@ -29,6 +29,8 @@ import BarraConTextoIzquierda from "../components/BarraConTextoIzquierda";
 
 import Content04 from "../components/Content04";
 
+import ModalFormCookie from "../components/ModalFormCookie";
+
 
 
 
@@ -75,7 +77,7 @@ const  texto01 = ["“Liebe Leserinnen und Leser, hier veröffentlichen wir rege
      
   {/*Contenedor*/}
  <div id="principal" className="container-fluid g-0">
-
+<ModalFormCookie id={1} tiempo={10}/>
       <MenuFlotanteBoton />
   
         <AreaSuperior fondo="ajustable"  texto_parrafo_blanco_cursos={texto01} area_gris_nueva={true}/>

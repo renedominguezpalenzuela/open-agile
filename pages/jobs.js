@@ -18,6 +18,7 @@ import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 import BarraConTextoDerecha from "../components/BarraConTextoDerecha";
 import BarraConTextoIzquierda from "../components/BarraConTextoIzquierda";
 import Card08Job from "../components/Card08Job";
+import ModalFormCookie from "../components/ModalFormCookie";
 
 
 //----------------------------------------------------------------------------------------------------------
@@ -75,6 +76,7 @@ export default function Home() {
       {/*Contenedor*/}
 
       <div id="principal" className="container-fluid g-0">
+      <ModalFormCookie id={1} tiempo={10}/>
         <MenuFlotanteBoton />
 
         

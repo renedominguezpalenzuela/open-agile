@@ -16,6 +16,7 @@ export default function KurseContent03({
   link_weitere_infos,
   link_termine,
   texto_leistungen,
+  texto_kosten,
 }) {
   return (
     <>
@@ -28,30 +29,47 @@ export default function KurseContent03({
           />
         )}
 
-        <div className="tabla-titulo-cursos mt-4  ">{titulo}</div>
+        {titulo != undefined && (
+          <div className="tabla-titulo-cursos mt-4  ">{titulo}</div>
+        )}
 
-        {titulo_kosten != undefined && (
+        {/* {titulo_kosten != undefined && (
           <div className=" mt-1  ">
             {titulo_kosten}
           </div>
-        )}
+        )} */}
 
         {texto_leistungen != undefined && texto_leistungen.length > 0 && (
-
           <>
-          <ul>
-            {texto_leistungen.map((unaLinea, index) => (
-              <React.Fragment key={index}>
-                <li className="ps-5   font-kosten-cursos mybullets2">
-                  {unaLinea}                </li>
-              </React.Fragment>
-            ))}
-
+            <div className="tabla-titulo-cursos mt-4  ">Leistungen</div>
+            <ul>
+              {texto_leistungen.map((unaLinea, index) => (
+                <React.Fragment key={index}>
+                  <li className="ps-5   font-kosten-cursos mybullets2">
+                    {unaLinea}{" "}
+                  </li>
+                </React.Fragment>
+              ))}
             </ul>
           </>
         )}
 
-        {texto.map((unaLinea, index) => (
+        {texto_kosten && (
+          <>
+            <div className="tabla-titulo-cursos mt-4  ">Kosten</div>
+            <ul>
+              {texto_kosten.map((unaLinea, index) => (
+                <React.Fragment key={index}>
+                  <li className="ps-5   font-kosten-cursos mybullets2">
+                    {unaLinea}{" "}
+                  </li>
+                </React.Fragment>
+              ))}
+            </ul>
+          </>
+        )}
+
+        {texto &&  texto.map((unaLinea, index) => (
           <React.Fragment key={index}>
             <div className=" mt-2  font-kosten-cursos-titulo ">{unaLinea} </div>
             {unaLinea === "<br>" ? "<br/>" : ""}

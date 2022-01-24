@@ -6,67 +6,91 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import ModalForm from "../../components/ModalForm";
 
-
-
 import { servidor_url } from "../../config";
 
-
-export default function TeamTabs({ texto01, texto02, texto03, texto04, texto05 }) {
+export default function TeamTabs({
+  texto01,
+  texto02,
+  texto03,
+  texto04,
+  texto05,
+}) {
   const [value, setValue] = React.useState(0);
- 
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
-   const styles = {
-
-      // MuiButtonBase-root-MuiTab-root
-  "& .MuiButtonBase-root.MuiTab-root": {
-    fontSize: 11
-  },
-
-  
-}
-
+  const styles = {
+    // MuiButtonBase-root-MuiTab-root
+    "& .MuiButtonBase-root.MuiTab-root": {
+      fontSize: 11,
+    },
+  };
 
   return (
-      <>
-    <Box className="" sx={{ width: "95%" }}>
-      <Box>
-        <Tabs
+    <>
+      <Box sx={{ width: "95%", height: "90%" }}>
+        <Box>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            aria-label="basic tabs example"
+            centered
+            sx={styles}>
+            <Tab
+              label="Selbstorganisation und Selbstverantwortung "
+              {...a11yProps(0)}
+            />
+            <Tab label="Partnerschaftlicher Umgang " {...a11yProps(1)} />
+            <Tab label="Empowerment und Entwicklung" {...a11yProps(2)} />
+            <Tab label="Transparenz " {...a11yProps(3)} />
+            <Tab
+              label="Effizienz, Effektivität und Pragmatismus"
+              {...a11yProps(4)}
+            />
+          </Tabs>
+        </Box>
+
+        <OneTab
+          indice={0}
+          titulo="SELBSTORGANISATION UND SELBSTVERANTWORTUNG"
+          texto={texto01}
           value={value}
-          onChange={handleChange}
-          aria-label="basic tabs example"
-          centered
-          sx={styles}
-          >
-          <Tab label="Selbstorganisation und Selbstverantwortung" {...a11yProps(0)}  />
-          <Tab label="Partnerschaftlicher Umgang " {...a11yProps(1)} />
-          <Tab label="Empowerment und Entwicklung" {...a11yProps(2)} />
-          <Tab label="Transparenz " {...a11yProps(3)} />
-          <Tab label="Effizienz, Effektivität und Pragmatismus" {...a11yProps(4 )} />
-        </Tabs>
+          setValue={setValue}
+        />
+        <OneTab
+          indice={1}
+          titulo="PARTNERSCHAFTLICHER UMGANG"
+          texto={texto02}
+          value={value}
+          setValue={setValue}
+        />
+        <OneTab
+          indice={2}
+          titulo="EMPOWERMENT UND ENTWICKLUNG"
+          texto={texto03}
+          value={value}
+          setValue={setValue}
+        />
+        <OneTab
+          indice={3}
+          titulo="TRANSPARENZ"
+          texto={texto04}
+          value={value}
+          setValue={setValue}
+        />
+        <OneTab
+          indice={4}
+          titulo="EFFIZIENZ, EFFEKTIVITÄT UND PRAGMATISMUS"
+          texto={texto05}
+          value={value}
+          setValue={setValue}
+        />
       </Box>
-
-
-     <OneTab  indice={0}  titulo='SELBSTORGANISATION UND SELBSTVERANTWORTUNG'  texto={texto01} value={value} setValue={setValue} />
-     <OneTab  indice={1}  titulo='PARTNERSCHAFTLICHER UMGANG'  texto={texto02} value={value} setValue={setValue} />
-     <OneTab  indice={2}  titulo='EMPOWERMENT UND ENTWICKLUNG'  texto={texto03} value={value} setValue={setValue}  />
-     <OneTab  indice={3}  titulo='TRANSPARENZ'  texto={texto04} value={value} setValue={setValue}  />
-     <OneTab  indice={4}  titulo='EFFIZIENZ, EFFEKTIVITÄT UND PRAGMATISMUS'  texto={texto05} value={value} setValue={setValue} />
-
-    
-    </Box>
-
-
-    
-   
- </>
+    </>
   );
 }
-
-
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -100,30 +124,23 @@ function a11yProps(index) {
   };
 }
 
+function OneTab({ indice, titulo, texto, value, setValue }) {
+  const myfuncion = () => {
+    let proximo_indice = indice + 1;
+    if (proximo_indice > 4) {
+      proximo_indice = 0;
+    }
 
-function OneTab({indice, titulo, texto, value, setValue}) {
-
-
-  
-  const myfuncion = () => {   
-    let proximo_indice = indice+1;
-    if (proximo_indice>4) {proximo_indice=0;}
-
-    setValue(proximo_indice) 
-  
+    setValue(proximo_indice);
   };
-
 
   const [isShown, setIsShown] = React.useState(false);
 
-  
- return (
+  return (
     <>
-     <TabPanel value={value} index={indice} >
-        <div className="ps-5 ms-5 row w-75  ">
-          <div className=" fuente-titulo-team-tab mt-2 mb-4   ">
-            {titulo}
-          </div>
+      <TabPanel value={value} index={indice} className=" alto-tab  ">
+        <div className="ps-5 ms-5  w-75  ">
+          <div className=" fuente-titulo-team-tab mt-2 mb-4   ">{titulo}</div>
 
           {texto != undefined &&
             texto.length > 0 &&
@@ -133,26 +150,16 @@ function OneTab({indice, titulo, texto, value, setValue}) {
                 <p />
               </div>
             ))}
+        </div>
 
-
-            {/* <div   className="mt-3 mb-5" > */}
-              <div onClick={ myfuncion } className="mt-3 mb-5" > 
-              <img
-              className="boton_flecha  "
-              src={`${servidor_url}/img/leistungen/boton_flecha_magenta.svg`}
-              alt=""
-          
-            />
-
-            </div>
-       
-          {/* </div> */}
+        <div onClick={myfuncion} className="ubicacion-boton-team">
+          <img
+            className="boton_flecha  "
+            src={`${servidor_url}/img/leistungen/boton_flecha_magenta.svg`}
+            alt=""
+          />
         </div>
       </TabPanel>
-
-    
-   </>
-  )
+    </>
+  );
 }
-
-

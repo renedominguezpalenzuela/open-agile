@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import Cookies from "js-cookie";
+import { expire_cookies_in_days } from "../config";
 
 import * as React from "react";
 import FormGroup from "@mui/material/FormGroup";
@@ -17,17 +19,13 @@ import FormLabel from "@mui/material/FormLabel";
 
 import Link from "next/link";
 
-
-
-  const styles3 = {
-    ".MuiFormControlLabel-label": {
-        fontFamily: "Montserrat-Bold",
-      fontSize: 12,
-      color: "#24325a",
-    },
-  };
-
-
+const styles3 = {
+  ".MuiFormControlLabel-label": {
+    fontFamily: "Montserrat-Bold",
+    fontSize: 12,
+    color: "#24325a",
+  },
+};
 
 const IOSSwitch = styled((props) => (
   <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
@@ -35,7 +33,7 @@ const IOSSwitch = styled((props) => (
   width: 38,
   height: 22,
   padding: 0,
-  
+
   "& .MuiSwitch-switchBase": {
     padding: 0,
     margin: 2,
@@ -80,17 +78,120 @@ const IOSSwitch = styled((props) => (
       duration: 500,
     }),
   },
- 
 }));
 
-export default function ModalFormCookie({ id, mostrar }) {
+export default function ModalFormCookie({ id, tiempo , animar}) {
   const [showMe, setShowMe] = useState(false);
 
-  useEffect(() => {
-    setShowMe(mostrar);
-  }, [mostrar]);
+  // const [mostrarVentanaCookies, SetmostrarVentanaCookies] = useState(false);
 
-  const ocultar = () => {
+  let first_time = Cookies.get("first_time");
+
+  if (first_time === undefined || first_time === "true") {
+    first_time = true;
+  } else {
+    first_time = false;
+  }
+
+  //TODO: solo para ruebas
+  // first_time=true;
+
+  useEffect(() => {
+    if (first_time === true) {
+      setTimeout(() => {
+         setShowMe(true)
+        //  Cookies.set("first_time", false, { expires: expire_cookies_in_days });
+      }, tiempo);
+      console.log("cookie forma");
+    }
+  }, []);
+
+  let notwendigCheckedCookie = Cookies.get("notwendigCheckedCookie");
+
+  if (
+    notwendigCheckedCookie === undefined ||
+    notwendigCheckedCookie === "true"
+  ) {
+    notwendigCheckedCookie = true;
+  } else {
+    notwendigCheckedCookie = false;
+  }
+
+  let performanceCheckedCookie = Cookies.get("performanceCheckedCookie");
+  if (
+    performanceCheckedCookie === undefined ||
+    performanceCheckedCookie === "true"
+  ) {
+    performanceCheckedCookie = true;
+  } else {
+    performanceCheckedCookie = false;
+  }
+
+  let funktionalCheckedCookie = Cookies.get("funktionalCheckedCookie");
+  if (
+    funktionalCheckedCookie === undefined ||
+    funktionalCheckedCookie === "true"
+  ) {
+    funktionalCheckedCookie = true;
+  } else {
+    funktionalCheckedCookie = false;
+  }
+
+  const [notwendigChecked, setNotwendigChecked] = React.useState(
+    notwendigCheckedCookie
+  );
+  const [performanceChecked, setPerformanceChecked] = React.useState(
+    performanceCheckedCookie
+  );
+  const [funktionalChecked, setFunktionalChecked] = React.useState(
+    funktionalCheckedCookie
+  );
+
+  const handleChangeNotwendig = (event) => {
+    setNotwendigChecked(event.target.checked);
+    // console.log("notwending " + notwendigChecked);
+  };
+
+  const handleChangePerformance = (event) => {
+    setPerformanceChecked(event.target.checked);
+    // console.log("performanceChecked " + performanceChecked);
+  };
+
+  const handleChangeFunktional = (event) => {
+    setFunktionalChecked(event.target.checked);
+    // console.log("funktionalChecked " + funktionalChecked);
+  };
+
+  // useEffect(() => {
+  //   setShowMe(mostrar);
+  // }, [mostrar]);
+
+  const botonAceptar = () => {
+    //guardar cookies
+    //	notwendig, performance, funktional
+
+    Cookies.set("notwendigCheckedCookie", notwendigChecked, {
+      expires: expire_cookies_in_days,
+    });
+    Cookies.set("performanceCheckedCookie", performanceChecked, {
+      expires: expire_cookies_in_days,
+    });
+    Cookies.set("funktionalCheckedCookie", funktionalChecked, {
+      expires: expire_cookies_in_days,
+    });
+
+    Cookies.set("first_time", false, { expires: expire_cookies_in_days });
+
+    setShowMe(false);
+    return;
+  };
+
+  const botonNoAceptar = () => {
+    //eliminar todas las cookies
+    Cookies.remove("notwendigCheckedCookie");
+    Cookies.remove("performanceCheckedCookie");
+    Cookies.remove("funktionalCheckedCookie");
+    Cookies.remove("first_time");
     setShowMe(false);
     return;
   };
@@ -98,7 +199,7 @@ export default function ModalFormCookie({ id, mostrar }) {
   return (
     <>
       {showMe && (
-        <div className={clases(showMe)} id="cookie-form">
+        <div className={clases(showMe, animar)} id="cookie-form">
           <div className="row  d-flex justify-content-start ms-4 ps-1 mt-4 fuente_titulo_form_cookie">
             Wir verwenden Cookies
           </div>
@@ -117,17 +218,29 @@ export default function ModalFormCookie({ id, mostrar }) {
           <div className="row ms-3 pt-2">
             <div className="col-6">
               <FormControlLabel
-                control={<IOSSwitch sx={{ m: 1 }} defaultChecked />}
+                control={
+                  <IOSSwitch
+                    sx={{ m: 1 }}
+                    checked={notwendigChecked}
+                    onChange={handleChangeNotwendig}
+                  />
+                }
                 label="Notwendig"
-                   sx={styles3}
+                sx={styles3}
               />
             </div>
 
             <div className="col-6">
               <FormControlLabel
-                control={<IOSSwitch sx={{ m: 1 }} defaultChecked />}
+                control={
+                  <IOSSwitch
+                    sx={{ m: 1 }}
+                    checked={performanceChecked}
+                    onChange={handleChangePerformance}
+                  />
+                }
                 label="Performance"
-                   sx={styles3}
+                sx={styles3}
               />
             </div>
           </div>
@@ -135,7 +248,13 @@ export default function ModalFormCookie({ id, mostrar }) {
           <div className="row ms-3  pb-2">
             <div className="col-6">
               <FormControlLabel
-                control={<IOSSwitch sx={{ m: 1 }} defaultChecked />}
+                control={
+                  <IOSSwitch
+                    sx={{ m: 1 }}
+                    checked={funktionalChecked}
+                    onChange={handleChangeFunktional}
+                  />
+                }
                 label="Funktional"
                 sx={styles3}
               />
@@ -156,7 +275,7 @@ export default function ModalFormCookie({ id, mostrar }) {
               <button
                 type="button"
                 className="card-footer  boton-form-cookies "
-                onClick={ocultar}>
+                onClick={botonAceptar}>
                 Alle akzeptieren
               </button>
             </div>
@@ -165,23 +284,25 @@ export default function ModalFormCookie({ id, mostrar }) {
               <button
                 type="button"
                 className="card-footer  boton-form-cookies "
-                onClick={ocultar}>
+                onClick={botonNoAceptar}>
                 Ablehnen
               </button>
             </div>
           </div>
 
           <div className=" d-flex g-0  mt-3 pb-2 justify-content-start ms-4 fuente_footer_texto_form_cookie enlinea-padre">
+            <Link href="/doc/Datenschutz.pdf" className="enlinea-hijo">
+              <a target="_blank" className="mylinkhoover">
+                Datenschutz
+              </a>
+            </Link>
 
-          
-                <Link href="/docview02" className="enlinea-hijo">
-                  <a target="_blank" className="mylinkhoover">Datenschutz</a>
-                </Link>
-
-    <div  className="enlinea-hijo ms-1 me-1"> | </div>
-                <Link href="/docview03" className="enlinea-hijo">
-                  <a target="_blank" className="mylinkhoover">Impressum</a>
-                </Link>
+            <div className="enlinea-hijo ms-1 me-1"> | </div>
+            <Link href="/doc/Impressum.pdf" className="enlinea-hijo">
+              <a target="_blank" className="mylinkhoover">
+                Impressum
+              </a>
+            </Link>
 
             {/* Datenschutz | Impressum */}
           </div>
@@ -191,13 +312,16 @@ export default function ModalFormCookie({ id, mostrar }) {
   );
 }
 
-const clases = (mostrar) => {
+const clases = (mostrar, animar) => {
   let resultado = "ocultar";
   if (mostrar) {
     resultado = "mostrar";
   }
+
+  if (animar) {
+     resultado = resultado + " animate__animated animate__fadeInUpBig";
+  }
   return (
-    resultado +
-    " modalformcookie content-fluid animate__animated animate__fadeInUpBig"
+    resultado + " modalformcookie content-fluid "
   );
 };

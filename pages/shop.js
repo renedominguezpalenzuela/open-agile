@@ -12,6 +12,7 @@ import Card07Shop from "../components/Card07Shop";
 
 import { servidor_url } from "../config";
 
+import ModalFormCookie from "../components/ModalFormCookie";
 //----------------------------------------------------------------------------------------------------------
 //           CRASHKURSE \ CRASHKURS ZUM AGILE COACH
 //----------------------------------------------------------------------------------------------------------
@@ -35,6 +36,7 @@ export default function Home({shop}) {
       </Head>
 
       <div id="principal" className="container-fluid g-0">
+      <ModalFormCookie id={1} tiempo={10}/>
         <MenuFlotanteBoton />
 
         <AreaSuperior fondo="ajustable" texto1={titulo_area_superior} texto2={titulo_area_superior2} titulo_muy_largo={true} area_gris_nueva={true} />

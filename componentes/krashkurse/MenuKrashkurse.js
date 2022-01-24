@@ -62,19 +62,19 @@ if (link_boton!=undefined && link_boton.length>0) {
                 <td align="right">></td>
               </tr>
 
-              <tr className="font-card-menu-crashkurse">
+              {/* <tr className="font-card-menu-crashkurse">
                 <td>
                   <Link href={`${servidor_url}/${link_leistungen}#menukurs`}>
                     <div className="myanimacioncursos">LEISTUNGEN</div>
                   </Link>
                 </td>
                 <td align="right">></td>
-              </tr>
+              </tr> */}
 
               <tr className="font-card-menu-crashkurse">
                 <td>
                   <Link href={`${servidor_url}/${link_kosten}#menukurs`}>
-                    <div className="myanimacioncursos">KOSTEN</div>
+                    <div className="myanimacioncursos">LEISTUNGEN & KOSTEN</div>
                   </Link>
                 </td>
                 <td align="right">></td>

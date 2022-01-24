@@ -1,4 +1,5 @@
 import { servidor_url } from "../config";
+import { expire_cookies_in_days } from "../config";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -27,14 +28,7 @@ import ModalFormCookie from "../components/ModalFormCookie";
 //            Pagina inicial principal
 //----------------------------------------------------------------------------------------------------------
 
-const myfunc = (first_time) => {
- 
 
-  return <>
-   
-  </>
-  
-};
 
 export default function Home({
   cursos,
@@ -44,35 +38,30 @@ export default function Home({
   vlog,
 }) {
 
-  const [mostrarVentanaCookies, SetmostrarVentanaCookies] = useState(false);
+  // const [mostrarVentanaCookies, SetmostrarVentanaCookies] = useState(false);
 
 
-  let first_time = Cookies.get("first_time");
+  // let first_time = Cookies.get("first_time");
 
-  if (first_time === undefined) {
-    first_time = true;
-  } 
+  // if (first_time === undefined || first_time==="true") {
+  //   first_time = true;
+  // } else {
+  //   first_time = false;
+  // }
 
+  // //solo para ruebas
+  //   first_time=true;
+    
 
-  
-  
-  //solo para ruebas
-    first_time=true;
-  
-
-   
-
-  useEffect(() => {
-    if (first_time === true) {
-   
-     
-      setTimeout(() => {
-        myfunc(first_time);
-        SetmostrarVentanaCookies(true);
-           Cookies.set("first_time", false, { expires: 7 });
-      }, 1000);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (first_time === true) {  
+  //     setTimeout(() => {
+  //       myfunc(first_time);
+  //       SetmostrarVentanaCookies(true);
+  //          Cookies.set("first_time", false, { expires: expire_cookies_in_days });
+  //     }, 1000);
+  //   }
+  // }, []);
 
   //TODO:  mostrar la ventana al cabo de 5 s
 
@@ -90,7 +79,9 @@ export default function Home({
       
 
       <div id="principal" className="container-fluid g-0">
-       <ModalFormCookie id={1} mostrar={mostrarVentanaCookies}/>
+
+       <ModalFormCookie id={1} tiempo={1000} animar={true}/>
+
         <MenuFlotanteBoton  />
 
         <AreaSuperior

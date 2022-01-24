@@ -132,7 +132,7 @@ export default function Footer() {
               </div>
 
               <div>
-                <a className="color-font-dropdown mylinkhoover" href="/team/jobs">
+                <a className="color-font-dropdown mylinkhoover" href="/jobs">
                   Jobs
                 </a>
               </div>
@@ -152,7 +152,7 @@ export default function Footer() {
                   Datenschutz
                 </a> */}
 
-                <Link href="/docview02">
+                <Link href="/doc/Datenschutz.pdf">
                   <a target="_blank" className="mylinkhoover">Datenschutz</a>
                 </Link>
               </div>
@@ -162,7 +162,7 @@ export default function Footer() {
                   Impressum
                 </a> */}
 
-                <Link href="/docview03">
+                <Link href="/doc/Impressum.pdf">
                   <a target="_blank" className="mylinkhoover">Impressum</a>
                 </Link>
               </div>

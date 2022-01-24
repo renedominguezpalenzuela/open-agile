@@ -29,6 +29,8 @@ import BarraConTextoIzquierda from "../components/BarraConTextoIzquierda";
 
 import Content05 from "../components/Content05";
 
+import ModalFormCookie from "../components/ModalFormCookie";
+
 
 
 
@@ -98,6 +100,7 @@ const text04_bullets = [
      
   {/*Contenedor*/}
  <div id="principal" className="container-fluid g-0">
+ <ModalFormCookie id={1} tiempo={10}/>
 
       <MenuFlotanteBoton />
   

@@ -15,6 +15,8 @@ import MenuFlotanteBoton from "../../../components/MenuFlotanteBoton";
 
 import Tabla03 from "../../../components/crashkurse/tabla03";
 
+import ModalFormCookie from "../../../components/ModalFormCookie";
+
 
 
 
@@ -62,6 +64,7 @@ export default function Home({ curso }) {
       </Head>
 
       <div id="principal" className="container-fluid g-0">
+        <ModalFormCookie id={1} tiempo={10}/>
         <MenuFlotanteBoton />
 
         <AreaSuperior fondo="ajustable" texto1={titulo_area_superior} titulo_largo={true} area_gris_nueva={true}/>

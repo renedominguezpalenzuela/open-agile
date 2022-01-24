@@ -19,7 +19,7 @@ export default function ContentVideo() {
 
   return (
     <>
-      <div className="  text-center contenedor_video">
+      <div className="  text-center contenedor_video ">
         <div className="ratio ratio-16x9 ">
           <video loop={true} autoPlay={true} ref={botonVolumen} muted >
             <source src={`/video/Imagefilm_Open_Agile_Low.mp4`} />

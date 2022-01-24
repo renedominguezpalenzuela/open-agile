@@ -121,7 +121,7 @@ flex-direction: column; /*added*/
   .contenedor_video {
      position: relative;
     /* height:auto; */
-    top:-30vh;
+    top:-16vh;
     /* width: 100%; */
     
     z-index: 1;
@@ -139,4 +139,9 @@ flex-direction: column; /*added*/
     /* background-color: chartreuse; */
   }
 
+
+  .offset-video{
+    position: relative;
+    top:-6vh;
+  }
   

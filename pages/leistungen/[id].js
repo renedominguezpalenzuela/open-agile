@@ -29,6 +29,8 @@ import BarraConTextoIzquierda from "../../components/BarraConTextoIzquierda";
 
 import { servidor_url } from "../../config";
 
+import ModalFormCookie from "../../components/ModalFormCookie";
+
 //----------------------------------------------------------------------------------------------------------
 //            Pagina inicial principal
 //----------------------------------------------------------------------------------------------------------
@@ -60,6 +62,7 @@ export default function Home({ servicios }) {
       {/*Contenedor*/}
 
       <div id="principal" className="container-fluid g-0">
+      <ModalFormCookie id={1} tiempo={10}/>
       
         <AreaSuperior fondo="ajustable" texto1={titulo} titulo_largo={true} area_gris_nueva={true} />
 

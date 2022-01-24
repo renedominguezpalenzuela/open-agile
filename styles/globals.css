@@ -861,12 +861,33 @@ ul li.mybullets3::before {
   position: relative;
 }
 
+
+
+.alto-team-tab-contenedor {
+  /* height:70vh!important; */
+  /* height:90%!important;  */
+  height: 550px;
+  position: relative;
+}
+
+
 .alto-tab {
   height: 100% !important;
+}
+
+.alto_contenedor_tabs {
+  height: 585px !important;;
 }
 
 .ubicacion-boton {
   position: absolute;
   bottom: 60px;
   left: 140px;
+}
+
+.ubicacion-boton-team {
+  position: absolute;
+  bottom: 10vh;
+  left: 10vw;
+  /* border: 1px black black; */
 }
