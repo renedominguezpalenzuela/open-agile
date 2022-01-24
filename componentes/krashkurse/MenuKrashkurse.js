@@ -2,7 +2,6 @@ import { servidor_url } from "../../config";
 import Image from "next/image";
 import Link from "next/link";
 
-
 export default function MenuKrashkurse({
   link_beschreibung,
   link_vorteile,
@@ -11,17 +10,12 @@ export default function MenuKrashkurse({
   link_kosten,
   link_termine,
   link_pdf,
-  link_boton
+  link_boton,
 }) {
-
-let link_boton_new="#dates_section";
-if (link_boton!=undefined && link_boton.length>0) {
-  link_boton_new = link_boton;
-}
- 
-
-
-
+  let link_boton_new = "#dates_section";
+  if (link_boton != undefined && link_boton.length > 0) {
+    link_boton_new = link_boton;
+  }
 
   return (
     <>
@@ -80,9 +74,7 @@ if (link_boton!=undefined && link_boton.length>0) {
                 <td align="right">></td>
               </tr>
 
-
-
-             {link_termine!=undefined && link_termine!="" &&
+              {link_termine != undefined && link_termine != "" && (
                 <tr className="font-card-menu-crashkurse">
                   <td>
                     <Link href={`${link_termine}`}>
@@ -91,14 +83,18 @@ if (link_boton!=undefined && link_boton.length>0) {
                   </td>
                   <td align="right">></td>
                 </tr>
-              }
+              )}
 
               <tr className="font-card-menu-crashkurse">
                 <td>
                   {/* <Link href={link_pdf} className="" download> */}
-                    {/* <a target="_blank" onClick={() => botonAbrirPDF(link_pdf)}> */}
-                      <div className="myanimacioncursos" onClick={() => botonAbrirPDF(link_pdf)}>PDFs</div>
-                    {/* </a> */}
+                  {/* <a target="_blank" onClick={() => botonAbrirPDF(link_pdf)}> */}
+                  <div
+                    className="myanimacioncursos"
+                    onClick={() => botonAbrirPDF(link_pdf)}>
+                    PDFs
+                  </div>
+                  {/* </a> */}
                   {/* </Link> */}
                 </td>
                 <td align="right">></td>
@@ -106,36 +102,32 @@ if (link_boton!=undefined && link_boton.length>0) {
             </tbody>
           </table>
 
-
           <Link href={link_boton_new}>
-             <button
-                    type="button"
-                    className="btn  btn-cursos2 font-btn-card-shop rounded-pill mt-4 "  >
-                     JETZT ANMELDEN
-                  </button>
+            <button
+              type="button"
+              className="btn  btn-cursos2 font-btn-card-shop rounded-pill mt-4 ">
+              JETZT ANMELDEN
+            </button>
           </Link>
-
-
         </div>
       </div>
     </>
   );
 }
 
+function downloadFile(filePath){
+    var link=document.createElement('a');
+    link.href = filePath;
+    link.download = filePath.substr(filePath.lastIndexOf('/') + 1);
+    link.click();
+}
 
+const botonAbrirPDF = (link_pdf) => {
+  //  event.preventDefault();
 
-  const botonAbrirPDF = ( link_pdf) => {
-      //  event.preventDefault();
-
-
-for (let unPdf of link_pdf)  {
-  
-          window.open(unPdf,"_blank");
-         
-}         
-
-      
-
+  for (let unPdf of link_pdf) {
+    // window.open(unPdf, "_blank");
+     downloadFile(unPdf);
+    //  window.open(unPdf, '_parent', 'download');
   }
-
-
+};
