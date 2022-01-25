@@ -87,7 +87,7 @@ export default function AreaSuperior({
             <BotonAgileCheck />
           </div>
 
-          <div className="item-titulo ">
+          <div className="item-titulo h-100">
             {/* Contenido Principal */}
             {contenido_principal(
               texto1,
