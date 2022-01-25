@@ -13,17 +13,16 @@ import Content02Final from "./Content02Final";
 
 
 
-
-
-export default function Content02Cursos( {cursos}) {
+export default function Content02Cursos( {cursos, main_page}) {
 
 
 
 
   return (
 <>
-
-    <div id="course_title" className="row  text-center mb-3 offset-video">
+                                            
+    <div id="course_title" className={`${main_page?"offset-video row text-center mb-2 ":"row text-center mb-3 "}`}>
+    
       <h3 className="font_title_seccion_sombra "> CRASHKURSE</h3>
       <h5 className="font_second_line2">
       jetzt fit machen für die Arbeitswelt von morgen

@@ -96,7 +96,7 @@ export default function Home({
         <ContentVideo/>
 
         {/*Cards CRASHKURSE  */}
-        <Content02Cursos cursos={cursos} />
+        <Content02Cursos cursos={cursos}  main_page={true}/>
 
         {/*imagen de sponsors */}
         <Content03 />
