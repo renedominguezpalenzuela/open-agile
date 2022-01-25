@@ -325,7 +325,7 @@ export default function ModalFormJob({
               <div className="row d-flex justify-content-start ps-3 mt-3 pe-3  ">
                 <TextField
                   id="outlined-multiline-flexible"
-                  label="Erzähle uns von Dir und Deinen Hard Skills"
+                  label="Erzähle uns gerne mehr von Dir"
                   multiline
                   maxRows={2}
                   rows={2}
@@ -336,7 +336,7 @@ export default function ModalFormJob({
                 />
               </div>
 
-              <div className="row  g-0 ms-3 mt-4  mb-2  d-flex justify-content-start">
+              <div className="row  g-0 ms-3 mt-4  mb-2  d-flex justify-content-start  align-items-center  ">
                 {/* <input type="file" className="ocultar" id="customFile" onChange={handleChange4} />      */}
                 <input
                   type="file"
@@ -353,13 +353,13 @@ export default function ModalFormJob({
                     Lebenslauf hochladen
                   </button>
                 </div>
-                <div className="col-md-6 ms-2 d-flex justify-content-start align-items-center texto-AGBS">
+                <div className="col-md-6 h-100  ms-2 d-flex justify-content-start  align-items-center texto-AGBS">
                   {value4}
                 </div>
               </div>
 
-              <div className="row    mt-4  mb-2  d-flex justify-content-end">
-                <div className="col-8 me-2 border-dark d-flex justify-content-end">
+              <div className="row  ms-3 g-0  mt-3  mb-2  d-flex justify-content-start">
+                <div className="col-md-8  border-dark d-flex justify-content-start">
                   <button
                     type="button"
                     className="btn btn-secondary boton_modal_form"

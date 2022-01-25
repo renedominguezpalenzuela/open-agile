@@ -139,7 +139,7 @@ export default function Home({ team }) {
 
           <div className="row mt-5 mb-5 d-flex justify-content-center  ">
           <div className="col-6 mt-2">
-            <div className="font_texto_inferior_team  "> seit 2021 bei Open Agile GmbH</div>
+            <div className="font_texto_inferior_team  "> {`“seit 2021 bei Open Agile” - GmbH`} </div>
           </div>  
           </div>
 
@@ -167,7 +167,7 @@ export default function Home({ team }) {
 
                <div className=" row  mt-3 font_title1-team-seccion ">{motto_author}</div>
 
-                <div className="row  mt-2 font_title2-team-seccion font_title_purple ">{cargo}</div>
+                {/* <div className="row  mt-2 font_title2-team-seccion font_title_purple ">{cargo}</div> */}
 
 
 

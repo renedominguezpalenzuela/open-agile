@@ -5,7 +5,7 @@ export const team_details = [
     imagetop: "team/alexander-top.png",
     imageround: "team/alexander-round.png",
     title: "Alexander Stange",
-    title2: "Geschäftsführer, Agile Coach",
+    title2: "Geschäftsführer, Agile Coach, Scrum Master",
     title3: "MEHR ZU ALEXANDER ",
     cargo: "",
     erfahrung: [
@@ -62,7 +62,7 @@ export const team_details = [
     imagetop: "team/andreas-top.png",
     imageround: "team/andrea-round.png",
     title: "Andreas Eilers",
-    title2: "Geschäftsführer, Agile Coach",
+    title2: "Geschäftsführer, Agile Coach, Scrum Master",
     title3: "MEHR ZU ANDREAS ",
     cargo: "CEO Open Agile",
     erfahrung: [

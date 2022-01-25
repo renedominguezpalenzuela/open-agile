@@ -301,6 +301,51 @@ export default function ModalFormCursos({
                     />
                   </div>
 
+
+                  <div className="row d-flex justify-content-start ps-3 mt-2 pe-3  ">
+                    <TextField
+                      id="outlined-multiline-flexible"
+                      label="Straße"
+                      className="ancho-edit2 "
+                      sx={styles}
+                      inputProps={fuentes1}
+                      InputLabelProps={fuentes2}
+                    />
+                  </div>
+
+                  <div className="row d-flex justify-content-start ps-3 mt-2 pe-3  ">
+                    <TextField
+                      id="outlined-multiline-flexible"
+                      label="Hausnummer"
+                      className="ancho-edit2 "
+                      sx={styles}
+                      inputProps={fuentes1}
+                      InputLabelProps={fuentes2}
+                    />
+                  </div>
+
+                  <div className="row d-flex justify-content-start ps-3 mt-2 pe-3  ">
+                    <TextField
+                      id="outlined-multiline-flexible"
+                      label="Postleitzahl"
+                      className="ancho-edit2 "
+                      sx={styles}
+                      inputProps={fuentes1}
+                      InputLabelProps={fuentes2}
+                    />
+                  </div>
+
+                  <div className="row d-flex justify-content-start ps-3 mt-2 pe-3  ">
+                    <TextField
+                      id="outlined-multiline-flexible"
+                      label="Ort"
+                      className="ancho-edit2 "
+                      sx={styles}
+                      inputProps={fuentes1}
+                      InputLabelProps={fuentes2}
+                    />
+                  </div>
+
                   <div className="row mt-2 ps-3 pe-3 d-flex justify-content-center   ">
                     <TextField
                       id="address"
