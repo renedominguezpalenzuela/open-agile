@@ -55,7 +55,7 @@ export const team_details = [
     correo: "alexander.stange@open-agile.de",
     link: "team",
     texto_boton: "mehr zu Alexander",
-    linkedin: "https://www.linkedin.com",
+    linkedin: "https://www.linkedin.com/in/alexander-stange-07378312a/",
   },
 
   {
@@ -119,6 +119,6 @@ export const team_details = [
     correo: "andreas.eilers@open-agile.de",
     link: "team",
     texto_boton: "mehr zu Andreas",
-    linkedin: "https://www.linkedin.com",
+    linkedin: "https://www.linkedin.com/in/andreas-e-41113b195/",
   },
 ];
