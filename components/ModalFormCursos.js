@@ -511,7 +511,7 @@ export default function ModalFormCursos({
                 </div>
               </div>
 
-              <div className="row d-flex justify-content-end mt-4 pe-3 mb-2">
+              <div className="row  d-flex justify-content-end  pe-3 mb-2">
                 <div className="col-3">
                   <button
                     type="button"
