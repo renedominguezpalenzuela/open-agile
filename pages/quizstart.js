@@ -50,7 +50,7 @@ export default function Home() {
   ];
 
   const texto05 = [
-    "Antworten auf diese Fragen bieten erste Interpretationsmöglichkeiten im Hinblick auf den agilen Entwicklungsstand von Individuen, Teams und Organisationen. Wie agil ist Eure Zusammenarbeit? Mache jetzt den",
+    "Antworten auf diese Fragen bieten erste Interpretationsmöglichkeiten im Hinblick auf den agilen Entwicklungsstand von Individuen, Teams und Organisationen. Wie agil ist Eure Zusammenarbeit?",
   ];
 
   // AGILE CHECK!

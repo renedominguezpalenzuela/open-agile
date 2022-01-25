@@ -97,14 +97,13 @@ export default function TextoBloque01({
 
       
   {texto_plequitas_array!=undefined && texto_plequitas_array!="" &&
-  <div className="row    ">
-    <div className="col-1">
-    </div>
+  <div className="ms-5 ps-4 row d-flex justify-content-start  font_small_letter ">
+   
 
-    <div className="col font_small_letter ms-3 me-3 justificar">
+    <div className="col font_small_letter ms-3  me-3 justificar ">
     <ul>
       {texto_plequitas_array.map ((unaLinea, index) => 
-        <li key={index}>
+        <li key={index} className="mybullets3 ms-2">
           {unaLinea}
         </li>                 
       )}
@@ -113,8 +112,7 @@ export default function TextoBloque01({
 
     </div>
 
-      <div className="col-1">
-      </div>
+     
     </div>
    }
 
