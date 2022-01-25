@@ -17,7 +17,7 @@ export default function Content01TextSinIcons({ texto1, texto2, texto2a, vista_m
     <>
    
   
-  <div className={`${team?"pb-3":"mb-5 pb-3"}`}  >
+  <div className={`${team?"pb-3":"mt-4 mb-3 pb-3"}`}  >
       {texto1 != undefined && texto1 != "" && (
         <div className={formato_titulo1(vista_movil, cursos, titulo_largo, titulo_muy_largo)}>
           {texto1} 
@@ -26,7 +26,7 @@ export default function Content01TextSinIcons({ texto1, texto2, texto2a, vista_m
 
       {texto2 != undefined && texto2 != "" && (
         <div className={formato_titulo2(vista_movil, titulo_muy_largo)}>
-          <div>{texto2} </div>
+          <div>{texto2}  </div>
 
           {texto2a != undefined && texto2a != "" && <> {texto2a} </>}
         </div>
