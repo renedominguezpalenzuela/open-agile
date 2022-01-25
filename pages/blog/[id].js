@@ -235,6 +235,7 @@ const copyURLtoClipboard=(url)=>{
                 content.map((unContenido, index1) => (
                   <React.Fragment key={index1}>
                     {contenido(unContenido)}
+                    
                   </React.Fragment>
                 ))}
             </div>
@@ -310,10 +311,13 @@ const contenido = (contenido) => {
             {index2 === 0 ? (
               <div className="letra-parrafo-blog primera-parrafo-blog">
                 {unTexto}
+                
               </div>
             ) : (
               <div className="letra-parrafo-blog">{unTexto}</div>
             )}
+
+            <p/>
           </React.Fragment>
         ))}
       </>
