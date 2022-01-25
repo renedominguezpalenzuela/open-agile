@@ -92,7 +92,7 @@ export default function ModalFormCursos({
     //  color: "#00ff00", //color del icono
 
     "& .MuiSvgIcon-root": {
-      fontSize: 14, //Tamno del inoco del radio button
+      fontSize: 12, //Tamno del inoco del radio button
     },
 
     " .MuiFormControlLabel-root": {
@@ -323,7 +323,7 @@ export default function ModalFormCursos({
                     />
                   </div>
 
-                  <div className="row mt-2 mb-2 ps-3 pe-3 d-flex justify-content-center  texto-email  ">
+                  <div className="row mt-2 mb-2 ps-3 pe-3 d-flex justify-content-center  texto-AGBS   ">
                     Wir senden Dir binnen 48h eine Bestätigung und weitere
                     Informationen zu dem Crashkurs.
                   </div>
@@ -369,19 +369,22 @@ export default function ModalFormCursos({
                       id="combo-box-demo"
                       options={opciones_combo_box}
                       sx={stilos_combo}
+                      
                       renderInput={(params) => (
-                        <TextField {...params} label="Woher kennst du uns?" />
+                        <TextField {...params} label="Woher kennst du uns?" InputLabelProps={fuentes2}
+                      />
                       )}
                     />
                   </div>
                 </div>
 
                 <div className="col-6 ">
-                  <div className="row d-flex  ps-3 pe-3 justify-content-start titulo-modal ">
+                  
+                  <div className="row d-flex  ps-3 pe-3 justify-content-start titulo-modal  ">
                     Deine Rechnungsadresse
                   </div>
-
-                  <div className="row d-flex justify-content-start ps-3 mt-1 pe-3  ">
+                                                            
+                  <div className="row d-flex justify-content-start ps-3 mt-2 pe-3  ">
                     <TextField
                       id="outlined-multiline-flexible"
                       label="Unternehmen"

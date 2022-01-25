@@ -41,7 +41,8 @@ export default function Home({ curso }) {
     crashkurs_date_title,
     crashkurs_date,
      texto_kosten,
-     link_boton
+     link_boton,
+     nombre_curso
   } = curso;
 
    let link_termine_new ="";
@@ -98,7 +99,7 @@ export default function Home({ curso }) {
           crashkurs_date_title={crashkurs_date_title}
           crashkurs_date={crashkurs_date}
           titulo2a={crashkurs_date_title}
-          precio={texto_kosten}  nombre_curso={titulo_area_superior}
+          precio={texto_kosten}  nombre_curso={nombre_curso}
         />
         {/*Footer  */}
         <Footer />

@@ -2,6 +2,7 @@ export const crashkurse_beschreibung_details = [
     {
         "id": "1",
         "titulo_area_superior": "CRASHKURS ZUM AGILE COACH",
+        "nombre_curso": "Crashkurs zum Agile Coach",
         "image_beschreibung": "crashkurse/image1.jpg",
         "image_vorteile": "crashkurse/image3.jpg",
         "image_inhalte": "crashkurse/image4.jpg",
@@ -102,6 +103,7 @@ export const crashkurse_beschreibung_details = [
     }, {
         "id": "2",
         "titulo_area_superior": "CRASHKURS ZUM AGILE FACILITATOR",
+        "nombre_curso": "Crashkurs zum Agile Facilitator",
         "image_beschreibung": "crashkurse/image1.jpg",
         "image_inhalte": "crashkurse/image4.jpg",
         "image2": "crashkurse/notes.jpg",
@@ -204,6 +206,7 @@ export const crashkurse_beschreibung_details = [
     }, {
         "id": "3",
         "titulo_area_superior": "CRASHKURS ZUM SCRUM MASTER",
+        "nombre_curso": "Crashkurs zum Scrum Master",
         "image_beschreibung": "crashkurse/image1.jpg",
         "image_vorteile": "crashkurse/image3.jpg",
         "image_inhalte": "crashkurse/image4.jpg",
@@ -304,6 +307,7 @@ export const crashkurse_beschreibung_details = [
     }, {
         "id": "4",
         "titulo_area_superior": "CRASHKURS MITBESTIMMUNG IN DER AGILEN ARBEITSWELT",
+         "nombre_curso": "Crashkurs Mitbestimmung in der agilen Arbeitswelt",
         "image_beschreibung": "crashkurse/image7.jpg",
         "image_vorteile": "crashkurse/image3.jpg",
         "image_inhalte": "crashkurse/image4.jpg",
@@ -404,6 +408,7 @@ export const crashkurse_beschreibung_details = [
     }, {
         "id": "5",
         "titulo_area_superior": "ONLINE CRASHKURS SELBSTORGANISATION IN AGILEN TEAMS",
+        "nombre_curso": "Online Crashkurs Selbstorganisation in agilen Teams",
         "image_beschreibung": "crashkurse/image8.jpg",
         "image_vorteile": "crashkurse/image3.jpg",
         "image_inhalte": "crashkurse/image4.jpg",
