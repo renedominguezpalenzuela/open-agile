@@ -104,7 +104,7 @@ export default function MenuNavBar() {
             <div className="separador_menu">/</div>
           </li>
           <li className="nav-item dropdown2  ">
-            <a href="/team/main">
+            <a href="/wir">
               <div className="nav-link">TEAM</div>
             </a>
 
