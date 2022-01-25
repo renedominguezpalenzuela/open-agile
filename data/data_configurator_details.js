@@ -19,9 +19,12 @@ export const configurator_details = [
 
   {
     "id": "4",
-    "botones": [{ "id": "9","texto": "Crashkurs Agile Coach",   "link":"/crashkurse/1", "tipo":"1"},
-                   { "id": "10","texto": "Crashkurs Agile Facilitator", "link":"/crashkurse/2", "tipo":"1"},
-                   { "id": "11","texto": "Crashkurs Scrum Master", "link":"/crashkurse/3", "tipo":"1"}
+    "botones": [{ "id": "9","texto": "Crashkurs Agile Coach",   "link":"/crashkurse/beschreibung/1", "tipo":"1"},
+                   { "id": "10","texto": "Crashkurs Agile Facilitator", "link":"/crashkurse/beschreibung/2", "tipo":"1"},
+                   { "id": "11","texto": "Crashkurs Scrum Master", "link":"/crashkurse/beschreibung/3", "tipo":"1"},
+                   { "id": "12","texto": "Crashkurs Mitbestimmung in der agilen Arbeitswelt", "link":"/crashkurse/beschreibung/4", "tipo":"1"},
+                   { "id": "13","texto": "Online Crashkurs Selbstorganisation in agilen Teams", "link":"/crashkurse/beschreibung/5", "tipo":"1"}
+                    
                    
                    ],
   },
@@ -40,7 +43,7 @@ export const configurator_details = [
   },
   {
    "id": "7",
-    "botones": [ { "id": "18","texto":"Mitbestimmung im agilen Kontext",    "link":"/leistungen/4", "tipo":"1"}],
+    "botones": [ { "id": "18","texto":"Mitbestimmung im agilen Kontext",    "link":"/crashkurse/beschreibung/4", "tipo":"1"}],
   },
 
   {

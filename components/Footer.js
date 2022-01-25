@@ -107,14 +107,14 @@ export default function Footer() {
               
               <div>
                 <a className="color-font-dropdown mylinkhoover" href="/crashkurse/beschreibung/4">
-                  Crashkurs mitbestimmung in der agilen arbeitswelt{" "}
+                  Crashkurs Mitbestimmung in der agilen Arbeitswelt{" "}
                 </a>
               </div>
 
               
               <div>
                 <a className="color-font-dropdown mylinkhoover" href="/crashkurse/beschreibung/5">
-                  Online crashkurs selbstorganisation in agilen teams{" "}
+                  Online Crashkurs Selbstorganisation in agilen Teams{" "}
                 </a>
               </div>
 
