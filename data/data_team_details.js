@@ -5,7 +5,7 @@ export const team_details = [
     imagetop: "team/alexander-top.png",
     imageround: "team/alexander-round.png",
     title: "Alexander Stange",
-    title2: "Geschäftsführer, Agile Coach, Scrum Master",
+    title2: "Geschäftsführer, Agile Coach & Scrum Master",
     title3: "MEHR ZU ALEXANDER ",
     cargo: "",
     erfahrung: [
@@ -49,7 +49,9 @@ export const team_details = [
     otrotexto: [
       " Dabei greift Alexander einerseits auf seine langjährigen Erfahrungen als Trainer & Berater zurück und anderseits nutzt er sein Know-how als zertifizierter Agile Coach & Scrum Master. Insbesondere in schwierigen Situationen besinnt sich Alexander immer wieder auf seine wichtigsten Werte: Mut, Transparenz und Humor. Für viele ist die individuelle Veränderung ein langer Weg mit vielen Meilensteinen. Dabei ist für Alexander viel Verständnis, Geduld und gegenseitige Rücksichtnahme entscheidend.",
     ],
-    telefono: "tel: 0160 979 40004",
+    telefono: "tel: 171 3616712",
+    phone:"+49 171 3616712",
+    phone_link:"tel:+491713616712",
     correo: "alexander.stange@open-agile.de",
     link: "team",
     texto_boton: "mehr zu Alexander",
@@ -62,7 +64,7 @@ export const team_details = [
     imagetop: "team/andreas-top.png",
     imageround: "team/andrea-round.png",
     title: "Andreas Eilers",
-    title2: "Geschäftsführer, Agile Coach, Scrum Master",
+    title2: "Geschäftsführer, Agile Coach & Scrum Master",
     title3: "MEHR ZU ANDREAS ",
     cargo: "CEO Open Agile",
     erfahrung: [
@@ -111,7 +113,9 @@ export const team_details = [
     otrotexto: [
       "In der Beratung und im Training greift Andreas auf die Erfahrung als Leiter eines agilen Entwicklungslabors zurück sowie auf das Fachwissen als Certified Financial Planner. Durch den Betriebswirt mit den Schwerpunkten Personal- und Finanzmanagement sind ihm auch organisationsstrategische Fragestellungen sehr vertraut.",
     ],
-    telefono: "tel:0160 979 40004",
+    telefono: "tel:0160 979 40004",    
+    phone:"+49 160 97940004",
+    phone_link:"tel:+4916097940004",
     correo: "andreas.eilers@open-agile.de",
     link: "team",
     texto_boton: "mehr zu Andreas",

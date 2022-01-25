@@ -17,6 +17,8 @@ import React from "react";
 export default function Content06Team ({lista_cards} ) {
 
  
+
+ 
   return (
         <>
 
@@ -33,14 +35,14 @@ export default function Content06Team ({lista_cards} ) {
                           {/* Vista movil  */}
                         <div className="col-4 d-xl-none">                                                         
                                     
-                                              <Card01 id={unCard.id} imagen={unCard.image} titulo={unCard.title} texto={unCard.title2} link={unCard.link} texto_boton={unCard.texto_boton} correo={unCard.correo}/>
+                                              <Card01 id={unCard.id} imagen={unCard.image} titulo={unCard.title} texto={unCard.title2} link={unCard.link} texto_boton={unCard.texto_boton} correo={unCard.correo} telefono={unCard.phone} telefono_link={unCard.phone_link}/>
                                       
                         </div>                           {/* Vista normal  */}
                         <div  className="col-4   d-none d-xl-block  m-4 ">     
 
                         
                          
-                          <Card06Team id={unCard.id}  imagen={unCard.image} titulo={unCard.title} titulo2={unCard.title2} link={unCard.link}  texto_boton={unCard.texto_boton} correo={unCard.correo}/>     
+                          <Card06Team id={unCard.id}  imagen={unCard.image} titulo={unCard.title} titulo2={unCard.title2} link={unCard.link}  texto_boton={unCard.texto_boton} correo={unCard.correo} telefono={unCard.phone} telefono_link={unCard.phone_link}/>     
                         </div> 
               </React.Fragment>  
             )

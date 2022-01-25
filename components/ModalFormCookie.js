@@ -102,7 +102,7 @@ export default function ModalFormCookie({ id, tiempo , animar}) {
          setShowMe(true)
         //  Cookies.set("first_time", false, { expires: expire_cookies_in_days });
       }, tiempo);
-      console.log("cookie forma");
+      
     }
   }, []);
 
@@ -149,17 +149,17 @@ export default function ModalFormCookie({ id, tiempo , animar}) {
 
   const handleChangeNotwendig = (event) => {
     setNotwendigChecked(event.target.checked);
-    // console.log("notwending " + notwendigChecked);
+    
   };
 
   const handleChangePerformance = (event) => {
     setPerformanceChecked(event.target.checked);
-    // console.log("performanceChecked " + performanceChecked);
+    
   };
 
   const handleChangeFunktional = (event) => {
     setFunktionalChecked(event.target.checked);
-    // console.log("funktionalChecked " + funktionalChecked);
+    
   };
 
   // useEffect(() => {

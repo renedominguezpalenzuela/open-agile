@@ -42,8 +42,8 @@ export default function Footer() {
 
                 <div className="row font_facit_text_very_small-kontack ">
                 
-                  <a className="mylinkhoover " href="mailto:info@open-agile.de">
-                    info@open-agile.de
+                  <a className="mylinkhoover " href="mailto:kontakt@open-agile.de">
+                    kontakt@open-agile.de
                   </a>
                 
 

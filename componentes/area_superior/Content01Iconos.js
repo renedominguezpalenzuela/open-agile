@@ -61,7 +61,8 @@ export default function Content01Iconos({footer}) {
 
 
     <div className="col-1 iconos-contenedor ">
-      <a href="https://www.youtube.com/channel/UCuwf90RVDjbK0Isu1vL1skA">
+      <a href="https://www.youtube.com/channel/UC4JhXDcBKkgVaZILgnzhm0A">
+      
         
          <i className={`${iconos_size(footer)} bi-youtube iconos-social`}></i>
       </a>

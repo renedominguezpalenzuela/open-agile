@@ -70,7 +70,7 @@ export default function Home({ blog }) {
 
   
 const copyURLtoClipboard=(url)=>{
-  console.log(url);
+  
 
    setOpen(true);
 

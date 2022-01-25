@@ -16,7 +16,9 @@ export default function Card06Team({
   texto_boton,
   texto_alt,
   link,
-  correo
+  correo,
+  telefono,
+  telefono_link
 }) {
 
   
@@ -33,13 +35,14 @@ export default function Card06Team({
           <div className="row w-100 g-0 ">
 
             <div className="col-12 pt-1 ps-3   ">
+               {/* Nombre */}
                {titulo != undefined && titulo != "" && (<>
                    <div className=" font1-card-team ">
                       {titulo} 
                    </div>
                </>)}
 
-              {/* font_card_title2  */}
+              {/* Titulo */}
               {titulo2 != undefined && titulo2 != "" && (<>              
                     <div className="mt-1 font2-card-team ">
                         {titulo2}
@@ -48,8 +51,14 @@ export default function Card06Team({
 
 
                {correo != undefined && correo != "" && (<>              
-                    <div className=" font3-card-team ">
+                    <div className=" font3-card-team mt-1">
                         {correo}
+                    </div>              
+              </>)}
+
+                 {telefono != undefined && telefono != "" && (<>              
+                    <div className=" font3-card-team mt-1">
+                        {telefono}
                     </div>              
               </>)}
 
