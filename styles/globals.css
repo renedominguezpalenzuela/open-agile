@@ -809,6 +809,12 @@ ul li.mybullets::before {
   font-size: 1.5rem;
 }
 
+.margen-negativo{
+  margin-left: -1.2em;
+  
+}
+
+
 ul li.mybullets2::before {
   content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
   color: #f82d7c; /* Change the color */

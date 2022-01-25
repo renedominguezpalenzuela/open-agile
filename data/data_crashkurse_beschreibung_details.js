@@ -19,9 +19,9 @@ export const crashkurse_beschreibung_details = [
                     "ts bei ihrer Veränderung zu begleiten.",
             "Mit unserem hybriden Konzept kannst Du von überall auf der Welt an dem Crashkurs" +
                     " teilnehmen. Selbstverständlich aber auch in Präsenz vor Ort, in unserer schönen" +
-                    " Hansestadt Bremen",
+                    " Hansestadt Bremen.",
             "Mit konkreten Beispielen aus der Beratungs- Praxis geben wir Dir einen tiefen, a" +
-                    "ber dennoch verständlichen Einblick in die agile Arbeitswelt"
+                    "ber dennoch verständlichen Einblick in die agile Arbeitswelt."
         ],
         "texto_inhalte": [
             {
@@ -61,7 +61,9 @@ export const crashkurse_beschreibung_details = [
         "link_kosten": "crashkurse/kosten/1",
         "text_termine": "2022",
         "link_termine": "/#dates_section",
-        "link_pdf": ["/doc/Anmeldung_zum_Crashkurs_Agile_Coach.pdf","/doc/Onepager_Crashkurs_Agile_Coach.pdf", "/doc/Prospekt_Crashkurs_Agile_Coach.pdf"],
+        "link_pdf": [
+            "/doc/Anmeldung_zum_Crashkurs_Agile_Coach.pdf", "/doc/Onepager_Crashkurs_Agile_Coach.pdf", "/doc/Prospekt_Crashkurs_Agile_Coach.pdf"
+        ],
         "link_boton": "",
         "texto_leistungen": [
             '8 Tage Crashkurs in 4 x 2 Tagesblöcken',
@@ -74,7 +76,7 @@ export const crashkurse_beschreibung_details = [
 
         "texto_kosten": ["4.790,- Euro netto (zzgl. 19% USt)"],
 
-        "crashkurs_date_title": "agile coach",
+        "crashkurs_date_title": "AGILE COACH",
 
         "crashkurs_date": [
             {
@@ -148,13 +150,15 @@ export const crashkurse_beschreibung_details = [
         "link_kosten": "crashkurse/kosten/2",
         "text_termine": "2022",
         "link_termine": "/#dates_section",
-        "link_pdf": ["/doc/Anmeldung_zum_Crashkurs_Agile_Facilitator.pdf","/doc/Onepager_Crashkurs_Agile_Facilitator.pdf"],
+        "link_pdf": [
+            "/doc/Anmeldung_zum_Crashkurs_Agile_Facilitator.pdf", "/doc/Onepager_Crashkurs_Agile_Facilitator.pdf"
+        ],
         "link_boton": "",
         "texto_leistungen": [
             '2 Tage Crashkurs remote oder vor Ort möglich (Do. / Fr. oder Fr. / Sa.)', 'Zertifikat "Agile Facilitator"', 'Das Buch "Crashkurs Selbstorganisation in Agilen Teams"', 'Fotoprotokoll & Screenshots'
         ],
         "texto_kosten": ["1.190,- Euro netto (zzgl. 19% USt)"],
-        "crashkurs_date_title": "agile facilitator",
+        "crashkurs_date_title": "AGILE FACILITATOR",
         "form_title": "",
         "crashkurs_date": [
             {
@@ -249,7 +253,9 @@ export const crashkurse_beschreibung_details = [
         "link_kosten": "crashkurse/kosten/3",
         "text_termine": "2022",
         "link_termine": "/#dates_section",
-        "link_pdf": ["/doc/Anmeldung_zum_Crashkurs_Scrum_Master.pdf","/doc/Onepager_Crashkurs_Scrum_Master.pdf"],
+        "link_pdf": [
+            "/doc/Anmeldung_zum_Crashkurs_Scrum_Master.pdf", "/doc/Onepager_Crashkurs_Scrum_Master.pdf"
+        ],
         "link_boton": "",
         "texto_leistungen": [
             '2 Tage Crashkurs an einem Wochenende (Fr. und Sa.)', 'Vorbereitung auf die Scrum- Zertifizierung auf srum.org', 'Das Buch "Crashkurs Selbstorganisation in Agilen Teams“', 'Fotoprotokoll bzw. Screenshots'
@@ -307,7 +313,7 @@ export const crashkurse_beschreibung_details = [
     }, {
         "id": "4",
         "titulo_area_superior": "CRASHKURS MITBESTIMMUNG IN DER AGILEN ARBEITSWELT",
-         "nombre_curso": "Crashkurs Mitbestimmung in der agilen Arbeitswelt",
+        "nombre_curso": "Crashkurs Mitbestimmung in der agilen Arbeitswelt",
         "image_beschreibung": "crashkurse/image7.jpg",
         "image_vorteile": "crashkurse/image3.jpg",
         "image_inhalte": "crashkurse/image4.jpg",
@@ -316,22 +322,22 @@ export const crashkurse_beschreibung_details = [
             "Durch die Entwicklung von Unternehmen, hin zu flexiblen und agilen Organisatione" +
                     "n, verändert sich viel.",
             "Doch was bedeutet das für die Mitbestimmung? Welche Chancen ergeben sich und wie" +
-                    " lässt sich Mitbestimmung und Veränderung verbinden?",
+                    " lässt sich Mitbestimmung und Veränderung verbinden?.",
             "Hierbei berichten wir nicht nur aus der Theorie, sondern teilen mit Euch unsere " +
                     "gemachten positiven als auch negativen Erlebnisse, die wir als Betriebsräte auf " +
-                    "dem Weg zu einer agilen Netzwerkorganisation gesammelt haben"
+                    "dem Weg zu einer agilen Netzwerkorganisation gesammelt haben."
         ],
         "texto_vorteile": [
             "In unserem 2-tägigen Crashkurs wirst Du lernen die agile Arbeitswelt besser zu v" +
                     "erstehen.",
             "Du wirst in der Lage sein agilen Arbeitsmethoden sinnvoll im Gremium und in Dein" +
-                    "em Team zu nutzen",
+                    "em Team zu nutzen.",
             "Das hybride Konzept ermöglicht Dir von überall auf der Welt an dem Crashkurs tei" +
-                    "lzunehmen",
+                    "lzunehmen.",
             "Selbstverständlich auch vor Ort in unserer schönen Hansestadt Bremen.Mit konkret" +
                     "en Beispielen aus der Beratungspraxis mit Personal- und Betriebsräten geben wir " +
                     "Dir einen tiefen, aber dennoch verständlichen Einblick in die PR/BR-Arbeit von a" +
-                    "gilen Netzwerkorganisationen"
+                    "gilen Netzwerkorganisationen."
         ],
         "texto_inhalte": [
             {
@@ -369,7 +375,9 @@ export const crashkurse_beschreibung_details = [
         "link_kosten": "crashkurse/kosten/4",
         "text_termine": "2022",
         "link_termine": "/#dates_section",
-        "link_pdf": ["/doc/Anmeldung_zum_Crashkurs_Mitbestimmung_in_der_agilen_Arbeitswelt.pdf","/doc/Onepager_Crashkurs_Mitbestimmung_in_der_agilen_Arbeitswelt.pdf"],
+        "link_pdf": [
+            "/doc/Anmeldung_zum_Crashkurs_Mitbestimmung_in_der_agilen_Arbeitswelt.pdf", "/doc/Onepager_Crashkurs_Mitbestimmung_in_der_agilen_Arbeitswelt.pdf"
+        ],
         "link_boton": "",
         "texto_leistungen": [
             "2 Tage Crashkurs remote oder vor Ort möglich (Mi. / Do.)", "Methodenkoffer für die agile Zusammenarbeit", "Das Buch “Crashkurs Selbstorganisation in Agilen Teams”", "Fotoprotokoll & Screenshots"
@@ -415,14 +423,14 @@ export const crashkurse_beschreibung_details = [
         "image2": "crashkurse/notes.jpg",
         "texto_beschreibung": [
             "Mit diesem Crashkurs begibst Du dich auf den Weg zu einer stimmigeren Zusammenar" +
-                    "beit, in der sich Mitarbeitende wertschätzend und auf Augenhöhe begegnen",
+                    "beit, in der sich Mitarbeitende wertschätzend und auf Augenhöhe begegnen.",
             "Der Crashkurs bietet Dir eine Schritt für Schritt Anleitung, um bei Dir im Team " +
                     "eine selbstorganisierte Zusammenarbeit einzuführen oder agiles Arbeiten auf ein " +
-                    "höheres Level zu katapultieren"
+                    "höheres Level zu katapultieren."
         ],
         "texto_vorteile": ["33 kurze Video-Clips Teilnahme weltweit möglichMit konkreten Beispielen aus der " +
                 "Beratungs- Praxis geben wir Dir einen tiefen, aber dennoch verständlichenEinblic" +
-                "k in die agile Arbeitswelt"],
+                "k in die agile Arbeitswelt."],
         "texto_inhalte": [
             {
                 "title": "Architektur selbstorganisierter Teams",
@@ -477,7 +485,8 @@ export const crashkurse_beschreibung_details = [
         "text_termine": "2022",
         "link_termine": "",
         "link_pdf": ["/doc/Onepager_Crashkurs_Selbstorganisation_in_agilen_Teams.pdf"],
-        "link_boton": "https://open-agile-academy.teachable.com/p/online-crashkurs-selbstorganisation-in-agilen-teams",
+        "link_boton": "https://open-agile-academy.teachable.com/p/online-crashkurs-selbstorganisation-i" +
+                "n-agilen-teams",
         "texto_leistungen": [
             "12 Video-Clips zur Architektur selbstorganisierter Teams", "21 Video-Clips mit verschiedenen Workhacks für die konkrete Selbstorganisation", "Online-Zugang zum Crashkurs Selbstorganisation in agilen Teams", "2 Stunden Supervision mit einem unserer Agile Coaches (vor dem Crashkurs und dan" +
                     "ach)"

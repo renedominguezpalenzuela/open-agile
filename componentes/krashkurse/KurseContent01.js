@@ -63,8 +63,16 @@ export default function KurseContent01({
            texto_plequitas.map((unItem, index) => (
             <>
                 <div  key={index} className=" ms-4    ">
-                     {/* <span className="fuente-bullet-cursos">•</span><span className="fuente-texto-cursos"> {unItem}</span> */}
-                       <li className="fuente-texto-cursos mybullets"> {unItem}</li> 
+                     
+                       {texto_plequitas.length>1?
+                        <li className="fuente-texto-cursos mybullets"> {unItem}</li>
+                        :
+                        <li className="fuente-texto-cursos margen-negativo"> {unItem}</li>
+
+                       
+                       }
+
+                        
 
                 </div> 
             </>

@@ -60,9 +60,16 @@ export default function KurseContent03({
             <ul>
               {texto_kosten.map((unaLinea, index) => (
                 <React.Fragment key={index}>
-                  <li className="ps-5   font-kosten-cursos mybullets2">
-                    {unaLinea}{" "}
-                  </li>
+
+                  {texto_kosten.length>1?
+                        <li className="ps-5   font-kosten-cursos mybullets2"> {unaLinea}</li>
+                        :
+                        <li className="fuente-texto-cursos "> {unaLinea}</li>
+
+                       
+                       }
+
+
                 </React.Fragment>
               ))}
             </ul>
