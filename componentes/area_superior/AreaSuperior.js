@@ -135,18 +135,18 @@ export default function AreaSuperior({
       </div>
 
       {/* --------------------Vista movil Mostrar si menor a lg<992px  ----------------------------------------*/}
-      <div className=" mb-5  d-lg-none">
+      <div className="fond mb-5  d-lg-none">
         {(vista_movil = true)}
         <MenuNavBar2 />
         <div className={`${getFondo(fondo)}`}>
-          <div className=" item-logo-movil  mt-2 ms-3 ">
+          {/* <div className=" item-logo-movil  mt-2 ms-3 ">
             <a className=" " href="/">
               <img
-                className=" size-logo-movil "
+                className="size-logo-movil "
                 src={`${servidor_url}/img/logo/5.svg`}
               />
             </a>
-          </div>
+          </div> */}
 
           <div className="item-titulo   ">
             {/* Contenido Principal */}
@@ -318,7 +318,7 @@ const contenido_principal = (
           texto_parrafo_blanco_cursos.length > 0 && (
             <>
               {/* mostrar solo en pantalla grande - espacio con el titulo mt-*/}
-              <div className="row font_smaller_letter_white_cursos ms-5 mt-3 me-5 justificar margen_superior">
+              <div className="row font_smaller_letter_white_cursos ms-4 me-0 ms-md-5 mt-3 me-md-5 justificar margen_superior">
                 {texto_parrafo_blanco_cursos.map((unaLinea, index) => (
                   <p key={index}>{unaLinea}</p>
                 ))}

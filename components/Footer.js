@@ -202,7 +202,7 @@ export default function Footer() {
                 <div className="col-md-3 d-flex  justify-content-start justify-content-md-center">
                   <a href="\">
                     <img
-                      className="img-fluid logo-img-footer2"
+                      className="img-fluid logo-img-footer2 size-logo-movil"
                       src={`${servidor_url}/img/logo/5.svg`}
                     />
                   </a>

@@ -40,7 +40,7 @@ export default function Card01Lista({ lista_cards, titulo_magenta, total_card_en
   return (
 <>
 
- <div className="row mt-5 pt-3 g-4 d-flex justify-content-center  ms-5 me-5 pe-5 ps-5"> 
+<div className="row mt-5 pt-3 g-4 d-flex justify-content-center ms-4 me-4 ms-md-5 me-md-5 pe-md-5 ps-md-5">
 
 
        
