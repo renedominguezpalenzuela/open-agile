@@ -165,9 +165,9 @@
 
 img.grayscale {
   transition: all 0.1s linear;
-  filter: gray opacity(20%); /* IE6-9 */
-  -webkit-filter: grayscale(100%) opacity(20%); /* Google Chrome, Safari 6+ & Opera 15+ */
-  filter: grayscale(100%) opacity(20%); /* Microsoft Edge and Firefox 35+ */
+  filter: gray opacity(60%); /* IE6-9 */
+  -webkit-filter: grayscale(100%) opacity(60%); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(100%) opacity(60%); /* Microsoft Edge and Firefox 35+ */
   /* filter: opacity(20%); */
 }
 
