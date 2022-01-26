@@ -195,7 +195,8 @@ export default function Footer() {
           </div> */}
           </div>
         </div>
-        <div className="footer-movile">
+        {/* <div className="footer-movile">
+       
           <div id="rowfoot05" className="row g-3 ps-5 me-3 ms-3 pe-5 pb-3">
             <div className="col-4 col-sm-3">
               <div className="row g-0 ">
@@ -214,7 +215,7 @@ export default function Footer() {
             </div>
             <div className="row  mt-4 d-flex  linea_blanca_footer g-0"></div>
           </div>
-        </div>
+        </div> */}
       </footer>
     </>
   );
