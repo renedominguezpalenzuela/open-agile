@@ -322,7 +322,7 @@ export const crashkurse_beschreibung_details = [
             "Durch die Entwicklung von Unternehmen, hin zu flexiblen und agilen Organisatione" +
                     "n, verändert sich viel.",
             "Doch was bedeutet das für die Mitbestimmung? Welche Chancen ergeben sich und wie" +
-                    " lässt sich Mitbestimmung und Veränderung verbinden?.",
+                    " lässt sich Mitbestimmung und Veränderung verbinden?",
             "Hierbei berichten wir nicht nur aus der Theorie, sondern teilen mit Euch unsere " +
                     "gemachten positiven als auch negativen Erlebnisse, die wir als Betriebsräte auf " +
                     "dem Weg zu einer agilen Netzwerkorganisation gesammelt haben."
