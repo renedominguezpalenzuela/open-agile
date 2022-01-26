@@ -330,7 +330,7 @@ export const crashkurse_beschreibung_details = [
         "texto_vorteile": [
             "In unserem 2-tägigen Crashkurs wirst Du lernen die agile Arbeitswelt besser zu v" +
                     "erstehen.",
-            "Du wirst in der Lage sein agilen Arbeitsmethoden sinnvoll im Gremium und in Dein" +
+            "Du wirst in der Lage sein agile Arbeitsmethoden sinnvoll im Gremium und in Dein" +
                     "em Team zu nutzen.",
             "Das hybride Konzept ermöglicht Dir von überall auf der Welt an dem Crashkurs tei" +
                     "lzunehmen Selbstverständlich auch vor Ort in unserer schönen Hansestadt Bremen.",
