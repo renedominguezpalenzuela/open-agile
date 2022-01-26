@@ -379,7 +379,7 @@ export default function ModalFormCursos({
 
                   <div className="row d-flex justify-content-start texto-AGBS  ps-3 pe-3 ">
                     Ich bin mit den AGBs und der Übermittlung meiner Daten zur
-                    internen Verarbeitung der Open Agile GmbH einverstanden
+                    internen Verarbeitung der Open Agile GmbH einverstanden.
                   </div>
 
                   <div className="row d-flex justify-content-start ps-3 pe-3 mt-1">
@@ -501,10 +501,10 @@ export default function ModalFormCursos({
                     </div>
                     <div className="col-10  d-flex justify-content-start">
                       <div className="row  pt-2  pb-2 ">
-                        <div className="col-12  titulo_curso   ">
+                        <div className="col-12  texto-AGBS  ">
                           {nombre_curso}
                         </div>
-                        <div className="col-12 titulo_curso   ">{precio}</div>
+                        <div className="col-12 texto-AGBS   ">{precio}</div>
                       </div>
                     </div>
                   </div>
