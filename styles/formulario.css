@@ -258,9 +258,8 @@
 }
 
 
-@media (max-width: 400px) {
-  
+@media (min-width:401px) and (max-width:579px){
   .ancho-boton {
-    width: 35vw !important;
+    width: 30vw !important;
   }
 }

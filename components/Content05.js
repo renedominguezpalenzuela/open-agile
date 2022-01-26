@@ -55,13 +55,36 @@ export default function Content05({ datos, color_fondo }) {
               {datos.map((unDato, index) => {
                 return (
                   <div key={index} className={ unDato.id == 1 ? " carousel-item active" : "carousel-item"  }>
-                    <div className="d-xl-none  ">
-                      <div className="row d-flex justify-content-center">
-                        <div className="col-md-6">
-                          <Card01 imagen={unDato.image} titulo={unDato.title} texto={unDato.text} />
+                    <div className="col-md-6">
+                          <div className="row sombra_cards myanimacion mt-md-5 mt-lg-4 mi-card">
+                            <div className="col p-3">
+                              {unDato.link != undefined && unDato.link != "" && (
+                                <div className="ratio ratio-16x9">
+                                  <iframe
+                                    src={unDato.link}
+                                    title="YouTube video"
+                                    allowFullScreen></iframe>
+                                </div>
+                              )}
+                            </div>
+                            <div>
+                              <div className="card-body text-center">
+                                <p className="card-text font_card_title  ">
+                                  {unDato.title}
+                                </p>
+                                {/* <div className="card-footer-my-card text-center pb-4  ">
+                                  <a href="/">
+                                    <button
+                                      type="button"
+                                      className="btn  ms-2 me-2 w-75 h-100 btn-card font-btn-card rounded-pill  ">
+                                      Jetzt lesen...
+                                    </button>
+                                  </a>
+                                </div> */}
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    </div>
 
                     <div className="d-none d-xl-block  ">
                       <Card02 video={unDato.link} titulo={unDato.title} texto={unDato.text} />
@@ -72,14 +95,14 @@ export default function Content05({ datos, color_fondo }) {
             </div>
 
             <button
-              className="carousel-control-prev zindex-3000"
+              className="carousel-control-prev zindex-3000 d-none d-md-block"
               type="button"
               data-bs-target="#MyCarousel"
               data-bs-slide="prev">
               <span className="carousel-control-prev-icon"></span>
             </button>
             <button
-              className="carousel-control-next zindex-3000"
+              className="carousel-control-next zindex-3000 d-none d-md-block"
               type="button"
               data-bs-target="#MyCarousel"
               data-bs-slide="next">
