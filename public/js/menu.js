@@ -6,14 +6,23 @@ var color_magenta = "#e42078";
 var color_white = "#ffffff";
 var color = color_white;
 
-var boton_contacto_telefono = document.getElementById(
-  "boton_contacto_telefono"
-);
 
+
+var boton_contacto_telefono = document.getElementById("boton_contacto_telefono");
 var texto_iconos_izquierda = document.getElementById("texto_iconos_izquierda");
 var linea_iconos_izquierda = document.getElementById("linea_iconos_izquierda");
 
+
+
+var pagina = window.location.pathname;
+
+  setColor(0, pagina)
+
+
 window.addEventListener("load", (event) => {
+  
+ 
+
   if (document.getElementById("boton_cerrar_menu")) {
     document
       .getElementById("boton_cerrar_menu")
@@ -55,7 +64,7 @@ window.addEventListener("load", (event) => {
   }
 });
 
-var pagina = window.location.pathname;
+
 
 // var page = path.split("/").pop();
 
@@ -70,7 +79,7 @@ function setColor(Y, pagina) {
   var Y_Footer = 4134;
 
 
-  
+  console.log(pagina);
   
 
 
@@ -78,6 +87,8 @@ function setColor(Y, pagina) {
 
 // Main
   if (pagina === "/") {
+
+     
     if (boton_contacto_telefono != undefined) {
       if (Y < Y_Area_SuperiorEnd) {
         color = color_white;
@@ -109,7 +120,7 @@ function setColor(Y, pagina) {
   const r = /\/crashkurse\/[a-z]*\/[0-9]/;
   if (r.test(pagina)) {
         color = color_magenta;
-     
+     console.log("here");
 
 
    
@@ -173,6 +184,8 @@ window.addEventListener(
       return;
     }
 
+
+    // Hide and show the hamberguer button
     if (Y < course_top) {
       contendor_boton.style.zIndex = "-1";
       boton.style.visibility = "hidden";

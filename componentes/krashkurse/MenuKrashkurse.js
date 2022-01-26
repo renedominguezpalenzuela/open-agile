@@ -30,27 +30,27 @@ export default function MenuKrashkurse({
             <tbody>
               <tr className=" font-card-menu-crashkurse">
                 <td>
-                  <Link href={`${servidor_url}/${link_beschreibung}#menukurs`}>
+                  <a href={`${servidor_url}/${link_beschreibung}#menukurs`}>
                     <div className="myanimacioncursos">BESCHREIBUNG</div>
-                  </Link>
+                  </a>
                 </td>
 
                 <td align="right"> > </td>
               </tr>
               <tr className="font-card-menu-crashkurse">
                 <td>
-                  <Link href={`${servidor_url}/${link_vorteile}#menukurs`}>
+                  <a href={`${servidor_url}/${link_vorteile}#menukurs`}>
                     <div className="myanimacioncursos">VORTEILE</div>
-                  </Link>
+                  </a>
                 </td>
 
                 <td align="right">></td>
               </tr>
               <tr className="font-card-menu-crashkurse">
                 <td>
-                  <Link href={`${servidor_url}/${link_inhalte}#menukurs`}>
+                  <a href={`${servidor_url}/${link_inhalte}#menukurs`}>
                     <div className="myanimacioncursos">INHALTE</div>
-                  </Link>
+                  </a>
                 </td>
 
                 <td align="right">></td>
@@ -67,9 +67,9 @@ export default function MenuKrashkurse({
 
               <tr className="font-card-menu-crashkurse">
                 <td>
-                  <Link href={`${servidor_url}/${link_kosten}#menukurs`}>
+                  <a href={`${servidor_url}/${link_kosten}#menukurs`}>
                     <div className="myanimacioncursos">LEISTUNGEN & KOSTEN</div>
-                  </Link>
+                  </a>
                 </td>
                 <td align="right">></td>
               </tr>
@@ -77,9 +77,9 @@ export default function MenuKrashkurse({
               {link_termine != undefined && link_termine != "" && (
                 <tr className="font-card-menu-crashkurse">
                   <td>
-                    <Link href={`${link_termine}`}>
+                    <a href={`${link_termine}`}>
                       <div className="myanimacioncursos">TERMINE</div>
-                    </Link>
+                    </a>
                   </td>
                   <td align="right">></td>
                 </tr>
