@@ -333,7 +333,7 @@ export const crashkurse_beschreibung_details = [
             "Du wirst in der Lage sein agile Arbeitsmethoden sinnvoll im Gremium und in Dein" +
                     "em Team zu nutzen.",
             "Das hybride Konzept ermöglicht Dir von überall auf der Welt an dem Crashkurs tei" +
-                    "lzunehmen Selbstverständlich auch vor Ort in unserer schönen Hansestadt Bremen.",
+                    "lzunehmen. Selbstverständlich auch vor Ort in unserer schönen Hansestadt Bremen.",
             "Mit konkreten Beispielen aus der Beratungspraxis mit Personal- und Betriebsräten geben wir " +
                     "Dir einen tiefen, aber dennoch verständlichen Einblick in die PR/BR-Arbeit von a" +
                     "gilen Netzwerkorganisationen."

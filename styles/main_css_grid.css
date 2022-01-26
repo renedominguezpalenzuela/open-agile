@@ -66,12 +66,13 @@
   display: grid;
 
   grid-template-columns: 12% 75% 10%; /*tres columnas de igual ancho*/
-  grid-template-rows: 15% 75%; /*total de filas depende de cantidad elementos*/
+  grid-template-rows: 15% auto; /*total de filas depende de cantidad elementos*/
+  padding-bottom: 10px;
   /* gap: 1em; */
   /* row-gap: 1em; */
 
   background-size: auto, cover;
-  height: 90vh;
+  /* height: 90vh; */
   
   /* max-height: 100vh; */
 
@@ -223,13 +224,6 @@ img.grayscale:hover {
 
   grid-template-columns: 12% 75% 10% auto; /*tres columnas de igual ancho*/
   grid-template-rows: 15vh auto; /*total de filas depende de cantidad elementos*/
-  /* grid-template-rows: 15vh 85vh; */
-
-   /* padding-top: 5vh;  */
-
-  /* padding-bottom: 4vh; */
-  
-  /* mix-height: 30vh; */
 
 
   background-size: auto, cover;

@@ -105,30 +105,16 @@ function setColor(Y, pagina) {
      color = color_magenta;
   }
 
-  // Cursos
-  // const r = /\/crashkurse\/[a-z]*\/[0-9]/;
-  // if (r.test(pagina)) {
-    
-
-  //      Y_Area_Superior = 66;
-  //      Y_Footer =1476; 
+  // Cursos 
+  const r = /\/crashkurse\/[a-z]*\/[0-9]/;
+  if (r.test(pagina)) {
+        color = color_magenta;
+     
 
 
-  //      if (Y < Y_Area_Superior) {
-  //       color = color_magenta;
-  //     }
-
-
-  //     if (Y >= Y_Area_Superior && Y < Y_Footer) {
-  //       color = color_magenta;
-  //     }
-
-  //      if (Y >= Y_Footer) {
-  //       color = color_white;
-  //     }
    
 
-  // }
+  }
 
 
   /*   /shop    */
