@@ -16,6 +16,13 @@
 
 }
 
+.fond{
+    background: linear-gradient(
+    215deg,
+    rgba(36, 50, 90, 0.95),
+    rgba(67, 183, 174, 0.8)
+  )
+}
 
 .navbar1 {
 
