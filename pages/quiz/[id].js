@@ -248,7 +248,8 @@ const quiz = await res.json();
         
 
 
-          <div className="  item-titulo my_quiz ">
+          <div className="  item-titulo my_quiz  ">
+          
           
             <div className="row  g-0  my_quiz_titulo  ">
               {titulo != undefined && titulo != "" && (

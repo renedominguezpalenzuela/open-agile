@@ -897,21 +897,3 @@ ul li.mybullets3::before {
   left: 10vw;
   /* border: 1px black black; */
 }
-
-@media (max-width:693px){
-  .footer-info{
-    display: none;
-  }
-}
-
-@media (max-width:693px){
-  .footer-movile{
-    display: block;
-  }
-}
-
-@media (min-width:694px){
-  .footer-movile{
-    display: none;
-  }
-}

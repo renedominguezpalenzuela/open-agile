@@ -18,7 +18,7 @@ export default function Content01TextSinIcons({texto1, texto2, texto2a}) {
 
 
    
-      <div className="font_title_secundario font_title_purple mt-5">
+      <div className="font_title_secundario font_title_purple mt-5 ">
        
             {texto1}
       </div>

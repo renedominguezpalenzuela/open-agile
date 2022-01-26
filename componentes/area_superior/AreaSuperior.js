@@ -58,7 +58,9 @@ export default function AreaSuperior({
   linkedin,
   area_gris_nueva,
 
-  botones_contacto
+  botones_contacto,
+  linea_obliqua
+ 
 }) {
   let vista_movil = false;
 
@@ -68,7 +70,7 @@ export default function AreaSuperior({
       <div className=" d-none d-lg-block">
         {(vista_movil = false)}
 
-        <div className={`${getFondo(fondo)} `}>
+        <div className={`${getFondo(fondo, linea_obliqua)} `}>
           {area_gris_nueva != undefined && area_gris_nueva != false && (
             <div className="linea_lateral_inferior item-fondo "> </div>
           )}
@@ -112,7 +114,8 @@ export default function AreaSuperior({
               email,
               phone,
               linkedin,
-              botones_contacto
+              botones_contacto,
+              
             )}
           </div>
 
@@ -170,7 +173,8 @@ export default function AreaSuperior({
               email,
               phone,
               linkedin,
-              botones_contacto
+              botones_contacto,
+              
             )}
           </div>
         </div>
@@ -181,7 +185,7 @@ export default function AreaSuperior({
 
 // --------------Funciones ----------------------------------------------------------------
 
-function getFondo(fondo) {
+function getFondo(fondo, linea_obliqua) {
   let fondo_por_defecto = "bannermain";
 
   if (fondo === "barco") {
@@ -201,6 +205,10 @@ function getFondo(fondo) {
 
   if (fondo === "team") {
     fondo_por_defecto = "bannermain-team";
+  }
+
+  if (linea_obliqua) {
+    fondo_por_defecto = fondo_por_defecto + " linea-obliqua ";
   }
 
   return fondo_por_defecto;
@@ -229,7 +237,8 @@ const contenido_principal = (
   email,
   phone,
   linkedin,
-  botones_contacto
+  botones_contacto,
+
 ) => {
 
 
@@ -264,6 +273,8 @@ const contenido_principal = (
               titulo_muy_largo={titulo_muy_largo}
               botones_contacto={botones_contacto}
               team={iconos_team}
+           
+
             />
               
           </div>
@@ -279,7 +290,7 @@ const contenido_principal = (
 
         {titulo_quiz_result != undefined && titulo_quiz_result != "" && (
           <div className="font_title_secundario font_centrar font_title_purple mt-5">
-            {titulo_quiz_result}
+            {titulo_quiz_result} 
           </div>
         )}
 
