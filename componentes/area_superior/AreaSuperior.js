@@ -139,7 +139,7 @@ export default function AreaSuperior({
           <div className=" item-logo-movil  mt-2 ms-3 ">
             <a className=" " href="/">
               <img
-                className=" size-logo-movil "
+                className="size-logo-movil "
                 src={`${servidor_url}/img/logo/5.svg`}
               />
             </a>

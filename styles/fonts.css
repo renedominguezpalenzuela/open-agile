@@ -187,7 +187,11 @@
     text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
   }
 
-
+    @media(max-width:490px){
+      .font_title_seccion_sombra{
+        font-size: 3rem!important;
+      }
+    }
   
   
   .font_boton_agile_check{
