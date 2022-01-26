@@ -345,24 +345,18 @@ export const crashkurse_beschreibung_details = [
                 "text": [
                     "Organisationsformen im Überblick",
                     "Werte und Prinzipien im agilen Kontext",
-                    "Überblick über die Architektur von",
-                    "selbstorganisierten Teams",
-                    "Agile Arbeitsmethoden in Gremien sinnvoll",
-                    "nutzen",
+                    "Überblick über die Architektur von selbstorganisierten Teams",
+                    "Agile Arbeitsmethoden in Gremien sinnvoll nutzen",
                     "Vor- und Nachteile agiler Vorgehensweisen"
                 ]
             }, {
                 "title": "Mitbestimmung in agilen Organisationen",
                 "text": [
                     "Blick ins Betriebsverfassungsgesetz",
-                    "HR vs. PR/BR – Herausforderungen positiv",
-                    "bewältigen",
-                    "Häufige Fallstricke und Lösungsansätze im",
-                    "Bereich Mitbestimmung in der agilen",
-                    "Arbeitswelt",
+                    "HR vs. PR/BR – Herausforderungen positiv bewältigen",
+                    "Häufige Fallstricke und Lösungsansätze im Bereich Mitbestimmung in der agilen Arbeitswelt",
                     "Mindset in der Personalvertretung",
-                    "Chancen im Transformationsprozess",
-                    "erkennen und nutzen "
+                    "Chancen im Transformationsprozess erkennen und nutzen "
                 ]
             }
 
