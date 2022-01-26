@@ -2,7 +2,7 @@
   display: grid;
 
   grid-template-columns: 12% 75% 10%; /*tres columnas de igual ancho*/
-  grid-template-rows: 15vh 85%; /*total de filas depende de cantidad elementos*/
+  grid-template-rows: 15vh 95%; /*total de filas depende de cantidad elementos*/
 
   /* grid-template-rows: 15% 75%; */
    margin-bottom: 5vh; 
