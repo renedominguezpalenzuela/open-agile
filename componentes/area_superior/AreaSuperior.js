@@ -133,7 +133,7 @@ export default function AreaSuperior({
       <div className="fond mb-5  d-lg-none">
         {(vista_movil = true)}
 
-        {(boton_inicio_quiz = true)}
+       
         <MenuNavBar2 />
         <div className={`${getFondo(fondo)}`}>
           {/* <div className=" item-logo-movil  mt-2 ms-3 ">
@@ -383,7 +383,7 @@ const contenido_principal = (
           </div>
         ))}
 
-      {boton_inicio_quiz != undefined && boton_inicio_quiz && (
+      {boton_inicio_quiz != undefined && boton_inicio_quiz && vista_movil && (
         <div className="row   d-flex justify-content-center align-items-center w-100">
         <div className="col-12 col-sm-7 col-md-5 me-md-4 ms-md-4 pb-2 ">
         <Link href="/quiz/1">

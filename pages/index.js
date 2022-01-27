@@ -83,6 +83,7 @@ export default function Home({
           botones_configurador={botones_configurador}
           iconos={true}
           area_gris_nueva={true}
+          boton_inicio_quiz={true}
         />
 
         <ContentVideo />
