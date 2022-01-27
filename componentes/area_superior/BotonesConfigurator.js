@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function BotonesConfigurator({ botones_configurador }) {
   const clase_botones = (longitud_arreglo) => {
-    let cadena_clases = "col-md-col me-md-4 ms-md-4 pb-2 ";
+    let cadena_clases = "col-12 col-sm-7 col-md-5 me-md-4 ms-md-4 pb-2 ";
     if (longitud_arreglo > 2) {
       cadena_clases = "col-md-6  me-md-4 ms-md-4  pb-md-2 pb-2";
     }
