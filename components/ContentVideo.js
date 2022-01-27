@@ -21,8 +21,13 @@ export default function ContentVideo() {
     <>
       <div className="  text-center contenedor_video ">
         <div className="ratio ratio-16x9 ">
-          <video loop={true} autoPlay={true} ref={botonVolumen} muted >
-            <source src={`/video/Imagefilm_Open_Agile_Low.mp4`} />
+{/* 
+        <video autoplay loop autobuffer muted playsinline>
+     <source src="video/video-hat.mp4" type="video/mp4">
+</video> */}
+          {/* <video loop={true} autoPlay={true} ref={botonVolumen} muted > */}
+          <video autoplay loop autobuffer muted playsinline ref={botonVolumen} > 
+            <source src={`/video/Imagefilm_Open_Agile_Low.mp4`}  type="video/mp4" />
  
           </video>
 
