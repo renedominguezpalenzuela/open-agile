@@ -7,7 +7,6 @@ import Footer from "../../components/Footer";
 
 import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
 
-
 import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
 
 import { servidor_url } from "../../config";
@@ -21,8 +20,7 @@ import ModalFormConfigurator from "../../components/ModalFormConfigurator";
 export default function Configurator_Main({ configurator }) {
   const router = useRouter();
   const { id } = router.query;
-  const {botones} = configurator;
-
+  const { botones } = configurator;
 
   // const { botones } = configurator;
 
@@ -40,22 +38,25 @@ export default function Configurator_Main({ configurator }) {
 
       <div id="principal" className="container-fluid g-0">
         <MenuFlotanteBoton />
-        <AreaSuperior fondo="gris" botones_configurador={configurator} area_gris_nueva={true} />
+        <AreaSuperior
+          fondo="gris"
+          botones_configurador={configurator}
+          area_gris_nueva={true}
+        />
 
+        {botones.map(
+          (unBoton, index) =>
+            unBoton.tipo === "2" && (
+              // <ModalForm  titulo="KONTAKTFORMULAR" frase="Jetzt Kontakt aufnehmen!" id={unBoton.id} quartal={index}/>
 
-        
-          {botones.map ((unBoton, index)=>
-                                          (                                                        
-                                              unBoton.tipo==="2" && (                                                    
-                                                  // <ModalForm  titulo="KONTAKTFORMULAR" frase="Jetzt Kontakt aufnehmen!" id={unBoton.id} quartal={index}/>
-
-                                                  <ModalFormConfigurator  titulo="KONTAKTFORMULAR" frase="Jetzt Kontakt aufnehmen!" id={unBoton.id} quartal={index}/>
-                                                  
-                                              )                                                     
-                                          )
-                                          
-                       )
-          }
+              <ModalFormConfigurator
+                titulo="KONTAKTFORMULAR"
+                frase="Jetzt Kontakt aufnehmen!"
+                id={unBoton.id}
+                quartal={index}
+              />
+            )
+        )}
 
         {/*Footer  */}
         <Footer />
