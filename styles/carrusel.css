@@ -2,10 +2,39 @@
 .alto_carrusel {
     position: relative;
     height:60vh;
-    min-height: 360px;
+    min-height: 500px;
   }
 
-  
+  @media(max-width:402px){
+    .alto_carrusel{
+      min-height: 360px!important;
+    }
+  }
+
+  @media(min-width:403px) and (max-width:510px){
+    .alto_carrusel{
+      min-height: 380px!important;
+    }
+  }
+
+  @media(min-width:705px) and (max-width:767px){
+    .alto_carrusel{
+      min-height: 530px!important;
+    }
+  }
+
+  @media(min-width:768px) and (max-width:1078px){
+    .alto_carrusel{
+      min-height: 450px!important;
+    }
+  }
+
+  @media(min-width:511px) and (max-width:567px){
+    .alto_carrusel{
+      min-height: 450px!important;
+    }
+  }
+
   .zindex-3000 {
     z-index: 3000!important;
   }
