@@ -57,7 +57,7 @@ window.addEventListener("load", (event) => {
         e.preventDefault();
         e.stopPropagation();
 
-        document.getElementById("mySidepanel").style.width = "250px";
+        document.getElementById("mySidepanel").style.width = "110vw";
         document.getElementById("panel_abrir_menu").style.visibility = "hidden";
         document.getElementById("principal").classList.add("myblur");
       });

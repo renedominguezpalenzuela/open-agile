@@ -1,25 +1,17 @@
-
-
-.font1-card-team{
-    font-family: Montserrat-Black;
-    color: #030066;
-    font-size: 1.1rem;
+.font1-card-team {
+  font-family: Montserrat-Black;
+  color: #030066;
+  font-size: 1.1rem;
 }
 
-
-
-.font1-card-job{
+.font1-card-job {
   font-family: Montserrat-Black;
-  color: #24325a   ;
+  color: #24325a;
   font-size: 0.8rem;
 }
 
-
-
-
-.font1-card-job-new{
-
-  color: #F82D7C      ;
+.font1-card-job-new {
+  color: #f82d7c;
   font-family: Montserrat-BoldItalic;
   /* color: #ffffff; */
   text-align: left;
@@ -34,52 +26,42 @@
   /* selector-locked: false; */
   text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
 
-
   /* font-family: Montserrat-Black;
   color: #24325a   ;
   font-size: 0.8rem; */
 }
 
-.font2-card-job{
+.font2-card-job {
   font-family: Montserrat-Bold;
-  color: #24325a   ;
+  color: #24325a;
   font-size: 0.75rem;
 }
 
-.font2-card-team{
-    font-family: Montserrat-Medium;
-    color: #030066;
-    font-size: 0.8rem;
+.font2-card-team {
+  font-family: Montserrat-Medium;
+  color: #030066;
+  font-size: 0.8rem;
 }
-
 
 .font3-card-job {
-  font-family:  Montserrat-Regular;
-  color: #24325a ;
+  font-family: Montserrat-Regular;
+  color: #24325a;
   font-size: 0.75rem;
-  
 }
 
-
-
-  
 .fuente-bullet-job {
-  font-family:  Montserrat-Bold;
-  color: #e42078 ;
+  font-family: Montserrat-Bold;
+  color: #e42078;
   font-size: 1rem;
-  
 }
 
-
-.font3-card-team{
-    font-family: Montserrat-Black;
-    color: #030066;
-    font-size: 0.9rem;
+.font3-card-team {
+  font-family: Montserrat-Black;
+  color: #030066;
+  font-size: 0.9rem;
 }
 
-
-
-.font3-card-shop{
+.font3-card-shop {
   font-family: Montserrat-Medium;
   color: #030066;
   font-size: 0.6rem;
@@ -87,60 +69,48 @@
   text-justify: inter-word; */
 }
 
+.imagen-team-card {
+  width: 100%;
+  /* aspect-ratio: 1 / 0.5; */
+  /* height:240px;  */
+  /* height: 8vh; */
 
+  border-radius: 8px 8px 0px 0px;
 
-.imagen-team-card{
-    
-    width: 100%;
-    /* aspect-ratio: 1 / 0.5; */
-     /* height:240px;  */
-     /* height: 8vh; */
+  /*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
+  /* object-fit:scale-down; */
+  /* object-fit:contain; */
+}
 
-    border-radius:8px 8px 0px 0px;
- 
- /*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
-     /* object-fit:scale-down; */
-     /* object-fit:contain; */
- 
- }
+.redondear-card {
+  border-radius: 8px 8px 8px 8px;
+  /* max-height: 50vh; */
+  /* height: 50vh; */
+}
 
-
- .redondear-card {
-    border-radius:8px 8px 8px 8px;
-    /* max-height: 50vh; */
-    /* height: 50vh; */
-
- }
-
-
- 
 .btn-card-blog {
-    background-color: #24325a !important;
-    width: 11.5vw;
-    
-    /* border-radius:30px 30px 30px 30px; */
-    /* height: 40px; */
-    /* border-color: #3edf0d  !important; */
-    /* color: #ffffff !important; */
-  }
-  
-  .btn-card-blog:hover
+  background-color: #24325a !important;
+  width: 11.5vw;
+
+  /* border-radius:30px 30px 30px 30px; */
+  /* height: 40px; */
+  /* border-color: #3edf0d  !important; */
+  /* color: #ffffff !important; */
+}
+
+.btn-card-blog:hover
   /* .btn-card:active, */
   /* .btn-card:visited, */
   /* .btn-card:focus*/ {
-    background-color: #e42078 !important;
-    /* border-color: rgb(245, 4, 4) !important; */
-    color: #ffffff !important;
-  }
+  background-color: #e42078 !important;
+  /* border-color: rgb(245, 4, 4) !important; */
+  color: #ffffff !important;
+}
 
-
-
-  
- 
 .btn-card-blog-new {
   background-color: #24325a !important;
   width: 8vw;
-  
+
   /* border-radius:30px 30px 30px 30px; */
   /* height: 40px; */
   /* border-color: #3edf0d  !important; */
@@ -156,11 +126,10 @@
   color: #ffffff !important;
 }
 
-
 .btn-card-team-new {
   background-color: #24325a !important;
   width: 13.5vw;
-  
+
   /* border-radius:30px 30px 30px 30px; */
   /* height: 40px; */
   /* border-color: #3edf0d  !important; */
@@ -176,35 +145,27 @@
   color: #ffffff !important;
 }
 
-  
- 
 .btn-card-job {
   background-color: #24325a !important;
   width: 90%;
   /* height: 5vh; */
-  
+
   /* border-radius:30px 30px 30px 30px; */
   /* height: 40px; */
   /* border-color: #3edf0d  !important; */
   /* color: #ffffff !important; */
 }
 
-
-
- 
 .btn-cursos2 {
   background-color: #e21d75 !important;
   width: 90%;
-  color:white;
-
+  color: white;
 }
 
 .btn-cursos2:hover {
   background-color: #24325a !important;
   color: white !important;
 }
-
-
 
 .btn-card-job:hover
 /* .btn-card:active, */
@@ -215,179 +176,176 @@
   color: #ffffff !important;
 }
 
-
-  .font-btn-card-team{
-    font-family: Montserrat-SemiBold;
-    color: #ffffff;
-    font-size: 1vw;
-        
+.font-btn-card-team {
+  font-family: Montserrat-SemiBold;
+  color: #ffffff;
+  font-size: 1vw;
 }
 
-
-
-.font-btn-card-shop{
+.font-btn-card-shop {
   font-family: Montserrat-SemiBold;
   color: #ffffff;
   font-size: 0.7rem;
-      
 }
-
-
 
 .font_titulo_team {
-    font-family: Montserrat-BlackItalic; 
-    color: #243A78;
-    font-size: 1.8vw;
-    letter-spacing: 0.2vw;
+  font-family: Montserrat-BlackItalic;
+  color: #243a78;
+  font-size: 1.8vw;
+  letter-spacing: 0.2vw;
 }
 
-
-.font_erfahrum{
-    font-family: Montserrat-Regular; 
-    color: #243A78;
-    font-size: 1.8vw;
-   
+.font_erfahrum {
+  font-family: Montserrat-Regular;
+  color: #243a78;
+  font-size: 1.8vw;
 }
 
-.font_erfahrum_detalles{
-    font-family: Montserrat-Regular; 
-    color: #1F397C;
-    font-size: 1.2vw;
+.font_erfahrum_detalles {
+  font-family: Montserrat-Regular;
+  color: #1f397c;
+  font-size: 1.2vw;
 }
 
+div.horizontal-line {
+  /* width: fit-content; Line width */
+  background-color: #243a78; /* Line color */
+  height: 2px; /* Override in-line if you want specific height. */
+}
 
-div.horizontal-line{
-    /* width: fit-content; Line width */
-    background-color: #243A78; /* Line color */
-    height: 2px; /* Override in-line if you want specific height. */
-    
+.font_weiterbildungen {
+  font-family: Montserrat-ExtraBold;
+  color: #243a78;
+  font-size: 1.7vw;
+}
+
+.font_texto_inferior_team {
+  font-family: Montserrat-SemiBold;
+  color: #243a78;
+  font-size: 1.1vw;
+}
+
+.fondo_team_seccion {
+  background-color: #14979e;
+}
+
+.font_motto_team {
+  font-family: Montserrat-Light;
+  color: #ffffff;
+  /* line-height: 0.2vh; */
+  font-size: 1.6vw;
+}
+
+.font_title1-team-seccion {
+  font-family: Montserrat-BoldItalic;
+  color: #ffffff;
+  text-align: left;
+  font-size: 1.8em;
+  line-height: 1;
+  font-weight: 500;
+
+  /* letter-spacing: 4px; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* text-transform: uppercase; */
+  /* selector-locked: false; */
+  text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
+}
+
+/* font_title_purple */
+.font_title2-team-seccion {
+  font-family: Montserrat-BoldItalic;
+  /* color: #ffffff; */
+  text-align: left;
+  font-size: 1.2rem;
+  line-height: 1;
+  font-weight: 500;
+
+  /* letter-spacing: 4px; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* text-transform: uppercase; */
+  /* selector-locked: false; */
+  text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
+}
+
+/* font_title_purple */
+.font-title-side-menu {
+  color: #24325a;
+  font-family: Montserrat-Bold;
+  /* color: #ffffff; */
+  text-align: left;
+  font-size: 1.7rem;
+  line-height: 1;
+  font-weight: 500;
+
+  /* letter-spacing: 4px; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* text-transform: uppercase; */
+  /* selector-locked: false; */
+  text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
+}
+
+/* font_title_purple */
+.font-items-side-menu {
+  color: #e42078;
+  font-family: Montserrat-BoldItalic;
+
+  text-align: left;
+  font-size: 1.2rem;
+  line-height: 1;
+  font-weight: 500;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
+}
+
+@media (max-width: 400px) {
+  .font-items-side-menu {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
-
-
-  .font_weiterbildungen {
-    font-family: Montserrat-ExtraBold; 
-    color: #243A78;
-    font-size: 1.7vw;
-
-
+  .font-title-side-menu {
+    font-size: 1.8rem;
   }
-
-
-  .font_texto_inferior_team{
-    font-family: Montserrat-SemiBold; 
-    color: #243A78;
-    font-size: 1.1vw;
+}
+@media (min-width: 401px) and (max-width: 600px) {
+  .font-items-side-menu {
+    font-size: 1.8rem;
+    line-height: 3rem;
   }
-
-
-  .fondo_team_seccion {
-
-    background-color: #14979E;
+  .font-title-side-menu {
+    font-size: 2rem;
   }
+}
 
-
-  .font_motto_team{
-    font-family: Montserrat-Light; 
-    color: #ffffff;
-    /* line-height: 0.2vh; */
-    font-size: 1.6vw;  
+@media (min-width: 601px) and (max-width: 800px) {
+  .font-items-side-menu {
+    font-size: 2.3rem;
+    line-height: 4rem;
   }
-
-
-  .font_title1-team-seccion {
-      
-
-    font-family: Montserrat-BoldItalic;
-    color: #ffffff;
-    text-align: left;
-    font-size: 1.8em;
-    line-height: 1;
-    font-weight: 500;
-    
-  
-    /* letter-spacing: 4px; */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    /* text-transform: uppercase; */
-    /* selector-locked: false; */
-    text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
-
-  
+  .font-title-side-menu {
+    font-size: 2.8rem;
   }
+}
 
-   /* font_title_purple */
-  .font_title2-team-seccion {
-
-
-
-    font-family: Montserrat-BoldItalic;
-    /* color: #ffffff; */
-    text-align: left;
-    font-size: 1.2rem;
-    line-height: 1;
-    font-weight: 500;
-  
-    /* letter-spacing: 4px; */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    /* text-transform: uppercase; */
-    /* selector-locked: false; */
-    text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
-  
+@media (min-width: 801px) and (max-width: 992px) {
+  .font-items-side-menu {
+    font-size: 5.3rem;
+    line-height: 4rem;
   }
-
-
-  
-   /* font_title_purple */
-   .font-title-side-menu {
-
-
-    color: #24325a   ;
-    font-family: Montserrat-Bold;
-    /* color: #ffffff; */
-    text-align: left;
-    font-size: 1.7rem;
-    line-height: 1;
-    font-weight: 500;
-  
-    /* letter-spacing: 4px; */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    /* text-transform: uppercase; */
-    /* selector-locked: false; */
-    text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
-  
+  .font-title-side-menu {
+    font-size: 2.9rem;
   }
+}
 
+.font-items-side-menu:hover {
+  color: #24325a;
+}
 
-  
-   /* font_title_purple */
-   .font-items-side-menu {
-
-
-    color: #e42078   ;
-    font-family: Montserrat-BoldItalic;
-    /* color: #ffffff; */
-    text-align: left;
-    font-size: 1.2rem;
-    line-height: 1;
-    font-weight: 500;
-  
-    /* letter-spacing: 4px; */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    /* text-transform: uppercase; */
-    /* selector-locked: false; */
-    text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
-  
-  }
-
-  .font-items-side-menu:hover {
-    color: #24325a   ;
-  }
-
-
-  .fondo_card_shop{
-
-    background-color: #7292932f;
-  }
+.fondo_card_shop {
+  background-color: #7292932f;
+}
