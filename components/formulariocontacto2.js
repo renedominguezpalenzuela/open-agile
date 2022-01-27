@@ -93,7 +93,7 @@ export default function FormularioContacto2() {
       {/* Mostrar si es mayor que LG */}
 
       <div className="bannerformulario">
-        <div className="font_title_formulario  item-titulo1-formulario">
+        <div className="font_title_formulario  item-titulo1-formulario ">
           LASS UNS IN KONTAKT BLEIBEN
         </div>
         <div className="font_title_secundario_formulario  item-titulo2-formulario">
