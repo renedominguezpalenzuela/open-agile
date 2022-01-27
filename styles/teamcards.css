@@ -252,14 +252,20 @@ div.horizontal-line {
   text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
 }
 
-/* font_title_purple */
-.font_title2-team-seccion {
-  font-family: Montserrat-BoldItalic;
-  /* color: #ffffff; */
-  text-align: left;
-  font-size: 1.2rem;
-  line-height: 1;
-  font-weight: 500;
+  @media (max-width:767px){
+    .font_weiterbildungen{
+      font-size: 2.5vw!important;
+    }
+    .font_titulo_team{
+      font-size: 3vw!important; 
+    }
+    .font_erfahrum_detalles{
+      font-size: 2vw!important;
+    }
+    .font_texto_inferior_team{
+      font-size: 2vw!important;
+    }
+  }
 
   /* letter-spacing: 4px; */
   -webkit-font-smoothing: antialiased;
@@ -305,11 +311,42 @@ div.horizontal-line {
 
 @media (max-width: 400px) {
   .font-items-side-menu {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     line-height: 2rem;
   }
-  .font-title-side-menu {
-    font-size: 1.8rem;
+
+  .imagen-team{
+    min-width: 100px!important;
+    min-height: 140px!important;
+  }
+
+   @media (max-width:517px){
+    .font_title1-team-seccion{
+      font-size: 1.4em!important;
+    }
+    .font_motto_team{
+      font-size: 2vw;
+    }
+   } 
+   /* font_title_purple */
+  .font_title2-team-seccion {
+
+
+
+    font-family: Montserrat-BoldItalic;
+    /* color: #ffffff; */
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1;
+    font-weight: 500;
+  
+    /* letter-spacing: 4px; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* text-transform: uppercase; */
+    /* selector-locked: false; */
+    text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
+  
   }
 }
 @media (min-width: 401px) and (max-width: 600px) {
