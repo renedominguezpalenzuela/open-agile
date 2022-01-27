@@ -73,6 +73,7 @@ export default function Home({ team }) {
           linkedin={linkedin}
           phone={telefono}
           area_gris_nueva={true}
+          linea_obliqua={true}
         />
 
         {title3 != undefined && title3 != "" && (

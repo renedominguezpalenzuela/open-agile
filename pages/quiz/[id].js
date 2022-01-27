@@ -122,14 +122,14 @@ const {
       </Head>
 
       {/*Contenedor*/}
-      <div id="principal" className="bannermain-quiz">
+      <div id="principal" className="bannermain-quiz-questions ">
         <MenuFlotanteBoton />
 
         <div className="item-logo  d-flex align-items-center justify-content-center">
           <Logo />
         </div>
 
-        {/*    <div className="row d-none d-lg-block "> */}
+     
         <div className="item-menu  d-flex align-items-center justify-content-center">
           <MenuNavBar />
         </div>
@@ -138,15 +138,13 @@ const {
           <BotonAgileCheck />
         </div>
 
-        {/*Area superior  */}
+       
 
         <Content01andMenuWithQuestions id={id} question={question} answers={answers} titulo={titulo} next_link={next_link} total_questions={total_preguntas} />
 
-        {/*Footer  */}
-        {/*  <Footer />   */}
       </div>
 
-      {/*Menu Lateral oculto  */}
+   
       <MenuFlotante />
     </>
   );
@@ -311,13 +309,13 @@ const quiz = await res.json();
                {id} / {total_questions}
               </div>
 
-            <div className="row text-center pb-4 my_quiz_boton ">
+            <div className="row text-center mt-3  my_quiz_boton ">
             
-              <div className="row  text-center mt-2 mb-4 d-flex  justify-content-center   ">
+              <div className="row  text-center   d-flex  justify-content-center   ">
                 <Link href={`${next_link}`} className=" d-flex align-items-start ">
                   <button
                     type="button"
-                    className=" btn p-3 ms-2 me-2 w-25 mb-5    btn-card font-btn-card rounded-pill  ">
+                    className=" btn  ms-2 me-2 w-25 mb-5    btn-card font-btn-card rounded-pill  ">
                     Next
                   </button>
                 </Link>

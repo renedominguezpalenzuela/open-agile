@@ -22,6 +22,7 @@ import FormularioContacto2 from "../../components/formulariocontacto2";
 si no se especifica fondo = bannermain
 
   barco   --- se pone el fondo con un barco "bannermain-quiz";
+  quiz-questions 
   variable  ---- texto -- fondo crece en funcion del contenido
   ajustable ---- bannermain-ajustable -- fondo se redudce en funcion del contenido
 
@@ -185,6 +186,12 @@ function getFondo(fondo, linea_obliqua) {
     fondo_por_defecto = "bannermain-quiz";
   }
 
+    if (fondo === "quiz-questions") {
+    fondo_por_defecto = "bannermain-quiz-questions";
+  }
+
+  
+
   //varia con el contenido crece, el contenido es texto grande
 
   if (fondo === "variable") {
@@ -273,7 +280,7 @@ const contenido_principal = (
 
         {titulo_quiz_result != undefined && titulo_quiz_result != "" && (
           <div className="font_title_secundario font_centrar font_title_purple mt-5">
-            {titulo_quiz_result}
+            {titulo_quiz_result} 
           </div>
         )}
 
@@ -375,7 +382,7 @@ const contenido_principal = (
         ))}
 
       {boton_inicio_quiz != undefined && boton_inicio_quiz && (
-        <div className="row mt-5 text-center mb-4 d-flex  justify-content-center ">
+        <div className="row mt-5 text-center mb-4 pb-5 d-flex  justify-content-center ">
           <Link href="/quiz/1">
             <button
               type="button"
@@ -397,7 +404,7 @@ const fn_botones_contacto = () => {
   return (
     <>
       <div className="row d-flex justify-content-center ">
-        <div className="col-md-5  ">
+        <div className="col-md-5 mb-5 ">
           <a href="#" className="d-flex justify-content-center ">
             {/*  btn-outline-primary font_boton  */}
             <button

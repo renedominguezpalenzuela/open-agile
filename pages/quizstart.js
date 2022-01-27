@@ -82,7 +82,7 @@ export default function Home() {
             <button
               type="button"
               className="btn p-3 ms-2 me-2 w-50 h-100 btn-card font-btn-card rounded-pill  ">
-             JETZT CHECK STARTEN
+             JETZT CHECK STARTEN 
             </button>
           </Link>
         </div>
