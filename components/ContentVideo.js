@@ -26,7 +26,7 @@ export default function ContentVideo() {
      <source src="video/video-hat.mp4" type="video/mp4">
 </video> */}
           {/* <video loop={true} autoPlay={true} ref={botonVolumen} muted > */}
-          <video autoplay loop autobuffer muted playsinline ref={botonVolumen} > 
+          <video autoPlay loop autobuffer="true" muted playsInline ref={botonVolumen} > 
             <source src={`/video/Imagefilm_Open_Agile_Low.mp4`}  type="video/mp4" />
  
           </video>

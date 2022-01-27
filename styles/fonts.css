@@ -172,7 +172,15 @@
 
   @media (max-width:991px) {
     .crash-container{
-      top: -9vh !important;;
+      top: -9vh !important;
+    }
+
+    .div_content02a {
+      top: -9vh !important;
+    }
+
+    .div_content03b {
+      top: -9vh !important;
     }
   }
 
