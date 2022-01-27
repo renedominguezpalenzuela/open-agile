@@ -170,7 +170,12 @@
       
   }
 
-  
+  @media (max-width:991px) {
+    .crash-container{
+      top: -9vh !important;;
+    }
+  }
+
   .font_title_seccion_sombra{
     font-family: Montserrat-BoldItalic;
     color: #e50067;
@@ -240,12 +245,12 @@
   
   @media (max-width: 575px) {
     .font_cards_magenta {
-        font-size: 4vw;
+        font-size: 6vw;
     }
   }
 
   
-  @media (max-width: 767px) {
+  @media (max-width: 767px) and (min-width:576px){
     .font_cards_magenta {
         font-size: 4.5vw;
     }
@@ -466,12 +471,12 @@
   
   @media (max-width: 575px) {
     .font_card_title {
-      font-size: 4.5vw; 
+      font-size: 6vw; 
     }
   }
 
 
-  @media (max-width: 767px) {
+  @media (max-width: 767px) and (min-width:576px){
     .font_card_title {
       font-size: 3vw; 
     }

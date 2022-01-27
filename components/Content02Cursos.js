@@ -16,7 +16,7 @@ export default function Content02Cursos({ cursos, main_page }) {
         id="course_title"
         className={`${
           main_page
-            ? "offset-video row text-center mb-2 "
+            ? "offset-video row text-center mb-2 crash-container"
             : "row text-center mb-3 "
         }`}>
         <h3 className="font_title_seccion_sombra"> CRASHKURSE</h3>
