@@ -242,9 +242,9 @@ export default function ModalFormCursos({
             {/* Header */}
             <div className="modal-header">
               <div className="row   ms-2 me-2   w-100 d-flex justify-content-center">
-                <div className="col-4  titulo-card-crashkurse-new d-flex justify-content-center align-items-center">
+                <div className="col-md-4 col-6 titulo-card-crashkurse-new d-flex justify-content-center align-items-center">
                   <div className="row d-none d-md-block">{titulo}</div>
-                  <div className="row h6 d-block d-md-none">{titulo}</div>
+                  <div className="row font-title-modal d-block d-md-none">{titulo}</div>
                 </div>
                 {date1 != undefined &&
                   date2 != undefined &&

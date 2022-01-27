@@ -84,6 +84,19 @@
 
  }
 
+ .font-title-modal{
+   font-size: 3.6vw!important;
+ }
+
+ @media(max-width:767px){
+  .ancho-modal-cursos {
+    width: 90vw!important;
+  }
+  .modal-dialog{
+    margin-left: -45vw!important;
+  }
+ }
+
 .color-body {
   background-color: #e9e9f0 !important;
 }
