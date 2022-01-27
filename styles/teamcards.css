@@ -268,12 +268,12 @@ div.horizontal-line {
   }
 
   /* letter-spacing: 4px; */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
   /* text-transform: uppercase; */
   /* selector-locked: false; */
-  text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
-}
+  /* text-shadow: 1px 3px 5px rgb(0 0 0 / 40%); */
+/* } */
 
 /* font_title_purple */
 .font-title-side-menu {
