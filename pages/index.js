@@ -20,15 +20,13 @@ import MenuFlotante from "../components/MenuFlotante";
 import Footer from "../components/Footer";
 
 import Cookies from "js-cookie";
-import { useEffect, useState  } from "react";
+import { useEffect, useState } from "react";
 
 import ModalFormCookie from "../components/ModalFormCookie";
 
 //----------------------------------------------------------------------------------------------------------
 //            Pagina inicial principal
 //----------------------------------------------------------------------------------------------------------
-
-
 
 export default function Home({
   cursos,
@@ -37,9 +35,7 @@ export default function Home({
   botones_configurador,
   vlog,
 }) {
-
   // const [mostrarVentanaCookies, SetmostrarVentanaCookies] = useState(false);
-
 
   // let first_time = Cookies.get("first_time");
 
@@ -51,10 +47,9 @@ export default function Home({
 
   // //solo para ruebas
   //   first_time=true;
-    
 
   // useEffect(() => {
-  //   if (first_time === true) {  
+  //   if (first_time === true) {
   //     setTimeout(() => {
   //       myfunc(first_time);
   //       SetmostrarVentanaCookies(true);
@@ -76,13 +71,10 @@ export default function Home({
         <script async src="js/menu.js" />
       </Head>
 
-      
-
       <div id="principal" className="container-fluid g-0">
+        <ModalFormCookie id={1} tiempo={1000} animar={true} />
 
-       <ModalFormCookie id={1} tiempo={1000} animar={true}/>
-
-        <MenuFlotanteBoton  />
+        <MenuFlotanteBoton />
 
         <AreaSuperior
           fondo="gris"
@@ -93,10 +85,10 @@ export default function Home({
           area_gris_nueva={true}
         />
 
-        <ContentVideo/>
+        <ContentVideo />
 
         {/*Cards CRASHKURSE  */}
-        <Content02Cursos cursos={cursos}  main_page={true}/>
+        <Content02Cursos cursos={cursos} main_page={true} />
 
         {/*imagen de sponsors */}
         <Content03 />
@@ -110,11 +102,10 @@ export default function Home({
         {/* Servicios Leistungen  */}
         <div id="services" className=" mt-5 mb-5 pb-5">
           <h3 className="font_title_seccion_sombra "> LEISTUNGEN</h3>
-          <h5 className="font_second_line2 d-flex justify-content-center">
+          <h5 className="font_second_line2 d-flex justify-content-center px-4 p-md-0">
             Beratung, Training & Coaching im agilen Kontext
           </h5>
 
-       
           <Card01Lista lista_cards={servicios} titulo_magenta={true} />
         </div>
 
@@ -124,10 +115,6 @@ export default function Home({
 
       {/*Menu Lateral oculto  */}
       <MenuFlotante />
-
-     
-
-     
     </>
   );
 }

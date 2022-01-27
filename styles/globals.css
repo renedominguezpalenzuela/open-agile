@@ -549,6 +549,10 @@ ul.no-bullets {
   display: flex;
 } */
 
+.carousel-indicators button{
+  background-color: #e42078 !important;
+}
+
 .card-block {
   display: flex;
   justify-content: space-between;
