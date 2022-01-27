@@ -10,10 +10,22 @@
       min-height: 360px!important;
     }
   }
-
-  @media(min-width:403px) and (max-width:510px){
+  
+  @media(min-width:403px) and (max-width:421px){
     .alto_carrusel{
-      min-height: 380px!important;
+      min-height: 400px!important;
+    }
+  }
+
+  @media(min-width:422px) and (max-width:510px){
+    .alto_carrusel{
+      min-height: 400px!important;
+    }
+  }
+
+  @media(min-width:511px) and (max-width:567px){
+    .alto_carrusel{
+      min-height: 450px!important;
     }
   }
 
@@ -29,11 +41,7 @@
     }
   }
 
-  @media(min-width:511px) and (max-width:567px){
-    .alto_carrusel{
-      min-height: 450px!important;
-    }
-  }
+ 
 
   .zindex-3000 {
     z-index: 3000!important;
