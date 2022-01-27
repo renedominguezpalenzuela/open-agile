@@ -349,7 +349,7 @@ img.grayscale:hover {
       rgba(67, 183, 174, 0.8)
     ),
     url("/img/image01.jpg");
-  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
+  /* clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%); */
 }
 
 
