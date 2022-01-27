@@ -37,7 +37,7 @@ export default function Home({ curso }) {
     crashkurs_date,
     texto_kosten,
     link_boton,
-    nombre_curso
+    nombre_curso,
   } = curso;
 
   let link_termine_new = "";
@@ -57,7 +57,7 @@ export default function Home({ curso }) {
       </Head>
 
       <div id="principal" className="container-fluid g-0">
-        <ModalFormCookie id={1} tiempo={10}/>
+        <ModalFormCookie id={1} tiempo={10} />
         <MenuFlotanteBoton />
 
         <AreaSuperior
@@ -67,7 +67,7 @@ export default function Home({ curso }) {
           area_gris_nueva={true}
         />
 
-        <div className="row  pt-5 pb-5">
+        <div className="row  pt-md-5 pb-md-5">
           <div className="col-md-4 ">
             <MenuKraskurse
               link_beschreibung={link_beschreibung}
@@ -89,7 +89,6 @@ export default function Home({ curso }) {
               titulo_botones={crashkurs_date_title}
               text_termine={text_termine}
               link_weitere_infos={link_vorteile}
-              
             />
           </div>
         </div>

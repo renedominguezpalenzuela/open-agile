@@ -17,8 +17,6 @@ import Content01TextSinIcons from "./Content01TextSinIcons";
 
 import FormularioContacto2 from "../../components/formulariocontacto2";
 
-
-
 // fondo --- define el tipo de fondo del area superior
 /*
 si no se especifica fondo = bannermain
@@ -59,8 +57,7 @@ export default function AreaSuperior({
   area_gris_nueva,
 
   botones_contacto,
-  linea_obliqua
- 
+  linea_obliqua,
 }) {
   let vista_movil = false;
 
@@ -114,8 +111,7 @@ export default function AreaSuperior({
               email,
               phone,
               linkedin,
-              botones_contacto,
-              
+              botones_contacto
             )}
           </div>
 
@@ -127,8 +123,6 @@ export default function AreaSuperior({
               />
             </div>
           )}
-
-         
         </div>
 
         <IconosIzquierda />
@@ -173,8 +167,7 @@ export default function AreaSuperior({
               email,
               phone,
               linkedin,
-              botones_contacto,
-              
+              botones_contacto
             )}
           </div>
         </div>
@@ -237,13 +230,8 @@ const contenido_principal = (
   email,
   phone,
   linkedin,
-  botones_contacto,
-
+  botones_contacto
 ) => {
-
-
-   
-
   let id = -1;
 
   if (botones_configurador != undefined) {
@@ -273,24 +261,19 @@ const contenido_principal = (
               titulo_muy_largo={titulo_muy_largo}
               botones_contacto={botones_contacto}
               team={iconos_team}
-           
-
             />
-              
           </div>
         </>
       )}
 
       <div className="mb-5">
-
-    
         {iconos != undefined && iconos && <Content01Iconos />}
 
         {/*Texto_quiz_result */}
 
         {titulo_quiz_result != undefined && titulo_quiz_result != "" && (
           <div className="font_title_secundario font_centrar font_title_purple mt-5">
-            {titulo_quiz_result} 
+            {titulo_quiz_result}
           </div>
         )}
 
@@ -335,7 +318,7 @@ const contenido_principal = (
                   <div key={index}>{unaLinea} </div>
                 ))}
               </div>
-              <p/>
+              <p />
             </>
           )}
 
@@ -355,7 +338,6 @@ const contenido_principal = (
           )}
 
         {iconos_team != undefined && iconos_team && (
-
           <IconosTeam email={email} phone={phone} linkedin={linkedin} />
         )}
 
@@ -404,30 +386,18 @@ const contenido_principal = (
         </div>
       )}
 
-      
-          {botones_contacto != undefined &&
-            botones_contacto && (
-           fn_botones_contacto()
-             
-            
-            )}
-
-              
-       
+      {botones_contacto != undefined &&
+        botones_contacto &&
+        fn_botones_contacto()}
     </>
   );
 };
-
-
-
 
 const fn_botones_contacto = () => {
   return (
     <>
       <div className="row d-flex justify-content-center ">
         <div className="col-md-5  ">
-          
-
           <a href="#" className="d-flex justify-content-center ">
             {/*  btn-outline-primary font_boton  */}
             <button
@@ -440,17 +410,18 @@ const fn_botones_contacto = () => {
           </a>
         </div>
         <div className="col-md-5  ">
-          <a href="tel:+49 (0) 421 22347567" className="d-flex justify-content-center ">
+          <a
+            href="tel:+49 (0) 421 22347567"
+            className="d-flex justify-content-center ">
             {/*  btn-outline-primary font_boton  */}
-            <button type="button" className=" btn-leinstungen-magenta rounded-pill   ">
+            <button
+              type="button"
+              className=" btn-leinstungen-magenta rounded-pill   ">
               JETZT ANRUFEN
             </button>
           </a>
         </div>
       </div>
-
-   
     </>
   );
 };
-

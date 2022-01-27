@@ -72,12 +72,15 @@
 }
 
 
+.modal-dialog{
+  left:50%;
+  margin-left: -35vw;
+}
 
 .ancho-modal-cursos {
  position: relative; 
  align-content: center;
  width: 70vw;
- left:-15vw;
 
  }
 
@@ -107,6 +110,17 @@
   font-size: 1vw !important;
   color: #f82d7c;
 }
+
+.subtitulo-card-crashkurse2 {
+  font-family: Montserrat-ExtraBold;
+  color: #f82d7c;
+}
+
+/* @media (max-width:768px){
+  .subtitulo-card-crashkurse{
+    font-size: 1.5!important;
+  }
+} */
 
 .fechas-card-crashkurse {
   font-family: Montserrat-SemiBold;

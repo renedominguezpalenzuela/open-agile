@@ -12,7 +12,7 @@ const justificar = (footer) => {
   if (footer != undefined && footer) {
     return "justify-content-center";
   } else {
-    return "justify-content-end";
+    return "justify-content-md-end justify-content-center";
   }
 };
 

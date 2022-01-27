@@ -19,7 +19,7 @@ export default function MenuKrashkurse({
 
   return (
     <>
-      <div id="menukurs" className=" p-4"></div>
+      <div id="menukurs" className="d-none d-md-block p-4"></div>
       <div className="card ms-5 me-5 pt-4 mb-1 pb-4 ps-4 pe-4  shadow">
         <h4 className="card-title ms-3 mb-3 font-card-menu-crashkurse-titulo">
           Was Dich erwartet!
@@ -35,7 +35,7 @@ export default function MenuKrashkurse({
                   </a>
                 </td>
 
-                <td align="right"> > </td>
+                <td align="right">{">"}</td>
               </tr>
               <tr className="font-card-menu-crashkurse">
                 <td>
@@ -44,7 +44,7 @@ export default function MenuKrashkurse({
                   </a>
                 </td>
 
-                <td align="right">></td>
+                <td align="right">{">"}</td>
               </tr>
               <tr className="font-card-menu-crashkurse">
                 <td>
@@ -53,7 +53,7 @@ export default function MenuKrashkurse({
                   </a>
                 </td>
 
-                <td align="right">></td>
+                <td align="right">{">"}</td>
               </tr>
 
               {/* <tr className="font-card-menu-crashkurse">
@@ -71,7 +71,7 @@ export default function MenuKrashkurse({
                     <div className="myanimacioncursos">LEISTUNGEN & KOSTEN</div>
                   </a>
                 </td>
-                <td align="right">></td>
+                <td align="right">{">"}</td>
               </tr>
 
               {link_termine != undefined && link_termine != "" && (
@@ -81,7 +81,7 @@ export default function MenuKrashkurse({
                       <div className="myanimacioncursos">TERMINE</div>
                     </a>
                   </td>
-                  <td align="right">></td>
+                  <td align="right">{">"}</td>
                 </tr>
               )}
 
@@ -97,7 +97,7 @@ export default function MenuKrashkurse({
                   {/* </a> */}
                   {/* </Link> */}
                 </td>
-                <td align="right">></td>
+                <td align="right">{">"}</td>
               </tr>
             </tbody>
           </table>
@@ -115,11 +115,11 @@ export default function MenuKrashkurse({
   );
 }
 
-function downloadFile(filePath){
-    var link=document.createElement('a');
-    link.href = filePath;
-    link.download = filePath.substr(filePath.lastIndexOf('/') + 1);
-    link.click();
+function downloadFile(filePath) {
+  var link = document.createElement("a");
+  link.href = filePath;
+  link.download = filePath.substr(filePath.lastIndexOf("/") + 1);
+  link.click();
 }
 
 const botonAbrirPDF = (link_pdf) => {
@@ -127,7 +127,7 @@ const botonAbrirPDF = (link_pdf) => {
 
   for (let unPdf of link_pdf) {
     // window.open(unPdf, "_blank");
-     downloadFile(unPdf);
+    downloadFile(unPdf);
     //  window.open(unPdf, '_parent', 'download');
   }
 };

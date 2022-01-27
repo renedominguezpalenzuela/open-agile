@@ -34,12 +34,46 @@
       text-align: left;
   }
 
-  
   .privacy-modal {
     font-family: Segoe-UI;
     color: #243A78;
     font-size: 1vw;
 }
+
+  @media (min-width:768px) and (max-width: 992px){
+    .texto-AGBS{
+      font-size: 1.2vw !important;
+    }
+    .privacy-modal{
+      font-size: 1.4vw!important;
+    }
+  }
+  
+  @media (min-width:576px) and (max-width: 767px){
+    .privacy-modal{
+      font-size: 1.7vw!important;
+    }
+    .titulo-modal{
+      font-size: 2vw!important;
+    }
+    .texto-AGBS{
+      font-size: 1.2vw !important;
+    }
+  }
+
+  @media (max-width: 575px){
+    .texto-AGBS{
+      font-size: 1.6vw!important;
+    }
+    .titulo-modal{
+      font-size: 1.9vw!important;
+    }
+    .privacy-modal{
+      font-size: 1.8vw!important;
+    }
+  }
+
+ 
 
  /* color del checkbox en el formulario  */
 /* .MuiTypography-root{ */
