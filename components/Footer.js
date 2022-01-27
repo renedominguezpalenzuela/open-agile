@@ -11,7 +11,7 @@ export default function Footer() {
     <>
       <footer id="myfooter" className=" no-gutter color_background">
         {/* <div id="rowfoot01" className="row   color_background footer_path ps-2 mb-5 mt-5 pt-5"> */}
-        <div id="rowfoot01" className="row    mb-5  ">
+        <div id="rowfoot01" className="row  mb-5">
           <FormularioContacto2 />
         </div>
 
@@ -159,10 +159,6 @@ export default function Footer() {
                 </div>
 
                 <div>
-                  {/* <a className="color-font-dropdown mylinkhoover" href="#">
-                  Datenschutz
-                </a> */}
-
                   <Link href="/doc/Datenschutz.pdf">
                     <a target="_blank" className="mylinkhoover">
                       Datenschutz
@@ -171,10 +167,6 @@ export default function Footer() {
                 </div>
 
                 <div>
-                  {/* <a className="color-font-dropdown mylinkhoover" href="#">
-                  Impressum
-                </a> */}
-
                   <Link href="/doc/Impressum.pdf">
                     <a target="_blank" className="mylinkhoover">
                       Impressum
@@ -197,9 +189,9 @@ export default function Footer() {
         </div>
         <div className="d-block d-md-none">
           <div id="rowfoot05" className="row g-3 ps-5 me-3 ms-3 pe-5 pb-3">
-            <div className="col-4 col-sm-3">
+            <div className="col">
               <div className="row g-0 ">
-                <div className="col-md-3 d-flex  justify-content-start justify-content-md-center">
+                <div className="col d-flex justify-content-center">
                   <a href="\">
                     <img
                       className="img-fluid logo-img-footer2 size-logo-movil"
@@ -209,10 +201,27 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className="col-12 col-sm-9  mt-4 d-flex pb-3 g-0 justify-content-sm-center justify-content-start align-items-center">
+            <div className="col-12 d-flex pb-3 g-0 justify-content-center">
               <Content01Iconos footer={true} />
             </div>
-            <div className="row  mt-4 d-flex  linea_blanca_footer g-0"></div>
+            <div className="row d-flex  linea_blanca_footer g-0"></div>
+            <div className="font_facit_text_very_small mt-3 d-flex justify-content-center">
+              <div>
+                <Link href="/doc/Datenschutz.pdf">
+                  <a target="_blank" className="mylinkhoover">
+                    Datenschutz
+                  </a>
+                </Link>
+              </div>
+              <span className="mx-1"> | </span>
+              <div>
+                <Link href="/doc/Impressum.pdf">
+                  <a target="_blank" className="mylinkhoover">
+                    Impressum
+                  </a>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </footer>
