@@ -68,7 +68,7 @@ const formato_titulo1 = (
   }
 
   if (vista_movil != undefined && vista_movil) {
-    return "titulo1_vista_movil mt-3";
+    return "titulo1_vista_movil mt-3 d-flex justify-content-center";
   }
 };
 

@@ -132,6 +132,8 @@ export default function AreaSuperior({
       {/* --------------------Vista movil Mostrar si menor a lg<992px  ----------------------------------------*/}
       <div className="fond mb-5  d-lg-none">
         {(vista_movil = true)}
+
+        {(boton_inicio_quiz = true)}
         <MenuNavBar2 />
         <div className={`${getFondo(fondo)}`}>
           {/* <div className=" item-logo-movil  mt-2 ms-3 ">
@@ -186,11 +188,9 @@ function getFondo(fondo, linea_obliqua) {
     fondo_por_defecto = "bannermain-quiz";
   }
 
-    if (fondo === "quiz-questions") {
+  if (fondo === "quiz-questions") {
     fondo_por_defecto = "bannermain-quiz-questions";
   }
-
-  
 
   //varia con el contenido crece, el contenido es texto grande
 
@@ -251,13 +251,15 @@ const contenido_principal = (
     id_botones_configurador = id;
   }
 
+ 
+
   return (
     <>
       {/* Texto Principal */}
       {((texto1 != undefined && texto1 != "") ||
         (texto2 != undefined && texto2 != "")) && (
         <>
-          <div className=" g-0  ms-5  ">
+          <div className={`${vista_movil ? "g-0" : "g-0  ms-5"}`}>
             <Content01TextSinIcons
               texto1={texto1}
               texto2={texto2}
@@ -280,7 +282,7 @@ const contenido_principal = (
 
         {titulo_quiz_result != undefined && titulo_quiz_result != "" && (
           <div className="font_title_secundario font_centrar font_title_purple mt-5">
-            {titulo_quiz_result} 
+            {titulo_quiz_result}
           </div>
         )}
 
@@ -382,14 +384,16 @@ const contenido_principal = (
         ))}
 
       {boton_inicio_quiz != undefined && boton_inicio_quiz && (
-        <div className="row mt-5 text-center mb-4 pb-5 d-flex  justify-content-center ">
-          <Link href="/quiz/1">
-            <button
-              type="button"
-              className="btn p-3 ms-2 me-2 w-50 h-100 btn-card font-btn-card rounded-pill  ">
-              JETZT CHECK STARTEN
-            </button>
-          </Link>
+        <div className="row   d-flex justify-content-center align-items-center w-100">
+        <div className="col-12 col-sm-7 col-md-5 me-md-4 ms-md-4 pb-2 ">
+        <Link href="/quiz/1">
+          <button
+            type="button"
+            className=" w-100  btn-agile-check font_boton_main-quiz redondeado-boton  ">
+            JETZT DEN AGILE CHECK MACHEN
+          </button>
+        </Link>
+        </div>
         </div>
       )}
 

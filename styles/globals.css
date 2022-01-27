@@ -598,6 +598,8 @@ ul.no-bullets {
   font-size: 1.25vw;
 }
 
+
+
 @media(min-width:577px) and (max-width:767px){
   .font_boton_main{
     font-size: 2vw!important;
@@ -609,6 +611,16 @@ ul.no-bullets {
     font-size: 3.5vw!important;
   }
 }
+
+
+
+.font_boton_main-quiz {
+  font-family: Montserrat-Bold;
+  color: #ffffff;
+  font-size: 3.2vw;
+}
+
+
 
 .redondeado {
   border-radius: 5px;
