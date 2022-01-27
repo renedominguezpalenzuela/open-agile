@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import * as React from "react";
 import Link from "next/link";
-
+import { useEffect } from "react";
 import MenuFlotante from "../../components/MenuFlotante";
 import Footer from "../../components/Footer";
 
@@ -19,8 +19,6 @@ import Card01Lista from "../../components/Card01Lista";
 import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
 
 import ModalFormCookie from "../../components/ModalFormCookie";
-
-
 
 // import MenuSuperior from "../components/MenuSuperior";
 import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
@@ -38,45 +36,34 @@ import { faShareAlt } from "@fortawesome/free-solid-svg-icons";
 
 import { faLongArrowAltLeft } from "@fortawesome/free-solid-svg-icons";
 
-
-import Tooltip from '@mui/material/Tooltip';
-import ClickAwayListener from '@mui/material/ClickAwayListener';
-
+import Tooltip from "@mui/material/Tooltip";
+import ClickAwayListener from "@mui/material/ClickAwayListener";
 
 //----------------------------------------------------------------------------------------------------------
 //            Pagina inicial principal
 //----------------------------------------------------------------------------------------------------------
 
 export default function Home({ blog }) {
-
-
-   const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
 
   const handleTooltipClose = () => {
     if (open) {
       setOpen(false);
     }
-
-   
   };
 
   const handleTooltipOpen = () => {
     setOpen(true);
   };
 
-  
   const router = useRouter();
   const { id } = router.query;
 
-  
-const copyURLtoClipboard=(url)=>{
-  
+  const copyURLtoClipboard = (url) => {
+    setOpen(true);
 
-   setOpen(true);
-
-
-  navigator.clipboard.writeText(url)
-}
+    navigator.clipboard.writeText(url);
+  };
 
   const {
     title,
@@ -97,6 +84,16 @@ const copyURLtoClipboard=(url)=>{
     link_siguiente_nombre2,
   } = blog;
 
+  useEffect(() => {
+    const elemento = document.querySelector(".titulo");
+    if (title.length > 18) {
+      elemento.classList.remove("font_title_blogs_articles");
+      elemento.classList.add("font_title_blogs_articles-2");
+    } else {
+      elemento.classList.remove("font_title_blogs_articles-2");
+      elemento.classList.add("font_title_blogs_articles");
+    }
+  }, []);
   return (
     <>
       <Head>
@@ -108,9 +105,7 @@ const copyURLtoClipboard=(url)=>{
       </Head>
 
       <div id="principal" className="container-fluid g-0">
-
-         <ModalFormCookie id={1} tiempo={10}/>
-
+        <ModalFormCookie id={1} tiempo={10} />
 
         <MenuFlotanteBoton />
 
@@ -118,7 +113,7 @@ const copyURLtoClipboard=(url)=>{
 
         <div className="row   d-flex align-items-center justify-content-center">
           <div className="col-9">
-            <div className="row  mt-5 mb-2 d-flex align-items-center justify-content-center font_title_blogs_articles">
+            <div className="row  mt-5 mb-2 d-flex align-items-center justify-content-center titulo font_title_blogs_articles">
               {title}
             </div>
 
@@ -128,19 +123,18 @@ const copyURLtoClipboard=(url)=>{
 
             <div className="row   d-flex align-items-center justify-content-center">
               <img
-                className="img-fluid "
+                className="img-md-fluid img-blog"
                 src={`${servidor_url}/img/${image}`}
               />
             </div>
 
-            <div className="row  mt-1 mb-2  ">
-              <div className="contenedor-iconos-blog ">
-               
-
-                  <div className="item-1-iconos-blog  ">
+            <div className="row  mt-1 mb-2">
+              <div className="contenedor-iconos-blog d-none d-md-grid justify-content-md-center">
+                <div className="item-1-iconos-blog ">
                   <a
                     href={`http://www.facebook.com/share.php?u=${servidor_url}/blog/${id}`}
-                    className="items-en-linea-padre"  target="_blank">
+                    className="items-en-linea-padre"
+                    target="_blank">
                     <FontAwesomeIcon
                       icon={faFacebookF}
                       className="iconos-blogs items-en-linea-hijo"
@@ -149,8 +143,6 @@ const copyURLtoClipboard=(url)=>{
                     <div className="ms-1 texto-iconos-blogs items-en-linea-hijo ">
                       Facebook
                     </div>
-
-                  
                   </a>
                 </div>
 
@@ -200,32 +192,35 @@ const copyURLtoClipboard=(url)=>{
                 </div> */}
 
                 <div className="item-4-iconos-blog  ">
-                {/* <Tooltip title="Copy post url to clipboard" placement="top-start"> */}
+                  {/* <Tooltip title="Copy post url to clipboard" placement="top-start"> */}
 
-                <Tooltip  PopperProps={{ disablePortal: true, }}
-                // onClose={handleTooltipClose}
-                open={open}
-                disableFocusListener
-                disableHoverListener
-                // disableTouchListener
-                title="Post url copied to clipboard" placement="top-start"
-                 leaveDelay={2000}
-                
-                onMouseOut={handleTooltipClose}
-              >
-                  <div onClick={()=>copyURLtoClipboard(`${servidor_url}/blog/${id}`)}
-                    // href="#"
-                    className="items-en-linea-padre ">
-                    <FontAwesomeIcon
-                      icon={faShareAlt}
-                      className="iconos-blogs items-en-linea-hijo"
-                    />
+                  <Tooltip
+                    PopperProps={{ disablePortal: true }}
+                    // onClose={handleTooltipClose}
+                    open={open}
+                    disableFocusListener
+                    disableHoverListener
+                    // disableTouchListener
+                    title="Post url copied to clipboard"
+                    placement="top-start"
+                    leaveDelay={2000}
+                    onMouseOut={handleTooltipClose}>
+                    <div
+                      onClick={() =>
+                        copyURLtoClipboard(`${servidor_url}/blog/${id}`)
+                      }
+                      // href="#"
+                      className="items-en-linea-padre ">
+                      <FontAwesomeIcon
+                        icon={faShareAlt}
+                        className="iconos-blogs items-en-linea-hijo"
+                      />
 
-                    <div className="ms-1 texto-iconos-blogs items-en-linea-hijo ">
-                      Share
+                      <div className="ms-1 texto-iconos-blogs items-en-linea-hijo ">
+                        Share
+                      </div>
                     </div>
-                  </div>
-                   </Tooltip>
+                  </Tooltip>
                 </div>
               </div>
             </div>
@@ -235,60 +230,114 @@ const copyURLtoClipboard=(url)=>{
                 content.map((unContenido, index1) => (
                   <React.Fragment key={index1}>
                     {contenido(unContenido)}
-                    
                   </React.Fragment>
                 ))}
             </div>
           </div>
         </div>
 
-        <div className="row mt-5 mb-5  d-flex align-items-center justify-content-center">
-          <div className="contenido-flechas-blog">
+        <div className="row mt-md-5 mb-5  d-flex align-items-center justify-content-center ">
+          <div className="contenido-flechas-blog d-none d-md-grid">
+            <div className="item-1-flechas-blog flecha">
+              <a
+                href={`${servidor_url}${link_anterior}`}
+                className="items-en-linea-padre ">
+                <div className="texto-flechas-blogs">Vorheriger Artikel</div>
 
-              <div className="item-1-flechas-blog flecha">
-                <a href={`${servidor_url}${link_anterior}`} className="items-en-linea-padre ">
-                  <div className="texto-flechas-blogs">
-                      Vorheriger Artikel
-                  </div>
-
-
-                   {/* <FontAwesomeIcon
+                {/* <FontAwesomeIcon
                       icon={faLongArrowAltLeft}
                       className="iconos-blogs items-en-linea-hijo "
                     /> */}
-                   <div className="">
-                        <img className="img-fluid " src={`${servidor_url}/img/blogs/flecha_azul_left.svg`}  />
-                  </div> 
+                <div className="">
+                  <img
+                    className="img-fluid "
+                    src={`${servidor_url}/img/blogs/flecha_azul_left.svg`}
+                  />
+                </div>
 
-                  <div className=" texto-flechas-blogs2 ">
-                        {link_anterior_nombre2}
-                  </div>
+                <div className=" texto-flechas-blogs2 ">
+                  {link_anterior_nombre2}
+                </div>
 
-                  <div className=" texto-flechas-blogs2">                
-                        {link_anterior_nombre}                
-                  </div>
-                </a>
-              </div>
+                <div className=" texto-flechas-blogs2">
+                  {link_anterior_nombre}
+                </div>
+              </a>
+            </div>
 
-           <div className="item-2-flechas-blog flecha" >
-            <a href={`${servidor_url}${link_siguiente}`} className="items-en-linea-padre "  >
-              <div className="texto-flechas-blogs ">           
-                  Nächster Artikel             
-              </div>
+            <div className="item-2-flechas-blog flecha">
+              <a
+                href={`${servidor_url}${link_siguiente}`}
+                className="items-en-linea-padre ">
+                <div className="texto-flechas-blogs ">Nächster Artikel</div>
 
-              <div className="">          
-                  <img className="img-fluid flecha" src={`${servidor_url}/img/blogs/flecha_azul_rigth.svg`} />
-              </div>
+                <div className="">
+                  <img
+                    className="img-fluid flecha"
+                    src={`${servidor_url}/img/blogs/flecha_azul_rigth.svg`}
+                  />
+                </div>
 
-              <div className="texto-flechas-blogs2 ">              
-                {link_siguiente_nombre}
-              </div>
+                <div className="texto-flechas-blogs2 ">
+                  {link_siguiente_nombre}
+                </div>
 
-              <div className="texto-flechas-blogs2 ">
+                <div className="texto-flechas-blogs2 ">
                   {link_siguiente_nombre2}
-              </div>
-            </a>
-            </div>   
+                </div>
+              </a>
+            </div>
+          </div>
+          <div className="d-flex d-md-none">
+            <div className="item-1-flechas-blog flecha w-50">
+              <a
+                href={`${servidor_url}${link_anterior}`}
+                className="items-en-linea-padre ">
+                <div className="texto-flechas-blogs">Vorheriger Artikel</div>
+
+                {/* <FontAwesomeIcon
+                      icon={faLongArrowAltLeft}
+                      className="iconos-blogs items-en-linea-hijo "
+                    /> */}
+                <div className="">
+                  <img
+                    className="img-fluid w-50"
+                    src={`${servidor_url}/img/blogs/flecha_azul_left.svg`}
+                  />
+                </div>
+
+                {/* <div className=" texto-flechas-blogs2 ">
+                  {link_anterior_nombre2}
+                </div>
+
+                <div className=" texto-flechas-blogs2">
+                  {link_anterior_nombre}
+                </div> */}
+              </a>
+            </div>
+
+            <div className="item-2-flechas-blog flecha w-50">
+              <a
+                href={`${servidor_url}${link_siguiente}`}
+                className="items-en-linea-padre ">
+                <div className="texto-flechas-blogs ">Nächster Artikel</div>
+
+                <div className="">
+                  <img
+                    className="img-fluid flecha w-50"
+                    src={`${servidor_url}/img/blogs/flecha_azul_rigth.svg`}
+                  />
+                </div>
+
+                {/* <div className="texto-flechas-blogs2 ">
+                  {link_siguiente_nombre}
+                </div>
+
+                <div className="texto-flechas-blogs2 ">
+                  {link_siguiente_nombre2}
+                </div> */}
+              </a>
+            </div>
           </div>
         </div>
 
@@ -311,13 +360,12 @@ const contenido = (contenido) => {
             {index2 === 0 ? (
               <div className="letra-parrafo-blog primera-parrafo-blog">
                 {unTexto}
-                
               </div>
             ) : (
               <div className="letra-parrafo-blog">{unTexto}</div>
             )}
 
-            <p/>
+            <p />
           </React.Fragment>
         ))}
       </>
@@ -400,4 +448,3 @@ export const getServerSideProps = async (context) => {
     },
   };
 };
-

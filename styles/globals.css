@@ -594,6 +594,12 @@ ul.no-bullets {
   font-size: 1.25vw;
 }
 
+@media (max-width:767px){
+  .font_boton_main{
+    font-size: 3.5vw!important;
+  }
+}
+
 .redondeado {
   border-radius: 5px;
 }
