@@ -20,7 +20,10 @@ export default function Content01TextSinIcons({
 }) {
   return (
     <>
-      <div className={`${team ? "pb-3" : "mt-4 mb-3 pb-3"}`}>
+      <div
+        className={`${
+          team ? "mt-5 mb-3 pt-5  pt-md-0 mt-md-0 pb-md-3" : "mt-4 mb-3 pb-3"
+        }`}>
         {texto1 != undefined && texto1 != "" && (
           <div
             className={formato_titulo1(
@@ -34,7 +37,7 @@ export default function Content01TextSinIcons({
         )}
 
         {texto2 != undefined && texto2 != "" && (
-          <div className={formato_titulo2(vista_movil, titulo_muy_largo)}>
+          <div className={formato_titulo2(vista_movil, titulo_muy_largo, team)}>
             <div>{texto2} </div>
 
             {texto2a != undefined && texto2a != "" && <> {texto2a} </>}
@@ -51,28 +54,76 @@ const formato_titulo1 = (
   titulo_largo,
   titulo_muy_largo
 ) => {
+  let clase = "";
   if (titulo_largo != undefined && titulo_largo) {
-    return "font_title_largo font_title_purple mt-1 ";
+    clase = "font_title_largo font_title_purple mt-1 ";
   }
 
   if (titulo_muy_largo != undefined && titulo_muy_largo) {
-    return "font_title_muy_largo font_title_purple mt-1  ";
+    clase = "font_title_muy_largo font_title_purple mt-1  ";
   }
 
   if (cursos != undefined && cursos) {
-    return "font_title_secundario font_title_purple mt-3";
+    clase = "font_title_secundario font_title_purple mt-3";
   }
 
   if (vista_movil === undefined || !vista_movil) {
-    return "font_title_secundario font_title_purple mt-1 ";
+    clase = "font_title_secundario font_title_purple mt-1 ";
   }
 
   if (vista_movil != undefined && vista_movil) {
-    return "titulo1_vista_movil mt-3";
+    clase = "titulo1_vista_movil mt-3";
   }
+
+  if (
+    vista_movil != undefined &&
+    vista_movil &&
+    titulo_muy_largo != undefined &&
+    titulo_muy_largo
+  ) {
+    clase = "titulo1_vista_movil mt-3 titulo_extra_grande";
+  }
+
+  if (
+    vista_movil != undefined &&
+    vista_movil &&
+    titulo_largo != undefined &&
+    titulo_largo
+  ) {
+    clase = "titulo1_vista_movil mt-3 titulo_grande";
+  }
+  return clase;
 };
 
-const formato_titulo2 = (vista_movil, titulo_muy_largo) => {
+// const formato_titulo1 = (
+//   vista_movil,
+//   cursos,
+//   titulo_largo,
+//   titulo_muy_largo
+// ) => {
+//   if (titulo_largo != undefined && titulo_largo) {
+//     return "font_title_largo font_title_purple mt-1 ";
+//   }
+
+//   if (titulo_muy_largo != undefined && titulo_muy_largo) {
+//     return "font_title_muy_largo font_title_purple mt-1  ";
+//   }
+
+//   if (cursos != undefined && cursos) {
+//     return "font_title_secundario font_title_purple mt-3";
+//   }
+
+//   if (vista_movil === undefined || !vista_movil) {
+//     return "font_title_secundario font_title_purple mt-1 ";
+//   }
+
+//   if (vista_movil != undefined && vista_movil) {
+//     return "titulo1_vista_movil mt-3";
+//   }
+
+// };
+
+const formato_titulo2 = (vista_movil, titulo_muy_largo, team) => {
   if (titulo_muy_largo != undefined && titulo_muy_largo) {
     return "font_title_muy_largo2 mt-3";
   }
@@ -82,6 +133,8 @@ const formato_titulo2 = (vista_movil, titulo_muy_largo) => {
   }
 
   if (vista_movil != undefined && vista_movil) {
-    return "titulo2_vista_movil text-center";
+    return team
+      ? "titulo2_vista_movil text-left"
+      : "titulo2_vista_movil text-center";
   }
 };

@@ -186,11 +186,9 @@ function getFondo(fondo, linea_obliqua) {
     fondo_por_defecto = "bannermain-quiz";
   }
 
-    if (fondo === "quiz-questions") {
+  if (fondo === "quiz-questions") {
     fondo_por_defecto = "bannermain-quiz-questions";
   }
-
-  
 
   //varia con el contenido crece, el contenido es texto grande
 
@@ -257,7 +255,7 @@ const contenido_principal = (
       {((texto1 != undefined && texto1 != "") ||
         (texto2 != undefined && texto2 != "")) && (
         <>
-          <div className=" g-0  ms-5  ">
+          <div className=" g-0 ms-3 ms-md-5  ">
             <Content01TextSinIcons
               texto1={texto1}
               texto2={texto2}
@@ -280,7 +278,7 @@ const contenido_principal = (
 
         {titulo_quiz_result != undefined && titulo_quiz_result != "" && (
           <div className="font_title_secundario font_centrar font_title_purple mt-5">
-            {titulo_quiz_result} 
+            {titulo_quiz_result}
           </div>
         )}
 
@@ -320,7 +318,7 @@ const contenido_principal = (
           texto_parrafo_blanco_team.length > 0 && (
             <>
               {/* mostrar solo en pantalla grande - espacio con el titulo mt-*/}
-              <div className="row font_smaller_letter_white_cursos ms-5 mt-3 me-3    texto_parrafo_blanco_team">
+              <div className="row font_smaller_letter_white_cursos ms-md-5 mt-3  me-md-5    texto_parrafo_blanco_team">
                 {texto_parrafo_blanco_team.map((unaLinea, index) => (
                   <div key={index}>{unaLinea} </div>
                 ))}

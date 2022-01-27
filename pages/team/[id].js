@@ -40,13 +40,10 @@ export default function Home({ team }) {
     erfahrung,
     weiterbildungen,
     imageround,
-    cargo
- 
+    cargo,
   } = team;
 
   let foto2 = servidor_url + "/img/" + image;
-
-  
 
   return (
     <>
@@ -85,100 +82,95 @@ export default function Home({ team }) {
         {erfahrung != undefined && erfahrung != "" && (
           <>
             <div className="row d-flex justify-content-center">
-              <div className="col-6  font_weiterbildungen">Qualifikationen</div>
+              <div className="col-9 col-md-6  font_weiterbildungen">
+                Qualifikationen
+              </div>
             </div>
 
             <div className="row d-flex justify-content-center ">
-              <div className="col-6 mt-2">
+              <div className="col-9 col-md-6 mt-2">
                 <ul>
-                {erfahrung.map((unErfarung, index) => (
-                  <div key={index} className="font_erfahrum_detalles  ">
-                   
-                    <li className="mybullets"> {unErfarung} </li>
-                  </div>
-                ))}
-
+                  {erfahrung.map((unErfarung, index) => (
+                    <div key={index} className="font_erfahrum_detalles  ">
+                      <li className="mybullets"> {unErfarung} </li>
+                    </div>
+                  ))}
                 </ul>
               </div>
             </div>
 
             <div className="row d-flex justify-content-center ">
-              <div className="col-6 mt-4 horizontal-line"></div>
+              <div className="col-md-6 col-9 mt-4 horizontal-line"></div>
             </div>
           </>
         )}
 
-
-         {weiterbildungen != undefined && weiterbildungen != "" && (
+        {weiterbildungen != undefined && weiterbildungen != "" && (
           <>
             <div className="row mt-5 d-flex justify-content-center">
-              <div className="col-6  font_weiterbildungen">Projekterfahrungen</div>
+              <div className="col-md-6 col-9  font_weiterbildungen">
+                Projekterfahrungen
+              </div>
             </div>
 
             <div className="row d-flex justify-content-center ">
-              <div className="col-6 mt-2">
+              <div className="col-md-6 col-9 mt-2">
                 <ul>
-                {weiterbildungen.map((unWeiterbildungen, index) => (
-                  <div key={index} className="font_erfahrum_detalles  ">
-                
-                    {/* • {unWeiterbildungen} */}
-                      <li className="mybullets">  {unWeiterbildungen} </li>
-                  </div>
-                ))}
-
+                  {weiterbildungen.map((unWeiterbildungen, index) => (
+                    <div key={index} className="font_erfahrum_detalles  ">
+                      {/* • {unWeiterbildungen} */}
+                      <li className="mybullets"> {unWeiterbildungen} </li>
+                    </div>
+                  ))}
                 </ul>
               </div>
             </div>
 
             <div className="row d-flex justify-content-center ">
-              <div className="col-6 mt-4 horizontal-line"></div>
+              <div className="col-md-6 col-9 mt-4 horizontal-line"></div>
             </div>
           </>
         )}
 
+        <div className="row mt-5 mb-5 d-flex justify-content-center  ">
+          <div className="col-md-6 col-9 mt-2">
+            <div className="font_texto_inferior_team  ">
+              {" "}
+              {`“seit 2021 bei Open Agile”`}{" "}
+            </div>
+          </div>
+        </div>
 
-
-          <div className="row mt-5 mb-5 d-flex justify-content-center  ">
-          <div className="col-6 mt-2">
-            <div className="font_texto_inferior_team  "> {`“seit 2021 bei Open Agile”`} </div>
-          </div>  
+        <div className="row h-100  fondo_team_seccion">
+          <div className="col-3 d-flex justify-content-center ">
+            <img
+              className="img-fluid  pt-4 pb-4 imagen-team"
+              src={`${servidor_url}/img/${imageround}`}
+            />
           </div>
 
+          {/* "col {} mt-5 pt-5 " */}
+          <div
+            className={`col  ${
+              motto.length >= 2 ? "mt-1" : "mt-5"
+            }  pt-5 pb-3`}>
+            {motto.map((unMotto, index) => (
+              <div
+                key={index}
+                className="row  ms-4 me-5 pe-4  font_motto_team  ">
+                {unMotto}
+              </div>
+            ))}
 
-          <div className="row h-100  fondo_team_seccion">
-          <div className="col-3  d-flex justify-content-center">
-         
-              <img className="img-fluid  pt-4 pb-4 " src={`${servidor_url}/img/${imageround}`} />
+            <div className="   mt-3  horizontal-line "></div>
+
+            <div className=" row  mt-3 font_title1-team-seccion ">
+              {motto_author}
+            </div>
+
+            {/* <div className="row  mt-2 font_title2-team-seccion font_title_purple ">{cargo}</div> */}
           </div>
-
-{/* "col {} mt-5 pt-5 " */}
-           <div className={`col  ${motto.length>=2?"mt-1":"mt-5"}  pt-5`}>
-            
-               {motto.map((unMotto, index) => (
-                  <div key={index} className="row  ms-4 me-5 pe-4  font_motto_team  ">
-                
-                     {unMotto}
-                  </div>
-                ))}
-
-
-                
-
-                <div className="   mt-3  horizontal-line "></div>
-
-               <div className=" row  mt-3 font_title1-team-seccion ">{motto_author}</div>
-
-                {/* <div className="row  mt-2 font_title2-team-seccion font_title_purple ">{cargo}</div> */}
-
-
-
-          </div>
-            
-          </div>
-
-
-
-
+        </div>
 
         {/*Footer  */}
         <Footer />

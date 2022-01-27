@@ -68,6 +68,12 @@
     z-index: 100;
 }
 
+@media(max-width:767px){
+    .texto_parrafo_blanco_team{
+        width: 100%!important;
+    }
+}
+
 .img-team-top {
     height: 70vh;
     z-index: 100;
