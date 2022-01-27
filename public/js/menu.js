@@ -79,7 +79,7 @@ function setColor(Y, pagina) {
   var Y_Footer = 4134;
 
 
-  console.log(pagina);
+  
   
 
 
@@ -120,8 +120,7 @@ function setColor(Y, pagina) {
   const r = /\/crashkurse\/[a-z]*\/[0-9]/;
   if (r.test(pagina)) {
         color = color_magenta;
-     console.log("here");
-
+  
 
    
 
