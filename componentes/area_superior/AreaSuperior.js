@@ -290,7 +290,7 @@ const contenido_principal = (
 
         {texto_quiz_result != undefined && texto_quiz_result.length > 0 && (
           <>
-            <div className="row mt-4 font_small_letter font_small_letter_white ms-5 me-3 justificar">
+            <div className="row mt-4  font_small_letter_white  justificar">
               {texto_quiz_result.map((unaLinea, index) => (
                 <p key={index}>{unaLinea}</p>
               ))}
