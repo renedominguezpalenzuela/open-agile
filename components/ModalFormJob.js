@@ -228,7 +228,7 @@ export default function ModalFormJob({
   return (
     <>
       {/* <!-- Modal --> */}
-      <div className="modal fade pr-0" id={`contactForm${id}`} tabIndex="-1">
+      <div className="modal fade" sx={{paddingRight:"0px"}} id={`contactForm${id}`} tabIndex="-1">
         <div className="modal-dialog modal-dialog-job">
           <div className="modal-content ancho-modal-cursos">
             <div className="modal-header">
