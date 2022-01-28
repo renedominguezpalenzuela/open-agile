@@ -98,6 +98,8 @@
   /* color: #ffffff !important; */
 }
 
+  
+
 .btn-card-blog:hover
   /* .btn-card:active, */
   /* .btn-card:visited, */
@@ -186,6 +188,15 @@
   font-family: Montserrat-SemiBold;
   color: #ffffff;
   font-size: 0.7rem;
+}
+
+@media (max-width:992px){
+  .font-btn-card-shop {
+  font-size: 2.3vw;
+  }
+  .btn-card-blog{
+    width: 35vw!important;
+  }
 }
 
 .font_titulo_team {

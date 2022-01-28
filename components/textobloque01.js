@@ -97,10 +97,10 @@ export default function TextoBloque01({
 
       
   {texto_plequitas_array!=undefined && texto_plequitas_array!="" &&
-  <div className="ms-5 ps-4 row d-flex justify-content-start  font_small_letter ">
+  <div className="ms-md-5 ps-md-4 row d-flex justify-content-start  ">
    
 
-    <div className="col font_small_letter ms-3  me-3 justificar ">
+    <div className="col font_small_letter ms-md-3  me-4 justificar ">
     <ul>
       {texto_plequitas_array.map ((unaLinea, index) => 
         <li key={index} className="mybullets3 ms-2">
