@@ -720,6 +720,12 @@ ul.no-bullets {
   background-color: white;
 }
 
+.iconos-contact {
+  color: #fff;
+  height: 2em;
+  width: 2em;
+}
+
 /* The animation code */
 @keyframes example {
   from {
