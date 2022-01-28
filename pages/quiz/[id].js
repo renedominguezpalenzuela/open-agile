@@ -114,11 +114,6 @@ export default function Home({ quiz, todas_preguntas }) {
       </Head>
 
       {/*Contenedor*/}
-<<<<<<< HEAD
-      <div id="principal" className="bannermain-quiz-questions">
-        <MenuFlotanteBoton />
-=======
->>>>>>> 30e0c3c825144ec8060e1cbbb7b11f95607aaecd
 
       <div class=" d-none  d-md-block">
         <div id="principal" className="bannermain-quiz-questions ">
