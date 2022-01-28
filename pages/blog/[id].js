@@ -109,10 +109,10 @@ export default function Home({ blog }) {
 
         <MenuFlotanteBoton />
 
-        <AreaSuperior fondo="ajustable" area_gris_nueva={true} />
+        <AreaSuperior texto1="Blog" fondo="ajustable" area_gris_nueva={true} />
 
         <div className="row   d-flex align-items-center justify-content-center">
-          <div className="col-9">
+          <div className="col-10">
             <div className="row  mt-5 mb-2 d-flex align-items-center justify-content-center titulo font_title_blogs_articles">
               {title}
             </div>
