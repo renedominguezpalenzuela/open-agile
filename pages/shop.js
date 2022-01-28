@@ -46,7 +46,7 @@ export default function Home({shop}) {
              
               
                  {shop.map((oneShop, index) => (
-                  <div key={index} className="col-md-4 p-3 d-flex justify-content-center">
+                  <div key={index} className="col-lg-4 p-3 d-flex justify-content-center">
                   
                      <Card07Shop  
                          id={oneShop.id}   
