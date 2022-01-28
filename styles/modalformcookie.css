@@ -13,7 +13,7 @@
     /* height:72vh; */
     /*72vh;  Full height (cover the whole page) */
     
-   right: 10vw;
+    right: 10vw;
     bottom: 7vh; 
     /* color: blue; */
  
@@ -25,6 +25,39 @@
     box-shadow: 0px 0px 16px 1px #0ff;
     /* in order: x offset, y offset, blur size, spread size, color */
     /* blur size and spread size are optional (they default to 0) */
+}
+
+@media (max-width: 915px) and (min-width:584px){
+  .modalformcookie{
+    width: 40vw;
+  }
+  .boton-form-cookies{
+    width: 18vw!important;
+    margin-bottom: 4px;
+    font-size: 1.4vw!important;
+  }
+}
+
+@media (max-width:583.98px) and (min-width:490px){
+  .modalformcookie{
+    width: 45vw!important;
+  }
+  .boton-form-cookies{
+    width: 30vw!important;
+    margin-bottom: 4px;
+    font-size: 2vw!important;
+  }
+}
+
+@media (max-width:489px){
+  .modalformcookie{
+    width: 50vw!important;
+  }
+  .boton-form-cookies{
+    width: 30vw!important;
+    margin-bottom: 4px;
+    font-size: 2.3vw!important;
+  }
 }
 
 .mostrar {

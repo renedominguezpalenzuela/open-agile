@@ -204,7 +204,7 @@ export default function ModalFormCookie({ id, tiempo , animar}) {
             Wir verwenden Cookies
           </div>
 
-          <div className="row mt-2 ps-1 ms-3 me-3 fuente_texto_form_cookie ">
+          <div className="row d-none d-lg-block mt-2 ps-1 ms-3 me-3 fuente_texto_form_cookie ">
             Um Ihnen die bestmögliche Nutzung zu ermöglichen. Neben technisch
             unbedingt erforderlichen Cookies werden mit Ihrer Einwilligung auch
             weitere Cookies angesteuert, um zusätzliche Dienste und Funktionen
@@ -216,7 +216,7 @@ export default function ModalFormCookie({ id, tiempo , animar}) {
           </div>
 
           <div className="row ms-3 pt-2">
-            <div className="col-6">
+            <div className="col col-lg-6">
               <FormControlLabel
                 control={
                   <IOSSwitch
@@ -230,7 +230,7 @@ export default function ModalFormCookie({ id, tiempo , animar}) {
               />
             </div>
 
-            <div className="col-6">
+            <div className="col col-lg-6">
               <FormControlLabel
                 control={
                   <IOSSwitch
@@ -270,8 +270,8 @@ export default function ModalFormCookie({ id, tiempo , animar}) {
             </div>
           </div>
 
-          <div className="row d-flex g-0 justify-content-center mb-2 mt-1 ms-2 me-2">
-            <div className="col-6  d-flex  justify-content-center">
+          <div className="row d-flex flex-column flex-md-row g-0 justify-content-center mb-2 mt-1 ms-2 me-2">
+          <div className="col-md-6  d-flex  justify-content-center">
               <button
                 type="button"
                 className="card-footer  boton-form-cookies "
@@ -280,7 +280,7 @@ export default function ModalFormCookie({ id, tiempo , animar}) {
               </button>
             </div>
 
-            <div className="col-6  d-flex  justify-content-center">
+            <div className="col-md-6  d-flex  justify-content-center">
               <button
                 type="button"
                 className="card-footer  boton-form-cookies "
@@ -289,7 +289,8 @@ export default function ModalFormCookie({ id, tiempo , animar}) {
               </button>
             </div>
           </div>
-
+           
+              
           <div className=" d-flex g-0  mt-3 pb-2 justify-content-start ms-4 fuente_footer_texto_form_cookie enlinea-padre">
             <Link href="/doc/Datenschutz.pdf" className="enlinea-hijo">
               <a target="_blank" className="mylinkhoover">
