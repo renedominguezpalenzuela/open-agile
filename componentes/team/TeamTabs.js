@@ -35,6 +35,28 @@ export default function TeamTabs({
           <Tabs
             value={value}
             onChange={handleChange}
+            className="d-none d-md-block"
+            aria-label="basic tabs example"
+            centered
+            sx={styles}>
+            <Tab
+              label="Selbstorganisation und Selbstverantwortung "
+              {...a11yProps(0)}
+            />
+            <Tab label="Partnerschaftlicher Umgang " {...a11yProps(1)} />
+            <Tab label="Empowerment und Entwicklung" {...a11yProps(2)} />
+            <Tab label="Transparenz " {...a11yProps(3)} />
+            <Tab
+              label="Effizienz, Effektivität und Pragmatismus"
+              {...a11yProps(4)}
+            />
+          </Tabs>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            className="d-block d-md-none" 
+            variant="scrollable"
+            scrollButtons={false}        
             aria-label="basic tabs example"
             centered
             sx={styles}>
@@ -139,8 +161,8 @@ function OneTab({ indice, titulo, texto, value, setValue }) {
   return (
     <>
       <TabPanel value={value} index={indice} className=" alto-tab  ">
-        <div className="ps-5 ms-5  w-75  ">
-          <div className=" fuente-titulo-team-tab mt-2 mb-4   ">{titulo}</div>
+        <div className="ps-lg-5 ms-lg-5  w-lg-75  ">
+          <div className=" fuente-titulo-team-tab mt-2 mb-4">{titulo}</div>
 
           {texto != undefined &&
             texto.length > 0 &&
@@ -154,6 +176,8 @@ function OneTab({ indice, titulo, texto, value, setValue }) {
 
         <div onClick={myfuncion} className="ubicacion-boton-team">
           <img
+            height={55}
+            width={55}
             className="boton_flecha  "
             src={`${servidor_url}/img/leistungen/boton_flecha_magenta.svg`}
             alt=""
