@@ -428,6 +428,15 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  @media (max-width: 992px) {
+    .font_quiz_line1 {
+      font-size: 7.5vw!important;
+    }
+    .font_second_line3 {
+      font-size: 4.7vw!important;
+    }
+  }
   
  
 
@@ -453,7 +462,7 @@
     color: #ffffff;
   
     font-size: 1.4em;
-    font-weight: 300;
+    /* font-weight: 300; */
     /* text-transform: uppercase; */
   }
 

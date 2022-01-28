@@ -519,32 +519,6 @@ ul.no-bullets {
   border-radius: 30px;
   z-index: 3;
 }
-.my_quiz {
-  /* max-width: 330px; */
-  /* max-width: 200vw; */
-  height: 76vh !important;
-  /* display: flex; */
-
-  /* z-index: 3; */
-}
-
-.my_quiz_titulo {
-  height: 12vh !important;
-}
-
-.my_quiz_pregunta {
-  height: 8vh !important;
-}
-
-.my_quiz_respuestas {
-  height: 32vh !important;
-}
-
-.my_quiz_boton {
-  /* position: absolute; */
-
-  /* top: 100px !important; */
-}
 
 /* 
 .card {

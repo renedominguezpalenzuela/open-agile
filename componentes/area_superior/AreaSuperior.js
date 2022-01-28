@@ -25,6 +25,7 @@ si no se especifica fondo = bannermain
   quiz-questions 
   variable  ---- texto -- fondo crece en funcion del contenido
   ajustable ---- bannermain-ajustable -- fondo se redudce en funcion del contenido
+  bannermain-quiz-questions 
 
 
  */
@@ -133,7 +134,6 @@ export default function AreaSuperior({
       <div className="fond mb-5  d-lg-none">
         {(vista_movil = true)}
 
-       
         <MenuNavBar2 />
         <div className={`${getFondo(fondo)}`}>
           {/* <div className=" item-logo-movil  mt-2 ms-3 ">
@@ -183,6 +183,10 @@ export default function AreaSuperior({
 
 function getFondo(fondo, linea_obliqua) {
   let fondo_por_defecto = "bannermain";
+
+  if (fondo==="bannermain-quiz-questions") {
+     fondo_por_defecto ="bannermain-quiz-questions";
+  }
 
   if (fondo === "barco") {
     fondo_por_defecto = "bannermain-quiz";
@@ -250,8 +254,6 @@ const contenido_principal = (
   if (id != undefined) {
     id_botones_configurador = id;
   }
-
- 
 
   return (
     <>
@@ -384,16 +386,17 @@ const contenido_principal = (
         ))}
 
       {boton_inicio_quiz != undefined && boton_inicio_quiz && vista_movil && (
-        <div className="row   d-flex justify-content-center align-items-center w-100">
-        <div className="col-12 col-sm-7 col-md-5 me-md-4 ms-md-4 pb-2 ">
-        <Link href="/quiz/1">
-          <button
-            type="button"
-            className=" w-100  btn-agile-check font_boton_main-quiz redondeado-boton  ">
-            JETZT DEN AGILE CHECK MACHEN
-          </button>
-        </Link>
-        </div>
+        <div className="row pb-5  d-flex justify-content-center align-items-center ">
+          <div className="col-12 col-sm-7 col-md-5  pb-2 d-flex justify-content-center">
+           
+            <Link href="/quiz/1" className="d-flex justify-content-center ">
+              <button
+                type="button"
+                className="  btn-agile-check font_boton_main-quiz redondeado-boton  ">
+                JETZT DEN AGILE CHECK MACHEN
+              </button>
+            </Link>
+          </div>
         </div>
       )}
 
