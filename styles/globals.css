@@ -840,6 +840,15 @@ ul li.mybullets3::before {
   /* font-size:0.5rem; */
 }
 
+
+
+@media (Max-width:991px){
+  ul li.mybullets3::before {
+    width: 1.1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1.1em; /*Also needed for space (tweak if needed)-*/
+  }
+}
+
 .ocultar {
   display: none;
 }
