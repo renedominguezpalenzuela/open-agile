@@ -122,7 +122,7 @@ const {
       </Head>
 
       {/*Contenedor*/}
-      <div id="principal" className="bannermain-quiz-questions ">
+      <div id="principal" className="bannermain-quiz-questions">
         <MenuFlotanteBoton />
 
         <div className="item-logo  d-flex align-items-center justify-content-center">
