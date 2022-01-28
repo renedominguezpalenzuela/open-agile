@@ -207,7 +207,6 @@ export default function Footer() {
                       <a href="tel:+49 (0) 421 22347567">
                         <i
                           className="fa fa-phone-square fa-2x"
-                          sx={{ color: 'white' }}
                           aria-hidden="true"
                         ></i>
                       </a>

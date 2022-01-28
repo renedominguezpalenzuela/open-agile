@@ -17,7 +17,7 @@ export default function Content04({ lista_cards }) {
 
   return (
     <>
-      <section>
+      <section >
         <div
           id="blog"
           className="row justify-content-center font_title_seccion_sombra mt-3   ms-4">
