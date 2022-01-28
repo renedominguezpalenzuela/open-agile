@@ -69,7 +69,7 @@ export default function Content03Carrousel() {
             {/* <div className=" row d-flex align-item-center justify-content-center h-100  "> */}
                 
                   {datos.map((unDato, index) => (
-                    <div class={`${index === 0 ? "active" : ""} carousel-item `}>
+                    <div key={index} class={`${index === 0 ? "active" : ""} carousel-item `}>
                   
                       
                         <a href={unDato.link} aria-pressed="true" className="">
