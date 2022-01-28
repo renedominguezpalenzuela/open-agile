@@ -1,5 +1,6 @@
 import Card02 from "./Card02";
 import Card01 from "./Card01";
+import React from "react";
 
 //----------------------------------------------------------------------------------------------------------
 //            Area de Contenido: Carousel: BLOG
@@ -100,20 +101,16 @@ export default function Content05({ datos, color_fondo }) {
                               )}
                             </div>
                             <div>
-                              <div className="card-body text-center">
-                                {unDato.title.map((unTexto, index) => (
-                                  <>
+                               <div className="card-body text-center">
+                                {unDato.title.map((unTexto, index2) => (
+                                  <React.Fragment key={index2}>
                                     <div className="card-text font_card_title_vlog ">
                                       {unTexto}
                                     </div>
-                                  </>
+                                  </React.Fragment>
                                 ))}
-                                {/*                               
-                                <p className="card-text font_card_title  ">
-                                
-                                  {unDato.title}
-                                </p> */}
-                              </div>
+                            
+                              </div> 
                             </div>
                           </div>
                         </div>
