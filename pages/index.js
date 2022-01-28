@@ -8,6 +8,8 @@ import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 
 import Content02Cursos from "../components/Content02Cursos";
 import Content03 from "../components/Content03";
+import Content03Carrousel from "../components/Content03Carrousel";
+
 import Content04 from "../components/Content04";
 import Content05 from "../components/Content05";
 
@@ -92,7 +94,14 @@ export default function Home({
         <Content02Cursos cursos={cursos} main_page={true} />
 
         {/*imagen de sponsors */}
-        <Content03 />
+        <div class=" d-none  d-md-block">
+              <Content03 />
+        </div>
+
+         {/*imagen de sponsors */}
+         <div class=" d-md-none">
+            <Content03Carrousel />
+        </div>
 
         {/*Unser Blog  */}
         <Content04 lista_cards={blogs} />

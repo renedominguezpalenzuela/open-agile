@@ -3,7 +3,7 @@ export const leistungen_details = [
     id: "1",
     image: "leistungen/organisationsentwicklung.jpg",
     titulo1: ["LEISTUNGEN"],
-    titulo2: ["ORGANISATION","SENTWICKLUNG"],
+    titulo2: ["ORGANISATIONS","ENTWICKLUNG"],
     link: "leistungen/1",
 
     // "titulo2" : "ORGANISATIONSENT-",

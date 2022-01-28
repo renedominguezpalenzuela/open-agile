@@ -107,4 +107,13 @@
   }
   
   
-  
+  /* Sponsors Carrousel */
+
+  .content03Carrousel {
+    position:relative;
+    /* height: 60%; */
+    top: -9vh;
+  }
+  .altoCarrousel3 {
+    height: 50vh;
+  }
