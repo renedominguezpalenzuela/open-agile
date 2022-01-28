@@ -228,11 +228,11 @@ export default function ModalFormJob({
   return (
     <>
       {/* <!-- Modal --> */}
-      <div className="modal fade" id={`contactForm${id}`} tabIndex="-1">
-        <div className="modal-dialog">
-          <div className="modal-content">
+      <div className="modal fade pr-0" id={`contactForm${id}`} tabIndex="-1">
+        <div className="modal-dialog modal-dialog-job">
+          <div className="modal-content ancho-modal-cursos">
             <div className="modal-header">
-              <div className="row  ms-2 me-2   w-100 d-flex justify-content-start">
+              <div className="row  ms-2 me-2 w-100 d-flex justify-content-start">
                 <div className="col-4  titulo-card-crashkurse">
                   {/* <div className="row">{quartal}. Quartal</div> */}
 
@@ -336,30 +336,22 @@ export default function ModalFormJob({
                 />
               </div>
 
-              <div className="row  g-0 ms-3 mt-4  mb-2  d-flex justify-content-start  align-items-center  ">
+              <div className="row  g-0 mt-4  mb-2  d-flex flex-wrap justify-content-start">
                 {/* <input type="file" className="ocultar" id="customFile" onChange={handleChange4} />      */}
-                <input
+                {/* <input
                   type="file"
                   ref={hiddenFileInput}
                   onChange={handleChange}
                   className="ocultar"
-                />
+                /> */}
 
-                <div className="col-md-5  d-flex justify-content-start">
+                <div className="col mx-3 d-flex justify-content-between botones-jobs-516">
                   <button
                     type="button"
-                    className="btn  boton_modal_form"
+                    className="btn btn-secondary boton_modal_form"
                     onClick={handleClick}>
                     Lebenslauf hochladen
                   </button>
-                </div>
-                <div className="col-md-6 h-100  ms-2 d-flex justify-content-start  align-items-center texto-AGBS">
-                  {value4}
-                </div>
-              </div>
-
-              <div className="row  ms-3 g-0  mt-3  mb-2  d-flex justify-content-start">
-                <div className="col-md-8  d-flex justify-content-start">
                   <button
                     type="button"
                     className="btn btn-secondary boton_modal_form"
@@ -367,6 +359,24 @@ export default function ModalFormJob({
                     Jetzt Bewerbung absenden
                   </button>
                 </div>
+                <div className="row d-flex botones-jobs justify-content-center">
+                  <button
+                    type="button"
+                    className="btn btn-secondary boton_modal_form mb-3 col-10"
+                    onClick={handleClick}>
+                    Lebenslauf hochladen
+                  </button>
+                  <button
+                    type="button"
+                    className="btn btn-secondary boton_modal_form col-10"
+                    data-bs-dismiss="modal">
+                    Jetzt Bewerbung absenden
+                  </button>
+                </div>
+                {/* <div className="col-md-5 d-flex justify-content-end"></div> */}
+                {/* <div className="col-md-6 ms-2 d-flex justify-content-start align-items-center texto-AGBS">
+                  {value4}
+                </div> */}
               </div>
             </div>
           </div>

@@ -94,6 +94,15 @@
 
  }
 
+ @media (min-width:992px){
+  .ancho-modal-cursos{
+    width: 50vw!important;
+  }
+  .modal-dialog{
+    margin-left: -25vw!important;
+  }
+ }
+
  .font-title-modal{
    font-size: 3.6vw!important;
  }
