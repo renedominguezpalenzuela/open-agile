@@ -63,6 +63,7 @@ export default function Home({ servicios }) {
 
       <div id="principal" className="container-fluid g-0">
       <ModalFormCookie id={1} tiempo={10}/>
+     
       
         <AreaSuperior fondo="ajustable" texto1={titulo} titulo_largo={true} area_gris_nueva={true} />
 
