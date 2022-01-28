@@ -61,8 +61,8 @@ export default function KurseContent01({
           <ul>
         {texto_plequitas != undefined && texto_plequitas != "" && 
            texto_plequitas.map((unItem, index) => (
-            <>
-                <div  key={index} className=" ms-4    ">
+            <React.Fragment key={index}>
+                <div   className=" ms-4    ">
                      
                        {texto_plequitas.length>1?
                         <li className="fuente-texto-cursos mybullets"> {unItem}</li>
@@ -75,7 +75,7 @@ export default function KurseContent01({
                         
 
                 </div> 
-            </>
+             </React.Fragment>
           ))}
           </ul>
 

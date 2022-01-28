@@ -57,7 +57,7 @@ const titulo3="VLOG";
 const titulo4 = "";
 
 
-const  texto01 = ["“Liebe Leserinnen und Leser, hier veröffentlichen wir regelmäßig neue interessante Artikel zu den Themen New Work, Agilität, Selbstorganisation und sonstigen interessanten Neuigkeiten rund ums Thema Arbeitswelt von morgen. Unser Blog ist kein „Closed Shop”. Möchtest Du bei uns einen Artikel veröffentlichen, dann komm’ gerne auf uns zu. Wir freuen uns auf zahlreiche interessante Beiträge, die uns dabei helfen zu verstehen, wie zukünftige Modelle der Zusammenarbeit aussehen können.”"];      
+const  texto01 = ["Liebe Leserinnen und Leser, hier veröffentlichen wir regelmäßig neue interessante Artikel zu den Themen New Work, Agilität, Selbstorganisation und sonstigen interessanten Neuigkeiten rund ums Thema Arbeitswelt von morgen. Unser Blog ist kein „Closed Shop”. Möchtest Du bei uns einen Artikel veröffentlichen, dann komm’ gerne auf uns zu. Wir freuen uns auf zahlreiche interessante Beiträge, die uns dabei helfen zu verstehen, wie zukünftige Modelle der Zusammenarbeit aussehen können."];      
 
 
 

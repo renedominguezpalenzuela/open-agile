@@ -30,21 +30,20 @@ export default function MenuFlotante() {
 
 
 
-<div className="sidepanel " tabIndex="-1" id="mySidepanel"   >
+<div className="sidepanel  " tabIndex="-1" id="mySidepanel"   >
 
-  <div className="row  d-flex justify-content-end align-items-center">
+  <div className="row mt-3 mb-3 d-flex justify-content-end align-items-center">
 
 
-  {/* <div className="ms-5   titulo_menu_flotante"> */}
-    <div className="col-8   me-2 d-flex justify-content-end ">
+
+    <div className="col-9  me-2 d-flex justify-content-end  ">
      <h5 id="offcanvasTopLabel" className=" font-title-side-menu pt-2">MENU</h5>   
     </div>
-    <div className="col-2 ">
+    <div className="col-1 d-flex justify-content-end me-3 ">
      <button type="button" id="boton_cerrar_menu" className="btn-close text-reset  me-3" aria-label="Close"></button>
     </div>  
 
-    
-  {/* </div> */}
+  
 
   </div>
 
@@ -63,7 +62,7 @@ export default function MenuFlotante() {
         </li>
 
         <li>
-            <a href="/team/main" className="nav-link text-truncate">
+            <a href="/wir" className="nav-link text-truncate">
               <span className="ms-1  font-items-side-menu">TEAM</span>
             </a>
         </li>

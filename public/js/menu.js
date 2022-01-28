@@ -6,14 +6,23 @@ var color_magenta = "#e42078";
 var color_white = "#ffffff";
 var color = color_white;
 
-var boton_contacto_telefono = document.getElementById(
-  "boton_contacto_telefono"
-);
 
+
+var boton_contacto_telefono = document.getElementById("boton_contacto_telefono");
 var texto_iconos_izquierda = document.getElementById("texto_iconos_izquierda");
 var linea_iconos_izquierda = document.getElementById("linea_iconos_izquierda");
 
+
+
+var pagina = window.location.pathname;
+
+  setColor(0, pagina)
+
+
 window.addEventListener("load", (event) => {
+  
+ 
+
   if (document.getElementById("boton_cerrar_menu")) {
     document
       .getElementById("boton_cerrar_menu")
@@ -48,14 +57,14 @@ window.addEventListener("load", (event) => {
         e.preventDefault();
         e.stopPropagation();
 
-        document.getElementById("mySidepanel").style.width = "250px";
+        document.getElementById("mySidepanel").style.width = "110vw";
         document.getElementById("panel_abrir_menu").style.visibility = "hidden";
         document.getElementById("principal").classList.add("myblur");
       });
   }
 });
 
-var pagina = window.location.pathname;
+
 
 // var page = path.split("/").pop();
 
@@ -78,6 +87,8 @@ function setColor(Y, pagina) {
 
 // Main
   if (pagina === "/") {
+
+     
     if (boton_contacto_telefono != undefined) {
       if (Y < Y_Area_SuperiorEnd) {
         color = color_white;
@@ -105,30 +116,15 @@ function setColor(Y, pagina) {
      color = color_magenta;
   }
 
-  // Cursos
-  // const r = /\/crashkurse\/[a-z]*\/[0-9]/;
-  // if (r.test(pagina)) {
-    
+  // Cursos 
+  const r = /\/crashkurse\/[a-z]*\/[0-9]/;
+  if (r.test(pagina)) {
+        color = color_magenta;
+  
 
-  //      Y_Area_Superior = 66;
-  //      Y_Footer =1476; 
-
-
-  //      if (Y < Y_Area_Superior) {
-  //       color = color_magenta;
-  //     }
-
-
-  //     if (Y >= Y_Area_Superior && Y < Y_Footer) {
-  //       color = color_magenta;
-  //     }
-
-  //      if (Y >= Y_Footer) {
-  //       color = color_white;
-  //     }
    
 
-  // }
+  }
 
 
   /*   /shop    */
@@ -187,6 +183,8 @@ window.addEventListener(
       return;
     }
 
+
+    // Hide and show the hamberguer button
     if (Y < course_top) {
       contendor_boton.style.zIndex = "-1";
       boton.style.visibility = "hidden";

@@ -142,10 +142,7 @@ export default function ModalFormCursos({
     setAge(event.target.value);
   };
 
-
   const stilos_combo = {
-
-
     "& .MuiInputBase-root": {
       //Aqui arriba es el elemento base - root
       height: 45, //Ancho del edit
@@ -240,28 +237,29 @@ export default function ModalFormCursos({
     <>
       {/* <!-- Modal --> */}
       <div className="modal fade " id={`contactForm${id}`} tabIndex="-1">
-        <div className="modal-dialog  ">
+        <div className="modal-dialog  mt-md-5 mt-5 pt-4">
           <div className="modal-content ancho-modal-cursos">
             {/* Header */}
             <div className="modal-header">
-
-
-
               <div className="row   ms-2 me-2   w-100 d-flex justify-content-center">
-                <div className="col-4  titulo-card-crashkurse-new d-flex justify-content-center align-items-center">
-                  <div className="row">{titulo}</div>
+                <div className="col-md-4 col-6 titulo-card-crashkurse-new d-flex justify-content-center align-items-center">
+                  <div className="row d-none d-md-block">{titulo}</div>
+                  <div className="row font-title-modal d-block d-md-none">{titulo}</div>
                 </div>
                 {date1 != undefined &&
                   date2 != undefined &&
                   date1 != "" &&
                   date2 != "" && (
-                    <div className="col-7  subtitulo-card-crashkurse d-flex justify-content-center align-items-center ">
-                      {`${eliminar_anno(date1)} - ${date2}`}
-                    </div>
+                    <>
+                      <div className="d-none d-md-block col-7  subtitulo-card-crashkurse d-flex justify-content-center align-items-center ">
+                        {`${eliminar_anno(date1)} - ${date2}`}
+                      </div>
+                      <div className="d-block d-md-none col-7 h6 subtitulo-card-crashkurse2 d-flex justify-content-center align-items-center ">
+                        {`${eliminar_anno(date1)} - ${date2}`}
+                      </div>
+                    </>
                   )}
               </div>
-
-              
 
               <button
                 type="button"
@@ -274,7 +272,7 @@ export default function ModalFormCursos({
 
             <div className="modal-body color-body-modal ">
               <div className="row  g-0 ">
-                <div className="col-6 ">
+                <div className="col-12 col-md-6 ">
                   <div className="row d-flex  ps-3 pe-3 justify-content-start titulo-modal ">
                     {/* {frase} */}
                     Deine persönlichen Infos
@@ -300,7 +298,6 @@ export default function ModalFormCursos({
                       InputLabelProps={fuentes2}
                     />
                   </div>
-
 
                   <div className="row d-flex justify-content-start ps-3 mt-2 pe-3  ">
                     <TextField
@@ -379,7 +376,7 @@ export default function ModalFormCursos({
 
                   <div className="row d-flex justify-content-start texto-AGBS  ps-3 pe-3 ">
                     Ich bin mit den AGBs und der Übermittlung meiner Daten zur
-                    internen Verarbeitung der Open Agile GmbH einverstanden
+                    internen Verarbeitung der Open Agile GmbH einverstanden.
                   </div>
 
                   <div className="row d-flex justify-content-start ps-3 pe-3 mt-1">
@@ -414,21 +411,22 @@ export default function ModalFormCursos({
                       id="combo-box-demo"
                       options={opciones_combo_box}
                       sx={stilos_combo}
-                      
                       renderInput={(params) => (
-                        <TextField {...params} label="Woher kennst du uns?" InputLabelProps={fuentes2}
-                      />
+                        <TextField
+                          {...params}
+                          label="Woher kennst du uns?"
+                          InputLabelProps={fuentes2}
+                        />
                       )}
                     />
                   </div>
                 </div>
 
-                <div className="col-6 ">
-                  
-                  <div className="row d-flex  ps-3 pe-3 justify-content-start titulo-modal  ">
+                <div className="col-md-6 col-12">
+                  <div className="row d-flex pt-md-0 pt-4 ps-3 pe-3 justify-content-start titulo-modal  ">
                     Deine Rechnungsadresse
                   </div>
-                                                            
+
                   <div className="row d-flex justify-content-start ps-3 mt-2 pe-3  ">
                     <TextField
                       id="outlined-multiline-flexible"
@@ -501,18 +499,18 @@ export default function ModalFormCursos({
                     </div>
                     <div className="col-10  d-flex justify-content-start">
                       <div className="row  pt-2  pb-2 ">
-                        <div className="col-12  titulo_curso   ">
+                        <div className="col-12  texto-AGBS  ">
                           {nombre_curso}
                         </div>
-                        <div className="col-12 titulo_curso   ">{precio}</div>
+                        <div className="col-12 texto-AGBS   ">{precio}</div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="row  d-flex justify-content-end  pe-3 mb-2">
-                <div className="col-3">
+              <div className="row d-flex justify-content-end mt-4 pe-3 mb-2">
+                <div className="col-md-6 col-lg-4">
                   <button
                     type="button"
                     className="btn btn-secondary boton_modal_form"

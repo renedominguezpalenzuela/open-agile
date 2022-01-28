@@ -60,12 +60,12 @@
   /* selector-locked: false; */
   text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
 }
-/* 
-@media (max-width: 767px) {
+
+@media (max-width: 992px) {
   .font_title_formulario {
-    font_title_formulario: 1.8em;
+    font-size: 4.5vw;
   }
-} */
+}
 
 .font_title_secundario_formulario {
   font-family: Montserrat-SemiBoldItalic;
@@ -84,12 +84,13 @@
   /* selector-locked: false; */
   text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
 }
-/* 
-@media (max-width: 767px) {
+
+@media (max-width: 992px) {
   .font_title_secundario_formulario {
-      font-size: 1.5em;
+      padding-top: 2px;
+      font-size: 4vw;
   }
-} */
+}
 
 
 .bannerformulario {
@@ -103,7 +104,6 @@
   /*  gap: 1vw;  row-gap: 1em; */
 
   background-image: url("/img/form/form-back.jpg");
-
   background-size: 100% 100%;
   height: 90vh;
   /* max-height: 100vh; */
@@ -113,6 +113,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background-position: 100% 57%; */
+}
+
+@media (max-width:767px) {
+  .bannerformulario{
+    background-size: 140% 100%!important;
+    background-position: center;
+  }
 }
 
 @media (min-height: 1900px) {
@@ -201,6 +208,10 @@
   height: 41px !important;
 }
 
+.item-check .css-ahj2mt-MuiTypography-root {
+ text-align: center;
+}
+
 @media (max-width: 991px) {
   .bannerformulario {
     grid-template-columns: 15% 70% 15%;
@@ -208,12 +219,12 @@
   }
 
   .item-titulo1-formulario {
-    grid-column: 2/3;
+    grid-column: 1/4;
     grid-row: 2/3;
   }
 
   .item-titulo2-formulario {
-    grid-column: 2/3;
+    grid-column: 1/4;
     grid-row: 3/4;
     justify-self: center;
     align-self: flex-start;
@@ -261,6 +272,14 @@
 @media (max-width: 400px) {
   
   .ancho-boton {
-    width: 35vw !important;
+    width: 42vw !important;
+  }
+}
+
+
+
+@media (min-width:401px) and (max-width:579px){
+  .ancho-boton {
+    width: 30vw !important;
   }
 }

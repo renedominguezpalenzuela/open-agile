@@ -1,75 +1,53 @@
-
 /* Style the button that is used to open the sidepanel */
 
 #boton_abrir_menu {
-    visibility: hidden;
-  }
+  visibility: hidden;
+}
+
+.boton_abrir_menu {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
   
-  .boton_abrir_menu {
-      font-size: 20px;
-      cursor: pointer;
-      background-color: #111;
-      color: white;
-      padding: 10px 15px;
-      border: none;
-     
-    }
+}
 
-
-    
 /*Menu lateral  */
- /* The sidepanel menu */
- .sidepanel {
+/* The sidepanel menu */
+.sidepanel {
+  width: 0px;
+  height: 100%;
+  position: fixed;
+  z-index: 110;
+  top: 0;
+  right: 0;
 
- 
-    
-    width: 0px;
-         height: 100%;
-    position: fixed;
-    z-index: 110; 
-    top: 0;
-    right: 0; 
-   
-   overflow-x: hidden; /* Disable horizontal scroll */
-   overflow-y: hidden;/* Disable horizontal scroll*/
-    padding-top: 10px; /* Place content 60px from the top */
-    transition: 0.3s; /*0.5 second transition effect to slide in the sidepanel*/
-    clip-path: polygon(36% 0, 100% 0%, 100% 100%, 61% 100%);
-    /* clip-path: polygon(0 0, 100% 0, 76% 100%, 0% 100%); */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  overflow-y: hidden; /* Disable horizontal scroll*/
+  padding-top: 10px; /* Place content 60px from the top */
+  transition: 0.3s; /*0.5 second transition effect to slide in the sidepanel*/
+  clip-path: polygon(36% 0, 100% 0%, 100% 100%, 61% 100%);
 
-    /* right: -300px;  */
-   
-                       
-    
-    background-color: white!important;
-   
-  }
-
-  .titulo_menu_flotante {
-    width: 200px;
-  }
-  /* 
+  background-color: white !important;
+}
 
 
-  
-  
-  
-  
-  
-  /* When you mouse over the navigation links, change their color */
-  .sidepanel a:hover {
-    color: #f1f1f1;
-  }
-  
-  
-  
-  .boton_abrir_menu:hover {
-    background-color: #444;
-  } 
-  
-  
-  .myblur{
-    filter: blur(2px);
-    /* transform: scale(0.95); */
-     /* transition: 0.5s;   */
-    }
+.titulo_menu_flotante {
+  /* width: 200px; */
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+  /* color: #f1f1f1; */
+}
+
+.boton_abrir_menu:hover {
+  background-color: #444;
+}
+
+.myblur {
+  filter: blur(2px);
+  /* transform: scale(0.95); */
+  /* transition: 0.5s;   */
+}

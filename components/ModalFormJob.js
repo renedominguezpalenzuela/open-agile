@@ -359,7 +359,7 @@ export default function ModalFormJob({
               </div>
 
               <div className="row  ms-3 g-0  mt-3  mb-2  d-flex justify-content-start">
-                <div className="col-md-8  border-dark d-flex justify-content-start">
+                <div className="col-md-8  d-flex justify-content-start">
                   <button
                     type="button"
                     className="btn btn-secondary boton_modal_form"

@@ -17,15 +17,15 @@ import Content01TextSinIcons from "./Content01TextSinIcons";
 
 import FormularioContacto2 from "../../components/formulariocontacto2";
 
-
-
 // fondo --- define el tipo de fondo del area superior
 /*
 si no se especifica fondo = bannermain
 
   barco   --- se pone el fondo con un barco "bannermain-quiz";
+  quiz-questions 
   variable  ---- texto -- fondo crece en funcion del contenido
   ajustable ---- bannermain-ajustable -- fondo se redudce en funcion del contenido
+  bannermain-quiz-questions 
 
 
  */
@@ -58,7 +58,8 @@ export default function AreaSuperior({
   linkedin,
   area_gris_nueva,
 
-  botones_contacto
+  botones_contacto,
+  linea_obliqua,
 }) {
   let vista_movil = false;
 
@@ -68,7 +69,7 @@ export default function AreaSuperior({
       <div className=" d-none d-lg-block">
         {(vista_movil = false)}
 
-        <div className={`${getFondo(fondo)} `}>
+        <div className={`${getFondo(fondo, linea_obliqua)} `}>
           {area_gris_nueva != undefined && area_gris_nueva != false && (
             <div className="linea_lateral_inferior item-fondo "> </div>
           )}
@@ -124,26 +125,25 @@ export default function AreaSuperior({
               />
             </div>
           )}
-
-         
         </div>
 
         <IconosIzquierda />
       </div>
 
       {/* --------------------Vista movil Mostrar si menor a lg<992px  ----------------------------------------*/}
-      <div className=" mb-5  d-lg-none">
+      <div className="fond mb-5  d-lg-none">
         {(vista_movil = true)}
+
         <MenuNavBar2 />
         <div className={`${getFondo(fondo)}`}>
-          <div className=" item-logo-movil  mt-2 ms-3 ">
+          {/* <div className=" item-logo-movil  mt-2 ms-3 ">
             <a className=" " href="/">
               <img
-                className=" size-logo-movil "
+                className="size-logo-movil "
                 src={`${servidor_url}/img/logo/5.svg`}
               />
             </a>
-          </div>
+          </div> */}
 
           <div className="item-titulo   ">
             {/* Contenido Principal */}
@@ -181,11 +181,19 @@ export default function AreaSuperior({
 
 // --------------Funciones ----------------------------------------------------------------
 
-function getFondo(fondo) {
+function getFondo(fondo, linea_obliqua) {
   let fondo_por_defecto = "bannermain";
+
+  if (fondo==="bannermain-quiz-questions") {
+     fondo_por_defecto ="bannermain-quiz-questions";
+  }
 
   if (fondo === "barco") {
     fondo_por_defecto = "bannermain-quiz";
+  }
+
+  if (fondo === "quiz-questions") {
+    fondo_por_defecto = "bannermain-quiz-questions";
   }
 
   //varia con el contenido crece, el contenido es texto grande
@@ -201,6 +209,10 @@ function getFondo(fondo) {
 
   if (fondo === "team") {
     fondo_por_defecto = "bannermain-team";
+  }
+
+  if (linea_obliqua) {
+    fondo_por_defecto = fondo_por_defecto + " linea-obliqua ";
   }
 
   return fondo_por_defecto;
@@ -231,10 +243,6 @@ const contenido_principal = (
   linkedin,
   botones_contacto
 ) => {
-
-
-   
-
   let id = -1;
 
   if (botones_configurador != undefined) {
@@ -253,7 +261,7 @@ const contenido_principal = (
       {((texto1 != undefined && texto1 != "") ||
         (texto2 != undefined && texto2 != "")) && (
         <>
-          <div className=" g-0  ms-5  ">
+          <div className={`${vista_movil ? "g-0" : "g-0  ms-5"}`}>
             <Content01TextSinIcons
               texto1={texto1}
               texto2={texto2}
@@ -265,14 +273,11 @@ const contenido_principal = (
               botones_contacto={botones_contacto}
               team={iconos_team}
             />
-              
           </div>
         </>
       )}
 
       <div className="mb-5">
-
-    
         {iconos != undefined && iconos && <Content01Iconos />}
 
         {/*Texto_quiz_result */}
@@ -307,7 +312,7 @@ const contenido_principal = (
           texto_parrafo_blanco_cursos.length > 0 && (
             <>
               {/* mostrar solo en pantalla grande - espacio con el titulo mt-*/}
-              <div className="row font_smaller_letter_white_cursos ms-5 mt-3 me-5 justificar margen_superior">
+              <div className="row font_smaller_letter_white_cursos ms-4 me-0 ms-md-5 mt-3 me-md-5 justificar margen_superior">
                 {texto_parrafo_blanco_cursos.map((unaLinea, index) => (
                   <p key={index}>{unaLinea}</p>
                 ))}
@@ -319,12 +324,12 @@ const contenido_principal = (
           texto_parrafo_blanco_team.length > 0 && (
             <>
               {/* mostrar solo en pantalla grande - espacio con el titulo mt-*/}
-              <div className="row font_smaller_letter_white_cursos ms-5 mt-3 me-3    texto_parrafo_blanco_team">
+              <div className="row font_smaller_letter_white_cursos ms-md-5 mt-3  me-md-5    texto_parrafo_blanco_team">
                 {texto_parrafo_blanco_team.map((unaLinea, index) => (
                   <div key={index}>{unaLinea} </div>
                 ))}
               </div>
-              <p/>
+              <p />
             </>
           )}
 
@@ -344,7 +349,6 @@ const contenido_principal = (
           )}
 
         {iconos_team != undefined && iconos_team && (
-
           <IconosTeam email={email} phone={phone} linkedin={linkedin} />
         )}
 
@@ -381,42 +385,33 @@ const contenido_principal = (
           </div>
         ))}
 
-      {boton_inicio_quiz != undefined && boton_inicio_quiz && (
-        <div className="row mt-5 text-center mb-4 d-flex  justify-content-center ">
-          <Link href="/quiz/1">
-            <button
-              type="button"
-              className="btn p-3 ms-2 me-2 w-50 h-100 btn-card font-btn-card rounded-pill  ">
-              JETZT CHECK STARTEN
-            </button>
-          </Link>
+      {boton_inicio_quiz != undefined && boton_inicio_quiz && vista_movil && (
+        <div className="row pb-5  d-flex justify-content-center align-items-center ">
+          <div className="col-12 col-sm-7 col-md-5  pb-2 d-flex justify-content-center">
+           
+            <Link href="/quiz/1" className="d-flex justify-content-center ">
+              <button
+                type="button"
+                className="  btn-agile-check font_boton_main-quiz redondeado-boton  ">
+                JETZT DEN AGILE CHECK MACHEN
+              </button>
+            </Link>
+          </div>
         </div>
       )}
 
-      
-          {botones_contacto != undefined &&
-            botones_contacto && (
-           fn_botones_contacto()
-             
-            
-            )}
-
-              
-       
+      {botones_contacto != undefined &&
+        botones_contacto &&
+        fn_botones_contacto()}
     </>
   );
 };
-
-
-
 
 const fn_botones_contacto = () => {
   return (
     <>
       <div className="row d-flex justify-content-center ">
-        <div className="col-md-5  ">
-          
-
+        <div className="col-md-5 mb-5 ">
           <a href="#" className="d-flex justify-content-center ">
             {/*  btn-outline-primary font_boton  */}
             <button
@@ -429,17 +424,18 @@ const fn_botones_contacto = () => {
           </a>
         </div>
         <div className="col-md-5  ">
-          <a href="tel:+49 (0) 421 22347567" className="d-flex justify-content-center ">
+          <a
+            href="tel:+49 (0) 421 22347567"
+            className="d-flex justify-content-center ">
             {/*  btn-outline-primary font_boton  */}
-            <button type="button" className=" btn-leinstungen-magenta rounded-pill   ">
+            <button
+              type="button"
+              className=" btn-leinstungen-magenta rounded-pill   ">
               JETZT ANRUFEN
             </button>
           </a>
         </div>
       </div>
-
-   
     </>
   );
 };
-

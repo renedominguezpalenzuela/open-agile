@@ -2,8 +2,10 @@ export const blog_details = [
   {
     id: "1",
     title: "BUCHEMPFEHLUNGEN",
-    titulo2: "“EINE OPEN AGILE AUSWAHL”",
+    titulo1:["BUCH","EMPFEHLUNGEN"],
+    titulo2: ["“EINE OPEN AGILE AUSWAHL”"],
     image: "blogs/blog_buchempfehlungen.png",
+    link:"blog/1",
     autor: "",
     fecha: "",
     autor: "Andreas Eilers",
@@ -24,7 +26,7 @@ export const blog_details = [
           "Selbstorganisierte Unternehmen - Kaltenecker, Siegfried",
           "Selbstorganisation braucht Führung - Gloger, Boris",
           "Netzwerk schlägt Hierarchie - Brandes-Visbeck, Christiane & Gensinger",
-           "Netzwerke – Bensmann, Dieter",
+          "Netzwerke – Bensmann, Dieter",
           "Erfolg ohne Chef – Plüger, Gernot",
           "Hierarchielos führen – Moser, Michaela",
           "Hierarchie. Das Ende eines Erfolgsrezepts – Frei, Felix",
@@ -50,7 +52,6 @@ export const blog_details = [
           "Impro-Theater – List, Volker",
         ],
       },
-      
     ],
     link_anterior: "/blog/3",
     link_anterior_nombre: "BUCHVERÖFFENTLICHUNG",
@@ -65,7 +66,9 @@ export const blog_details = [
   {
     id: "2",
     title: "WORKHACKS",
-    titulo2: "“WORKHACKS SIND EINE REVOLUTION. EINE LEISE REVOLUTION.”",
+    titulo1: ["WORKHACKS"],
+    titulo2:[ "“WORKHACKS SIND EINE REVOLUTION. EINE LEISE REVOLUTION.”"],
+    link:"blog/2",
     image: "blogs/blog_workhacks.png",
     autor: "",
     fecha: "",
@@ -108,7 +111,9 @@ export const blog_details = [
   {
     id: "3",
     title: "BUCHVERÖFFENTLICHUNG",
-    titulo2: "“CRASHKURS SELBSTORGANISATION IN AGILEN TEAMS”",
+    titulo1:["BUCH","VERÖFFENTLICHUNG"],
+    titulo2: ["“CRASHKURS SELBSTORGANISATION IN AGILEN TEAMS”"],
+    link:"blog/3",
     image: "blogs/blog_buchveröffentlichung.png",
     autor: "Andreas Eilers",
     fecha: "14.01.2022",
@@ -117,15 +122,14 @@ export const blog_details = [
       {
         tipo: "parrafo",
         text: [
-            "Viele Beschäftigte machen Dienst nach Vorschrift oder haben bereits innerlich gekündigt. Das liegt allerdings nicht an ihrer Tätigkeit, für die man sie aufgrund ihrer Stärken einmal eingestellt hat, sondern an den veralteten und starren Strukturen, die seit dem Industriezeitalter niemand mehr angefasst hat.",
+          "Viele Beschäftigte machen Dienst nach Vorschrift oder haben bereits innerlich gekündigt. Das liegt allerdings nicht an ihrer Tätigkeit, für die man sie aufgrund ihrer Stärken einmal eingestellt hat, sondern an den veralteten und starren Strukturen, die seit dem Industriezeitalter niemand mehr angefasst hat.",
           "Mit veralteten, starren Strukturen meine ich die zahlreichen Auslaufmodelle, wie z.B. starre Hierarchien, in denen Vorgesetzte keine guten Argumente benötigen, sondern einfach qua Amt die Marschrichtung vorgeben. Damit meine ich aber auch antike Arbeitszeitmodelle oder unsinnige Vorgaben „wo“ und „wie“ Mitarbeitende zu arbeiten haben.",
           "Ich bin der Meinung, dass Menschen grundsätzlich selbst am besten Wissen wie, wo und wann sie am produktivsten sind. Was müssen wir also tun, um im Zeitalter der Digitalisierung alle Beschäftigten gleichermaßen für innovative Ideen gewinnen zu können?",
           "Die Lösung ist eine flexiblere und dynamischere Zusammenarbeit. Diese ergibt sich durch mehr Handlungsspielraum für alle Mitarbeitenden und eine größere Eigenständigkeit. Kurz gesagt: durch Selbstorganisation.",
           "In meinem Buch beschreibe ich neben den zahlreichen Gründen für die Selbstorganisation einen konkreten Fahrplan zu einer Organisation, die Euch wieder Mitdenken lässt. Dazu beschreibe ich die Architektur selbstorganisierter Teams, wie diese z.B. selbstständig Entscheidungen treffen, welches Mindset dafür wichtig ist, welche neuen Rollen gebraucht werden oder wie sie Konflikte wertschätzend und auf Augenhöhe lösen können.",
-          "Darüber hinaus stelle ich 20 bereits bewährte Workhacks vor. Das sind einfache agile Methoden, die Teams schnell und flexibel einsetzen, um besser, effizienter oder einfach menschlicher zusammenzuarbeiten.  "
+          "Darüber hinaus stelle ich 20 bereits bewährte Workhacks vor. Das sind einfache agile Methoden, die Teams schnell und flexibel einsetzen, um besser, effizienter oder einfach menschlicher zusammenzuarbeiten.  ",
         ],
       },
-      
     ],
     link_anterior: "/blog/2",
     link_anterior_nombre: "WORKHACKS",

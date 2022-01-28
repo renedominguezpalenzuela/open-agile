@@ -14,7 +14,6 @@ import Texto01 from "../../components/crashkurse/texto01";
 import Tabla01 from "../../components/crashkurse/tabla01";
 import Tabla02 from "../../components/crashkurse/tabla02";
 
-
 import Card01Lista from "../../components/Card01Lista";
 import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
 
@@ -30,8 +29,6 @@ import Logo from "../../componentes/area_superior/Logo";
 import BotonAgileCheck from "../../componentes/area_superior/BotonAgileCheck";
 import Titulo from "../../componentes/area_superior/Titulo";
 
-
-
 import * as React from "react";
 
 import Radio from "@mui/material/Radio";
@@ -41,17 +38,18 @@ import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import Checkbox from "@mui/material/Checkbox";
 
-
-
 const styles = {
   ".MuiFormControlLabel-label": {
     textAlign: "justify",
     fontSize: "0.9rem",
-    color: "white"
+    color: "white",
   },
 };
 
- const stylesCuadrado = { color: "#ffffff",  "&.Mui-checked": {color: "#e42078",  }};
+const stylesCuadrado = {
+  color: "#ffffff",
+  "&.Mui-checked": { color: "#e42078" },
+};
 
 function replaceItemAtIndex(arr, index, newValue) {
   return [...arr.slice(0, index), newValue, ...arr.slice(index + 1)];
@@ -66,9 +64,8 @@ const ancho_preguntas = (preguntas) => {
     }
   });
 
-  let otras_clase = "  w75";
+  let otras_clase = "";
 
- 
   if (ancho_maximo >= 150) {
     return "col-10" + otras_clase;
   } else if (ancho_maximo >= 70 && ancho_maximo < 150) {
@@ -94,7 +91,7 @@ export default function Home({ quiz, todas_preguntas }) {
   const router = useRouter();
   const { id } = router.query;
 
-const {
+  const {
     titulo,
     number,
     question,
@@ -104,12 +101,7 @@ const {
     prior_link,
   } = quiz;
 
-
- const total_preguntas  =todas_preguntas.length; 
-
-
-
- 
+  const total_preguntas = todas_preguntas.length;
 
   return (
     <>
@@ -122,32 +114,49 @@ const {
       </Head>
 
       {/*Contenedor*/}
-      <div id="principal" className="bannermain-quiz">
-        <MenuFlotanteBoton />
 
-        <div className="item-logo  d-flex align-items-center justify-content-center">
-          <Logo />
+      <div class=" d-none  d-md-block">
+        <div id="principal" className="bannermain-quiz-questions ">
+          <MenuFlotanteBoton />
+          <div className="item-logo  d-flex align-items-center justify-content-center">
+            <Logo />
+          </div>
+
+          <div className="item-menu  d-flex align-items-center justify-content-center">
+            <MenuNavBar />
+          </div>
+
+          <div className="item-boton d-flex align-items-center justify-content-center">
+            <BotonAgileCheck />
+          </div>
+          {/* </div> */}
+
+          <Content01andMenuWithQuestions
+            id={id}
+            question={question}
+            answers={answers}
+            titulo={titulo}
+            next_link={next_link}
+            total_questions={total_preguntas}
+          />
         </div>
 
-        {/*    <div className="row d-none d-lg-block "> */}
-        <div className="item-menu  d-flex align-items-center justify-content-center">
-          <MenuNavBar />
-        </div>
-
-        <div className="item-boton d-flex align-items-center justify-content-center">
-          <BotonAgileCheck />
-        </div>
-
-        {/*Area superior  */}
-
-        <Content01andMenuWithQuestions id={id} question={question} answers={answers} titulo={titulo} next_link={next_link} total_questions={total_preguntas} />
-
-        {/*Footer  */}
-        {/*  <Footer />   */}
+        <MenuFlotante />
       </div>
 
-      {/*Menu Lateral oculto  */}
-      <MenuFlotante />
+      <div class="  d-md-none">
+        <div id="principal" className=" ">
+        
+          <Content01andMenuWithQuestions
+            id={id}
+            question={question}
+            answers={answers}
+            titulo={titulo}
+            next_link={next_link}
+            total_questions={total_preguntas}
+          />
+        </div>
+      </div>
     </>
   );
 }
@@ -156,35 +165,28 @@ export const getServerSideProps = async (context) => {
   const { id } = context.query;
   const url = `${servidor_url}/api/quiz/${encodeURIComponent(id)}`;
   const res = await fetch(url);
-const quiz = await res.json();
+  const quiz = await res.json();
 
   const url2 = `${servidor_url}/api/quiz`;
   const res2 = await fetch(url2);
 
-
   const todas_preguntas = await res2.json();
-
-
-  
 
   return {
     props: {
       quiz,
-      todas_preguntas
+      todas_preguntas,
     },
   };
 };
 
-
-
-
- function Content01andMenuWithQuestions({
+function Content01andMenuWithQuestions({
   id,
   question,
   answers,
   titulo,
   next_link,
-  total_questions
+  total_questions,
 }) {
   const cambio_respuesta = (event, id) => {
     let respuesta_usuario = event.target.value;
@@ -240,95 +242,163 @@ const quiz = await res.json();
     setChecked4(false);
   }, [router.asPath]);
 
+
+  const checkboxes=()=>{
+    return( <>
+    
+     <div className="row   d-flex justify-content-start">
+                <FormControlLabel
+                  className="p-1"
+                  sx={styles}
+                  control={
+                    <Checkbox
+                      checked={checked1}
+                      value="1"
+                      color="primary"
+                      onChange={handleChange1}
+                      sx={stylesCuadrado}
+                    />
+                  }
+                  label={answers[0].answer}
+                />
+              </div>
+              <div className="row   d-flex justify-content-start">
+                <FormControlLabel
+                  className="p-1"
+                  sx={styles}
+                  control={
+                    <Checkbox
+                      checked={checked2}
+                      value="2"
+                      color="primary"
+                      onChange={handleChange2}
+                      sx={stylesCuadrado}
+                    />
+                  }
+                  label={answers[1].answer}
+                />
+              </div>
+              <div className="row  d-flex justify-content-start">
+                <FormControlLabel
+                  className="p-1"
+                  sx={styles}
+                  control={
+                    <Checkbox
+                      checked={checked3}
+                      value="3"
+                      color="primary"
+                      onChange={handleChange3}
+                      sx={stylesCuadrado}
+                    />
+                  }
+                  label={answers[2].answer}
+                />
+              </div>
+              <div className="row  d-flex justify-content-start">
+                <FormControlLabel
+                  className="p-1"
+                  sx={styles}
+                  control={
+                    <Checkbox
+                      checked={checked4}
+                      value="4"
+                      color="primary"
+                      onChange={handleChange4}
+                      sx={stylesCuadrado}
+                    />
+                  }
+                  label={answers[3].answer}
+                />
+              </div>
+    </>)
+  }
+
   return (
     <>
-      {/* Fila root de todos los elementos */}
-   
-      {/* <div className="bannermain-quiz "> */}
-        
+      {/* -------------- Desktop  ---------------------------------------------------*/}
 
-
-          <div className="  item-titulo my_quiz ">
-          
-            <div className="row  g-0  my_quiz_titulo  ">
-              {titulo != undefined && titulo != "" && (
-                <div className="row  text-center mt-3  ">
-                  <h3 className="font_quiz_line1  "> {titulo}</h3>
-                </div>
-              )}
+      <div className="  item-titulo my_quiz d-none  d-md-block ">
+        <div className="row  g-0  my_quiz_titulo  ">
+          {titulo != undefined && titulo != "" && (
+            <div className="row  text-center mt-3  ">
+              <h3 className="font_quiz_line1  "> {titulo}</h3>
             </div>
+          )}
+        </div>
 
-          
-            <div className="row  g-0  my_quiz_pregunta ">
-              {question != undefined && question != "" && (
-                <div className="row  text-center   ">
-                  <h6 className="font_second_line3  "> {question}</h6>
-                </div>
-              )}
+        <div className="row  g-0  my_quiz_pregunta ">
+          {question != undefined && question != "" && (
+            <div className="row  text-center   ">
+              <h6 className="font_second_line3  "> {question}</h6>
             </div>
+          )}
+        </div>
 
-            <div className="row text-center mt-2 my_quiz_respuestas w-100  ">
-             
-              <div
-                id="altcontainer"
-                className="row   d-flex align-items-start justify-content-center">
-                <div className={ancho_preguntas(answers)}>
-                  <div className="row   d-flex justify-content-start">
-                    <FormControlLabel className="p-1" sx={styles} control={
-                        <Checkbox checked={checked1} value="1" color="primary" onChange={handleChange1} sx={stylesCuadrado }
-                        />
-                      } label={answers[0].answer}
-                    />
-                  </div>
-                  <div className="row   d-flex justify-content-start">
-                     <FormControlLabel className="p-1" sx={styles} control={
-                        <Checkbox checked={checked2} value="2" color="primary" onChange={handleChange2} sx={stylesCuadrado }
-                        />
-                      } label={answers[1].answer}
-                    />
-                  </div>
-                  <div className="row  d-flex justify-content-start">
-                     <FormControlLabel className="p-1" sx={styles} control={
-                        <Checkbox checked={checked3} value="3" color="primary" onChange={handleChange3} sx={stylesCuadrado }
-                        />
-                      } label={answers[2].answer}
-                    />
-                  </div>
-                  <div className="row  d-flex justify-content-staendrt">
-                    <FormControlLabel className="p-1" sx={styles} control={
-                        <Checkbox checked={checked4} value="4" color="primary" onChange={handleChange4} sx={stylesCuadrado }
-                        />
-                      } label={answers[3].answer}
-                    />
-                  </div>
-                </div>
-              </div>
+        <div className="row text-center mt-5 my_quiz_respuestas w-100  ">
+          <div id="altcontainer"  className="row   d-flex align-items-start justify-content-center ">
+            <div className={ancho_preguntas(answers)}>
+             {checkboxes()}
             </div>
+          </div>
+        </div>
+
+        <div className="row text-center mt-4  d-flex  justify-content-center texto_total_preguntas">
+          {id} / {total_questions}
+        </div>
+
+        <div className="row text-center mt-3  my_quiz_boton ">
+          <div className="row  text-center   d-flex  justify-content-center   ">
+            <Link href={`${next_link}`} className=" d-flex align-items-start ">
+              <button
+                type="button"
+                className=" btn  ms-2 me-2 w-25 mb-5    btn-card font-btn-card rounded-pill  ">
+                Next
+              </button>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* -------------- MOBIL ------------------------------------ */}
+      <div class="  d-md-none bannermain-quiz-questions-mobile">
+        <div className="  my_quiz_titulo-mobile  ">
+          {titulo != undefined && titulo != "" && (
+            <h3 className="font_quiz_line1  "> {titulo}</h3>
+          )}
+        </div>
+
+        <div className=" my_quiz_pregunta-mobile ">
+          {question != undefined && question != "" && (          
+              <h6 className="font_second_line3 text-center "> {question}</h6>         
+          )}
+        </div>
+
+        <div className="  my_quiz_respuestas-mobile ">
+          {checkboxes()}
+        </div> 
+
+         <div className=" text-center texto_total_preguntas my_quiz_total_preguntas-mobile">
+          {id} / {total_questions}
+        </div>
 
 
-              <div className="row text-center mt-4  d-flex  justify-content-center texto_total_preguntas">
-               {id} / {total_questions}
-              </div>
-
-            <div className="row text-center pb-4 my_quiz_boton ">
-            
-              <div className="row  text-center mt-2 mb-4 d-flex  justify-content-center   ">
-                <Link href={`${next_link}`} className=" d-flex align-items-start ">
-                  <button
-                    type="button"
-                    className=" btn p-3 ms-2 me-2 w-25 mb-5    btn-card font-btn-card rounded-pill  ">
-                    Next
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </div> 
+          <div className=" my_quiz_boton-mobile ">
+         
+            <Link href={`${next_link}`} className=" d-flex align-items-start ">
+              <button
+                type="button"
+                className=" btn     btn-card font-btn-card rounded-pill  ">
+                Next
+              </button>
+            </Link>
+         
+        </div>
 
 
-          
-      {/* </div> */}
 
-      
+      </div>
     </>
   );
 }
+
+

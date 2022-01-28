@@ -2,7 +2,11 @@ export const crashkurse_beschreibung_details = [
     {
         "id": "1",
         "titulo_area_superior": "CRASHKURS ZUM AGILE COACH",
+        "titulo1":["CRASHKURS"],
+        "titulo2":["AGILE COACH"],
         "nombre_curso": "Crashkurs zum Agile Coach",
+        "image": "crashkurse/image1.jpg",
+        "link": "crashkurse/beschreibung/1",
         "image_beschreibung": "crashkurse/image1.jpg",
         "image_vorteile": "crashkurse/image3.jpg",
         "image_inhalte": "crashkurse/image4.jpg",
@@ -105,8 +109,12 @@ export const crashkurse_beschreibung_details = [
     }, {
         "id": "2",
         "titulo_area_superior": "CRASHKURS ZUM AGILE FACILITATOR",
+        "titulo1":["CRASHKURS"],
+        "titulo2":["AGILE FACILITATOR"],
         "nombre_curso": "Crashkurs zum Agile Facilitator",
-        "image_beschreibung": "crashkurse/image1.jpg",
+        "image": "crashkurse/image2.jpg",
+        "link": "crashkurse/beschreibung/2",
+        "image_beschreibung": "crashkurse/image2.jpg",
         "image_inhalte": "crashkurse/image4.jpg",
         "image2": "crashkurse/notes.jpg",
         "image_vorteile": "crashkurse/image3.jpg",
@@ -210,8 +218,12 @@ export const crashkurse_beschreibung_details = [
     }, {
         "id": "3",
         "titulo_area_superior": "CRASHKURS ZUM SCRUM MASTER",
+        "titulo1":["CRASHKURS"],
+        "titulo2":["SCRUM MASTER"],
         "nombre_curso": "Crashkurs zum Scrum Master",
-        "image_beschreibung": "crashkurse/image1.jpg",
+        "image_beschreibung": "crashkurse/image3.jpg",
+        "link": "crashkurse/beschreibung/3",
+        "image": "crashkurse/image3.jpg",
         "image_vorteile": "crashkurse/image3.jpg",
         "image_inhalte": "crashkurse/image4.jpg",
         "image2": "crashkurse/notes.jpg",
@@ -313,8 +325,12 @@ export const crashkurse_beschreibung_details = [
     }, {
         "id": "4",
         "titulo_area_superior": "CRASHKURS MITBESTIMMUNG IN DER AGILEN ARBEITSWELT",
+        "titulo1":["CRASHKURS"],
+        "titulo2":["MITBESTIMMUNG IN DER AGILEN ARBEITSWELT"],
         "nombre_curso": "Crashkurs Mitbestimmung in der agilen Arbeitswelt",
         "image_beschreibung": "crashkurse/image7.jpg",
+        "link": "crashkurse/beschreibung/4",
+        "image": "crashkurse/image7.jpg",
         "image_vorteile": "crashkurse/image3.jpg",
         "image_inhalte": "crashkurse/image4.jpg",
         "image2": "crashkurse/notes.jpg",
@@ -322,7 +338,7 @@ export const crashkurse_beschreibung_details = [
             "Durch die Entwicklung von Unternehmen, hin zu flexiblen und agilen Organisatione" +
                     "n, verändert sich viel.",
             "Doch was bedeutet das für die Mitbestimmung? Welche Chancen ergeben sich und wie" +
-                    " lässt sich Mitbestimmung und Veränderung verbinden?.",
+                    " lässt sich Mitbestimmung und Veränderung verbinden?",
             "Hierbei berichten wir nicht nur aus der Theorie, sondern teilen mit Euch unsere " +
                     "gemachten positiven als auch negativen Erlebnisse, die wir als Betriebsräte auf " +
                     "dem Weg zu einer agilen Netzwerkorganisation gesammelt haben."
@@ -330,12 +346,11 @@ export const crashkurse_beschreibung_details = [
         "texto_vorteile": [
             "In unserem 2-tägigen Crashkurs wirst Du lernen die agile Arbeitswelt besser zu v" +
                     "erstehen.",
-            "Du wirst in der Lage sein agilen Arbeitsmethoden sinnvoll im Gremium und in Dein" +
+            "Du wirst in der Lage sein agile Arbeitsmethoden sinnvoll im Gremium und in Dein" +
                     "em Team zu nutzen.",
             "Das hybride Konzept ermöglicht Dir von überall auf der Welt an dem Crashkurs tei" +
-                    "lzunehmen.",
-            "Selbstverständlich auch vor Ort in unserer schönen Hansestadt Bremen.Mit konkret" +
-                    "en Beispielen aus der Beratungspraxis mit Personal- und Betriebsräten geben wir " +
+                    "lzunehmen. Selbstverständlich auch vor Ort in unserer schönen Hansestadt Bremen.",
+            "Mit konkreten Beispielen aus der Beratungspraxis mit Personal- und Betriebsräten geben wir " +
                     "Dir einen tiefen, aber dennoch verständlichen Einblick in die PR/BR-Arbeit von a" +
                     "gilen Netzwerkorganisationen."
         ],
@@ -345,24 +360,18 @@ export const crashkurse_beschreibung_details = [
                 "text": [
                     "Organisationsformen im Überblick",
                     "Werte und Prinzipien im agilen Kontext",
-                    "Überblick über die Architektur von",
-                    "selbstorganisierten Teams",
-                    "Agile Arbeitsmethoden in Gremien sinnvoll",
-                    "nutzen",
+                    "Überblick über die Architektur von selbstorganisierten Teams",
+                    "Agile Arbeitsmethoden in Gremien sinnvoll nutzen",
                     "Vor- und Nachteile agiler Vorgehensweisen"
                 ]
             }, {
                 "title": "Mitbestimmung in agilen Organisationen",
                 "text": [
                     "Blick ins Betriebsverfassungsgesetz",
-                    "HR vs. PR/BR – Herausforderungen positiv",
-                    "bewältigen",
-                    "Häufige Fallstricke und Lösungsansätze im",
-                    "Bereich Mitbestimmung in der agilen",
-                    "Arbeitswelt",
+                    "HR vs. PR/BR – Herausforderungen positiv bewältigen",
+                    "Häufige Fallstricke und Lösungsansätze im Bereich Mitbestimmung in der agilen Arbeitswelt",
                     "Mindset in der Personalvertretung",
-                    "Chancen im Transformationsprozess",
-                    "erkennen und nutzen "
+                    "Chancen im Transformationsprozess erkennen und nutzen "
                 ]
             }
 
@@ -416,8 +425,12 @@ export const crashkurse_beschreibung_details = [
     }, {
         "id": "5",
         "titulo_area_superior": "ONLINE CRASHKURS SELBSTORGANISATION IN AGILEN TEAMS",
+        "titulo1":["ONLINE CRASHKURS"],
+        "titulo2":["SELBST","ORGANISATION","IN AGILEN TEAMS"],
         "nombre_curso": "Online Crashkurs Selbstorganisation in agilen Teams",
         "image_beschreibung": "crashkurse/image8.jpg",
+        "link": "crashkurse/beschreibung/5",
+        "image": "crashkurse/image8.jpg",
         "image_vorteile": "crashkurse/image3.jpg",
         "image_inhalte": "crashkurse/image4.jpg",
         "image2": "crashkurse/notes.jpg",

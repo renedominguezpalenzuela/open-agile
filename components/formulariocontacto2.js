@@ -17,8 +17,6 @@ export default function FormularioContacto2() {
 
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
-  
-
   // const styles2 = (theme) => ({
   //   multilineColor: {
   //     color: "red",
@@ -31,8 +29,6 @@ export default function FormularioContacto2() {
 
   const styles = {
     width: { sm: 250, md: 350 },
-
-  
 
     "& .MuiInputBase-root": {
       height: 42,
@@ -50,23 +46,20 @@ export default function FormularioContacto2() {
     },
 
     "& .MuiFormLabel-root": {
-      color: "#ffffff"                  //Color del label
-    }
-    
+      color: "#ffffff", //Color del label
+    },
   };
 
-
-const fuentes1 = {
-    style: { //fontSize: 11
-    fontSize: 10 ,
-     textAlign: "left", ///Text Align
-        letterSpacing: "0.06vw", //espaciado de letras luego d escribir
-        color: "#ffffff",
-        fontFamily: "Montserrat-Light"
-    
-     },
+  const fuentes1 = {
+    style: {
+      //fontSize: 11
+      fontSize: 10,
+      textAlign: "left", ///Text Align
+      letterSpacing: "0.06vw", //espaciado de letras luego d escribir
+      color: "#ffffff",
+      fontFamily: "Montserrat-Light",
+    },
   };
-
 
   const fuentes = {
     style: { fontSize: 10 },
@@ -74,7 +67,7 @@ const fuentes1 = {
 
   const styles3 = {
     ".MuiFormControlLabel-label": {
-        fontFamily: "Montserrat-Regular",
+      fontFamily: "Montserrat-Regular",
       fontSize: 12,
       color: "#ffffff",
     },
@@ -83,91 +76,75 @@ const fuentes1 = {
   const stylesCuadrado = {
     color: "#ffffff",
     "&.Mui-checked": { color: "#e42078" },
-
-    
   };
 
   const stiloTexto = {
-
-    
-    "MuiFormControlLabel-root":{
+    "MuiFormControlLabel-root": {
       fontSize: 100,
-     
-     "& .MuiFormControlLabel-label": {
-     
+
+      "& .MuiFormControlLabel-label": {
         color: "#ffffff",
-     }
-    }
-  }
+      },
+    },
+  };
 
   return (
     <>
       {/* Mostrar si es mayor que LG */}
-   
-        <div className="  bannerformulario">
-       
-          <div className="font_title_formulario  item-titulo1-formulario">
-            LASS UNS IN KONTAKT BLEIBEN
-          </div>
-          <div className="font_title_secundario_formulario  item-titulo2-formulario">
-            OPEN AGILE NEWSLETTER
-          </div>
-          <div className="group item-edit1  ">
-            <TextField
-              id="name"
-              label="Name eingeben"
-              className="ancho-edit"
-              variant="outlined"
-              sx={styles}
-               inputProps={fuentes1}
-              InputLabelProps={fuentes}
-            />
-          </div>
-          <div className="group item-edit2 ">
-            <TextField
-              id="name"
-              label="E-Mail eingeben"
-              className="ancho-edit"
-              variant="outlined"
-              sx={styles}
-              inputProps={fuentes1}
-              InputLabelProps={fuentes}
-            />
-          </div>{" "}
-          
-          <div className="group  item-boton1  ">
-            <button
-              type="button"
-              className="btn boton_formulario ancho-boton alto-boton">
-              ANMELDEN
-            </button>
-          </div>
-          <div className="group  item-check  ">
-            <FormControlLabel
-              sx={styles3}
-              className="p-1 color_magenta"
-              control={
-                <Checkbox
-                  checked={checked1}
-                  value="1"
-                  color="primary"
-                  sx={stylesCuadrado}
-                  onChange={handleChange1}
-                />
-              }
-              label="Ja, ich bin mit den AGBs des Newsletters einverstanden"
-          
 
-
-            />
-
-
-          </div>
-        
+      <div className="bannerformulario">
+        <div className="font_title_formulario  item-titulo1-formulario ">
+          LASS UNS IN KONTAKT BLEIBEN
+        </div>
+        <div className="font_title_secundario_formulario  item-titulo2-formulario">
+          OPEN AGILE NEWSLETTER
+        </div>
+        <div className="group item-edit1  ">
+          <TextField
+            id="name"
+            label="Name eingeben"
+            className="ancho-edit"
+            variant="outlined"
+            sx={styles}
+            inputProps={fuentes1}
+            InputLabelProps={fuentes}
+          />
+        </div>
+        <div className="group item-edit2 ">
+          <TextField
+            id="name"
+            label="E-Mail eingeben"
+            className="ancho-edit"
+            variant="outlined"
+            sx={styles}
+            inputProps={fuentes1}
+            InputLabelProps={fuentes}
+          />
+        </div>{" "}
+        <div className="group  item-boton1  ">
+          <button
+            type="button"
+            className="btn boton_formulario ancho-boton alto-boton">
+            ANMELDEN
+          </button>
+        </div>
+        <div className="group  item-check">
+          <FormControlLabel
+            sx={styles3}
+            className="p-1 color_magenta"
+            control={
+              <Checkbox
+                checked={checked1}
+                value="1"
+                color="primary"
+                sx={stylesCuadrado}
+                onChange={handleChange1}
+              />
+            }
+            label="Ja, ich bin mit den AGBs des Newsletters einverstanden"
+          />
+        </div>
       </div>
-
-   
-
     </>
   );
 }
