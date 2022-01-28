@@ -64,7 +64,7 @@ export default function Home({ servicios }) {
       <div id="principal" className="container-fluid g-0">
       <ModalFormCookie id={1} tiempo={10}/>
      
-      
+      <MenuFlotanteBoton />
         <AreaSuperior fondo="ajustable" texto1={titulo} titulo_largo={true} area_gris_nueva={true} />
 
         <div className="  mt-5 pb-3 alto-leistungen-tab-contenedor  ">
