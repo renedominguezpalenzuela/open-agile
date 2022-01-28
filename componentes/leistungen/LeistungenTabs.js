@@ -189,7 +189,8 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
                 </div>
               </div>
             </div>
-            <div className="ubicacion-boton" onClick={() => myfuncion(0)}>
+          </div>
+          <div className="ubicacion-boton" onClick={() => myfuncion(0)}>
               <img
                 className="boton_flecha "
                 width={45}
@@ -198,7 +199,6 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
                 alt=""
               />
             </div>
-          </div>
         </TabPanel>
       </Box>
 
