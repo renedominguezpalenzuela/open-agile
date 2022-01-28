@@ -128,7 +128,7 @@ export default function FormularioContacto2() {
             ANMELDEN
           </button>
         </div>
-        <div className="group  item-check">
+        <div className="group  item-check ">
           <FormControlLabel
             sx={styles3}
             className="p-1 color_magenta"

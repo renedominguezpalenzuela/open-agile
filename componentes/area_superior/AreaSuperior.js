@@ -392,7 +392,7 @@ const contenido_principal = (
             <Link href="/quiz/1" className="d-flex justify-content-center ">
               <button
                 type="button"
-                className="  btn-agile-check font_boton_main-quiz redondeado-boton  ">
+                className="w-100  btn-agile-check2 font_boton_main-quiz redondeado-boton  ">
                 JETZT DEN AGILE CHECK MACHEN
               </button>
             </Link>
