@@ -1,30 +1,30 @@
-import Head from "next/head";
-import Image from "next/image";
-import { useRouter } from "next/router";
-import Link from "next/link";
+import Head from 'next/head'
+import Image from 'next/image'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 
-import React from "react";
+import React from 'react'
 
-import MenuFlotante from "../../components/MenuFlotante";
-import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
-import Footer from "../../components/Footer";
+import MenuFlotante from '../../components/MenuFlotante'
+import MenuFlotanteBoton from '../../components/MenuFlotanteBoton'
+import Footer from '../../components/Footer'
 
-import TextoBloque01 from "../../components/textobloque01";
-import TextoSimple from "../../components/textosimple";
+import TextoBloque01 from '../../components/textobloque01'
+import TextoSimple from '../../components/textosimple'
 
 // import MenuSuperior from "../components/MenuSuperior";
 
-import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
+import AreaSuperior from '../../componentes/area_superior/AreaSuperior'
 
-import { servidor_url } from "../../config";
+import { servidor_url } from '../../config'
 
 //----------------------------------------------------------------------------------------------------------
 //            Pagina inicial principal
 //----------------------------------------------------------------------------------------------------------
 
 export default function Home({ team }) {
-  const router = useRouter();
-  const { id } = router.query;
+  const router = useRouter()
+  const { id } = router.query
 
   const {
     image,
@@ -41,14 +41,14 @@ export default function Home({ team }) {
     weiterbildungen,
     imageround,
     cargo,
-  } = team;
+  } = team
 
-  let foto2 = servidor_url + "/img/" + image;
+  let foto2 = servidor_url + '/img/' + image
 
   return (
     <>
       <Head>
-        <title>{"Wir"}</title>
+        <title>{'Wir'}</title>
         <meta name="description" content="Wir" />
         <link rel="icon" href="/favicon.ico" />
         <script async src={`${servidor_url}/js/chat.js`} />
@@ -73,13 +73,13 @@ export default function Home({ team }) {
           linea_obliqua={true}
         />
 
-        {title3 != undefined && title3 != "" && (
+        {title3 != undefined && title3 != '' && (
           <div className="row mt-5 mb-5 text-center  ">
-            <h3 className="font_titulo_team  "> {title3} </h3>
+            <h3 className="nombre_team"> {title3} </h3>
           </div>
         )}
 
-        {erfahrung != undefined && erfahrung != "" && (
+        {erfahrung != undefined && erfahrung != '' && (
           <>
             <div className="row d-flex justify-content-center">
               <div className="col-9 col-md-6  font_weiterbildungen">
@@ -105,7 +105,7 @@ export default function Home({ team }) {
           </>
         )}
 
-        {weiterbildungen != undefined && weiterbildungen != "" && (
+        {weiterbildungen != undefined && weiterbildungen != '' && (
           <>
             <div className="row mt-5 d-flex justify-content-center">
               <div className="col-md-6 col-9  font_weiterbildungen">
@@ -135,21 +135,28 @@ export default function Home({ team }) {
         <div className="row mt-5 mb-5 d-flex justify-content-center  ">
           <div className="col-md-6 col-9 mt-2">
             <div className="font_texto_inferior_team  ">
-              {" "}
-              {`“seit 2021 bei Open Agile”`}{" "}
+              {' '}
+              {`“seit 2021 bei Open Agile”`}{' '}
             </div>
           </div>
         </div>
 
         <div className="row pb-3  fondo_team_seccion">
           <div className="col-4   d-flex justify-content-center align-items-center ">
-            <img  className="  pt-4 pb-4 imagen-team" src={`${servidor_url}/img/${imageround}`} />
+            <img
+              className="  pt-4 pb-4 imagen-team"
+              src={`${servidor_url}/img/${imageround}`}
+            />
           </div>
 
           {/* "col {} mt-5 pt-5 " */}
-          <div className={`col-7  ${motto.length >= 2 ? "mt-1" : "mt-5"}  pt-5 pb-2 me-3 h-100 `}>
+          <div
+            className={`col-7  ${
+              motto.length >= 2 ? 'mt-1' : 'mt-5'
+            }  pt-5 pb-2 me-3 h-100 `}
+          >
             {motto.map((unMotto, index) => (
-              <div  key={index}  className="row   pe-3 me-3  font_motto_team  ">
+              <div key={index} className="row   pe-3 me-3  font_motto_team  ">
                 {unMotto}
               </div>
             ))}
@@ -171,19 +178,19 @@ export default function Home({ team }) {
       {/*Menu Lateral oculto  */}
       <MenuFlotante />
     </>
-  );
+  )
 }
 
 export const getServerSideProps = async (context) => {
-  const { id } = context.query;
-  const url = `${servidor_url}/api/team/${encodeURIComponent(id)}`;
-  const res = await fetch(url);
+  const { id } = context.query
+  const url = `${servidor_url}/api/team/${encodeURIComponent(id)}`
+  const res = await fetch(url)
 
-  const team = await res.json();
+  const team = await res.json()
 
   return {
     props: {
       team,
     },
-  };
-};
+  }
+}
