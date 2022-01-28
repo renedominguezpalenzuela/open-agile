@@ -90,11 +90,11 @@
   .bannermain-quiz {
     grid-template-rows: 15% auto;
   }
-
+/* 
   .item-titulo {
     grid-column: 1/4 !important;
-    grid-row: 1/2 !important;
-  }
+    grid-row: 2/3 !important;
+  } */
 
   /*   
 .my_quiz_respuestas {
