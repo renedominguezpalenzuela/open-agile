@@ -146,7 +146,7 @@ flex-direction: column; /*added*/
 
 @media  (max-height:600px){
   .contenedor_video {
-    top: -4.5vh;
+    top: -5.3vh;
   }
 }
 
