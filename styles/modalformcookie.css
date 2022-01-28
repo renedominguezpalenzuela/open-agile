@@ -124,6 +124,12 @@
     color:#24325a   ;
   }
 
+  @media (max-width:767px){
+    .fuente_footer_texto_form_cookie{
+      font-size: 2.5vw!important;
+      
+    }
+  }
   
   .fuente_switch_form_cookie{
     font-family: Montserrat-Regular;

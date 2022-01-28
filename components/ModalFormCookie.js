@@ -291,7 +291,7 @@ export default function ModalFormCookie({ id, tiempo , animar}) {
           </div>
            
               
-          <div className=" d-flex g-0  mt-3 pb-2 justify-content-start ms-4 fuente_footer_texto_form_cookie enlinea-padre">
+          <div className=" d-flex g-0  mt-3 pb-2 justify-content-md-start justify-content-center ms-md-4 fuente_footer_texto_form_cookie enlinea-padre">
             <Link href="/doc/Datenschutz.pdf" className="enlinea-hijo">
               <a target="_blank" className="mylinkhoover">
                 Datenschutz
