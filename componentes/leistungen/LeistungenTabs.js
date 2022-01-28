@@ -188,7 +188,7 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
         frase="Jetzt Kontakt aufnehmen!"
         id={1}
       />
-      {/* <ModalForm  id={1} quartal={1} titulo={"title"} frase="Jetzt anmelden!" date1={"01.01.2022"} date2={"01.02.2022"} day={""} link={""} /> */}
+      
     </>
   );
 }
