@@ -928,6 +928,54 @@ ul li.mybullets3::before {
   position: relative;
 }
 
+@media(max-width:992px) and (min-width:900px){
+  .alto-leistungen-tab-contenedor {
+
+
+    height: 590px!important;
+  }
+}
+
+@media(max-width:899px) and (min-width:730px){
+  .alto-leistungen-tab-contenedor{
+
+
+    height: 600px!important;
+  }
+}
+
+@media(max-width:729px) and (min-width:570px){
+  .alto-leistungen-tab-contenedor{
+
+
+    height: 680px!important;
+  }
+}
+
+@media(max-width:569px) and (min-width:500px){
+  .alto-leistungen-tab-contenedor{
+
+
+    height: 720px!important;
+  }
+}
+
+@media(max-width:499px) and (min-width:450px){
+  .alto-leistungen-tab-contenedor{
+
+
+    height: 800px!important;
+  }
+}
+
+
+@media(max-width:449px){
+  .alto-leistungen-tab-contenedor{
+
+
+    height: 880px!important;
+  }
+}
 
 
 .alto-team-tab-contenedor {
@@ -1002,8 +1050,8 @@ ul li.mybullets3::before {
 
 .ubicacion-boton {
   position: absolute;
-  bottom: 60px;
-  left: 140px;
+  bottom: 10vh;
+  left: 10vw;
 }
 
 .ubicacion-boton-team {

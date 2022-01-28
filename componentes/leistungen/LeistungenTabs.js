@@ -56,10 +56,24 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
   return (
     <>
       <Box className="" sx={{ width: "100%" , height:"90%"}}>
-        <Box>
+      <Box>
           <Tabs
             value={value}
             onChange={handleChange}
+            className="d-none d-md-block"
+            scrollButtons={true}
+            aria-label="basic tabs example"
+            centered>
+            <Tab label={`01. ${titulo}`} {...a11yProps(0)} />
+            <Tab label="02. BEISPIEL VORGEHEN" {...a11yProps(1)} />
+            <Tab label="03. KONTAKT AUFNEHMEN" {...a11yProps(2)} />
+          </Tabs>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            className="d-block d-md-none" 
+            variant="scrollable"
+            scrollButtons={false}        
             aria-label="basic tabs example"
             centered>
             <Tab label={`01. ${titulo}`} {...a11yProps(0)} />
@@ -69,8 +83,8 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
         </Box>
 
         <TabPanel value={value} index={0} className="alto-tab  ">
-          <div className="ps-5 ms-5 row w-50   ">
-          <div className=" fuente-titulo-servicios mt-2 mb-4   ">
+          <div className="ps-md-5 ps-2 ms-md-5 ms-2 pe-2 row w-100 w-md-50">
+          <div className=" fuente-titulo-servicios mt-2 mb-4  text-center text-md-left">
             {titulo}
           </div>
 
@@ -89,17 +103,19 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
         </div>
 
           <div className="ubicacion-boton" onClick={() => myfuncion(1)}>
-            <img
-              className="boton_flecha"
-              src={`${servidor_url}/img/leistungen/boton_flecha_magenta.svg`}
-              alt=""
-            />
+          <img
+                className="boton_flecha "
+                width={45}
+                height={45}
+                src={`${servidor_url}/img/leistungen/boton_flecha_magenta.svg`}
+                alt=""
+              />
           </div>
         </TabPanel>
 
         <TabPanel value={value} index={1} className=" alto-tab  ">
-          <div className="ps-5 ms-5  w-50  ">
-            <div className=" fuente-titulo-servicios mt-2 mb-4   ">
+          <div className="ps-md-5 ps-2 ms-md-5 ms-2 pe-2 row w-100 w-md-50">
+            <div className=" fuente-titulo-servicios mt-2 mb-4  text-center text-md-left ">
               BEISPIEL VORGEHEN
             </div>
             <ul>
@@ -115,18 +131,20 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
           </div>
 
           <div className="ubicacion-boton " onClick={() => myfuncion(2)}>
-            <img
-              className="boton_flecha  "
-              src={`${servidor_url}/img/leistungen/boton_flecha_magenta.svg`}
-              alt=""
-            />
+          <img
+                className="boton_flecha "
+                width={45}
+                height={45}
+                src={`${servidor_url}/img/leistungen/boton_flecha_magenta.svg`}
+                alt=""
+              />
           </div>
         </TabPanel>
 
         <TabPanel value={value} index={2} className=" alto-tab">
-          <div className="ps-5 ms-5 mb-5 row w-100 h-100  ">
-            <div className="col-6   fuente-texto-cursos ">
-              <div className=" fuente-titulo-servicios mt-2 mb-4   ">
+        <div className="ps-md-5  ms-md-5  row w-100">
+            <div className="col-md-5 col-lg-6 fuente-texto-cursos ">
+              <div className=" fuente-titulo-servicios mt-2 mb-4  text-center text-md-left">
                 KONTAKT AUFNEHMEN
               </div>
 
@@ -141,18 +159,18 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
               </p>
             </div>
 
-            <div className="col-5    d-flex  align-items-start">
-              <div className="row ms-5 ps-3">
-                <div className="col-12  ">
-                  <div className=" fuente-titulo-servicios mt-2 mb-4   ">
+            <div className="col-md-6 col-lg-5 d-flex align-items-start">
+              <div className="row ms-md-3 ps-md-3 ms-lg-5 ps-lg-3 ">
+                <div className="col-12">
+                  <div className=" fuente-titulo-servicios mt-2 mb-4 ">
                     &nbsp;
                   </div>
 
-                  <a href="#">
+                  <a href="#" className="mx-auto d-flex justify-content-center justify-content-md-start">
                     {/*  btn-outline-primary font_boton  */}
                     <button
                       type="button"
-                      className=" btn-leinstungen rounded-pill"
+                      className=" btn-leinstungen rounded-pill "
                       data-bs-toggle="modal"
                       data-bs-target={"#contactForm1"}>
                       KONTAKTFORMULAR
@@ -160,7 +178,7 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
                   </a>
                 </div>
                 <div className="col-12 mt-4">
-                  <a href="tel:+49 (0) 421 22347567">
+                  <a href="tel:+49 (0) 421 22347567" className="mx-auto d-flex justify-content-center justify-content-md-start">
                     {/*  btn-outline-primary font_boton  */}
                     <button
                       type="button"
@@ -171,14 +189,15 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="ubicacion-boton" onClick={() => myfuncion(0)}>
-            <img
-              className="boton_flecha  "
-              src={`${servidor_url}/img/leistungen/boton_flecha_magenta.svg`}
-              alt=""
-            />
+            <div className="ubicacion-boton" onClick={() => myfuncion(0)}>
+              <img
+                className="boton_flecha "
+                width={45}
+                height={45}
+                src={`${servidor_url}/img/leistungen/boton_flecha_magenta.svg`}
+                alt=""
+              />
+            </div>
           </div>
         </TabPanel>
       </Box>
