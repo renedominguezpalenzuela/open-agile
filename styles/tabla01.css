@@ -186,6 +186,15 @@
 
   }
 
+  @media (max-width:762px){
+    .titulo1-tabla3-01{
+      font-size: 5.5vw!important;
+    }
+    .titulo1-tabla3-02{
+      font-size: 4vw!important;
+    }
+  }
+
   .titulo1-tabla3-02 {
    
     font-size: 2.5vw;
