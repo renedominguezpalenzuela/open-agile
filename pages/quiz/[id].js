@@ -369,7 +369,7 @@ function Content01andMenuWithQuestions({
 
         <div className=" my_quiz_pregunta-mobile ">
           {question != undefined && question != "" && (          
-              <h6 className="font_second_line3 text-center "> {question}</h6>         
+              <div className="font_second_line3 text-center "> {question}</div>         
           )}
         </div>
 
