@@ -1,10 +1,10 @@
 // Footer
 
-import { servidor_url } from "../config";
-import Link from "next/link";
+import { servidor_url } from '../config'
+import Link from 'next/link'
 
-import FormularioContacto2 from "./formulariocontacto2";
-import Content01Iconos from "../componentes/area_superior/Content01Iconos";
+import FormularioContacto2 from './formulariocontacto2'
+import Content01Iconos from '../componentes/area_superior/Content01Iconos'
 
 export default function Footer() {
   return (
@@ -36,7 +36,8 @@ export default function Footer() {
                   <div className="row font_facit_text_very_small-kontack ">
                     <a
                       className=" mylinkhoover "
-                      href="tel:+49 (0) 421 22347567">
+                      href="tel:+49 (0) 421 22347567"
+                    >
                       +49 (0) 421 22347567
                     </a>
                   </div>
@@ -44,7 +45,8 @@ export default function Footer() {
                   <div className="row font_facit_text_very_small-kontack ">
                     <a
                       className="mylinkhoover "
-                      href="mailto:kontakt@open-agile.de">
+                      href="mailto:kontakt@open-agile.de"
+                    >
                       kontakt@open-agile.de
                     </a>
                   </div>
@@ -66,21 +68,24 @@ export default function Footer() {
                 <div>
                   <a
                     className="color-font-dropdown mylinkhoover"
-                    href="/leistungen/1">
+                    href="/leistungen/1"
+                  >
                     Organisationsentwicklung
                   </a>
                 </div>
                 <div>
                   <a
                     className="color-font-dropdown mylinkhoover"
-                    href="/leistungen/2">
+                    href="/leistungen/2"
+                  >
                     Inhouse Training
                   </a>
                 </div>
                 <div>
                   <a
                     className="color-font-dropdown mylinkhoover"
-                    href="/leistungen/3">
+                    href="/leistungen/3"
+                  >
                     Coaching
                   </a>
                 </div>
@@ -93,39 +98,44 @@ export default function Footer() {
                 <div>
                   <a
                     className="color-font-dropdown mylinkhoover"
-                    href="/crashkurse/beschreibung/1">
-                    Crashkurs zum Agile Coach{" "}
+                    href="/crashkurse/beschreibung/1"
+                  >
+                    Crashkurs zum Agile Coach{' '}
                   </a>
                 </div>
                 <div>
                   <a
                     className="color-font-dropdown mylinkhoover"
-                    href="/crashkurse/beschreibung/2">
-                    Crashkurs zum Agile Facilitator{" "}
-                  </a>
-                </div>
-
-                <div>
-                  <a
-                    className="color-font-dropdown mylinkhoover"
-                    href="/crashkurse/beschreibung/3">
-                    Crashkurs zum Scrum Master{" "}
+                    href="/crashkurse/beschreibung/2"
+                  >
+                    Crashkurs zum Agile Facilitator{' '}
                   </a>
                 </div>
 
                 <div>
                   <a
                     className="color-font-dropdown mylinkhoover"
-                    href="/crashkurse/beschreibung/4">
-                    Crashkurs Mitbestimmung in der agilen Arbeitswelt{" "}
+                    href="/crashkurse/beschreibung/3"
+                  >
+                    Crashkurs zum Scrum Master{' '}
                   </a>
                 </div>
 
                 <div>
                   <a
                     className="color-font-dropdown mylinkhoover"
-                    href="/crashkurse/beschreibung/5">
-                    Online Crashkurs Selbstorganisation in agilen Teams{" "}
+                    href="/crashkurse/beschreibung/4"
+                  >
+                    Crashkurs Mitbestimmung in der agilen Arbeitswelt{' '}
+                  </a>
+                </div>
+
+                <div>
+                  <a
+                    className="color-font-dropdown mylinkhoover"
+                    href="/crashkurse/beschreibung/5"
+                  >
+                    Online Crashkurs Selbstorganisation in agilen Teams{' '}
                   </a>
                 </div>
               </div>
@@ -191,14 +201,28 @@ export default function Footer() {
           <div id="rowfoot05" className="row g-3 ps-5 me-3 ms-3 pe-5 pb-3">
             <div className="col">
               <div className="row g-0 ">
-                <div className="col d-flex justify-content-center">
-                  <a href="\">
-                    <img
-                      className="img-fluid logo-img-footer2 size-logo-movil"
-                      src={`${servidor_url}/img/logo/5.svg`}
-                    />
-                  </a>
+                <div className="col-12 d-flex pb-2 g-0 justify-content-center">
+                  <div className="row justify-content-center g-4">
+                    <div className="col-6 p-2">
+                      <a href="tel:+49 (0) 421 22347567">
+                        <i
+                          className="fa fa-phone-square fa-2x"
+                          sx={{ color: 'white' }}
+                          aria-hidden="true"
+                        ></i>
+                      </a>
+                    </div>
+                    <div className="col-6 p-2">
+                      <a href="mailto:kontakt@open-agile.de">
+                        <i
+                          className="fa fa-envelope-square fa-2x "
+                          aria-hidden="true"
+                        ></i>
+                      </a>
+                    </div>
+                  </div>
                 </div>
+                <div className="row d-flex  linea_blanca_footer g-0 mb-2"></div>
               </div>
             </div>
             <div className="col-12 d-flex pb-3 g-0 justify-content-center">
@@ -226,5 +250,5 @@ export default function Footer() {
         </div>
       </footer>
     </>
-  );
+  )
 }
