@@ -68,12 +68,6 @@ export default function Home({
         <title>OPEN AGILE</title>
         <meta name="description" content="OPEN AGILE" />
         <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="stylesheet"
-          href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-          integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-          crossorigin="anonymous"
-        ></link>
         <script async src="js/chat.js" />
         <script async src="js/menu.js" />
       </Head>

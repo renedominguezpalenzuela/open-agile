@@ -2,7 +2,9 @@
 
 import { servidor_url } from '../config'
 import Link from 'next/link'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons'
+import { faPhoneSquare } from '@fortawesome/free-solid-svg-icons'
 import FormularioContacto2 from './formulariocontacto2'
 import Content01Iconos from '../componentes/area_superior/Content01Iconos'
 
@@ -205,18 +207,18 @@ export default function Footer() {
                   <div className="row justify-content-center g-4">
                     <div className="col-6 p-2">
                       <a href="tel:+49 (0) 421 22347567">
-                        <i
-                          className="fa fa-phone-square fa-2x"
-                          aria-hidden="true"
-                        ></i>
+                        <FontAwesomeIcon
+                          icon={faPhoneSquare}
+                          className="iconos-contact"
+                        />
                       </a>
                     </div>
                     <div className="col-6 p-2">
                       <a href="mailto:kontakt@open-agile.de">
-                        <i
-                          className="fa fa-envelope-square fa-2x "
-                          aria-hidden="true"
-                        ></i>
+                        <FontAwesomeIcon
+                          icon={faEnvelopeSquare}
+                          className="iconos-contact"
+                        />
                       </a>
                     </div>
                   </div>
