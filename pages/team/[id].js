@@ -141,28 +141,20 @@ export default function Home({ team }) {
           </div>
         </div>
 
-        <div className="row h-100  fondo_team_seccion">
-          <div className="col-3 d-flex justify-content-center ">
-            <img
-              className="img-fluid  pt-4 pb-4 imagen-team"
-              src={`${servidor_url}/img/${imageround}`}
-            />
+        <div className="row pb-3  fondo_team_seccion">
+          <div className="col-4   d-flex justify-content-center align-items-center ">
+            <img  className="  pt-4 pb-4 imagen-team" src={`${servidor_url}/img/${imageround}`} />
           </div>
 
           {/* "col {} mt-5 pt-5 " */}
-          <div
-            className={`col  ${
-              motto.length >= 2 ? "mt-1" : "mt-5"
-            }  pt-5 pb-3`}>
+          <div className={`col-7  ${motto.length >= 2 ? "mt-1" : "mt-5"}  pt-5 pb-2 me-3 h-100 `}>
             {motto.map((unMotto, index) => (
-              <div
-                key={index}
-                className="row  ms-4 me-5 pe-4  font_motto_team  ">
+              <div  key={index}  className="row   pe-3 me-3  font_motto_team  ">
                 {unMotto}
               </div>
             ))}
 
-            <div className="   mt-3  horizontal-line "></div>
+            <div className=" row  mt-3 me-5  horizontal-line "></div>
 
             <div className=" row  mt-3 font_title1-team-seccion ">
               {motto_author}

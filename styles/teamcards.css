@@ -222,6 +222,7 @@ div.horizontal-line {
   /* width: fit-content; Line width */
   background-color: #243a78; /* Line color */
   height: 2px; /* Override in-line if you want specific height. */
+  
 }
 
 .font_weiterbildungen {
@@ -320,16 +321,21 @@ div.horizontal-line {
   text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
 }
 
+
+.imagen-team{
+  /* width: 52px!important; */
+  width: 24vw!important;
+  /* height: 30px!important; */
+} 
+
+
 @media (max-width: 400px) {
   .font-items-side-menu {
     font-size: 1.8rem;
     line-height: 2rem;
   }
 
-  .imagen-team{
-    min-width: 100px!important;
-    min-height: 140px!important;
-  }
+ 
 
    @media (max-width:517px){
     .font_title1-team-seccion{
