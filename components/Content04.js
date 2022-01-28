@@ -10,6 +10,11 @@ import React from "react";
 //----------------------------------------------------------------------------------------------------------
 
 export default function Content04({ lista_cards }) {
+
+
+  
+
+
   return (
     <>
       <section>
@@ -27,12 +32,13 @@ export default function Content04({ lista_cards }) {
             <React.Fragment key={unCard.id}>
               {/* Vista movil  */}
               <div className="col-md-4 g-5 d-md-none">
+                
                 <Card01
                   id={unCard.id}
                   imagen={unCard.image}
-                  titulo={unCard.title}
+                  titulo={unCard.titulo1}
                   texto={unCard.titulo2}
-                  link={"blog"}
+                  link={unCard.link}
                 />
               </div>
               {/* Vista normal  */}
@@ -42,7 +48,7 @@ export default function Content04({ lista_cards }) {
                   imagen={unCard.image}
                   titulo={unCard.title}
                   titulo2={unCard.titulo2}
-                  link={`blog/${unCard.id}`}
+                 link={unCard.link}
                 />
               </div>
             </React.Fragment>

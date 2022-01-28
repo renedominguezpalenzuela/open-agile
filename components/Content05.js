@@ -101,18 +101,18 @@ export default function Content05({ datos, color_fondo }) {
                             </div>
                             <div>
                               <div className="card-body text-center">
+                                {unDato.title.map((unTexto, index) => (
+                                  <>
+                                    <div className="card-text font_card_title_vlog ">
+                                      {unTexto}
+                                    </div>
+                                  </>
+                                ))}
+                                {/*                               
                                 <p className="card-text font_card_title  ">
+                                
                                   {unDato.title}
-                                </p>
-                                {/* <div className="card-footer-my-card text-center pb-4  ">
-                                  <a href="/">
-                                    <button
-                                      type="button"
-                                      className="btn  ms-2 me-2 w-75 h-100 btn-card font-btn-card rounded-pill  ">
-                                      Jetzt lesen...
-                                    </button>
-                                  </a>
-                                </div> */}
+                                </p> */}
                               </div>
                             </div>
                           </div>

@@ -1,4 +1,5 @@
 // import styles from "../styles/Home.module.css";
+import React from "react";
 
 import Head from "next/head";
 
@@ -17,6 +18,9 @@ export default function Card01({
   texto_alt,
   link,
 }) {
+
+
+ 
   let cadena_sin_padding =
     "row  h-md-100  d-flex align-items-center justify-content-center ";
 
@@ -27,7 +31,7 @@ export default function Card01({
   return (
     <>
       {/* col-md-3 */}
-      {/* <div className="  d-flex justify-content-center  " key={id}> */}
+      {/*  <div className="  d-flex justify-content-center  " key={id}> */}
       <div className="card  my_card myanimacion sombra_cards">
         {imagen != undefined && imagen != "" && (
           <img
@@ -38,32 +42,45 @@ export default function Card01({
         )}
 
         <div className="card-body text-center    ">
-          {titulo != undefined && titulo != "" && (
-            <p className="card-text font_card_title ">
-              {procesarTextoLargo(titulo)}
-            </p>
-          )}
+          {titulo != undefined && titulo != "" && 
+
+            titulo.map((unTexto, index)=>(
+                  <React.Fragment key={index}>
+                    <div className="text-center font_card_title ">{unTexto} </div>
+                  </React.Fragment>
+                )
+              )
+
+
+            
+          }
 
           {/* font_card_title2  */}
           {titulo2 != undefined && titulo2 != "" && (
             <div className={cadena_sin_padding}>
-              <p className="text-center font_cards_magenta ">
-                {procesarTextoLargo(titulo2)}
-              </p>
+              {titulo2.map(
+                (unTexto, index)=>(
+                  <React.Fragment key={index}>
+                    <div className="text-center font_cards_magenta ">{unTexto}</div>
+                  </React.Fragment>
+                )
+              )}
             </div>
           )}
         </div>
 
-        <div className="card-footer-my-card text-center pb-4  ">
-          <a href={`/${link}/${id}`}>
-            <button
+         <div className="card-footer-my-card text-center pb-4  ">
+          <a href={`/${link}`}>
+           
+             <button
               type="button"
-              className="btn  ms-2 me-2 w-75 h-100 btn-card font-btn-card rounded-pill  ">
+              className="btn border border-dark ms-2 me-2 w-75 h-100 btn-card font-btn-card rounded-pill  ">
               Jetzt lesen...
-            </button>
+            </button> 
           </a>
-        </div>
-        {/* </div> */}
+        </div> 
+        {/* 
+</div> */}
       </div>
     </>
   );

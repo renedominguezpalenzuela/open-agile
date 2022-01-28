@@ -122,7 +122,12 @@ export default function Home({
 
 //Obteniendo los datos desde el servidor
 export const getServerSideProps = async (context) => {
-  const url = `${servidor_url}/api/curso`;
+  // const url = `${servidor_url}/api/curso`;
+  // const res = await fetch(url);
+  // const cursos = await res.json();
+
+
+   const url = `${servidor_url}/api/curso`;
   const res = await fetch(url);
   const cursos = await res.json();
 

@@ -48,8 +48,8 @@ export default function Card01Lista({
                     key={index}
                     id={unCard.id}
                     imagen={unCard.image}
-                    titulo2={unCard.title}
-                    texto={unCard.text}
+                    titulo2={unCard.titulo2}
+                    // texto={unCard.text}
                     link={unCard.link}
                   />
                 )}
@@ -59,9 +59,9 @@ export default function Card01Lista({
                     key={index}
                     id={unCard.id}
                     imagen={unCard.image}
-                    titulo={unCard.title}
-                    titulo2={unCard.title2}
-                    texto={unCard.text}
+                    titulo={unCard.titulo1}
+                    titulo2={unCard.titulo2}
+                    // texto={unCard.text}
                     link={unCard.link}
                   />
                 )}
