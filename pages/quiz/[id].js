@@ -348,7 +348,7 @@ function Content01andMenuWithQuestions({
 
                     <div className=" my_quiz_boton-mobile ">
                       <Link href={`${next_link}`} className=" d-flex align-items-start ">
-                        <button type="button" className=" btn     btn-card font-btn-card rounded-pill  ">
+                        <button type="button" className=" btn  ps-4 pe-4   btn-card font-btn-card-quiz rounded-pill  ">
                              Next
                         </button>
                       </Link>
