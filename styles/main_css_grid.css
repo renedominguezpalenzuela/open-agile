@@ -214,6 +214,17 @@
   grid-column: 2/3;
 }
 
+
+.my_quiz_boton-home {
+  position: relative;
+  grid-row: 5/6;
+  grid-column: 2/3;
+  justify-self: start;
+  align-self: start;
+  top:-3.5vh;
+}
+
+
 .my_quiz_titulo {
   height: 12vh !important;
 }

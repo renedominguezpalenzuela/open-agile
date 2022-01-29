@@ -83,8 +83,6 @@ function setColor(Y, pagina) {
   
 
 
-  
-    console.log("POS "+Y);
 
 
 

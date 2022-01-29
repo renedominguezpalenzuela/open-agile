@@ -265,6 +265,11 @@ div.vertical-line {
   transform: scale(1);
 }
 
+
+.logo-img-quiz {
+  transform: scale(0.8);
+}
+
 .botonTresBarras {
   color: #f82d7c;
 }
