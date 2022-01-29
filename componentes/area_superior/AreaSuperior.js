@@ -255,6 +255,9 @@ const contenido_principal = (
     id_botones_configurador = id;
   }
 
+  
+ 
+
   return (
     <>
       {/* Texto Principal */}

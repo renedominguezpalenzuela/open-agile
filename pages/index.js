@@ -37,30 +37,8 @@ export default function Home({
   botones_configurador,
   vlog,
 }) {
-  // const [mostrarVentanaCookies, SetmostrarVentanaCookies] = useState(false);
+ 
 
-  // let first_time = Cookies.get("first_time");
-
-  // if (first_time === undefined || first_time==="true") {
-  //   first_time = true;
-  // } else {
-  //   first_time = false;
-  // }
-
-  // //solo para ruebas
-  //   first_time=true;
-
-  // useEffect(() => {
-  //   if (first_time === true) {
-  //     setTimeout(() => {
-  //       myfunc(first_time);
-  //       SetmostrarVentanaCookies(true);
-  //          Cookies.set("first_time", false, { expires: expire_cookies_in_days });
-  //     }, 1000);
-  //   }
-  // }, []);
-
-  //TODO:  mostrar la ventana al cabo de 5 s
 
   return (
     <>
@@ -72,11 +50,23 @@ export default function Home({
         <script async src="js/menu.js" />
       </Head>
 
+
+
+
       <div id="principal" className="container-fluid g-0">
+
+
+    
+
+
         <ModalFormCookie id={1} tiempo={1000} animar={true} />
 
         <MenuFlotanteBoton />
 
+
+
+       <div className=" d-none  d-md-block">
+      
         <AreaSuperior
           fondo="gris"
           texto1="OPEN AGILE"
@@ -84,8 +74,23 @@ export default function Home({
           botones_configurador={botones_configurador}
           iconos={true}
           area_gris_nueva={true}
-          // boton_inicio_quiz={true}
-        />
+           boton_inicio_quiz={false}
+        />  
+         
+        </div>
+
+        <div className=" d-md-none">
+        <AreaSuperior
+          fondo="gris"
+          texto1="OPEN AGILE"
+          texto2="FOR BETTER WORK"
+          botones_configurador={botones_configurador}
+          iconos={true}
+          area_gris_nueva={true}
+           boton_inicio_quiz={true}
+        />  
+        </div>
+      
 
         <ContentVideo />
 
