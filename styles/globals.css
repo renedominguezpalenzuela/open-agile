@@ -155,7 +155,7 @@ a {
 .div_content03b {
   position: relative;
   background-color: #eff3f7;
-  
+
   clip-path: polygon(0 0%, 100% 0%, 100% 95%, 0% 100%);
   /* width: 100%;
   height: 100%; */
@@ -313,6 +313,50 @@ div.vertical-line {
 }
 /* 7dcf29 */
 
+.btn-agile-check2 {
+  background-color: rgba(0, 0, 0, 0) !important;
+  border-color: rgb(255, 255, 255) !important ;
+  color: rgb(255, 255, 255) !important;
+
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  -webkit-transition: color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.btn-agile-check2:active,
+.btn-agile-check2:visited,
+.btn-agile-check2:focus,
+.btn-agile-check2:hover {
+  /* background-color: white !important;  */
+
+  border-color: #f82d7c !important;
+  color: #f82d7c !important;
+}
+
 .btn-outline-primary {
   background-color: rgba(0, 0, 0, 0) !important;
   border-color: #f82d7c !important;
@@ -342,6 +386,11 @@ div.vertical-line {
 .bi-footer {
   font-size: 1.8rem;
   color: #ffffff;
+}
+
+.fa-phone-square,
+.fa-envelope-square {
+  color: white;
 }
 
 i {
@@ -500,12 +549,14 @@ ul.no-bullets {
 @media only screen and (max-width: 767px) {
   .my_card {
     width: 85% !important;
+    margin: auto;
   }
 }
 
 @media only screen and (max-width: 560px) {
   .my_card {
     width: 100% !important;
+    margin: auto;
   }
 }
 
@@ -526,7 +577,7 @@ ul.no-bullets {
   display: flex;
 } */
 
-.carousel-indicators button{
+.carousel-indicators button {
   background-color: #e42078 !important;
 }
 
@@ -575,29 +626,23 @@ ul.no-bullets {
   font-size: 1.25vw;
 }
 
-
-
-@media(min-width:577px) and (max-width:767px){
-  .font_boton_main{
-    font-size: 2vw!important;
+@media (min-width: 577px) and (max-width: 767px) {
+  .font_boton_main {
+    font-size: 2vw !important;
   }
 }
 
-@media (max-width:576px){
-  .font_boton_main{
-    font-size: 3.5vw!important;
+@media (max-width: 576px) {
+  .font_boton_main {
+    font-size: 3.5vw !important;
   }
 }
-
-
 
 .font_boton_main-quiz {
   font-family: Montserrat-Bold;
   color: #ffffff;
   font-size: 3.2vw;
 }
-
-
 
 .redondeado {
   border-radius: 5px;
@@ -669,12 +714,27 @@ ul.no-bullets {
   color: #24325a !important;
 }
 
+.linea_blanca_footer-2 {
+  height: 1px;
+  margin: auto;
+  border-width: 0;
+  color: white;
+  background-color: white;
+  width: 80%;
+}
+
 .linea_blanca_footer {
   height: 1px;
 
   border-width: 0;
   color: white;
   background-color: white;
+}
+
+.iconos-contact {
+  color: #fff;
+  height: 2em;
+  width: 2em;
 }
 
 /* The animation code */
@@ -814,11 +874,9 @@ ul li.mybullets::before {
   font-size: 1.5rem;
 }
 
-.margen-negativo{
+.margen-negativo {
   margin-left: -1.2em;
-  
 }
-
 
 ul li.mybullets2::before {
   content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
@@ -840,12 +898,10 @@ ul li.mybullets3::before {
   /* font-size:0.5rem; */
 }
 
-
-
-@media (Max-width:991px){
+@media (max-width: 991px) {
   ul li.mybullets3::before {
     width: 1.1em; /* Also needed for space (tweak if needed) */
-  margin-left: -1.1em; /*Also needed for space (tweak if needed)-*/
+    margin-left: -1.1em; /*Also needed for space (tweak if needed)-*/
   }
 }
 
@@ -881,7 +937,41 @@ ul li.mybullets3::before {
   position: relative;
 }
 
+@media (max-width: 992px) and (min-width: 900px) {
+  .alto-leistungen-tab-contenedor {
+    height: 590px !important;
+  }
+}
 
+@media (max-width: 899px) and (min-width: 730px) {
+  .alto-leistungen-tab-contenedor {
+    height: 600px !important;
+  }
+}
+
+@media (max-width: 729px) and (min-width: 570px) {
+  .alto-leistungen-tab-contenedor {
+    height: 680px !important;
+  }
+}
+
+@media (max-width: 569px) and (min-width: 500px) {
+  .alto-leistungen-tab-contenedor {
+    height: 720px !important;
+  }
+}
+
+@media (max-width: 499px) and (min-width: 450px) {
+  .alto-leistungen-tab-contenedor {
+    height: 800px !important;
+  }
+}
+
+@media (max-width: 449px) {
+  .alto-leistungen-tab-contenedor {
+    height: 880px !important;
+  }
+}
 
 .alto-team-tab-contenedor {
   /* height:70vh!important; */
@@ -890,24 +980,76 @@ ul li.mybullets3::before {
   position: relative;
 }
 
+.alto-tab {
+  height: 100% !important;
+}
+
+@media (max-width: 992px) and (min-width: 900px) {
+  .alto-team-tab-contenedor {
+    height: 590px !important;
+  }
+}
+
+@media (max-width: 899px) and (min-width: 730px) {
+  .alto-team-tab-contenedor {
+    height: 700px !important;
+  }
+}
+
+@media (max-width: 729px) and (min-width: 570px) {
+  .alto-team-tab-contenedor {
+    height: 700px !important;
+  }
+}
+
+@media (max-width: 569px) and (min-width: 500px) {
+  .alto-team-tab-contenedor {
+    height: 790px !important;
+  }
+}
+
+@media (max-width: 499px) and (min-width: 450px) {
+  .alto-team-tab-contenedor {
+    height: 860px !important;
+  }
+}
+
+@media (max-width: 449px) {
+  .alto-team-tab-contenedor {
+    height: 1050px !important;
+  }
+}
 
 .alto-tab {
   height: 100% !important;
 }
 
 .alto_contenedor_tabs {
-  height: 585px !important;;
+  height: 585px !important;
 }
 
 .ubicacion-boton {
   position: absolute;
-  bottom: 60px;
-  left: 140px;
+  bottom: 5vh;
+  left: 10vw;
 }
 
 .ubicacion-boton-team {
   position: absolute;
-  bottom: 10vh;
+  bottom: 5vh;
   left: 10vw;
   /* border: 1px black black; */
+}
+
+@media (max-width: 767px) {
+  .ubicacion-boton {
+    bottom: 3vh;
+  }
+  .ubicacion-boton-team {
+    bottom: 3vh;
+    left: 10vw;
+  }
+  .MuiButtonBase-root.MuiTab-root {
+    font-size: 14px !important;
+  }
 }

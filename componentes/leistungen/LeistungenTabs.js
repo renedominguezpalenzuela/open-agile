@@ -1,15 +1,15 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import ModalFormConfigurator from "../../components/ModalFormConfigurator";
+import * as React from 'react'
+import PropTypes from 'prop-types'
+import Tabs from '@mui/material/Tabs'
+import Tab from '@mui/material/Tab'
+import Typography from '@mui/material/Typography'
+import Box from '@mui/material/Box'
+import ModalFormConfigurator from '../../components/ModalFormConfigurator'
 
-import { servidor_url } from "../../config";
+import { servidor_url } from '../../config'
 
 function TabPanel(props) {
-  const { children, value, index, ...other } = props;
+  const { children, value, index, ...other } = props
 
   return (
     <div
@@ -17,51 +17,68 @@ function TabPanel(props) {
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
-      {...other}>
+      {...other}
+    >
       {value === index && (
         <Box sx={{ p: 3 }}>
           <Typography>{children}</Typography>
         </Box>
       )}
     </div>
-  );
+  )
 }
 
 TabPanel.propTypes = {
   children: PropTypes.node,
   index: PropTypes.number.isRequired,
   value: PropTypes.number.isRequired,
-};
+}
 
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
-  };
+    'aria-controls': `simple-tabpanel-${index}`,
+  }
 }
 
 export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(0)
 
   const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+    setValue(newValue)
+  }
 
   const myfuncion = (proximo_indice) => {
-    setValue(proximo_indice);
-  };
+    setValue(proximo_indice)
+  }
 
-  const [isShown, setIsShown] = React.useState(false);
+  const [isShown, setIsShown] = React.useState(false)
 
   return (
     <>
-      <Box className="" sx={{ width: "100%" , height:"90%"}}>
+      <Box className="" sx={{ width: '100%', height: '90%' }}>
         <Box>
           <Tabs
             value={value}
             onChange={handleChange}
+            className="d-none d-md-block"
+            scrollButtons={true}
             aria-label="basic tabs example"
-            centered>
+            centered
+          >
+            <Tab label={`01. ${titulo}`} {...a11yProps(0)} />
+            <Tab label="02. BEISPIEL VORGEHEN" {...a11yProps(1)} />
+            <Tab label="03. KONTAKT AUFNEHMEN" {...a11yProps(2)} />
+          </Tabs>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            className="d-block d-md-none"
+            variant="scrollable"
+            scrollButtons="auto"
+            aria-label="basic tabs example"
+            
+          >
             <Tab label={`01. ${titulo}`} {...a11yProps(0)} />
             <Tab label="02. BEISPIEL VORGEHEN" {...a11yProps(1)} />
             <Tab label="03. KONTAKT AUFNEHMEN" {...a11yProps(2)} />
@@ -69,28 +86,25 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
         </Box>
 
         <TabPanel value={value} index={0} className="alto-tab  ">
-          <div className="ps-5 ms-5 row w-50   ">
-          <div className=" fuente-titulo-servicios mt-2 mb-4   ">
-            {titulo}
+          <div className="ps-md-5 ps-2 ms-md-5 ms-2 pe-2 row col col-md-6">
+            <div className=" fuente-titulo-servicios mt-2 mb-4  text-center text-md-left">
+              {titulo}
+            </div>
+
+            {texto01 != undefined &&
+              texto01.length > 0 &&
+              texto01.map((unaLinea, index) => (
+                <div className="fuente-texto-cursos" key={index}>
+                  <p> {unaLinea}</p>
+                </div>
+              ))}
           </div>
-
-          {texto01 != undefined &&
-            texto01.length > 0 &&
-            texto01.map((unaLinea, index) => (
-              <div className="fuente-texto-cursos" key={index}>
-            
-
-               <p> {unaLinea}</p>
-                
-              </div>
-            ))}
-
-             
-        </div>
 
           <div className="ubicacion-boton" onClick={() => myfuncion(1)}>
             <img
-              className="boton_flecha"
+              className="boton_flecha "
+              width={45}
+              height={45}
               src={`${servidor_url}/img/leistungen/boton_flecha_magenta.svg`}
               alt=""
             />
@@ -98,8 +112,8 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
         </TabPanel>
 
         <TabPanel value={value} index={1} className=" alto-tab  ">
-          <div className="ps-5 ms-5  w-50  ">
-            <div className=" fuente-titulo-servicios mt-2 mb-4   ">
+          <div className="ps-md-5 ps-2 ms-md-5 ms-2 pe-2 row col col-md-6">
+            <div className=" fuente-titulo-servicios mt-2 mb-4  text-center text-md-left ">
               BEISPIEL VORGEHEN
             </div>
             <ul>
@@ -107,7 +121,7 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
                 texto02.length > 0 &&
                 texto02.map((unaLinea, index) => (
                   <li key={index} className="fuente-texto-cursos mybullets">
-                    {" "}
+                    {' '}
                     {unaLinea}
                   </li>
                 ))}
@@ -116,7 +130,9 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
 
           <div className="ubicacion-boton " onClick={() => myfuncion(2)}>
             <img
-              className="boton_flecha  "
+              className="boton_flecha "
+              width={45}
+              height={45}
               src={`${servidor_url}/img/leistungen/boton_flecha_magenta.svg`}
               alt=""
             />
@@ -124,16 +140,16 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
         </TabPanel>
 
         <TabPanel value={value} index={2} className=" alto-tab">
-          <div className="ps-5 ms-5 mb-5 row w-100 h-100  ">
-            <div className="col-6   fuente-texto-cursos ">
-              <div className=" fuente-titulo-servicios mt-2 mb-4   ">
+          <div className="ps-md-5  ms-md-5  row w-100">
+            <div className="col-md-5 col-lg-6 fuente-texto-cursos ">
+              <div className=" fuente-titulo-servicios mt-2 mb-4  text-center text-md-left">
                 KONTAKT AUFNEHMEN
               </div>
 
               <p>
                 Interessierst Du dich für einen ersten Austausch, ob eine
                 evolutionäre Zusammenarbeit auch für Deine Organisation Sinn
-                stiften kann?{" "}
+                stiften kann?{' '}
               </p>
               <p>
                 Ruf’ uns gerne zu einem kostenlosen Erstgespräch an oder
@@ -141,30 +157,38 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
               </p>
             </div>
 
-            <div className="col-5    d-flex  align-items-start">
-              <div className="row ms-5 ps-3">
-                <div className="col-12  ">
-                  <div className=" fuente-titulo-servicios mt-2 mb-4   ">
+            <div className="col-md-6 col-lg-5 d-flex align-items-start">
+              <div className="row ms-md-3 ps-md-3 ms-lg-5 ps-lg-3 ">
+                <div className="col-12">
+                  <div className=" fuente-titulo-servicios mt-2 mb-4 ">
                     &nbsp;
                   </div>
 
-                  <a href="#">
+                  <a
+                    href="#"
+                    className="mx-auto d-flex justify-content-center justify-content-md-start"
+                  >
                     {/*  btn-outline-primary font_boton  */}
                     <button
                       type="button"
-                      className=" btn-leinstungen rounded-pill"
+                      className=" btn-leinstungen rounded-pill "
                       data-bs-toggle="modal"
-                      data-bs-target={"#contactForm1"}>
+                      data-bs-target={'#contactForm1'}
+                    >
                       KONTAKTFORMULAR
                     </button>
                   </a>
                 </div>
                 <div className="col-12 mt-4">
-                  <a href="tel:+49 (0) 421 22347567">
+                  <a
+                    href="tel:+49 (0) 421 22347567"
+                    className="mx-auto d-flex justify-content-center justify-content-md-start"
+                  >
                     {/*  btn-outline-primary font_boton  */}
                     <button
                       type="button"
-                      className=" btn-leinstungen rounded-pill   ">
+                      className=" btn-leinstungen rounded-pill   "
+                    >
                       JETZT ANRUFEN
                     </button>
                   </a>
@@ -172,10 +196,11 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
               </div>
             </div>
           </div>
-
           <div className="ubicacion-boton" onClick={() => myfuncion(0)}>
             <img
-              className="boton_flecha  "
+              className="boton_flecha "
+              width={45}
+              height={45}
               src={`${servidor_url}/img/leistungen/boton_flecha_magenta.svg`}
               alt=""
             />
@@ -188,7 +213,6 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
         frase="Jetzt Kontakt aufnehmen!"
         id={1}
       />
-      {/* <ModalForm  id={1} quartal={1} titulo={"title"} frase="Jetzt anmelden!" date1={"01.01.2022"} date2={"01.02.2022"} day={""} link={""} /> */}
     </>
-  );
+  )
 }

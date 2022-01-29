@@ -10,7 +10,6 @@ import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
 import TextoBloque01 from "../components/textobloque01";
 import Image01 from "../components/crashkurse/image01";
 
-
 import Tabla01 from "../components/crashkurse/tabla01";
 
 import AreaSuperior from "../componentes/area_superior/AreaSuperior";
@@ -19,7 +18,6 @@ import BarraConTextoDerecha from "../components/BarraConTextoDerecha";
 import BarraConTextoIzquierda from "../components/BarraConTextoIzquierda";
 import Card08Job from "../components/Card08Job";
 import ModalFormCookie from "../components/ModalFormCookie";
-
 
 //----------------------------------------------------------------------------------------------------------
 //           CRASHKURSE \ CRASHKURS ZUM AGILE COACH
@@ -31,9 +29,8 @@ export default function Home() {
   const texto2 = "HIER FINDEST DU AKTUELLE JOBANGEBOTE";
 
   const titulo1 = "Praktikant (m/w/d)";
-  const titulo2 ="Social Media & Online-Kommunikation";
-  const titulo_parrafo1 =  ["Das sind Deine Stärken"];
-
+  const titulo2 = "Social Media & Online-Kommunikation";
+  const titulo_parrafo1 = ["Das sind Deine Stärken"];
 
   const parrafo1 = [
     "Praktische Erfahrungen im Bereich Social-Media & Online-Kommunikation",
@@ -76,26 +73,34 @@ export default function Home() {
       {/*Contenedor*/}
 
       <div id="principal" className="container-fluid g-0">
-      <ModalFormCookie id={1} tiempo={10}/>
+        <ModalFormCookie id={1} tiempo={10} />
         <MenuFlotanteBoton />
 
-        
-        
-        <AreaSuperior fondo="ajustable" texto1={texto1} texto2={texto2} titulo_muy_largo={true} area_gris_nueva={true} />
+        <AreaSuperior
+          fondo="ajustable"
+          texto1={texto1}
+          texto2={texto2}
+          // titulo_muy_largo={true}
+          area_gris_nueva={true}
+         
+        />
 
+        <div className="row d-flex justify-content-center mt-5 mb-5">
+          <div className="col-md-5  ">
+            <Card08Job
+              titulo1={titulo1}
+              titulo2={titulo2}
+              titulo_parrafo1={titulo_parrafo1}
+              parrafo1={parrafo1}
+              titulo_parrafo2={titulo_parrafo2}
+              parrafo2={parrafo2}
+              titulo_parrafo3={titulo_parrafo3}
+              parrafo3={parrafo3}
+            />
+          </div>
+        </div>
 
-
-
-  <div className="row d-flex justify-content-center mt-5 mb-5">
-  <div className="col-md-5  " >
-  
-        <Card08Job titulo1={titulo1} titulo2={titulo2} titulo_parrafo1={titulo_parrafo1} parrafo1={parrafo1} titulo_parrafo2={titulo_parrafo2} parrafo2={parrafo2} titulo_parrafo3={titulo_parrafo3} parrafo3={parrafo3}/>
-  </div>
-  </div>
-    
-
-
-{/* 
+        {/* 
         <TextoBloque01 titulo={titulo3} />
 
 
@@ -110,9 +115,8 @@ export default function Home() {
     <div className="mt-5"> </div>
         <BarraConTextoDerecha titulo={texto05} texto={texto06} /> */}
 
-
         {/*Footer  */}
-          <div className="mt-5"> </div>
+        <div className="mt-5"> </div>
         <Footer />
       </div>
 

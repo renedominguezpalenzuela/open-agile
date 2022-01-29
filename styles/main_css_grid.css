@@ -138,7 +138,7 @@
 }
 
 .bannermain-quiz-questions-mobile {
-  position: fixed;
+  /* position: fixed; */
   display: grid;
   height:100vh;
   width: 100vw;
@@ -147,7 +147,7 @@
  
 
   grid-template-columns: 5% 90% 5%;
-  grid-template-rows: 10% 12% 67% 3% 9%;
+  grid-template-rows: 15% 10% auto 5% 12%;
   justify-items: center;
   /* align-items: flex-start; */
   
@@ -177,7 +177,7 @@
   grid-row: 1/2;
   grid-column: 1/4;
 
-  align-self: center;
+  align-self: flex-end;
   justify-self: center;
 }
 
@@ -185,7 +185,7 @@
   grid-row: 2/3;
   grid-column: 2/3;
 
-  align-self: center;
+  align-self:flex-end;
   justify-self: center;
   /* padding-top: 25px; */
   
@@ -241,7 +241,7 @@
 
 @media (min-height: 601px) and (max-height: 700px) {
   .bannermain {
-    height: 75vh;
+    height: 82vh;
   }
 }
 
@@ -253,13 +253,13 @@
 
 @media (min-height: 801px) and (max-height: 900px) {
   .bannermain {
-    height: 60vh;
+    height: 70vh;
   }
 }
 
 @media (min-height: 901px) and (max-height: 1200px) {
   .bannermain {
-    height: 50vh;
+    height: 60vh;
   }
 }
 

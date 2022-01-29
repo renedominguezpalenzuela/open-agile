@@ -1,34 +1,26 @@
-
 #container table {
-    border-spacing: 0px;
-    border-collapse: separate;
-  
+  border-spacing: 0px;
+  border-collapse: separate;
 }
 #container table tr td {
-   
-    border-bottom: 1px solid rgba(128, 128, 128, 0.336) ;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.336);
+}
 
-
- }
-
-
- .lineainferiortabla {
-    border-bottom: 1px solid rgba(128, 128, 128, 0.336) ;
- }
- /*
+.lineainferiortabla {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.336);
+}
+/*
 #container table tr:hover td {
     border-top: 2px solid #999;
     border-bottom: 2px solid #999;
 } */
 
-
-.font-card-menu-crashkurse-titulo{
-    font-family: Montserrat-Bold;
-    /* color: #24325a; */
-    color: #e42078;
-    font-size: 1rem;
+.font-card-menu-crashkurse-titulo {
+  font-family: Montserrat-Bold;
+  /* color: #24325a; */
+  color: #e42078;
+  font-size: 1rem;
 }
-
 
 .font-card-menu-crashkurse-foot {
   font-family: Montserrat-Bold;
@@ -37,162 +29,134 @@
   font-size: 0.8rem;
 }
 
-.font-card-menu-crashkurse-foot:hover{
-
+.font-card-menu-crashkurse-foot:hover {
   /* color: #24325a; */
-  color:#24325a ;
+  color: #24325a;
 }
 
-.font-card-menu-crashkurse{
-    font-family: Montserrat-Bold;
-    /* color: #24325a; */
-    color: #233978;
-    font-size: 0.9rem;
-    line-height: 1.8rem;
+.font-card-menu-crashkurse {
+  font-family: Montserrat-Bold;
+  /* color: #24325a; */
+  color: #233978;
+  font-size: 0.9rem;
+  line-height: 1.8rem;
 }
-
-
 
 /* The animation code */
 @keyframes cursosanim {
-    from {right: 0px;color: #233978;}
-    to {right:-0.7vh;color: #233a7846;}
+  from {
+    right: 0px;
+    color: #233978;
   }
-  
-  
-  
-  .myanimacioncursos:hover {  
-    position: relative;
-    animation-name: cursosanim;
-    animation-duration: 0.3s;   
-    animation-fill-mode: both;
-    animation-timing-function: ease-in-out;
-    animation-delay: 0.1s;
-    cursor: pointer;
+  to {
+    right: -0.7vh;
+    color: #233a7846;
   }
-  
+}
 
+.myanimacioncursos:hover {
+  position: relative;
+  animation-name: cursosanim;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.1s;
+  cursor: pointer;
+}
 
-    
 .fuente-titulo-cursos {
-  font-family:  Montserrat-Bold;
+  font-family: Montserrat-Bold;
   color: #24325a;
   /* #686868 */
 }
-  
+
 .fuente-texto-cursos {
-    font-family:  Montserrat-Regular;
-    color: #24325a ;
-    font-size: 1rem;
-   
-   
-    /* #686868 */
-  }
+  font-family: Montserrat-Regular;
+  color: #24325a;
+  font-size: 1rem;
 
+  /* #686868 */
+}
 
-   
 .fuente-titulo-servicios {
-  font-family:  Montserrat-SemiBold;
+  font-family: Montserrat-SemiBold;
   color: #24325a;
   font-size: 2rem;
   /* #686868 */
 }
-  
 
-  
 .fuente-titulo-team-tab {
-  font-family:  Montserrat-SemiBold;
+  font-family: Montserrat-SemiBold;
   color: #24325a;
   font-size: 1.5rem;
   /* #686868 */
 }
 
-  
+@media (max-width: 767px) {
+  .fuente-titulo-team-tab {
+    font-size: 1.3rem !important;
+  }
+}
+
 .fuente-bullet-cursos {
-  
-  font-family:  Montserrat-Bold;
-  color: #e42078 ;
+  font-family: Montserrat-Bold;
+  color: #e42078;
   font-size: 1.2rem;
- 
+
   /* #686868 */
 }
 
-
-  
 .fuente-bullet-tabs {
-  
-  font-family:  Montserrat-Bold;
-  color: #e42078 ;
+  font-family: Montserrat-Bold;
+  color: #e42078;
   font-size: 1.2rem;
   padding-left: 35px;
   /* #686868 */
 }
 
-
-  
 .tabla-titulo-cursos {
-   
-    font-size: 1.5em;
-    font-family: Montserrat-bold;
-    color: #24325a;
-  }
-  
+  font-size: 1.5em;
+  font-family: Montserrat-bold;
+  color: #24325a;
+}
 
-
-
-  
 .tabla-titulo-cursos-kosten {
-
-  
-   
   font-size: 1em;
   font-family: Montserrat-SemiBold;
   color: #24325a;
-  text-transform:capitalize!important;
+  text-transform: capitalize !important;
 }
 
-
-
-  
-  
 .tabla-titulo-botones-cursos {
-   
   font-size: 1.5em;
   font-family: Montserrat-bold;
   color: #e42078;
 }
 
-
-  
 .btn-cursos {
   background-color: #24325a !important;
   /* border-radius:30px 30px 30px 30px; */
-  
+
   /* border-color: #3edf0d  !important; */
   /* color: #ffffff !important; */
 }
-
 
 .btn1-cursos {
   height: 4.5rem;
   width: 9.5rem;
 }
 
-
 .btn2-cursos {
   height: 5rem;
   width: 9.5rem;
 }
-
-
 
 .btn3-cursos {
   height: 7.5rem;
   width: 9.5rem;
 }
 
-
-.redondo-bordes{
+.redondo-bordes {
   border-radius: 50px;
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
@@ -207,93 +171,75 @@
   color: #ffffff !important;
 }
 
-
-.font-btn-cursos{
+.font-btn-cursos {
   font-family: Montserrat-Bold;
   color: #ffffff;
   /* font-size: 1em; */
-  font-size:1.1rem;
+  font-size: 1.1rem;
   text-overflow: ellipsis;
-      
 }
 
-
-
-.fuente-leistungen{
+.fuente-leistungen {
   font-family: Montserrat-BoldItalic;
   color: #ffffff;
   /* font-size: 1em; */
-  font-size:1rem;
+  font-size: 1rem;
   border-radius: 50px;
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
 }
 
 .bordes_leistungen {
-  background-color: #009AA0;
+  background-color: #009aa0;
 }
 
-
-.font-kosten-cursos-titulo{
+.font-kosten-cursos-titulo {
   font-family: Montserrat-Bold;
   color: #24325a;
   /* font-size: 1em; */
-  font-size:1.1rem;
+  font-size: 1.1rem;
   text-overflow: ellipsis;
-      
 }
 
-
-
-.font-kosten-cursos{
+.font-kosten-cursos {
   font-family: Montserrat-Regular;
   color: #24325a;
   /* font-size: 1em; */
-  font-size:1.1rem;
+  font-size: 1.1rem;
   text-overflow: ellipsis;
-      
 }
-
 
 .espacio {
-  height:19vh;
+  height: 19vh;
 }
 
-
-
-
-
-.boton_flecha{
+.boton_flecha {
   width: auto;
-  filter:brightness(0) saturate(100%) invert(18%) sepia(11%) saturate(2965%) hue-rotate(187deg) brightness(98%) contrast(95%); 
+  filter: brightness(0) saturate(100%) invert(18%) sepia(11%) saturate(2965%)
+    hue-rotate(187deg) brightness(98%) contrast(95%);
 }
 
-.boton_flecha:hover{
+.boton_flecha:hover {
   width: auto;
-  filter:brightness(0) saturate(100%) invert(31%) sepia(44%) saturate(4320%) hue-rotate(318deg) brightness(97%) contrast(101%);
+  filter: brightness(0) saturate(100%) invert(31%) sepia(44%) saturate(4320%)
+    hue-rotate(318deg) brightness(97%) contrast(101%);
 }
-
 
 .titulo_curso {
   font-family: Montserrat-Regular;
   color: #24325a;
   /* font-size: 1em; */
-  font-size:0.7rem;
+  font-size: 0.7rem;
   /* text-transform: uppercase; */
   text-align: left;
-
 }
-
-
-
 
 div.vertical-line-left {
   width: 2px; /* Line width */
   background-color: #24325a; /* Line color */
   height: 100%; /*Override in-line if you want specific height.*/
   float: right; /* Causes the line to float to left of content.  */
-    /*You can instead use position:absolute or display:inline-block
+  /*You can instead use position:absolute or display:inline-block
     if this fits better with your design */
-    margin-right: 1.3vw;
-  
+  margin-right: 1.3vw;
 }

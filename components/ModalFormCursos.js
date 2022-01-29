@@ -236,7 +236,7 @@ export default function ModalFormCursos({
   return (
     <>
       {/* <!-- Modal --> */}
-      <div className="modal fade " id={`contactForm${id}`} tabIndex="-1">
+      <div className="modal fade pr-0" id={`contactForm${id}`} tabIndex="-1">
         <div className="modal-dialog  mt-md-5 mt-5 pt-4">
           <div className="modal-content ancho-modal-cursos">
             {/* Header */}

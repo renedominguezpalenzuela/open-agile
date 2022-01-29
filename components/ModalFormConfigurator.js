@@ -173,7 +173,7 @@ export default function ModalFormConfigurator({
   return (
     <>
       {/* <!-- Modal --> */}
-      <div className="modal fade" id={`contactForm${id}`} tabIndex="-1">
+      <div className="modal fade ancho-modalformconfigurator " id={`contactForm${id}`} tabIndex="-1">
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">

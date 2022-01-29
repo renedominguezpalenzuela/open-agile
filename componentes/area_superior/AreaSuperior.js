@@ -290,7 +290,7 @@ const contenido_principal = (
 
         {texto_quiz_result != undefined && texto_quiz_result.length > 0 && (
           <>
-            <div className="row mt-4 font_small_letter font_small_letter_white ms-5 me-3 justificar">
+            <div className="row mt-4  font_small_letter_white  justificar">
               {texto_quiz_result.map((unaLinea, index) => (
                 <p key={index}>{unaLinea}</p>
               ))}
@@ -385,19 +385,37 @@ const contenido_principal = (
           </div>
         ))}
 
-      {boton_inicio_quiz != undefined && boton_inicio_quiz && vista_movil && (
+      {boton_inicio_quiz != undefined && boton_inicio_quiz  && (
+
+        vista_movil ? (
         <div className="row pb-5  d-flex justify-content-center align-items-center ">
           <div className="col-12 col-sm-7 col-md-5  pb-2 d-flex justify-content-center">
            
             <Link href="/quiz/1" className="d-flex justify-content-center ">
               <button
                 type="button"
-                className="  btn-agile-check font_boton_main-quiz redondeado-boton  ">
+                className="w-100  btn-agile-check2 font_boton_main-quiz redondeado-boton  ">
                 JETZT DEN AGILE CHECK MACHEN
               </button>
             </Link>
           </div>
         </div>
+        ) : (
+         <div>
+          <div className="row mt-5 text-center mb-5 d-flex  justify-content-center ">
+          <Link href="/quiz/1">
+            <button
+              type="button"
+              className="btn p-3 ms-2 me-2 w-50 h-100 btn-card font-btn-card rounded-pill  ">
+             JETZT CHECK STARTEN 
+            </button>
+          </Link>
+        </div>
+         </div> 
+        )
+
+       
+
       )}
 
       {botones_contacto != undefined &&

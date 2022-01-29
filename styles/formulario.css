@@ -11,6 +11,10 @@
   line-height: 19px;
 }
 
+/* @media (max-width: 767px) {
+  .css-1k59jas-MuiFormControlLabel-root {
+  }
+} */
 /* font-size provoca que salga una linea en el formulario inferior */
 .font_texto_formulario {
   font-family: Montserrat-Regular;
@@ -87,11 +91,10 @@
 
 @media (max-width: 992px) {
   .font_title_secundario_formulario {
-      padding-top: 2px;
-      font-size: 4vw;
+    padding-top: 2px;
+    font-size: 4vw;
   }
 }
-
 
 .bannerformulario {
   display: grid;
@@ -104,10 +107,11 @@
   /*  gap: 1vw;  row-gap: 1em; */
 
   background-image: url("/img/form/form-back.jpg");
+  background-size: cover !important;
   background-size: 100% 100%;
   height: 90vh;
   /* max-height: 100vh; */
-
+  background-position: center center;
   background-repeat: no-repeat;
   /* text-align: left; */
   -webkit-font-smoothing: antialiased;
@@ -115,19 +119,21 @@
   /* background-position: 100% 57%; */
 }
 
-@media (max-width:767px) {
-  .bannerformulario{
-    background-size: 140% 100%!important;
-    background-position: center;
+@media (max-width: 767px) {
+  .bannerformulario {
+    background-image: url("/img/form/fondomovil.jpg");
+    background-size: cover !important;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
 }
 
-@media (min-height: 1900px) {
+/* @media (min-height: 1900px) {
   .bannerformulario {
     max-height: 740px;
     grid-template-rows: 35% 8% 8% 15% 11%;
   }
-}
+} */
 
 .boton_formulario {
   background-color: #e42078;
@@ -203,13 +209,12 @@
   width: 13vw !important;
 }
 
-
 .alto-boton {
   height: 41px !important;
 }
 
 .item-check .css-ahj2mt-MuiTypography-root {
- text-align: center;
+  text-align: center;
 }
 
 @media (max-width: 991px) {
@@ -268,17 +273,13 @@
   }
 }
 
-
 @media (max-width: 400px) {
-  
   .ancho-boton {
     width: 42vw !important;
   }
 }
 
-
-
-@media (min-width:401px) and (max-width:579px){
+@media (min-width: 401px) and (max-width: 579px) {
   .ancho-boton {
     width: 30vw !important;
   }

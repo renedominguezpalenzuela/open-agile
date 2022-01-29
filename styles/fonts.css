@@ -423,7 +423,7 @@
     color: #e42078;
   
     font-size: 2.8em;
-    font-weight: 700;
+    /* font-weight: 700; */
   
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -434,7 +434,7 @@
       font-size: 7.5vw!important;
     }
     .font_second_line3 {
-      font-size: 4.7vw!important;
+      font-size: 3.9vw!important;
     }
   }
   
@@ -975,23 +975,27 @@
     }
   }
 
-  
   .font_small_letter_white {
     font-family: Montserrat-Regular;
     /* color: #e42078; */
     color: #ffffff;
-    /* font-style: italic; */
+  
     font-size: 20px;
-    /* font-weight: 100; */
+    
 
     
-    line-height: 39px;
-  }
+    /* line-height: 39px; */
+  } 
 
-  @media (max-width: 767px) {
+  @media (max-width: 992px) {
     .font_card_texto{
     font-size: 1em;
     }
+    ..font_small_letter_white{
+      font-size: 12vw!important;
+    }
+
+
   }
 
 

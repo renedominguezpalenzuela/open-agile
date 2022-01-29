@@ -1,21 +1,21 @@
-import React, { useState } from "react";
-import TextField from "@mui/material/TextField";
+import React, { useState } from 'react'
+import TextField from '@mui/material/TextField'
 // import { ThemeProvider, createTheme } from '@mui/material/styles';
-import Button from "@mui/material/Button";
-import FormControl from "@mui/material/FormControl";
-import Checkbox from "@mui/material/Checkbox";
-import FormControlLabel from "@mui/material/FormControlLabel";
+import Button from '@mui/material/Button'
+import FormControl from '@mui/material/FormControl'
+import Checkbox from '@mui/material/Checkbox'
+import FormControlLabel from '@mui/material/FormControlLabel'
 
-import { pink } from "@mui/material/colors";
+import { pink } from '@mui/material/colors'
 
 export default function FormularioContacto2() {
-  const [checked1, setChecked1] = useState(false);
+  const [checked1, setChecked1] = useState(false)
 
   const handleChange1 = (event) => {
-    setChecked1(event.target.checked);
-  };
+    setChecked1(event.target.checked)
+  }
 
-  const label = { inputProps: { "aria-label": "Checkbox demo" } };
+  const label = { inputProps: { 'aria-label': 'Checkbox demo' } }
 
   // const styles2 = (theme) => ({
   //   multilineColor: {
@@ -30,63 +30,63 @@ export default function FormularioContacto2() {
   const styles = {
     width: { sm: 250, md: 350 },
 
-    "& .MuiInputBase-root": {
+    '& .MuiInputBase-root': {
       height: 42,
     },
 
-    "& .MuiOutlinedInput-root": {
-      "& > fieldset": {
-        borderColor: "white",
+    '& .MuiOutlinedInput-root': {
+      '& > fieldset': {
+        borderColor: 'white',
       },
     },
-    "& .MuiOutlinedInput-root:hover": {
-      "& > fieldset": {
-        borderColor: "#e42078",
+    '& .MuiOutlinedInput-root:hover': {
+      '& > fieldset': {
+        borderColor: '#e42078',
       },
     },
 
-    "& .MuiFormLabel-root": {
-      color: "#ffffff", //Color del label
+    '& .MuiFormLabel-root': {
+      color: '#ffffff', //Color del label
     },
-  };
+  }
 
   const fuentes1 = {
     style: {
       //fontSize: 11
       fontSize: 10,
-      textAlign: "left", ///Text Align
-      letterSpacing: "0.06vw", //espaciado de letras luego d escribir
-      color: "#ffffff",
-      fontFamily: "Montserrat-Light",
+      textAlign: 'left', ///Text Align
+      letterSpacing: '0.06vw', //espaciado de letras luego d escribir
+      color: '#ffffff',
+      fontFamily: 'Montserrat-Light',
     },
-  };
+  }
 
   const fuentes = {
     style: { fontSize: 10 },
-  };
+  }
 
   const styles3 = {
-    ".MuiFormControlLabel-label": {
-      fontFamily: "Montserrat-Regular",
+    '.MuiFormControlLabel-label': {
+      fontFamily: 'Montserrat-Regular',
       fontSize: 12,
-      color: "#ffffff",
+      color: '#ffffff',
     },
-  };
+  }
 
   const stylesCuadrado = {
-    color: "#ffffff",
-    "&.Mui-checked": { color: "#e42078" },
-  };
+    color: '#ffffff',
+    '&.Mui-checked': { color: '#e42078' },
+  }
 
   const stiloTexto = {
-    "MuiFormControlLabel-root": {
+    'MuiFormControlLabel-root': {
       fontSize: 100,
 
-      "& .MuiFormControlLabel-label": {
-        color: "#ffffff",
+      '& .MuiFormControlLabel-label': {
+        color: '#ffffff',
       },
     },
-  };
+  }
 
   return (
     <>
@@ -120,11 +120,12 @@ export default function FormularioContacto2() {
             inputProps={fuentes1}
             InputLabelProps={fuentes}
           />
-        </div>{" "}
+        </div>{' '}
         <div className="group  item-boton1  ">
           <button
             type="button"
-            className="btn boton_formulario ancho-boton alto-boton">
+            className="btn boton_formulario ancho-boton alto-boton"
+          >
             ANMELDEN
           </button>
         </div>
@@ -146,5 +147,5 @@ export default function FormularioContacto2() {
         </div>
       </div>
     </>
-  );
+  )
 }

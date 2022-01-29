@@ -51,3 +51,16 @@
   /* transform: scale(0.95); */
   /* transition: 0.5s;   */
 }
+
+
+.btn-xl {
+  padding: 10px 20px!important;
+  font-size: 20px!important;
+  border-radius: 10px!important;
+  width:50%!important;   
+}
+
+.boton_cerrar_menu_lateral{
+
+  cursor: pointer;
+}

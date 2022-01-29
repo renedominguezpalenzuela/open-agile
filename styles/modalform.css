@@ -119,3 +119,21 @@
   background-color:#F82D7C; 
   border-color:#F82D7C ;
 }
+
+@media (max-width:529px){
+  .botones-jobs-516{
+    display:none!important;
+  }
+  .botones-jobs{
+    display: flex!important;
+  }
+}
+
+@media (min-width:530px){
+  .botones-jobs-516{
+    display:flex!important;
+  }
+  .botones-jobs{
+    display: none!important;
+  }
+}

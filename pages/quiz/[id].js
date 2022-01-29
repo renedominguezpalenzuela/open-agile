@@ -37,6 +37,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import Checkbox from "@mui/material/Checkbox";
+import IconosIzquierda from "../../components/IconosIzquierda";
 
 const styles = {
   ".MuiFormControlLabel-label": {
@@ -110,12 +111,12 @@ export default function Home({ quiz, todas_preguntas }) {
         <meta name="description" content="Quiz" />
         <link rel="icon" href="/favicon.ico" />
         {/* <script async src={`${servidor_url}/js/chat.js`} /> */}
-        {/* <script async src={`${servidor_url}/js/menu.js`} /> */}
+        <script async src={`${servidor_url}/js/menu.js`} />
       </Head>
 
       {/*Contenedor*/}
 
-      <div class=" d-none  d-md-block">
+      <div className=" d-none  d-md-block">
         <div id="principal" className="bannermain-quiz-questions ">
           <MenuFlotanteBoton />
           <div className="item-logo  d-flex align-items-center justify-content-center">
@@ -139,12 +140,14 @@ export default function Home({ quiz, todas_preguntas }) {
             next_link={next_link}
             total_questions={total_preguntas}
           />
+
+          <IconosIzquierda />
         </div>
 
         <MenuFlotante />
       </div>
 
-      <div class="  d-md-none">
+      <div className="  d-md-none">
         <div id="principal" className=" ">
         
           <Content01andMenuWithQuestions
@@ -360,7 +363,7 @@ function Content01andMenuWithQuestions({
       </div>
 
       {/* -------------- MOBIL ------------------------------------ */}
-      <div class="  d-md-none bannermain-quiz-questions-mobile">
+      <div className="  d-md-none bannermain-quiz-questions-mobile">
         <div className="  my_quiz_titulo-mobile  ">
           {titulo != undefined && titulo != "" && (
             <h3 className="font_quiz_line1  "> {titulo}</h3>
@@ -369,7 +372,7 @@ function Content01andMenuWithQuestions({
 
         <div className=" my_quiz_pregunta-mobile ">
           {question != undefined && question != "" && (          
-              <h6 className="font_second_line3 text-center "> {question}</h6>         
+              <div className="font_second_line3 text-center "> {question}</div>         
           )}
         </div>
 
