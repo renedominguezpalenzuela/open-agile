@@ -21,7 +21,7 @@ import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 //----------------------------------------------------------------------------------------------------------
 
 export default function Home() {
-  const titulo1 = "Wie agil ist eure";
+  const titulo1 = "Wie agil ist Eure";
   const titulo2 = "Zusammenarbeit?";
   const titulo2a = "";
 
