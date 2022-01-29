@@ -1,12 +1,18 @@
 // Footer
 
-import { servidor_url } from '../config'
-import Link from 'next/link'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons'
-import { faPhoneSquare } from '@fortawesome/free-solid-svg-icons'
-import FormularioContacto2 from './formulariocontacto2'
-import Content01Iconos from '../componentes/area_superior/Content01Iconos'
+import { servidor_url } from "../config";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
+import { faPhoneSquare } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faXing } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+
+import FormularioContacto2 from "./formulariocontacto2";
+import Content01Iconos from "../componentes/area_superior/Content01Iconos";
 
 export default function Footer() {
   return (
@@ -38,8 +44,7 @@ export default function Footer() {
                   <div className="row font_facit_text_very_small-kontack ">
                     <a
                       className=" mylinkhoover "
-                      href="tel:+49 (0) 421 22347567"
-                    >
+                      href="tel:+49 (0) 421 22347567">
                       +49 (0) 421 22347567
                     </a>
                   </div>
@@ -47,8 +52,7 @@ export default function Footer() {
                   <div className="row font_facit_text_very_small-kontack ">
                     <a
                       className="mylinkhoover "
-                      href="mailto:kontakt@open-agile.de"
-                    >
+                      href="mailto:kontakt@open-agile.de">
                       kontakt@open-agile.de
                     </a>
                   </div>
@@ -70,24 +74,21 @@ export default function Footer() {
                 <div>
                   <a
                     className="color-font-dropdown mylinkhoover"
-                    href="/leistungen/1"
-                  >
+                    href="/leistungen/1">
                     Organisationsentwicklung
                   </a>
                 </div>
                 <div>
                   <a
                     className="color-font-dropdown mylinkhoover"
-                    href="/leistungen/2"
-                  >
+                    href="/leistungen/2">
                     Inhouse Training
                   </a>
                 </div>
                 <div>
                   <a
                     className="color-font-dropdown mylinkhoover"
-                    href="/leistungen/3"
-                  >
+                    href="/leistungen/3">
                     Coaching
                   </a>
                 </div>
@@ -100,44 +101,39 @@ export default function Footer() {
                 <div>
                   <a
                     className="color-font-dropdown mylinkhoover"
-                    href="/crashkurse/beschreibung/1"
-                  >
-                    Crashkurs zum Agile Coach{' '}
+                    href="/crashkurse/beschreibung/1">
+                    Crashkurs zum Agile Coach{" "}
                   </a>
                 </div>
                 <div>
                   <a
                     className="color-font-dropdown mylinkhoover"
-                    href="/crashkurse/beschreibung/2"
-                  >
-                    Crashkurs zum Agile Facilitator{' '}
-                  </a>
-                </div>
-
-                <div>
-                  <a
-                    className="color-font-dropdown mylinkhoover"
-                    href="/crashkurse/beschreibung/3"
-                  >
-                    Crashkurs zum Scrum Master{' '}
+                    href="/crashkurse/beschreibung/2">
+                    Crashkurs zum Agile Facilitator{" "}
                   </a>
                 </div>
 
                 <div>
                   <a
                     className="color-font-dropdown mylinkhoover"
-                    href="/crashkurse/beschreibung/4"
-                  >
-                    Crashkurs Mitbestimmung in der agilen Arbeitswelt{' '}
+                    href="/crashkurse/beschreibung/3">
+                    Crashkurs zum Scrum Master{" "}
                   </a>
                 </div>
 
                 <div>
                   <a
                     className="color-font-dropdown mylinkhoover"
-                    href="/crashkurse/beschreibung/5"
-                  >
-                    Online Crashkurs Selbstorganisation in agilen Teams{' '}
+                    href="/crashkurse/beschreibung/4">
+                    Crashkurs Mitbestimmung in der agilen Arbeitswelt{" "}
+                  </a>
+                </div>
+
+                <div>
+                  <a
+                    className="color-font-dropdown mylinkhoover"
+                    href="/crashkurse/beschreibung/5">
+                    Online Crashkurs Selbstorganisation in agilen Teams{" "}
                   </a>
                 </div>
               </div>
@@ -227,7 +223,45 @@ export default function Footer() {
               </div>
             </div>
             <div className="col-12 d-flex pb-3 g-0 justify-content-center">
-              <Content01Iconos footer={true} />
+              <div className="row justify-content-center g-4">
+                <div className="col p-2">
+                  <a href="https://www.linkedin.com/company/open-agile">
+                    <FontAwesomeIcon
+                      icon={faLinkedinIn}
+                      className="iconos-contact"
+                    />
+                  </a>
+                </div>
+                <div className="col p-2">
+                  <a href="https://www.youtube.com/channel/UC4JhXDcBKkgVaZILgnzhm0A">
+                    <FontAwesomeIcon
+                      icon={faYoutube}
+                      className="iconos-contact"
+                    />
+                  </a>
+                </div>
+                <div className="col p-2">
+                  <a href="https://www.instagram.com/open_agile/">
+                    <FontAwesomeIcon
+                      icon={faInstagram}
+                      className="iconos-contact"
+                    />
+                  </a>
+                </div>
+                <div className="col p-2">
+                  <a href="https://www.xing.com/pages/open-agile">
+                    <FontAwesomeIcon icon={faXing} className="iconos-contact" />
+                  </a>
+                </div>
+                <div className="col p-2">
+                  <a href="https://www.facebook.com/OpenAgile21">
+                    <FontAwesomeIcon
+                      icon={faFacebook}
+                      className="iconos-contact"
+                    />
+                  </a>
+                </div>
+              </div>
             </div>
             <div className="row d-flex  linea_blanca_footer g-0"></div>
             <div className="font_facit_text_very_small mt-3 d-flex justify-content-center">
@@ -251,5 +285,5 @@ export default function Footer() {
         </div>
       </footer>
     </>
-  )
+  );
 }
