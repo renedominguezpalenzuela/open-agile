@@ -264,7 +264,7 @@
   .item-check {
     grid-column: 2/ 3;
     grid-row: 8/9;
-    justify-self: center;
+    justify-self:center ;
     align-self: flex-start;
   }
 
