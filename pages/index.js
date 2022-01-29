@@ -52,18 +52,8 @@ export default function Home({
 
         <MenuFlotanteBoton />
 
-        <div className=" d-none  d-md-block">
-          <AreaSuperior
-            fondo="gris"
-            texto1="OPEN AGILE"
-            texto2="FOR BETTER WORK"
-            botones_configurador={botones_configurador}
-            iconos={true}
-            area_gris_nueva={true}
-            boton_inicio_quiz={false}
-          />
-        </div>
-
+        
+ 
         <div className=" d-md-none">
           <AreaSuperior
             fondo="gris"
@@ -75,7 +65,21 @@ export default function Home({
             boton_inicio_quiz={true}
             home={1}
           />
-        </div>
+        </div> 
+
+         <div className=" d-none  d-md-block">
+          <AreaSuperior
+            fondo="gris"
+            texto1="OPEN AGILE"
+            texto2="FOR BETTER WORK"
+            botones_configurador={botones_configurador}
+            iconos={true}
+            area_gris_nueva={true}
+            boton_inicio_quiz={false}
+          />
+        </div> 
+
+        
 
         <ContentVideo />
 
@@ -109,6 +113,10 @@ export default function Home({
         </div>
 
         {/*Footer  */}
+
+        
+       
+
         <Footer />
       </div>
 

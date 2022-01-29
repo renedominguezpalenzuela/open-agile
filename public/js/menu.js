@@ -1,5 +1,5 @@
 var boton = document.getElementById("boton_abrir_menu");
-var boton2 = document.getElementById("boton_abrir_menu2");
+var boton2 = document.getElementById("boton_new_abrir_menu2");
 var contendor_boton = document.getElementById("panel_abrir_menu");
 
 var color_magenta = "#e42078";
@@ -23,7 +23,7 @@ var pagina = window.location.pathname;
 
 window.addEventListener("load", (event) => {
   
- 
+
 
   if (document.getElementById("boton_cerrar_menu")) {
     document
@@ -52,12 +52,13 @@ window.addEventListener("load", (event) => {
       });
   }
 
-  if (document.getElementById("boton_abrir_menu2")) {
-    document
-      .getElementById("boton_abrir_menu2")
-      .addEventListener("click", function (e) {
-        e.preventDefault();
-        e.stopPropagation();
+  if (boton2) {
+     
+   boton2.addEventListener("click", function (e) {
+        // e.preventDefault();
+        // e.stopPropagation();
+
+        console.log("äqu");
 
         document.getElementById("mySidepanel").style.width = "110vw";
         document.getElementById("panel_abrir_menu").style.visibility = "hidden";

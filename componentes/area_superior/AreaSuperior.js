@@ -136,19 +136,12 @@ export default function AreaSuperior({
       <div className="fond mb-5  d-lg-none">
         {(vista_movil = true)}
 
+
         <MenuNavBar2 />
         <div className={`${getFondo(fondo)}`}>
-          {/* <div className=" item-logo-movil  mt-2 ms-3 ">
-            <a className=" " href="/">
-              <img
-                className="size-logo-movil "
-                src={`${servidor_url}/img/logo/5.svg`}
-              />
-            </a>
-          </div> */}
-
+        
           <div className="item-titulo   ">
-            {/* Contenido Principal */}
+          
             {contenido_principal(
               texto1,
               texto2,
@@ -297,6 +290,8 @@ const contenido_principal = (
       )}
 
       <div className="mb-5">
+
+      
         {iconos != undefined && iconos && <Content01Iconos />}
 
         {/*Texto_quiz_result */}
