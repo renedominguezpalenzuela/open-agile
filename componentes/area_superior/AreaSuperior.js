@@ -385,7 +385,9 @@ const contenido_principal = (
           </div>
         ))}
 
-      {boton_inicio_quiz != undefined && boton_inicio_quiz && vista_movil && (
+      {boton_inicio_quiz != undefined && boton_inicio_quiz  && (
+
+        vista_movil ? (
         <div className="row pb-5  d-flex justify-content-center align-items-center ">
           <div className="col-12 col-sm-7 col-md-5  pb-2 d-flex justify-content-center">
            
@@ -398,6 +400,22 @@ const contenido_principal = (
             </Link>
           </div>
         </div>
+        ) : (
+         <div>
+          <div className="row mt-5 text-center mb-5 d-flex  justify-content-center ">
+          <Link href="/quiz/1">
+            <button
+              type="button"
+              className="btn p-3 ms-2 me-2 w-50 h-100 btn-card font-btn-card rounded-pill  ">
+             JETZT CHECK STARTEN 
+            </button>
+          </Link>
+        </div>
+         </div> 
+        )
+
+       
+
       )}
 
       {botones_contacto != undefined &&

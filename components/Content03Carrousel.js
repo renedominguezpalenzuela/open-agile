@@ -50,12 +50,12 @@ export default function Content03Carrousel() {
           VERTRAUEN OPEN AGILE
         </div>
 
-        <div id="demo" class="carousel slide  " data-bs-ride="carousel">
+        <div id="demo" className="carousel slide  " data-bs-ride="carousel">
 
           
          
-               <div class="carousel-indicators">
-              <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+               <div className="carousel-indicators">
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="0" className="active"></button>
               <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
               <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
               <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
@@ -65,11 +65,13 @@ export default function Content03Carrousel() {
             </div>
 
       
-             <div class="carousel-inner altoCarrousel3 d-flex align-items-center">
+             <div className="carousel-inner altoCarrousel3 d-flex align-items-center">
             {/* <div className=" row d-flex align-item-center justify-content-center h-100  "> */}
                 
                   {datos.map((unDato, index) => (
-                    <div key={index} class={`${index === 0 ? "active" : ""} carousel-item `}>
+
+                    <div key={index} className={`${index === 0 ? "active" : ""} carousel-item `}>
+
                   
                       
                         <a href={unDato.link} aria-pressed="true" className="">
