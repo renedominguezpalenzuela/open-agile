@@ -358,7 +358,7 @@ function Content01andMenuWithQuestions({
                     {/* <div className="my_quiz_boton-home border"> */}
                       <a href="/" className="  my_quiz_boton-home ">
 
-                          <img className="img-fluid logo-img-quiz"
+                          <img className=" logo-img-quiz"
                             src={`${servidor_url}/img/logo/5.svg`}
                           />
 

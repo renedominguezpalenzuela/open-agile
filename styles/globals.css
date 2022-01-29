@@ -267,7 +267,8 @@ div.vertical-line {
 
 
 .logo-img-quiz {
-  transform: scale(0.8);
+  /* transform: scale(0.8); */
+  width: 10vh;
 }
 
 .botonTresBarras {

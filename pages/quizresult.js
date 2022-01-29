@@ -95,7 +95,7 @@ export default function Home() {
        <ModalFormConfigurator    titulo="KONTAKTFORMULAR"   frase="Jetzt Kontakt aufnehmen!"     id={1}    />
 
 
-      {/*Menu Lateral oculto  */}
+     
       <MenuFlotante />
     </>
   );
