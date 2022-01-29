@@ -1,30 +1,30 @@
-import { servidor_url } from '../config'
-import { expire_cookies_in_days } from '../config'
-import Head from 'next/head'
-import Image from 'next/image'
+import { servidor_url } from "../config";
+import { expire_cookies_in_days } from "../config";
+import Head from "next/head";
+import Image from "next/image";
 
 //Componentes
-import AreaSuperior from '../componentes/area_superior/AreaSuperior'
+import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 
-import Content02Cursos from '../components/Content02Cursos'
-import Content03 from '../components/Content03'
-import Content03Carrousel from '../components/Content03Carrousel'
+import Content02Cursos from "../components/Content02Cursos";
+import Content03 from "../components/Content03";
+import Content03Carrousel from "../components/Content03Carrousel";
 
-import Content04 from '../components/Content04'
-import Content05 from '../components/Content05'
+import Content04 from "../components/Content04";
+import Content05 from "../components/Content05";
 
-import Card01Lista from '../components/Card01Lista'
-import ContentVideo from '../components/ContentVideo'
+import Card01Lista from "../components/Card01Lista";
+import ContentVideo from "../components/ContentVideo";
 
-import MenuFlotanteBoton from '../components/MenuFlotanteBoton'
+import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
 
-import MenuFlotante from '../components/MenuFlotante'
-import Footer from '../components/Footer'
+import MenuFlotante from "../components/MenuFlotante";
+import Footer from "../components/Footer";
 
-import Cookies from 'js-cookie'
-import { useEffect, useState } from 'react'
+import Cookies from "js-cookie";
+import { useEffect, useState } from "react";
 
-import ModalFormCookie from '../components/ModalFormCookie'
+import ModalFormCookie from "../components/ModalFormCookie";
 
 //----------------------------------------------------------------------------------------------------------
 //            Pagina inicial principal
@@ -37,9 +37,6 @@ export default function Home({
   botones_configurador,
   vlog,
 }) {
- 
-
-
   return (
     <>
       <Head>
@@ -50,47 +47,35 @@ export default function Home({
         <script async src="js/menu.js" />
       </Head>
 
-
-
-
       <div id="principal" className="container-fluid g-0">
-
-
-    
-
-
         <ModalFormCookie id={1} tiempo={1000} animar={true} />
 
         <MenuFlotanteBoton />
 
-
-
-       <div className=" d-none  d-md-block">
-      
-        <AreaSuperior
-          fondo="gris"
-          texto1="OPEN AGILE"
-          texto2="FOR BETTER WORK"
-          botones_configurador={botones_configurador}
-          iconos={true}
-          area_gris_nueva={true}
-           boton_inicio_quiz={false}
-        />  
-         
+        <div className=" d-none  d-md-block">
+          <AreaSuperior
+            fondo="gris"
+            texto1="OPEN AGILE"
+            texto2="FOR BETTER WORK"
+            botones_configurador={botones_configurador}
+            iconos={true}
+            area_gris_nueva={true}
+            boton_inicio_quiz={false}
+          />
         </div>
 
         <div className=" d-md-none">
-        <AreaSuperior
-          fondo="gris"
-          texto1="OPEN AGILE"
-          texto2="FOR BETTER WORK"
-          botones_configurador={botones_configurador}
-          iconos={true}
-          area_gris_nueva={true}
-           boton_inicio_quiz={true}
-        />  
+          <AreaSuperior
+            fondo="gris"
+            texto1="OPEN AGILE"
+            texto2="FOR BETTER WORK"
+            botones_configurador={botones_configurador}
+            iconos={true}
+            area_gris_nueva={true}
+            boton_inicio_quiz={true}
+            home={1}
+          />
         </div>
-      
 
         <ContentVideo />
 
@@ -130,7 +115,7 @@ export default function Home({
       {/*Menu Lateral oculto  */}
       <MenuFlotante />
     </>
-  )
+  );
 }
 
 //Obteniendo los datos desde el servidor
@@ -139,25 +124,25 @@ export const getServerSideProps = async (context) => {
   // const res = await fetch(url);
   // const cursos = await res.json();
 
-  const url = `${servidor_url}/api/curso`
-  const res = await fetch(url)
-  const cursos = await res.json()
+  const url = `${servidor_url}/api/curso`;
+  const res = await fetch(url);
+  const cursos = await res.json();
 
-  const url2 = `${servidor_url}/api/servicio`
-  const res2 = await fetch(url2)
-  const servicios = await res2.json()
+  const url2 = `${servidor_url}/api/servicio`;
+  const res2 = await fetch(url2);
+  const servicios = await res2.json();
 
-  const url3 = `${servidor_url}/api/blog`
-  const res3 = await fetch(url3)
-  const blogs = await res3.json()
+  const url3 = `${servidor_url}/api/blog`;
+  const res3 = await fetch(url3);
+  const blogs = await res3.json();
 
-  const url4 = `${servidor_url}/api/configurator/1`
-  const res4 = await fetch(url4)
-  const botones_configurador = await res4.json()
+  const url4 = `${servidor_url}/api/configurator/1`;
+  const res4 = await fetch(url4);
+  const botones_configurador = await res4.json();
 
-  const url5 = `${servidor_url}/api/vlog`
-  const res5 = await fetch(url5)
-  const vlog = await res5.json()
+  const url5 = `${servidor_url}/api/vlog`;
+  const res5 = await fetch(url5);
+  const vlog = await res5.json();
 
   return {
     props: {
@@ -167,5 +152,5 @@ export const getServerSideProps = async (context) => {
       botones_configurador,
       vlog,
     },
-  }
-}
+  };
+};

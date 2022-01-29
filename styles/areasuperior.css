@@ -44,15 +44,19 @@
 }
 
 .titulo_extra_grande {
-  font-size: 5.4vw !important;
+  font-size: 4.8vw !important;
 }
 
 .titulo2_vista_movil {
   font-family: Montserrat-Bold;
-  color: #ff599a;
+  color: #e50265;
   font-size: 4.8vw;
   text-shadow: 1px 3px 15px rgb(0 0 0 / 40%);
   z-index: 100;
+}
+
+.force-magenta {
+  color: #e50265;
 }
 
 .item-img-team-top {
