@@ -549,12 +549,14 @@ ul.no-bullets {
 @media only screen and (max-width: 767px) {
   .my_card {
     width: 85% !important;
+    margin: auto;
   }
 }
 
 @media only screen and (max-width: 560px) {
   .my_card {
     width: 100% !important;
+    margin: auto;
   }
 }
 
@@ -710,6 +712,15 @@ ul.no-bullets {
 
 .mylinkhoover2:hover {
   color: #24325a !important;
+}
+
+.linea_blanca_footer-2 {
+  height: 1px;
+  margin: auto;
+  border-width: 0;
+  color: white;
+  background-color: white;
+  width: 80%;
 }
 
 .linea_blanca_footer {

@@ -223,7 +223,7 @@ export default function Footer() {
                     </div>
                   </div>
                 </div>
-                <div className="row d-flex  linea_blanca_footer g-0 mb-2"></div>
+                <div className="row d-flex  linea_blanca_footer-2  g-0 mb-2"></div>
               </div>
             </div>
             <div className="col-12 d-flex pb-3 g-0 justify-content-center">
