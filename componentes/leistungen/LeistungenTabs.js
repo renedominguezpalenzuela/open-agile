@@ -87,7 +87,7 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
 
         <TabPanel value={value} index={0} className="alto-tab  ">
           <div className="ps-md-5 ps-2 ms-md-5 ms-2 pe-2 row col col-md-6">
-            <div className=" fuente-titulo-servicios mt-2 mb-4  text-center text-md-left">
+            <div className=" organization-text mt-2 mb-4  text-center text-md-left">
               {titulo}
             </div>
 

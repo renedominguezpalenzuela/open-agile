@@ -83,12 +83,26 @@
     height: 12vh;
   }
   .card-footer {
-    height: 12vh;
+    height: 9vh;
   }
 
   .card-body {
     display: grid;
+    align-content: center;
     align-items: center;
+  }
+
+  .fechas-facilator-1,
+  .fechas-facilator-2 {
+    height: 100% !important;
+  }
+
+  .fechas-facilator-1 {
+    align-self: flex-end;
+  }
+
+  .fechas-facilator-2 {
+    align-self: baseline;
   }
 }
 
@@ -188,6 +202,13 @@
 .fechas-card-titulos {
   font-family: Montserrat-SemiBold;
   font-size: 1.6vw !important;
+  line-height: 3vh;
+  color: #e42078;
+}
+
+.fechas-card-titulos-movil {
+  font-family: Montserrat-SemiBold;
+  font-size: 5vw;
   line-height: 3vh;
   color: #e42078;
 }

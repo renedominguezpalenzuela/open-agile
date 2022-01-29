@@ -103,7 +103,7 @@ const card_ancho = (id, titulo_formulario, date_list) => {
   return (
     <>
       <div className="  pt-5 pb-5 mb-5 d-flex justify-content-center ">
-        <div className="card text-center my-card-ancho">
+        <div className="card text-center my-card-ancho d-none d-md-flex">
           <div className="card-header  ">
             <div className="row titulo-card-crashkurse  d-flex justify-content-center">
               {titulo_formulario}
@@ -132,6 +132,43 @@ const card_ancho = (id, titulo_formulario, date_list) => {
                 </React.Fragment>
               ))}
             </div>
+          </div>
+          <button
+            type="button"
+            className="card-footer card-footer-crashkurse"
+            data-bs-toggle="modal"
+            data-bs-target={`#contactForm${id}`}
+          >
+            JETZT ANMELDEN...
+          </button>
+        </div>
+
+        {/* Menor que md */}
+        <div className="card text-center my-card-ancho d-grid d-md-none">
+          <div className="card-header  ">
+            <div className="row titulo-card-crashkurse  d-flex justify-content-center">
+              {titulo_formulario}
+            </div>
+          </div>
+          <div className="color-body d-flex flex-column align-items-center pb-4">            
+              {date_list.map((UnaParejaFechas, index) => (
+                <div className='col-6 d-flex flex-column mt-4'>
+                  <div className="fechas-card-titulos-movil mb-1">
+                    <React.Fragment key={index}>
+                      <div className="">{`BLOCK ${index + 1}`}</div>
+                    </React.Fragment>
+                  </div>
+                  <div className="d-flex flex-column">
+                    <div className="fechas-card-crashkurse pt-2">
+                      {UnaParejaFechas.date1}
+                    </div>
+                    <div className="fechas-card-crashkurse pt-2">
+                      {UnaParejaFechas.date2}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            
           </div>
           <button
             type="button"

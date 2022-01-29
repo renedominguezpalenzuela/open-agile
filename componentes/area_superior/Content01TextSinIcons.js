@@ -28,7 +28,7 @@ export default function Content01TextSinIcons({
               cursos,
               titulo_largo,
               titulo_muy_largo
-            )}>
+            ) + `${texto1.length > 17 ?" titulo_extra_grande":""}`}>
             {texto1}
           </div>
         )}
@@ -69,7 +69,7 @@ const formato_titulo1 = (
   }
 
   if (vista_movil != undefined && vista_movil) {
-    return "titulo1_vista_movil mt-3 d-flex justify-content-center";
+    clase = "titulo1_vista_movil mt-3 d-flex justify-content-center";
   }
 
   if (
@@ -121,10 +121,6 @@ const formato_titulo1 = (
 // };
 
 const formato_titulo2 = (vista_movil, titulo_muy_largo, team) => {
-  if (titulo_muy_largo != undefined && titulo_muy_largo && vista_movil) {
-    return "font_title_muy_largo2 mt-3 font_title_purple";
-  }
-
   if (titulo_muy_largo != undefined && titulo_muy_largo) {
     return "font_title_muy_largo2 mt-3";
   }
