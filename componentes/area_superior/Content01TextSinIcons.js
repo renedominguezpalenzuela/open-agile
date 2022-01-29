@@ -18,6 +18,7 @@ export default function Content01TextSinIcons({
   titulo_muy_largo,
   team,
   shop,
+  home,
 }) {
   return (
     <>
@@ -33,7 +34,8 @@ export default function Content01TextSinIcons({
                 vista_movil,
                 cursos,
                 titulo_largo,
-                titulo_muy_largo
+                titulo_muy_largo,
+                home
               )
             }>
             {texto1}
@@ -73,7 +75,8 @@ const formato_titulo1 = (
   vista_movil,
   cursos,
   titulo_largo,
-  titulo_muy_largo
+  titulo_muy_largo,
+  home
 ) => {
   let clase = "";
   if (titulo_largo != undefined && titulo_largo) {
@@ -113,7 +116,7 @@ const formato_titulo1 = (
   ) {
     clase = "titulo1_vista_movil mt-3 titulo_grande";
   }
-  return clase;
+  return clase + `${home ? " justify-content-center" : ""}`;
 };
 
 // const formato_titulo1 = (
@@ -157,6 +160,6 @@ const formato_titulo2 = (vista_movil, titulo_muy_largo, team, shop) => {
   if (vista_movil != undefined && vista_movil) {
     return team
       ? "titulo2_vista_movil text-left"
-      : "titulo2_vista_movil text-left";
+      : "titulo2_vista_movil text-center";
   }
 };

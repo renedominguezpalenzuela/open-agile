@@ -61,6 +61,7 @@ export default function AreaSuperior({
   botones_contacto,
   linea_obliqua,
   shop,
+  home,
 }) {
   let vista_movil = false;
 
@@ -172,7 +173,8 @@ export default function AreaSuperior({
               phone,
               linkedin,
               botones_contacto,
-              shop
+              shop,
+              home
             )}
           </div>
         </div>
@@ -244,7 +246,8 @@ const contenido_principal = (
   phone,
   linkedin,
   botones_contacto,
-  shop
+  shop,
+  home
 ) => {
   let id = -1;
 
@@ -276,6 +279,7 @@ const contenido_principal = (
               botones_contacto={botones_contacto}
               team={iconos_team}
               shop={shop}
+              home={home}
             />
           </div>
         </>

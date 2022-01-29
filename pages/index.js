@@ -73,6 +73,7 @@ export default function Home({
             iconos={true}
             area_gris_nueva={true}
             boton_inicio_quiz={true}
+            home={1}
           />
         </div>
 
