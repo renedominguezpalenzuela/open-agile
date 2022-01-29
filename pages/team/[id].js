@@ -132,7 +132,7 @@ export default function Home({ team }) {
           </>
         )}
 
-        <div className="row mt-5 mb-5 d-flex justify-content-center  ">
+        <div className="row mt-1 mb-2 mt-md-3 mb-md-4 d-flex justify-content-center  ">
           <div className="col-md-6 col-9 mt-2">
             <div className="font_texto_inferior_team  ">
               {' '}

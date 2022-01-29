@@ -85,6 +85,12 @@
   /* #686868 */
 }
 
+.organization-text {
+  font-family: Montserrat-SemiBold;
+  color: #24325a;
+  font-size: 4.7vw;
+}
+
 .fuente-titulo-team-tab {
   font-family: Montserrat-SemiBold;
   color: #24325a;

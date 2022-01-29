@@ -872,6 +872,7 @@ ul li.mybullets::before {
   width: 0.8em; /* Also needed for space (tweak if needed) */
   margin-left: -1em; /* Also needed for space (tweak if needed) */
   font-size: 1.5rem;
+  transform: translate(0, 3.3px);
 }
 
 .margen-negativo {
