@@ -48,7 +48,8 @@ export default function Content01TextSinIcons({
               vista_movil,
               titulo_muy_largo,
               team,
-              shop
+              shop,
+              home
             )}>
             <div>{texto2} </div>
 
@@ -147,8 +148,8 @@ const formato_titulo1 = (
 
 // };
 
-const formato_titulo2 = (vista_movil, titulo_muy_largo, team, shop) => {
-  if (shop) return "font_title_muy_largo2 mt-3 force-magenta";
+const formato_titulo2 = (vista_movil, titulo_muy_largo, team, shop, home) => {
+  if (vista_movil && shop) return "font_title_muy_largo2 mt-3 force-magenta";
   if (titulo_muy_largo != undefined && titulo_muy_largo) {
     return "font_title_muy_largo2 mt-3";
   }
@@ -158,8 +159,12 @@ const formato_titulo2 = (vista_movil, titulo_muy_largo, team, shop) => {
   }
 
   if (vista_movil != undefined && vista_movil) {
-    return team
-      ? "titulo2_vista_movil text-left"
-      : "titulo2_vista_movil text-center";
+    if (team) {
+      return "titulo2_vista_movil text-left";
+    } else if (home) {
+      return "titulo2_vista_movil text-center";
+    } else {
+      return "titulo2_vista_movil text-left";
+    }
   }
 };
