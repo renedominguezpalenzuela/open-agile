@@ -184,9 +184,18 @@ export default function AreaSuperior({
 function getFondo(fondo, linea_obliqua) {
   let fondo_por_defecto = "bannermain";
 
+
+  
+
   if (fondo==="bannermain-quiz-questions") {
      fondo_por_defecto ="bannermain-quiz-questions";
   }
+
+  
+  if (fondo==="bannermain-quiz-result") {
+     fondo_por_defecto ="bannermain-quiz-result";
+  }
+
 
   if (fondo === "barco") {
     fondo_por_defecto = "bannermain-quiz";
