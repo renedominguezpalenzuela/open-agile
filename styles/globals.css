@@ -981,31 +981,31 @@ ul li.mybullets3::before {
 
 @media (max-width: 899px) and (min-width: 730px) {
   .alto-team-tab-contenedor {
-    height: 600px !important;
+    height: 700px !important;
   }
 }
 
 @media (max-width: 729px) and (min-width: 570px) {
   .alto-team-tab-contenedor {
-    height: 680px !important;
+    height: 700px !important;
   }
 }
 
 @media (max-width: 569px) and (min-width: 500px) {
   .alto-team-tab-contenedor {
-    height: 720px !important;
+    height: 790px !important;
   }
 }
 
 @media (max-width: 499px) and (min-width: 450px) {
   .alto-team-tab-contenedor {
-    height: 800px !important;
+    height: 860px !important;
   }
 }
 
 @media (max-width: 449px) {
   .alto-team-tab-contenedor {
-    height: 880px !important;
+    height: 1050px !important;
   }
 }
 
@@ -1019,13 +1019,26 @@ ul li.mybullets3::before {
 
 .ubicacion-boton {
   position: absolute;
-  bottom: 10vh;
+  bottom: 5vh;
   left: 10vw;
 }
 
 .ubicacion-boton-team {
   position: absolute;
-  bottom: 10vh;
+  bottom: 5vh;
   left: 10vw;
   /* border: 1px black black; */
+}
+
+@media (max-width: 767px) {
+  .ubicacion-boton {
+    bottom: 3vh;
+  }
+  .ubicacion-boton-team {
+    bottom: 3vh;
+    left: 10vw;
+  }
+  .MuiButtonBase-root.MuiTab-root {
+    font-size: 14px !important;
+  }
 }
