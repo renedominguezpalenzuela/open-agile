@@ -36,11 +36,12 @@ export default function MenuFlotante() {
 
 
 
-    <div className="col-9  me-2 d-flex justify-content-end  ">
+    <div className="col-8  me-2 d-flex justify-content-end  ">
      <h5 id="offcanvasTopLabel" className=" font-title-side-menu pt-2">MENU</h5>   
     </div>
-    <div className="col-1 d-flex justify-content-end me-3 ">
-     <button type="button" id="boton_cerrar_menu" className="btn-close text-reset  me-3" aria-label="Close"></button>
+    <div className="col-2 d-flex justify-content-end ms-2  ">
+     {/* <button type="button" id="boton_cerrar_menu" className="btn-close text-reset  me-3 btn-xl" aria-label="Close"></button> */}
+      <div id="boton_cerrar_menu" className="me-3 font-title-side-menu boton_cerrar_menu_lateral">X</div> 
     </div>  
 
   
@@ -64,6 +65,13 @@ export default function MenuFlotante() {
         <li>
             <a href="/wir" className="nav-link text-truncate">
               <span className="ms-1  font-items-side-menu">TEAM</span>
+            </a>
+        </li>
+
+        
+        <li>
+            <a href="/jobs" className="nav-link text-truncate">
+              <span className="ms-1  font-items-side-menu">JOBS</span>
             </a>
         </li>
 
