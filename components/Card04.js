@@ -73,10 +73,10 @@ const card_estrecho = (id, titulo_formulario, dias, date_list) => {
           <div className="card-body color-body ">
             {date_list.map((UnaParejaFechas, index) => (
               <React.Fragment key={index}>
-                <div className="row  fechas-card-crashkurse d-flex justify-content-center pt-2 m-2">
+                <div className="row  fechas-card-crashkurse fechas-facilator-1 d-flex justify-content-center pt-2 m-2">
                   {UnaParejaFechas.date1}
                 </div>
-                <div className="row fechas-card-crashkurse d-flex justify-content-center pb-2 m-2">
+                <div className="row fechas-card-crashkurse fechas-facilator-2 d-flex justify-content-center pb-2 m-2">
                   {UnaParejaFechas.date2}
                 </div>
               </React.Fragment>

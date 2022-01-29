@@ -83,12 +83,26 @@
     height: 12vh;
   }
   .card-footer {
-    height: 12vh;
+    height: 10vh;
   }
 
   .card-body {
     display: grid;
+    align-content: center;
     align-items: center;
+  }
+
+  .fechas-facilator-1,
+  .fechas-facilator-2 {
+    height: 100% !important;
+  }
+
+  .fechas-facilator-1 {
+    align-self: flex-end;
+  }
+
+  .fechas-facilator-2 {
+    align-self: baseline;
   }
 }
 
