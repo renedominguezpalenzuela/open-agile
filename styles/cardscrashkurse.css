@@ -83,7 +83,7 @@
     height: 12vh;
   }
   .card-footer {
-    height: 10vh;
+    height: 9vh;
   }
 
   .card-body {
@@ -202,6 +202,13 @@
 .fechas-card-titulos {
   font-family: Montserrat-SemiBold;
   font-size: 1.6vw !important;
+  line-height: 3vh;
+  color: #e42078;
+}
+
+.fechas-card-titulos-movil {
+  font-family: Montserrat-SemiBold;
+  font-size: 5vw;
   line-height: 3vh;
   color: #e42078;
 }
