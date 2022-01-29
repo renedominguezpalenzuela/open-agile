@@ -549,12 +549,14 @@ ul.no-bullets {
 @media only screen and (max-width: 767px) {
   .my_card {
     width: 85% !important;
+    margin: auto;
   }
 }
 
 @media only screen and (max-width: 560px) {
   .my_card {
     width: 100% !important;
+    margin: auto;
   }
 }
 
