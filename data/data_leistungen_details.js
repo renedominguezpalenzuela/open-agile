@@ -4,6 +4,7 @@ export const leistungen_details = [
     image: "leistungen/organisationsentwicklung.jpg",
     titulo1: ["LEISTUNGEN"],
     titulo2: ["ORGANISATIONS","ENTWICKLUNG"],
+    titulo:"ORGANISATIONSENTWICKLUNG",
     link: "leistungen/1",
 
     // "titulo2" : "ORGANISATIONSENT-",
@@ -34,6 +35,7 @@ export const leistungen_details = [
 
     titulo1: ["LEISTUNGEN"],
     titulo2: ["INHOUSE TRAINING"],
+    titulo:"INHOUSE TRAINING",
     link: "leistungen/2",
 
     // "titulo1" : "LEISTUNGEN",
@@ -63,6 +65,7 @@ export const leistungen_details = [
     titulo1: ["LEISTUNGEN"],
 
     titulo2: ["COACHING"],
+     titulo:"COACHING",
     link: "leistungen/3",
 
     // "titulo2" : "COACHING",

@@ -75,9 +75,9 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
             onChange={handleChange}
             className="d-block d-md-none"
             variant="scrollable"
-            scrollButtons={false}
+            scrollButtons="auto"
             aria-label="basic tabs example"
-            centered
+            
           >
             <Tab label={`01. ${titulo}`} {...a11yProps(0)} />
             <Tab label="02. BEISPIEL VORGEHEN" {...a11yProps(1)} />

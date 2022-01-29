@@ -124,8 +124,8 @@ function setColor(Y, pagina) {
 
 
    // Cursos 
-  const r = /\/quiz\/[0-9]/;
-  if (r.test(pagina)) {
+  const r1 = /\/quiz\/[0-9]/;
+  if (r1.test(pagina)) {
         color = color_white;
   }
 
