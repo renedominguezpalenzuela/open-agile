@@ -40,6 +40,8 @@ import Checkbox from "@mui/material/Checkbox";
 import IconosIzquierda from "../../components/IconosIzquierda";
 import Footer from '../../components/Footer'
 
+
+
 const styles = {
   ".MuiFormControlLabel-label": {
     textAlign: "justify",
@@ -352,6 +354,16 @@ function Content01andMenuWithQuestions({
                       </Link>
 
                     </div>
+
+                    {/* <div className="my_quiz_boton-home border"> */}
+                      <a href="/" className="  my_quiz_boton-home ">
+
+                          <img className="img-fluid logo-img-quiz"
+                            src={`${servidor_url}/img/logo/5.svg`}
+                          />
+
+                      </a>
+                    {/* </div> */}
 
 
 

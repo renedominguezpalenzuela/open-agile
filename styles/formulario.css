@@ -193,13 +193,13 @@
   justify-self: center;
   /* align-self: flex-start; */
 }
-/* 
+
 .item-check {
   grid-column: 5/ 11;
   grid-row: 6/7;
   justify-self: center;
   align-self: flex-start;
-} */
+}
 
 .ancho-edit {
   width: 13vw !important;
