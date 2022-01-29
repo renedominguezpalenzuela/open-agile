@@ -147,9 +147,9 @@
  
 
   grid-template-columns: 5% 90% 5%;
-  grid-template-rows: 15% 10% auto 5% 12%;
+  grid-template-rows: 12% 7% auto 5% 12%;
   justify-items: center;
-  /* align-items: flex-start; */
+  align-items:start; 
   
   /* background-size: auto, cover; */
   background-size: cover;
@@ -185,9 +185,12 @@
   grid-row: 2/3;
   grid-column: 2/3;
 
-  align-self:flex-end;
+  padding-top: 3vh;
+
+ 
   justify-self: center;
-  /* padding-top: 25px; */
+ 
+  /* align-self: flex-end;  */
   
 }
 
@@ -203,7 +206,7 @@
 .my_quiz_total_preguntas-mobile {
   grid-row: 4/5;
   grid-column: 2/3;
-  align-self: flex-end;
+  /* align-self: flex-end; */
 }
 
 .my_quiz_boton-mobile {
