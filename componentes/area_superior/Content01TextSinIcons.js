@@ -17,24 +17,37 @@ export default function Content01TextSinIcons({
   titulo_largo,
   titulo_muy_largo,
   team,
+  shop,
 }) {
   return (
     <>
-      <div className={`${team ? "mt-5 mb-3 pt-5  pt-md-0 mt-md-0 pb-md-3" : "mt-4 mb-3 pb-3"}`}>
+      <div
+        className={`${
+          team ? "mt-5 mb-3 pt-5  pt-md-0 mt-md-0 pb-md-3" : "mt-4 mb-3 pb-3"
+        }`}>
         {texto1 != undefined && texto1 != "" && (
           <div
-            className={formato_titulo1(
-              vista_movil,
-              cursos,
-              titulo_largo,
-              titulo_muy_largo
-            ) + `${texto1.length > 17 ?" titulo_extra_grande":""}`}>
+            className={
+              muylargo(texto1) +
+              formato_titulo1(
+                vista_movil,
+                cursos,
+                titulo_largo,
+                titulo_muy_largo
+              )
+            }>
             {texto1}
           </div>
         )}
 
         {texto2 != undefined && texto2 != "" && (
-          <div className={formato_titulo2(vista_movil, titulo_muy_largo, team)}>
+          <div
+            className={formato_titulo2(
+              vista_movil,
+              titulo_muy_largo,
+              team,
+              shop
+            )}>
             <div>{texto2} </div>
 
             {texto2a != undefined && texto2a != "" && <> {texto2a} </>}
@@ -44,6 +57,17 @@ export default function Content01TextSinIcons({
     </>
   );
 }
+
+const muylargo = (texto1) => {
+  let aux = texto1.split(" ");
+  let joincad = "";
+  for (let i = aux.length - 1; i >= 0; i--) {
+    joincad += aux[i];
+  }
+
+  if (joincad.length > 17) return "titulo_extra_grande ";
+  return "";
+};
 
 const formato_titulo1 = (
   vista_movil,
@@ -69,7 +93,7 @@ const formato_titulo1 = (
   }
 
   if (vista_movil != undefined && vista_movil) {
-    clase = "titulo1_vista_movil mt-3 d-flex justify-content-center";
+    clase = "titulo1_vista_movil mt-3 d-flex";
   }
 
   if (
@@ -78,7 +102,7 @@ const formato_titulo1 = (
     titulo_muy_largo != undefined &&
     titulo_muy_largo
   ) {
-    clase = "titulo1_vista_movil mt-3 titulo_extra_grande";
+    clase = "titulo1_vista_movil mt-3";
   }
 
   if (
@@ -120,7 +144,8 @@ const formato_titulo1 = (
 
 // };
 
-const formato_titulo2 = (vista_movil, titulo_muy_largo, team) => {
+const formato_titulo2 = (vista_movil, titulo_muy_largo, team, shop) => {
+  if (shop) return "font_title_muy_largo2 mt-3 force-magenta";
   if (titulo_muy_largo != undefined && titulo_muy_largo) {
     return "font_title_muy_largo2 mt-3";
   }
@@ -132,6 +157,6 @@ const formato_titulo2 = (vista_movil, titulo_muy_largo, team) => {
   if (vista_movil != undefined && vista_movil) {
     return team
       ? "titulo2_vista_movil text-left"
-      : "titulo2_vista_movil text-center";
+      : "titulo2_vista_movil text-left";
   }
 };
