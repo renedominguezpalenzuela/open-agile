@@ -120,10 +120,13 @@ function setColor(Y, pagina) {
   const r = /\/crashkurse\/[a-z]*\/[0-9]/;
   if (r.test(pagina)) {
         color = color_magenta;
-  
+  }
 
-   
 
+   // Cursos 
+  const r = /\/quiz\/[0-9]/;
+  if (r.test(pagina)) {
+        color = color_white;
   }
 
 
@@ -158,11 +161,22 @@ function setColor(Y, pagina) {
 
 
 
+  if (boton_contacto_telefono) {
+     boton_contacto_telefono.style.color = color;
+  }
 
-  boton_contacto_telefono.style.color = color;
-  texto_iconos_izquierda.style.color = color;
-  linea_iconos_izquierda.style.color = color;
-  boton_contacto_correo.style.color = color;
+  if (texto_iconos_izquierda) {
+     texto_iconos_izquierda.style.color = color;
+  }
+
+
+  if (linea_iconos_izquierda)   {
+    linea_iconos_izquierda.style.color = color;
+  }
+
+  if (boton_contacto_correo) {
+    boton_contacto_correo.style.color = color;
+  }
 }
 
 

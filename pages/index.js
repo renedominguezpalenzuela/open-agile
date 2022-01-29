@@ -84,7 +84,7 @@ export default function Home({
           botones_configurador={botones_configurador}
           iconos={true}
           area_gris_nueva={true}
-          boton_inicio_quiz={true}
+          // boton_inicio_quiz={true}
         />
 
         <ContentVideo />
@@ -93,12 +93,12 @@ export default function Home({
         <Content02Cursos cursos={cursos} main_page={true} />
 
         {/*imagen de sponsors */}
-        <div class=" d-none  d-md-block">
+        <div className=" d-none  d-md-block">
           <Content03 />
         </div>
 
         {/*imagen de sponsors */}
-        <div class=" d-md-none">
+        <div className=" d-md-none">
           <Content03Carrousel />
         </div>
 
