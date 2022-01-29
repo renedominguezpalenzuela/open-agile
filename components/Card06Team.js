@@ -66,7 +66,7 @@ export default function Card06Team({
             </div>
 
             <div className="col-6 ms-2 mt-2 mb-3 d-flex  align-items-center justify-content-center ">
-              <a href={`/${link}/${id}`}   className="  "> 
+              <a href={`/${link}`}   className="  "> 
                 <button type="button" className="btn ps-3 pe-3 btn-card-team-new  font-btn-card-team rounded-pill  ">
                     {texto_boton} 
                 </button>
