@@ -1,33 +1,30 @@
-
 .my_card-crashkurse {
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    border-radius: 12px;
-    z-index: 3;
-    border: 0px !important;
-    width: 20vw;
-    /* height: 14vw; */
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  }
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  z-index: 3;
+  border: 0px !important;
+  width: 20vw;
+  /* height: 14vw; */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
 
+.my-card-ancho {
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  z-index: 3;
+  border: 0px !important;
+  width: 60vw;
+  /* height: 14vw; */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
 
-
+@media (max-width: 767px) {
   .my-card-ancho {
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    border-radius: 12px;
-    z-index: 3;
-    border: 0px !important;
-    width: 60vw;
-    /* height: 14vw; */
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    width: 80vw !important;
   }
-
-  @media(max-width:767px){
-    .my-card-ancho{
-      width: 80vw!important;
-    }
-  }
+}
 
 .card-footer-crashkurse {
   /* padding: 0.5rem 1rem; */
@@ -36,7 +33,7 @@
   /* border: 1px solid blue!important;  */
 
   /* background-color: rgba(248, 45, 124, 42%) !important; */
-  background-color: #24325a!important;
+  background-color: #24325a !important;
 
   /* -webkit-border-radius: 12px!important; 
     -moz-border-radius: 12px!important; */
@@ -56,11 +53,11 @@
   border: 0px solid #f82d7c;
 }
 
- @media (max-width:767px){
-  .card-footer-crashkurse{
-    font-size: 2.2vw!important;
+@media (max-width: 767px) {
+  .card-footer-crashkurse {
+    font-size: 4vw !important;
   }
- } 
+}
 
 .card-footer-crashkurse:hover {
   color: white !important;
@@ -74,51 +71,62 @@
   /* background-color: rgba(235, 248, 45, 0.7) !important;  */
 }
 
-
 @media (max-width: 767px) {
   .my_card-crashkurse {
-    width: 28vw;
+    align-content: center;
+    width: 80vw;
+    height: 60vh;
+  }
+  .card-header {
+    display: grid;
+    align-content: center;
+    height: 12vh;
+  }
+  .card-footer {
+    height: 12vh;
+  }
+
+  .card-body {
+    display: grid;
+    align-items: center;
   }
 }
 
-
-.modal-dialog{
-  left:50%;
+.modal-dialog {
+  left: 50%;
   margin-left: -35vw;
 }
 
 .ancho-modal-cursos {
- position: relative; 
- align-content: center;
- width: 70vw;
+  position: relative;
+  align-content: center;
+  width: 70vw;
+}
 
- }
-
- @media (min-width:992px){
-  .ancho-modal-cursos{
-    width: 50vw!important;
-  }
-  .modal-dialog{
-    margin-left: -25vw!important;
-  }
- }
-
- .font-title-modal{
-   font-size: 3.6vw!important;
- }
-
-
- @media(max-width:767px){
+@media (min-width: 992px) {
   .ancho-modal-cursos {
-    width: 90vw!important;
+    width: 50vw !important;
   }
-  .modal-dialog{
-    margin-left: -45vw!important;
+  .modal-dialog {
+    margin-left: -25vw !important;
   }
-  .font-title-modal{
-    font-size: 3vw!important;
+}
+
+.font-title-modal {
+  font-size: 3.6vw !important;
+}
+
+@media (max-width: 767px) {
+  .ancho-modal-cursos {
+    width: 90vw !important;
   }
- }
+  .modal-dialog {
+    margin-left: -45vw !important;
+  }
+  .font-title-modal {
+    font-size: 3vw !important;
+  }
+}
 
 .color-body {
   background-color: #e9e9f0 !important;
@@ -126,17 +134,17 @@
 
 .titulo-card-crashkurse {
   font-family: Montserrat-Black;
-  font-size: 1.3vw !important;
+  font-size: 1.3vw;
   color: #243a78;
   text-transform: uppercase;
 }
 
-@media (max-width:767px){
-  .titulo-card-crashkurse{
-    font-size: 2.5vw!important;
+@media (max-width: 767px) {
+  .titulo-card-crashkurse {
+    font-size: 5vw !important;
   }
-  .subtitulo-card-crashkurse{
-    font-size: 2vw!important;
+  .subtitulo-card-crashkurse {
+    font-size: 4vw !important;
   }
 }
 
@@ -147,10 +155,9 @@
   text-transform: uppercase;
 }
 
-
 .subtitulo-card-crashkurse {
   font-family: Montserrat-ExtraBold;
-  font-size: 1vw !important;
+  font-size: 1vw;
   color: #f82d7c;
 }
 
@@ -167,14 +174,14 @@
 
 .fechas-card-crashkurse {
   font-family: Montserrat-SemiBold;
-  font-size: 1.6vw !important;
+  font-size: 1.6vw;
   line-height: 3vh;
   color: #243a78;
 }
 
-@media (max-width: 767px){
-  .fechas-card-crashkurse{
-    font-size: 2.3vw!important;
+@media (max-width: 767px) {
+  .fechas-card-crashkurse {
+    font-size: 6vw !important;
   }
 }
 
@@ -185,9 +192,9 @@
   color: #e42078;
 }
 
-@media (max-width:767px){
-  .fechas-card-titulos{
-    font-size: 2.2vw!important;
+@media (max-width: 767px) {
+  .fechas-card-titulos {
+    font-size: 2.2vw !important;
   }
 }
 

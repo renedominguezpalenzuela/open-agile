@@ -1,31 +1,31 @@
-import React from "react";
-import ModalFormCursos from "./ModalFormCursos";
+import React from 'react'
+import ModalFormCursos from './ModalFormCursos'
 
 export default function Card04({ datos, precio, nombre_curso }) {
   // const classes = useStyles();
 
-  const { id, quartal, date_list, form_title, day, link } = datos;
+  const { id, quartal, date_list, form_title, day, link } = datos
 
-  let date1 = "";
-  let date2 = "";
+  let date1 = ''
+  let date2 = ''
 
-  let dias = "";
+  let dias = ''
 
   if (date_list.length === 1) {
-    date1 = date_list[0].date1;
-    date2 = date_list[0].date2;
+    date1 = date_list[0].date1
+    date2 = date_list[0].date2
   }
 
-  let titulo_especial = false;
+  let titulo_especial = false
 
-  let titulo_formulario = "";
+  let titulo_formulario = ''
 
-  if (form_title != "") {
-    titulo_formulario = form_title;
-    titulo_especial = true;
+  if (form_title != '') {
+    titulo_formulario = form_title
+    titulo_especial = true
   } else {
-    titulo_formulario = `${quartal}. Quartal`;
-    dias = day;
+    titulo_formulario = `${quartal}. Quartal`
+    dias = day
   }
 
   return (
@@ -47,17 +47,17 @@ export default function Card04({ datos, precio, nombre_curso }) {
         nombre_curso={nombre_curso}
       />
     </>
-  );
+  )
 }
 
 const eliminar_anno = (fecha) => {
-  return fecha.substring(0, 6);
-};
+  return fecha.substring(0, 6)
+}
 
 const card_estrecho = (id, titulo_formulario, dias, date_list) => {
   return (
     <>
-      <div className="  pt-5 pb-5 mb-5 d-flex justify-content-center ">
+      <div className="pt-5 pb-md-5 mb-md-5 d-flex justify-content-center ">
         <div className="card text-center my_card-crashkurse ">
           <div className="card-header  ">
             <div className="row titulo-card-crashkurse  d-flex justify-content-center">
@@ -65,7 +65,7 @@ const card_estrecho = (id, titulo_formulario, dias, date_list) => {
             </div>
 
             {dias != undefined && (
-              <div className="row  subtitulo-card-crashkurse   d-flex justify-content-center">
+              <div className="row  subtitulo-card-crashkurse  d-flex justify-content-center">
                 {dias}
               </div>
             )}
@@ -87,16 +87,17 @@ const card_estrecho = (id, titulo_formulario, dias, date_list) => {
           </div>
           <button
             type="button"
-            className="card-footer card-footer-crashkurse"
+            className="card-footer card-footer-crashkurse button-crashkurse"
             data-bs-toggle="modal"
-            data-bs-target={`#contactForm${id}`}>
+            data-bs-target={`#contactForm${id}`}
+          >
             JETZT ANMELDEN...
           </button>
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
 const card_ancho = (id, titulo_formulario, date_list) => {
   return (
@@ -109,7 +110,7 @@ const card_ancho = (id, titulo_formulario, date_list) => {
             </div>
             <div className="row  fechas-card-titulos d-flex justify-content-center pt-2">
               {date_list.map((UnaParejaFechas, index) => (
-                <React.Fragment key={index  }>
+                <React.Fragment key={index}>
                   <div className="col-3 ">{`BLOCK ${index + 1}`}</div>
                 </React.Fragment>
               ))}
@@ -136,11 +137,12 @@ const card_ancho = (id, titulo_formulario, date_list) => {
             type="button"
             className="card-footer card-footer-crashkurse"
             data-bs-toggle="modal"
-            data-bs-target={`#contactForm${id}`}>
+            data-bs-target={`#contactForm${id}`}
+          >
             JETZT ANMELDEN...
           </button>
         </div>
       </div>
     </>
-  );
-};
+  )
+}
