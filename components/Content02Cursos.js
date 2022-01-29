@@ -13,7 +13,7 @@ export default function Content02Cursos({ cursos, main_page }) {
   return (
     <>
       <div
-        id="course_title"
+        id="course"
         className={`${
           main_page
             ? "offset-video row text-center mb-2 crash-container"
@@ -25,7 +25,7 @@ export default function Content02Cursos({ cursos, main_page }) {
         </h5>
       </div>
 
-      <div id="course" className="div_content02a   pb-5 pt-3 g-0">
+      <div  className="div_content02a   pb-5 pt-3 g-0">
         <Card01Lista lista_cards={cursos} total_card_en_row={3} />
       </div>
     </>

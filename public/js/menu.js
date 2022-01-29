@@ -9,6 +9,8 @@ var color = color_white;
 
 
 var boton_contacto_telefono = document.getElementById("boton_contacto_telefono");
+var boton_contacto_correo = document.getElementById("boton_contacto_correo");
+
 var texto_iconos_izquierda = document.getElementById("texto_iconos_izquierda");
 var linea_iconos_izquierda = document.getElementById("linea_iconos_izquierda");
 
@@ -73,14 +75,16 @@ function setColor(Y, pagina) {
 
 
   var Y_Area_SuperiorEnd = 114;
-  var Y_CrashkurseStart = 506;
-  var Y_CrashkurseKardsEnd = 1407;
-  var Y_EmpresasStart = 1399;
-  var Y_Footer = 4134;
+  var Y_CrashkurseStart = 1215;
+  var Y_CrashkurseKardsEnd = 2031;
+ 
+  var Y_Footer = 4850;
+
+  
 
 
   
-  
+    console.log("POS "+Y);
 
 
 
@@ -88,14 +92,19 @@ function setColor(Y, pagina) {
 // Main
   if (pagina === "/") {
 
+   
+
      
     if (boton_contacto_telefono != undefined) {
+
+      
       if (Y < Y_Area_SuperiorEnd) {
         color = color_white;
       }
 
       if (Y >= Y_Area_SuperiorEnd && Y < Y_CrashkurseStart) {
         color = color_magenta;
+      
       }
 
       if (Y >= Y_CrashkurseStart && Y < Y_CrashkurseKardsEnd) {
@@ -104,7 +113,7 @@ function setColor(Y, pagina) {
 
 
 
-      if (Y >= Y_EmpresasStart && Y < Y_Footer) {
+      if (Y >= Y_CrashkurseKardsEnd && Y < Y_Footer) {
         color = color_magenta;
       }
 
