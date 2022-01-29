@@ -17,6 +17,8 @@ export default function MenuKrashkurse({
     link_boton_new = link_boton;
   }
 
+ 
+
   return (
     <>
       <div id="menukurs" className="d-none d-md-block p-4"></div>
