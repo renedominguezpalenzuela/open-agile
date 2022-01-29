@@ -193,13 +193,13 @@
   justify-self: center;
   /* align-self: flex-start; */
 }
-
+/* 
 .item-check {
   grid-column: 5/ 11;
   grid-row: 6/7;
   justify-self: center;
   align-self: flex-start;
-}
+} */
 
 .ancho-edit {
   width: 13vw !important;
@@ -207,15 +207,16 @@
 
 .ancho-boton {
   width: 13vw !important;
+  
 }
 
 .alto-boton {
   height: 41px !important;
 }
-
+/* 
 .item-check .css-ahj2mt-MuiTypography-root {
   text-align: center;
-}
+} */
 
 @media (max-width: 991px) {
   .bannerformulario {
@@ -262,11 +263,35 @@
   }
 
   .item-check {
-    grid-column: 2/ 3;
+    grid-column: 1/ 4;
     grid-row: 8/9;
     justify-self:center ;
     align-self: flex-start;
+    
   }
+
+  @media (max-width: 400px) {
+    .item-check {
+      padding-left: 12vw;
+    }
+  }
+
+  
+  @media (min-width: 401px) and (max-width: 499px){
+    .item-check {
+      padding-left: 16.5vw;
+    }
+  }
+
+  
+  @media (min-width: 500px) and (max-width: 600px){
+    .item-check {
+      padding-left: 3.5vw;
+    }
+  }
+
+
+
 
   .ancho-boton {
     width: 20vw !important;

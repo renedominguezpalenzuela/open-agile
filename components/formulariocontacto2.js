@@ -66,21 +66,23 @@ export default function FormularioContacto2() {
   }
 
   const styles3 = {
-    
+
+    //  marginLeft: '7vw',
+  
     '.MuiFormControlLabel-label': {
       
       fontFamily: 'Montserrat-Regular',
-      fontSize: 12,
+      fontSize: 11,
       color: '#ffffff',
       // paddingLeft: 2
-      marginLeft: '5vw'
+      // marginLeft: '5vw'
       
     },
   }
 
   const stylesCuadrado = {
     color: '#ffffff',
-    left:'4vw',  //contrla distancia entre texto y check box, nueve el checkbox
+    // left:'6vw',  //contrla distancia entre texto y check box, nueve el checkbox
     '&.Mui-checked': { color: '#e42078' },
   }
 
@@ -135,10 +137,10 @@ export default function FormularioContacto2() {
             ANMELDEN
           </button>
         </div>
-        <div className="group  item-check ">
+        <div className=" item-check ">
           <FormControlLabel
             sx={styles3}
-            className="p-1  color_magenta  "
+            className=" color_magenta   "
             control={
               <Checkbox
                 checked={checked1}
