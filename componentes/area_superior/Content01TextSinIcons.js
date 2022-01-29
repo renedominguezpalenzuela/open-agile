@@ -121,6 +121,10 @@ const formato_titulo1 = (
 // };
 
 const formato_titulo2 = (vista_movil, titulo_muy_largo, team) => {
+  if (titulo_muy_largo != undefined && titulo_muy_largo && vista_movil) {
+    return "font_title_muy_largo2 mt-3 font_title_purple";
+  }
+
   if (titulo_muy_largo != undefined && titulo_muy_largo) {
     return "font_title_muy_largo2 mt-3";
   }
