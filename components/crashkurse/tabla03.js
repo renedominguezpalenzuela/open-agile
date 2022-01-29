@@ -33,7 +33,7 @@ export default function Tabla03({
           </div>
 
           {/* Cards */}
-          <div className="row color_background text-center d-flex  justify-content-center ">
+          <div className="row color_background text-center d-flex  justify-content-center pb-5 pb-md-0">
             {crashkurs_date.map((unCard, index) => (
               <div
                 key={index}
