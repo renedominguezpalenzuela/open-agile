@@ -369,11 +369,13 @@
 
 
 .font_quiz_line1 {
-  font-family: Montserrat-Regular;
+  font-family: Montserrat-Bold;
   color: #e42078;
 
-  font-size: 20px;
-  font-weight: 300;
+
+  font-size: 3.8rem;
+  line-height: 1;
+  font-weight: 500;
   /* text-transform: uppercase; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

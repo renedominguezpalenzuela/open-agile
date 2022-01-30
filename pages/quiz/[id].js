@@ -287,7 +287,7 @@ function Content01andMenuWithQuestions({
                 <div className="row  g-0  my_quiz_titulo  ">
                 {titulo != undefined && titulo != "" && (
                   <div className="row  text-center mt-3  ">
-                    <h3 className="font_quiz_line1  "> {titulo}</h3>
+                    <h3 className="font_quiz_line1 font_title_secundario font_centrar font_title_purple "> {titulo}</h3>
                   </div>
                 )}
                 </div>
