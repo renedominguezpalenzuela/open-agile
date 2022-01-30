@@ -61,20 +61,20 @@ export default function Home() {
     "Du erhältst einen unbegrenzten Zugang zu frischem Obst, Getränken und allen Arten von Cerealien",
   ];
 
-  const [windowDimensions, setWindowDimensions] = useState(null);
-
-  function useWindowDimensions() {
-    useEffect(() => {
-      function handleResize() {
-        setWindowDimensions(() => window.innerWidth);
-      }
-
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }, []);
-
-    return windowDimensions > 992;
-  }
+  const [desktop_screen, setDesktop_screen] = useState(true);
+  const handleResize = () => {
+    let ancho_screen = window.innerWidth;
+    if (ancho_screen > 992) {
+      setDesktop_screen(true);
+    } else {
+      setDesktop_screen(false);
+    }
+  };
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <>
@@ -96,7 +96,7 @@ export default function Home() {
           fondo="ajustable"
           texto1={texto1}
           texto2={texto2}
-          titulo_muy_largo={useWindowDimensions()}
+          titulo_muy_largo={desktop_screen}
           area_gris_nueva={true}
         />
 
