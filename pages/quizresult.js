@@ -17,6 +17,7 @@ import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 
 import { servidor_url } from "../config";
 
+
 import { useRecoilValue } from "recoil";
 
 import { respuestasState } from "../componentes/states/state";
@@ -81,7 +82,8 @@ export default function Home() {
         <meta name="description" content="Quiz Result" />
         <link rel="icon" href="/favicon.ico" />
         {/* <script async src="js/chat.js" /> */}
-        <script async src="js/menu.js" />
+        
+          <script async src={`${servidor_url}/js/menu.js`} />
       </Head>
 
       <div id="principal" className="container-fluid g-0">
