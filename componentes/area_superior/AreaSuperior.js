@@ -65,6 +65,8 @@ export default function AreaSuperior({
 }) {
   let vista_movil = false;
 
+  
+
   return (
     <>
       {/*--------------- Mostrar si mayor o igual a lg ≥992px ------------------ */}

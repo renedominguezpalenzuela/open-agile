@@ -30,6 +30,8 @@ import ModalFormCookie from "../components/ModalFormCookie";
 //            Pagina inicial principal
 //----------------------------------------------------------------------------------------------------------
 
+
+
 export default function Home({
   cursos,
   servicios,
@@ -37,6 +39,24 @@ export default function Home({
   botones_configurador,
   vlog,
 }) {
+  const [desktop_screen, setDesktop_screen] = useState(true);
+
+  const handleResize = () =>{
+  let  ancho_screen = window.innerWidth;
+
+  if (ancho_screen > 992) {
+      setDesktop_screen(true);
+    } else {
+      setDesktop_screen(false);
+    }
+  }
+
+  useEffect(() => {   
+   handleResize();
+   window.addEventListener("resize",  handleResize);
+   return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
       <Head>
@@ -52,9 +72,17 @@ export default function Home({
 
         <MenuFlotanteBoton />
 
-        
- 
-        <div className=" d-md-none">
+        {desktop_screen ? (
+          <AreaSuperior
+            fondo="gris"
+            texto1="OPEN AGILE"
+            texto2="FOR BETTER WORK"
+            botones_configurador={botones_configurador}
+            iconos={true}
+            area_gris_nueva={true}
+            boton_inicio_quiz={false}
+          />
+        ) : (
           <AreaSuperior
             fondo="gris"
             texto1="OPEN AGILE"
@@ -65,21 +93,7 @@ export default function Home({
             boton_inicio_quiz={true}
             home={1}
           />
-        </div> 
-
-         <div className=" d-none  d-md-block">
-          <AreaSuperior
-            fondo="gris"
-            texto1="OPEN AGILE"
-            texto2="FOR BETTER WORK"
-            botones_configurador={botones_configurador}
-            iconos={true}
-            area_gris_nueva={true}
-            boton_inicio_quiz={false}
-          />
-        </div> 
-
-        
+        )}
 
         <ContentVideo />
 
@@ -113,9 +127,6 @@ export default function Home({
         </div>
 
         {/*Footer  */}
-
-        
-       
 
         <Footer />
       </div>
