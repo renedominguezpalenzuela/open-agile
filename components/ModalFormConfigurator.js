@@ -173,8 +173,8 @@ export default function ModalFormConfigurator({
   return (
     <>
       {/* <!-- Modal --> */}
-      <div className="modal fade ancho-modalformconfigurator " id={`contactForm${id}`} tabIndex="-1">
-        <div className="modal-dialog">
+      <div className="modal fade" id={`contactForm${id}`} tabIndex="-1">
+        <div className="modal-dialog ancho-modal-cursos modal-dialog-job">
           <div className="modal-content">
             <div className="modal-header">
               <div className="row  ms-2 me-2   w-100 d-flex justify-content-start">
@@ -238,7 +238,7 @@ export default function ModalFormConfigurator({
                 />
               </div>
 
-              <div className="row mt-2 mb-2 ps-3 pe-3 d-flex justify-content-start  texto-email  ">
+              <div className="row mt-2 mb-2 ps-3 pe-3 d-flex justify-content-start  texto-AGBS  ">
                 {/* Wir senden Dir binnen 48h eine Bestätigung und weitere Informationen zu dem Seminar. */}
                 Wir melden uns binnen 48h bei Dir.
               </div>
@@ -281,7 +281,7 @@ export default function ModalFormConfigurator({
               </div>
 
               <div className="row d-flex justify-content-end mt-4 pe-3 mb-2">
-                <div className="col-3">
+                <div className="col-md-3 col-5">
                   <button
                     type="button"
                     className="btn btn-secondary boton_modal_form2 "

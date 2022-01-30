@@ -75,7 +75,6 @@
   .my_card-crashkurse {
     align-content: center;
     width: 80vw;
-    height: 60vh;
   }
   .card-header {
     display: grid;
@@ -139,6 +138,9 @@
   }
   .font-title-modal {
     font-size: 3vw !important;
+  }
+  .modal-dialog-job {
+    top: 9%;
   }
 }
 
