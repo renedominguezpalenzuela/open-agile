@@ -13,7 +13,6 @@ import Texto01 from "../../components/crashkurse/texto01";
 import Tabla01 from "../../components/crashkurse/tabla01";
 import Tabla02 from "../../components/crashkurse/tabla02";
 
-
 import Card01Lista from "../../components/Card01Lista";
 import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
 import TextoBloque01 from "../../components/textobloque01";
@@ -39,17 +38,16 @@ export default function Home({ servicios }) {
   const router = useRouter();
   const { id } = router.query;
 
-  const {
-    titulo2,
-    titulo3,
-    titulo2a,
-    titulo,
-    texto01,
-    texto02,
-    texto03,
-  } = servicios;
+  const { titulo2, titulo3, titulo2a, titulo, texto01, texto02, texto03 } =
+    servicios;
 
-
+  const classOftabs = (id) => {
+    if (id == 1) return " alto-leistungen-tab-contenedor";
+    else if (id == 2) return " alto-leistungen-tab-contenedor-2";
+    else {
+      return " alto-leistungen-tab-contenedor-3";
+    }
+  };
 
   return (
     <>
@@ -64,17 +62,25 @@ export default function Home({ servicios }) {
       {/*Contenedor*/}
 
       <div id="principal" className="container-fluid g-0">
-      <ModalFormCookie id={1} tiempo={10}/>
-     
-      <MenuFlotanteBoton />
-        <AreaSuperior fondo="ajustable" texto1={titulo} titulo_my_largo={true} area_gris_nueva={true} />
+        <ModalFormCookie id={1} tiempo={10} />
 
-        <div className="  mt-5 pb-3 alto-leistungen-tab-contenedor  ">
-      
-          <LeistungenTabs texto01={texto01} texto02={texto02}  texto03={texto03}  titulo={titulo}  />
+        <MenuFlotanteBoton />
+        <AreaSuperior
+          fondo="ajustable"
+          texto1={titulo}
+          titulo_my_largo={true}
+          area_gris_nueva={true}
+        />
+
+        <div className={` mt-5 pb-3 + ${classOftabs(id)}`}>
+          <LeistungenTabs
+            texto01={texto01}
+            texto02={texto02}
+            texto03={texto03}
+            titulo={titulo}
+          />
         </div>
 
-       
         <Footer />
       </div>
 
