@@ -64,6 +64,7 @@ export default function AreaSuperior({
   home,
   no_bottom_margin,
   lei,
+  bes,
 }) {
   let vista_movil = false;
   let bottom_margin = true;
@@ -174,7 +175,8 @@ export default function AreaSuperior({
               botones_contacto,
               shop,
               home,
-              lei
+              lei,
+              bes
             )}
           </div>
         </div>
@@ -252,7 +254,8 @@ const contenido_principal = (
   botones_contacto,
   shop,
   home,
-  lei
+  lei,
+  bes
 ) => {
   let id = -1;
 
@@ -286,6 +289,7 @@ const contenido_principal = (
               shop={shop}
               home={home}
               lei={lei}
+              bes={bes}
             />
           </div>
         </>
