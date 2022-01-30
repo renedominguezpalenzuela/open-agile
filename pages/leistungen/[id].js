@@ -70,6 +70,7 @@ export default function Home({ servicios }) {
           texto1={titulo}
           titulo_my_largo={true}
           area_gris_nueva={true}
+          lei={true}
         />
 
         <div className={` mt-5 pb-3 + ${classOftabs(id)}`}>
