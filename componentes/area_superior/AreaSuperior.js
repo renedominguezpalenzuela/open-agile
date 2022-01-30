@@ -62,19 +62,17 @@ export default function AreaSuperior({
   linea_obliqua,
   shop,
   home,
-  no_bottom_margin
+  no_bottom_margin,
+  lei,
 }) {
   let vista_movil = false;
   let bottom_margin = true;
 
-  if (no_bottom_margin!=undefined || no_bottom_margin===true) {
-    bottom_margin = false
+  if (no_bottom_margin != undefined || no_bottom_margin === true) {
+    bottom_margin = false;
   } else {
-    bottom_margin = true
+    bottom_margin = true;
   }
-
-
-  
 
   return (
     <>
@@ -144,15 +142,12 @@ export default function AreaSuperior({
       </div>
 
       {/* --------------------Vista movil Mostrar si menor a lg<992px  ----------------------------------------*/}
-      <div className={`${bottom_margin?"mb-5":""} fond d-lg-none`}   >
+      <div className={`${bottom_margin ? "mb-5" : ""} fond d-lg-none`}>
         {(vista_movil = true)}
-
 
         <MenuNavBar2 />
         <div className={`${getFondo(fondo)}`}>
-        
           <div className="item-titulo   ">
-          
             {contenido_principal(
               texto1,
               texto2,
@@ -178,7 +173,8 @@ export default function AreaSuperior({
               linkedin,
               botones_contacto,
               shop,
-              home
+              home,
+              lei
             )}
           </div>
         </div>
@@ -192,20 +188,13 @@ export default function AreaSuperior({
 function getFondo(fondo, linea_obliqua) {
   let fondo_por_defecto = "bannermain";
 
-
-
-  
-
-  if (fondo==="bannermain-quiz-questions") {
-     fondo_por_defecto ="bannermain-quiz-questions";
-
+  if (fondo === "bannermain-quiz-questions") {
+    fondo_por_defecto = "bannermain-quiz-questions";
   }
 
-  
-  if (fondo==="bannermain-quiz-result") {
-     fondo_por_defecto ="bannermain-quiz-result";
+  if (fondo === "bannermain-quiz-result") {
+    fondo_por_defecto = "bannermain-quiz-result";
   }
-
 
   if (fondo === "barco") {
     fondo_por_defecto = "bannermain-quiz";
@@ -262,7 +251,8 @@ const contenido_principal = (
   linkedin,
   botones_contacto,
   shop,
-  home
+  home,
+  lei
 ) => {
   let id = -1;
 
@@ -295,14 +285,13 @@ const contenido_principal = (
               team={iconos_team}
               shop={shop}
               home={home}
+              lei={lei}
             />
           </div>
         </>
       )}
 
       <div className="mb-5">
-
-      
         {iconos != undefined && iconos && <Content01Iconos />}
 
         {/*Texto_quiz_result */}
@@ -317,7 +306,7 @@ const contenido_principal = (
           <>
             <div className="row mt-4  font_small_letter_white-quiz-result  justificar">
               {texto_quiz_result.map((unaLinea, index) => (
-                <p key={index}>{unaLinea} aaa</p> 
+                <p key={index}>{unaLinea} aaa</p>
               ))}
             </div>
           </>
