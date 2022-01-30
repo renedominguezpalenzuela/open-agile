@@ -62,8 +62,17 @@ export default function AreaSuperior({
   linea_obliqua,
   shop,
   home,
+  no_bottom_margin
 }) {
   let vista_movil = false;
+  let bottom_margin = true;
+
+  if (no_bottom_margin!=undefined || no_bottom_margin===true) {
+    bottom_margin = false
+  } else {
+    bottom_margin = true
+  }
+
 
   
 
@@ -135,7 +144,7 @@ export default function AreaSuperior({
       </div>
 
       {/* --------------------Vista movil Mostrar si menor a lg<992px  ----------------------------------------*/}
-      <div className="fond mb-5  d-lg-none">
+      <div className={`${bottom_margin?"mb-5":""} fond d-lg-none`}   >
         {(vista_movil = true)}
 
 
@@ -306,9 +315,9 @@ const contenido_principal = (
 
         {texto_quiz_result != undefined && texto_quiz_result.length > 0 && (
           <>
-            <div className="row mt-4  font_small_letter_white  justificar">
+            <div className="row mt-4  font_small_letter_white-quiz-result  justificar">
               {texto_quiz_result.map((unaLinea, index) => (
-                <p key={index}>{unaLinea}</p>
+                <p key={index}>{unaLinea} aaa</p> 
               ))}
             </div>
           </>
