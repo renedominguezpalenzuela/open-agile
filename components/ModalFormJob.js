@@ -140,7 +140,6 @@ export default function ModalFormJob({
     if (event.target.files && event.target.files[0]) {
       const i = event.target.files[0];
 
-      
       setValue4(i.name);
 
       const body = new FormData();
@@ -228,7 +227,11 @@ export default function ModalFormJob({
   return (
     <>
       {/* <!-- Modal --> */}
-      <div className="modal fade" sx={{paddingRight:"0px"}} id={`contactForm${id}`} tabIndex="-1">
+      <div
+        className="modal fade"
+        sx={{ paddingRight: "0px" }}
+        id={`contactForm${id}`}
+        tabIndex="-1">
         <div className="modal-dialog modal-dialog-job">
           <div className="modal-content ancho-modal-cursos">
             <div className="modal-header">
@@ -293,7 +296,7 @@ export default function ModalFormJob({
                 />
               </div>
 
-              <div className="row mt-2 mb-2 ps-3 pe-3 d-flex justify-content-center  texto-email  ">
+              <div className="row mt-2 mb-2 ps-3 pe-3 d-flex justify-content-center  texto-AGBS  ">
                 Wir senden Dir binnen 72h eine Bestätigung und weitere
                 Informationen
               </div>

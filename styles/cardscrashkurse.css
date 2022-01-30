@@ -139,6 +139,9 @@
   .font-title-modal {
     font-size: 3vw !important;
   }
+  .modal-dialog-job {
+    top: 9%;
+  }
 }
 
 .color-body {
