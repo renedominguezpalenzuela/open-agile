@@ -24,7 +24,7 @@ export default function Content05({ datos, color_fondo }) {
           {" "}
           VLOG
         </div>
-        <div className=" row justify-content-center font_card_texto mt-2 ">
+        <div className=" row justify-content-center font_card_texto mt-2 mb-2">
           {" "}
           Open Agile im Dialog
         </div>
@@ -101,7 +101,7 @@ export default function Content05({ datos, color_fondo }) {
                               )}
                             </div>
                             <div>
-                               <div className="card-body text-center">
+                              <div className="card-body text-center">
                                 {unDato.title.map((unTexto, index2) => (
                                   <React.Fragment key={index2}>
                                     <div className="card-text font_card_title_vlog ">
@@ -109,8 +109,7 @@ export default function Content05({ datos, color_fondo }) {
                                     </div>
                                   </React.Fragment>
                                 ))}
-                            
-                              </div> 
+                              </div>
                             </div>
                           </div>
                         </div>
