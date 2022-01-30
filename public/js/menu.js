@@ -82,7 +82,7 @@ function setColor(Y, pagina) {
   var Y_Footer = 4850;
 
   
-
+console.log(pagina);
 
 
 
@@ -91,9 +91,7 @@ function setColor(Y, pagina) {
 // Main
   if (pagina === "/") {
 
-   
-
-     
+        
     if (boton_contacto_telefono != undefined) {
 
       
@@ -135,6 +133,12 @@ function setColor(Y, pagina) {
   const r1 = /\/quiz\/[0-9]/;
   if (r1.test(pagina)) {
         color = color_white;
+  }
+
+
+    const r2 = /\/quizstart/;
+  if (r2.test(pagina)) {
+        color = color_magenta;
   }
 
 

@@ -89,7 +89,8 @@ export default function Home() {
         <AreaSuperior fondo="bannermain-quiz-result" titulo_quiz_result="Ergebnis" texto_quiz_result={mensaje} area_gris_nueva={false} botones_contacto={true} /> 
 
 
-
+  {/*Footer  */}
+        <Footer />
       </div>
 
        <ModalFormConfigurator    titulo="KONTAKTFORMULAR"   frase="Jetzt Kontakt aufnehmen!"     id={1}    />

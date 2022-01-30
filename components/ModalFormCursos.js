@@ -238,7 +238,7 @@ export default function ModalFormCursos({
       {/* <!-- Modal --> */}
       <div
         className="modal fade"
-        style={{ "padding-rigth": "0px !important" }}
+        style={{ "paddingRigth": "0px !important" }}
         id={`contactForm${id}`}
         tabIndex="-1">
         <div className="modal-dialog  mt-md-5 mt-5 pt-4">

@@ -61,8 +61,8 @@ export default function Home() {
         <title>{titulo1 + " " + titulo2}</title>
         <meta name="description" content={titulo1 + " " + titulo2} />
         <link rel="icon" href="/favicon.ico" />
-        {/* <script async src={`${servidor_url}/js/chat.js`} />
-        <script async src={`${servidor_url}/js/menu.js`} /> */}
+        {/* <script async src={`${servidor_url}/js/chat.js`} /> */}
+        <script async src={`${servidor_url}/js/menu.js`} />
       </Head>
 
       {/*Contenedor*/}
