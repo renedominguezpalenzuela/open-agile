@@ -35,6 +35,11 @@
   width: 14vw;
 }
 
+.force_font_color {
+  font-family: Montserrat-Bold !important;
+  color: #e50265 !important;
+}
+
 .titulo1_vista_movil {
   font-family: Montserrat-Regular;
   color: #ffffff;
