@@ -43,10 +43,11 @@
   z-index: 100;
 }
 
-.titulo_extra_grande {
-  font-size: 4.8vw !important;
+@media (max-width: 767px) {
+  .titulo_extra_grande {
+    font-size: 4.8vw !important;
+  }
 }
-
 .titulo2_vista_movil {
   font-family: Montserrat-Bold;
   color: #e50265;

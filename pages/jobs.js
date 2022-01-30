@@ -19,6 +19,7 @@ import BarraConTextoIzquierda from "../components/BarraConTextoIzquierda";
 import Card08Job from "../components/Card08Job";
 import ModalFormCookie from "../components/ModalFormCookie";
 
+import { useState, useEffect } from "react";
 //----------------------------------------------------------------------------------------------------------
 //           CRASHKURSE \ CRASHKURS ZUM AGILE COACH
 //----------------------------------------------------------------------------------------------------------
@@ -60,6 +61,21 @@ export default function Home() {
     "Du erhältst einen unbegrenzten Zugang zu frischem Obst, Getränken und allen Arten von Cerealien",
   ];
 
+  const [windowDimensions, setWindowDimensions] = useState(null);
+
+  function useWindowDimensions() {
+    useEffect(() => {
+      function handleResize() {
+        setWindowDimensions(() => window.innerWidth);
+      }
+
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    return windowDimensions > 992;
+  }
+
   return (
     <>
       <Head>
@@ -80,9 +96,8 @@ export default function Home() {
           fondo="ajustable"
           texto1={texto1}
           texto2={texto2}
-          // titulo_muy_largo={true}
+          titulo_muy_largo={useWindowDimensions()}
           area_gris_nueva={true}
-         
         />
 
         <div className="row d-flex justify-content-center mt-5 mb-5">
