@@ -45,13 +45,13 @@ export default function MenuFlotante() {
             className="nav nav-pills flex-column m-auto mb-0 align-items-end"
             id="menu">
             <li className="nav-item">
-              <a href="/#course" className="nav-link text-truncate">
+              <a href="/#course" className="nav-link text-truncate" id="crashkurse_link">
                 <span className="ms-1  font-items-side-menu ">CRASHKURSE</span>
               </a>
             </li>
 
             <li>
-              <a href="/#services" className="nav-link text-truncate">
+              <a href="/#services" className="nav-link text-truncate" id="leinstungen_link"> 
                 <span className="ms-1  font-items-side-menu">LEISTUNGEN</span>
               </a>
             </li>

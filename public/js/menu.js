@@ -8,6 +8,9 @@ var linea_iconos_izquierda = document.getElementById("linea_iconos_izquierda");
 var boton_contacto_telefono = document.getElementById( "boton_contacto_telefono");
 var boton_contacto_correo = document.getElementById("boton_contacto_correo");
 
+var crashkurse_link = document.getElementById("crashkurse_link");
+var leinstungen_link = document.getElementById("leinstungen_link");
+
 var color_magenta = "#e42078";
 var color_white = "#ffffff";
 var color = color_magenta;
@@ -59,6 +62,17 @@ window.addEventListener("load", (event) => {
       document.getElementById("panel_abrir_menu").style.visibility = "hidden";
       document.getElementById("principal").classList.add("myblur");
     });
+  }
+
+  if (leinstungen_link) {
+
+    leinstungen_link.addEventListener("click", cerrar_menu_lateral);
+  }
+
+  
+  if (crashkurse_link) {
+
+    crashkurse_link.addEventListener("click", cerrar_menu_lateral);
   }
 });
 
@@ -160,3 +174,13 @@ window.addEventListener( "scroll", function () {
   },
   false
 );
+
+
+ function cerrar_menu_lateral(e) {
+
+   
+        document.getElementById("mySidepanel").style.width = "0";
+        document.getElementById("panel_abrir_menu").style.visibility =
+          "visible";
+        document.getElementById("principal").classList.remove("myblur");
+      };
