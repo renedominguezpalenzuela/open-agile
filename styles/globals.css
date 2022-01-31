@@ -883,7 +883,7 @@ ul li.mybullets::before {
   color: #f82d7c; /* Change the color */
   font-weight: bold; /* If you want it to be bold */
   display: inline-block; /* Needed to add space between the bullet and the text */
-  width: 0.8em; /* Also needed for space (tweak if needed) */
+  width: 0.9em; /* Also needed for space (tweak if needed) */
   margin-left: -1em; /* Also needed for space (tweak if needed) */
   font-size: 1.5rem;
   transform: translate(0, 3.3px);

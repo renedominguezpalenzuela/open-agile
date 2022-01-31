@@ -86,12 +86,12 @@ export default function Home({ team }) {
               </div>
             </div>
 
-            <div className="row d-flex justify-content-center ">
+            <div className="row d-flex justify-content-center ms-3 ">
               <div className="col-9 col-md-6 mt-2">
                 <ul>
                   {erfahrung.map((unErfarung, index) => (
                     <div key={index} className="font_erfahrum_detalles  ">
-                      <li className="mybullets"> {unErfarung} </li>
+                      <li className="mybullets2"> {unErfarung} </li>
                     </div>
                   ))}
                 </ul>
@@ -112,13 +112,13 @@ export default function Home({ team }) {
               </div>
             </div>
 
-            <div className="row d-flex justify-content-center ">
-              <div className="col-md-6 col-9 mt-2">
+            <div className="row d-flex justify-content-center ms-3">
+              <div className="col-md-6 col-9 mt-2 ">
                 <ul>
                   {weiterbildungen.map((unWeiterbildungen, index) => (
                     <div key={index} className="font_erfahrum_detalles  ">
                       {/* • {unWeiterbildungen} */}
-                      <li className="mybullets"> {unWeiterbildungen} </li>
+                      <li className="mybullets2"> {unWeiterbildungen} </li>
                     </div>
                   ))}
                 </ul>
