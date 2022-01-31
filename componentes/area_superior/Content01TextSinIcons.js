@@ -126,7 +126,8 @@ const formato_titulo1 = (
   return (
     clase +
     `${home ? " justify-content-center" : ""}` +
-    `${(lei || bes) && vista_movil ? " force_font_color" : ""}`
+    `${lei && vista_movil ? " force_font_color" : ""}` +
+    `${bes && vista_movil ? " force_font_color" : ""}`
   );
 };
 
