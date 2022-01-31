@@ -249,8 +249,11 @@
 }
 
 .my_quiz_boton-mobile {
+  position: relative;
   grid-row: 5/6;
-  grid-column: 2/3;
+  grid-column: 1/4;
+  align-self: center;
+  top:-3.5vh;
 }
 
 
@@ -259,7 +262,7 @@
   grid-row: 5/6;
   grid-column: 2/3;
   justify-self: start;
-  align-self: start;
+  align-self: center;
   top:-3.5vh;
 }
 
