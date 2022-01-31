@@ -310,7 +310,7 @@ const contenido_principal = (
           <>
             <div className="row mt-4  font_small_letter_white-quiz-result  justificar">
               {texto_quiz_result.map((unaLinea, index) => (
-                <p key={index}>{unaLinea} aaa</p>
+                <p key={index}>{unaLinea} </p>
               ))}
             </div>
           </>
