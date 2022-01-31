@@ -56,9 +56,10 @@ export default function Home() {
 
   const subtitulo3 = 'Empowerment und Entwicklung'
   const texto03 = [
-    'Was für viele selbstverständlich ist, kann innerhalb der Zusammenarbeit aus opportunistischen Gründen untergehen.',
-    'Im unternehmerischen Kontext bedeutet das für Beschäftigte den Willen zu besitzen, sich kontinuierlich weiterzuentwickeln. Für Open Agile bedeutet das, ein hohes Maß an Befähigungsangeboten bereitzustellen.',
-    'Daneben setzen wir auf regelmäßige Retrospektiven im Team, Supervision und kollegiale Fallberatungen.',
+    'Selbstorganisation beruht im Grundsatz auf soziokratischen Werten. Das fordert allerdings von allen Mitarbeitenden eine hohe fachliche- und vor allen Dingen soziale Kompetenz ein.',
+    'Im unternehmerischen Kontext bedeutet das für Beschäftigte den Willen zu besitzen, sich kontinuierlich weiterzuentwickeln.',
+    'Für Open Agile bedeutet das, ein hohes Maß an Befähigungsangeboten bereitzustellen. Daneben setzen wir auf regelmäßige Retrospektiven im Team, Supervision und kollegiale Fallberatungen.'
+    
   ]
 
   const subtitulo4 = 'Transparenz'

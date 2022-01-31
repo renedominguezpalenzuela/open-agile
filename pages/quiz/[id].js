@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 
 import MenuFlotante from "../../components/MenuFlotante";
-import Footer from "../../components/Footer";
 
 import Content02Cursos from "../../components/Content02Cursos";
 import Content03 from "../../components/Content03";
@@ -38,11 +37,20 @@ import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import Checkbox from "@mui/material/Checkbox";
 import IconosIzquierda from "../../components/IconosIzquierda";
+import Footer from "../../components/Footer";
 
 const styles = {
   ".MuiFormControlLabel-label": {
     textAlign: "justify",
     fontSize: "0.9rem",
+    color: "white",
+  },
+};
+
+const styles_mobile = {
+  ".MuiFormControlLabel-label": {
+    textAlign: "justify",
+    fontSize: "1.85vh",
     color: "white",
   },
 };
@@ -110,13 +118,11 @@ export default function Home({ quiz, todas_preguntas }) {
         <title>{"Quiz"}</title>
         <meta name="description" content="Quiz" />
         <link rel="icon" href="/favicon.ico" />
-        {/* <script async src={`${servidor_url}/js/chat.js`} /> */}
+        {/*<script async src={`${servidor_url}/js/chat.js`} /> */}
         <script async src={`${servidor_url}/js/menu.js`} />
       </Head>
 
-      {/*Contenedor*/}
-
-      <div className=" d-none  d-md-block">
+      <div className="d-none  d-md-block">
         <div id="principal" className="bannermain-quiz-questions ">
           <MenuFlotanteBoton />
           <div className="item-logo  d-flex align-items-center justify-content-center">
@@ -130,7 +136,6 @@ export default function Home({ quiz, todas_preguntas }) {
           <div className="item-boton d-flex align-items-center justify-content-center">
             <BotonAgileCheck />
           </div>
-          {/* </div> */}
 
           <Content01andMenuWithQuestions
             id={id}
@@ -140,16 +145,15 @@ export default function Home({ quiz, todas_preguntas }) {
             next_link={next_link}
             total_questions={total_preguntas}
           />
-
           <IconosIzquierda />
         </div>
 
         <MenuFlotante />
+        <Footer />
       </div>
 
       <div className="  d-md-none">
         <div id="principal" className=" ">
-        
           <Content01andMenuWithQuestions
             id={id}
             question={question}
@@ -158,6 +162,7 @@ export default function Home({ quiz, todas_preguntas }) {
             next_link={next_link}
             total_questions={total_preguntas}
           />
+          <Footer />
         </div>
       </div>
     </>
@@ -183,6 +188,9 @@ export const getServerSideProps = async (context) => {
   };
 };
 
+//-------------------------------------------------------------------------------------------------------------------
+//----------------- Dibuja el titulo, la pregunta, los checkboxes -------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------------
 function Content01andMenuWithQuestions({
   id,
   question,
@@ -245,76 +253,79 @@ function Content01andMenuWithQuestions({
     setChecked4(false);
   }, [router.asPath]);
 
+  const checkboxes = (estilo_a_aplicar) => {
+    return (
+      <>
+        <div className="row   d-flex justify-content-start">
+          <FormControlLabel
+            className="p-1"
+            sx={estilo_a_aplicar}
+            control={
+              <Checkbox
+                checked={checked1}
+                value="1"
+                color="primary"
+                onChange={handleChange1}
+                sx={stylesCuadrado}
+              />
+            }
+            label={answers[0].answer}
+          />
+        </div>
 
-  const checkboxes=()=>{
-    return( <>
-    
-     <div className="row   d-flex justify-content-start">
-                <FormControlLabel
-                  className="p-1"
-                  sx={styles}
-                  control={
-                    <Checkbox
-                      checked={checked1}
-                      value="1"
-                      color="primary"
-                      onChange={handleChange1}
-                      sx={stylesCuadrado}
-                    />
-                  }
-                  label={answers[0].answer}
-                />
-              </div>
-              <div className="row   d-flex justify-content-start">
-                <FormControlLabel
-                  className="p-1"
-                  sx={styles}
-                  control={
-                    <Checkbox
-                      checked={checked2}
-                      value="2"
-                      color="primary"
-                      onChange={handleChange2}
-                      sx={stylesCuadrado}
-                    />
-                  }
-                  label={answers[1].answer}
-                />
-              </div>
-              <div className="row  d-flex justify-content-start">
-                <FormControlLabel
-                  className="p-1"
-                  sx={styles}
-                  control={
-                    <Checkbox
-                      checked={checked3}
-                      value="3"
-                      color="primary"
-                      onChange={handleChange3}
-                      sx={stylesCuadrado}
-                    />
-                  }
-                  label={answers[2].answer}
-                />
-              </div>
-              <div className="row  d-flex justify-content-start">
-                <FormControlLabel
-                  className="p-1"
-                  sx={styles}
-                  control={
-                    <Checkbox
-                      checked={checked4}
-                      value="4"
-                      color="primary"
-                      onChange={handleChange4}
-                      sx={stylesCuadrado}
-                    />
-                  }
-                  label={answers[3].answer}
-                />
-              </div>
-    </>)
-  }
+        <div className="row   d-flex justify-content-start">
+          <FormControlLabel
+            className="p-1"
+            sx={estilo_a_aplicar}
+            control={
+              <Checkbox
+                checked={checked2}
+                value="2"
+                color="primary"
+                onChange={handleChange2}
+                sx={stylesCuadrado}
+              />
+            }
+            label={answers[1].answer}
+          />
+        </div>
+
+        <div className="row  d-flex justify-content-start">
+          <FormControlLabel
+            className="p-1"
+            sx={estilo_a_aplicar}
+            control={
+              <Checkbox
+                checked={checked3}
+                value="3"
+                color="primary"
+                onChange={handleChange3}
+                sx={stylesCuadrado}
+              />
+            }
+            label={answers[2].answer}
+          />
+        </div>
+
+        <div className="row  d-flex justify-content-start">
+          <FormControlLabel
+            className="p-1"
+            sx={estilo_a_aplicar}
+            control={
+              <Checkbox
+                checked={checked4}
+                value="4"
+                color="primary"
+                onChange={handleChange4}
+                sx={stylesCuadrado}
+              />
+            }
+            label={answers[3].answer}
+          />
+        </div>
+      </>
+    );
+  };
 
   return (
     <>
@@ -324,12 +335,15 @@ function Content01andMenuWithQuestions({
         <div className="row  g-0  my_quiz_titulo  ">
           {titulo != undefined && titulo != "" && (
             <div className="row  text-center mt-3  ">
-              <h3 className="font_quiz_line1  "> {titulo}</h3>
+              <h3 className="font_quiz_line1 font_title_secundario font_centrar font_title_purple ">
+                {" "}
+                {titulo}
+              </h3>
             </div>
           )}
         </div>
 
-        <div className="row  g-0  my_quiz_pregunta ">
+        <div className="row  g-0  my_quiz_pregunta pt-4 ">
           {question != undefined && question != "" && (
             <div className="row  text-center   ">
               <h6 className="font_second_line3  "> {question}</h6>
@@ -338,10 +352,10 @@ function Content01andMenuWithQuestions({
         </div>
 
         <div className="row text-center mt-5 my_quiz_respuestas w-100  ">
-          <div id="altcontainer"  className="row   d-flex align-items-start justify-content-center ">
-            <div className={ancho_preguntas(answers)}>
-             {checkboxes()}
-            </div>
+          <div
+            id="altcontainer"
+            className="row   d-flex align-items-start justify-content-center ">
+            <div className={ancho_preguntas(answers)}>{checkboxes(styles)}</div>
           </div>
         </div>
 
@@ -363,7 +377,7 @@ function Content01andMenuWithQuestions({
       </div>
 
       {/* -------------- MOBIL ------------------------------------ */}
-      <div className="  d-md-none bannermain-quiz-questions-mobile">
+      <div className="  d-md-none bannermain-quiz-questions-mobile ">
         <div className="  my_quiz_titulo-mobile  ">
           {titulo != undefined && titulo != "" && (
             <h3 className="font_quiz_line1  "> {titulo}</h3>
@@ -371,37 +385,39 @@ function Content01andMenuWithQuestions({
         </div>
 
         <div className=" my_quiz_pregunta-mobile ">
-          {question != undefined && question != "" && (          
-              <div className="font_second_line3 text-center "> {question}</div>         
+          {question != undefined && question != "" && (
+            <div className="font_second_line3 text-center "> {question}</div>
           )}
         </div>
 
-        <div className="  my_quiz_respuestas-mobile ">
-          {checkboxes()}
-        </div> 
+        <div className="  my_quiz_respuestas-mobile  ">
+          {checkboxes(styles_mobile)}
+        </div>
 
-         <div className=" text-center texto_total_preguntas my_quiz_total_preguntas-mobile">
+        <div className=" text-center texto_total_preguntas my_quiz_total_preguntas-mobile">
           {id} / {total_questions}
         </div>
 
-
-          <div className=" my_quiz_boton-mobile ">
-         
-            <Link href={`${next_link}`} className=" d-flex align-items-start ">
-              <button
-                type="button"
-                className=" btn     btn-card font-btn-card rounded-pill  ">
-                Next
-              </button>
-            </Link>
-         
+        <div className=" my_quiz_boton-mobile ">
+          <a href={`${next_link}`} className="  ">
+            <button
+              type="button"
+              className=" btn  ps-4 pe-4   btn-card font-btn-card-quiz rounded-pill  ">
+              Next
+            </button>
+          </a>
         </div>
 
-
+        <div className="my_quiz_boton-home ">
+          <a href="/" className="   ">
+            <img
+              className=" logo-img-quiz"
+              src={`${servidor_url}/img/logo/5.svg`}
+            />
+          </a>
+        </div>
 
       </div>
     </>
   );
 }
-
-

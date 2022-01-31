@@ -1,4 +1,4 @@
-import Card04 from '../../components/Card04'
+import Card04 from "../../components/Card04";
 
 export default function Tabla03({
   crashkurs_date_title,
@@ -17,14 +17,14 @@ export default function Tabla03({
         <>
           <div className="row mt-2 mb-4   " id="dates_section">
             <div className="titulo1-tabla3-01 text-center ">
-              {titulo2a === 'MITBESTIMMUNG IN DER AGILEN ARBEITSWELT' ? (
+              {titulo2a === "MITBESTIMMUNG IN DER AGILEN ARBEITSWELT" ? (
                 <>CRASHKURS {titulo2a}</>
               ) : (
                 <span>WERDE JETZT {titulo2a}</span>
               )}
             </div>
             <div className="titulo1-tabla3-02 text-center ">
-              {titulo2a === 'MITBESTIMMUNG IN DER AGILEN ARBEITSWELT' ? (
+              {titulo2a === "MITBESTIMMUNG IN DER AGILEN ARBEITSWELT" ? (
                 <>MELDE DICH ZUM KURS AN</>
               ) : (
                 <>UND MELDE DICH ZUM KURS AN</>
@@ -38,9 +38,8 @@ export default function Tabla03({
               <div
                 key={index}
                 className={`  ${clases_ancho_columna_tarjeta(
-                  crashkurs_date,
-                )}  ms-3 me-3 `}
-              >
+                  crashkurs_date
+                )}  ms-3 me-3 `}>
                 <Card04
                   key={unCard.id}
                   datos={unCard}
@@ -53,9 +52,9 @@ export default function Tabla03({
         </>
       )}
     </>
-  )
+  );
 }
 
 const clases_ancho_columna_tarjeta = (crashkurs_date) => {
-  return crashkurs_date.length <= 1 ? 'col-lg-10' : 'col-lg-2 col-md-5'
-}
+  return crashkurs_date.length <= 1 ? "col-lg-10" : "col-lg-2 col-md-5";
+};

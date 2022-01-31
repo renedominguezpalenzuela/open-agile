@@ -17,24 +17,49 @@ export default function Content01TextSinIcons({
   titulo_largo,
   titulo_muy_largo,
   team,
+  shop,
+  home,
+  lei,
+  bes,
 }) {
   return (
     <>
-      <div className={`${team ? "mt-5 mb-3 pt-5  pt-md-0 mt-md-0 pb-md-3" : "mt-4 mb-3 pb-3"}`}>
+      <div
+        className={`${
+          team ? "mt-5 mb-3 pt-5  pt-md-0 mt-md-0 pb-md-3" : "mt-4 mb-3 pb-3"
+        }`}>
         {texto1 != undefined && texto1 != "" && (
           <div
             className={formato_titulo1(
               vista_movil,
               cursos,
               titulo_largo,
-              titulo_muy_largo
+              titulo_muy_largo,
+              home,
+              lei,
+              bes
             )}>
-            {texto1}
+            {formatText(texto1) == "ORGANISATIONS" ? (
+              <p>
+                ORGANISATIONS
+                <br />
+                ENTWICKLUNG
+              </p>
+            ) : (
+              texto1
+            )}
           </div>
         )}
 
         {texto2 != undefined && texto2 != "" && (
-          <div className={formato_titulo2(vista_movil, titulo_muy_largo, team)}>
+          <div
+            className={formato_titulo2(
+              vista_movil,
+              titulo_muy_largo,
+              team,
+              shop,
+              home
+            )}>
             <div>{texto2} </div>
 
             {texto2a != undefined && texto2a != "" && <> {texto2a} </>}
@@ -45,11 +70,33 @@ export default function Content01TextSinIcons({
   );
 }
 
+const formatText = (texto1) => {
+  let aux = texto1.toUpperCase();
+  if (aux == "ORGANISATIONSENTWICKLUNG") {
+    aux = "ORGANISATIONS";
+  }
+
+  return aux;
+};
+// const muylargo = (texto1) => {
+//   let aux = texto1.split(" ");
+//   let joincad = "";
+//   for (let i = aux.length - 1; i >= 0; i--) {
+//     joincad += aux[i];
+//   }
+
+//   if (joincad.length > 17) return "titulo_extra_grande ";
+//   return "";
+// };
+
 const formato_titulo1 = (
   vista_movil,
   cursos,
   titulo_largo,
-  titulo_muy_largo
+  titulo_muy_largo,
+  home,
+  lei,
+  bes
 ) => {
   let clase = "";
   if (titulo_largo != undefined && titulo_largo) {
@@ -69,7 +116,7 @@ const formato_titulo1 = (
   }
 
   if (vista_movil != undefined && vista_movil) {
-    return "titulo1_vista_movil mt-3 d-flex justify-content-center";
+    clase = "titulo1_vista_movil mt-3 d-flex";
   }
 
   if (
@@ -78,7 +125,7 @@ const formato_titulo1 = (
     titulo_muy_largo != undefined &&
     titulo_muy_largo
   ) {
-    clase = "titulo1_vista_movil mt-3 titulo_extra_grande";
+    clase = "titulo1_vista_movil mt-3";
   }
 
   if (
@@ -89,7 +136,12 @@ const formato_titulo1 = (
   ) {
     clase = "titulo1_vista_movil mt-3 titulo_grande";
   }
-  return clase;
+  return (
+    clase +
+    `${home ? " justify-content-center" : ""}` +
+    `${lei && vista_movil ? " force_font_color" : ""}` +
+    `${bes && vista_movil ? " force_font_color" : ""}`
+  );
 };
 
 // const formato_titulo1 = (
@@ -120,11 +172,8 @@ const formato_titulo1 = (
 
 // };
 
-const formato_titulo2 = (vista_movil, titulo_muy_largo, team) => {
-  if (titulo_muy_largo != undefined && titulo_muy_largo && vista_movil) {
-    return "font_title_muy_largo2 mt-3 font_title_purple";
-  }
-
+const formato_titulo2 = (vista_movil, titulo_muy_largo, team, shop, home) => {
+  if (vista_movil && shop) return "font_title_muy_largo2 mt-3 force-magenta";
   if (titulo_muy_largo != undefined && titulo_muy_largo) {
     return "font_title_muy_largo2 mt-3";
   }
@@ -134,8 +183,12 @@ const formato_titulo2 = (vista_movil, titulo_muy_largo, team) => {
   }
 
   if (vista_movil != undefined && vista_movil) {
-    return team
-      ? "titulo2_vista_movil text-left"
-      : "titulo2_vista_movil text-center";
+    if (team) {
+      return "titulo2_vista_movil text-left";
+    } else if (home) {
+      return "titulo2_vista_movil text-center";
+    } else {
+      return "titulo2_vista_movil text-left";
+    }
   }
 };

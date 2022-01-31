@@ -21,7 +21,7 @@ import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 //----------------------------------------------------------------------------------------------------------
 
 export default function Home() {
-  const titulo1 = "Wie agil ist eure";
+  const titulo1 = "Wie agil ist Eure";
   const titulo2 = "Zusammenarbeit?";
   const titulo2a = "";
 
@@ -61,15 +61,23 @@ export default function Home() {
         <title>{titulo1 + " " + titulo2}</title>
         <meta name="description" content={titulo1 + " " + titulo2} />
         <link rel="icon" href="/favicon.ico" />
-        {/* <script async src={`${servidor_url}/js/chat.js`} />
-        <script async src={`${servidor_url}/js/menu.js`} /> */}
+        {/* <script async src={`${servidor_url}/js/chat.js`} /> */}
+        <script async src={`${servidor_url}/js/menu.js`} />
       </Head>
 
       {/*Contenedor*/}
 
       <div id="principal" className="container-fluid g-0">
         <MenuFlotanteBoton />
-        <AreaSuperior fondo="barco" texto1={titulo1} texto2={titulo2} texto2a={titulo2a} boton_inicio_quiz={true} area_gris_nueva={false} linea_obliqua={true} />
+        <AreaSuperior
+          fondo="barco"
+          texto1={titulo1}
+          texto2={titulo2}
+          texto2a={titulo2a}
+          boton_inicio_quiz={true}
+          area_gris_nueva={false}
+          linea_obliqua={true}
+        />
 
         <TextoBloque01 titulo2="" texto_parrafo_array={texto02} />
 
@@ -82,7 +90,7 @@ export default function Home() {
             <button
               type="button"
               className="btn p-3 ms-2 me-2 w-50 h-100 btn-card font-btn-card rounded-pill  ">
-             JETZT CHECK STARTEN 
+              JETZT CHECK STARTEN
             </button>
           </Link>
         </div>

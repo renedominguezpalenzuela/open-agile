@@ -76,7 +76,7 @@ export default function Home({ curso }) {
           <MenuKraskurse link_beschreibung={link_beschreibung} link_vorteile={link_vorteile} link_inhalte={link_inhalte}    link_leistungen={link_leistungen}
               link_kosten={link_kosten}  link_termine={link_termine_new} link_pdf={link_pdf} link_boton={link_boton}/>
           </div>
-          <div className="col-md-7 pt-5  pe-5">
+          <div className="col-md-7 pt-5  pe-5" id="section_vorteile">
 
             <KurseContent01
               imagen={image_vorteile}

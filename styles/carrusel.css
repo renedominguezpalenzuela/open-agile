@@ -1,119 +1,114 @@
-
 .alto_carrusel {
-    position: relative;
-    height:60vh;
-    min-height: 500px;
-  }
+  position: relative;
 
-  @media(max-width:402px){
-    .alto_carrusel{
-      min-height: 360px!important;
-    }
-  }
-  
-  @media(min-width:403px) and (max-width:421px){
-    .alto_carrusel{
-      min-height: 400px!important;
-    }
-  }
+  min-height: 500px;
+}
 
-  @media(min-width:422px) and (max-width:510px){
-    .alto_carrusel{
-      min-height: 400px!important;
-    }
+@media (max-width: 402px) {
+  .alto_carrusel {
+    min-height: 300px !important;
   }
-
-  @media(min-width:511px) and (max-width:567px){
-    .alto_carrusel{
-      min-height: 450px!important;
-    }
+  .carousel-inner {
+    height: 350px;
   }
+}
 
-  @media(min-width:705px) and (max-width:767px){
-    .alto_carrusel{
-      min-height: 530px!important;
-    }
+@media (min-width: 403px) and (max-width: 421px) {
+  .alto_carrusel {
+    min-height: 400px !important;
   }
-
-  @media(min-width:768px) and (max-width:1078px){
-    .alto_carrusel{
-      min-height: 450px!important;
-    }
+  .carousel-inner {
+    height: 300px;
   }
+}
 
- 
-
-  .zindex-3000 {
-    z-index: 3000!important;
+@media (min-width: 422px) and (max-width: 510px) {
+  .alto_carrusel {
+    min-height: 400px !important;
   }
+}
+
+@media (min-width: 511px) and (max-width: 567px) {
+  .alto_carrusel {
+    min-height: 450px !important;
+  }
+}
+
+@media (min-width: 705px) and (max-width: 767px) {
+  .alto_carrusel {
+    min-height: 530px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1078px) {
+  .alto_carrusel {
+    min-height: 450px !important;
+  }
+}
+
+.zindex-3000 {
+  z-index: 3000 !important;
+}
 
 .img_carrusel {
   position: relative;
-    /* left: -420px; */
-    left: -43vw;
-    width: 33vw;
-    height: 100%;
-}  
-
-
+  /* left: -420px; */
+  left: -43vw;
+  width: 33vw;
+  height: 100%;
+}
 
 .img_carrusel-team {
   position: relative;
-  
-  top:-10px;
+
+  top: -10px;
   /* left: -420px; */
   left: -33vw;
   width: 33vw;
   height: 100%;
-}  
+}
 
 .video_carrusel {
   position: relative;
   /* top: -0vw; */
-   left: -6vw;  
-  
+  left: -6vw;
+
   width: 45vw;
   /* height: 100%; */
-}  
+}
 
-   .contenido_card {
-     position: relative;
-     left: 3vw; 
-     top: -26vw; 
-     width: 35vw; 
-     height: 145vw;    
-  }
-   
+.contenido_card {
+  position: relative;
+  left: 3vw;
+  top: -26vw;
+  width: 35vw;
+  height: 145vw;
+}
 
-  .contenido_card_team {
-    position: relative;
-    left: 3vw; 
-    top: -32vw; 
-    width: 35vw; 
-    height: 145vw;    
- }
-  
+.contenido_card_team {
+  position: relative;
+  left: 3vw;
+  top: -32vw;
+  width: 35vw;
+  height: 145vw;
+}
 
+.dimension_card_carrusel_team {
+  /* left: 25px; */
+  left: 3vw;
+  position: relative;
+  max-height: 39vw;
+  width: 45vw;
+  /* height: 80vh; */
+}
 
+/* Sponsors Carrousel */
 
-  
-  .dimension_card_carrusel_team {
-    /* left: 25px; */
-    left:3vw;
-    position: relative;
-    max-height: 39vw; 
-    width:45vw ;
-    /* height: 80vh; */
-  }
-  
-  
-  /* Sponsors Carrousel */
-
-  .content03Carrousel {
-    position:relative;
-    /* height: 60%; */
-    top: -9vh;
-  }
-  .altoCarrousel3 {
-    height: 50vh;
-  }
+.content03Carrousel {
+  position: relative;
+  /* height: 60%; */
+  top: -9vh;
+}
+.altoCarrousel3 {
+  height: 50vh;
+}

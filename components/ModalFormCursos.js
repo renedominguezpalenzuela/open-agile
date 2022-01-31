@@ -236,7 +236,11 @@ export default function ModalFormCursos({
   return (
     <>
       {/* <!-- Modal --> */}
-      <div className="modal fade pr-0" id={`contactForm${id}`} tabIndex="-1">
+      <div
+        className="modal fade"
+        style={{ "paddingRigth": "0px !important" }}
+        id={`contactForm${id}`}
+        tabIndex="-1">
         <div className="modal-dialog  mt-md-5 mt-5 pt-4">
           <div className="modal-content ancho-modal-cursos">
             {/* Header */}
@@ -244,7 +248,9 @@ export default function ModalFormCursos({
               <div className="row   ms-2 me-2   w-100 d-flex justify-content-center">
                 <div className="col-md-4 col-6 titulo-card-crashkurse-new d-flex justify-content-center align-items-center">
                   <div className="row d-none d-md-block">{titulo}</div>
-                  <div className="row font-title-modal d-block d-md-none">{titulo}</div>
+                  <div className="row font-title-modal d-block d-md-none">
+                    {titulo}
+                  </div>
                 </div>
                 {date1 != undefined &&
                   date2 != undefined &&

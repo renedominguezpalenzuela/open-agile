@@ -60,8 +60,20 @@ export default function AreaSuperior({
 
   botones_contacto,
   linea_obliqua,
+  shop,
+  home,
+  no_bottom_margin,
+  lei,
+  bes,
 }) {
   let vista_movil = false;
+  let bottom_margin = true;
+
+  if (no_bottom_margin != undefined || no_bottom_margin === true) {
+    bottom_margin = false;
+  } else {
+    bottom_margin = true;
+  }
 
   return (
     <>
@@ -131,22 +143,12 @@ export default function AreaSuperior({
       </div>
 
       {/* --------------------Vista movil Mostrar si menor a lg<992px  ----------------------------------------*/}
-      <div className="fond mb-5  d-lg-none">
+      <div className={`${bottom_margin ? "mb-5" : ""} fond d-lg-none`}>
         {(vista_movil = true)}
 
         <MenuNavBar2 />
         <div className={`${getFondo(fondo)}`}>
-          {/* <div className=" item-logo-movil  mt-2 ms-3 ">
-            <a className=" " href="/">
-              <img
-                className="size-logo-movil "
-                src={`${servidor_url}/img/logo/5.svg`}
-              />
-            </a>
-          </div> */}
-
           <div className="item-titulo   ">
-            {/* Contenido Principal */}
             {contenido_principal(
               texto1,
               texto2,
@@ -170,7 +172,11 @@ export default function AreaSuperior({
               email,
               phone,
               linkedin,
-              botones_contacto
+              botones_contacto,
+              shop,
+              home,
+              lei,
+              bes
             )}
           </div>
         </div>
@@ -184,8 +190,12 @@ export default function AreaSuperior({
 function getFondo(fondo, linea_obliqua) {
   let fondo_por_defecto = "bannermain";
 
-  if (fondo==="bannermain-quiz-questions") {
-     fondo_por_defecto ="bannermain-quiz-questions";
+  if (fondo === "bannermain-quiz-questions") {
+    fondo_por_defecto = "bannermain-quiz-questions";
+  }
+
+  if (fondo === "bannermain-quiz-result") {
+    fondo_por_defecto = "bannermain-quiz-result";
   }
 
   if (fondo === "barco") {
@@ -241,7 +251,11 @@ const contenido_principal = (
   email,
   phone,
   linkedin,
-  botones_contacto
+  botones_contacto,
+  shop,
+  home,
+  lei,
+  bes
 ) => {
   let id = -1;
 
@@ -272,6 +286,10 @@ const contenido_principal = (
               titulo_muy_largo={titulo_muy_largo}
               botones_contacto={botones_contacto}
               team={iconos_team}
+              shop={shop}
+              home={home}
+              lei={lei}
+              bes={bes}
             />
           </div>
         </>
@@ -290,9 +308,9 @@ const contenido_principal = (
 
         {texto_quiz_result != undefined && texto_quiz_result.length > 0 && (
           <>
-            <div className="row mt-4  font_small_letter_white  justificar">
+            <div className="row mt-4  font_small_letter_white-quiz-result  justificar">
               {texto_quiz_result.map((unaLinea, index) => (
-                <p key={index}>{unaLinea}</p>
+                <p key={index}>{unaLinea} </p>
               ))}
             </div>
           </>
@@ -385,38 +403,33 @@ const contenido_principal = (
           </div>
         ))}
 
-      {boton_inicio_quiz != undefined && boton_inicio_quiz  && (
-
-        vista_movil ? (
-        <div className="row pb-5  d-flex justify-content-center align-items-center ">
-          <div className="col-12 col-sm-7 col-md-5  pb-2 d-flex justify-content-center">
-           
-            <Link href="/quiz/1" className="d-flex justify-content-center ">
-              <button
-                type="button"
-                className="w-100  btn-agile-check2 font_boton_main-quiz redondeado-boton  ">
-                JETZT DEN AGILE CHECK MACHEN
-              </button>
-            </Link>
+      {boton_inicio_quiz != undefined &&
+        boton_inicio_quiz &&
+        (vista_movil ? (
+          <div className="row pb-5  d-flex justify-content-center align-items-center ">
+            <div className="col-12 col-sm-7 col-md-5  pb-2 d-flex justify-content-center">
+              <Link href="/quiz/1" className="d-flex justify-content-center ">
+                <button
+                  type="button"
+                  className="w-100  btn-agile-check2 font_boton_main-quiz redondeado-boton  ">
+                  JETZT DEN AGILE CHECK MACHEN
+                </button>
+              </Link>
+            </div>
           </div>
-        </div>
         ) : (
-         <div>
-          <div className="row mt-5 text-center mb-5 d-flex  justify-content-center ">
-          <Link href="/quiz/1">
-            <button
-              type="button"
-              className="btn p-3 ms-2 me-2 w-50 h-100 btn-card font-btn-card rounded-pill  ">
-             JETZT CHECK STARTEN 
-            </button>
-          </Link>
-        </div>
-         </div> 
-        )
-
-       
-
-      )}
+          <div>
+            <div className="row mt-5 text-center mb-5 d-flex  justify-content-center ">
+              <Link href="/quiz/1">
+                <button
+                  type="button"
+                  className="btn p-3 ms-2 me-2 w-50 h-100 btn-card font-btn-card rounded-pill  ">
+                  JETZT CHECK STARTEN
+                </button>
+              </Link>
+            </div>
+          </div>
+        ))}
 
       {botones_contacto != undefined &&
         botones_contacto &&

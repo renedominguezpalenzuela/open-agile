@@ -80,7 +80,7 @@ a {
 }
 
 .carousel-inner {
-  height: 150vw;
+  height: 35vw;
 }
 
 .img-rounded {
@@ -263,6 +263,11 @@ div.vertical-line {
 
 .logo-img-footer2 {
   transform: scale(1);
+}
+
+.logo-img-quiz {
+  /* transform: scale(0.8); */
+  width: 10vh;
 }
 
 .botonTresBarras {
@@ -687,9 +692,18 @@ ul.no-bullets {
   font-size: 1.2vw;
 }
 
+.font-btn-card-quiz {
+  font-family: Montserrat-Bold;
+  color: #ffffff;
+  font-size: 1.2vw;
+}
+
 @media (max-width: 767px) {
   .font-btn-card {
     font-size: 3.3vw;
+  }
+  .font-btn-card-quiz {
+    font-size: 5.3vw;
   }
 }
 
@@ -872,6 +886,7 @@ ul li.mybullets::before {
   width: 0.8em; /* Also needed for space (tweak if needed) */
   margin-left: -1em; /* Also needed for space (tweak if needed) */
   font-size: 1.5rem;
+  transform: translate(0, 3.3px);
 }
 
 .margen-negativo {
@@ -930,6 +945,7 @@ ul li.mybullets3::before {
   white-space: nowrap;
 }
 
+/* TODO LO DE LOS ALTOS DE LOS TABCONTAINER-LEISTTUNGEN */
 .alto-leistungen-tab-contenedor {
   /* height:70vh!important; */
   /* height:90%!important;  */
@@ -939,40 +955,113 @@ ul li.mybullets3::before {
 
 @media (max-width: 992px) and (min-width: 900px) {
   .alto-leistungen-tab-contenedor {
-    height: 590px !important;
+    height: 700px !important;
   }
 }
 
 @media (max-width: 899px) and (min-width: 730px) {
   .alto-leistungen-tab-contenedor {
-    height: 600px !important;
-  }
-}
-
-@media (max-width: 729px) and (min-width: 570px) {
-  .alto-leistungen-tab-contenedor {
-    height: 680px !important;
+    height: 700px !important;
   }
 }
 
 @media (max-width: 569px) and (min-width: 500px) {
   .alto-leistungen-tab-contenedor {
-    height: 720px !important;
+    height: 600px !important;
   }
 }
 
 @media (max-width: 499px) and (min-width: 450px) {
   .alto-leistungen-tab-contenedor {
-    height: 800px !important;
+    height: 680px !important;
   }
 }
 
 @media (max-width: 449px) {
   .alto-leistungen-tab-contenedor {
-    height: 880px !important;
+    height: 790px !important;
   }
 }
 
+/* TODO DE LOS TAB-CONTAINER-2 */
+
+.alto-leistungen-tab-contenedor-2 {
+  /* height:70vh!important; */
+  /* height:90%!important;  */
+  height: 450px;
+  position: relative;
+}
+
+@media (max-width: 992px) and (min-width: 900px) {
+  .alto-leistungen-tab-contenedor-2 {
+    height: 500px !important;
+  }
+}
+
+@media (max-width: 899px) and (min-width: 730px) {
+  .alto-leistungen-tab-contenedor-2 {
+    height: 600px !important;
+  }
+}
+
+@media (max-width: 569px) and (min-width: 500px) {
+  .alto-leistungen-tab-contenedor-2 {
+    height: 600px !important;
+  }
+}
+
+@media (max-width: 499px) and (min-width: 450px) {
+  .alto-leistungen-tab-contenedor-2 {
+    height: 600px !important;
+  }
+}
+
+@media (max-width: 449px) {
+  .alto-leistungen-tab-contenedor-2 {
+    height: 680px !important;
+  }
+}
+
+/* TODO DE LOS TAB-CONTAINER-3 */
+
+.alto-leistungen-tab-contenedor-3 {
+  /* height:70vh!important; */
+  /* height:90%!important;  */
+  height: 450px;
+  position: relative;
+}
+
+@media (max-width: 992px) and (min-width: 900px) {
+  .alto-leistungen-tab-contenedor-3 {
+    height: 500px !important;
+  }
+}
+
+@media (max-width: 899px) and (min-width: 730px) {
+  .alto-leistungen-tab-contenedor-3 {
+    height: 600px !important;
+  }
+}
+
+@media (max-width: 569px) and (min-width: 500px) {
+  .alto-leistungen-tab-contenedor-3 {
+    height: 600px !important;
+  }
+}
+
+@media (max-width: 499px) and (min-width: 450px) {
+  .alto-leistungen-tab-contenedor-3 {
+    height: 600px !important;
+  }
+}
+
+@media (max-width: 449px) {
+  .alto-leistungen-tab-contenedor-3 {
+    height: 680px !important;
+  }
+}
+
+/* TODO LO DE LOS TEAM CONTAINER */
 .alto-team-tab-contenedor {
   /* height:70vh!important; */
   /* height:90%!important;  */

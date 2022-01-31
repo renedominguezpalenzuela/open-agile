@@ -17,6 +17,7 @@ import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 
 import { servidor_url } from "../config";
 
+
 import { useRecoilValue } from "recoil";
 
 import { respuestasState } from "../componentes/states/state";
@@ -80,22 +81,24 @@ export default function Home() {
         <title>Quiz Result</title>
         <meta name="description" content="Quiz Result" />
         <link rel="icon" href="/favicon.ico" />
-        {/* <script async src="js/chat.js" />
-        <script async src="js/menu.js" /> */}
+        {/* <script async src="js/chat.js" /> */}
+        
+          <script async src={`${servidor_url}/js/menu.js`} />
       </Head>
 
       <div id="principal" className="container-fluid g-0">
         <MenuFlotanteBoton />
-        <AreaSuperior fondo="bannermain-quiz-questions" titulo_quiz_result="Ergebnis" texto_quiz_result={mensaje} area_gris_nueva={false} botones_contacto={true} /> 
+        <AreaSuperior no_bottom_margin={true} fondo="bannermain-quiz-result" titulo_quiz_result="Ergebnis" texto_quiz_result={mensaje} area_gris_nueva={false} botones_contacto={true} /> 
 
 
-
+  {/*Footer  */}
+        <Footer />
       </div>
 
        <ModalFormConfigurator    titulo="KONTAKTFORMULAR"   frase="Jetzt Kontakt aufnehmen!"     id={1}    />
 
 
-      {/*Menu Lateral oculto  */}
+     
       <MenuFlotante />
     </>
   );

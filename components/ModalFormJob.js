@@ -140,7 +140,6 @@ export default function ModalFormJob({
     if (event.target.files && event.target.files[0]) {
       const i = event.target.files[0];
 
-      
       setValue4(i.name);
 
       const body = new FormData();
@@ -228,7 +227,11 @@ export default function ModalFormJob({
   return (
     <>
       {/* <!-- Modal --> */}
-      <div className="modal fade" sx={{paddingRight:"0px"}} id={`contactForm${id}`} tabIndex="-1">
+      <div
+        className="modal fade"
+        sx={{ paddingRight: "0px" }}
+        id={`contactForm${id}`}
+        tabIndex="-1">
         <div className="modal-dialog modal-dialog-job">
           <div className="modal-content ancho-modal-cursos">
             <div className="modal-header">
@@ -293,7 +296,7 @@ export default function ModalFormJob({
                 />
               </div>
 
-              <div className="row mt-2 mb-2 ps-3 pe-3 d-flex justify-content-center  texto-email  ">
+              <div className="row mt-2 mb-2 ps-3 pe-3 d-flex justify-content-center  texto-AGBS  ">
                 Wir senden Dir binnen 72h eine Bestätigung und weitere
                 Informationen
               </div>
@@ -337,13 +340,13 @@ export default function ModalFormJob({
               </div>
 
               <div className="row  g-0 mt-4  mb-2  d-flex flex-wrap justify-content-start">
-                {/* <input type="file" className="ocultar" id="customFile" onChange={handleChange4} />      */}
-                {/* <input
+                 <input type="file" className="ocultar" id="customFile" onChange={handleChange4} />      
+                <input
                   type="file"
                   ref={hiddenFileInput}
                   onChange={handleChange}
                   className="ocultar"
-                /> */}
+                /> 
 
                 <div className="col mx-3 d-flex justify-content-between botones-jobs-516">
                   <button
@@ -359,6 +362,7 @@ export default function ModalFormJob({
                     Jetzt Bewerbung absenden
                   </button>
                 </div>
+              
                 <div className="row d-flex botones-jobs justify-content-center">
                   <button
                     type="button"
@@ -373,10 +377,14 @@ export default function ModalFormJob({
                     Jetzt Bewerbung absenden
                   </button>
                 </div>
-                {/* <div className="col-md-5 d-flex justify-content-end"></div> */}
-                {/* <div className="col-md-6 ms-2 d-flex justify-content-start align-items-center texto-AGBS">
+
+                  <div className="row mt-2"> 
+                  <div className="col-md-6  d-flex justify-content-start align-items-center texto-AGBS">
                   {value4}
-                </div> */}
+                </div>  
+                </div>
+                {/* <div className="col-md-5 d-flex justify-content-end"></div> */}
+                
               </div>
             </div>
           </div>

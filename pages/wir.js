@@ -15,28 +15,38 @@ import Content06Team from "../components/Content06Team";
 import Tabla01 from "../components/crashkurse/tabla01";
 import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 
-
 import { servidor_url } from "../config";
 
+import { useState, useEffect } from "react";
 import ModalFormCookie from "../components/ModalFormCookie";
-
-
 
 //----------------------------------------------------------------------------------------------------------
 //           CRASHKURSE \ CRASHKURS ZUM AGILE COACH
 //----------------------------------------------------------------------------------------------------------
 
-export default function Home({team}) {
+export default function Home({ team }) {
   // <Head>
   //   <script async src="js/menu.js" />
   // </Head>
 
   const titulo1 = "OPEN AGILE TEAM";
   const titulo2 = "UNSERE WERTE";
-  const titulo2a = "";
+  const titulo2a = "WIR FREUEN UNS DARAUF DICH KENNENZULERNEN";
 
-
-
+  const [desktop_screen, setDesktop_screen] = useState(true);
+  const handleResize = () => {
+    let ancho_screen = window.innerWidth;
+    if (ancho_screen > 992) {
+      setDesktop_screen(true);
+    } else {
+      setDesktop_screen(false);
+    }
+  };
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <>
       <Head>
@@ -50,17 +60,18 @@ export default function Home({team}) {
       {/*Contenedor*/}
 
       <div id="principal" className="container-fluid g-0">
-      <ModalFormCookie id={1} tiempo={10}/>
+        <ModalFormCookie id={1} tiempo={10} />
         <MenuFlotanteBoton />
 
         <AreaSuperior
           fondo="ajustable"
           texto1={titulo1}
-          titulo_largo={true}
-          area_gris_nueva={true} />
+          texto2={titulo2a}
+          titulo_muy_largo={desktop_screen}
+          area_gris_nueva={true}
+        />
 
-
-       <Content06Team lista_cards={team}/>
+        <Content06Team lista_cards={team} />
 
         {/*Footer  */}
         <Footer />
@@ -72,24 +83,15 @@ export default function Home({team}) {
   );
 }
 
-
-
 //Obteniendo los datos desde el servidor
 export const getServerSideProps = async (context) => {
-
-
   const url5 = `${servidor_url}/api/team`;
   const res5 = await fetch(url5);
   const team = await res5.json();
 
-
-
-
   return {
     props: {
-      team
-     
+      team,
     },
   };
 };
-

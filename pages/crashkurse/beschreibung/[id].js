@@ -65,6 +65,7 @@ export default function Home({ curso }) {
           texto1={titulo_area_superior}
           titulo_largo={true}
           area_gris_nueva={true}
+          bes={true}
         />
 
         <div className="row  pt-md-5 pb-md-5">
@@ -80,7 +81,7 @@ export default function Home({ curso }) {
               link_boton={link_boton}
             />
           </div>
-          <div className="col-md-7 pt-5 pe-5 ">
+          <div className="col-md-7 pt-5 pe-md-5 " id="section_beschreibung">
             <KurseContent01
               imagen={image_beschreibung}
               titulo="BESCHREIBUNG"

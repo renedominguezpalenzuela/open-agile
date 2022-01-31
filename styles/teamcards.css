@@ -268,7 +268,7 @@ div.horizontal-line {
 
 @media (max-width: 767px) {
   .font_weiterbildungen {
-    font-size: 2.5vw !important;
+    font-size: 5vw !important;
   }
   .font_titulo_team {
     font-size: 3vw !important;

@@ -75,7 +75,6 @@
   .my_card-crashkurse {
     align-content: center;
     width: 80vw;
-    height: 60vh;
   }
   .card-header {
     display: grid;
@@ -83,12 +82,26 @@
     height: 12vh;
   }
   .card-footer {
-    height: 12vh;
+    height: 9vh;
   }
 
   .card-body {
     display: grid;
+    align-content: center;
     align-items: center;
+  }
+
+  .fechas-facilator-1,
+  .fechas-facilator-2 {
+    height: 100% !important;
+  }
+
+  .fechas-facilator-1 {
+    align-self: flex-end;
+  }
+
+  .fechas-facilator-2 {
+    align-self: baseline;
   }
 }
 
@@ -97,6 +110,31 @@
   margin-left: -35vw;
 }
 
+.modal-config {
+  position: relative;
+  align-content: center;
+  width: 50vw !important;
+}
+
+@media (min-width: 992px) {
+  .modal-config {
+    width: 50vw !important;
+    margin-left: -238px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal-config {
+    width: 90vw !important;
+    padding-right: -17px !important;
+  }
+  .modal-config {
+    margin-left: -45vw !important;
+  }
+  .modal-config {
+    top: 7%;
+  }
+}
 .ancho-modal-cursos {
   position: relative;
   align-content: center;
@@ -108,7 +146,8 @@
     width: 50vw !important;
   }
   .modal-dialog {
-    margin-left: -25vw !important;
+    margin-left: -25vw;
+    padding-right: -17px !important;
   }
 }
 
@@ -119,12 +158,16 @@
 @media (max-width: 767px) {
   .ancho-modal-cursos {
     width: 90vw !important;
+    padding-right: -17px !important;
   }
   .modal-dialog {
     margin-left: -45vw !important;
   }
   .font-title-modal {
     font-size: 3vw !important;
+  }
+  .modal-dialog-job {
+    top: 9%;
   }
 }
 
@@ -188,6 +231,13 @@
 .fechas-card-titulos {
   font-family: Montserrat-SemiBold;
   font-size: 1.6vw !important;
+  line-height: 3vh;
+  color: #e42078;
+}
+
+.fechas-card-titulos-movil {
+  font-family: Montserrat-SemiBold;
+  font-size: 5vw;
   line-height: 3vh;
   color: #e42078;
 }

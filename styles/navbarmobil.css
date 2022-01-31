@@ -30,6 +30,8 @@
     grid-row: 1/2;
 
 
+
+
 }
 
 
@@ -39,3 +41,10 @@
 
 }
 
+
+#boton_abrir_menu2 {
+    position: relative;
+    z-index: 10000;
+    width: 140px;
+    cursor: pointer;
+}
