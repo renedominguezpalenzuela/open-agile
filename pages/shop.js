@@ -60,7 +60,7 @@ export default function Home({ shop }) {
             texto2={titulo_area_superior2}
             titulo_muy_largo={true}
             area_gris_nueva={true}
-            // shop={true}
+             shop={true}
           />
 
      

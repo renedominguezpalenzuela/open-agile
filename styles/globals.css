@@ -898,8 +898,8 @@ ul li.mybullets2::before {
   color: #f82d7c; /* Change the color */
   font-weight: bold; /*If you want it to be bold*/
   display: inline-block; /* Needed to add space between the bullet and the text */
-  width: 2em; /* Also needed for space (tweak if needed) */
-  margin-left: -2.3em; /*Also needed for space (tweak if needed)-*/
+  width: 1vw; /* Also needed for space (tweak if needed) */
+  margin-left: -1.3vw; /*Also needed for space (tweak if needed)-*/
   /* font-size:0.5rem; */
 }
 
@@ -908,15 +908,15 @@ ul li.mybullets3::before {
   color: #f82d7c; /* Change the color */
   font-weight: bold; /*If you want it to be bold*/
   display: inline-block; /* Needed to add space between the bullet and the text */
-  width: 1.2em; /* Also needed for space (tweak if needed) */
-  margin-left: 0em; /*Also needed for space (tweak if needed)-*/
+  width: 1.2vw; /* Also needed for space (tweak if needed) */
+  margin-left: -1.2vw; /*Also needed for space (tweak if needed)-*/
   /* font-size:0.5rem; */
 }
 
 @media (max-width: 991px) {
-  ul li.mybullets3::before {
-    width: 1.1em; /* Also needed for space (tweak if needed) */
-    margin-left: -1.1em; /*Also needed for space (tweak if needed)-*/
+  ul li.mybullets2::before {
+    width: 1vw; /* Also needed for space (tweak if needed) */
+    margin-left: -1.6vw; /*Also needed for space (tweak if needed)-*/
   }
 }
 

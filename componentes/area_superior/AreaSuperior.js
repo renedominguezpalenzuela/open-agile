@@ -357,7 +357,7 @@ const contenido_principal = (
               <div className="row font_smaller_letter_white_cursos ms-5 me-3 pb-3 justificar">
                 <ul>
                   {texto_parrafo_plequitas.map((unaLinea, index) => (
-                    <li key={index} className="mybullets3">
+                    <li key={index} className="mybullets2">
                       {unaLinea}
                     </li>
                   ))}
