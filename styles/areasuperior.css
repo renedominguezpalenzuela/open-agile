@@ -36,7 +36,7 @@
 }
 
 .force_font_color {
-  font-family: Montserrat-Bold !important;
+  font-family: Montserrat-BoldItalic !important;
   color: #e50265 !important;
 }
 
@@ -50,11 +50,11 @@
 
 @media (max-width: 767px) {
   .titulo_extra_grande {
-    font-size: 4.8vw !important;
+    font-size: 5vw !important;
   }
 }
 .titulo2_vista_movil {
-  font-family: Montserrat-Bold;
+  font-family: Montserrat-BoldItalic;
   color: #e50265;
   font-size: 4.8vw;
   text-shadow: 1px 3px 15px rgb(0 0 0 / 40%);
