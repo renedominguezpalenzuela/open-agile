@@ -68,7 +68,7 @@ export default function Home({ team }) {
           iconos_team={true}
           email={correo}
           linkedin={linkedin}
-          phone={telefono}
+          phone={telefono }
           area_gris_nueva={true}
           linea_obliqua={true}
         />
