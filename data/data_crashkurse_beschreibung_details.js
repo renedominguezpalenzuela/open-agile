@@ -67,7 +67,7 @@ export const crashkurse_beschreibung_details = [
         "link_termine": "/#dates_section",
         // TODO: Agregar un indice para que determinar el primer doc a descargar debe ser Onepager
         "link_pdf": [ "/doc/Onepager_Crashkurs_Agile_Coach.pdf",
-            "/doc/Anmeldung_zum_Crashkurs_Agile_Coach.pdf", "/doc/Prospekt_Crashkurs_Agile_Coach.pdf"
+            // "/doc/Anmeldung_zum_Crashkurs_Agile_Coach.pdf", "/doc/Prospekt_Crashkurs_Agile_Coach.pdf"
         ],
         "link_boton": "",
         "texto_leistungen": [
@@ -161,7 +161,7 @@ export const crashkurse_beschreibung_details = [
         "link_termine": "/#dates_section",
 
         "link_pdf": ["/doc/Onepager_Crashkurs_Agile_Facilitator.pdf",
-            "/doc/Anmeldung_zum_Crashkurs_Agile_Facilitator.pdf" 
+            // "/doc/Anmeldung_zum_Crashkurs_Agile_Facilitator.pdf" 
         ],
         "link_boton": "",
         "texto_leistungen": [
@@ -268,7 +268,7 @@ export const crashkurse_beschreibung_details = [
         "text_termine": "2022",
         "link_termine": "/#dates_section",
         "link_pdf": ["/doc/Onepager_Crashkurs_Scrum_Master.pdf",
-            "/doc/Anmeldung_zum_Crashkurs_Scrum_Master.pdf" 
+            // "/doc/Anmeldung_zum_Crashkurs_Scrum_Master.pdf" 
         ],
         "link_boton": "",
         "texto_leistungen": [
@@ -387,7 +387,7 @@ export const crashkurse_beschreibung_details = [
         "text_termine": "2022",
         "link_termine": "/#dates_section",
         "link_pdf": [ "/doc/Onepager_Crashkurs_Mitbestimmung_in_der_agilen_Arbeitswelt.pdf",
-            "/doc/Anmeldung_zum_Crashkurs_Mitbestimmung_in_der_agilen_Arbeitswelt.pdf"
+            // "/doc/Anmeldung_zum_Crashkurs_Mitbestimmung_in_der_agilen_Arbeitswelt.pdf"
         ],
         "link_boton": "",
         "texto_leistungen": [
