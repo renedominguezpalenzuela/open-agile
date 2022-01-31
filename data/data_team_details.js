@@ -12,7 +12,7 @@ export const team_details = [
       "Certified Agile Coach (IHK)",
       "Certified Scrum Master (Scrum.org)",
       "Ausbilder zum zertifizierten Agile Coach, Scrum Master & Agile Facilitator",
-      "Bankbetriebswirt (Frankfurt School of Finanz & Management)",
+      "Bankbetriebswirt (Frankfurt School of finance & Management)",
       "Diplm. Stress Management Trainer",
       "Triathlon C Trainer",
     ],
