@@ -481,3 +481,10 @@ img.grayscale:hover {
 .volumen_icon_size {
   font-size: 1px !important;
 }
+
+
+.offset-lateral-menu {
+  /* position:absolute; */
+    /* top: -12.5vh; */
+    scroll-margin-top:30vh;
+}
