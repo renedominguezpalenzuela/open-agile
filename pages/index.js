@@ -26,6 +26,8 @@ import { useEffect, useState } from "react";
 
 import ModalFormCookie from "../components/ModalFormCookie";
 
+import Script from 'next/script'
+
 //----------------------------------------------------------------------------------------------------------
 //            Pagina inicial principal
 //----------------------------------------------------------------------------------------------------------
@@ -57,6 +59,7 @@ export default function Home({
 
   return (
     <>
+     
       <Head>
         <title>Open Agile - for better work</title>
         <meta
@@ -64,10 +67,12 @@ export default function Home({
           content="Wir sind Open Agile, die hanseatische Unternehmensberatung - wir begleiten Euch dabei, eine individuelle und zukunftsfähige Zusammenarbeit zu kreieren!"
         />
         <link rel="icon" href="/favicon.ico" />
-         <script async src="js/menu.js" />
+         {/* <script async src="js/menu.js" /> */}
         <script async src="js/chat.js" />
        
       </Head>
+
+       <Script src="js/menu.js" />
 
       <div id="principal" className="container-fluid g-0">
         <ModalFormCookie id={1} tiempo={1000} animar={true} />

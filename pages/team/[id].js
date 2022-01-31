@@ -135,7 +135,7 @@ export default function Home({ team }) {
           <div className="col-md-6 col-9 mt-2">
             <div className="font_texto_inferior_team  ">
               {' '}
-              {`“seit 2021 bei Open Agile”`}{' '}
+              {`seit 2021 bei Open Agile`}{' '}
             </div>
           </div>
         </div>
