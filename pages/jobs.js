@@ -98,6 +98,7 @@ export default function Home() {
           texto2={texto2}
           titulo_muy_largo={desktop_screen}
           area_gris_nueva={true}
+          shop={true}
         />
 
         <div className="row d-flex justify-content-center mt-5 mb-5">

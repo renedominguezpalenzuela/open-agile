@@ -93,12 +93,20 @@ export default function Home() {
       <div id="principal" className="container-fluid g-0">
         <ModalFormCookie id={1} tiempo={10} />
         <MenuFlotanteBoton />
+
+
         <AreaSuperior
           fondo="ajustable"
-          texto1={titulo2}
+          texto1={titulo2 }
           titulo_largo={true}
           area_gris_nueva={true}
         />
+
+
+
+
+
+
         {/* <div className="row  mt-5 d-flex justify-content-center "> */}
 
         <div className="row ms-4 mt-5 alto-team-tab-contenedor  ">
