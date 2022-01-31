@@ -59,6 +59,8 @@ export default function Home({
 
   return (
     <>
+     <Script src="js/menu.js" />
+
      
       <Head>
         <title>Open Agile - for better work</title>
@@ -72,7 +74,7 @@ export default function Home({
        
       </Head>
 
-       <Script src="js/menu.js" />
+       
 
       <div id="principal" className="container-fluid g-0">
         <ModalFormCookie id={1} tiempo={1000} animar={true} />
