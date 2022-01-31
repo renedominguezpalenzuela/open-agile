@@ -173,8 +173,12 @@ export default function ModalFormConfigurator({
   return (
     <>
       {/* <!-- Modal --> */}
-      <div className="modal fade" id={`contactForm${id}`} tabIndex="-1">
-        <div className="modal-dialog ancho-modal-cursos modal-dialog-job">
+      <div
+        className="modal fade"
+        sx={{ paddingRight: "0px !important" }}
+        id={`contactForm${id}`}
+        tabIndex="-1">
+        <div className="modal-dialog modal-config">
           <div className="modal-content">
             <div className="modal-header">
               <div className="row  ms-2 me-2   w-100 d-flex justify-content-start">

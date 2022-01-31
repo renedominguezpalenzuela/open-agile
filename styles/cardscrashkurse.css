@@ -110,6 +110,31 @@
   margin-left: -35vw;
 }
 
+.modal-config {
+  position: relative;
+  align-content: center;
+  width: 50vw !important;
+}
+
+@media (min-width: 992px) {
+  .modal-config {
+    width: 50vw !important;
+    margin-left: -238px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal-config {
+    width: 90vw !important;
+    padding-right: -17px !important;
+  }
+  .modal-config {
+    margin-left: -45vw !important;
+  }
+  .modal-config {
+    top: 7%;
+  }
+}
 .ancho-modal-cursos {
   position: relative;
   align-content: center;
@@ -121,7 +146,7 @@
     width: 50vw !important;
   }
   .modal-dialog {
-    margin-left: -25vw !important;
+    margin-left: -25vw;
   }
 }
 
