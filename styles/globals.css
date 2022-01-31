@@ -911,12 +911,23 @@ ul li.mybullets2::before {
 }  */
 
 
-@media  (max-width: 750px) {
+@media  (max-width: 300px) {
   ul li.mybullets2::before {
-    width: 2.3vw; 
-    margin-left: -2.3vw; 
+    width: 4.3vw; 
+    margin-left: -4.3vw; 
   }
 } 
+
+
+
+@media (min-width:300px) and (max-width: 450px) {
+  ul li.mybullets2::before {
+    width: 3.6vw; 
+    margin-left: -4.3vw; 
+  }
+} 
+
+
 
 .ocultar {
   display: none;
