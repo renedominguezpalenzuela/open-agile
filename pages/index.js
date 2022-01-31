@@ -117,7 +117,7 @@ export default function Home({
         <Content05 datos={vlog} />
 
         {/* Servicios Leistungen  */}
-        <div id="services" className=" mt-5 mb-5 pb-5">
+        <div id="services" className=" mt-5 mb-5 pb-5 offset-lateral-menu">
           <h3 className="font_title_seccion_sombra "> LEISTUNGEN</h3>
           <h5 className="font_second_line2 d-flex justify-content-center text-center px-4 p-md-0">
             Beratung, Training & Coaching im agilen Kontext
