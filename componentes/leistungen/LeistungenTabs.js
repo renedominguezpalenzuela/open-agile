@@ -109,7 +109,7 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
 
         <TabPanel value={value} index={1} className=" alto-tab  ">
           <div className="ps-md-5 ps-2 ms-md-5 ms-2 pe-2 row col col-md-6">
-            <div className=" fuente-titulo-servicios mt-2 mb-4  text-left ">
+            <div className=" organization-text mt-2 mb-4  text-left ">
               BEISPIEL VORGEHEN
             </div>
             <ul>
@@ -138,7 +138,7 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
         <TabPanel value={value} index={2} className=" alto-tab">
           <div className="ps-md-5  ms-md-5  row w-100">
             <div className="col-md-5 col-lg-6 fuente-texto-cursos ">
-              <div className=" fuente-titulo-servicios mt-2 mb-4  text-left">
+              <div className=" organization-text mt-2 mb-4  text-left">
                 KONTAKT AUFNEHMEN
               </div>
 
@@ -156,9 +156,7 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
             <div className="col-md-6 col-lg-5 d-flex align-items-start">
               <div className="row ms-md-3 ps-md-3 ms-lg-5 ps-lg-3 ">
                 <div className="col-12">
-                  <div className=" fuente-titulo-servicios mt-2 mb-4 ">
-                    &nbsp;
-                  </div>
+                  <div className=" organization-text mt-2 mb-4 ">&nbsp;</div>
 
                   <a href="#" className="mx-auto d-flex justify-content-start">
                     {/*  btn-outline-primary font_boton  */}

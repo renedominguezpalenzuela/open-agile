@@ -38,6 +38,7 @@
 .force_font_color {
   font-family: Montserrat-BoldItalic !important;
   color: #e50265 !important;
+  text-shadow: 1px 3px 15px rgb(0 0 0 / 40%) !important;
 }
 
 .titulo1_vista_movil {
@@ -63,6 +64,7 @@
 
 .force-magenta {
   color: #e50265;
+  text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
 }
 
 .item-img-team-top {
