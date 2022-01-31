@@ -30,8 +30,6 @@ import ModalFormCookie from "../components/ModalFormCookie";
 //            Pagina inicial principal
 //----------------------------------------------------------------------------------------------------------
 
-
-
 export default function Home({
   cursos,
   servicios,
@@ -41,27 +39,30 @@ export default function Home({
 }) {
   const [desktop_screen, setDesktop_screen] = useState(true);
 
-  const handleResize = () =>{
-  let  ancho_screen = window.innerWidth;
+  const handleResize = () => {
+    let ancho_screen = window.innerWidth;
 
-  if (ancho_screen > 992) {
+    if (ancho_screen > 992) {
       setDesktop_screen(true);
     } else {
       setDesktop_screen(false);
     }
-  }
+  };
 
-  useEffect(() => {   
-   handleResize();
-   window.addEventListener("resize",  handleResize);
-   return () => window.removeEventListener("resize", handleResize);
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
     <>
       <Head>
-        <title>OPEN AGILE</title>
-        <meta name="description" content="OPEN AGILE" />
+        <title>Open Agile - for better work</title>
+        <meta
+          name="description"
+          content="Wir sind Open Agile, die hanseatische Unternehmensberatung - wir begleiten Euch dabei, eine individuelle und zukunftsfähige Zusammenarbeit zu kreieren!"
+        />
         <link rel="icon" href="/favicon.ico" />
         <script async src="js/chat.js" />
         <script async src="js/menu.js" />
