@@ -20,6 +20,7 @@ export default function Content01TextSinIcons({
   shop,
   home,
   lei,
+  bes,
 }) {
   return (
     <>
@@ -37,7 +38,8 @@ export default function Content01TextSinIcons({
                 titulo_largo,
                 titulo_muy_largo,
                 home,
-                lei
+                lei,
+                bes
               )
             }>
             {texto1}
@@ -80,7 +82,8 @@ const formato_titulo1 = (
   titulo_largo,
   titulo_muy_largo,
   home,
-  lei
+  lei,
+  bes
 ) => {
   let clase = "";
   if (titulo_largo != undefined && titulo_largo) {
@@ -123,7 +126,7 @@ const formato_titulo1 = (
   return (
     clase +
     `${home ? " justify-content-center" : ""}` +
-    `${lei && vista_movil ? " force_font_color" : ""}`
+    `${(lei || bes) && vista_movil ? " force_font_color" : ""}`
   );
 };
 

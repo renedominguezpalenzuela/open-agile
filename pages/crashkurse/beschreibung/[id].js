@@ -65,6 +65,7 @@ export default function Home({ curso }) {
           texto1={titulo_area_superior}
           titulo_largo={true}
           area_gris_nueva={true}
+          bes={true}
         />
 
         <div className="row  pt-md-5 pb-md-5">
