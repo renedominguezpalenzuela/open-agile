@@ -42,16 +42,12 @@ export default function Card02({
             }
 
             {video!=undefined && video!="" &&
-                //   <div className="embed-responsive embed-responsive-4by3 ">
-
-                //   <iframe width="500vw" height="380vh" src={video}  frameBorder="3" allowFullScreen></iframe> 
-                    
-                //  </div>
+               
               <div className="container">
                 <iframe className="responsive-iframe" src={video}  frameBorder="3" allowFullScreen></iframe>
               </div>
 
-              //  <img src={`img/${imagen}`} alt={"${texto_alt}"} className=" img_carrusel " alt="..."/> 
+            
             }
 
 
