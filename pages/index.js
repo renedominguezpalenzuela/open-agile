@@ -116,7 +116,7 @@ export default function Home({
         <Content04 lista_cards={blogs} />
 
         {/*Carrousel videos */}
-        {/* <Content05 datos={vlog} /> */}
+        <Content05 datos={vlog} />
 
         {/* Servicios Leistungen  */}
         <div id="services" className=" mt-5 mb-5 pb-5 offset-lateral-menu">
