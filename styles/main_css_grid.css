@@ -142,10 +142,11 @@
 
 .bannermain-quiz-result {
   display: grid;
-  height: 100vh;
+  /* height: 100vh; */
+ 
 
   grid-template-columns: 12% 75% 10%;
-  grid-template-rows: 15% 85%; 
+  /* grid-template-rows: 15% 85%;  */
   /* padding-bottom: 50px; */
 
   /* gap: 1em; */
@@ -175,6 +176,13 @@
     url("/img/agilcheckbackground.jpg");
 }
 
+
+
+@media (max-width: 992px) {
+  .bannermain-quiz-result {
+      height: 100vh;
+  }
+}
 
 .bannermain-quiz-questions-mobile {
   /* position: fixed; */
