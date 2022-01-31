@@ -147,6 +147,7 @@
   }
   .modal-dialog {
     margin-left: -25vw;
+    padding-right: -17px !important;
   }
 }
 
@@ -157,6 +158,7 @@
 @media (max-width: 767px) {
   .ancho-modal-cursos {
     width: 90vw !important;
+    padding-right: -17px !important;
   }
   .modal-dialog {
     margin-left: -45vw !important;
