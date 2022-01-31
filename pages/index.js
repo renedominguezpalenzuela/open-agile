@@ -64,8 +64,8 @@ export default function Home({
           content="Wir sind Open Agile, die hanseatische Unternehmensberatung - wir begleiten Euch dabei, eine individuelle und zukunftsfähige Zusammenarbeit zu kreieren!"
         />
         <link rel="icon" href="/favicon.ico" />
-         <script  src="js/menu.js" />
-        {/* <script async src="js/chat.js" /> */}
+         <script async src="js/menu.js" />
+        <script async src="js/chat.js" />
        
       </Head>
 
@@ -116,7 +116,7 @@ export default function Home({
         <Content04 lista_cards={blogs} />
 
         {/*Carrousel videos */}
-        <Content05 datos={vlog} />
+        {/* <Content05 datos={vlog} /> */}
 
         {/* Servicios Leistungen  */}
         <div id="services" className=" mt-5 mb-5 pb-5 offset-lateral-menu">
