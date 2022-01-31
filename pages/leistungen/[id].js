@@ -68,7 +68,7 @@ export default function Home({ servicios }) {
         <AreaSuperior
           fondo="ajustable"
           texto1={titulo}
-          titulo_my_largo={true}
+          titulo_largo={true}
           area_gris_nueva={true}
           lei={true}
         />

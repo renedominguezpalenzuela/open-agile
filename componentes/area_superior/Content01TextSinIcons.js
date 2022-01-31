@@ -30,19 +30,24 @@ export default function Content01TextSinIcons({
         }`}>
         {texto1 != undefined && texto1 != "" && (
           <div
-            className={
-              muylargo(texto1) +
-              formato_titulo1(
-                vista_movil,
-                cursos,
-                titulo_largo,
-                titulo_muy_largo,
-                home,
-                lei,
-                bes
-              )
-            }>
-            {texto1}
+            className={formato_titulo1(
+              vista_movil,
+              cursos,
+              titulo_largo,
+              titulo_muy_largo,
+              home,
+              lei,
+              bes
+            )}>
+            {formatText(texto1) == "ORGANISATIONS" ? (
+              <p>
+                ORGANISATIONS
+                <br />
+                ENTWICKLUNG
+              </p>
+            ) : (
+              texto1
+            )}
           </div>
         )}
 
@@ -65,16 +70,24 @@ export default function Content01TextSinIcons({
   );
 }
 
-const muylargo = (texto1) => {
-  let aux = texto1.split(" ");
-  let joincad = "";
-  for (let i = aux.length - 1; i >= 0; i--) {
-    joincad += aux[i];
+const formatText = (texto1) => {
+  let aux = texto1.toUpperCase();
+  if (aux == "ORGANISATIONSENTWICKLUNG") {
+    aux = "ORGANISATIONS";
   }
 
-  if (joincad.length > 17) return "titulo_extra_grande ";
-  return "";
+  return aux;
 };
+// const muylargo = (texto1) => {
+//   let aux = texto1.split(" ");
+//   let joincad = "";
+//   for (let i = aux.length - 1; i >= 0; i--) {
+//     joincad += aux[i];
+//   }
+
+//   if (joincad.length > 17) return "titulo_extra_grande ";
+//   return "";
+// };
 
 const formato_titulo1 = (
   vista_movil,
