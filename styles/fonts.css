@@ -107,7 +107,7 @@
   font-family: Montserrat-BoldItalic;
   color: #ffffff;
   text-align: left;
-  font-size: 3.8rem;
+  font-size: 3rem;
   line-height: 1;
   font-weight: 500;
 
@@ -366,12 +366,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
 .font_quiz_line1 {
   font-family: Montserrat-Bold;
   color: #e42078;
-
 
   font-size: 3.8rem;
   line-height: 1;
@@ -379,7 +376,7 @@
   /* text-transform: uppercase; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+
   /* font-weight: 700; */
 
   -webkit-font-smoothing: antialiased;
@@ -846,9 +843,6 @@
 
   /* line-height: 39px; */
 }
-
-
-
 
 .font_small_letter_white-quiz-result {
   font-family: Montserrat-Regular;
