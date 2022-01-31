@@ -485,9 +485,10 @@ img.grayscale:hover {
   font-size: 1px !important;
 }
 
-
+@media  (max-height: 992px){
+ 
 .offset-lateral-menu {
-  /* position:absolute; */
-    /* top: -12.5vh; */
-    scroll-margin-top:30vh;
+
+  scroll-margin-top:10vh;
+} 
 }
