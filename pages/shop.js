@@ -10,6 +10,8 @@ import Card07Shop from "../components/Card07Shop";
 import { servidor_url } from "../config";
 
 import ModalFormCookie from "../components/ModalFormCookie";
+import { useState, useEffect } from "react";
+
 //----------------------------------------------------------------------------------------------------------
 //           CRASHKURSE \ CRASHKURS ZUM AGILE COACH
 //----------------------------------------------------------------------------------------------------------
@@ -17,6 +19,25 @@ import ModalFormCookie from "../components/ModalFormCookie";
 export default function Home({ shop }) {
   const titulo_area_superior2 = "AGILITÄT FÜR ZUHAUSE UND UNTERWEGS";
   const titulo_area_superior = "DER OPEN AGILE SHOP";
+
+  
+  const [desktop_screen, setDesktop_screen] = useState(true);
+  const handleResize = () => {
+    let ancho_screen = window.innerWidth;
+    if (ancho_screen > 992) {
+      setDesktop_screen(true);
+    } else {
+      setDesktop_screen(false);
+    }
+  };
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  
+
+
 
   return (
     <>
@@ -39,8 +60,10 @@ export default function Home({ shop }) {
             texto2={titulo_area_superior2}
             titulo_muy_largo={true}
             area_gris_nueva={true}
-            shop={true}
+             shop={true}
           />
+
+     
 
           <div className="row  mt-5 mb-5 pt-5  d-flex justify-content-center ">
             {shop.map((oneShop, index) => (

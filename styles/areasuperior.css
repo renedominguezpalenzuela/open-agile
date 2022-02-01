@@ -76,13 +76,35 @@
 }
 
 .texto_parrafo_blanco_team {
-  width: 55vw;
+  width: 54vw;
   z-index: 100;
 }
 
 @media (max-width: 767px) {
   .texto_parrafo_blanco_team {
     width: 100% !important;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024)  {
+  .texto_parrafo_blanco_team {
+    width: 50vw !important;
+  }
+}
+
+
+
+@media (min-width: 1025px)  and (max-width: 1400px) {
+  .texto_parrafo_blanco_team {
+    width: 53vw !important;
+  }
+}
+
+
+@media (min-width: 1401px)   {
+  .texto_parrafo_blanco_team {
+    width: 58vw !important;
   }
 }
 

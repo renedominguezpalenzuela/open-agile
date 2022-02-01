@@ -6,15 +6,7 @@ export default function Card01Lista({
   titulo_magenta,
   total_card_en_row,
 }) {
-  // let formato_row = " row row-cols-md-4 d-flex  justify-content-center ";
-
-  // if(total_card_en_row===3) {
-  //   formato_row = " row row-cols-md-3 d-flex  justify-content-center border border-dark";
-  // }
-
-  // if(total_card_en_row===2) {
-  //   formato_row = " row row-cols-md-2 d-flex w-75 ";
-  // }
+  
 
   let formato_row = " col-md-4 d-flex  justify-content-center ";
 

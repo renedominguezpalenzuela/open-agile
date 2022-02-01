@@ -17,7 +17,7 @@ import Tabla03 from "../../../components/crashkurse/tabla03";
 
 import ModalFormCookie from "../../../components/ModalFormCookie";
 
-
+  import { useState, useEffect } from "react";
 
 
 export default function Home({ curso }) {
@@ -54,6 +54,25 @@ export default function Home({ curso }) {
        link_termine_new=servidor_url+"/"+link_inhalte+link_termine;                  
    }
 
+
+
+  const [desktop_screen, setDesktop_screen] = useState(true);
+  const handleResize = () => {
+    let ancho_screen = window.innerWidth;
+    if (ancho_screen > 992) {
+      setDesktop_screen(true);
+    } else {
+      setDesktop_screen(false);
+    }
+  };
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  
+
+
   return (
     <>
       <Head>
@@ -68,7 +87,29 @@ export default function Home({ curso }) {
         <ModalFormCookie id={1} tiempo={10}/>
         <MenuFlotanteBoton />
 
-        <AreaSuperior fondo="ajustable" texto1={titulo_area_superior} titulo_largo={true} area_gris_nueva={true}/>
+        {/* <AreaSuperior fondo="ajustable" texto1={titulo_area_superior} titulo_largo={true} area_gris_nueva={true}/> */}
+
+           
+ {desktop_screen ? (
+         <AreaSuperior
+          fondo="ajustable"
+          texto1={titulo_area_superior}
+          titulo_muy_largo={true}
+          area_gris_nueva={true}
+           shop={true}
+        /> 
+        ):(  
+        
+         <AreaSuperior
+          fondo="ajustable"
+          texto2={titulo_area_superior}
+          titulo_muy_largo={true}
+          area_gris_nueva={true}
+           shop={true}
+        /> 
+        )}
+
+		
 
         <div className="row pt-5 pb-5">
           <div className="col-md-4 ">

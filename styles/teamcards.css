@@ -280,7 +280,7 @@ div.horizontal-line {
     font-size: 2vw !important;
   }
   .nombre_team {
-    font-size: 4.3vw !important;
+    font-size: 5.6vw !important;
   }
 }
 
@@ -338,14 +338,17 @@ div.horizontal-line {
     line-height: 2rem;
   }
 
+ 
+  }
+
   @media (max-width: 517px) {
     .font_title1-team-seccion {
-      font-size: 1.4em !important;
+      font-size: 4vw !important;
     }
     .font_motto_team {
-      font-size: 2vw;
+      font-size: 2.5vw;
     }
-  }
+
   /* font_title_purple */
   .font_title2-team-seccion {
     font-family: Montserrat-BoldItalic;

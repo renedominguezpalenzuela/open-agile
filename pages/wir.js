@@ -67,9 +67,14 @@ export default function Home({ team }) {
           fondo="ajustable"
           texto1={titulo1}
           texto2={titulo2a}
-          titulo_muy_largo={desktop_screen}
+          titulo_muy_largo={true}
           area_gris_nueva={true}
+          shop={true}
         />
+
+
+
+
 
         <Content06Team lista_cards={team} />
 

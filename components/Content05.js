@@ -91,9 +91,15 @@ export default function Content05({ datos, color_fondo }) {
                         <div className="col-md-6">
                           <div className="row sombra_cards myanimacion mt-md-5 mt-lg-4 mi-card">
                             <div className="col p-3">
+                         
                               {unDato.link != undefined && unDato.link != "" && (
                                 <div className="ratio ratio-16x9">
                                   <iframe
+                                   loading="lazy"
+                                   
+                                  allow="accelerometer; autoplay;
+                                  encrypted-media; gyroscope;
+                                  picture-in-picture"
                                     src={unDato.link}
                                     title="YouTube video"
                                     allowFullScreen></iframe>

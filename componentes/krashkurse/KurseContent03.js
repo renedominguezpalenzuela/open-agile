@@ -45,7 +45,7 @@ export default function KurseContent03({
             <ul>
               {texto_leistungen.map((unaLinea, index) => (
                 <React.Fragment key={index}>
-                  <li className="ps-5   font-kosten-cursos mybullets2">
+                  <li className="ps-5   font-kosten-cursos bullets-leistungen">
                     {unaLinea}{" "}
                   </li>
                 </React.Fragment>
@@ -62,7 +62,7 @@ export default function KurseContent03({
                 <React.Fragment key={index}>
 
                   {texto_kosten.length>1?
-                        <li className="ps-5   font-kosten-cursos mybullets2"> {unaLinea}</li>
+                        <li className="ps-5   font-kosten-cursos bullets-leistungen"> {unaLinea}</li>
                         :
                         <li className="fuente-texto-cursos "> {unaLinea}</li>
 

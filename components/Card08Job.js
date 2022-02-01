@@ -44,17 +44,18 @@ export default function Card08Job({
                 </>
               )}
 
+
               <ul>
               {parrafo1 != undefined &&
                 parrafo1.length > 0 &&
                 parrafo1.map((unaLinea, index) => (
-                  <div key={index}  className="">
-                    {/* <span className=" fuente-bullet-job me-1">•</span> */}
-                    {/* <span className=" font3-card-job"> {unaLinea}</span> */}
-                          <li className="font3-card-job mybullets2"> {unaLinea}</li>
-                  </div>
+                  
+                   
+                          <li key={index} className="font3-card-job bullets-jobs"> {unaLinea}</li>
+                  
                 ))}
                 </ul>   
+
 
                 {titulo_parrafo2 != undefined && titulo_parrafo2 != "" && (
                 <>
@@ -66,11 +67,10 @@ export default function Card08Job({
               {parrafo2 != undefined &&
                 parrafo2.length > 0 &&
                 parrafo2.map((unaLinea, index) => (
-                  <div key={index}  className="">
-                    {/* <span className=" fuente-bullet-job me-1">•</span> */}
-                    {/* <span className=" font3-card-job"> {unaLinea}</span> */}
-                                   <li className=" font3-card-job mybullets2"> {unaLinea}</li>
-                  </div>
+                    <div key={index}  className="">
+                   
+                                   <li className=" font3-card-job bullets-jobs"> {unaLinea}</li>
+                   </div>
                 ))}
 </ul>
 
@@ -86,7 +86,7 @@ export default function Card08Job({
                 parrafo3.map((unaLinea, index) => (
                   <div key={index}  className="   font3-card-job ">
                     {/* <span className=" fuente-bullet-job me-1">•</span> */}
-                    <li className=" font3-card-job mybullets2"> {unaLinea}</li>
+                    <li className=" font3-card-job mybullets-blog"> {unaLinea}</li>
                   </div>
                 ))}
 
