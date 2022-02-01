@@ -103,7 +103,7 @@ export default function TextoBloque01({
     <div className="col font_small_letter ms-md-3  me-4 justificar ">
     <ul>
       {texto_plequitas_array.map ((unaLinea, index) => 
-        <li key={index} className="mybullets2 ms-2">
+        <li key={index} className="bullets-texto-bloque01 ms-2">
           {unaLinea}
         </li>                 
       )}

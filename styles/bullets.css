@@ -1,0 +1,121 @@
+
+
+ul li.bullets-leistungen::before {
+    content: "\2022"; 
+    color: #f82d7c; 
+    font-weight: bold; 
+    display: inline-block; 
+    width: 1vw; 
+    margin-left: -1.3vw; 
+  }
+  
+  
+  @media  (max-width: 300px) {
+    ul li.bullets-leistungen::before {
+      width: 4.3vw; 
+      margin-left: -4.3vw; 
+    }
+  } 
+  
+  
+  
+  @media (min-width:300px) and (max-width: 450px) {
+    ul li.bullets-leistungen::before {
+      width: 4.6vw; 
+      margin-left: -4.6vw; 
+    }
+  } 
+
+  ul li.bullets-jobs::before {
+    content: "\2022"; 
+    color: #f82d7c; 
+    font-weight: bold; 
+    display: inline-block; 
+    width: 1.1vw; 
+    margin-left: -1.3vw; 
+  }
+
+  
+  @media (min-width:300px) and (max-width: 450px) {
+    ul li.bullets-jobs::before {
+      width: 3.8vw; 
+      margin-left: -4.6vw; 
+    }
+  } 
+
+  
+  ul li.bullets-blog::before {
+    content: "\2022"; 
+    color: #f82d7c; 
+    font-weight: bold; 
+    display: inline-block; 
+    width: 1.1vw; 
+    margin-left: -1.3vw; 
+  }
+
+  
+  @media (min-width:300px) and (max-width: 450px) {
+    ul li.bullets-blog::before {
+      width: 3.8vw; 
+      margin-left: -3.8vw; 
+    }
+  }
+
+  
+  ul li.bullets-team::before {
+    content: "\2022"; 
+    color: #f82d7c; 
+    font-weight: bold; 
+    display: inline-block; 
+    width: 1.1vw; 
+    margin-left: -1.3vw; 
+  }
+
+  
+  @media (min-width:300px) and (max-width: 450px) {
+    ul li.bullets-team::before {
+      width: 3vw; 
+      margin-left: -3.8vw; 
+    }
+  }
+
+
+ 
+  
+  
+  ul li.bullets-texto-bloque01::before {
+    content: "\2022"; 
+    color: #f82d7c; 
+    font-weight: bold; 
+    display: inline-block; 
+    width: 2.1vw; 
+    margin-left: -1.3vw; 
+  }
+
+  
+  @media (min-width:300px) and (max-width: 450px) {
+    ul li.bullets-texto-bloque01::before {
+      width: 5.5vw; 
+      margin-left: -5.5vw; 
+    }
+  }
+
+  
+  ul li.bullets-area-superior::before {
+    content: "\2022"; 
+    color: #f82d7c; 
+    font-weight: bold; 
+    display: inline-block; 
+    width: 2.1vw; 
+    margin-left: -1.3vw; 
+  }
+
+  
+  @media (min-width:300px) and (max-width: 450px) {
+    ul li.bullets-area-superior::before {
+      width: 5.5vw; 
+      margin-left: -5.5vw; 
+    }
+  }
+
+ 

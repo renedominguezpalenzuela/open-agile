@@ -91,7 +91,7 @@ export default function Home({ team }) {
                 <ul>
                   {erfahrung.map((unErfarung, index) => (
                     <div key={index} className="font_erfahrum_detalles  ">
-                      <li className="mybullets2"> {unErfarung} </li>
+                      <li className="bullets-team"> {unErfarung} </li>
                     </div>
                   ))}
                 </ul>
@@ -118,7 +118,7 @@ export default function Home({ team }) {
                   {weiterbildungen.map((unWeiterbildungen, index) => (
                     <div key={index} className="font_erfahrum_detalles  ">
                       {/* • {unWeiterbildungen} */}
-                      <li className="mybullets2"> {unWeiterbildungen } </li>
+                      <li className="bullets-team"> {unWeiterbildungen } </li>
                     </div>
                   ))}
                 </ul>
@@ -140,29 +140,27 @@ export default function Home({ team }) {
           </div>
         </div>
 
-        <div className="row pb-3  fondo_team_seccion">
+        <div className="row pb-3 g-0 fondo_team_seccion ">
           <div className="col-4   d-flex justify-content-center align-items-center ">
             <img
-              className="  pt-4 pb-4 imagen-team"
+              className="  pt-4  imagen-team"
               src={`${servidor_url}/img/${imageround}`}
             />
           </div>
 
           {/* "col {} mt-5 pt-5 " */}
           <div
-            className={`col-7  ${
-              motto.length >= 2 ? 'mt-1' : 'mt-5'
-            }  pt-5 pb-2 me-3 h-100 `}
+            className={`col-7  ${ motto.length >= 2 ? 'mt-1' : 'mt-5'  }  pt-5 pb-2  h-100 `}
           >
             {motto.map((unMotto, index) => (
-              <div key={index} className="row   pe-3 me-3  font_motto_team  ">
+              <div key={index} className="row   pe-md-3 me-md-3  font_motto_team  ">
                 {unMotto}
               </div>
             ))}
 
-            <div className=" row  mt-3 me-5  horizontal-line "></div>
+            <div className=" row  mt-3 me-1  horizontal-line "></div>
 
-            <div className=" row  mt-3 font_title1-team-seccion ">
+            <div className=" row  mt-3 font_title1-team-seccion  ">
               {motto_author}
             </div>
 

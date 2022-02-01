@@ -51,7 +51,7 @@ export default function Card08Job({
                 parrafo1.map((unaLinea, index) => (
                   
                    
-                          <li key={index} className="font3-card-job mybullets2"> {unaLinea}</li>
+                          <li key={index} className="font3-card-job bullets-jobs"> {unaLinea}</li>
                   
                 ))}
                 </ul>   
@@ -69,7 +69,7 @@ export default function Card08Job({
                 parrafo2.map((unaLinea, index) => (
                     <div key={index}  className="">
                    
-                                   <li className=" font3-card-job mybullets2"> {unaLinea}</li>
+                                   <li className=" font3-card-job bullets-jobs"> {unaLinea}</li>
                    </div>
                 ))}
 </ul>
@@ -86,7 +86,7 @@ export default function Card08Job({
                 parrafo3.map((unaLinea, index) => (
                   <div key={index}  className="   font3-card-job ">
                     {/* <span className=" fuente-bullet-job me-1">•</span> */}
-                    <li className=" font3-card-job mybullets2"> {unaLinea}</li>
+                    <li className=" font3-card-job mybullets-blog"> {unaLinea}</li>
                   </div>
                 ))}
 

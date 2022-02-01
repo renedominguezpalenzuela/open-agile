@@ -893,40 +893,6 @@ ul li.mybullets::before {
   margin-left: -1.2em;
 }
 
-ul li.mybullets2::before {
-  content: "\2022"; 
-  color: #f82d7c; 
-  font-weight: bold; 
-  display: inline-block; 
-  width: 1vw; 
-  margin-left: -1.3vw; 
-}
-
-/*   
- @media (min-width:750)  and  (max-width: 991px) {
-  ul li.mybullets2::before {
-    width: 1vw; 
-    margin-left: -1.6vw; 
-  }
-}  */
-
-
-@media  (max-width: 300px) {
-  ul li.mybullets2::before {
-    width: 4.3vw; 
-    margin-left: -4.3vw; 
-  }
-} 
-
-
-
-@media (min-width:300px) and (max-width: 450px) {
-  ul li.mybullets2::before {
-    width: 3.6vw; 
-    margin-left: -4.3vw; 
-  }
-} 
-
 
 
 .ocultar {

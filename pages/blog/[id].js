@@ -400,7 +400,7 @@ const contenido = (contenido) => {
           <ul>
             {contenido.text.map((unTexto, index2) => (
               <React.Fragment key={index2}>
-                <li className="letra-parrafo-blog mybullets2">{unTexto}</li>
+                <li className="letra-parrafo-blog bullets-blog">{unTexto}</li>
               </React.Fragment>
             ))}
           </ul>
@@ -420,7 +420,7 @@ const contenido = (contenido) => {
           <ol>
             {contenido.text.map((unTexto, index2) => (
               <React.Fragment key={index2}>
-                <li className="letra-parrafo-blog mybullets2">{unTexto}</li>
+                <li className="letra-parrafo-blog bullets-blog">{unTexto}</li>
               </React.Fragment>
             ))}
           </ol>
