@@ -10,10 +10,10 @@ export default async function handler(req, res) {
   const remoteServerUrl =
     "https://api.jesamconsulting.com/.netlify/functions/send-email";
 
-  // to: "kontakt@open-agile.de",
+  
   const sendData = {
     from: "Kontakt Formular",
-    to: "renedp1975@gmail.com",
+    to: "kontakt@open-agile.de",
     subject: "Newsletter Kontaktformular",
     body: `    
       <strong>Name: </strong> ${req.body.nombre} <br />
