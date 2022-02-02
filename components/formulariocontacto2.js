@@ -1,21 +1,106 @@
-import React, { useState } from 'react'
-import TextField from '@mui/material/TextField'
+import React, { useState } from "react";
+import TextField from "@mui/material/TextField";
 // import { ThemeProvider, createTheme } from '@mui/material/styles';
-import Button from '@mui/material/Button'
-import FormControl from '@mui/material/FormControl'
-import Checkbox from '@mui/material/Checkbox'
-import FormControlLabel from '@mui/material/FormControlLabel'
+import Button from "@mui/material/Button";
+import FormControl from "@mui/material/FormControl";
+import Checkbox from "@mui/material/Checkbox";
+import FormControlLabel from "@mui/material/FormControlLabel";
 
-import { pink } from '@mui/material/colors'
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+
+import axios from "axios";
+
+// import { sendFormularioNewsLetter } from "../components/global/sendFormulario";
+
+import { pink } from "@mui/material/colors";
+
+import { servidor_url } from "../config";
 
 export default function FormularioContacto2() {
-  const [checked1, setChecked1] = useState(false)
+  const [checked1, setChecked1] = useState(false);
+  const [nombre, setNombre] = React.useState("");
+  const [correo, setCorreo] = React.useState("");
+  const [textoDialogo, setTextoDialogo] = React.useState("HI");
 
   const handleChange1 = (event) => {
-    setChecked1(event.target.checked)
-  }
+    setChecked1(event.target.checked);
+  };
 
-  const label = { inputProps: { 'aria-label': 'Checkbox demo' } }
+  const handleChangeNombre = (event) => {
+    setNombre(event.target.value);
+  };
+
+  const handleChangeCorreo = (event) => {
+    setCorreo(event.target.value);
+  };
+
+  //dialogo
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const label = { inputProps: { "aria-label": "Checkbox demo" } };
+
+  const texto_EnviadoCorrectamente = "Vielen Dank für Deine Anmeldung!";
+  const texto_ErrorEnDatosCheckBox =
+    "Bitte bestätige die AGBs, um Dich für unseren Newsletter anzumelden.";
+  const texto_ErrorEnDatos =
+    "Bitte überprüfe Deine Angaben und sende es noch einmal ab.";
+  const texto_ErrorEnServidor =
+    "Kontaktformular Error, bitte versuchen Sie es erneut.";
+
+  const eventoBotonEnviar = async () => {
+    const subject = "Newsletter Kontaktformular";
+
+    if (nombre === "" || correo === "") {
+      console.log("aqui1");
+
+      setTextoDialogo(texto_ErrorEnDatos);
+      handleClickOpen();
+      return;
+    }
+
+    if (!checked1) {
+      console.log("aqui2");
+      setTextoDialogo(texto_ErrorEnDatosCheckBox);
+      handleClickOpen();
+      return;
+    }
+
+    const datos = {
+      nombre: nombre,
+      correo: correo,
+      subject: "Newsletter Kontaktformular",
+    };
+    const respuesta = await sendFormularioNewsLetter(datos);
+    // const respuesta_json =await respuesta.json()
+
+    if (respuesta.statusText === "OK") {
+      setTextoDialogo(texto_EnviadoCorrectamente);
+      handleClickOpen();
+      return;
+    }
+
+    console.log(respuesta.data.cod_resp);
+
+    if (respuesta.cod_resp === "000") {
+      setTextoDialogo(texto_EnviadoCorrectamente);
+      handleClickOpen();
+    } else {
+      setTextoDialogo(texto_ErrorEnServidor);
+      handleClickOpen();
+    }
+  };
 
   // const styles2 = (theme) => ({
   //   multilineColor: {
@@ -30,71 +115,68 @@ export default function FormularioContacto2() {
   const styles = {
     width: { sm: 250, md: 350 },
 
-    '& .MuiInputBase-root': {
+    "& .MuiInputBase-root": {
       height: 42,
     },
 
-    '& .MuiOutlinedInput-root': {
-      '& > fieldset': {
-        borderColor: 'white',
+    "& .MuiOutlinedInput-root": {
+      "& > fieldset": {
+        borderColor: "white",
       },
     },
-    '& .MuiOutlinedInput-root:hover': {
-      '& > fieldset': {
-        borderColor: '#e42078',
+    "& .MuiOutlinedInput-root:hover": {
+      "& > fieldset": {
+        borderColor: "#e42078",
       },
     },
 
-    '& .MuiFormLabel-root': {
-      color: '#ffffff', //Color del label
+    "& .MuiFormLabel-root": {
+      color: "#ffffff", //Color del label
     },
-  }
+  };
 
   const fuentes1 = {
     style: {
       //fontSize: 11
       fontSize: 10,
-      textAlign: 'left', ///Text Align
-      letterSpacing: '0.06vw', //espaciado de letras luego d escribir
-      color: '#ffffff',
-      fontFamily: 'Montserrat-Light',
+      textAlign: "left", ///Text Align
+      letterSpacing: "0.06vw", //espaciado de letras luego d escribir
+      color: "#ffffff",
+      fontFamily: "Montserrat-Light",
     },
-  }
+  };
 
   const fuentes = {
     style: { fontSize: 10 },
-  }
+  };
 
   const styles3 = {
-
     //  marginLeft: '7vw',
-  
-    '.MuiFormControlLabel-label': {
-      
-      fontFamily: 'Montserrat-Regular',
+
+    ".MuiFormControlLabel-label": {
+      fontFamily: "Montserrat-Regular",
       fontSize: 11,
-      color: '#ffffff',
+      color: "#ffffff",
       // paddingLeft: 2
       // marginLeft: '5vw'
-      
     },
-  }
+  };
 
   const stylesCuadrado = {
-    color: '#ffffff',
+    color: "#ffffff",
     // left:'6vw',  //contrla distancia entre texto y check box, nueve el checkbox
-    '&.Mui-checked': { color: '#e42078' },
-  }
+    "&.Mui-checked": { color: "#e42078" },
+  };
 
   const stiloTexto = {
-    'MuiFormControlLabel-root': {
+    "MuiFormControlLabel-root": {
       fontSize: 100,
 
-      '& .MuiFormControlLabel-label': {
-        color: '#ffffff',
+      "& .MuiFormControlLabel-label": {
+        color: "#ffffff",
       },
     },
-  }
+  };
 
   return (
     <>
@@ -116,6 +198,8 @@ export default function FormularioContacto2() {
             sx={styles}
             inputProps={fuentes1}
             InputLabelProps={fuentes}
+            value={nombre}
+            onChange={handleChangeNombre}
           />
         </div>
         <div className="group item-edit2 ">
@@ -127,13 +211,15 @@ export default function FormularioContacto2() {
             sx={styles}
             inputProps={fuentes1}
             InputLabelProps={fuentes}
+            value={correo}
+            onChange={handleChangeCorreo}
           />
-        </div>{' '}
+        </div>{" "}
         <div className="group  item-boton1  ">
           <button
             type="button"
             className="btn boton_formulario ancho-boton alto-boton"
-          >
+            onClick={eventoBotonEnviar}>
             ANMELDEN
           </button>
         </div>
@@ -148,13 +234,52 @@ export default function FormularioContacto2() {
                 color="primary"
                 sx={stylesCuadrado}
                 onChange={handleChange1}
-                
               />
             }
             label="Ja, ich bin mit den AGBs des Newsletters einverstanden"
           />
         </div>
       </div>
+
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description">
+        {/* <DialogTitle id="alert-dialog-title">
+          {"Use Google's location service?"}
+        </DialogTitle> */}
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            {textoDialogo}
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} autoFocus>
+            OK
+          </Button>
+        </DialogActions>
+      </Dialog>
     </>
-  )
+  );
 }
+
+const qs = require("qs");
+
+const sendFormularioNewsLetter = async (datos) => {
+  const url = `${servidor_url}/api/forms`;
+
+  let bodyData = qs.stringify(datos);
+
+  try {
+    const respuesta_api = await axios.post(url, bodyData, {
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+    });
+
+    return respuesta_api;
+  } catch (err) {
+    console.log("Error " + err);
+  }
+};
