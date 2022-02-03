@@ -3,7 +3,7 @@ import axios from "axios";
 
 export default async function handler(req, res) {
   if (req.method != "POST") {
-    res.status(200).json({ cod_resp: "901", msg: "Only POST request" });
+    res.status(405).json({ cod_resp: "901", msg: "Only POST request" });
   }
 
   const remoteServerUrl =

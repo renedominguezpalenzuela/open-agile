@@ -11,8 +11,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 
-
-import { sendFormulario } from "../components/global/sendFormulario";
+import { sendFormularioAndFile } from "../components/global/sendFormularioAndFile";
 
 import Radio from "@mui/material/Radio";
 // import RadioGroup from "@mui/material/RadioGroup";
@@ -40,8 +39,6 @@ import Button from "@mui/material/Button";
 import FormControl from "@mui/material/FormControl";
 
 import Box from "@mui/material/Box";
-
-
 
 const StyledFormControlLabel = styled((props) => (
   <FormControlLabel {...props} />
@@ -80,8 +77,7 @@ export default function ModalFormJob({
   day,
   frase,
 }) {
- 
- const [nombre, setNombre] = React.useState("");
+  const [nombre, setNombre] = React.useState("");
   const handleChangeNombre = (event) => {
     setNombre(event.target.value);
   };
@@ -101,12 +97,10 @@ export default function ModalFormJob({
     setMensaje(event.target.value);
   };
 
-  
   const [condicionesAGB, setCondicionesAGB] = React.useState("");
   const handleChangeCondicionesAGB = (event) => {
     setCondicionesAGB(event.target.value);
   };
-
 
   const [textoDialogo, setTextoDialogo] = React.useState("");
 
@@ -121,7 +115,8 @@ export default function ModalFormJob({
     setOpen(false);
   };
 
-  const texto_EnviadoCorrectamente = "Vielen Dank für die Kontaktaufnahme, wir melden uns in Kürze bei Dir!";
+  const texto_EnviadoCorrectamente =
+    "Vielen Dank für die Kontaktaufnahme, wir melden uns in Kürze bei Dir!";
   const texto_ErrorEnDatosCheckBox =
     "Bitte bestätige die AGBs, um Dich für unseren Newsletter anzumelden.";
   const texto_ErrorEnDatos =
@@ -130,48 +125,49 @@ export default function ModalFormJob({
     "Kontaktformular Error, bitte versuchen Sie es erneut.";
 
   const eventoBotonEnviar = async () => {
-      if (condicionesAGB != "Ja") {
+    if (condicionesAGB != "Ja") {
       setTextoDialogo(texto_ErrorEnDatosCheckBox);
       handleClickOpen();
       return;
     }
 
-    if (nombre === "" || email === "" || telephone==="" || mensaje==="" ) {
-      
-
+    if (nombre === "" || email === "" || telephone === "" || mensaje === "") {
       setTextoDialogo(texto_ErrorEnDatos);
       handleClickOpen();
       return;
     }
 
-
-
-
- const subject = "Kontaktformular";
-const DataToSend = {
+    const subject = "Kontaktformular";
+    const DataToSend = {
       from: "Kontakt Formular",
       to: formEmail,
       subject: subject,
+      filename: fichero_seleccionado.name,
+      fileBase64: ficheroBase64,
+      fichero: fichero_seleccionado,
       body: `              
      <strong>Name, Vorname: </strong> ${nombre} <br />
      <strong>E-Mail Adresse: </strong> ${email} <br />
      <strong>Telefonnummer: </strong> ${telephone} <br />
-     <strong>Nachricht: </strong> ${mensaje} <br />`
+     <strong>Nachricht: </strong> ${mensaje} <br />`,
+    };
 
+    // const respuesta = await sendFormularioAndFile(DataToSend);
+    const respuesta = await sendForm(DataToSend);
 
-     }
-    
-    const respuesta = await sendFormulario(DataToSend);
-    
+    console.log(respuesta);
 
-   
+    if (!respuesta) {
+       setTextoDialogo(texto_EnviadoCorrectamente);
+      handleClickOpen();
+      return;
+    }
+
     if (respuesta.statusText === "OK") {
       setTextoDialogo(texto_EnviadoCorrectamente);
       handleClickOpen();
       return;
     }
-
- 
 
     if (respuesta.cod_resp === "000") {
       setTextoDialogo(texto_EnviadoCorrectamente);
@@ -182,6 +178,10 @@ const DataToSend = {
     }
   };
 
+  // Subiendo fichero al servidor
+  const [ficheroPath, setFicheroPath] = useState(null);
+  const [ficheroBase64, setFicheroBase64] = useState(null);
+  const [createObjectURL, setCreateObjectURL] = useState(null);
 
   const fuentes1 = {
     style: {
@@ -232,7 +232,7 @@ const DataToSend = {
 
   const [value2, setValue2] = React.useState("Controlled");
   const [value3, setValue3] = React.useState("Controlled");
-  const [value4, setValue4] = React.useState(". . .");
+  const [fichero_seleccionado, setfichero_seleccionado] = React.useState(". . .");
 
   const handleChange1 = (event) => {
     setValue1(event.target.value);
@@ -247,23 +247,29 @@ const DataToSend = {
   };
 
   const handleChange4 = (event) => {
-    setValue4(event.target.value);
+    setfichero_seleccionado(event.target.value);
   };
 
   const hiddenFileInput = useRef(null);
 
-  const handleChange = (event) => {
+  const eventoCambioNombreFichero = (event) => {
     if (event.target.files && event.target.files[0]) {
-      const i = event.target.files[0];
+      const fichero_path_usuario = event.target.files[0];
+      setfichero_seleccionado(fichero_path_usuario.name);
 
-      setValue4(i.name);
+      setFicheroPath(fichero_path_usuario);
 
-      const body = new FormData();
-      body.append("image", i);
+      var reader = new FileReader();
+      reader.onload = function (event) {
+        let fichero = event.target.result.toString();
+        let base64data = btoa(fichero);
+        setFicheroBase64(base64data);
+      };
+      reader.readAsBinaryString(fichero_path_usuario);
     }
   };
 
-  const handleClick = (event) => {
+  const eventoBotonSubirFichero = (event) => {
     hiddenFileInput.current.click();
   };
 
@@ -400,7 +406,7 @@ const DataToSend = {
                   sx={styles}
                   inputProps={fuentes1}
                   InputLabelProps={fuentes2}
-                    value={email}
+                  value={email}
                   onChange={handleChangeEmail}
                 />
               </div>
@@ -413,7 +419,7 @@ const DataToSend = {
                   sx={styles}
                   inputProps={fuentes1}
                   InputLabelProps={fuentes2}
-                   value={telephone}
+                  value={telephone}
                   onChange={handleChangeTelephone}
                 />
               </div>
@@ -433,10 +439,11 @@ const DataToSend = {
               </div>
 
               <div className="row d-flex justify-content-start ps-3 pe-3 mt-1">
-                <RadioGroup name="use-radio-group" defaultValue="Ja"
-                   value={condicionesAGB}
-                      onChange={handleChangeCondicionesAGB}
-                >
+                <RadioGroup
+                  name="use-radio-group"
+                  defaultValue="Ja"
+                  value={condicionesAGB}
+                  onChange={handleChangeCondicionesAGB}>
                   <MyFormControlLabel
                     value="Ja"
                     label="Ja"
@@ -455,7 +462,6 @@ const DataToSend = {
                   id="outlined-multiline-flexible"
                   label="Erzähle uns gerne mehr von Dir"
                   multiline
-                  maxRows={2}
                   rows={2}
                   className=""
                   sx={styles2}
@@ -466,37 +472,42 @@ const DataToSend = {
                 />
               </div>
 
-              <div className="row  g-0 mt-4  mb-2  d-flex flex-wrap justify-content-start">
-                 <input type="file" className="ocultar" id="customFile" onChange={handleChange4} />      
+              <div className="row mt-4 ms-3">
+                <div className="col-md-6  d-flex justify-content-start align-items-center texto-AGBS">
+                  {fichero_seleccionado}
+                </div>
+              </div>
+              <div className="row  g-0  mt-2 mb-2  d-flex flex-wrap justify-content-start">
+                {/* <input type="file" className="ocultar" id="customFile" onChange={handleChange4} />       */}
                 <input
                   type="file"
                   ref={hiddenFileInput}
-                  onChange={handleChange}
+                  onChange={eventoCambioNombreFichero}
                   className="ocultar"
-                /> 
+                />
 
                 <div className="col mx-3 d-flex justify-content-between botones-jobs-516">
                   <button
                     type="button"
                     className="btn btn-secondary boton_modal_form"
-                    onClick={handleClick}>
+                    onClick={eventoBotonSubirFichero}>
                     Lebenslauf hochladen
                   </button>
+
                   <button
                     type="button"
                     className="btn btn-secondary boton_modal_form"
                     data-bs-dismiss="modal"
-                     onClick={eventoBotonEnviar}>
-                    
+                    onClick={eventoBotonEnviar}>
                     Jetzt Bewerbung absenden
                   </button>
                 </div>
-              
+
                 <div className="row d-flex botones-jobs justify-content-center">
                   <button
                     type="button"
                     className="btn btn-secondary boton_modal_form mb-3 col-10"
-                    onClick={handleClick}>
+                    onClick={eventoBotonSubirFichero}>
                     Lebenslauf hochladen
                   </button>
                   <button
@@ -508,20 +519,14 @@ const DataToSend = {
                   </button>
                 </div>
 
-                  <div className="row mt-2"> 
-                  <div className="col-md-6  d-flex justify-content-start align-items-center texto-AGBS">
-                  {value4}
-                </div>  
-                </div>
                 {/* <div className="col-md-5 d-flex justify-content-end"></div> */}
-                
               </div>
             </div>
           </div>
         </div>
       </div>
 
- <Dialog
+      <Dialog
         open={open}
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
@@ -540,7 +545,6 @@ const DataToSend = {
           </Button>
         </DialogActions>
       </Dialog>
-
     </>
   );
 }
@@ -549,3 +553,56 @@ const eliminar_anno = (fecha) => {
   if (fecha === undefined) return "";
   return fecha.substring(0, 6);
 };
+
+const sendForm = async (datos) => {
+  const remoteServerUrl =
+    "https://api.jesamconsulting.com/.netlify/functions/send-email-v2";
+
+  try {
+    //req.body -- es un json
+
+    let fichero_base_64 = datos.fileBase64;
+    var decodedFile = new Buffer(fichero_base_64, "base64");
+
+    var data_formulario = new FormData();
+    data_formulario.append("to", datos.to);
+    data_formulario.append("from", datos.from);
+    data_formulario.append("subject", datos.subject);
+    data_formulario.append("body", datos.body);
+    data_formulario.append("file", datos.fichero);
+    // data_formulario.append("file", decodedFile, {
+    //   filename: datos.fileName,
+    // });
+
+    console.log("Sending request");
+    const respuesta_api = await axios.post(remoteServerUrl, data_formulario, {
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+    });
+
+    console.log("Respuesta");
+    console.log(respuesta_api);
+
+    const data = await respuesta_api.data; //json();
+    console.log("Respuesta");
+    console.log(data);
+
+    if (!data) {
+      // res .status(200)   .json({ cod_resp: "902", msg: "No data received from server" });
+    }
+
+    if (data.error != "" && data.error != undefined) {
+      // res.status(200).json({ cod_resp: "000", msg: "mail sent correctly!!!" });
+      console.log("OK -- data.error=''")
+    } else {
+      // res.status(200).json({ cod_resp: "903", msg: "Error: " + data.error });
+      console.log("ERROR -- data.error<>''")
+    }
+  } catch (err) {
+    console.log("Error api/formsfile: " + err.message);
+    console.log(err);
+    // res.status(200).json({ cod_resp: "950", msg: err.message });
+  }
+};
+
