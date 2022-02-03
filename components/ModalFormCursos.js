@@ -133,7 +133,7 @@ export default function ModalFormCursos({
   const handleChangeReferencia = (event) => {
     setReferencia(event.target.value);
 
-    console.log("Referencia " + referencia);
+    
   };
 
   //Deinne
@@ -631,7 +631,7 @@ export default function ModalFormCursos({
                       options={opciones_combo_box}
                       sx={stilos_combo}
                       onChange={(event, value) =>
-                        // console.log(value)
+                        
                         setReferencia(value)
                       } // prints the selected value
                       // getOptionLabel={(option) => (option ? option.name : "")}

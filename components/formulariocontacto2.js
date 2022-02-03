@@ -64,7 +64,7 @@ export default function FormularioContacto2() {
 
   const eventoBotonEnviar = async () => {
     if (nombre === "" || correo === "") {
-      console.log("aqui1");
+      
 
       setTextoDialogo(texto_ErrorEnDatos);
       handleClickOpen();
@@ -72,7 +72,7 @@ export default function FormularioContacto2() {
     }
 
     if (!checked1) {
-      console.log("aqui2");
+      
       setTextoDialogo(texto_ErrorEnDatosCheckBox);
       handleClickOpen();
       return;
@@ -99,7 +99,7 @@ export default function FormularioContacto2() {
       return;
     }
 
-    console.log(respuesta.data.cod_resp);
+    
 
     if (respuesta.cod_resp === "000") {
       setTextoDialogo(texto_EnviadoCorrectamente);

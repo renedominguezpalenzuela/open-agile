@@ -1,4 +1,3 @@
-
 const qs = require("qs");
 import axios from "axios";
 
@@ -7,18 +6,23 @@ export default async function handler(req, res) {
     res.status(200).json({ cod_resp: "901", msg: "Only POST request" });
   }
 
-  const remoteServerUrl = "https://api.jesamconsulting.com/.netlify/functions/send-email";
+  const remoteServerUrl =
+    "https://api.jesamconsulting.com/.netlify/functions/send-email";
 
   try {
     //Aqui se necesita un json
     let bodyData = qs.stringify(req.body);
+
+    
     const respuesta_api = await axios.post(remoteServerUrl, bodyData, {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
     });
 
-    const data = await respuesta.json();
+    
+
+    const data = await respuesta_api.data; //json();
 
     if (!data) {
       res
@@ -26,13 +30,13 @@ export default async function handler(req, res) {
         .json({ cod_resp: "902", msg: "No data received from server" });
     }
 
-    if (data.error != "") {
+    if (data.error != "" && data.error != undefined) {
       res.status(200).json({ cod_resp: "000", msg: "mail sent correctly!!!" });
     } else {
       res.status(200).json({ cod_resp: "903", msg: "Error: " + data.error });
     }
   } catch (err) {
+    console.log("Error api/forms: " + err.message);
     res.status(200).json({ cod_resp: "950", msg: err.message });
   }
 }
-
