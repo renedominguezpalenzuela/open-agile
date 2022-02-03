@@ -56,7 +56,7 @@ import { faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import { useEffect } from "react";
-
+import Script from "next/script";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false; /* eslint-disable import/first */
 
@@ -85,14 +85,19 @@ export default function MyApp(props) {
       <Head>
         <title>My page</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=UA-219220429-1"></script>
-        <script>
-          window.dataLayer = window.dataLayer || []; function gtag()
-          {dataLayer.push(arguments)} gtag('js', new Date()); gtag('config',
-          'UA-219220429-1');
-        </script>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=UA-219220429-1"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-219220429-1');
+          `}
+        </Script>
       </Head>
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
