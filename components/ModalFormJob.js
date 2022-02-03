@@ -1,4 +1,18 @@
 import React, { useRef } from "react";
+import { formEmail } from "../config";
+
+import axios from "axios";
+import { useState } from "react";
+import { servidor_url } from "../config";
+
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+
+
+import { sendFormulario } from "../components/global/sendFormulario";
 
 import Radio from "@mui/material/Radio";
 // import RadioGroup from "@mui/material/RadioGroup";
@@ -27,11 +41,7 @@ import FormControl from "@mui/material/FormControl";
 
 import Box from "@mui/material/Box";
 
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
+
 
 const StyledFormControlLabel = styled((props) => (
   <FormControlLabel {...props} />
@@ -70,8 +80,108 @@ export default function ModalFormJob({
   day,
   frase,
 }) {
-  //Texto que aparece en el edit luego de que el usuario escribe
-  //inputProps={fuentes1}
+ 
+ const [nombre, setNombre] = React.useState("");
+  const handleChangeNombre = (event) => {
+    setNombre(event.target.value);
+  };
+
+  const [email, setEmail] = React.useState("");
+  const handleChangeEmail = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const [telephone, setTelephone] = React.useState("");
+  const handleChangeTelephone = (event) => {
+    setTelephone(event.target.value);
+  };
+
+  const [mensaje, setMensaje] = React.useState("");
+  const handleChangeMensaje = (event) => {
+    setMensaje(event.target.value);
+  };
+
+  
+  const [condicionesAGB, setCondicionesAGB] = React.useState("");
+  const handleChangeCondicionesAGB = (event) => {
+    setCondicionesAGB(event.target.value);
+  };
+
+
+  const [textoDialogo, setTextoDialogo] = React.useState("");
+
+  //dialogo
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const texto_EnviadoCorrectamente = "Vielen Dank für die Kontaktaufnahme, wir melden uns in Kürze bei Dir!";
+  const texto_ErrorEnDatosCheckBox =
+    "Bitte bestätige die AGBs, um Dich für unseren Newsletter anzumelden.";
+  const texto_ErrorEnDatos =
+    "Bitte überprüfe Deine Angaben und sende es noch einmal ab.";
+  const texto_ErrorEnServidor =
+    "Kontaktformular Error, bitte versuchen Sie es erneut.";
+
+  const eventoBotonEnviar = async () => {
+      if (condicionesAGB != "Ja") {
+      setTextoDialogo(texto_ErrorEnDatosCheckBox);
+      handleClickOpen();
+      return;
+    }
+
+    if (nombre === "" || email === "" || telephone==="" || mensaje==="" ) {
+      
+
+      setTextoDialogo(texto_ErrorEnDatos);
+      handleClickOpen();
+      return;
+    }
+
+
+
+
+ const subject = "Kontaktformular";
+const DataToSend = {
+      from: "Kontakt Formular",
+      to: formEmail,
+      subject: subject,
+      body: `              
+     <strong>Name, Vorname: </strong> ${nombre} <br />
+     <strong>E-Mail Adresse: </strong> ${email} <br />
+     <strong>Telefonnummer: </strong> ${telephone} <br />
+     <strong>Nachricht: </strong> ${mensaje} <br />`
+
+
+     }
+    
+    const respuesta = await sendFormulario(DataToSend);
+    
+
+   
+    if (respuesta.statusText === "OK") {
+      setTextoDialogo(texto_EnviadoCorrectamente);
+      handleClickOpen();
+      return;
+    }
+
+ 
+
+    if (respuesta.cod_resp === "000") {
+      setTextoDialogo(texto_EnviadoCorrectamente);
+      handleClickOpen();
+    } else {
+      setTextoDialogo(texto_ErrorEnServidor);
+      handleClickOpen();
+    }
+  };
+
 
   const fuentes1 = {
     style: {
@@ -277,6 +387,8 @@ export default function ModalFormJob({
                   sx={styles}
                   inputProps={fuentes1}
                   InputLabelProps={fuentes2}
+                  value={nombre}
+                  onChange={handleChangeNombre}
                 />
               </div>
 
@@ -288,6 +400,8 @@ export default function ModalFormJob({
                   sx={styles}
                   inputProps={fuentes1}
                   InputLabelProps={fuentes2}
+                    value={email}
+                  onChange={handleChangeEmail}
                 />
               </div>
 
@@ -299,6 +413,8 @@ export default function ModalFormJob({
                   sx={styles}
                   inputProps={fuentes1}
                   InputLabelProps={fuentes2}
+                   value={telephone}
+                  onChange={handleChangeTelephone}
                 />
               </div>
 
@@ -317,7 +433,10 @@ export default function ModalFormJob({
               </div>
 
               <div className="row d-flex justify-content-start ps-3 pe-3 mt-1">
-                <RadioGroup name="use-radio-group" defaultValue="Ja">
+                <RadioGroup name="use-radio-group" defaultValue="Ja"
+                   value={condicionesAGB}
+                      onChange={handleChangeCondicionesAGB}
+                >
                   <MyFormControlLabel
                     value="Ja"
                     label="Ja"
@@ -342,6 +461,8 @@ export default function ModalFormJob({
                   sx={styles2}
                   inputProps={fuentes1}
                   InputLabelProps={fuentes2}
+                  value={mensaje}
+                  onChange={handleChangeMensaje}
                 />
               </div>
 
@@ -364,7 +485,9 @@ export default function ModalFormJob({
                   <button
                     type="button"
                     className="btn btn-secondary boton_modal_form"
-                    data-bs-dismiss="modal">
+                    data-bs-dismiss="modal"
+                     onClick={eventoBotonEnviar}>
+                    
                     Jetzt Bewerbung absenden
                   </button>
                 </div>
@@ -379,7 +502,8 @@ export default function ModalFormJob({
                   <button
                     type="button"
                     className="btn btn-secondary boton_modal_form col-10"
-                    data-bs-dismiss="modal">
+                    data-bs-dismiss="modal"
+                    onClick={eventoBotonEnviar}>
                     Jetzt Bewerbung absenden
                   </button>
                 </div>
@@ -396,6 +520,27 @@ export default function ModalFormJob({
           </div>
         </div>
       </div>
+
+ <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description">
+        {/* <DialogTitle id="alert-dialog-title">
+          {"Use Google's location service?"}
+        </DialogTitle> */}
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            {textoDialogo}
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} autoFocus>
+            OK
+          </Button>
+        </DialogActions>
+      </Dialog>
+
     </>
   );
 }
