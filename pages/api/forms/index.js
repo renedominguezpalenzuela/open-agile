@@ -7,28 +7,11 @@ export default async function handler(req, res) {
     res.status(200).json({ cod_resp: "901", msg: "Only POST request" });
   }
 
-  const remoteServerUrl =
-    "https://api.jesamconsulting.com/.netlify/functions/send-email";
-
-  
-  const sendData = {
-    from: "Kontakt Formular",
-    to: "kontakt@open-agile.de",
-    subject: "Newsletter Kontaktformular",
-    body: `    
-      <strong>Name: </strong> ${req.body.nombre} <br />
-      <strong>Email: </strong> ${req.body.correo} <br />   
-      `,
-    // <strong>Phone: </strong> 123456789 <br />
-    // <strong>Zip code: </strong> zipcide <br />
-    // <strong> Content </strong> <br />
-    // Cuerpo del mensaje `
-  };
-
-
+  const remoteServerUrl = "https://api.jesamconsulting.com/.netlify/functions/send-email";
 
   try {
-    let bodyData = qs.stringify(sendData);
+    //Aqui se necesita un json
+    let bodyData = qs.stringify(req.body);
     const respuesta_api = await axios.post(remoteServerUrl, bodyData, {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",

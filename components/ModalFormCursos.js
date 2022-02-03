@@ -1,4 +1,7 @@
-import * as React from "react";
+import axios from "axios";
+import React, { useState } from "react";
+import { servidor_url } from "../config";
+import { formEmail } from "../config";
 
 import Radio from "@mui/material/Radio";
 // import RadioGroup from "@mui/material/RadioGroup";
@@ -31,6 +34,14 @@ import FormControl from "@mui/material/FormControl";
 import Box from "@mui/material/Box";
 
 import Autocomplete from "@mui/material/Autocomplete";
+
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+
+import { sendFormulario } from "../components/global/sendFormulario";
 
 const StyledFormControlLabel = styled((props) => (
   <FormControlLabel {...props} />
@@ -73,6 +84,197 @@ export default function ModalFormCursos({
 }) {
   //Texto que aparece en el edit luego de que el usuario escribe
   //inputProps={fuentes1}
+  const [vorname, setVorname] = React.useState("");
+  const handleChangeVorname = (event) => {
+    setVorname(event.target.value);
+  };
+
+  const [nachname, setNachname] = React.useState("");
+  const handleChangeNachname = (event) => {
+    setNachname(event.target.value);
+  };
+
+  const [strase1, setStrase1] = React.useState("");
+  const handleChangeStrase1 = (event) => {
+    setStrase1(event.target.value);
+  };
+
+  const [hausnummer1, setHausnummer1] = React.useState("");
+  const handleChangeHausnummer1 = (event) => {
+    setHausnummer1(event.target.value);
+  };
+
+  const [postleitzahls1, setPostleitzahls1] = React.useState("");
+  const handleChangePostleitzahls1 = (event) => {
+    setPostleitzahls1(event.target.value);
+  };
+
+  const [ort1, setOrt1] = React.useState("");
+  const handleChangeOrt1 = (event) => {
+    setOrt1(event.target.value);
+  };
+
+  const [email, setEmail] = React.useState("");
+  const handleChangeEmail = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const [telephone, setTelephone] = React.useState("");
+  const handleChangeTelephone = (event) => {
+    setTelephone(event.target.value);
+  };
+
+  const [comentario, setComentario] = React.useState("");
+  const handleChangeComentario = (event) => {
+    setComentario(event.target.value);
+  };
+
+  const [referencia, setReferencia] = React.useState(1);
+  const handleChangeReferencia = (event) => {
+    setReferencia(event.target.value);
+
+    console.log("Referencia " + referencia);
+  };
+
+  //Deinne
+
+  const [unternehmen, setUnternehmen] = React.useState("");
+  const handleChangeUnternehmen = (event) => {
+    setUnternehmen(event.target.value);
+  };
+
+  const [strase2, setStrase2] = React.useState("");
+  const handleChangeStrase2 = (event) => {
+    setStrase2(event.target.value);
+  };
+
+  const [hausnummer2, setHausnummer2] = React.useState("");
+  const handleChangeHausnummer2 = (event) => {
+    setHausnummer2(event.target.value);
+  };
+
+  const [postleitzahls2, setPostleitzahls2] = React.useState("");
+  const handleChangePostleitzahls2 = (event) => {
+    setPostleitzahls2(event.target.value);
+  };
+
+  const [ort2, setOrt2] = React.useState("");
+  const handleChangeOrt2 = (event) => {
+    setOrt2(event.target.value);
+  };
+
+  const [rabattcode, setRabattcode] = React.useState("");
+  const handleChangeRabattcode = (event) => {
+    setRabattcode(event.target.value);
+  };
+
+  const [condicionesAGB, setCondicionesAGB] = React.useState("");
+  const handleChangeCondicionesAGB = (event) => {
+    setCondicionesAGB(event.target.value);
+  };
+
+  const [textoDialogo, setTextoDialogo] = React.useState("HI");
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const texto_EnviadoCorrectamente =
+    "Vielen Dank für die Anmeldung zum Crashkurs, wir melden uns mit weiteren Informationen bei Dir!";
+  const texto_ErrorEnDatosCheckBox =
+    "Bitte bestätige die AGBs, um Dich für unseren Newsletter anzumelden.";
+  const texto_ErrorEnDatos =
+    "Bitte überprüfe Deine Angaben und sende es noch einmal ab.";
+  const texto_ErrorEnServidor =
+    "Kontaktformular Error, bitte versuchen Sie es erneut.";
+
+  const eventoBotonEnviar = async () => {
+    if (condicionesAGB != "Ja") {
+      setTextoDialogo(texto_ErrorEnDatosCheckBox);
+      handleClickOpen();
+      return;
+    }
+
+    if (
+      vorname === "" ||
+      nachname === "" ||
+      strase1 === "" ||
+      hausnummer1 === "" ||
+      postleitzahls1 === "" ||
+      ort1 === "" ||
+      email === "" ||
+      telephone === "" ||
+      comentario === "" ||
+      referencia === "" ||
+      unternehmen === "" ||
+      strase2 === "" ||
+      hausnummer2 === "" ||
+      postleitzahls2 === "" ||
+      ort2 === "" ||
+      rabattcode === ""
+    ) {
+      setTextoDialogo(texto_ErrorEnDatos);
+      handleClickOpen();
+      return;
+    }
+
+    const subject = "Kontaktformular Crashkurse";
+
+    const DataToSend = {
+      from: "Kontakt Formular",
+      to: formEmail,
+      subject: subject,
+      body: `    
+     <strong>Kontaktformular Crashkurse </strong> <br />
+     <br>
+     <strong> Deine persönlichen Infos </strong> <br />
+     <strong>Vorname: </strong> ${vorname} <br />
+     <strong>Nachname: </strong> ${nachname} <br />
+     <strong>Straße: </strong> ${strase1} <br />
+     <strong>Hausnummer: </strong> ${hausnummer1} <br />
+     <strong>Postleitzahl: </strong> ${postleitzahls1} <br />
+     <strong>Ort: </strong> ${ort1} <br />
+     <strong>E-Mail Adresse: </strong> ${email} <br />
+     <strong>Telefonnummer: </strong> ${telephone} <br />
+     <strong>Nachricht: </strong> ${comentario} <br />
+	   <strong>Woher kennst du uns: </strong> ${referencia} <br />	  
+     <br>
+     <strong> Deine Rechnungsadresse</strong><br>      
+     <strong>Unternehmen: </strong> ${unternehmen} <br />
+     <strong>Straße: </strong> ${strase2} <br />
+     <strong>Hausnummer: </strong> ${hausnummer2} <br />
+     <strong>Postleitzahl: </strong> ${postleitzahls2} <br />
+     <strong>Ort: </strong> ${ort2} <br />
+     <strong>Rabattcode: </strong> ${rabattcode} <br />      
+      `,
+    };
+
+    const respuesta = await sendFormulario(DataToSend);
+    // const respuesta_json =await respuesta.json()
+
+    if (respuesta.statusText === "OK") {
+      setTextoDialogo(texto_EnviadoCorrectamente);
+      handleClickOpen();
+      return;
+    }
+
+ 
+
+    if (respuesta.cod_resp === "000") {
+      setTextoDialogo(texto_EnviadoCorrectamente);
+      handleClickOpen();
+
+    } else {
+      setTextoDialogo(texto_ErrorEnServidor);
+      handleClickOpen();
+    }
+  };
 
   const fuentes1 = {
     style: {
@@ -117,29 +319,6 @@ export default function ModalFormCursos({
       fontSize: "0.9vw",
       color: "#ffffff",
     },
-  };
-
-  const [value1, setValue1] = React.useState("Controlled");
-
-  const [value2, setValue2] = React.useState("Controlled");
-  const [value3, setValue3] = React.useState("Controlled");
-
-  const handleChange1 = (event) => {
-    setValue1(event.target.value);
-  };
-
-  const handleChange2 = (event) => {
-    setValue2(event.target.value);
-  };
-
-  const handleChange3 = (event) => {
-    setValue3(event.target.value);
-  };
-
-  const [age, setAge] = React.useState("");
-
-  const handleChange = (event) => {
-    setAge(event.target.value);
   };
 
   const stilos_combo = {
@@ -220,25 +399,37 @@ export default function ModalFormCursos({
     },
   };
 
+  // const opciones_combo_box = [
+  //   { label: "Google Suche", id: 1, value: 1 },
+  //   { label: "Google Anzeige", id:2 , value: 2},
+  //   { label: "Linkedln", id: 3 , value: 3},
+  //   { label: "Podcast", id: 4 , value: 4},
+  //   { label: "Meet Up", id: 5 , value: 5},
+  //   { label: "Artikel / Blog Beitrag", id: 6, value: 6 },
+  //   { label: "Xing", id: 7 , value: 7},
+  //   { label: "Empfehlung", id: 8 , value: 8},
+  //   { label: "Konferenz", id: 9, value: 9},
+  //   { label: "Sonstiges", id: 10 , value: 10},
+  // ];
+
   const opciones_combo_box = [
-    { label: "Google Suche", year: 1 },
-    { label: "Google Anzeige", year: 2 },
-    { label: "Linkedln", year: 3 },
-    { label: "Podcast", year: 4 },
-    { label: "Meet Up", year: 5 },
-    { label: "Artikel / Blog Beitrag", year: 6 },
-    { label: "Xing", year: 7 },
-    { label: "Empfehlung", year: 8 },
-    { label: "Konferenz", year: 9 },
-    { label: "Sonstiges", year: 10 },
+    "Google Suche",
+    "Google Anzeige",
+    "Linkedln",
+    "Podcast",
+    "Meet Up",
+    "Artikel / Blog Beitrag",
+    "Xing",
+    "Empfehlung",
+    "Konferenz",
+    "Sonstiges",
   ];
 
   return (
     <>
-      {/* <!-- Modal --> */}
       <div
         className="modal fade"
-        style={{ "paddingRigth": "0px !important" }}
+        style={{ paddingRigth: "0px !important" }}
         id={`contactForm${id}`}
         tabIndex="-1">
         <div className="modal-dialog  mt-md-5 mt-5 pt-4">
@@ -292,6 +483,8 @@ export default function ModalFormCursos({
                       sx={styles}
                       inputProps={fuentes1}
                       InputLabelProps={fuentes2}
+                      value={vorname}
+                      onChange={handleChangeVorname}
                     />
                   </div>
                   <div className="row mt-2 ps-3 pe-3 d-flex justify-content-center   ">
@@ -302,6 +495,8 @@ export default function ModalFormCursos({
                       sx={styles}
                       inputProps={fuentes1}
                       InputLabelProps={fuentes2}
+                      value={nachname}
+                      onChange={handleChangeNachname}
                     />
                   </div>
 
@@ -313,6 +508,8 @@ export default function ModalFormCursos({
                       sx={styles}
                       inputProps={fuentes1}
                       InputLabelProps={fuentes2}
+                      value={strase1}
+                      onChange={handleChangeStrase1}
                     />
                   </div>
 
@@ -324,6 +521,8 @@ export default function ModalFormCursos({
                       sx={styles}
                       inputProps={fuentes1}
                       InputLabelProps={fuentes2}
+                      value={hausnummer1}
+                      onChange={handleChangeHausnummer1}
                     />
                   </div>
 
@@ -335,6 +534,8 @@ export default function ModalFormCursos({
                       sx={styles}
                       inputProps={fuentes1}
                       InputLabelProps={fuentes2}
+                      value={postleitzahls1}
+                      onChange={handleChangePostleitzahls1}
                     />
                   </div>
 
@@ -346,6 +547,8 @@ export default function ModalFormCursos({
                       sx={styles}
                       inputProps={fuentes1}
                       InputLabelProps={fuentes2}
+                      value={ort1}
+                      onChange={handleChangeOrt1}
                     />
                   </div>
 
@@ -357,6 +560,8 @@ export default function ModalFormCursos({
                       sx={styles}
                       inputProps={fuentes1}
                       InputLabelProps={fuentes2}
+                      value={email}
+                      onChange={handleChangeEmail}
                     />
                   </div>
 
@@ -368,6 +573,8 @@ export default function ModalFormCursos({
                       sx={styles}
                       inputProps={fuentes1}
                       InputLabelProps={fuentes2}
+                      value={telephone}
+                      onChange={handleChangeTelephone}
                     />
                   </div>
 
@@ -386,7 +593,11 @@ export default function ModalFormCursos({
                   </div>
 
                   <div className="row d-flex justify-content-start ps-3 pe-3 mt-1">
-                    <RadioGroup name="use-radio-group" defaultValue="Ja">
+                    <RadioGroup
+                      name="use-radio-group"
+                      defaultValue="Ja"
+                      value={condicionesAGB}
+                      onChange={handleChangeCondicionesAGB}>
                       <MyFormControlLabel
                         value="Ja"
                         label="Ja"
@@ -408,6 +619,8 @@ export default function ModalFormCursos({
                       sx={styles}
                       inputProps={fuentes1}
                       InputLabelProps={fuentes2}
+                      value={comentario}
+                      onChange={handleChangeComentario}
                     />
                   </div>
 
@@ -417,6 +630,18 @@ export default function ModalFormCursos({
                       id="combo-box-demo"
                       options={opciones_combo_box}
                       sx={stilos_combo}
+                      onChange={(event, value) =>
+                        // console.log(value)
+                        setReferencia(value)
+                      } // prints the selected value
+                      // getOptionLabel={(option) => (option ? option.name : "")}
+                      //  getOptionSelected={(option, value) => option === value.value}
+
+                      // // inputValue={referencia}
+                      // onInputChange={handleChangeReferencia}
+
+                      // value={referencia}
+                      // onChange={handleChangeReferencia}
                       renderInput={(params) => (
                         <TextField
                           {...params}
@@ -441,6 +666,8 @@ export default function ModalFormCursos({
                       sx={styles}
                       inputProps={fuentes1}
                       InputLabelProps={fuentes2}
+                      value={unternehmen}
+                      onChange={handleChangeUnternehmen}
                     />
                   </div>
 
@@ -452,6 +679,8 @@ export default function ModalFormCursos({
                       sx={styles}
                       inputProps={fuentes1}
                       InputLabelProps={fuentes2}
+                      value={strase2}
+                      onChange={handleChangeStrase2}
                     />
                   </div>
 
@@ -463,6 +692,8 @@ export default function ModalFormCursos({
                       sx={styles}
                       inputProps={fuentes1}
                       InputLabelProps={fuentes2}
+                      value={hausnummer2}
+                      onChange={handleChangeHausnummer2}
                     />
                   </div>
 
@@ -474,6 +705,8 @@ export default function ModalFormCursos({
                       sx={styles}
                       inputProps={fuentes1}
                       InputLabelProps={fuentes2}
+                      value={postleitzahls2}
+                      onChange={handleChangePostleitzahls2}
                     />
                   </div>
 
@@ -485,6 +718,8 @@ export default function ModalFormCursos({
                       sx={styles}
                       inputProps={fuentes1}
                       InputLabelProps={fuentes2}
+                      value={ort2}
+                      onChange={handleChangeOrt2}
                     />
                   </div>
 
@@ -496,6 +731,8 @@ export default function ModalFormCursos({
                       sx={styles}
                       inputProps={fuentes1}
                       InputLabelProps={fuentes2}
+                      value={rabattcode}
+                      onChange={handleChangeRabattcode}
                     />
                   </div>
 
@@ -520,8 +757,9 @@ export default function ModalFormCursos({
                   <button
                     type="button"
                     className="btn btn-secondary boton_modal_form"
-                    data-bs-dismiss="modal">
-                    Jetzt kostenpflichtig anmelden
+                    data-bs-dismiss="modal"
+                    onClick={eventoBotonEnviar}>
+                     Jetzt kostenpflichtig anmelden
                   </button>
                 </div>
               </div>
@@ -529,6 +767,26 @@ export default function ModalFormCursos({
           </div>
         </div>
       </div>
+
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description">
+        {/* <DialogTitle id="alert-dialog-title">
+          {"Use Google's location service?"}
+        </DialogTitle> */}
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            {textoDialogo}
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} autoFocus>
+            OK
+          </Button>
+        </DialogActions>
+      </Dialog>
     </>
   );
 }
