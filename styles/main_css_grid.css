@@ -57,7 +57,7 @@
 
   grid-template-columns: 12% 75% 10%; /*tres columnas de igual ancho*/
   /* grid-template-rows: 15% auto; total de filas depende de cantidad elementos */
-  grid-template-rows: 15vh 65vh;
+  grid-template-rows: 15vh auto;
   padding-bottom: 50px;
   /* gap: 1em; */
   /* row-gap: 1em; */
