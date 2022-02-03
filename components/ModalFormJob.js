@@ -11,7 +11,6 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 
-
 import { sendFormulario } from "../components/global/sendFormulario";
 
 import Radio from "@mui/material/Radio";
@@ -40,8 +39,6 @@ import Button from "@mui/material/Button";
 import FormControl from "@mui/material/FormControl";
 
 import Box from "@mui/material/Box";
-
-
 
 const StyledFormControlLabel = styled((props) => (
   <FormControlLabel {...props} />
@@ -80,8 +77,7 @@ export default function ModalFormJob({
   day,
   frase,
 }) {
- 
- const [nombre, setNombre] = React.useState("");
+  const [nombre, setNombre] = React.useState("");
   const handleChangeNombre = (event) => {
     setNombre(event.target.value);
   };
@@ -101,12 +97,10 @@ export default function ModalFormJob({
     setMensaje(event.target.value);
   };
 
-  
   const [condicionesAGB, setCondicionesAGB] = React.useState("");
   const handleChangeCondicionesAGB = (event) => {
     setCondicionesAGB(event.target.value);
   };
-
 
   const [textoDialogo, setTextoDialogo] = React.useState("");
 
@@ -121,7 +115,8 @@ export default function ModalFormJob({
     setOpen(false);
   };
 
-  const texto_EnviadoCorrectamente = "Vielen Dank für die Kontaktaufnahme, wir melden uns in Kürze bei Dir!";
+  const texto_EnviadoCorrectamente =
+    "Vielen Dank für die Kontaktaufnahme, wir melden uns in Kürze bei Dir!";
   const texto_ErrorEnDatosCheckBox =
     "Bitte bestätige die AGBs, um Dich für unseren Newsletter anzumelden.";
   const texto_ErrorEnDatos =
@@ -130,25 +125,20 @@ export default function ModalFormJob({
     "Kontaktformular Error, bitte versuchen Sie es erneut.";
 
   const eventoBotonEnviar = async () => {
-      if (condicionesAGB != "Ja") {
+    if (condicionesAGB != "Ja") {
       setTextoDialogo(texto_ErrorEnDatosCheckBox);
       handleClickOpen();
       return;
     }
 
-    if (nombre === "" || email === "" || telephone==="" || mensaje==="" ) {
-      
-
+    if (nombre === "" || email === "" || telephone === "" || mensaje === "") {
       setTextoDialogo(texto_ErrorEnDatos);
       handleClickOpen();
       return;
     }
 
-
-
-
- const subject = "Kontaktformular";
-const DataToSend = {
+    const subject = "Kontaktformular";
+    const DataToSend = {
       from: "Kontakt Formular",
       to: formEmail,
       subject: subject,
@@ -156,22 +146,16 @@ const DataToSend = {
      <strong>Name, Vorname: </strong> ${nombre} <br />
      <strong>E-Mail Adresse: </strong> ${email} <br />
      <strong>Telefonnummer: </strong> ${telephone} <br />
-     <strong>Nachricht: </strong> ${mensaje} <br />`
+     <strong>Nachricht: </strong> ${mensaje} <br />`,
+    };
 
-
-     }
-    
     const respuesta = await sendFormulario(DataToSend);
-    
 
-   
     if (respuesta.statusText === "OK") {
       setTextoDialogo(texto_EnviadoCorrectamente);
       handleClickOpen();
       return;
     }
-
- 
 
     if (respuesta.cod_resp === "000") {
       setTextoDialogo(texto_EnviadoCorrectamente);
@@ -181,7 +165,6 @@ const DataToSend = {
       handleClickOpen();
     }
   };
-
 
   const fuentes1 = {
     style: {
@@ -400,7 +383,7 @@ const DataToSend = {
                   sx={styles}
                   inputProps={fuentes1}
                   InputLabelProps={fuentes2}
-                    value={email}
+                  value={email}
                   onChange={handleChangeEmail}
                 />
               </div>
@@ -413,7 +396,7 @@ const DataToSend = {
                   sx={styles}
                   inputProps={fuentes1}
                   InputLabelProps={fuentes2}
-                   value={telephone}
+                  value={telephone}
                   onChange={handleChangeTelephone}
                 />
               </div>
@@ -433,10 +416,11 @@ const DataToSend = {
               </div>
 
               <div className="row d-flex justify-content-start ps-3 pe-3 mt-1">
-                <RadioGroup name="use-radio-group" defaultValue="Ja"
-                   value={condicionesAGB}
-                      onChange={handleChangeCondicionesAGB}
-                >
+                <RadioGroup
+                  name="use-radio-group"
+                  defaultValue="Ja"
+                  value={condicionesAGB}
+                  onChange={handleChangeCondicionesAGB}>
                   <MyFormControlLabel
                     value="Ja"
                     label="Ja"
@@ -467,13 +451,18 @@ const DataToSend = {
               </div>
 
               <div className="row  g-0 mt-4  mb-2  d-flex flex-wrap justify-content-start">
-                 <input type="file" className="ocultar" id="customFile" onChange={handleChange4} />      
+                <input
+                  type="file"
+                  className="ocultar"
+                  id="customFile"
+                  onChange={handleChange4}
+                />
                 <input
                   type="file"
                   ref={hiddenFileInput}
                   onChange={handleChange}
                   className="ocultar"
-                /> 
+                />
 
                 <div className="col mx-3 d-flex justify-content-between botones-jobs-516">
                   <button
@@ -486,12 +475,17 @@ const DataToSend = {
                     type="button"
                     className="btn btn-secondary boton_modal_form"
                     data-bs-dismiss="modal"
-                     onClick={eventoBotonEnviar}>
-                    
+                    onClick={eventoBotonEnviar}>
                     Jetzt Bewerbung absenden
                   </button>
+                  <a
+                    href={"/doc/Stellenanzeige.pdf"}
+                    download="Stellenanzeige.pdf"
+                    className="btn btn-secondary boton_modal_form ">
+                    PDF-DOWNLOAD
+                  </a>
                 </div>
-              
+
                 <div className="row d-flex botones-jobs justify-content-center">
                   <button
                     type="button"
@@ -501,27 +495,32 @@ const DataToSend = {
                   </button>
                   <button
                     type="button"
-                    className="btn btn-secondary boton_modal_form col-10"
+                    className="btn btn-secondary boton_modal_form  mb-3 col-10"
                     data-bs-dismiss="modal"
                     onClick={eventoBotonEnviar}>
                     Jetzt Bewerbung absenden
                   </button>
+                  <a
+                    href={"/doc/Stellenanzeige.pdf"}
+                    download="Stellenanzeige.pdf"
+                    className="btn btn-secondary boton_modal_form  col-10">
+                    PDF-DOWNLOAD
+                  </a>
                 </div>
 
-                  <div className="row mt-2"> 
+                <div className="row mt-2">
                   <div className="col-md-6  d-flex justify-content-start align-items-center texto-AGBS">
-                  {value4}
-                </div>  
+                    {value4}
+                  </div>
                 </div>
                 {/* <div className="col-md-5 d-flex justify-content-end"></div> */}
-                
               </div>
             </div>
           </div>
         </div>
       </div>
 
- <Dialog
+      <Dialog
         open={open}
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
@@ -540,7 +539,6 @@ const DataToSend = {
           </Button>
         </DialogActions>
       </Dialog>
-
     </>
   );
 }
