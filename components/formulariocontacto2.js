@@ -14,17 +14,20 @@ import DialogTitle from "@mui/material/DialogTitle";
 
 import axios from "axios";
 
-// import { sendFormularioNewsLetter } from "../components/global/sendFormulario";
+import { sendFormulario } from "../components/global/sendFormulario";
 
 import { pink } from "@mui/material/colors";
 
 import { servidor_url } from "../config";
+import { formEmail } from "../config";
+
+import { AlertDialogForms } from "./AlertDialogForms";
 
 export default function FormularioContacto2() {
   const [checked1, setChecked1] = useState(false);
   const [nombre, setNombre] = React.useState("");
   const [correo, setCorreo] = React.useState("");
-  const [textoDialogo, setTextoDialogo] = React.useState("HI");
+  const [textoDialogo, setTextoDialogo] = React.useState("");
 
   const handleChange1 = (event) => {
     setChecked1(event.target.checked);
@@ -60,8 +63,6 @@ export default function FormularioContacto2() {
     "Kontaktformular Error, bitte versuchen Sie es erneut.";
 
   const eventoBotonEnviar = async () => {
-    const subject = "Newsletter Kontaktformular";
-
     if (nombre === "" || correo === "") {
       console.log("aqui1");
 
@@ -77,12 +78,19 @@ export default function FormularioContacto2() {
       return;
     }
 
-    const datos = {
-      nombre: nombre,
-      correo: correo,
+    const subject = "Newsletter Kontaktformular";
+
+    const DataToSend = {
+      from: "Kontakt Formular",
+      to: formEmail,
       subject: "Newsletter Kontaktformular",
+      body: `    
+      <strong>Name: </strong> ${nombre} <br />
+      <strong>Email: </strong> ${correo} <br />   
+      `
     };
-    const respuesta = await sendFormularioNewsLetter(datos);
+
+    const respuesta = await sendFormulario(DataToSend);
     // const respuesta_json =await respuesta.json()
 
     if (respuesta.statusText === "OK") {
@@ -240,7 +248,7 @@ export default function FormularioContacto2() {
           />
         </div>
       </div>
-
+      {/* Refactorizar */}
       <Dialog
         open={open}
         onClose={handleClose}
@@ -263,23 +271,3 @@ export default function FormularioContacto2() {
     </>
   );
 }
-
-const qs = require("qs");
-
-const sendFormularioNewsLetter = async (datos) => {
-  const url = `${servidor_url}/api/forms`;
-
-  let bodyData = qs.stringify(datos);
-
-  try {
-    const respuesta_api = await axios.post(url, bodyData, {
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-    });
-
-    return respuesta_api;
-  } catch (err) {
-    console.log("Error " + err);
-  }
-};

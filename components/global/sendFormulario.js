@@ -1,29 +1,24 @@
 import { servidor_url } from "../../config";
+import axios from "axios";
 
-const sendFormularioNewsLetter =async (datos) => {
-   const url = `${servidor_url}/api/forms`;
-   const res = await fetch(url);
-   const vlog =  await res.json();
+const qs = require("qs");
+
+const sendFormulario = async (datos) => {
+  const url = `${servidor_url}/api/forms`;
+
+ 
+  let bodyData = qs.stringify(datos);
 
   try {
-    const res =   await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(datos),
-  })
-
-   const json = await  res.json();
-
-   console.log("Respuesta " + json)
-   
-  } catch(err) {
-       console.log("Error "+err);
-     //Error
+    const respuesta_api = await axios.post(url, bodyData, {
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+    });
+    return respuesta_api;
+  } catch (err) {
+    console.log("Error in sendFormulario: " + err);
   }
-
-  console.log("SSS");
-
-  return;
 };
 
- export default sendFormularioNewsLetter;
+module.exports.sendFormulario = sendFormulario;

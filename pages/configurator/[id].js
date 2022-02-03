@@ -47,7 +47,7 @@ export default function Configurator_Main({ configurator }) {
         {botones.map(
           (unBoton, index) =>
             unBoton.tipo === "2" && (
-              // <ModalForm  titulo="KONTAKTFORMULAR" frase="Jetzt Kontakt aufnehmen!" id={unBoton.id} quartal={index}/>
+             
 
               <ModalFormConfigurator
                 titulo="KONTAKTFORMULAR"
