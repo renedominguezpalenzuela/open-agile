@@ -9,5 +9,10 @@ export const expire_cookies_in_days = 7;
 
 
 
-// export const formEmail = "kontakt@open-agile.de";
-export const formEmail = "renedp1975@gmail.com";
+export const formEmail = dev
+?"renedp1975@gmail.com"
+:"kontakt@open-agile.de";
+
+
+//  "kontakt@open-agile.de";
+// export const formEmail = "renedp1975@gmail.com";
