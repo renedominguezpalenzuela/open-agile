@@ -52,7 +52,7 @@ export default function Home({ servicios }) {
   return (
     <>
       <Head>
-        <title>{titulo2 + " " + titulo2a}</title>
+        <title>{titulo + "-" + titulo2}</title>
         <meta name="description" content={titulo2} />
         <link rel="icon" href="/favicon.ico" />
         <script async src={`${servidor_url}/js/chat.js`} />
