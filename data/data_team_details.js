@@ -83,7 +83,7 @@ export const team_details = [
 
     weiterbildungen: [
       "Sicherstellung der agilen Praktiken und Tools im Projektalltag sowie Coaching und Training von Teams in agilen Methoden",
-      "Entwicklung und Umsetzung von Transformationen hin zur agilen Netzwerkorganisationen",
+      "Entwicklung und Umsetzung von Transformationen hin zur agilen Netzwerkorganisation",
       "Moderation von Scrum-Meetings wie Sprint-Planning, Sprint-Review und Sprint Retrospektive",
       "Entwicklung, Optimierung und Überwachung agiler Prozesse",
       "Begleitung von Produktentwicklungsteams und Schaffung eines agilen Arbeitsumfeldes",
