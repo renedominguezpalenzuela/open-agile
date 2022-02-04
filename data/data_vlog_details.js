@@ -15,7 +15,7 @@ export const vlog_details = [
       "Erich Erichsen ist Inhaber einer Steuerberatungskanzlei, Digitalisierungsexperte und Visionär. In seiner Kanzlei hat er die „25-Stunden-Woche“ eingeführt, bei gleichem Gehalt. Ob er mit diesem Modell Erfolg hat und welche Voraussetzungen es dafür braucht, darum geht es in diesem Interview.",
     ],
     link: "https://www.youtube.com/embed/g8O3BVxnRrk",
-    date: "28.02.2022",
+    date: "28.01.2022",
   },
   {
     id: "3",
