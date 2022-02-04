@@ -478,12 +478,6 @@ export default function ModalFormJob({
                     onClick={eventoBotonEnviar}>
                     Jetzt Bewerbung absenden
                   </button>
-                  <a
-                    href={"/doc/Stellenanzeige.pdf"}
-                    download="Stellenanzeige.pdf"
-                    className="btn btn-secondary boton_modal_form ">
-                    PDF-DOWNLOAD
-                  </a>
                 </div>
 
                 <div className="row d-flex botones-jobs justify-content-center">
@@ -500,12 +494,6 @@ export default function ModalFormJob({
                     onClick={eventoBotonEnviar}>
                     Jetzt Bewerbung absenden
                   </button>
-                  <a
-                    href={"/doc/Stellenanzeige.pdf"}
-                    download="Stellenanzeige.pdf"
-                    className="btn btn-secondary boton_modal_form  col-10">
-                    PDF-DOWNLOAD
-                  </a>
                 </div>
 
                 <div className="row mt-2">
