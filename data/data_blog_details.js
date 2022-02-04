@@ -114,7 +114,7 @@ export const blog_details = [
     link: "blog/3",
     image: "blogs/blog_buchveröffentlichung.png",
     autor: "Andreas Eilers",
-    fecha: "1.02.2022",
+    fecha: "01.02.2022",
 
     content: [
       {

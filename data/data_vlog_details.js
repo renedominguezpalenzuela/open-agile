@@ -6,7 +6,7 @@ export const vlog_details = [
       "Wir befinden uns im Zeitalter der Digitalisierung, die auch vor traditionellen Banken keinen Halt macht. Doch was bedeutet das konkret für regionale Finanzdienstleister? Wie wird dort heute gearbeitet und was muss sich ändern, damit es diese Banken in 10 Jahren noch gibt? Wahrscheinlich kann diese Fragen niemand besseres als Pranjal Kothari beantworten. Denn Pranjal ist CDO und Mitglied des Vorstandes der Sparkasse Bremen. ",
     ],
     link: "https://www.youtube.com/embed/xu-TWn7GI4s",
-    date: "0.4.02.2022",
+    date: "04.02.2022",
   },
   {
     id: "2",
@@ -15,7 +15,7 @@ export const vlog_details = [
       "Erich Erichsen ist Inhaber einer Steuerberatungskanzlei, Digitalisierungsexperte und Visionär. In seiner Kanzlei hat er die „25-Stunden-Woche“ eingeführt, bei gleichem Gehalt. Ob er mit diesem Modell Erfolg hat und welche Voraussetzungen es dafür braucht, darum geht es in diesem Interview.",
     ],
     link: "https://www.youtube.com/embed/g8O3BVxnRrk",
-    date: "0.4.02.2022",
+    date: "04.02.2022",
   },
   {
     id: "3",
@@ -28,7 +28,7 @@ export const vlog_details = [
       "4. „Workhacks können schnell eingeführt werden“ ",
     ],
     link: "https://www.youtube.com/embed/mTVNQQUdLGs",
-    date: "0.4.02.2022",
+    date: "04.02.2022",
   },
   {
     id: "4",
@@ -37,7 +37,7 @@ export const vlog_details = [
       "Christiane Brandes-Visbeck ist Expertin für New Work und Leadership, Diversity und Innovationen. Nach Jahren als Media und Communications Executive u.a. bei Bertelsmann und als Korrespondentin in New York leitet sie heute als geschäftsführende Gesellschafterin die Ahoi Innovationen GmbH. Zudem ist Christiane Buchautorin und hat u.a. zwei Bücher geschrieben, die für Andreas in der heutigen Zeit aktueller nicht sein könnten: „Netzwerk schlägt Hierarchie“ und „Fit für New Work“. ",
     ], // Eine Interviewreihe produziert von der Beratung Andreas Eilers'],
     link: "https://www.youtube.com/embed/_TrWP3U81IE",
-    date: "0.4.02.2022",
+    date: "04.02.2022",
   },
   {
     id: "5",
@@ -46,7 +46,7 @@ export const vlog_details = [
       "Ganz natürlich hat die Sparkasse Bremen in ihrer fast zweihundertjährigen Geschichte viele Organisationsmodelle durchlaufen. Die Digitalisierung sowie die damit einhergehende disruptive Veränderung des Geschäftsmodells Bank ließ jedoch eine kontinuierliche Weiterentwicklung der hierarchischen Organisationsform nicht länger zu. Die Sparkasse Bremen transformierte daher Anfang Dezember 2019 zur selbstorganisierten Netzwerkorganisation. In diesem Interview unterhält sich Andreas mit Detlef Mehrkens. Er selbst war in der Sparkasse Bremen Filialdirektor und in seinem Bereich verantwortlich für über 300 Menschen. Mit Inkrafttreten der neuen Netzwerkorganisation verlor Detlef plötzlich seinen Status als disziplinarische Führungskraft. ",
     ], // Eine Interviewreihe produziert von der Beratung Andreas Eilers'],
     link: "https://www.youtube.com/embed/jEBzEnZkZ8Y",
-    date: "0.4.02.2022",
+    date: "04.02.2022",
   },
   {
     id: "6",
@@ -55,7 +55,7 @@ export const vlog_details = [
       "Dieter Bensmann ist seit 2003 selbstständiger Berater mit der Bensmann-Netzwerk-Beratung und absoluter Experte für Netzwerkorganisationen. In seinem Buch Netzwerke beschreibt er wie eine innovative Form der Zusammen aussehen kann. Dazu schreibt Dieter: “Je hierarchischer eine Organisation strukturiert ist, desto schwieriger ist es, neue innovative Lösungen zu erarbeiten. Netzwerkorganisationen verfügen dahingehend über ein großes Innovationspotential”. Über diese These spricht Andreas mit ihm in diesem Interview.",
     ], // Eine Interviewreihe produziert von der Beratung Andreas Eilers'],
     link: "https://www.youtube.com/embed/rvnFuagH5V4",
-    date: "0.4.02.2022",
+    date: "04.02.2022",
   },
   {
     id: "7",
@@ -64,6 +64,6 @@ export const vlog_details = [
       "Eric Quast unterstützt Menschen bei persönlichen Veränderungen in der Rolle als Agile Coach. Er weiß genau, wovon er spricht, denn er hat 2021 selbst einen radikalen beruflichen Wechsel durchlaufen. In diesem Interview spricht Andreas mit Eric über seinen persönlichen Wandel. Gemeinsam beleuchten sie, wie agiles Coaching dabei helfen kann auch für andere Menschen, Teams und Organisationen eine stimmigere Zusammenarbeit zu ermöglichen.",
     ], // Eine Interviewreihe produziert von der Beratung Andreas Eilers'],
     link: "https://www.youtube.com/embed/tNy1u8Msef8",
-    date: "0.4.02.2022",
+    date: "04.02.2022",
   },
 ];
