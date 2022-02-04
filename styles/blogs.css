@@ -214,4 +214,19 @@ div.items-en-linea-padre:hover {
     font-size: 3vw !important;
     margin-right: -16vw;
   }
+  .blog-desktop {
+    display: none;
+  }
+  .blog-movile {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .blog-desktop {
+    display: block;
+  }
+  .blog-movile {
+    display: none;
+  }
 }
