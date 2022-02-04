@@ -9,6 +9,8 @@ const sendFormulario = async (datos) => {
  
   let bodyData = qs.stringify(datos);
 
+ 
+
   try {
     const respuesta_api = await axios.post(url, bodyData, {
       headers: {

@@ -142,20 +142,30 @@ export default function ModalFormJob({
       from: "Kontakt Formular",
       to: formEmail,
       subject: subject,
-      filename: fichero_seleccionado.name,
-      fileBase64: ficheroBase64,
-      fichero: fichero_seleccionado,
+      filename: fichero_seleccionado,
+      file: ficheroBase64,
       body: `              
      <strong>Name, Vorname: </strong> ${nombre} <br />
      <strong>E-Mail Adresse: </strong> ${email} <br />
      <strong>Telefonnummer: </strong> ${telephone} <br />
      <strong>Nachricht: </strong> ${mensaje} <br />`,
     };
+    
 
-    // const respuesta = await sendFormularioAndFile(DataToSend);
-    const respuesta = await sendForm(DataToSend);
+    
+    const respuesta = await sendFormularioAndFile(DataToSend);
+    // const respuesta_json =await respuesta.json()
+    console.log("Rexpuesta");
+      console.log(respuesta);
 
-    console.log(respuesta);
+    if (respuesta.statusText === "OK") {
+      setTextoDialogo(texto_EnviadoCorrectamente);
+      handleClickOpen();
+      return;
+    }
+
+
+  
 
     if (!respuesta) {
        setTextoDialogo(texto_EnviadoCorrectamente);
@@ -554,55 +564,4 @@ const eliminar_anno = (fecha) => {
   return fecha.substring(0, 6);
 };
 
-const sendForm = async (datos) => {
-  const remoteServerUrl =
-    "https://api.jesamconsulting.com/.netlify/functions/send-email-v2";
-
-  try {
-    //req.body -- es un json
-
-    let fichero_base_64 = datos.fileBase64;
-    var decodedFile = new Buffer(fichero_base_64, "base64");
-
-    var data_formulario = new FormData();
-    data_formulario.append("to", datos.to);
-    data_formulario.append("from", datos.from);
-    data_formulario.append("subject", datos.subject);
-    data_formulario.append("body", datos.body);
-    data_formulario.append("file", datos.fichero);
-    // data_formulario.append("file", decodedFile, {
-    //   filename: datos.fileName,
-    // });
-
-    console.log("Sending request");
-    const respuesta_api = await axios.post(remoteServerUrl, data_formulario, {
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-    });
-
-    console.log("Respuesta");
-    console.log(respuesta_api);
-
-    const data = await respuesta_api.data; //json();
-    console.log("Respuesta");
-    console.log(data);
-
-    if (!data) {
-      // res .status(200)   .json({ cod_resp: "902", msg: "No data received from server" });
-    }
-
-    if (data.error != "" && data.error != undefined) {
-      // res.status(200).json({ cod_resp: "000", msg: "mail sent correctly!!!" });
-      console.log("OK -- data.error=''")
-    } else {
-      // res.status(200).json({ cod_resp: "903", msg: "Error: " + data.error });
-      console.log("ERROR -- data.error<>''")
-    }
-  } catch (err) {
-    console.log("Error api/formsfile: " + err.message);
-    console.log(err);
-    // res.status(200).json({ cod_resp: "950", msg: err.message });
-  }
-};
 
