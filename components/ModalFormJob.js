@@ -143,7 +143,7 @@ export default function ModalFormJob({
       filename: fichero_seleccionado,
       file: ficheroBase64,
       body: `    
-      <strong>{$job_title}</strong>          
+      <strong>${job_title}</strong>          
      <strong>Name, Vorname: </strong> ${nombre} <br />
      <strong>E-Mail Adresse: </strong> ${email} <br />
      <strong>Telefonnummer: </strong> ${telephone} <br />
