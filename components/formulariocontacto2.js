@@ -61,6 +61,7 @@ export default function FormularioContacto2() {
     "Bitte überprüfe Deine Angaben und sende es noch einmal ab.";
   const texto_ErrorEnServidor =
     "Kontaktformular Error, bitte versuchen Sie es erneut.";
+    
 
   const eventoBotonEnviar = async () => {
     if (nombre === "" || correo === "") {
@@ -91,21 +92,24 @@ export default function FormularioContacto2() {
     };
 
     const respuesta = await sendFormulario(DataToSend);
+
+    console.log("Respuesta");
+    console.log(respuesta);
     // const respuesta_json =await respuesta.json()
 
-    if (respuesta.statusText === "OK") {
-      setTextoDialogo(texto_EnviadoCorrectamente);
-      handleClickOpen();
-      return;
-    }
+    // if (respuesta.statusText === "OK") {
+    //   setTextoDialogo(texto_EnviadoCorrectamente);
+    //   handleClickOpen();
+    //   return;
+    // }
 
     
 
-    if (respuesta.cod_resp === "000") {
+    if (respuesta.data.cod_resp === "000") {
       setTextoDialogo(texto_EnviadoCorrectamente);
       handleClickOpen();
     } else {
-      setTextoDialogo(texto_ErrorEnServidor);
+      setTextoDialogo(texto_ErrorEnServidor + ": " + respuesta.data.cod_resp + " - "+respuesta.data.msg);
       handleClickOpen();
     }
   };

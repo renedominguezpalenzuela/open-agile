@@ -97,9 +97,7 @@ export default function Content05({ datos, color_fondo }) {
                                   <iframe
                                    loading="lazy"
                                    
-                                  allow="accelerometer; autoplay;
-                                  encrypted-media; gyroscope;
-                                  picture-in-picture"
+                                  allow="autoplay;"
                                     src={unDato.link}
                                     title="YouTube video"
                                     allowFullScreen></iframe>

@@ -20,6 +20,7 @@ export default async function handler(req, res) {
       },
     });
 
+  
     
 
     const data = await respuesta_api.data; //json();
@@ -30,11 +31,12 @@ export default async function handler(req, res) {
         .json({ cod_resp: "902", msg: "No data received from server" });
     }
 
-    if (data.error != "" && data.error != undefined) {
-      res.status(200).json({ cod_resp: "000", msg: "mail sent correctly!!!" });
-    } else {
-      res.status(200).json({ cod_resp: "903", msg: "Error: " + data.error });
+    if (data.error==="") {
+      res.status(200).json({ cod_resp: "000", msg: data.message })      
+    } else {      
+      res.status(200).json({ cod_resp: "903", msg: "Error: " + data.error });;
     }
+
   } catch (err) {
     console.log("Error api/forms: " + err.message);
     res.status(200).json({ cod_resp: "950", msg: err.message });
