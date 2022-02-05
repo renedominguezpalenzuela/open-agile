@@ -9,6 +9,8 @@ const sendFormulario = async (datos) => {
  
   let bodyData = qs.stringify(datos);
 
+ 
+
   try {
     const respuesta_api = await axios.post(url, bodyData, {
       headers: {
@@ -16,6 +18,7 @@ const sendFormulario = async (datos) => {
       },
     });
     return respuesta_api;
+   
   } catch (err) {
     console.log("Error in sendFormulario: " + err);
   }

@@ -1,7 +1,6 @@
 // import styles from "../styles/Home.module.css";
 
 import Head from "next/head";
-
 let ancho = 540;
 let longitud_linea = 24;
 
@@ -40,79 +39,89 @@ export default function Card08Job({
 
               {titulo_parrafo1 != undefined && titulo_parrafo1 != "" && (
                 <>
-                  <div className="font2-card-job pt-2 mt-3">{titulo_parrafo1}</div>
+                  <div className="font2-card-job pt-2 mt-3">
+                    {titulo_parrafo1}
+                  </div>
                 </>
               )}
 
-
               <ul>
-              {parrafo1 != undefined &&
-                parrafo1.length > 0 &&
-                parrafo1.map((unaLinea, index) => (
-                  
-                   
-                          <li key={index} className="font3-card-job bullets-jobs"> {unaLinea}</li>
-                  
-                ))}
-                </ul>   
+                {parrafo1 != undefined &&
+                  parrafo1.length > 0 &&
+                  parrafo1.map((unaLinea, index) => (
+                    <li key={index} className="font3-card-job bullets-jobs">
+                      {unaLinea}
+                    </li>
+                  ))}
+              </ul>
 
-
-                {titulo_parrafo2 != undefined && titulo_parrafo2 != "" && (
+              {titulo_parrafo2 != undefined && titulo_parrafo2 != "" && (
                 <>
                   <div className="font2-card-job pt-2">{titulo_parrafo2}</div>
                 </>
               )}
 
- <ul>
-              {parrafo2 != undefined &&
-                parrafo2.length > 0 &&
-                parrafo2.map((unaLinea, index) => (
-                    <div key={index}  className="">
-                   
-                                   <li className=" font3-card-job bullets-jobs"> {unaLinea}</li>
-                   </div>
-                ))}
-</ul>
+              <ul>
+                {parrafo2 != undefined &&
+                  parrafo2.length > 0 &&
+                  parrafo2.map((unaLinea, index) => (
+                    <div key={index} className="">
+                      <li className=" font3-card-job bullets-jobs">
+                        {unaLinea}
+                      </li>
+                    </div>
+                  ))}
+              </ul>
 
-                  {titulo_parrafo3 != undefined && titulo_parrafo3 != "" && (
+              {titulo_parrafo3 != undefined && titulo_parrafo3 != "" && (
                 <>
                   <div className="font2-card-job pt-2">{titulo_parrafo3}</div>
                 </>
               )}
 
-       <ul>
-              {parrafo3 != undefined &&
-                parrafo3.length > 0 &&
-                parrafo3.map((unaLinea, index) => (
-                  <div key={index}  className="   font3-card-job ">
-                    {/* <span className=" fuente-bullet-job me-1">•</span> */}
-                    <li className=" font3-card-job mybullets-blog"> {unaLinea}</li>
-                  </div>
-                ))}
-
-</ul>
-
-            
+              <ul>
+                {parrafo3 != undefined &&
+                  parrafo3.length > 0 &&
+                  parrafo3.map((unaLinea, index) => (
+                    <li key={index} className="font3-card-job bullets-jobs">
+                      {unaLinea}
+                    </li>
+                  ))}
+              </ul>
             </div>
 
             <div className="row mt-3 mb-2    g-0   d-flex justify-content-center">
+              <div className="col-6 d-flex justify-content-center ">
+                <a
+                  href={"/doc/Stellenanzeige.pdf"}
+                  download="Stellenanzeige.pdf"
+                  className="btn  btn-card-job font-btn-card-shop rounded-pill">
+                  PDF-DOWNLOAD
+                </a>
+              </div>
               <div className="col-6      d-flex justify-content-center ">
-               
-                 
-                  <button
-                    type="button"
-                    className="btn  btn-card-job font-btn-card-shop rounded-pill  "  data-bs-toggle="modal"   data-bs-target={"#contactForm1"}>
-                    JETZT BEWERBEN
-                  </button>
-                
+                <button
+                  type="button"
+                  className="btn  btn-card-job font-btn-card-shop rounded-pill  "
+                  data-bs-toggle="modal"
+                  data-bs-target={"#contactForm1"}>
+                  JETZT BEWERBEN
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-
-         <ModalFormJob  id={1} quartal={1} titulo={"BEWERBUNG"} frase="Jetzt Kontakt aufnehmen!"  day={""} link={""} />
+      <ModalFormJob
+        id={1}
+        quartal={1}
+        titulo={"BEWERBUNG"}
+        frase="Jetzt Kontakt aufnehmen!"
+        day={""}
+        link={""}
+        job_title = {titulo1 +" "+ titulo2}
+      />
     </>
   );
 }

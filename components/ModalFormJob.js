@@ -1,4 +1,17 @@
 import React, { useRef } from "react";
+import { formEmail } from "../config";
+
+import axios from "axios";
+import { useState } from "react";
+import { servidor_url } from "../config";
+
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+
+import { sendFormularioAndFile } from "../components/global/sendFormularioAndFile";
 
 import Radio from "@mui/material/Radio";
 // import RadioGroup from "@mui/material/RadioGroup";
@@ -63,9 +76,105 @@ export default function ModalFormJob({
   date2,
   day,
   frase,
+  job_title
 }) {
-  //Texto que aparece en el edit luego de que el usuario escribe
-  //inputProps={fuentes1}
+  const [nombre, setNombre] = React.useState("");
+  const handleChangeNombre = (event) => {
+    setNombre(event.target.value);
+  };
+
+  const [email, setEmail] = React.useState("");
+  const handleChangeEmail = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const [telephone, setTelephone] = React.useState("");
+  const handleChangeTelephone = (event) => {
+    setTelephone(event.target.value);
+  };
+
+  const [mensaje, setMensaje] = React.useState("");
+  const handleChangeMensaje = (event) => {
+    setMensaje(event.target.value);
+  };
+
+  const [condicionesAGB, setCondicionesAGB] = React.useState("");
+  const handleChangeCondicionesAGB = (event) => {
+    setCondicionesAGB(event.target.value);
+  };
+
+  const [textoDialogo, setTextoDialogo] = React.useState("");
+
+  //dialogo
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const texto_EnviadoCorrectamente = "Vielen Dank für Deine Bewerbung, wir melden uns in Kürze bei Dir. Dein Open Agile Team.";
+  const texto_ErrorEnDatosCheckBox = "Bitte bestätige die AGBs, um das Formular absenden zu können.";
+  const texto_ErrorEnDatos = "Bitte überprüfe Deine Eingaben und sende das Formular erneut ab.";
+  const texto_ErrorEnServidor = "Kontaktformular Error, bitte versuchen Sie es erneut.";
+
+
+  const eventoBotonEnviar = async () => {
+    if (condicionesAGB != "Ja") {
+      setTextoDialogo(texto_ErrorEnDatosCheckBox);
+      handleClickOpen();
+      return;
+    }
+
+    if (nombre === "" || email === "" || telephone === "" || mensaje === "") {
+      setTextoDialogo(texto_ErrorEnDatos);
+      handleClickOpen();
+      return;
+    }
+
+    const subject = "Kontaktformular";
+    const DataToSend = {
+      from: "Kontakt Formular",
+      to: formEmail,
+      subject: subject,
+      filename: fichero_seleccionado,
+      file: ficheroBase64,
+      body: `    
+      <strong>${job_title}</strong> <br/>         
+     <strong>Name, Vorname: </strong> ${nombre} <br />
+     <strong>E-Mail Adresse: </strong> ${email} <br />
+     <strong>Telefonnummer: </strong> ${telephone} <br />
+     <strong>Nachricht: </strong> ${mensaje} <br />`,
+    };
+    
+
+    
+    const respuesta = await sendFormularioAndFile(DataToSend);
+   
+    if (respuesta.statusText === "OK") {
+      setTextoDialogo(texto_EnviadoCorrectamente);
+      handleClickOpen();
+      return;
+    }
+
+
+    if (respuesta.data.cod_resp === "000") {
+      setTextoDialogo(texto_EnviadoCorrectamente);
+      handleClickOpen();
+    } else {
+      setTextoDialogo(texto_ErrorEnServidor + ": " + respuesta.data.cod_resp + " - "+respuesta.data.msg);
+      handleClickOpen();
+    }
+
+  };
+
+  // Subiendo fichero al servidor
+  const [ficheroPath, setFicheroPath] = useState(null);
+  const [ficheroBase64, setFicheroBase64] = useState(null);
+  const [createObjectURL, setCreateObjectURL] = useState(null);
 
   const fuentes1 = {
     style: {
@@ -116,7 +225,7 @@ export default function ModalFormJob({
 
   const [value2, setValue2] = React.useState("Controlled");
   const [value3, setValue3] = React.useState("Controlled");
-  const [value4, setValue4] = React.useState(". . .");
+  const [fichero_seleccionado, setfichero_seleccionado] = React.useState(". . .");
 
   const handleChange1 = (event) => {
     setValue1(event.target.value);
@@ -131,23 +240,29 @@ export default function ModalFormJob({
   };
 
   const handleChange4 = (event) => {
-    setValue4(event.target.value);
+    setfichero_seleccionado(event.target.value);
   };
 
   const hiddenFileInput = useRef(null);
 
-  const handleChange = (event) => {
+  const eventoCambioNombreFichero = (event) => {
     if (event.target.files && event.target.files[0]) {
-      const i = event.target.files[0];
+      const fichero_path_usuario = event.target.files[0];
+      setfichero_seleccionado(fichero_path_usuario.name);
 
-      setValue4(i.name);
+      setFicheroPath(fichero_path_usuario);
 
-      const body = new FormData();
-      body.append("image", i);
+      var reader = new FileReader();
+      reader.onload = function (event) {
+        let fichero = event.target.result.toString();
+        let base64data = btoa(fichero);
+        setFicheroBase64(base64data);
+      };
+      reader.readAsBinaryString(fichero_path_usuario);
     }
   };
 
-  const handleClick = (event) => {
+  const eventoBotonSubirFichero = (event) => {
     hiddenFileInput.current.click();
   };
 
@@ -271,6 +386,8 @@ export default function ModalFormJob({
                   sx={styles}
                   inputProps={fuentes1}
                   InputLabelProps={fuentes2}
+                  value={nombre}
+                  onChange={handleChangeNombre}
                 />
               </div>
 
@@ -282,6 +399,8 @@ export default function ModalFormJob({
                   sx={styles}
                   inputProps={fuentes1}
                   InputLabelProps={fuentes2}
+                  value={email}
+                  onChange={handleChangeEmail}
                 />
               </div>
 
@@ -293,6 +412,8 @@ export default function ModalFormJob({
                   sx={styles}
                   inputProps={fuentes1}
                   InputLabelProps={fuentes2}
+                  value={telephone}
+                  onChange={handleChangeTelephone}
                 />
               </div>
 
@@ -311,7 +432,11 @@ export default function ModalFormJob({
               </div>
 
               <div className="row d-flex justify-content-start ps-3 pe-3 mt-1">
-                <RadioGroup name="use-radio-group" defaultValue="Ja">
+                <RadioGroup
+                  name="use-radio-group"
+                  defaultValue="Ja"
+                  value={condicionesAGB}
+                  onChange={handleChangeCondicionesAGB}>
                   <MyFormControlLabel
                     value="Ja"
                     label="Ja"
@@ -330,66 +455,89 @@ export default function ModalFormJob({
                   id="outlined-multiline-flexible"
                   label="Erzähle uns gerne mehr von Dir"
                   multiline
-                  maxRows={2}
                   rows={2}
                   className=""
                   sx={styles2}
                   inputProps={fuentes1}
                   InputLabelProps={fuentes2}
+                  value={mensaje}
+                  onChange={handleChangeMensaje}
                 />
               </div>
 
-              <div className="row  g-0 mt-4  mb-2  d-flex flex-wrap justify-content-start">
-                 <input type="file" className="ocultar" id="customFile" onChange={handleChange4} />      
+              <div className="row mt-4 ms-3">
+                <div className="col-md-6  d-flex justify-content-start align-items-center texto-AGBS">
+                  {fichero_seleccionado}
+                </div>
+              </div>
+              <div className="row  g-0  mt-2 mb-2  d-flex flex-wrap justify-content-start">
+                {/* <input type="file" className="ocultar" id="customFile" onChange={handleChange4} />       */}
                 <input
                   type="file"
                   ref={hiddenFileInput}
-                  onChange={handleChange}
+                  onChange={eventoCambioNombreFichero}
                   className="ocultar"
-                /> 
+                />
 
                 <div className="col mx-3 d-flex justify-content-between botones-jobs-516">
                   <button
                     type="button"
                     className="btn btn-secondary boton_modal_form"
-                    onClick={handleClick}>
+                    onClick={eventoBotonSubirFichero}>
                     Lebenslauf hochladen
                   </button>
+
                   <button
                     type="button"
                     className="btn btn-secondary boton_modal_form"
-                    data-bs-dismiss="modal">
-                    Jetzt Bewerbung absenden
-                  </button>
-                </div>
-              
-                <div className="row d-flex botones-jobs justify-content-center">
-                  <button
-                    type="button"
-                    className="btn btn-secondary boton_modal_form mb-3 col-10"
-                    onClick={handleClick}>
-                    Lebenslauf hochladen
-                  </button>
-                  <button
-                    type="button"
-                    className="btn btn-secondary boton_modal_form col-10"
-                    data-bs-dismiss="modal">
+                    data-bs-dismiss="modal"
+                    onClick={eventoBotonEnviar}>
                     Jetzt Bewerbung absenden
                   </button>
                 </div>
 
-                  <div className="row mt-2"> 
-                  <div className="col-md-6  d-flex justify-content-start align-items-center texto-AGBS">
-                  {value4}
-                </div>  
+                <div className="row d-flex botones-jobs justify-content-center">
+                  <button
+                    type="button"
+                    className="btn btn-secondary boton_modal_form mb-3 col-10"
+                    onClick={eventoBotonSubirFichero}>
+                    Lebenslauf hochladen
+                  </button>
+                  <button
+                    type="button"
+                    className="btn btn-secondary boton_modal_form  mb-3 col-10"
+                    data-bs-dismiss="modal"
+                    onClick={eventoBotonEnviar}>
+                    Jetzt Bewerbung absenden
+                  </button>
                 </div>
+
                 {/* <div className="col-md-5 d-flex justify-content-end"></div> */}
-                
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description">
+        {/* <DialogTitle id="alert-dialog-title">
+          {"Use Google's location service?"}
+        </DialogTitle> */}
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            {textoDialogo}
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} autoFocus>
+            OK
+          </Button>
+        </DialogActions>
+      </Dialog>
     </>
   );
 }
@@ -398,3 +546,5 @@ const eliminar_anno = (fecha) => {
   if (fecha === undefined) return "";
   return fecha.substring(0, 6);
 };
+
+

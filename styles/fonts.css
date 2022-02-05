@@ -442,6 +442,46 @@
   }
 }
 
+.font_data_vlog {
+  font-family: Montserrat-Bold;
+  color: #24325a;
+  /* font-style: italic;  */
+  /* font-size: 3.4vh;  */
+  font-size: 3vw;
+  font-weight: 100;
+  /* text-transform: uppercase;  */
+  line-height: 90%;
+  right: 16px;
+}
+
+@media (max-width: 767px) {
+  .data_vlog_movile {
+    display: block;
+  }
+  .data_vlog_desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .data_vlog_movile {
+    display: none;
+  }
+  .data_vlog_desktop {
+    font-family: Montserrat-Bold;
+    color: #24325a;
+    /* font-style: italic;  */
+    /* font-size: 3.4vh;  */
+    font-size: 1vw;
+    font-weight: 100;
+    /* text-transform: uppercase;  */
+    line-height: 90%;
+    display: block;
+    right: 7vw;
+    padding-right: 8px;
+  }
+}
+
 .font_card_title_vlog {
   font-family: Montserrat-Bold;
   color: #24325a;

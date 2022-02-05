@@ -468,11 +468,11 @@ i:hover {
   z-index: 9000;
 }
 
-.dropdown2 {
-  /* position: relative;
+/* .dropdown2 {
+   position: relative;
   display: inline-block;
-  z-index: 10000; */
-}
+  z-index: 10000;
+} */
 
 .separador_menu {
   color: #fff;
@@ -892,8 +892,6 @@ ul li.mybullets::before {
 .margen-negativo {
   margin-left: -1.2em;
 }
-
-
 
 .ocultar {
   display: none;

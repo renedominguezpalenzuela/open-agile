@@ -45,6 +45,7 @@ export default function Card04({ datos, precio, nombre_curso }) {
         link={link}
         precio={precio}
         nombre_curso={nombre_curso}
+        date_list={date_list}
       />
     </>
   )

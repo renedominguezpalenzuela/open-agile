@@ -16,7 +16,7 @@
 
 .texto-blog-movile {
   width: 80vw !important;
-  margin-left: -22px;
+  margin-left: -15px;
 }
 .font_title_blogs_articles-2 {
   font-family: Montserrat-BoldItalic;
@@ -196,4 +196,37 @@ div.items-en-linea-padre:hover {
 .flecha:hover {
   filter: brightness(0) saturate(100%) invert(29%) sepia(93%) saturate(3386%)
     hue-rotate(321deg) brightness(102%) contrast(94%);
+}
+
+.font_data_blog {
+  font-family: Montserrat-Bold;
+  color: #24325a;
+  /* font-style: italic;  */
+  /* font-size: 3.4vh;  */
+  font-size: 1.2vw;
+  font-weight: 100;
+  /* text-transform: uppercase;  */
+  line-height: 90%;
+}
+
+@media (max-width: 767px) {
+  .font_data_blog {
+    font-size: 3vw !important;
+    margin-right: -16vw;
+  }
+  .blog-desktop {
+    display: none;
+  }
+  .blog-movile {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .blog-desktop {
+    display: block;
+  }
+  .blog-movile {
+    display: none;
+  }
 }

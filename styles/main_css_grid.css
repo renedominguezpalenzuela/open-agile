@@ -57,6 +57,7 @@
 
   grid-template-columns: 12% 75% 10%; /*tres columnas de igual ancho*/
   /* grid-template-rows: 15% auto; total de filas depende de cantidad elementos */
+  grid-template-rows: 15vh auto;
   padding-bottom: 50px;
   /* gap: 1em; */
   /* row-gap: 1em; */
@@ -85,7 +86,6 @@
     ),
     url("/img/agilcheckbackground.jpg");
 }
-
 @media (max-width: 992px) {
   .bannermain-quiz {
     grid-template-rows: 15% auto;
@@ -142,7 +142,7 @@
   /* height: 70vh; */
 
   grid-template-columns: 12% 75% 10%;
-  grid-template-rows: 15% 85%;
+  grid-template-rows: 15vh 90%;
   /* padding-bottom: 50px; */
 
   /* gap: 1em; */
@@ -178,15 +178,11 @@
   }
 }
 
-
 @media (min-height: 501px) and (max-height: 700px) {
   .bannermain-quiz-result {
     height: 80vh;
   }
 }
-
-
-
 
 @media (min-height: 701px) and (max-height: 900px) {
   .bannermain-quiz-result {
@@ -194,25 +190,17 @@
   }
 }
 
-
-
-
 @media (min-height: 901px) and (max-height: 1100px) {
   .bannermain-quiz-result {
     height: 70vh;
   }
 }
 
-
-
-
 @media (min-height: 1101px) and (max-height: 1300px) {
   .bannermain-quiz-result {
     height: 60vh;
   }
 }
-
-
 
 @media (max-width: 992px) {
   .bannermain-quiz-result {

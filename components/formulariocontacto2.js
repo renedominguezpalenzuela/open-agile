@@ -54,17 +54,18 @@ export default function FormularioContacto2() {
 
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
-  const texto_EnviadoCorrectamente = "Vielen Dank für Deine Anmeldung!";
+  const texto_EnviadoCorrectamente = "Vielen Dank für Deine Anmeldung zum Open Agile Newsletter!";
   const texto_ErrorEnDatosCheckBox =
-    "Bitte bestätige die AGBs, um Dich für unseren Newsletter anzumelden.";
+    "Bitte bestätige die AGBs, um dich für unseren Newsletter anzumelden";
   const texto_ErrorEnDatos =
-    "Bitte überprüfe Deine Angaben und sende es noch einmal ab.";
+    "Bitte überprüfe Deine Eingaben und sende das Formular erneut ab.";
   const texto_ErrorEnServidor =
     "Kontaktformular Error, bitte versuchen Sie es erneut.";
+    
 
   const eventoBotonEnviar = async () => {
     if (nombre === "" || correo === "") {
-      console.log("aqui1");
+      
 
       setTextoDialogo(texto_ErrorEnDatos);
       handleClickOpen();
@@ -72,53 +73,38 @@ export default function FormularioContacto2() {
     }
 
     if (!checked1) {
-      console.log("aqui2");
+      
       setTextoDialogo(texto_ErrorEnDatosCheckBox);
       handleClickOpen();
       return;
     }
 
-    const subject = "Newsletter Kontaktformular";
+   
 
     const DataToSend = {
-      from: "Kontakt Formular",
+      from: "Newsletter form",
       to: formEmail,
-      subject: "Newsletter Kontaktformular",
+      subject: "Newsletter form",
       body: `    
+      <strong>Newsletter form</strong>
       <strong>Name: </strong> ${nombre} <br />
       <strong>Email: </strong> ${correo} <br />   
       `
     };
 
     const respuesta = await sendFormulario(DataToSend);
-    // const respuesta_json =await respuesta.json()
 
-    if (respuesta.statusText === "OK") {
-      setTextoDialogo(texto_EnviadoCorrectamente);
-      handleClickOpen();
-      return;
-    }
+  
 
-    console.log(respuesta.data.cod_resp);
-
-    if (respuesta.cod_resp === "000") {
+    if (respuesta.data.cod_resp === "000") {
       setTextoDialogo(texto_EnviadoCorrectamente);
       handleClickOpen();
     } else {
-      setTextoDialogo(texto_ErrorEnServidor);
+      setTextoDialogo(texto_ErrorEnServidor + ": " + respuesta.data.cod_resp + " - "+respuesta.data.msg);
       handleClickOpen();
     }
   };
 
-  // const styles2 = (theme) => ({
-  //   multilineColor: {
-  //     color: "red",
-  //   },
-  // });
-
-  // '& .MuiInput-underline:before': { borderBottom: `1px solid #e50067` },
-  // '& .MuiInput-underline:after': { borderBottom: `1px solid #ffffff` },
-  //  '& .MuiInput-underline:hover': { borderBottom: `1px solid  #00ffffff` },
 
   const styles = {
     width: { sm: 250, md: 350 },
