@@ -208,15 +208,9 @@ export default function ModalFormCursos({
       postleitzahls1 === "" ||
       ort1 === "" ||
       email === "" ||
-      telephone === "" ||
-      comentario === "" ||
-      referencia === "" ||
-      unternehmen === "" ||
-      strase2 === "" ||
-      hausnummer2 === "" ||
-      postleitzahls2 === "" ||
-      ort2 === "" ||
-      rabattcode === ""
+      telephone === "" 
+    
+     
     ) {
       setTextoDialogo(texto_ErrorEnDatos);
       handleClickOpen();
