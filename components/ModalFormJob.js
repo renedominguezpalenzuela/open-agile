@@ -503,7 +503,7 @@ export default function ModalFormJob({
                   </button>
                   <button
                     type="button"
-                    className="btn btn-secondary boton_modal_form col-10"
+                    className="btn btn-secondary boton_modal_form  mb-3 col-10"
                     data-bs-dismiss="modal"
                     onClick={eventoBotonEnviar}>
                     Jetzt Bewerbung absenden

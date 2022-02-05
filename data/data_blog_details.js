@@ -2,12 +2,10 @@ export const blog_details = [
   {
     id: "1",
     title: "BUCHEMPFEHLUNGEN",
-    titulo1:["BUCH","EMPFEHLUNGEN"],
+    titulo1: ["BUCH", "EMPFEHLUNGEN"],
     titulo2: ["“EINE OPEN AGILE AUSWAHL”"],
     image: "blogs/blog_buchempfehlungen.png",
-    link:"blog/1",
-    autor: "",
-    fecha: "",
+    link: "blog/1",
     autor: "Andreas Eilers",
     fecha: "14.01.2022",
 
@@ -67,11 +65,11 @@ export const blog_details = [
     id: "2",
     title: "WORKHACKS",
     titulo1: ["WORKHACKS"],
-    titulo2:[ "“WORKHACKS SIND EINE REVOLUTION. EINE LEISE REVOLUTION.”"],
-    link:"blog/2",
+    titulo2: ["“WORKHACKS SIND EINE REVOLUTION. EINE LEISE REVOLUTION.”"],
+    link: "blog/2",
     image: "blogs/blog_workhacks.png",
-    autor: "",
-    fecha: "",
+    autor: "Andreas Eilers",
+    fecha: "18.01.2022",
     content: [
       {
         tipo: "parrafo",
@@ -111,12 +109,12 @@ export const blog_details = [
   {
     id: "3",
     title: "BUCHVERÖFFENTLICHUNG",
-    titulo1:["BUCH","VERÖFFENTLICHUNG"],
+    titulo1: ["BUCH", "VERÖFFENTLICHUNG"],
     titulo2: ["“CRASHKURS SELBSTORGANISATION IN AGILEN TEAMS”"],
-    link:"blog/3",
+    link: "blog/3",
     image: "blogs/blog_buchveröffentlichung.png",
     autor: "Andreas Eilers",
-    fecha: "14.01.2022",
+    fecha: "01.02.2022",
 
     content: [
       {

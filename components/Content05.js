@@ -88,10 +88,9 @@ export default function Content05({ datos, color_fondo }) {
                     }>
                     <div className="d-xl-none  ">
                       <div className="row d-flex justify-content-center">
-                        <div className="col-md-6">
+                        <div className="col-md-6 ">
                           <div className="row sombra_cards myanimacion mt-md-5 mt-lg-4 mi-card">
-                            <div className="col p-3">
-                         
+                            <div className="col p-3 position-relative">
                               {unDato.link != undefined && unDato.link != "" && (
                                 <div className="ratio ratio-16x9">
                                   <iframe
@@ -103,6 +102,9 @@ export default function Content05({ datos, color_fondo }) {
                                     allowFullScreen></iframe>
                                 </div>
                               )}
+                              <div className="font_data_vlog data_vlog_movile pt-2 position-absolute">
+                                {unDato.date}
+                              </div>
                             </div>
                             <div>
                               <div className="card-body text-center">
@@ -125,6 +127,7 @@ export default function Content05({ datos, color_fondo }) {
                         video={unDato.link}
                         titulo={unDato.title}
                         texto={unDato.text}
+                        date={unDato.date}
                       />
                     </div>
                   </div>
