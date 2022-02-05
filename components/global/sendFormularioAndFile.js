@@ -7,11 +7,6 @@ const sendFormularioAndFile = async (datos) => {
   const url = `${servidor_url}/api/formAndFile`;
 
 
-  //  let bodyData = qs.stringify(datos);
-
-    console.log("Datos a enviar");
-  console.log(datos);
-
 
   try {
     const respuesta_api = await axios.post(url, datos, {

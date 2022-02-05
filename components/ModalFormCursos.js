@@ -81,6 +81,7 @@ export default function ModalFormCursos({
   frase,
   precio,
   nombre_curso,
+  date_list
 }) {
   //Texto que aparece en el edit luego de que el usuario escribe
   //inputProps={fuentes1}
@@ -185,14 +186,12 @@ export default function ModalFormCursos({
     setOpen(false);
   };
 
-  const texto_EnviadoCorrectamente =
-    "Vielen Dank für die Anmeldung zum Crashkurs, wir melden uns mit weiteren Informationen bei Dir!";
-  const texto_ErrorEnDatosCheckBox =
-    "Bitte bestätige die AGBs, um Dich für unseren Newsletter anzumelden.";
-  const texto_ErrorEnDatos =
-    "Bitte überprüfe Deine Angaben und sende es noch einmal ab.";
-  const texto_ErrorEnServidor =
-    "Kontaktformular Error, bitte versuchen Sie es erneut.";
+
+  const texto_EnviadoCorrectamente = "Vielen Dank für die Kontaktaufnahme, wir melden uns in Kürze bei Dir!";
+  const texto_ErrorEnDatosCheckBox = "Bitte bestätige die AGBs.";
+  const texto_ErrorEnDatos = "Bitte überprüfe Deine Angaben und sende es noch einmal ab.";
+  const texto_ErrorEnServidor = "Kontaktformular Error, bitte versuchen Sie es erneut.";
+
 
   const eventoBotonEnviar = async () => {
     if (condicionesAGB != "Ja") {
@@ -233,6 +232,8 @@ export default function ModalFormCursos({
       body: `    
      <strong>Kontaktformular Crashkurse </strong> <br />
      <br>
+     <strong>${nombre_curso} </strong> <br/>
+     ${fechas_str(date1, date2, date_list)}
      <strong> Deine persönlichen Infos </strong> <br />
      <strong>Vorname: </strong> ${vorname} <br />
      <strong>Nachname: </strong> ${nachname} <br />
@@ -255,26 +256,44 @@ export default function ModalFormCursos({
       `,
     };
 
+
+    console.log(DataToSend);
+
     const respuesta = await sendFormulario(DataToSend);
-    // const respuesta_json =await respuesta.json()
+  
 
-    if (respuesta.statusText === "OK") {
+   
+    if (respuesta.data.cod_resp === "000") {
       setTextoDialogo(texto_EnviadoCorrectamente);
       handleClickOpen();
-      return;
-    }
-
- 
-
-    if (respuesta.cod_resp === "000") {
-      setTextoDialogo(texto_EnviadoCorrectamente);
-      handleClickOpen();
-
     } else {
-      setTextoDialogo(texto_ErrorEnServidor);
+      setTextoDialogo(texto_ErrorEnServidor + ": " + respuesta.data.cod_resp + " - "+respuesta.data.msg);
       handleClickOpen();
     }
   };
+
+
+  const fechas_str = (date1, date2, date_list)=> {
+   if (date_list.length<=1) {
+     return `
+     <strong>${date1} </strong> <br/>
+     <strong>${date2} </strong> <br/>
+     `
+   } else {
+     let fechas = '';
+
+     date_list.map((unaFecha)=>{
+       fechas = fechas +  `<strong>${unaFecha.date1} </strong> <br/>
+       <strong>${unaFecha.date2} </strong> <br/> <br/>`
+
+     }
+  
+     )
+        return fechas;
+
+   }
+  }
+
 
   const fuentes1 = {
     style: {

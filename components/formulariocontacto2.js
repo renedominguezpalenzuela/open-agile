@@ -93,17 +93,7 @@ export default function FormularioContacto2() {
 
     const respuesta = await sendFormulario(DataToSend);
 
-    console.log("Respuesta");
-    console.log(respuesta);
-    // const respuesta_json =await respuesta.json()
-
-    // if (respuesta.statusText === "OK") {
-    //   setTextoDialogo(texto_EnviadoCorrectamente);
-    //   handleClickOpen();
-    //   return;
-    // }
-
-    
+  
 
     if (respuesta.data.cod_resp === "000") {
       setTextoDialogo(texto_EnviadoCorrectamente);
@@ -114,15 +104,6 @@ export default function FormularioContacto2() {
     }
   };
 
-  // const styles2 = (theme) => ({
-  //   multilineColor: {
-  //     color: "red",
-  //   },
-  // });
-
-  // '& .MuiInput-underline:before': { borderBottom: `1px solid #e50067` },
-  // '& .MuiInput-underline:after': { borderBottom: `1px solid #ffffff` },
-  //  '& .MuiInput-underline:hover': { borderBottom: `1px solid  #00ffffff` },
 
   const styles = {
     width: { sm: 250, md: 350 },

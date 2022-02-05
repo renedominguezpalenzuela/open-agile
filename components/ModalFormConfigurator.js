@@ -119,12 +119,9 @@ export default function ModalFormConfigurator({
   };
 
   const texto_EnviadoCorrectamente = "Vielen Dank für die Kontaktaufnahme, wir melden uns in Kürze bei Dir!";
-  const texto_ErrorEnDatosCheckBox =
-    "Bitte bestätige die AGBs, um Dich für unseren Newsletter anzumelden.";
-  const texto_ErrorEnDatos =
-    "Bitte überprüfe Deine Angaben und sende es noch einmal ab.";
-  const texto_ErrorEnServidor =
-    "Kontaktformular Error, bitte versuchen Sie es erneut.";
+  const texto_ErrorEnDatosCheckBox = "Bitte bestätige die AGBs.";
+  const texto_ErrorEnDatos = "Bitte überprüfe Deine Angaben und sende es noch einmal ab.";
+  const texto_ErrorEnServidor = "Kontaktformular Error, bitte versuchen Sie es erneut.";
 
   const eventoBotonEnviar = async () => {
       if (condicionesAGB != "Ja") {
@@ -161,22 +158,14 @@ const DataToSend = {
     const respuesta = await sendFormulario(DataToSend);
     
 
-   
-    if (respuesta.statusText === "OK") {
-      setTextoDialogo(texto_EnviadoCorrectamente);
-      handleClickOpen();
-      return;
-    }
-
- 
-
-    if (respuesta.cod_resp === "000") {
+    if (respuesta.data.cod_resp === "000") {
       setTextoDialogo(texto_EnviadoCorrectamente);
       handleClickOpen();
     } else {
-      setTextoDialogo(texto_ErrorEnServidor);
+      setTextoDialogo(texto_ErrorEnServidor + ": " + respuesta.data.cod_resp + " - "+respuesta.data.msg);
       handleClickOpen();
     }
+  
   };
 
   const fuentes1 = {
