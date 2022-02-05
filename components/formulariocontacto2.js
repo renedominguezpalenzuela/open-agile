@@ -54,11 +54,11 @@ export default function FormularioContacto2() {
 
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
-  const texto_EnviadoCorrectamente = "Vielen Dank für Deine Anmeldung!";
+  const texto_EnviadoCorrectamente = "Vielen Dank für Deine Anmeldung zum Open Agile Newsletter!";
   const texto_ErrorEnDatosCheckBox =
-    "Bitte bestätige die AGBs, um Dich für unseren Newsletter anzumelden.";
+    "Bitte bestätige die AGBs, um dich für unseren Newsletter anzumelden";
   const texto_ErrorEnDatos =
-    "Bitte überprüfe Deine Angaben und sende es noch einmal ab.";
+    "Bitte überprüfe Deine Eingaben und sende das Formular erneut ab.";
   const texto_ErrorEnServidor =
     "Kontaktformular Error, bitte versuchen Sie es erneut.";
     
@@ -79,13 +79,14 @@ export default function FormularioContacto2() {
       return;
     }
 
-    const subject = "Newsletter Kontaktformular";
+   
 
     const DataToSend = {
-      from: "Kontakt Formular",
+      from: "Newsletter form",
       to: formEmail,
-      subject: "Newsletter Kontaktformular",
+      subject: "Newsletter form",
       body: `    
+      <strong>Newsletter form</strong>
       <strong>Name: </strong> ${nombre} <br />
       <strong>Email: </strong> ${correo} <br />   
       `

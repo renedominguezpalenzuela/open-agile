@@ -118,9 +118,9 @@ export default function ModalFormConfigurator({
     setOpen(false);
   };
 
-  const texto_EnviadoCorrectamente = "Vielen Dank für die Kontaktaufnahme, wir melden uns in Kürze bei Dir!";
-  const texto_ErrorEnDatosCheckBox = "Bitte bestätige die AGBs.";
-  const texto_ErrorEnDatos = "Bitte überprüfe Deine Angaben und sende es noch einmal ab.";
+  const texto_EnviadoCorrectamente = "Vielen Dank für Deine Kontaktaufnahme, wir melden uns bei Dir!";
+  const texto_ErrorEnDatosCheckBox = "Bitte bestätige die AGBs, um das Formular absenden zu können.";
+  const texto_ErrorEnDatos = "Bitte überprüfe Deine Eingaben und sende das Formular erneut ab.";
   const texto_ErrorEnServidor = "Kontaktformular Error, bitte versuchen Sie es erneut.";
 
   const eventoBotonEnviar = async () => {
@@ -141,12 +141,13 @@ export default function ModalFormConfigurator({
 
 
 
- const subject = "Kontaktformular";
+ const subject = "Contact Form";
 const DataToSend = {
-      from: "Kontakt Formular",
+      from: subject,
       to: formEmail,
       subject: subject,
-      body: `              
+      body: `  
+      <strong>Contact Form</strong>            
      <strong>Name, Vorname oder Firma: </strong> ${nombre} <br />
      <strong>E-Mail Adresse: </strong> ${email} <br />
      <strong>Telefonnummer: </strong> ${telephone} <br />

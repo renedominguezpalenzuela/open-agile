@@ -6,17 +6,16 @@ export default async function handler(req, res) {
     res.status(405).json({ cod_resp: "901", msg: "Only POST request" });
   }
 
-  const remoteServerUrl = "https://api.jesamconsulting.com/.netlify/functions/send-email-v2"
+  const remoteServerUrl =
+    "https://api.jesamconsulting.com/.netlify/functions/send-email-v2";
 
- 
-  try {      
+  try {
     const respuesta_api = await axios.post(remoteServerUrl, req.body, {
       headers: {
         "Content-Type": "application/json",
       },
     });
 
-    
     const data = await respuesta_api.data; //json();
 
     if (!data) {
@@ -25,14 +24,13 @@ export default async function handler(req, res) {
         .json({ cod_resp: "902", msg: "No data received from server" });
     }
 
-    if (data.error==="") {
-      res.status(200).json({ cod_resp: "000", msg: data.message })      
-    } else {      
-      res.status(200).json({ cod_resp: "903", msg: "Error: " + data.error });;
+    if (data.error === "") {
+      res.status(200).json({ cod_resp: "000", msg: data.message });
+    } else {
+      res.status(200).json({ cod_resp: "903", msg: "Error: " + data.error });
     }
-
   } catch (err) {
     console.log("Error api/forms: " + err.message);
-     res.status(200).json({ cod_resp: "950", msg: err.message });
+    res.status(200).json({ cod_resp: "950", msg: err.message });
+  }
 }
-
