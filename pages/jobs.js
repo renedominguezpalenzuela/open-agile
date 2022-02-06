@@ -35,7 +35,7 @@ export default function Home() {
 
   const parrafo1 = [
     "Praktische Erfahrungen im Bereich Social-Media & Online-Kommunikation",
-    "„Digital Native“ mit großer Social-Networks-Affinität",
+    "“Digital Native“ mit großer Social-Networks-Affinität",
     "Fehlerfreier, stilsicherer und fachlich korrekter Schreibstil",
     "Sicherer Umgang mit MS-Office sowie den gängigen Layout- und Grafik-Programmen",
     "Selbstständiger, kreativer und lösungsorientierter Arbeitsstil",

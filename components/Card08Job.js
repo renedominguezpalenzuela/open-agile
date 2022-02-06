@@ -120,7 +120,7 @@ export default function Card08Job({
         frase="Jetzt Kontakt aufnehmen!"
         day={""}
         link={""}
-        job_title = {titulo1 +" "+ titulo2}
+        job_title={titulo1 + " " + titulo2}
       />
     </>
   );
