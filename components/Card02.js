@@ -25,7 +25,7 @@ export default function Card02({
             </div>
 
             <div className=" ms-2 me-2 mt-4 pb-3 contenedor_texto_overflow ">
-              <div className="data_vlog_desktop pt-2 position-absolute">
+              <div className="data_vlog_desktop  position-absolute">
                 <p>GEPOSTET AM {date}</p>
               </div>
               {/* <div className="p-1  contenedor_margen"> */}
