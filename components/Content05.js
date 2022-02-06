@@ -94,16 +94,15 @@ export default function Content05({ datos, color_fondo }) {
                               {unDato.link != undefined && unDato.link != "" && (
                                 <div className="ratio ratio-16x9">
                                   <iframe
-                                   loading="lazy"
-                                   
-                                  allow="autoplay;"
+                                    loading="lazy"
+                                    allow="autoplay;"
                                     src={unDato.link}
                                     title="YouTube video"
                                     allowFullScreen></iframe>
                                 </div>
                               )}
                               <div className="font_data_vlog data_vlog_movile pt-2 position-absolute">
-                                {unDato.date}
+                                <p>GEPOSTET AM {unDato.date}</p>
                               </div>
                             </div>
                             <div>

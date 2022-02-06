@@ -19,15 +19,15 @@ export default function Card02({
       <div className="row g-0 mt-5  ">
         <div className="col-6  d-flex align-items-center  ">
           <div className="shadow   texto_video_fondo me-5 ">
-            <div className="data_vlog_desktop pt-2 position-absolute">
-              {date}
-            </div>
             {/* <div className="texto_video ">  */}
             <div className=" font_card_title_video pt-4 d-flex justify-content-center">
               {titulo}
             </div>
 
             <div className=" ms-2 me-2 mt-4 pb-3 contenedor_texto_overflow ">
+              <div className="data_vlog_desktop pt-2 position-absolute">
+                <p>GEPOSTET AM {date}</p>
+              </div>
               {/* <div className="p-1  contenedor_margen"> */}
               {texto.map((unTexto, index) => (
                 <div key={index} className="font_carrusel_video ">
