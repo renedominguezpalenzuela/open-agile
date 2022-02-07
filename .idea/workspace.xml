@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d42f5d5a-8e90-4c1a-88e0-2ba227c4c520" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/componentes/area_superior/AreaSuperior.js" beforeDir="false" afterPath="$PROJECT_DIR$/componentes/area_superior/AreaSuperior.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_leistungen_details.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/data_leistungen_details.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/leistungen/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/leistungen/[id].js" afterDir="false" />
-    </list>
+    <list default="true" id="d42f5d5a-8e90-4c1a-88e0-2ba227c4c520" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +39,7 @@
       <option name="presentableId" value="Default" />
       <updated>1640035225980</updated>
       <workItem from="1640035227912" duration="5120000" />
+      <workItem from="1644265312614" duration="387000" />
     </task>
     <servers />
   </component>
