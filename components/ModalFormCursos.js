@@ -81,7 +81,7 @@ export default function ModalFormCursos({
   frase,
   precio,
   nombre_curso,
-  date_list
+  date_list,
 }) {
   //Texto que aparece en el edit luego de que el usuario escribe
   //inputProps={fuentes1}
@@ -133,8 +133,6 @@ export default function ModalFormCursos({
   const [referencia, setReferencia] = React.useState(1);
   const handleChangeReferencia = (event) => {
     setReferencia(event.target.value);
-
-    
   };
 
   //Deinne
@@ -186,12 +184,14 @@ export default function ModalFormCursos({
     setOpen(false);
   };
 
-
-  const texto_EnviadoCorrectamente = "Vielen Dank für die Anmeldung zum Crashkurs. Wir melden uns mit weiteren Informationen bei Dir. Dein Open Agile Team.";
-  const texto_ErrorEnDatosCheckBox = "Bitte bestätige die AGBs, um das Formular absenden zu können.";
-  const texto_ErrorEnDatos = "Bitte überprüfe Deine Eingaben und sende das Formular erneut ab.";
-  const texto_ErrorEnServidor = "Kontaktformular Error, bitte versuchen Sie es erneut.";
-
+  const texto_EnviadoCorrectamente =
+    "Vielen Dank für die Anmeldung zum Crashkurs. Wir melden uns mit weiteren Informationen bei Dir. Dein Open Agile Team.";
+  const texto_ErrorEnDatosCheckBox =
+    "Bitte bestätige die AGBs, um das Formular absenden zu können.";
+  const texto_ErrorEnDatos =
+    "Bitte überprüfe Deine Eingaben und sende das Formular erneut ab.";
+  const texto_ErrorEnServidor =
+    "Kontaktformular Error, bitte versuchen Sie es erneut.";
 
   const eventoBotonEnviar = async () => {
     if (condicionesAGB != "Ja") {
@@ -208,9 +208,7 @@ export default function ModalFormCursos({
       postleitzahls1 === "" ||
       ort1 === "" ||
       email === "" ||
-      telephone === "" 
-    
-     
+      telephone === ""
     ) {
       setTextoDialogo(texto_ErrorEnDatos);
       handleClickOpen();
@@ -250,44 +248,43 @@ export default function ModalFormCursos({
       `,
     };
 
-
     console.log(DataToSend);
 
     const respuesta = await sendFormulario(DataToSend);
-  
 
-   
     if (respuesta.data.cod_resp === "000") {
       setTextoDialogo(texto_EnviadoCorrectamente);
       handleClickOpen();
     } else {
-      setTextoDialogo(texto_ErrorEnServidor + ": " + respuesta.data.cod_resp + " - "+respuesta.data.msg);
+      setTextoDialogo(
+        texto_ErrorEnServidor +
+          ": " +
+          respuesta.data.cod_resp +
+          " - " +
+          respuesta.data.msg
+      );
       handleClickOpen();
     }
   };
 
-
-  const fechas_str = (date1, date2, date_list)=> {
-   if (date_list.length<=1) {
-     return `
+  const fechas_str = (date1, date2, date_list) => {
+    if (date_list.length <= 1) {
+      return `
      <strong>${date1} </strong> <br/>
      <strong>${date2} </strong> <br/>
-     `
-   } else {
-     let fechas = '';
+     `;
+    } else {
+      let fechas = "";
 
-     date_list.map((unaFecha)=>{
-       fechas = fechas +  `<strong>${unaFecha.date1} </strong> <br/>
-       <strong>${unaFecha.date2} </strong> <br/> <br/>`
-
-     }
-  
-     )
-        return fechas;
-
-   }
-  }
-
+      date_list.map((unaFecha) => {
+        fechas =
+          fechas +
+          `<strong>${unaFecha.date1} </strong> <br/>
+       <strong>${unaFecha.date2} </strong> <br/> <br/>`;
+      });
+      return fechas;
+    }
+  };
 
   const fuentes1 = {
     style: {
@@ -643,10 +640,7 @@ export default function ModalFormCursos({
                       id="combo-box-demo"
                       options={opciones_combo_box}
                       sx={stilos_combo}
-                      onChange={(event, value) =>
-                        
-                        setReferencia(value)
-                      } // prints the selected value
+                      onChange={(event, value) => setReferencia(value)} // prints the selected value
                       // getOptionLabel={(option) => (option ? option.name : "")}
                       //  getOptionSelected={(option, value) => option === value.value}
 
@@ -674,7 +668,7 @@ export default function ModalFormCursos({
                   <div className="row d-flex justify-content-start ps-3 mt-2 pe-3  ">
                     <TextField
                       id="outlined-multiline-flexible"
-                      label="Unternehmen"
+                      label="Unternehmen / Name, Vorname"
                       className="ancho-edit2 "
                       sx={styles}
                       inputProps={fuentes1}
@@ -772,7 +766,7 @@ export default function ModalFormCursos({
                     className="btn btn-secondary boton_modal_form"
                     data-bs-dismiss="modal"
                     onClick={eventoBotonEnviar}>
-                     Jetzt kostenpflichtig anmelden
+                    Jetzt kostenpflichtig anmelden
                   </button>
                 </div>
               </div>
