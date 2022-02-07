@@ -11,15 +11,16 @@ export default function MenuNavBar2() {
     <>
       <div className="navbar-movil">
         <div className="navbar1    d-flex align-items-center justify-content-start" >
-          <button  className="btn " role="button" id="boton_new_abrir_menu2" >
-             <FontAwesomeIcon
-              icon="bars"
-              className="botonTresBarras"
-              width="32"
-            /> 
+        
+          {/* <button  className="btn " role="button" id="boton_new_abrir_menu2"  >
+             <FontAwesomeIcon icon="bars" className="botonTresBarras"  width="32" />            
+          </button> */}
 
-           
-          </button>
+          <button  className="btn " role="button" id="boton_new_abrir_menu2" data-bs-toggle="offcanvas" data-bs-target="#mySidepanel" >
+             <FontAwesomeIcon icon="bars"  className="botonTresBarras" width="32" />            
+          </button> 
+
+
         </div>
 
        
