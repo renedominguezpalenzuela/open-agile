@@ -130,7 +130,7 @@ export default function ModalFormJob({
       return;
     }
 
-    if (nombre === "" || email === "" || telephone === "" || mensaje === "") {
+    if (nombre === "" || email === "" || telephone === "" ) {
       setTextoDialogo(texto_ErrorEnDatos);
       handleClickOpen();
       return;
