@@ -1026,3 +1026,29 @@
 .color_magenta {
   color: #e42078 !important;
 }
+
+.font_daten {
+  font-family: Montserrat-Regular;
+  color: #1f397c;
+  font-size: 1.2vw;
+}
+
+@media (max-width: 767px) {
+  .font_daten {
+    font-size: 4vw;
+  }
+}
+
+.title_daten {
+  font-family: Montserrat-ExtraBold;
+  color: #243a78;
+  font-size: 2.2vw;
+  padding-bottom: 3vh;
+  padding-top: 4vh;
+}
+
+@media (max-width: 767px) {
+  .title_daten {
+    font-size: 5.3vw !important;
+  }
+}

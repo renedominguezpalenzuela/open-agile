@@ -13,6 +13,7 @@ import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 import FormularioContacto2 from "./formulariocontacto2";
 import Content01Iconos from "../componentes/area_superior/Content01Iconos";
+import ModalFormCookie from "../components/ModalFormCookie";
 
 export default function Footer() {
   return (
@@ -173,7 +174,9 @@ export default function Footer() {
                     </a>
                   </Link>
                 </div>
-
+                <div>
+                  <div className="mylinkhoover">Cookie settings</div>
+                </div>
                 <div>
                   <Link href="/doc/Impressum.pdf">
                     <a target="_blank" className="mylinkhoover">
