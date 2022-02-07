@@ -444,7 +444,7 @@
 
 .font_data_vlog {
   font-family: Montserrat-Bold;
-  color: #e84a8f;
+  color: #e50365;
   /* font-style: italic;  */
   /* font-size: 3.4vh;  */
   font-size: 3vw;
@@ -469,7 +469,7 @@
   }
   .data_vlog_desktop {
     font-family: Montserrat-Bold;
-    color: #e84a8f;
+    color: #e50365;
     /* font-style: italic;  */
     /* font-size: 3.4vh;  */
     font-size: 1vw;
@@ -483,6 +483,12 @@
   }
 }
 
+@media (min-width: 1400px) {
+  .data_vlog_desktop {
+    font-size: 1vw !important;
+    top: 4.5vh !important;
+  }
+}
 .font_card_title_vlog {
   font-family: Montserrat-Bold;
   color: #24325a;

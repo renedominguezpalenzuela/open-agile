@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 
 import MenuFlotante from "../components/MenuFlotante";
 import Footer from "../components/Footer";
@@ -7,17 +6,10 @@ import Footer from "../components/Footer";
 import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
 // import MenuSuperior from "../components/MenuSuperior";
 
-import TextoBloque01 from "../components/textobloque01";
-import Image01 from "../components/crashkurse/image01";
-
-import Content06Team from "../components/Content06Team";
-
-import Tabla01 from "../components/crashkurse/tabla01";
 import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 
 import { servidor_url } from "../config";
 
-import { useState, useEffect } from "react";
 import ModalFormCookie from "../components/ModalFormCookie";
 
 //----------------------------------------------------------------------------------------------------------
@@ -56,8 +48,8 @@ export default function Home() {
           daten={true}
         />
 
-        <div className="px-5 ms-md-5">
-          <h1 className="title_daten">Datenschutzerklärung</h1>
+        <div className="px-5 ms-md-5 mb-md-3">
+          <h1 className="title_daten mt-md-5">Datenschutzerklärung</h1>
           <p className="font_daten">
             Wir, die <span className="fw-bold">Open Agile GmbH</span>{" "}
             (nachfolgend „wir“), freuen uns über Ihr Interesse an unserem
@@ -93,25 +85,35 @@ export default function Home() {
             Datenschutzgesetze ist die:
           </p>
           <h2 className="title_daten">Open Agile GmbH</h2>
-          <p className="font_daten">Faulenstr. 67</p>
-          <p className="font_daten">D-28195 Bremen</p>
-          <p className="font_daten">Registergericht: Amtsgericht Bremen</p>
-          <p className="font_daten">HRB-Nr. 37347</p>
-          <p className="font_daten">USt.-Ident.-Nr. DE 60 125 125 36</p>
-          <p className="font_daten">E-Mail: kontakt@open-agile.de</p>
-          <p className="font_daten">Telefon: 0421 22347567</p>
-          <p className="font_daten">Vertreten durch die Geschäftsführer:</p>
-          <p className="font_daten">Andreas Eilers</p>
-          <p className="font_daten">Alexander Stange</p>
+          <p className="font_daten">
+            Faulenstr. 67
+            <br /> D-28195 Bremen
+          </p>
+          <p className="font_daten"></p>
+          <p className="font_daten">
+            Registergericht: Amtsgericht Bremen <br /> HRB-Nr. 37347 <br />
+            USt.-Ident.-Nr. DE 60 125 125 36
+          </p>
+          <p className="font_daten">
+            E-Mail: kontakt@open-agile.de <br />
+            Telefon: 0421 22347567
+          </p>
+          <p className="font_daten">
+            Vertreten durch die Geschäftsführer: <br />
+            Andreas Eilers
+            <br />
+            Alexander Stange
+          </p>
           <p className="font_daten">
             Sollten Sie Fragen oder Anregungen zum Datenschutz haben, können Sie
             sich gerne an uns wenden. Unsere Datenschutzbeauftragten erreichen
-            className="font_daten" Sie wie folgt:
+            Sie wie folgt:
           </p>
           <h2 className="title_daten">Open Agile GmbH</h2>
-          <p className="font_daten">Beauftragter für Datenschutz</p>
-          <p className="font_daten">Faulenstr. 67</p>
-          <p className="font_daten">D-28195 Bremen</p>
+          <p className="font_daten">
+            Beauftragter für Datenschutz <br /> Faulenstr. 67 <br />
+            D-28195 Bremen
+          </p>
           <p className="font_daten">Kontakt: kontakt@open-agile.de</p>
           <p className="font_daten">
             In Bezug auf Verarbeitungen im Rahmen des Online-Angebots sind wir
@@ -729,7 +731,7 @@ export default function Home() {
           <p className="font_daten">
             Es gilt die aktuellste Version dieser Datenschutzerklärung.
           </p>
-          <p className="font_daten">Stand: 26.01.2022</p>
+          <p className="font_daten mb-5">Stand: 26.01.2022</p>
         </div>
         {/*Footer  */}
         <Footer />

@@ -80,7 +80,7 @@ const IOSSwitch = styled((props) => (
   },
 }));
 
-export default function ModalFormCookie({ id, tiempo , animar}) {
+export default function ModalFormCookie({ id, tiempo, animar }) {
   const [showMe, setShowMe] = useState(false);
 
   // const [mostrarVentanaCookies, SetmostrarVentanaCookies] = useState(false);
@@ -99,10 +99,9 @@ export default function ModalFormCookie({ id, tiempo , animar}) {
   useEffect(() => {
     if (first_time === true) {
       setTimeout(() => {
-         setShowMe(true)
+        setShowMe(true);
         //  Cookies.set("first_time", false, { expires: expire_cookies_in_days });
       }, tiempo);
-      
     }
   }, []);
 
@@ -149,17 +148,14 @@ export default function ModalFormCookie({ id, tiempo , animar}) {
 
   const handleChangeNotwendig = (event) => {
     setNotwendigChecked(event.target.checked);
-    
   };
 
   const handleChangePerformance = (event) => {
     setPerformanceChecked(event.target.checked);
-    
   };
 
   const handleChangeFunktional = (event) => {
     setFunktionalChecked(event.target.checked);
-    
   };
 
   // useEffect(() => {
@@ -271,7 +267,7 @@ export default function ModalFormCookie({ id, tiempo , animar}) {
           </div>
 
           <div className="row d-flex flex-column flex-md-row g-0 justify-content-center mb-2 mt-1 ms-2 me-2">
-          <div className="col-md-6  d-flex  justify-content-center">
+            <div className="col-md-6  d-flex  justify-content-center">
               <button
                 type="button"
                 className="card-footer  boton-form-cookies "
@@ -289,20 +285,15 @@ export default function ModalFormCookie({ id, tiempo , animar}) {
               </button>
             </div>
           </div>
-           
-              
+
           <div className=" d-flex g-0  mt-3 pb-2 justify-content-md-start justify-content-center ms-md-4 fuente_footer_texto_form_cookie enlinea-padre">
-            <Link href="/doc/Datenschutz.pdf" className="enlinea-hijo">
-              <a target="_blank" className="mylinkhoover">
-                Datenschutz
-              </a>
+            <Link href="/datenschutzerklarung" className="enlinea-hijo">
+              <a className="mylinkhoover">Datenschutz</a>
             </Link>
 
             <div className="enlinea-hijo ms-1 me-1"> | </div>
-            <Link href="/doc/Impressum.pdf" className="enlinea-hijo">
-              <a target="_blank" className="mylinkhoover">
-                Impressum
-              </a>
+            <Link href="/impressum" className="enlinea-hijo">
+              <a className="mylinkhoover">Impressum</a>
             </Link>
 
             {/* Datenschutz | Impressum */}
@@ -320,9 +311,7 @@ const clases = (mostrar, animar) => {
   }
 
   if (animar) {
-     resultado = resultado + " animate__animated animate__fadeInUpBig";
+    resultado = resultado + " animate__animated animate__fadeInUpBig";
   }
-  return (
-    resultado + " modalformcookie content-fluid "
-  );
+  return resultado + " modalformcookie content-fluid ";
 };

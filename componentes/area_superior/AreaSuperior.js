@@ -66,6 +66,7 @@ export default function AreaSuperior({
   lei,
   bes,
   daten,
+  impre,
 }) {
   let vista_movil = false;
   let bottom_margin = true;
@@ -178,7 +179,8 @@ export default function AreaSuperior({
               home,
               lei,
               bes,
-              daten
+              daten,
+              impre
             )}
           </div>
         </div>
@@ -258,7 +260,8 @@ const contenido_principal = (
   home,
   lei,
   bes,
-  daten
+  daten,
+  impre
 ) => {
   let id = -1;
 
@@ -294,6 +297,7 @@ const contenido_principal = (
               lei={lei}
               bes={bes}
               daten={daten}
+              impre={impre}
             />
           </div>
         </>
