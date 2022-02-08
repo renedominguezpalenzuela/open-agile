@@ -173,12 +173,12 @@ export default function Footer() {
                   </Link>
                 </div>
                 <div>
-                  <div className="mylinkhoover">Cookie settings</div>
-                </div>
-                <div>
                   <Link href="/impressum">
                     <a className="mylinkhoover">Impressum</a>
                   </Link>
+                </div>
+                <div>
+                  <div className="mylinkhoover">Cookie Einstellungen</div>
                 </div>
               </div>
             </div>
