@@ -17,8 +17,6 @@ export default function MenuKrashkurse({
     link_boton_new = link_boton;
   }
 
- 
-
   return (
     <>
       <div id="menukurs" className="d-none d-md-block p-4"></div>
@@ -32,7 +30,8 @@ export default function MenuKrashkurse({
             <tbody>
               <tr className=" font-card-menu-crashkurse">
                 <td>
-                  <a href={`${servidor_url}/${link_beschreibung}#section_beschreibung`}>
+                  <a
+                    href={`${servidor_url}/${link_beschreibung}#section_beschreibung`}>
                     <div className="myanimacioncursos">BESCHREIBUNG</div>
                   </a>
                 </td>
@@ -69,7 +68,8 @@ export default function MenuKrashkurse({
 
               <tr className="font-card-menu-crashkurse">
                 <td>
-                  <a href={`${servidor_url}/${link_kosten}#section_leistungen-kosten`}>
+                  <a
+                    href={`${servidor_url}/${link_kosten}#section_leistungen-kosten`}>
                     <div className="myanimacioncursos">LEISTUNGEN & KOSTEN</div>
                   </a>
                 </td>
@@ -127,9 +127,9 @@ function downloadFile(filePath) {
 const botonAbrirPDF = (link_pdf) => {
   //  event.preventDefault();
 
-  for (let unPdf of link_pdf) {
+  for (let i = link_pdf.length - 1; i >= 0; i--) {
     // window.open(unPdf, "_blank");
-    downloadFile(unPdf);
+    downloadFile(link_pdf[i]);
     //  window.open(unPdf, '_parent', 'download');
   }
 };

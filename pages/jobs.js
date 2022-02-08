@@ -35,7 +35,7 @@ export default function Home() {
 
   const parrafo1 = [
     "Praktische Erfahrungen im Bereich Social-Media & Online-Kommunikation",
-    "„Digital Native“ mit großer Social-Networks-Affinität",
+    "“Digital Native“ mit großer Social-Networks-Affinität",
     "Fehlerfreier, stilsicherer und fachlich korrekter Schreibstil",
     "Sicherer Umgang mit MS-Office sowie den gängigen Layout- und Grafik-Programmen",
     "Selbstständiger, kreativer und lösungsorientierter Arbeitsstil",
@@ -89,7 +89,6 @@ export default function Home() {
       {/*Contenedor*/}
 
       <div id="principal" className="container-fluid g-0">
-        <ModalFormCookie id={1} tiempo={10} />
         <MenuFlotanteBoton />
 
         <AreaSuperior

@@ -7,11 +7,7 @@ import Footer from "../../components/Footer";
 
 import Content02Cursos from "../../components/Content02Cursos";
 
-
-
 import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
-
-
 
 import { servidor_url } from "../../config";
 
@@ -22,21 +18,15 @@ import ModalFormCookie from "../../components/ModalFormCookie";
 //            Pagina inicial principal
 //----------------------------------------------------------------------------------------------------------
 
+const texto_parrafo_array = [
+  "Du möchtest dich und die Arbeitswelt fit für die Zukunft machen? Dann heißen wir Dich in unseren Crashkursen herzlich willkommen! Bei uns lernst Du schnell und einfach das Wichtigste, um Organisationen, Teams und Individuen bei ihrer Veränderung begleiten zu können.",
+  "Mit unserem hybriden Konzept kannst Du von überall auf der Welt an unseren Crashkursen teilnehmen. Selbstverständlich auch vor Ort in unserer schönen Hansestadt Bremen. Die Anzahl an Teilnehmenden ist auf maximal 10 begrenzt, um auf Eure individuellen Bedürfnisse optimal eingehen zu können.",
+  "Als praxisorientierte Unternehmensberatung satteln wir gemeinsam mit Dir auf dem Theoretischem auf und geben Dir in jedem Crashkurs einen tiefen, aber dennoch verständlichen Einblick in die agile Arbeitswelt.",
+  "Dabei setzen wir nicht nur auf unser Know-how sondern wir laden darüber hinaus ausgewählte Trainer:innen aus ihren jeweiligen Fachgebieten ein, um unsere Crashkurse für Dich noch hochwertiger und abwechslungsreicher zu gestalten.",
+  "Das Team von Open Agile freut sich darauf Dich zum Agile Coach, Agile Facilitator oder Scrum Master (w/d/m) auszubilden! ",
+];
 
-
-const  texto_parrafo_array = ["Du möchtest dich und die Arbeitswelt fit für die Zukunft machen? Dann heißen wir Dich in unseren Crashkursen herzlich willkommen! Bei uns lernst Du schnell und einfach das Wichtigste, um Organisationen, Teams und Individuen bei ihrer Veränderung begleiten zu können.",
-                            "Mit unserem hybriden Konzept kannst Du von überall auf der Welt an unseren Crashkursen teilnehmen. Selbstverständlich auch vor Ort in unserer schönen Hansestadt Bremen. Die Anzahl an Teilnehmenden ist auf maximal 10 begrenzt, um auf Eure individuellen Bedürfnisse optimal eingehen zu können.",
-                            "Als praxisorientierte Unternehmensberatung satteln wir gemeinsam mit Dir auf dem Theoretischem auf und geben Dir in jedem Crashkurs einen tiefen, aber dennoch verständlichen Einblick in die agile Arbeitswelt.",
-                            "Dabei setzen wir nicht nur auf unser Know-how sondern wir laden darüber hinaus ausgewählte Trainer:innen aus ihren jeweiligen Fachgebieten ein, um unsere Crashkurse für Dich noch hochwertiger und abwechslungsreicher zu gestalten.",
-                            "Das Team von Open Agile freut sich darauf Dich zum Agile Coach, Agile Facilitator oder Scrum Master (w/d/m) auszubilden! ",
-                                                       
-                           ];
-
-
-export default function Home({cursos}) {
-
- 
-
+export default function Home({ cursos }) {
   const router = useRouter();
   const { id } = router.query;
 
@@ -52,19 +42,21 @@ export default function Home({cursos}) {
         <script async src={`${servidor_url}/js/menu.js`} />
       </Head>
 
-   
-         <div id="principal" className="container-fluid g-0">
-         <ModalFormCookie id={1} tiempo={10}/>
+      <div id="principal" className="container-fluid g-0">
+        <MenuFlotanteBoton />
 
-      <MenuFlotanteBoton />
-  
-        <AreaSuperior fondo="variable"  texto_parrafo_blanco_cursos={texto_parrafo_array} cursos={true} area_gris_nueva={true} firma={[ "Dein Open Agile Team"," for better work" ]} />
+        <AreaSuperior
+          fondo="variable"
+          texto_parrafo_blanco_cursos={texto_parrafo_array}
+          cursos={true}
+          area_gris_nueva={true}
+          firma={["Dein Open Agile Team", " for better work"]}
+        />
 
-{/* variable */}
-    
-         {/*Cards CRASHKURSE  */}
-        <Content02Cursos cursos={cursos} /> 
+        {/* variable */}
 
+        {/*Cards CRASHKURSE  */}
+        <Content02Cursos cursos={cursos} />
 
         {/*Footer  */}
         <Footer />
@@ -76,21 +68,15 @@ export default function Home({cursos}) {
   );
 }
 
-
-
-
 //Obteniendo los datos desde el servidor
 export const getServerSideProps = async (context) => {
   const url = `${servidor_url}/api/curso`;
   const res = await fetch(url);
   const cursos = await res.json();
 
- 
-
   return {
     props: {
       cursos,
-      
     },
   };
 };

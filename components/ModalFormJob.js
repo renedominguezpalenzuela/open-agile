@@ -120,6 +120,7 @@ export default function ModalFormJob({
   const texto_ErrorEnDatosCheckBox = "Bitte bestätige die AGBs, um das Formular absenden zu können.";
   const texto_ErrorEnDatos = "Bitte überprüfe Deine Eingaben und sende das Formular erneut ab.";
   const texto_ErrorEnServidor = "Kontaktformular Error, bitte versuchen Sie es erneut.";
+  const texto_noAttachment = "Bitte füge einen Lebenslauf hinzu und sende das Formular erneut ab. Dein Open Agile Team";
 
 
   const eventoBotonEnviar = async () => {
@@ -129,8 +130,17 @@ export default function ModalFormJob({
       return;
     }
 
-    if (nombre === "" || email === "" || telephone === "" || mensaje === "") {
+    if (nombre === "" || email === "" || telephone === "" ) {
       setTextoDialogo(texto_ErrorEnDatos);
+      handleClickOpen();
+      return;
+    }
+
+
+
+
+    if (fichero_seleccionado==="" || fichero_seleccionado===". . .") {
+      setTextoDialogo(texto_noAttachment);
       handleClickOpen();
       return;
     }
