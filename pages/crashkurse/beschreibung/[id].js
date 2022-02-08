@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 
-
 import MenuKraskurse from "../../../componentes/krashkurse/MenuKrashkurse";
 
 import AreaSuperior from "../../../componentes/area_superior/AreaSuperior";
@@ -48,7 +47,6 @@ export default function Home({ curso }) {
     link_termine_new = servidor_url + "/" + link_beschreibung + link_termine;
   }
 
-  
   const [desktop_screen, setDesktop_screen] = useState(true);
   const handleResize = () => {
     let ancho_screen = window.innerWidth;
@@ -64,8 +62,6 @@ export default function Home({ curso }) {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-
-
   return (
     <>
       <Head>
@@ -77,7 +73,6 @@ export default function Home({ curso }) {
       </Head>
 
       <div id="principal" className="container-fluid g-0">
-        <ModalFormCookie id={1} tiempo={10} />
         <MenuFlotanteBoton />
 
         {/* <AreaSuperior
@@ -89,22 +84,21 @@ export default function Home({ curso }) {
         /> */}
 
         {desktop_screen ? (
-         <AreaSuperior
-          fondo="ajustable"
-          texto1={titulo_area_superior}
-          titulo_muy_largo={true}
-          area_gris_nueva={true}
-           shop={true}
-        /> 
-        ):(  
-        
-         <AreaSuperior
-          fondo="ajustable"
-          texto2={titulo_area_superior}
-          titulo_muy_largo={true}
-          area_gris_nueva={true}
-           shop={true}
-        /> 
+          <AreaSuperior
+            fondo="ajustable"
+            texto1={titulo_area_superior}
+            titulo_muy_largo={true}
+            area_gris_nueva={true}
+            shop={true}
+          />
+        ) : (
+          <AreaSuperior
+            fondo="ajustable"
+            texto2={titulo_area_superior}
+            titulo_muy_largo={true}
+            area_gris_nueva={true}
+            shop={true}
+          />
         )}
 
         <div className="row  pt-md-5 pb-md-5">

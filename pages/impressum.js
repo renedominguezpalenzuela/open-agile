@@ -36,7 +36,6 @@ export default function Home() {
       {/*Contenedor*/}
 
       <div id="principal" className="container-fluid g-0">
-        <ModalFormCookie id={1} tiempo={10} />
         <MenuFlotanteBoton />
 
         <AreaSuperior
