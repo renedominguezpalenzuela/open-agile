@@ -260,7 +260,7 @@ export default function ModalFormCookie({ id, tiempo, animar, reset }) {
                 type="button"
                 className="card-footer  boton-form-cookies "
                 onClick={botonAceptar}>
-                Alle akzeptieren
+                Akzeptieren
               </button>
             </div>
             <div className="col-md-6  d-flex  justify-content-center">

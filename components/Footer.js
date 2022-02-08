@@ -192,7 +192,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <div onClick={handle} className="mylinkhoover">
-                    Cookie Einstellungen
+                    Cookies Einstellungen
                   </div>
                 </div>
               </div>
@@ -292,7 +292,7 @@ export default function Footer() {
               </div>
               <span className="mx-1"> | </span>
               <div onClick={handle} className="mylinkhoover">
-                Cookie
+                Cookies
               </div>
             </div>
           </div>
