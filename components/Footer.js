@@ -290,6 +290,10 @@ export default function Footer() {
                   <a className="mylinkhoover">Impressum</a>
                 </Link>
               </div>
+              <span className="mx-1"> | </span>
+              <div onClick={handle} className="mylinkhoover">
+                Cookie
+              </div>
             </div>
           </div>
         </div>
