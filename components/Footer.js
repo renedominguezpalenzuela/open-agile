@@ -13,6 +13,7 @@ import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 import FormularioContacto2 from "./formulariocontacto2";
 import Content01Iconos from "../componentes/area_superior/Content01Iconos";
+import ModalFormCookie from "../components/ModalFormCookie";
 
 export default function Footer() {
   return (
@@ -167,18 +168,16 @@ export default function Footer() {
                 </div>
 
                 <div>
-                  <Link href="/doc/Datenschutz.pdf">
-                    <a target="_blank" className="mylinkhoover">
-                      Datenschutz
-                    </a>
+                  <Link href="/datenschutzerklarung">
+                    <a className="mylinkhoover">Datenschutz</a>
                   </Link>
                 </div>
-
                 <div>
-                  <Link href="/doc/Impressum.pdf">
-                    <a target="_blank" className="mylinkhoover">
-                      Impressum
-                    </a>
+                  <div className="mylinkhoover">Cookie settings</div>
+                </div>
+                <div>
+                  <Link href="/impressum">
+                    <a className="mylinkhoover">Impressum</a>
                   </Link>
                 </div>
               </div>
@@ -266,18 +265,14 @@ export default function Footer() {
             <div className="row d-flex  linea_blanca_footer g-0"></div>
             <div className="font_facit_text_very_small mt-3 d-flex justify-content-center">
               <div>
-                <Link href="/doc/Datenschutz.pdf">
-                  <a target="_blank" className="mylinkhoover">
-                    Datenschutz
-                  </a>
+                <Link href="/datenschutzerklarung">
+                  <a className="mylinkhoover">Datenschutz</a>
                 </Link>
               </div>
               <span className="mx-1"> | </span>
               <div>
-                <Link href="/doc/Impressum.pdf">
-                  <a target="_blank" className="mylinkhoover">
-                    Impressum
-                  </a>
+                <Link href="/impressum">
+                  <a className="mylinkhoover">Impressum</a>
                 </Link>
               </div>
             </div>
