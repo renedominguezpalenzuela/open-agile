@@ -1,37 +1,37 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { useRouter } from 'next/router'
+import Head from "next/head";
+import Image from "next/image";
+import { useRouter } from "next/router";
 
-import MenuFlotante from '../../components/MenuFlotante'
-import Footer from '../../components/Footer'
+import MenuFlotante from "../../components/MenuFlotante";
+import Footer from "../../components/Footer";
 
-import Content02Cursos from '../../components/Content02Cursos'
+import Content02Cursos from "../../components/Content02Cursos";
 
-import MenuFlotanteBoton from '../../components/MenuFlotanteBoton'
+import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
 
-import { servidor_url } from '../../config'
+import { servidor_url } from "../../config";
 
-import AreaSuperior from '../../componentes/area_superior/AreaSuperior'
+import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
 
-import Card01Lista from '../../components/Card01Lista'
+import Card01Lista from "../../components/Card01Lista";
 
-import ModalFormCookie from '../../components/ModalFormCookie'
+import ModalFormCookie from "../../components/ModalFormCookie";
 
 //----------------------------------------------------------------------------------------------------------
 //            Pagina inicial principal
 //----------------------------------------------------------------------------------------------------------
 
 const texto_parrafo_array = [
-  'Viele Supertrends, wie die voranschreitende Digitalisierung, Nachhaltigkeit, Individualisierung oder New Work drängen Unternehmen zu tiefgreifenden Veränderungen in allen Bereichen, was wiederum eine sehr hohe Lernbereitschaft aller Mitarbeitenden voraussetzt ',
-  'Die erfolgreichsten Unternehmen im 21. Jahrhundert haben es also verstanden Strukturen zu etablieren, in denen gemeinsames Lernen stattfindet und Veränderungen als Chance begriffen werden',
-  'Das Team von Open Agile begleitet Euch dabei Eure Strukturen zu hinterfragen und eine für Euch individuelle und zukunftsfähige Form der Zusammenarbeit zu kreieren, in der Ihr gemeinsam wachsen und Euer Potential zu 100% ausschöpfen könnt',
-]
+  "Viele Supertrends, wie die voranschreitende Digitalisierung, Nachhaltigkeit, Individualisierung oder New Work drängen Unternehmen zu tiefgreifenden Veränderungen in allen Bereichen, was wiederum eine sehr hohe Lernbereitschaft aller Mitarbeitenden voraussetzt ",
+  "Die erfolgreichsten Unternehmen im 21. Jahrhundert haben es also verstanden Strukturen zu etablieren, in denen gemeinsames Lernen stattfindet und Veränderungen als Chance begriffen werden",
+  "Das Team von Open Agile begleitet Euch dabei Eure Strukturen zu hinterfragen und eine für Euch individuelle und zukunftsfähige Form der Zusammenarbeit zu kreieren, in der Ihr gemeinsam wachsen und Euer Potential zu 100% ausschöpfen könnt",
+];
 
 export default function Home({ servicios }) {
-  const router = useRouter()
-  const { id } = router.query
+  const router = useRouter();
+  const { id } = router.query;
 
-  const titulo1 = 'LEISTUNGEN'
+  const titulo1 = "LEISTUNGEN";
 
   return (
     <>
@@ -44,15 +44,13 @@ export default function Home({ servicios }) {
       </Head>
 
       <div id="principal" className="container-fluid g-0">
-        <ModalFormCookie id={1} tiempo={10} />
-
         <MenuFlotanteBoton />
 
         <AreaSuperior
           fondo="variable"
           texto_parrafo_blanco_cursos={texto_parrafo_array}
           cursos={true}
-          firma={['Dein Open Agile Team', ' for better work']}
+          firma={["Dein Open Agile Team", " for better work"]}
           area_gris_nueva={true}
         />
 
@@ -77,18 +75,18 @@ export default function Home({ servicios }) {
       {/*Menu Lateral oculto  */}
       <MenuFlotante />
     </>
-  )
+  );
 }
 
 //Obteniendo los datos desde el servidor
 export const getServerSideProps = async (context) => {
-  const url2 = `${servidor_url}/api/servicio`
-  const res2 = await fetch(url2)
-  const servicios = await res2.json()
+  const url2 = `${servidor_url}/api/servicio`;
+  const res2 = await fetch(url2);
+  const servicios = await res2.json();
 
   return {
     props: {
       servicios,
     },
-  }
-}
+  };
+};

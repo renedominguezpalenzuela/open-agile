@@ -60,7 +60,6 @@ export default function Home({ team }) {
       {/*Contenedor*/}
 
       <div id="principal" className="container-fluid g-0">
-        <ModalFormCookie id={1} tiempo={10} />
         <MenuFlotanteBoton />
 
         <AreaSuperior
@@ -71,10 +70,6 @@ export default function Home({ team }) {
           area_gris_nueva={true}
           shop={true}
         />
-
-
-
-
 
         <Content06Team lista_cards={team} />
 
