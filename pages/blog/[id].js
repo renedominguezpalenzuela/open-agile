@@ -105,8 +105,6 @@ export default function Home({ blog }) {
       </Head>
 
       <div id="principal" className="container-fluid g-0">
-        <ModalFormCookie id={1} tiempo={10} />
-
         <MenuFlotanteBoton />
 
         <AreaSuperior texto1="BLOG" fondo="ajustable" area_gris_nueva={true} />

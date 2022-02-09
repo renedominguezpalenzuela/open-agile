@@ -1,22 +1,10 @@
 import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
 import { expire_cookies_in_days } from "../config";
-
 import * as React from "react";
-import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
-
-import Radio from "@mui/material/Radio";
-// import RadioGroup from "@mui/material/RadioGroup";
-import RadioGroup, { useRadioGroup } from "@mui/material/RadioGroup";
-
-import InputAdornment from "@mui/material/InputAdornment";
-
 import { styled } from "@mui/material/styles";
-
-import FormLabel from "@mui/material/FormLabel";
-
 import Link from "next/link";
 
 const styles3 = {
@@ -80,7 +68,7 @@ const IOSSwitch = styled((props) => (
   },
 }));
 
-export default function ModalFormCookie({ id, tiempo , animar}) {
+export default function ModalFormCookie({ id, tiempo, animar, reset }) {
   const [showMe, setShowMe] = useState(false);
 
   // const [mostrarVentanaCookies, SetmostrarVentanaCookies] = useState(false);
@@ -97,14 +85,20 @@ export default function ModalFormCookie({ id, tiempo , animar}) {
   // first_time=true;
 
   useEffect(() => {
+    if (reset === true) {
+      first_time = true;
+      Cookies.remove("notwendigCheckedCookie");
+      Cookies.remove("performanceCheckedCookie");
+      Cookies.remove("funktionalCheckedCookie");
+      Cookies.remove("first_time");
+    }
     if (first_time === true) {
       setTimeout(() => {
-         setShowMe(true)
+        setShowMe(true);
         //  Cookies.set("first_time", false, { expires: expire_cookies_in_days });
       }, tiempo);
-      
     }
-  }, []);
+  }, [reset]);
 
   let notwendigCheckedCookie = Cookies.get("notwendigCheckedCookie");
 
@@ -149,17 +143,14 @@ export default function ModalFormCookie({ id, tiempo , animar}) {
 
   const handleChangeNotwendig = (event) => {
     setNotwendigChecked(event.target.checked);
-    
   };
 
   const handleChangePerformance = (event) => {
     setPerformanceChecked(event.target.checked);
-    
   };
 
   const handleChangeFunktional = (event) => {
     setFunktionalChecked(event.target.checked);
-    
   };
 
   // useEffect(() => {
@@ -185,7 +176,6 @@ export default function ModalFormCookie({ id, tiempo , animar}) {
     setShowMe(false);
     return;
   };
-
   const botonNoAceptar = () => {
     //eliminar todas las cookies
     Cookies.remove("notwendigCheckedCookie");
@@ -195,7 +185,6 @@ export default function ModalFormCookie({ id, tiempo , animar}) {
     setShowMe(false);
     return;
   };
-
   return (
     <>
       {showMe && (
@@ -203,7 +192,6 @@ export default function ModalFormCookie({ id, tiempo , animar}) {
           <div className="row  d-flex justify-content-start ms-4 ps-1 mt-4 fuente_titulo_form_cookie">
             Wir verwenden Cookies
           </div>
-
           <div className="row d-none d-lg-block mt-2 ps-1 ms-3 me-3 fuente_texto_form_cookie ">
             Um Ihnen die bestmögliche Nutzung zu ermöglichen. Neben technisch
             unbedingt erforderlichen Cookies werden mit Ihrer Einwilligung auch
@@ -214,7 +202,6 @@ export default function ModalFormCookie({ id, tiempo , animar}) {
             Einwilligung geben. Sie können Ihre jeweilige Einwilligung jederzeit
             mit Wirkung für die Zukunft widerrufen.
           </div>
-
           <div className="row ms-3 pt-2">
             <div className="col col-lg-6">
               <FormControlLabel
@@ -229,7 +216,6 @@ export default function ModalFormCookie({ id, tiempo , animar}) {
                 sx={styles3}
               />
             </div>
-
             <div className="col col-lg-6">
               <FormControlLabel
                 control={
@@ -244,7 +230,6 @@ export default function ModalFormCookie({ id, tiempo , animar}) {
               />
             </div>
           </div>
-
           <div className="row ms-3  pb-2">
             <div className="col-6">
               <FormControlLabel
@@ -269,17 +254,15 @@ export default function ModalFormCookie({ id, tiempo , animar}) {
             </RadioGroup> */}
             </div>
           </div>
-
           <div className="row d-flex flex-column flex-md-row g-0 justify-content-center mb-2 mt-1 ms-2 me-2">
-          <div className="col-md-6  d-flex  justify-content-center">
+            <div className="col-md-6  d-flex  justify-content-center">
               <button
                 type="button"
                 className="card-footer  boton-form-cookies "
                 onClick={botonAceptar}>
-                Alle akzeptieren
+                Akzeptieren
               </button>
             </div>
-
             <div className="col-md-6  d-flex  justify-content-center">
               <button
                 type="button"
@@ -289,23 +272,14 @@ export default function ModalFormCookie({ id, tiempo , animar}) {
               </button>
             </div>
           </div>
-           
-              
           <div className=" d-flex g-0  mt-3 pb-2 justify-content-md-start justify-content-center ms-md-4 fuente_footer_texto_form_cookie enlinea-padre">
-            <Link href="/doc/Datenschutz.pdf" className="enlinea-hijo">
-              <a target="_blank" className="mylinkhoover">
-                Datenschutz
-              </a>
+            <Link href="/datenschutzerklarung" className="enlinea-hijo">
+              <a className="mylinkhoover">Datenschutz</a>
             </Link>
-
             <div className="enlinea-hijo ms-1 me-1"> | </div>
-            <Link href="/doc/Impressum.pdf" className="enlinea-hijo">
-              <a target="_blank" className="mylinkhoover">
-                Impressum
-              </a>
+            <Link href="/impressum" className="enlinea-hijo">
+              <a className="mylinkhoover">Impressum</a>
             </Link>
-
-            {/* Datenschutz | Impressum */}
           </div>
         </div>
       )}
@@ -318,11 +292,8 @@ const clases = (mostrar, animar) => {
   if (mostrar) {
     resultado = "mostrar";
   }
-
   if (animar) {
-     resultado = resultado + " animate__animated animate__fadeInUpBig";
+    resultado = resultado + " animate__animated animate__fadeInUpBig";
   }
-  return (
-    resultado + " modalformcookie content-fluid "
-  );
+  return resultado + " modalformcookie content-fluid ";
 };
