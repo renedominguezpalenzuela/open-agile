@@ -1,7 +1,7 @@
 // import styles from "../styles/Home.module.css";
 import React from "react";
 
-import ReactPlayer from 'react-player/lazy'
+import ReactPlayer from "react-player/lazy";
 
 let ancho = 540;
 let longitud_linea = 28;
@@ -16,7 +16,7 @@ export default function Card02({
   texto_alt,
   link,
   date,
-  thumbnail
+  thumbnail,
 }) {
   return (
     <>
@@ -28,10 +28,7 @@ export default function Card02({
               {titulo}
             </div>
 
-            <div className=" ms-2 me-2 pb-3 contenedor_texto_overflow ">
-              <div className="data_vlog_desktop d-inline-block text-end mt-1">
-                <p>GEPOSTET AM {date}</p>
-              </div>
+            <div className=" ms-2 me-2 mt-4 pb-3 contenedor_texto_overflow ">
               {/* <div className="p-1  contenedor_margen"> */}
               {texto.map((unTexto, index) => (
                 <div key={index} className="font_carrusel_video ">
@@ -39,6 +36,9 @@ export default function Card02({
                 </div>
               ))}
               {/* </div> */}
+              <div className="data_vlog_desktop d-inline-block ms-2 mt-2">
+                <p>GEPOSTET AM {date}</p>
+              </div>
             </div>
 
             {/* </div>  */}
@@ -48,9 +48,8 @@ export default function Card02({
         <div className="col-6 ">
           {video != undefined && video != "" && (
             <div className="ratio ratio-16x9  container_video">
+              <ReactPlayer light={true} url={video} />
 
-              <ReactPlayer light={true} url={video}  />
-              
               {/* <iframe
                 src={video}
                 title="YouTube video"

@@ -26,9 +26,10 @@ export default function Footer() {
     <>
       <ModalFormCookie
         id={1}
-        tiempo={1000}
+        tiempo={500}
         animar={true}
         reset={changeCookie}
+        setReset={setChangeCookie}
       />
 
       <footer id="myfooter" className=" no-gutter color_background">
@@ -169,8 +170,6 @@ export default function Footer() {
                 </div>
 
                 <div>
-                
-
                   <Link href="/doc/agbs.pdf" download>
                     <a target="_blank" className="mylinkhoover">
                       AGBs
