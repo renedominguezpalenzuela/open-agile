@@ -72,14 +72,13 @@ export default function Home({
         <script async src="js/chat.js" />
       </Head>
 
-    
-
-       
-
       <div id="principal" className="container-fluid g-0">
-          <input id="test_version" name="test_version" type="hidden" value={process.env.NEXT_PUBLIC_VER}/>
-        <ModalFormCookie id={1} tiempo={1000} animar={true} />
-
+        <input
+          id="test_version"
+          name="test_version"
+          type="hidden"
+          value={process.env.NEXT_PUBLIC_VER}
+        />
         <MenuFlotanteBoton />
 
         {desktop_screen ? (

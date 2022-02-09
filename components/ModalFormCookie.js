@@ -182,6 +182,7 @@ export default function ModalFormCookie({ id, tiempo, animar, reset }) {
     Cookies.remove("performanceCheckedCookie");
     Cookies.remove("funktionalCheckedCookie");
     Cookies.remove("first_time");
+    Cookies.set("first_time", false, null);
     setShowMe(false);
     return;
   };
