@@ -476,10 +476,7 @@
     font-weight: 100;
     /* text-transform: uppercase;  */
     line-height: 90%;
-    display: block;
-    right: 7vw;
-    top: 3.6vw;
-    padding-right: 8px;
+    margin-right: 6.5vw;
   }
 }
 
