@@ -203,8 +203,6 @@ export default function Footer() {
             <div className="row  mt-4 d-flex pb-3  g-0">
               <Content01Iconos footer={true} />
             </div>
-
-
           </div>
         </div>
         <div className="d-block d-md-none">
