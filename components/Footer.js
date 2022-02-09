@@ -13,10 +13,24 @@ import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 import FormularioContacto2 from "./formulariocontacto2";
 import Content01Iconos from "../componentes/area_superior/Content01Iconos";
+import ModalFormCookie from "../components/ModalFormCookie";
+import { useState } from "react";
 
 export default function Footer() {
+  const [changeCookie, setChangeCookie] = useState(false);
+
+  const handle = () => {
+    setChangeCookie(!changeCookie);
+  };
   return (
     <>
+      <ModalFormCookie
+        id={1}
+        tiempo={1000}
+        animar={true}
+        reset={changeCookie}
+      />
+
       <footer id="myfooter" className=" no-gutter color_background">
         {/* <div id="rowfoot01" className="row   color_background footer_path ps-2 mb-5 mt-5 pt-5"> */}
         <div id="rowfoot01" className="row  mb-2 mb-md-5">
@@ -167,19 +181,19 @@ export default function Footer() {
                 </div>
 
                 <div>
-                  <Link href="/doc/Datenschutz.pdf">
-                    <a target="_blank" className="mylinkhoover">
-                      Datenschutz
-                    </a>
+                  <Link href="/datenschutzerklarung">
+                    <a className="mylinkhoover">Datenschutz</a>
                   </Link>
                 </div>
-
                 <div>
-                  <Link href="/doc/Impressum.pdf">
-                    <a target="_blank" className="mylinkhoover">
-                      Impressum
-                    </a>
+                  <Link href="/impressum">
+                    <a className="mylinkhoover">Impressum</a>
                   </Link>
+                </div>
+                <div>
+                  <div onClick={handle} className="mylinkhoover">
+                    Cookies Einstellungen
+                  </div>
                 </div>
               </div>
             </div>
@@ -266,19 +280,19 @@ export default function Footer() {
             <div className="row d-flex  linea_blanca_footer g-0"></div>
             <div className="font_facit_text_very_small mt-3 d-flex justify-content-center">
               <div>
-                <Link href="/doc/Datenschutz.pdf">
-                  <a target="_blank" className="mylinkhoover">
-                    Datenschutz
-                  </a>
+                <Link href="/datenschutzerklarung">
+                  <a className="mylinkhoover">Datenschutz</a>
                 </Link>
               </div>
               <span className="mx-1"> | </span>
               <div>
-                <Link href="/doc/Impressum.pdf">
-                  <a target="_blank" className="mylinkhoover">
-                    Impressum
-                  </a>
+                <Link href="/impressum">
+                  <a className="mylinkhoover">Impressum</a>
                 </Link>
+              </div>
+              <span className="mx-1"> | </span>
+              <div onClick={handle} className="mylinkhoover">
+                Cookies
               </div>
             </div>
           </div>

@@ -20,7 +20,6 @@ export default function Home({ shop }) {
   const titulo_area_superior2 = "AGILITÄT FÜR ZUHAUSE UND UNTERWEGS";
   const titulo_area_superior = "DER OPEN AGILE SHOP";
 
-  
   const [desktop_screen, setDesktop_screen] = useState(true);
   const handleResize = () => {
     let ancho_screen = window.innerWidth;
@@ -35,9 +34,6 @@ export default function Home({ shop }) {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  
-
-
 
   return (
     <>
@@ -51,7 +47,6 @@ export default function Home({ shop }) {
         </Head>
 
         <div id="principal" className="container-fluid g-0">
-          <ModalFormCookie id={1} tiempo={10} />
           <MenuFlotanteBoton />
 
           <AreaSuperior
@@ -60,10 +55,8 @@ export default function Home({ shop }) {
             texto2={titulo_area_superior2}
             titulo_muy_largo={true}
             area_gris_nueva={true}
-             shop={true}
+            shop={true}
           />
-
-     
 
           <div className="row  mt-5 mb-5 pt-5  d-flex justify-content-center ">
             {shop.map((oneShop, index) => (

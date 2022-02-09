@@ -21,6 +21,8 @@ export default function Content01TextSinIcons({
   home,
   lei,
   bes,
+  daten,
+  impre,
 }) {
   return (
     <>
@@ -37,7 +39,9 @@ export default function Content01TextSinIcons({
               titulo_muy_largo,
               home,
               lei,
-              bes
+              bes,
+              daten,
+              impre
             )}>
             {formatText(texto1) == "ORGANISATIONS" ? (
               <p>
@@ -96,7 +100,9 @@ const formato_titulo1 = (
   titulo_muy_largo,
   home,
   lei,
-  bes
+  bes,
+  daten,
+  impre
 ) => {
   let clase = "";
   if (titulo_largo != undefined && titulo_largo) {
@@ -140,7 +146,9 @@ const formato_titulo1 = (
     clase +
     `${home ? " justify-content-center" : ""}` +
     `${lei && vista_movil ? " force_font_color" : ""}` +
-    `${bes && vista_movil ? " force_font_color" : ""}`
+    `${bes && vista_movil ? " force_font_color" : ""}` +
+    `${daten && vista_movil ? " force_font_color font_daten_movile" : ""}` +
+    `${impre && vista_movil ? " force_font_color" : ""}`
   );
 };
 
