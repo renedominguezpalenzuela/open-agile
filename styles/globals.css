@@ -1115,3 +1115,8 @@ ul li.mybullets::before {
     font-size: 14px !important;
   }
 }
+
+
+.ocultar_version {
+  display: none;
+}
