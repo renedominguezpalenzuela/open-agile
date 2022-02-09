@@ -7,7 +7,7 @@ export const vlog_details = [
     ],
     link: "https://www.youtube.com/embed/xu-TWn7GI4s",
     date: "25.01.2022",
-    thumbnail:"/youtube/01.jpg"
+
   },
   {
     id: "2",
@@ -17,7 +17,7 @@ export const vlog_details = [
     ],
     link: "https://www.youtube.com/embed/g8O3BVxnRrk",
     date: "28.01.2022",
-    thumbnail:"/youtube/02.jpg"
+
   },
   {
     id: "3",
@@ -31,7 +31,7 @@ export const vlog_details = [
     ],
     link: "https://www.youtube.com/embed/mTVNQQUdLGs",
     date: "01.02.2022",
-    thumbnail:"/youtube/03.jpg"
+
   },
   {
     id: "4",
@@ -41,7 +41,7 @@ export const vlog_details = [
     ], // Eine Interviewreihe produziert von der Beratung Andreas Eilers'],
     link: "https://www.youtube.com/embed/_TrWP3U81IE",
     date: "02.02.2022",
-    thumbnail:"/youtube/04.jpg"
+ 
   },
   {
     id: "5",
@@ -51,7 +51,7 @@ export const vlog_details = [
     ], // Eine Interviewreihe produziert von der Beratung Andreas Eilers'],
     link: "https://www.youtube.com/embed/jEBzEnZkZ8Y",
     date: "03.02.2022",
-    thumbnail:"/youtube/05.jpg"
+
   },
   {
     id: "6",
@@ -61,7 +61,7 @@ export const vlog_details = [
     ], // Eine Interviewreihe produziert von der Beratung Andreas Eilers'],
     link: "https://www.youtube.com/embed/rvnFuagH5V4",
     date: "04.02.2022",
-    thumbnail:"/youtube/06.jpg"
+
   },
   {
     id: "7",
@@ -71,6 +71,6 @@ export const vlog_details = [
     ], // Eine Interviewreihe produziert von der Beratung Andreas Eilers'],
     link: "https://www.youtube.com/embed/tNy1u8Msef8",
     date: "13.01.2022",
-    thumbnail:"/youtube/07.jpg"
+
   },
 ];
