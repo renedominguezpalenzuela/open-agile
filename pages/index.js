@@ -3,6 +3,7 @@ import { expire_cookies_in_days } from "../config";
 import Head from "next/head";
 import Image from "next/image";
 
+
 //Componentes
 import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 
@@ -57,6 +58,9 @@ export default function Home({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+
+ 
+
   return (
     <>
     
@@ -68,17 +72,19 @@ export default function Home({
           content="Wir sind Open Agile, die hanseatische Unternehmensberatung - wir begleiten Euch dabei, eine individuelle und zukunftsfähige Zusammenarbeit zu kreieren!"
         />
         <link rel="icon" href="/favicon.ico" />
-        <script async src="js/menu.js" />  
+        <script async src="js/menu.js" />
+  
         <script async src="js/chat.js" />
       </Head>
 
-      <div id="principal" className="container-fluid g-0">
-        <input
-          id="test_version"
-          name="test_version"
-          type="hidden"
-          value={process.env.NEXT_PUBLIC_VER}
-        />
+    
+
+       
+
+      <div id="principal" className="container-fluid g-0" >
+          <input id="test_version" name="test_version" type="hidden" value={process.env.NEXT_PUBLIC_VER}/>
+        <ModalFormCookie id={1} tiempo={1000} animar={true} />
+
         <MenuFlotanteBoton />
 
         {desktop_screen ? (
@@ -141,7 +147,7 @@ export default function Home({
       </div>
 
       {/*Menu Lateral oculto  */}
-      <MenuFlotante />
+      <MenuFlotante  />
     </>
   );
 }
