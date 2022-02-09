@@ -722,6 +722,7 @@ ul.no-bullets {
 
 .mylinkhoover:hover {
   color: #e42078 !important;
+  cursor: pointer;
 }
 
 .mylinkhoover2:hover {
@@ -1115,7 +1116,6 @@ ul li.mybullets::before {
     font-size: 14px !important;
   }
 }
-
 
 .ocultar_version {
   display: none;

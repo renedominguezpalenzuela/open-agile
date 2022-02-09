@@ -480,12 +480,6 @@
   }
 }
 
-@media (min-width: 1400px) {
-  .data_vlog_desktop {
-    font-size: 1vw !important;
-    top: 4.5vh !important;
-  }
-}
 .font_card_title_vlog {
   font-family: Montserrat-Bold;
   color: #24325a;

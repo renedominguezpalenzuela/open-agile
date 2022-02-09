@@ -1,7 +1,7 @@
 // import styles from "../styles/Home.module.css";
 import React from "react";
 
-import ReactPlayer from 'react-player/lazy'
+import ReactPlayer from "react-player/lazy";
 
 let ancho = 540;
 let longitud_linea = 28;
@@ -16,7 +16,7 @@ export default function Card02({
   texto_alt,
   link,
   date,
-  thumbnail
+  thumbnail,
 }) {
   return (
     <>
@@ -48,9 +48,8 @@ export default function Card02({
         <div className="col-6 ">
           {video != undefined && video != "" && (
             <div className="ratio ratio-16x9  container_video">
+              <ReactPlayer light={true} url={video} />
 
-              <ReactPlayer light={true} url={video}  />
-              
               {/* <iframe
                 src={video}
                 title="YouTube video"

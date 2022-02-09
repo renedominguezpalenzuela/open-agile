@@ -59,8 +59,6 @@ export default function Home({
 
   return (
     <>
-    
-
       <Head>
         <title>Open Agile - for better work</title>
         <meta
@@ -68,8 +66,8 @@ export default function Home({
           content="Wir sind Open Agile, die hanseatische Unternehmensberatung - wir begleiten Euch dabei, eine individuelle und zukunftsfähige Zusammenarbeit zu kreieren!"
         />
         <link rel="icon" href="/favicon.ico" />
-        <script async src="js/menu.js" />  
         <script async src="js/chat.js" />
+        <script async src="js/menu.js" />
       </Head>
 
       <div id="principal" className="container-fluid g-0">
