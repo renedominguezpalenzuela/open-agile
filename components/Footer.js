@@ -169,9 +169,7 @@ export default function Footer() {
                 </div>
 
                 <div>
-                  {/* <a className="color-font-dropdown mylinkhoover" href="/docview01">
-                  AGBs
-                </a> */}
+                
 
                   <Link href="/doc/agbs.pdf" download>
                     <a target="_blank" className="mylinkhoover">
