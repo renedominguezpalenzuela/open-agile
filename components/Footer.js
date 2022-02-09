@@ -190,9 +190,13 @@ export default function Footer() {
               <Content01Iconos footer={true} />
             </div>
 
-            {/* <div className="row mt-5 d-flex  justify-content-center letra_chica g-0">
-            {`test version: ${process.env.NEXT_PUBLIC_VER}`}
-          </div> */}
+
+
+
+        
+
+
+
           </div>
         </div>
         <div className="d-block d-md-none">

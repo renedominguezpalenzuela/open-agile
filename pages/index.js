@@ -74,9 +74,12 @@ export default function Home({
        
       </Head>
 
+    
+
        
 
       <div id="principal" className="container-fluid g-0">
+          <input id="test_version" name="test_version" type="hidden" value={process.env.NEXT_PUBLIC_VER}/>
         <ModalFormCookie id={1} tiempo={1000} animar={true} />
 
         <MenuFlotanteBoton />
