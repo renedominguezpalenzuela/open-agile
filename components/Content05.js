@@ -2,6 +2,9 @@ import Card02 from "./Card02";
 import Card01 from "./Card01";
 import React from "react";
 
+import ReactPlayer from 'react-player/lazy'
+
+
 //----------------------------------------------------------------------------------------------------------
 //            Area de Contenido: Carousel: BLOG
 //----------------------------------------------------------------------------------------------------------
@@ -92,13 +95,17 @@ export default function Content05({ datos, color_fondo }) {
                           <div className="row sombra_cards myanimacion mt-md-5 mt-lg-4 mi-card">
                             <div className="col p-3 position-relative">
                               {unDato.link != undefined && unDato.link != "" && (
+                                
                                 <div className="ratio ratio-16x9">
-                                  <iframe
+
+                                   <ReactPlayer light={true} url={unDato.link}  width='100%' height='100%'/>
+
+                                   {/* <iframe
                                     loading="lazy"
                                     allow="autoplay;"
                                     src={unDato.link}
                                     title="YouTube video"
-                                    allowFullScreen></iframe>
+                                    allowFullScreen></iframe>  */}
                                 </div>
                               )}
                               <div className="font_data_vlog data_vlog_movile pt-2 position-absolute">
