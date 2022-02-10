@@ -170,8 +170,9 @@ export default function ModalFormCookie({
 
   const botonAceptar = () => {
     const c = document.getElementById("chat-application");
-
-    c.classList.remove("d-none");
+    if (c !== undefined) {
+      c.classList.remove("d-none");
+    }
     //guardar cookies
     //	notwendig, performance, funktional
     Cookies.remove("cancel");
@@ -191,7 +192,9 @@ export default function ModalFormCookie({
   };
   const botonNoAceptar = () => {
     const c = document.getElementById("chat-application");
-    c.classList.add("d-none");
+    if (c !== undefined) {
+      c.classList.add("d-none");
+    }
     //eliminar todas las cookies
     Cookies.set("cancel", true);
     Cookies.remove("notwendigCheckedCookie");
