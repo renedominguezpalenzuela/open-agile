@@ -1,58 +1,50 @@
-
-
-.font1-card-blog{
-    font-family: Montserrat-Bold;
-    color: #030066;
-    font-size: 0.7rem;
+.font1-card-blog {
+  font-family: Montserrat-Bold;
+  color: #030066;
+  font-size: 0.7rem;
 }
 
-
-.font1-card-shop{
-    font-family: Montserrat-Bold;
-    color: #F82D7C;
-    font-size: 0.7rem;
+.font1-card-shop {
+  font-family: Montserrat-Bold;
+  color: #f82d7c;
+  font-size: 0.7rem;
 }
 
-.font2-card-blog{
-    font-family: Montserrat-Bold;
-    color: #030066;
-    font-size: 0.5rem;
+.font2-card-blog {
+  font-family: Montserrat-Bold;
+  color: #030066;
+  font-size: 0.5rem;
 }
 
-.imagen-blog{
-    
-    width: 100%;
-    aspect-ratio: 1 / 0.5; 
-     /* height:240px;  */
-     /* height: 8vh; */
+.imagen-blog {
+  width: 100%;
+  aspect-ratio: 1 / 0.5;
+  /* height:240px;  */
+  /* height: 8vh; */
 
-    border-radius:8px 8px 0px 0px;
- 
- /*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
-     /* object-fit:scale-down; */
-     /* object-fit:contain; */
- 
- }
+  border-radius: 8px 8px 0px 0px;
 
+  /*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
+  /* object-fit:scale-down; */
+  /* object-fit:contain; */
+}
 
- .size_blog_card {
-     height: 9vh;
- }
+.size_blog_card {
+  height: 9vh;
+}
 
- .redondear-card {
-    border-radius:8px 8px 8px 8px;
-    /* max-height: 50vh; */
-    /* height: 50vh; */
+.redondear-card {
+  border-radius: 8px 8px 8px 8px;
+}
 
- }
+.font-btn-card-blog {
+  font-family: Montserrat-Regular;
+  color: #ffffff;
+  font-size: 0.8vw;
+}
 
-
- 
-
-
-  .font-btn-card-blog{
-    font-family: Montserrat-Regular;
-    color: #ffffff;
-    font-size: 0.8vw;
-        
+@media (max-width: 991px) and (orientation: landscape) {
+  .redondear-card {
+    height: 50vh;
+  }
 }

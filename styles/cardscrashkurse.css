@@ -9,6 +9,12 @@
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 991px) and (orientation: landscape) {
+  .card-shop-land {
+    width: 50%;
+  }
+}
+
 .my-card-ancho {
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;

@@ -10,7 +10,6 @@
   background-color: #111;
   color: white;
   padding: 10px 15px;
-  
 }
 
 /*Menu lateral  */
@@ -32,9 +31,7 @@
   background-color: white !important;
 }
 
-
 .sidepanel-new {
-  
   width: 30vw;
   height: 100%;
   position: fixed;
@@ -51,11 +48,9 @@
   background-color: white !important;
 }
 
-
-@media (max-width:992px){
+@media (max-width: 992px) and (orientation: portrait) {
   .sidepanel-new {
-
-  width: 160vw !important;
+    width: 160vw !important;
   }
 }
 
@@ -69,7 +64,6 @@
 }
 
 .sidepanel-new a:hover {
-
 }
 
 .boton_abrir_menu:hover {
@@ -82,15 +76,20 @@
   /* transition: 0.5s;   */
 }
 
-
 .btn-xl {
-  padding: 10px 20px!important;
-  font-size: 20px!important;
-  border-radius: 10px!important;
-  width:50%!important;   
+  padding: 10px 20px !important;
+  font-size: 20px !important;
+  border-radius: 10px !important;
+  width: 50% !important;
 }
 
-.boton_cerrar_menu_lateral{
-
+.boton_cerrar_menu_lateral {
   cursor: pointer;
+}
+
+@media (max-width: 991px) and (orientation: landscape) {
+  #chat-application {
+    bottom: 1px !important;
+    left: 4px !important;
+  }
 }

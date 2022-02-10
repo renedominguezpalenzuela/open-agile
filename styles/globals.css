@@ -649,6 +649,12 @@ ul.no-bullets {
   font-size: 3.2vw;
 }
 
+@media (max-width: 991px) and (orientation: landscape) {
+  .font_boton_main-quiz {
+    font-size: 1.3vw;
+  }
+}
+
 .redondeado {
   border-radius: 5px;
 }
