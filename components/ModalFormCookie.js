@@ -99,10 +99,14 @@ export default function ModalFormCookie({
       Cookies.remove("first_time");
       setReset(false);
     }
-    const c = document.getElementById("chat-application");
-    if (cancelar && c !== undefined && c !== null) {
-      // console.log(c);
-      c.classList.add("d-none");
+
+    if (cancelar != undefined && cancelar != null) {
+      setInterval(() => {
+        const chat = document.getElementById("chat-application");
+        if (chat !== null) {
+          chat.classList.add("d-none");
+        }
+      }, 90);
     }
     if (first_time === true) {
       setTimeout(() => {
