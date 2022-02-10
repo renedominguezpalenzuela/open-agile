@@ -100,7 +100,8 @@ export default function ModalFormCookie({
       setReset(false);
     }
     const c = document.getElementById("chat-application");
-    if (cancelar && c !== undefined) {
+    if (cancelar && c !== undefined && c !== null) {
+      // console.log(c);
       c.classList.add("d-none");
     }
     if (first_time === true) {
