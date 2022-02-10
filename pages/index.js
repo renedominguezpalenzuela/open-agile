@@ -3,7 +3,6 @@ import { expire_cookies_in_days } from "../config";
 import Head from "next/head";
 import Image from "next/image";
 
-
 //Componentes
 import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 
@@ -58,9 +57,6 @@ export default function Home({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-
- 
-
   return (
     <>
       <Head>
@@ -74,13 +70,13 @@ export default function Home({
         <script async src="js/menu.js" />
       </Head>
 
-    
-
-       
-
-      <div id="principal" className="container-fluid g-0" >
-          <input id="test_version" name="test_version" type="hidden" value={process.env.NEXT_PUBLIC_VER}/>
-        <ModalFormCookie id={1} tiempo={1000} animar={true} />
+      <div id="principal" className="container-fluid g-0">
+        <input
+          id="test_version"
+          name="test_version"
+          type="hidden"
+          value={process.env.NEXT_PUBLIC_VER}
+        />
 
         <MenuFlotanteBoton />
 
@@ -144,7 +140,7 @@ export default function Home({
       </div>
 
       {/*Menu Lateral oculto  */}
-      <MenuFlotante  />
+      <MenuFlotante />
     </>
   );
 }

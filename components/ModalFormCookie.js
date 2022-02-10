@@ -80,7 +80,7 @@ export default function ModalFormCookie({
   // const [mostrarVentanaCookies, SetmostrarVentanaCookies] = useState(false);
 
   let first_time = Cookies.get("first_time");
-
+  let cancelar = Cookies.get("cancel");
   if (first_time === undefined || first_time === "true") {
     first_time = true;
   } else {
@@ -97,7 +97,19 @@ export default function ModalFormCookie({
       Cookies.remove("performanceCheckedCookie");
       Cookies.remove("funktionalCheckedCookie");
       Cookies.remove("first_time");
+      Cookies.remove("cancel");
       setReset(false);
+    }
+
+    if (cancelar != undefined && cancelar != null) {
+      const interval = setInterval(() => {
+        const chat = document.getElementById("chat-application");
+        if (chat !== null) {
+          chat.classList.add("d-none");
+        }
+      }, 90);
+
+      return () => clearInterval(interval);
     }
 
     if (first_time === true) {
@@ -166,9 +178,15 @@ export default function ModalFormCookie({
   // }, [mostrar]);
 
   const botonAceptar = () => {
+    Cookies.remove("cancel");
     const c = document.getElementById("chat-application");
+    if (c !== undefined && c.classList.contains("d-none")) {
+      c.classList.remove("d-none");
+    }
 
-    c.classList.remove("d-none");
+    if (c !== undefined) {
+      c.classList.add("d-block");
+    }
     //guardar cookies
     //	notwendig, performance, funktional
 
@@ -184,12 +202,19 @@ export default function ModalFormCookie({
 
     Cookies.set("first_time", false, { expires: expire_cookies_in_days });
     setShowMe(false);
+
     return;
   };
   const botonNoAceptar = () => {
     const c = document.getElementById("chat-application");
-    c.classList.add("d-none");
+    if (c !== undefined && c.classList.contains("d-block")) {
+      c.classList.remove("d-block");
+    }
+    if (c !== undefined) {
+      c.classList.add("d-none");
+    }
     //eliminar todas las cookies
+    Cookies.set("cancel", true);
     Cookies.remove("notwendigCheckedCookie");
     Cookies.remove("performanceCheckedCookie");
     Cookies.remove("funktionalCheckedCookie");
