@@ -10,7 +10,7 @@ import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faXing } from "@fortawesome/free-brands-svg-icons";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
-
+import Cookies from "js-cookie";
 import FormularioContacto2 from "./formulariocontacto2";
 import Content01Iconos from "../componentes/area_superior/Content01Iconos";
 import ModalFormCookie from "../components/ModalFormCookie";

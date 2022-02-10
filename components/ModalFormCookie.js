@@ -97,17 +97,21 @@ export default function ModalFormCookie({
       Cookies.remove("performanceCheckedCookie");
       Cookies.remove("funktionalCheckedCookie");
       Cookies.remove("first_time");
+      Cookies.remove("cancel");
       setReset(false);
     }
 
     if (cancelar != undefined && cancelar != null) {
-      setInterval(() => {
+      const interval = setInterval(() => {
         const chat = document.getElementById("chat-application");
         if (chat !== null) {
           chat.classList.add("d-none");
         }
       }, 90);
+
+      return () => clearInterval(interval);
     }
+
     if (first_time === true) {
       setTimeout(() => {
         setShowMe(true);
@@ -174,13 +178,18 @@ export default function ModalFormCookie({
   // }, [mostrar]);
 
   const botonAceptar = () => {
+    Cookies.remove("cancel");
     const c = document.getElementById("chat-application");
-    if (c !== undefined) {
+    if (c !== undefined && c.classList.contains("d-none")) {
       c.classList.remove("d-none");
+    }
+
+    if (c !== undefined) {
+      c.classList.add("d-block");
     }
     //guardar cookies
     //	notwendig, performance, funktional
-    Cookies.remove("cancel");
+
     Cookies.set("notwendigCheckedCookie", notwendigChecked, {
       expires: expire_cookies_in_days,
     });
@@ -193,10 +202,14 @@ export default function ModalFormCookie({
 
     Cookies.set("first_time", false, { expires: expire_cookies_in_days });
     setShowMe(false);
+
     return;
   };
   const botonNoAceptar = () => {
     const c = document.getElementById("chat-application");
+    if (c !== undefined && c.classList.contains("d-block")) {
+      c.classList.remove("d-block");
+    }
     if (c !== undefined) {
       c.classList.add("d-none");
     }
