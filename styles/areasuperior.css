@@ -53,17 +53,35 @@
   font-size: 6.8vw !important;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 992px) and (orientation: portrait) {
   .titulo_extra_grande {
     font-size: 5vw !important;
   }
 }
+
 .titulo2_vista_movil {
   font-family: Montserrat-BoldItalic;
   color: #e50265;
   font-size: 4.8vw;
   text-shadow: 1px 3px 15px rgb(0 0 0 / 40%);
   z-index: 100;
+}
+
+@media (max-width: 991px) and (orientation: landscape) {
+  .titulo2_vista_movil {
+    font-size: 2vw;
+  }
+  .titulo1_vista_movil {
+    font-size: 4vw;
+  }
+
+  .bi {
+    font-size: 1.5rem;
+  }
+
+  .social-img {
+    height: 1.5rem;
+  }
 }
 
 .force-magenta {
