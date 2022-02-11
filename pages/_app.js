@@ -95,7 +95,7 @@ export default function MyApp(props) {
             function gtag(){window.dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'UA-219220429-1');
+            gtag('config', 'UA-219220429-1',  { 'anonymize_ip': true });
           `}
         </Script>
       </Head>
