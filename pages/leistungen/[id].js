@@ -27,6 +27,7 @@ import BarraConTextoDerecha from "../../components/BarraConTextoDerecha";
 import BarraConTextoIzquierda from "../../components/BarraConTextoIzquierda";
 
 import { servidor_url } from "../../config";
+import { backend_url } from "../../config";
 
 import ModalFormCookie from "../../components/ModalFormCookie";
 
@@ -91,7 +92,7 @@ export default function Home({ servicios }) {
 
 export const getServerSideProps = async (context) => {
   const { id } = context.query;
-  const url = `${servidor_url}/api/servicio/${encodeURIComponent(id)}`;
+  const url = `${backend_url}/api/servicio/${encodeURIComponent(id)}`;
 
   const res = await fetch(url);
 

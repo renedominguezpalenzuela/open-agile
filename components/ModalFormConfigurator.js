@@ -30,7 +30,7 @@ import Box from "@mui/material/Box";
 
 import axios from "axios";
 import { useState } from "react";
-import { servidor_url } from "../config";
+
 
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";

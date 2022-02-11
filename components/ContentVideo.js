@@ -1,4 +1,4 @@
-import { servidor_url } from "../config";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faVolumeUp } from "@fortawesome/free-solid-svg-icons"; //icono normal de volumen

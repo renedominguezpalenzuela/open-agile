@@ -2,6 +2,8 @@ import Link from "next/link";
 
 import { servidor_url } from "../../config";
 
+
+
 import MenuNavBar from "./MenuNavBar";
 import MenuNavBar2 from "./MenuNavBar2";
 import Logo from "./Logo";

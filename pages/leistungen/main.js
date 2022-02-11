@@ -10,6 +10,7 @@ import Content02Cursos from "../../components/Content02Cursos";
 import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
 
 import { servidor_url } from "../../config";
+import { backend_url } from "../../config";
 
 import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
 
@@ -80,7 +81,7 @@ export default function Home({ servicios }) {
 
 //Obteniendo los datos desde el servidor
 export const getServerSideProps = async (context) => {
-  const url2 = `${servidor_url}/api/servicio`;
+  const url2 = `${backend_url}/api/servicio`;
   const res2 = await fetch(url2);
   const servicios = await res2.json();
 

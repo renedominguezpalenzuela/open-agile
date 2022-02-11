@@ -17,6 +17,7 @@ import TextoSimple from '../../components/textosimple'
 import AreaSuperior from '../../componentes/area_superior/AreaSuperior'
 
 import { servidor_url } from '../../config'
+import { backend_url } from "../../config";
 
 //----------------------------------------------------------------------------------------------------------
 //            Pagina inicial principal
@@ -180,7 +181,7 @@ export default function Home({ team }) {
 
 export const getServerSideProps = async (context) => {
   const { id } = context.query
-  const url = `${servidor_url}/api/team/${encodeURIComponent(id)}`
+  const url = `${backend_url}/api/team/${encodeURIComponent(id)}`
   const res = await fetch(url)
 
   const team = await res.json()

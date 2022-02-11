@@ -8,7 +8,7 @@ import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
 
 import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 
-import { servidor_url } from "../config";
+
 
 import ModalFormCookie from "../components/ModalFormCookie";
 

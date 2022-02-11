@@ -1,10 +1,10 @@
-import { servidor_url } from "../../config";
+import { backend_url } from "../../config";
 import axios from "axios";
 
 const qs = require("qs");
 
 const sendFormularioAndFile = async (datos) => {
-  const url = `${servidor_url}/api/formAndFile`;
+  const url = `${backend_url}/api/formAndFile`;
 
 
 

@@ -1,4 +1,4 @@
-import { servidor_url } from "../config";
+import { backend_url } from "../config";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -96,7 +96,7 @@ export default function Home({ vlog }) {
 
 //Obteniendo los datos desde el servidor
 export const getServerSideProps = async (context) => {
-  const url5 = `${servidor_url}/api/vlog`;
+  const url5 = `${backend_url}/api/vlog`;
   const res5 = await fetch(url5);
   const vlog = await res5.json();
 

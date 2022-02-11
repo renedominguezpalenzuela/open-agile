@@ -15,7 +15,7 @@ import Content06Team from "../components/Content06Team";
 import Tabla01 from "../components/crashkurse/tabla01";
 import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 
-import { servidor_url } from "../config";
+import { backend_url } from "../config";
 
 import { useState, useEffect } from "react";
 import ModalFormCookie from "../components/ModalFormCookie";
@@ -85,7 +85,7 @@ export default function Home({ team }) {
 
 //Obteniendo los datos desde el servidor
 export const getServerSideProps = async (context) => {
-  const url5 = `${servidor_url}/api/team`;
+  const url5 = `${backend_url}/api/team`;
   const res5 = await fetch(url5);
   const team = await res5.json();
 

@@ -1,4 +1,4 @@
-import { servidor_url } from "../config";
+import { backend_url } from "../config";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -75,7 +75,7 @@ export default function Home({ blog_details }) {
 
 //Obteniendo los datos desde el servidor
 export const getServerSideProps = async (context) => {
-  const url5 = `${servidor_url}/api/blog`;
+  const url5 = `${backend_url}/api/blog`;
   const res5 = await fetch(url5);
   const blog_details = await res5.json();
 

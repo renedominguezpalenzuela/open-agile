@@ -1,4 +1,4 @@
-import { servidor_url } from "../../config";
+
 
 import MenuNavBar from "./MenuNavBar";
 import Logo from "./Logo";

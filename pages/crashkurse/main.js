@@ -10,6 +10,7 @@ import Content02Cursos from "../../components/Content02Cursos";
 import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
 
 import { servidor_url } from "../../config";
+import { backend_url } from "../../config";
 
 import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
 import ModalFormCookie from "../../components/ModalFormCookie";
@@ -70,7 +71,7 @@ export default function Home({ cursos }) {
 
 //Obteniendo los datos desde el servidor
 export const getServerSideProps = async (context) => {
-  const url = `${servidor_url}/api/curso`;
+  const url = `${backend_url}/api/curso`;
   const res = await fetch(url);
   const cursos = await res.json();
 

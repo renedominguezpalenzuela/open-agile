@@ -22,6 +22,7 @@ import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
 
 
 import { servidor_url } from "../../config";
+import { backend_url } from "../../config";
 
 //----------------------------------------------------------------------------------------------------------
 //            Pagina inicial principal
@@ -84,7 +85,7 @@ export default function Home({ curso }) {
 
 export const getServerSideProps = async (context) => {
   const { id } = context.query;
-  const url = `${servidor_url}/api/curso/${encodeURIComponent(id)}`;
+  const url = `${backend_url}/api/curso/${encodeURIComponent(id)}`;
   const res = await fetch(url);
 
   const curso = await res.json();

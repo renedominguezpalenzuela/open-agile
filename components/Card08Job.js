@@ -4,7 +4,7 @@ import Head from "next/head";
 let ancho = 540;
 let longitud_linea = 24;
 
-import { servidor_url } from "../config";
+
 
 import ModalFormJob from "./ModalFormJob";
 

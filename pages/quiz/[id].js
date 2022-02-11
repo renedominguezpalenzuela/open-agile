@@ -91,6 +91,7 @@ const ancho_preguntas = (preguntas) => {
 // import Content01andMenuWithQuestions from "../../componentes/area_superior/Content01andMenuWithQuestions.js";
 
 import { servidor_url } from "../../config";
+import { backend_url } from "../../config";
 
 //----------------------------------------------------------------------------------------------------------
 //            Pagina inicial principal
@@ -171,11 +172,11 @@ export default function Home({ quiz, todas_preguntas }) {
 
 export const getServerSideProps = async (context) => {
   const { id } = context.query;
-  const url = `${servidor_url}/api/quiz/${encodeURIComponent(id)}`;
+  const url = `${backend_url}/api/quiz/${encodeURIComponent(id)}`;
   const res = await fetch(url);
   const quiz = await res.json();
 
-  const url2 = `${servidor_url}/api/quiz`;
+  const url2 = `${backend_url}/api/quiz`;
   const res2 = await fetch(url2);
 
   const todas_preguntas = await res2.json();

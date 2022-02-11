@@ -18,7 +18,7 @@ import { sendFormulario } from "../components/global/sendFormulario";
 
 import { pink } from "@mui/material/colors";
 
-import { servidor_url } from "../config";
+
 import { formEmail } from "../config";
 
 import { AlertDialogForms } from "./AlertDialogForms";

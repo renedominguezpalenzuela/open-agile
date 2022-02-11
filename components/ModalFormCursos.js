@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { servidor_url } from "../config";
+
 import { formEmail } from "../config";
 
 import Radio from "@mui/material/Radio";

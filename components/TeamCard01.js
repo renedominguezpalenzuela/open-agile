@@ -1,5 +1,5 @@
 // import styles from "../styles/Home.module.css";
-import { servidor_url } from "../config";
+
 import Link from "next/link";
 import MenuFlotanteBoton from "./MenuFlotanteBoton";
 

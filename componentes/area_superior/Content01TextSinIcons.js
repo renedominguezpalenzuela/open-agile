@@ -6,7 +6,7 @@
 //TODO: Arreglar boton menu flotante, que no funciona como sticky
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { servidor_url } from "../../config";
+
 
 export default function Content01TextSinIcons({
   texto1,

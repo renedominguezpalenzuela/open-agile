@@ -10,6 +10,7 @@ import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
 import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
 
 import { servidor_url } from "../../config";
+import { backend_url } from "../../config";
 
 import ModalFormConfigurator from "../../components/ModalFormConfigurator";
 
@@ -69,7 +70,7 @@ export default function Configurator_Main({ configurator }) {
 
 export const getServerSideProps = async (context) => {
   const { id } = context.query;
-  const url = `${servidor_url}/api/configurator/${encodeURIComponent(id)}`;
+  const url = `${backend_url}/api/configurator/${encodeURIComponent(id)}`;
   const res = await fetch(url);
 
   const configurator = await res.json();

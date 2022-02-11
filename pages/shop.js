@@ -8,6 +8,7 @@ import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 import Card07Shop from "../components/Card07Shop";
 
 import { servidor_url } from "../config";
+import { backend_url } from "../config";
 
 import ModalFormCookie from "../components/ModalFormCookie";
 import { useState, useEffect } from "react";
@@ -90,7 +91,7 @@ export default function Home({ shop }) {
 }
 
 export const getServerSideProps = async (context) => {
-  const url = `${servidor_url}/api/shop`;
+  const url = `${backend_url}/api/shop`;
   const res = await fetch(url);
 
   const shop = await res.json();
