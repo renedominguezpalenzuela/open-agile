@@ -384,7 +384,16 @@
   text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
 }
 
-@media (max-width: 992px) {
+@media (max-width: 992px) and (orientation: landscape) {
+  .font_quiz_line1 {
+    font-size: 3.4vw !important;
+  }
+  .font_second_line3 {
+    font-size: 2vw !important;
+  }
+}
+
+@media (max-width: 992px) and (orientation: portrait) {
   .font_quiz_line1 {
     font-size: 7.5vw !important;
   }
@@ -402,7 +411,7 @@
   /* text-transform: uppercase; */
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   .font_second_line2 {
     font-size: 1em;
   }

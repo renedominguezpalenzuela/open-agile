@@ -649,6 +649,12 @@ ul.no-bullets {
   font-size: 3.2vw;
 }
 
+@media (max-width: 991px) and (orientation: landscape) {
+  .font_boton_main-quiz {
+    font-size: 1.3vw;
+  }
+}
+
 .redondeado {
   border-radius: 5px;
 }
@@ -825,6 +831,7 @@ ul.no-bullets {
   font-family: Montserrat-SemiBold;
 
   /* width: calc(100%+22vw); */
+
   width: 75%;
 
   display: inline-block;

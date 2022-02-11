@@ -16,63 +16,58 @@ export default function Card07Shop({
   texto_boton2,
   texto_alt,
   link1,
-  link2
+  link2,
 }) {
-
-  
   return (
     <>
-      <div className="card myanimacion sombra_cards redondear-card pb-2">
+      <div className="card myanimacion sombra_cards redondear-card-shop pb-2">
         <div className="row   g-0 pb-2 pt-3 fondo_card_shop">
-          <img   className=" imagen-team-card "  src={`${servidor_url}/img/${imagen}`}  alt={texto_alt} />
+          <img
+            className=" imagen-team-card "
+            src={`${servidor_url}/img/${imagen}`}
+            alt={texto_alt}
+          />
         </div>
-
-      
 
         <div className="h-100 d-flex  align-items-center  ">
           <div className="row w-100 g-0 ">
-
             <div className="col-12 pt-1 ps-3 pe-3   ">
-               {titulo != undefined && titulo != "" && (<>
-                   <div className="font1-card-shop pt-3">
-                      {titulo} 
-                   </div>
-               </>)}
+              {titulo != undefined && titulo != "" && (
+                <>
+                  <div className="font1-card-shop pt-3">{titulo}</div>
+                </>
+              )}
 
-             
-
-
-               {texto != undefined && texto != "" && (<>              
-                    <div className=" font3-card-shop pt-2 ">
-                        {texto}
-                    </div>              
-              </>)}
-
-
+              {texto != undefined && texto != "" && (
+                <>
+                  <div className=" font3-card-shop pt-2 ">{texto}</div>
+                </>
+              )}
             </div>
 
+            <div className="row mt-3 mb-2 ps-3 d-flex justify-content-start  g-0">
+              <div className="col-5 d-flex justify-content-start me-1 ">
+                <a href={link1} className="   ">
+                  <button
+                    type="button"
+                    className="btn ps-2 pe-2  btn-card-blog font-btn-card-shop rounded-pill  ">
+                    {texto_boton1}
+                  </button>
+                </a>
+              </div>
 
-  <div className="row mt-3 mb-2 ps-3 d-flex justify-content-start  g-0">
-            <div className="col-5 d-flex justify-content-start me-1 ">
-              <a href={link1}   className="   "> 
-                <button type="button" className="btn ps-2 pe-2  btn-card-blog font-btn-card-shop rounded-pill  ">
-                  {texto_boton1}
-                </button>               
-              </a>
+              <div className="col-5  ">
+                <a href={link2} className="  ">
+                  <button
+                    type="button"
+                    className="btn ps-2 pe-2  btn-card-blog font-btn-card-shop rounded-pill  ">
+                    {texto_boton2}
+                  </button>
+                </a>
+              </div>
             </div>
-
-            <div className="col-5  ">
-              <a href={link2}   className="  "> 
-                <button type="button" className="btn ps-2 pe-2  btn-card-blog font-btn-card-shop rounded-pill  ">
-                  {texto_boton2}
-                </button>               
-              </a>
-            </div>
-</div>            
-
           </div>
-         </div> 
-        
+        </div>
       </div>
     </>
   );

@@ -137,6 +137,16 @@
     url("/img/agilcheckbackground.jpg");
 }
 
+@media (max-width: 992px) and (orientation: landscape) {
+  .bannermain-quiz-questions {
+    grid-template-rows: 15% 85%;
+    height: 150vh;
+  }
+  .item-titulo {
+    align-self: auto !important;
+  }
+}
+
 .bannermain-quiz-result {
   display: grid;
   /* height: 70vh; */
@@ -292,18 +302,36 @@
   top: -3.5vh;
 }
 
-.my_quiz_titulo {
-  height: 12vh !important;
+@media screen and (orientation: portrait) {
+  .my_quiz_titulo {
+    height: 12vh !important;
+  }
+  .my_quiz_pregunta {
+    height: 8vh !important;
+  }
+  .my_quiz_respuestas {
+    height: 32vh !important;
+  }
 }
 
-.my_quiz_pregunta {
-  height: 8vh !important;
+@media (max-width: 992px) and (orientation: landscape) {
+  #altcontainer > .col-8 {
+    width: 85%;
+  }
+  #altcontainer > .col-3 {
+    width: 35%;
+  }
+  .btn-leinstungen-magenta {
+    font-size: 3vh !important;
+  }
+  .font_small_letter_white-quiz-result {
+    font-size: 3vh !important;
+  }
+  .modal-dialog {
+    margin-left: -25vw !important;
+    margin-top: 15vh;
+  }
 }
-
-.my_quiz_respuestas {
-  height: 32vh !important;
-}
-
 /* .my_quiz_boton {
   position: absolute;
 
@@ -344,7 +372,7 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 991px) and (orientation: portrait) {
   .bannermain {
     display: grid;
 
@@ -361,6 +389,34 @@
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@media (max-width: 991px) and (orientation: landscape) {
+  .bannermain {
+    display: grid;
+    grid-template-columns: 12% 75% 10%;
+    align-content: space-evenly;
+  }
+  .item-titulo .g-0 .mt-4 {
+    margin-top: 11vh !important;
+  }
+
+  button .mb-5 {
+    margin-bottom: 0vh !important;
+    padding-bottom: 0vh !important;
+  }
+
+  .mt-5 {
+    margin-top: 2.5vh !important;
+  }
+
+  .mb-3 {
+    margin-bottom: 1.5vh !important;
+  }
+
+  .pb-3 {
+    padding-bottom: 2.5vh !important;
   }
 }
 
@@ -503,6 +559,13 @@ img.grayscale:hover {
     ),
     url("/img/image01.jpg");
   /* clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%); */
+}
+
+@media (max-width: 991px) and (orientation: landscape) {
+  .bannermain-team {
+    grid-template-rows: 14% 86%;
+    padding-bottom: 2rem !important;
+  }
 }
 
 .volumen_icon_size {
