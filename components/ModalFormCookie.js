@@ -219,8 +219,6 @@ export default function ModalFormCookie({
     Cookies.remove("performanceCheckedCookie");
     Cookies.remove("funktionalCheckedCookie");
     Cookies.remove("first_time");
-    Cookies.set("first_time", false, null);
-
     setShowMe(false);
     return;
   };
