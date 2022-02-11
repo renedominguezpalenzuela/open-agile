@@ -401,9 +401,10 @@
   .item-titulo .g-0 .mt-4 {
     margin-top: 11vh !important;
   }
-  .mb-5 {
+
+  button .mb-5 {
     margin-bottom: 0vh !important;
-    padding-bottom: 5vh !important;
+    padding-bottom: 0vh !important;
   }
 
   .mt-5 {

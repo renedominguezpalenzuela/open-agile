@@ -368,7 +368,7 @@ function Content01andMenuWithQuestions({
             <Link href={`${next_link}`} className=" d-flex align-items-start ">
               <button
                 type="button"
-                className=" btn  ms-2 me-2 w-25 mb-5    btn-card font-btn-card rounded-pill  ">
+                className=" btn  ms-2 me-2 w-25 mb-4    btn-card font-btn-card rounded-pill  ">
                 Next
               </button>
             </Link>
