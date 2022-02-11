@@ -152,7 +152,7 @@ export default function Home({ quiz, todas_preguntas }) {
         <Footer />
       </div>
 
-      <div className="  d-md-none">
+      <div className="d-md-none">
         <div id="principal" className=" ">
           <Content01andMenuWithQuestions
             id={id}
