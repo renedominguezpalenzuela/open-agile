@@ -48,8 +48,16 @@ export default function Home({ curso }) {
   }
 
   const [desktop_screen, setDesktop_screen] = useState(true);
+  const [landscape, setLandscape] = useState(false);
+
   const handleResize = () => {
     let ancho_screen = window.innerWidth;
+    let alto_screen = window.innerHeight;
+    if (ancho_screen > alto_screen) {
+      setLandscape(true);
+    } else {
+      setLandscape(false);
+    }
     if (ancho_screen > 992) {
       setDesktop_screen(true);
     } else {
@@ -102,7 +110,7 @@ export default function Home({ curso }) {
         )}
 
         <div className="row  pt-md-5 pb-md-5">
-          <div className="col-md-4 ">
+          <div className={`${landscape ? "col-md-5" : "col-md-4"}`}>
             <MenuKraskurse
               link_beschreibung={link_beschreibung}
               link_vorteile={link_vorteile}

@@ -24,57 +24,47 @@ var pagina = window.location.pathname;
 
 // setColor(0, pagina);
 
-window.addEventListener("load", (event) => {
-  if (document.getElementById("boton_cerrar_menu")) {
-    document
-      .getElementById("boton_cerrar_menu")
-      .addEventListener("click", function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        document.getElementById("mySidepanel").style.width = "0";
-        document.getElementById("panel_abrir_menu").style.visibility =
-          "visible";
-        document.getElementById("principal").classList.remove("myblur");
-      });
-  }
+// window.addEventListener("load", (event) => {
+//   if (document.getElementById("boton_cerrar_menu")) {
+//     document.getElementById("boton_cerrar_menu").addEventListener("click", function (e) {
+//         e.preventDefault();
+//         e.stopPropagation();
+//         document.getElementById("mySidepanel").style.width = "0";
+//         document.getElementById("panel_abrir_menu").style.visibility = "visible";
+//         document.getElementById("principal").classList.remove("myblur");
+//       });
+//   }
 
-  if (document.getElementById("boton_abrir_menu")) {
-    document
-      .getElementById("boton_abrir_menu")
-      .addEventListener("click", function (e) {
-        e.preventDefault();
-        e.stopPropagation();
+//   if (document.getElementById("boton_abrir_menu")) {
+//     document.getElementById("boton_abrir_menu").addEventListener("click", function (e) {
+//         e.preventDefault();
+//         e.stopPropagation();    
+//         document.getElementById("mySidepanel").style.width = "30vw";
+//         document.getElementById("panel_abrir_menu").style.visibility = "hidden";
+//         document.getElementById("principal").classList.add("myblur");
+//       });
+//   }
 
-       
-        document.getElementById("mySidepanel").style.width = "30vw";
+//   if (boton2) {
+//     boton2.addEventListener("click", function (e) {
+//       e.preventDefault();
+//       e.stopPropagation();
+//       document.getElementById("mySidepanel").style.width = "110vw";
+//       document.getElementById("panel_abrir_menu").style.visibility = "hidden";
+//       document.getElementById("principal").classList.add("myblur");
+//     });
+//   }
 
-        document.getElementById("panel_abrir_menu").style.visibility = "hidden";
-        document.getElementById("principal").classList.add("myblur");
-      });
-  }
-
-  if (boton2) {
-    boton2.addEventListener("click", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-
-      document.getElementById("mySidepanel").style.width = "110vw";
-      document.getElementById("panel_abrir_menu").style.visibility = "hidden";
-      document.getElementById("principal").classList.add("myblur");
-    });
-  }
-
-  if (leinstungen_link) {
-
-    leinstungen_link.addEventListener("click", cerrar_menu_lateral);
-  }
+//   if (leinstungen_link) {
+//     leinstungen_link.addEventListener("click", cerrar_menu_lateral);
+//   }
 
   
-  if (crashkurse_link) {
+//   if (crashkurse_link) {
 
-    crashkurse_link.addEventListener("click", cerrar_menu_lateral);
-  }
-});
+//     crashkurse_link.addEventListener("click", cerrar_menu_lateral);
+//   }
+// });
 
 // var page = path.split("/").pop();
 

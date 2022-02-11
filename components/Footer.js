@@ -10,7 +10,7 @@ import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faXing } from "@fortawesome/free-brands-svg-icons";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
-
+import Cookies from "js-cookie";
 import FormularioContacto2 from "./formulariocontacto2";
 import Content01Iconos from "../componentes/area_superior/Content01Iconos";
 import ModalFormCookie from "../components/ModalFormCookie";
@@ -26,9 +26,10 @@ export default function Footer() {
     <>
       <ModalFormCookie
         id={1}
-        tiempo={1000}
+        tiempo={500}
         animar={true}
         reset={changeCookie}
+        setReset={setChangeCookie}
       />
 
       <footer id="myfooter" className=" no-gutter color_background">
@@ -169,10 +170,6 @@ export default function Footer() {
                 </div>
 
                 <div>
-                  {/* <a className="color-font-dropdown mylinkhoover" href="/docview01">
-                  AGBs
-                </a> */}
-
                   <Link href="/doc/agbs.pdf" download>
                     <a target="_blank" className="mylinkhoover">
                       AGBs
@@ -203,10 +200,6 @@ export default function Footer() {
             <div className="row  mt-4 d-flex pb-3  g-0">
               <Content01Iconos footer={true} />
             </div>
-
-            {/* <div className="row mt-5 d-flex  justify-content-center letra_chica g-0">
-            {`test version: ${process.env.NEXT_PUBLIC_VER}`}
-          </div> */}
           </div>
         </div>
         <div className="d-block d-md-none">

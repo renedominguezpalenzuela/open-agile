@@ -82,20 +82,22 @@
   /* object-fit:contain; */
 }
 
-.redondear-card {
+.redondear-card-shop {
   border-radius: 8px 8px 8px 8px;
-  /* max-height: 50vh; */
-  /* height: 50vh; */
 }
 
 .btn-card-blog {
   background-color: #24325a !important;
-  width: 11.5vw;
-
   /* border-radius:30px 30px 30px 30px; */
   /* height: 40px; */
   /* border-color: #3edf0d  !important; */
   /* color: #ffffff !important; */
+}
+
+@media only screen and (orientation: portrait) {
+  .btn-card-blog {
+    width: 11.5vw;
+  }
 }
 
 .btn-card-blog:hover
@@ -188,7 +190,7 @@
   font-size: 0.7rem;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 992px) and (orientation: portrait) {
   .font-btn-card-shop {
     font-size: 2.3vw;
   }
@@ -326,10 +328,20 @@ div.horizontal-line {
   text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
 }
 
-.imagen-team {
-  /* width: 52px!important; */
-  width: 24vw !important;
-  /* height: 30px!important; */
+@media only screen and (orientation: portrait) {
+  .imagen-team {
+    /* width: 52px!important; */
+    width: 24vw !important;
+    /* height: 30px!important; */
+  }
+}
+
+@media (max-width: 991px) and (orientation: landscape) {
+  .imagen-team {
+    /* width: 52px!important; */
+    width: 18vw !important;
+    /* height: 30px!important; */
+  }
 }
 
 @media (max-width: 400px) {
@@ -337,17 +349,15 @@ div.horizontal-line {
     font-size: 1.8rem;
     line-height: 2rem;
   }
+}
 
- 
+@media (max-width: 517px) {
+  .font_title1-team-seccion {
+    font-size: 4vw !important;
   }
-
-  @media (max-width: 517px) {
-    .font_title1-team-seccion {
-      font-size: 4vw !important;
-    }
-    .font_motto_team {
-      font-size: 2.5vw;
-    }
+  .font_motto_team {
+    font-size: 2.5vw;
+  }
 
   /* font_title_purple */
   .font_title2-team-seccion {
@@ -366,7 +376,7 @@ div.horizontal-line {
     text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
   }
 }
-@media (min-width: 401px) and (max-width: 600px) {
+@media (min-width: 401px) and (max-width: 600px) and (orientation: portrait) {
   .font-items-side-menu {
     font-size: 1.8rem;
     line-height: 3rem;
@@ -376,7 +386,7 @@ div.horizontal-line {
   }
 }
 
-@media (min-width: 601px) and (max-width: 800px) {
+@media (min-width: 601px) and (max-width: 800px) and (orientation: portrait) {
   .font-items-side-menu {
     font-size: 2.3rem;
     line-height: 4rem;
@@ -386,7 +396,7 @@ div.horizontal-line {
   }
 }
 
-@media (min-width: 801px) and (max-width: 992px) {
+@media (min-width: 801px) and (max-width: 992px) and (orientation: portrait) {
   .font-items-side-menu {
     font-size: 5.3rem;
     line-height: 4rem;
