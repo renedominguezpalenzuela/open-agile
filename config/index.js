@@ -5,8 +5,8 @@ export const servidor_url = dev
   : "https://open-agile.de";
 
 export const backend_url = dev
-  ? "https://js-agileweb-backend.herokuapp.com/api"
-  : "https://open-agile.de";
+  ? "http://localhost:3000"
+  : "https://js-agileweb-backend.herokuapp.com/api";
 
 export const expire_cookies_in_days = 7;
 
