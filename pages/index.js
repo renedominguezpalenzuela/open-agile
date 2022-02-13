@@ -1,7 +1,5 @@
-import { servidor_url } from "../config";
-import { expire_cookies_in_days } from "../config";
+import {servidor_url} from "../config";
 import Head from "next/head";
-import Image from "next/image";
 
 //Componentes
 import AreaSuperior from "../componentes/area_superior/AreaSuperior";
@@ -20,13 +18,7 @@ import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
 
 import MenuFlotante from "../components/MenuFlotante";
 import Footer from "../components/Footer";
-
-import Cookies from "js-cookie";
-import { useEffect, useState } from "react";
-
-import ModalFormCookie from "../components/ModalFormCookie";
-
-import Script from "next/script";
+import {useEffect, useState} from "react";
 
 //----------------------------------------------------------------------------------------------------------
 //            Pagina inicial principal
@@ -38,6 +30,7 @@ export default function Home({
   blogs,
   botones_configurador,
   vlog,
+  main_logos
 }) {
   const [desktop_screen, setDesktop_screen] = useState(true);
 
@@ -111,12 +104,12 @@ export default function Home({
 
         {/*imagen de sponsors */}
         <div className=" d-none  d-md-block">
-          <Content03 />
+          <Content03 mainlogos={main_logos} />
         </div>
 
         {/*imagen de sponsors */}
         <div className=" d-md-none">
-          <Content03Carrousel />
+          <Content03Carrousel mainlogos={main_logos} />
         </div>
 
         {/*Unser Blog  */}
@@ -172,6 +165,10 @@ export const getServerSideProps = async (context) => {
   const res5 = await fetch(url5);
   const vlog = await res5.json();
 
+  const url6 = `${servidor_url}/api/main_logos`;
+  const res6 = await fetch(url6);
+  const main_logos = await res6.json();
+
   return {
     props: {
       cursos,
@@ -179,6 +176,7 @@ export const getServerSideProps = async (context) => {
       blogs,
       botones_configurador,
       vlog,
+      main_logos
     },
   };
 };
