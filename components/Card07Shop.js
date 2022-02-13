@@ -24,7 +24,7 @@ export default function Card07Shop({
     <>
       <div className="card myanimacion sombra_cards redondear-card pb-2">
         <div className="row   g-0 pb-2 pt-3 fondo_card_shop">
-          <img   className=" imagen-team-card "  src={`${servidor_url}/img/${imagen}`}  alt={texto_alt} />
+          <img   className=" imagen-team-card "  src={`${imagen}`}  alt={texto_alt} />
         </div>
 
       
