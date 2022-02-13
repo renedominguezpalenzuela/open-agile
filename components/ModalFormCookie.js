@@ -80,7 +80,11 @@ export default function ModalFormCookie({
   // const [mostrarVentanaCookies, SetmostrarVentanaCookies] = useState(false);
 
   let first_time = Cookies.get("first_time");
-  let cancelar = Cookies.get("cancel");
+  const ISSERVER = typeof window === "undefined";
+  let cancelar = null;
+  if (!ISSERVER) {
+    cancelar = localStorage.getItem("cancel");
+  }
   if (first_time === undefined || first_time === "true") {
     first_time = true;
   } else {
@@ -97,7 +101,9 @@ export default function ModalFormCookie({
       Cookies.remove("performanceCheckedCookie");
       Cookies.remove("funktionalCheckedCookie");
       Cookies.remove("first_time");
-      Cookies.remove("cancel");
+      if (!ISSERVER) {
+        localStorage.removeItem("cancel");
+      }
       setReset(false);
     }
 
@@ -178,7 +184,9 @@ export default function ModalFormCookie({
   // }, [mostrar]);
 
   const botonAceptar = () => {
-    Cookies.remove("cancel");
+    if (!ISSERVER) {
+      localStorage.removeItem("cancel");
+    }
     const c = document.getElementById("chat-application");
     if (c !== undefined && c.classList.contains("d-none")) {
       c.classList.remove("d-none");
@@ -214,7 +222,9 @@ export default function ModalFormCookie({
       c.classList.add("d-none");
     }
     //eliminar todas las cookies
-    Cookies.set("cancel", true);
+    if (!ISSERVER) {
+      localStorage.setItem("cancel", "1");
+    }
     Cookies.remove("notwendigCheckedCookie");
     Cookies.remove("performanceCheckedCookie");
     Cookies.remove("funktionalCheckedCookie");

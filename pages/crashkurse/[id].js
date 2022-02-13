@@ -19,8 +19,6 @@ import Tabla03 from "../../components/crashkurse/tabla03";
 import Card01Lista from "../../components/Card01Lista";
 import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
 
-
-
 import { servidor_url } from "../../config";
 import { backend_url } from "../../config";
 
@@ -42,7 +40,7 @@ export default function Home({ curso }) {
     crashkurs_date_title,
     crashkurs_date,
     texto_kosten,
-    titulo_area_superior
+    titulo_area_superior,
   } = curso;
 
   return (
@@ -58,7 +56,13 @@ export default function Home({ curso }) {
       <div id="principal" className="container-fluid g-0">
         <MenuFlotanteBoton />
 
-        <AreaSuperior fondo="gris" texto1={titulo1} texto2={titulo2} texto2a={titulo2a}  area_gris_nueva={true}/>
+        <AreaSuperior
+          fondo="gris"
+          texto1={titulo1}
+          texto2={titulo2}
+          texto2a={titulo2a}
+          area_gris_nueva={true}
+        />
 
         {/* Tabla 1: imagenes alternas */}
         {/* <div id="course" className="row  text-center mb-5 mt-5  ">
@@ -68,7 +72,15 @@ export default function Home({ curso }) {
         <Tabla01 className="" items_tabla={items_tabla} numero_tabla="1" />
 
         {/* Tabla3 --- Cards con fechas de cursos */}
-        <Tabla03 className="mt-5" crashkurs_date_title={crashkurs_date_title} crashkurs_date={crashkurs_date} titulo={titulo2 + " " + titulo2a} titulo2a={titulo2a} precio={texto_kosten}  nombre_curso={titulo_area_superior}/>
+        <Tabla03
+          className="mt-5"
+          crashkurs_date_title={crashkurs_date_title}
+          crashkurs_date={crashkurs_date}
+          titulo={titulo2 + " " + titulo2a}
+          titulo2a={titulo2a}
+          precio={texto_kosten}
+          nombre_curso={titulo_area_superior}
+        />
 
         {/*Footer  */}
         <Footer />
@@ -76,9 +88,6 @@ export default function Home({ curso }) {
 
       {/*Menu Lateral oculto  */}
       <MenuFlotante />
-
-
-
     </>
   );
 }
