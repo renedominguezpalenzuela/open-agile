@@ -1,5 +1,5 @@
 import { servidor_url } from "../../../config";
-import { backend_url } from "../../config";
+import { backend_url } from "../../../config";
 import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -148,9 +148,7 @@ export default function Home({ curso }) {
 
 export const getServerSideProps = async (context) => {
   const { id } = context.query;
-  const url = `${backend_url}/api/curso/beschreibung/${encodeURIComponent(
-    id
-  )}`;
+  const url = `${backend_url}/api/curso/beschreibung/${encodeURIComponent(id)}`;
   const res = await fetch(url);
 
   const curso = await res.json();
