@@ -18,6 +18,7 @@ export default function Card02({
   date,
   thumbnail,
 }) {
+  const dt = new Date(date);
   return (
     <>
       <div className="row g-0 mt-5  ">
@@ -28,13 +29,16 @@ export default function Card02({
               {titulo}
             </div>
 
-            <div className=" ms-2 me-2 mt-4 pb-3 contenedor_texto_overflow ">
+            <div className=" ms-2 me-2 pb-3 contenedor_texto_overflow ">
+              <div className="data_vlog_desktop d-inline-block text-end mt-1">
+                <p>
+                  GEPOSTET AM {dt.getFullYear()}.{dt.getMonth()}.{dt.getDate()}
+                </p>
+              </div>
               {/* <div className="p-1  contenedor_margen"> */}
-              {texto.map((unTexto, index) => (
-                <div key={index} className="font_carrusel_video ">
-                  {unTexto}
-                </div>
-              ))}
+              {/*{texto.map((unTexto, index) => (*/}
+              <div className="font_carrusel_video ">{texto}</div>
+              {/*))}*/}
               {/* </div> */}
               <div className="data_vlog_desktop d-inline-block ms-2 mt-2">
                 <p>GEPOSTET AM {date}</p>

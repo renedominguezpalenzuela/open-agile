@@ -17,8 +17,6 @@ import Card01Lista from "../../components/Card01Lista";
 import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
 import TextoBloque01 from "../../components/textobloque01";
 
-// import MenuSuperior from "../components/MenuSuperior";
-
 import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
 
 import LeistungenTabs from "../../componentes/leistungen/LeistungenTabs";
@@ -31,16 +29,26 @@ import { backend_url } from "../../config";
 
 import ModalFormCookie from "../../components/ModalFormCookie";
 
-//----------------------------------------------------------------------------------------------------------
-//            Pagina inicial principal
-//----------------------------------------------------------------------------------------------------------
-
 export default function Home({ servicios }) {
   const router = useRouter();
   const { id } = router.query;
 
-  const { titulo2, titulo3, titulo2a, titulo, texto01, texto02, texto03 } =
-    servicios;
+  console.log(servicios);
+
+  // const { titulo2, titulo3, titulo2a, titulo, texto01, texto02, texto03 } =
+  //   servicios;
+
+  const services = servicios.data.attributes;
+
+  const {
+    title,
+    first_tab_title,
+    first_tab_content,
+    second_tab_title,
+    second_tab_content,
+    third_tab_title,
+    third_tab_content,
+  } = services;
 
   const classOftabs = (id) => {
     if (id == 1) return " alto-leistungen-tab-contenedor";
@@ -53,8 +61,8 @@ export default function Home({ servicios }) {
   return (
     <>
       <Head>
-        <title>{titulo + "-" + titulo2}</title>
-        <meta name="description" content={titulo2} />
+        <title>{title}</title>
+        <meta name="description" content={title} />
         <link rel="icon" href="/favicon.ico" />
         <script async src={`${servidor_url}/js/chat.js`} />
         <script async src={`${servidor_url}/js/menu.js`} />
@@ -66,7 +74,7 @@ export default function Home({ servicios }) {
         <MenuFlotanteBoton />
         <AreaSuperior
           fondo="ajustable"
-          texto1={titulo}
+          texto1={title}
           titulo_largo={true}
           area_gris_nueva={true}
           lei={true}
@@ -74,10 +82,12 @@ export default function Home({ servicios }) {
 
         <div className={` mt-5 pb-3 + ${classOftabs(id)}`}>
           <LeistungenTabs
-            texto01={texto01}
-            texto02={texto02}
-            texto03={texto03}
-            titulo={titulo}
+            texto01={first_tab_content}
+            texto02={second_tab_content}
+            texto03={third_tab_content}
+            titulo01={first_tab_title}
+            titulo02={second_tab_title}
+            titulo={title}
           />
         </div>
 
@@ -92,7 +102,7 @@ export default function Home({ servicios }) {
 
 export const getServerSideProps = async (context) => {
   const { id } = context.query;
-  const url = `${backend_url}/api/servicio/${encodeURIComponent(id)}`;
+  const url = `${servidor_url}/api/leistungen/${encodeURIComponent(id)}`;
 
   const res = await fetch(url);
 

@@ -81,7 +81,7 @@ export default function Home({ servicios }) {
 
 //Obteniendo los datos desde el servidor
 export const getServerSideProps = async (context) => {
-  const url2 = `${backend_url}/api/servicio`;
+  const url2 = `${servidor_url}/api/leistungen`;
   const res2 = await fetch(url2);
   const servicios = await res2.json();
 

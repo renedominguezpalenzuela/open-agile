@@ -18,6 +18,7 @@ export default function Card01({
   texto_alt,
   link,
 }) {
+  console.log(imagen)
   let cadena_sin_padding =
     "row  h-md-100  d-flex align-items-center justify-content-center ";
 
@@ -33,12 +34,12 @@ export default function Card01({
         {imagen != undefined && imagen != "" && (
           <img
             className="card-img-top corte_cards img-rounded  "
-            src={`${servidor_url}/img/${imagen}`}
+            src={imagen}
             alt={texto_alt}
           />
         )}
 
-        <div className="card-body text-center    ">
+        <div className="card-body text-center">
           {Array.isArray(titulo) ? (
             titulo != undefined &&
             titulo != "" &&

@@ -41,44 +41,23 @@ export default function Content05({ datos, color_fondo }) {
             data-mdb-touch="true">
             {/* TODO: crear de forma dinamica */}
             <div className="carousel-indicators ">
-              <button
-                type="button"
-                data-bs-target="#MyCarousel"
-                data-bs-slide-to="0"
-                className="active "
-                aria-current="true"
-                aria-label="Slide 1"></button>
-              <button
-                type="button"
-                data-bs-target="#MyCarousel"
-                data-bs-slide-to="1"
-                className=""
-                aria-label="Slide 2"></button>
-              <button
-                type="button"
-                data-bs-target="#MyCarousel"
-                data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-              <button
-                type="button"
-                data-bs-target="#MyCarousel"
-                data-bs-slide-to="3"
-                aria-label="Slide 4"></button>
-              <button
-                type="button"
-                data-bs-target="#MyCarousel"
-                data-bs-slide-to="4"
-                aria-label="Slide 5"></button>
-              <button
-                type="button"
-                data-bs-target="#MyCarousel"
-                data-bs-slide-to="5"
-                aria-label="Slide 6"></button>
-              <button
-                type="button"
-                data-bs-target="#MyCarousel"
-                data-bs-slide-to="6"
-                aria-label="Slide 7"></button>
+              {datos.map((unDato, index) =>
+                index === 0 ? <button
+                    key={index}
+                    type="button"
+                    data-bs-target="#MyCarousel"
+                    data-bs-slide-to={index.toString()}
+                    className="active "
+                    aria-current="true"
+                    aria-label={"Slide " + index.toString()}></button>
+                  : <button
+                    key={index}
+                    type="button"
+                    data-bs-target="#MyCarousel"
+                    data-bs-slide-to={index.toString()}
+                    className=""
+                    aria-label={"Slide " + index.toString()}></button>
+              )}
             </div>
 
             <div className="carousel-inner  alto_carrusel  mt-md-5">
@@ -94,13 +73,13 @@ export default function Content05({ datos, color_fondo }) {
                         <div className="col-md-6 ">
                           <div className="row sombra_cards myanimacion mt-md-5 mt-lg-4 mi-card">
                             <div className="col p-3 position-relative">
-                              {unDato.link != undefined && unDato.link != "" && (
-                                
+                              {unDato.attributes.link != undefined && unDato.attributes.link != "" && (
+
                                 <div className="ratio ratio-16x9">
 
-                                   <ReactPlayer light={true} url={unDato.link}  width='100%' height='100%'/>
+                                  <ReactPlayer light={true} url={unDato.attributes.link}  width='100%' height='100%'/>
 
-                                   {/* <iframe
+                                  {/* <iframe
                                     loading="lazy"
                                     allow="autoplay;"
                                     src={unDato.link}
@@ -109,18 +88,18 @@ export default function Content05({ datos, color_fondo }) {
                                 </div>
                               )}
                               <div className="font_data_vlog data_vlog_movile pt-2 position-absolute">
-                                <p>GEPOSTET AM {unDato.date}</p>
+                                <p>GEPOSTET AM {unDato.attributes.date}</p>
                               </div>
                             </div>
                             <div>
                               <div className="card-body text-center">
-                                {unDato.title.map((unTexto, index2) => (
-                                  <React.Fragment key={index2}>
-                                    <div className="card-text font_card_title_vlog ">
-                                      {unTexto}
-                                    </div>
-                                  </React.Fragment>
-                                ))}
+                                {/*{unDato.title.map((unTexto, index2) => (*/}
+                                <React.Fragment>
+                                  <div className="card-text font_card_title_vlog ">
+                                    {unDato.attributes.title}
+                                  </div>
+                                </React.Fragment>
+                                {/*))}*/}
                               </div>
                             </div>
                           </div>
@@ -130,10 +109,10 @@ export default function Content05({ datos, color_fondo }) {
 
                     <div className="d-none d-xl-block  ">
                       <Card02
-                        video={unDato.link}
-                        titulo={unDato.title}
-                        texto={unDato.text}
-                        date={unDato.date}
+                        video={unDato.attributes.link}
+                        titulo={unDato.attributes.title}
+                        texto={unDato.attributes.text}
+                        date={unDato.attributes.createdAt}
                       />
                     </div>
                   </div>

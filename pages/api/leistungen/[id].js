@@ -1,8 +1,9 @@
 export default function handler(req, res) {
-  fetch("https://js-agileweb-backend.herokuapp.com/api/shops?populate=%2A")
+  fetch(`https://js-agileweb-backend.herokuapp.com/api/leistungens/${req.query.id}?populate=%2A`)
     .then(response => response.json())
     .then(data => {
-      res.status(200).json(data.data);
+      console.log(data);
+      res.status(200).json(data);
     })
     .catch(err =>
       res.status(400).json(err)
