@@ -1,9 +1,9 @@
-// import { blogs } from "../../../data/data";
-
-import { blog_details } from "../../../data/data_blog_details";
-
 export default function handler(req, res) {
-  
-  
-  res.status(200).json(blog_details);
+  fetch("https://js-agileweb-backend.herokuapp.com/api/blogs?populate=%2A")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      res.status(200).json(data);
+    })
+    .catch((err) => res.status(400).json(err));
 }

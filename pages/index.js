@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import { backend_url } from "../config";
-import { expire_cookies_in_days } from "../config";
-=======
-import {servidor_url} from "../config";
->>>>>>> 111bf857988936ca5a7d7e89f8cdfb03e7d214d2
+import { servidor_url } from "../config";
 import Head from "next/head";
 
 //Componentes
@@ -23,7 +18,7 @@ import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
 
 import MenuFlotante from "../components/MenuFlotante";
 import Footer from "../components/Footer";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
 //----------------------------------------------------------------------------------------------------------
 //            Pagina inicial principal
@@ -35,7 +30,7 @@ export default function Home({
   blogs,
   botones_configurador,
   vlog,
-  main_logos
+  main_logos,
 }) {
   const [desktop_screen, setDesktop_screen] = useState(true);
 
@@ -145,8 +140,6 @@ export default function Home({
 
 //Obteniendo los datos desde el servidor
 export const getServerSideProps = async (context) => {
-
-
   const url = `${backend_url}/api/curso`;
   const res = await fetch(url);
   const cursos = await res.json();
@@ -178,7 +171,7 @@ export const getServerSideProps = async (context) => {
       blogs,
       botones_configurador,
       vlog,
-      main_logos
+      main_logos,
     },
   };
 };

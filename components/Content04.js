@@ -10,14 +10,9 @@ import React from "react";
 //----------------------------------------------------------------------------------------------------------
 
 export default function Content04({ lista_cards }) {
-
-
-  
-
-
   return (
     <>
-      <section >
+      <section>
         <div
           id="blog"
           className="row justify-content-center font_title_seccion_sombra mt-3   ms-4">
@@ -28,27 +23,26 @@ export default function Content04({ lista_cards }) {
         </div>
 
         <div className="row  g-0 pb-5 ps-md-4 ms-3 me-3 pe-md-4 ms-md-5 me-md-5 d-flex justify-content-center">
-          {lista_cards.map((unCard) => (
-            <React.Fragment key={unCard.id}>
+          {[lista_cards].map((unCard) => (
+            <React.Fragment key={unCard.data.id}>
               {/* Vista movil  */}
               <div className="col-md-4 g-5 d-md-none">
-                
                 <Card01
-                  id={unCard.id}
-                  imagen={unCard.image}
-                  titulo={unCard.titulo1}
-                  texto={unCard.titulo2}
-                  link={unCard.link}
+                  id={unCard.data.id}
+                  imagen={unCard.data.attributes.image.data.attributes.url}
+                  titulo={unCard.data.attributes.title}
+                  texto={unCard.data.attributes.subtitle}
+                  link={unCard.data.attributes.url}
                 />
               </div>
               {/* Vista normal  */}
               <div className="col-md-4 g-4  d-none d-md-block  ">
                 <Card05UserBlog
-                  id={unCard.id}
-                  imagen={unCard.image}
-                  titulo={unCard.title}
-                  titulo2={unCard.titulo2}
-                 link={unCard.link}
+                  id={unCard.data.attributes.id}
+                  imagen={unCard.data.attributes.url}
+                  titulo={unCard.data.attributes.title}
+                  titulo2={unCard.data.attributes.subtitle}
+                  link={unCard.data.attributes.url}
                 />
               </div>
             </React.Fragment>
