@@ -1,10 +1,17 @@
-//----------------------------------------------------------------------------------------------------------
-//           Menu superior
-//----------------------------------------------------------------------------------------------------------
-//TODO: Crear  componentes para cada elemento
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState, useEffect } from 'react';
 
 export default function MenuNavBar() {
+  const [leich, setLeich] = useState({data: []})
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetch('/api/leistungen');
+      const servicios = await data.json();
+      setLeich(servicios);
+    }
+    fetchData();
+  }, [])
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light navigation   ">
@@ -69,34 +76,15 @@ export default function MenuNavBar() {
             </a>
 
             <ul className="dropdown-content text-start color-dropdown animate__animated animate__fadeInUp no-bullets">
-              <li className="nav-item">
-                <a
-                  className="dropdown-item color-font-dropdown"
-                  href="/leistungen/1">
-                  ORGANISATIONSENTWICKLUNG
-                </a>
-              </li>
-
-              <li className="nav-item">
-                <a
-                  className="dropdown-item color-font-dropdown"
-                  href="/leistungen/2">
-                  INHOUSE TRAINING
-                </a>
-              </li>
-
-              <li className="nav-item">
-                <a
-                  className="dropdown-item color-font-dropdown"
-                  href="/leistungen/3">
-                  COACHING{" "}
-                </a>
-              </li>
-
-              {/* 
-          <li className="nav-item">
-            <a className="dropdown-item color-font-dropdown" href="/leistungen/4">MITBESTIMMUNG IM AGILEN KONTEXT</a>
-          </li> */}
+              {leich.data.map((item, index) =>
+                <li className="nav-item">
+                  <a
+                    className="dropdown-item color-font-dropdown"
+                    href={`/leistungen/${item.id}`}>
+                    {item.attributes.title}{" "}
+                  </a>
+                </li>
+              )}
             </ul>
           </li>
 

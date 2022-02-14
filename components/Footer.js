@@ -14,10 +14,21 @@ import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import FormularioContacto2 from "./formulariocontacto2";
 import Content01Iconos from "../componentes/area_superior/Content01Iconos";
 import ModalFormCookie from "../components/ModalFormCookie";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Footer() {
   const [changeCookie, setChangeCookie] = useState(false);
+
+  const [leich, setLeich] = useState({data: []});
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetch('/api/leistungen');
+      const servicios = await data.json();
+      setLeich(servicios);
+    }
+    fetchData();
+  }, []);
 
   const handle = () => {
     setChangeCookie(!changeCookie);
@@ -85,27 +96,13 @@ export default function Footer() {
             <div className="col-3  ps-2 ps-lg-5">
               <div className="font_footer_title  mt-3">Leistungen</div>
               <div className="font_facit_text_very_small mt-3">
-                <div>
+                {leich.data.map((item, index) => <div key={index}>
                   <a
                     className="color-font-dropdown mylinkhoover"
-                    href="/leistungen/1">
-                    Organisationsentwicklung
+                    href={`/leistungen/${item.id}`}>
+                    {item.attributes.title}
                   </a>
-                </div>
-                <div>
-                  <a
-                    className="color-font-dropdown mylinkhoover"
-                    href="/leistungen/2">
-                    Inhouse Training
-                  </a>
-                </div>
-                <div>
-                  <a
-                    className="color-font-dropdown mylinkhoover"
-                    href="/leistungen/3">
-                    Coaching
-                  </a>
-                </div>
+                </div>)}
               </div>
             </div>
 

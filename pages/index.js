@@ -52,8 +52,6 @@ export default function Home({
 
   return (
     <>
-    
-
       <Head>
         <title>Open Agile - for better work</title>
         <meta
@@ -149,7 +147,7 @@ export const getServerSideProps = async (context) => {
   const res = await fetch(url);
   const cursos = await res.json();
 
-  const url2 = `${servidor_url}/api/servicio`;
+  const url2 = `${servidor_url}/api/leistungen`;
   const res2 = await fetch(url2);
   const servicios = await res2.json();
 
