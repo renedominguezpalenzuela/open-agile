@@ -6,8 +6,7 @@ export default function Card01Lista({
   titulo_magenta,
   total_card_en_row,
 }) {
-  
-
+  console.log(lista_cards.data[0].attributes.image.data.attributes.url)
   let formato_row = " col-md-4 d-flex  justify-content-center ";
 
   if (total_card_en_row === 3) {
@@ -18,31 +17,20 @@ export default function Card01Lista({
     formato_row = " col-md-5 d-flex w-75 ";
   }
 
-  // let columnas="row-cols-4";
-  // if (total_card_en_row!=undefined) {
-
-  //   columnas = "card-deck row-cols-"+total_card_en_row;
-
-  // }
-
-  //   formato_row = formato_row  + columnas
-
   return (
     <>
       <div className="row mt-5 pt-3 g-4 d-flex justify-content-center ms-4 me-4 ms-md-5 me-md-5 pe-md-5 ps-md-5">
-        {lista_cards.map((unCard, index) => {
+        {lista_cards.data.map((unCard, index) => {
           return (
-            // <>
             <React.Fragment key={index}>
               <div className={formato_row}>
                 {titulo_magenta != undefined && titulo_magenta && (
                   <Card01
                     key={index}
                     id={unCard.id}
-                    imagen={unCard.image}
-                    titulo2={unCard.titulo2}
-                    // texto={unCard.text}
-                    link={unCard.link}
+                    imagen={"https://js-agileweb-backend.herokuapp.com" + unCard.attributes.image.data.attributes.url}
+                    titulo2={unCard.attributes.title}
+                    link={"leistungen/" + unCard.id}
                   />
                 )}
 
@@ -50,11 +38,11 @@ export default function Card01Lista({
                   <Card01
                     key={index}
                     id={unCard.id}
-                    imagen={unCard.image}
-                    titulo={unCard.titulo1}
-                    titulo2={unCard.titulo2}
+                    imagen={"https://js-agileweb-backend.herokuapp.com" + unCard.attributes.image.data.attributes.url}
+                    titulo={unCard.attributes.title}
+                    titulo2={unCard.attributes.title}
                     // texto={unCard.text}
-                    link={unCard.link}
+                    link={"leistungen/" + unCard.id}
                   />
                 )}
               </div>
