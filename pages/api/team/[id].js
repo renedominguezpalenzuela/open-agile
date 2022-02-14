@@ -1,23 +1,10 @@
-
-import { team_details } from "../../../data/data_team_details";
-
 export default function handler(req, res) {
-
- 
-  
-
-
-//   const filtered = crashkurse_details.filter(({unArticulo}) => unArticulo.id === id);
-
-  const filtered = team_details.find(({id}) => id === req.query.id);
-
-  
-
-  if (filtered) {
-    res.status(200).json(filtered);
-  } else {
-    res.status(404).json({ message: `Articulo con ${id} no existe` });
-  }
-
-
+  fetch(`https://js-agileweb-backend.herokuapp.com/api/teams/${req.query.id}?populate=%2A`)
+    .then(response => response.json())
+    .then(data => {
+      res.status(200).json(data.data);
+    })
+    .catch(err =>
+      res.status(400).json(err)
+    )
 }

@@ -11,7 +11,8 @@ export default function MenuNavBar() {
       setLeich(servicios);
     }
     fetchData();
-  }, [])
+  }, []);
+
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light navigation   ">

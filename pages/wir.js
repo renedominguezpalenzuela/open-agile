@@ -5,7 +5,6 @@ import MenuFlotante from "../components/MenuFlotante";
 import Footer from "../components/Footer";
 
 import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
-// import MenuSuperior from "../components/MenuSuperior";
 
 import TextoBloque01 from "../components/textobloque01";
 import Image01 from "../components/crashkurse/image01";
@@ -20,15 +19,7 @@ import { servidor_url } from "../config";
 import { useState, useEffect } from "react";
 import ModalFormCookie from "../components/ModalFormCookie";
 
-//----------------------------------------------------------------------------------------------------------
-//           CRASHKURSE \ CRASHKURS ZUM AGILE COACH
-//----------------------------------------------------------------------------------------------------------
-
 export default function Home({ team }) {
-  // <Head>
-  //   <script async src="js/menu.js" />
-  // </Head>
-
   const titulo1 = "OPEN AGILE TEAM";
   const titulo2 = "UNSERE WERTE";
   const titulo2a = "WIR FREUEN UNS DARAUF DICH KENNENZULERNEN";
@@ -56,8 +47,6 @@ export default function Home({ team }) {
         <script async src="js/chat.js" />
         <script async src="js/menu.js" />
       </Head>
-
-      {/*Contenedor*/}
 
       <div id="principal" className="container-fluid g-0">
         <MenuFlotanteBoton />

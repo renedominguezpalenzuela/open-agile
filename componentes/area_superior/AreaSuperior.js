@@ -135,7 +135,7 @@ export default function AreaSuperior({
             <div className="item-img-team-top me-5">
               <img
                 className=" img-team-top  "
-                src={`${servidor_url}/img/${img_team_top}`}
+                src={(img_team_top.startsWith("https://") ? img_team_top : `${servidor_url}/img/${img_team_top}`)}
               />
             </div>
           )}
