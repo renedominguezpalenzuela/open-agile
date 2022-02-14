@@ -54,10 +54,11 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons";
 
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-
+import ReactGA from "react-ga";
 import { useEffect } from "react";
 import Script from "next/script";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import { withRouter } from "next/router";
 config.autoAddCss = false; /* eslint-disable import/first */
 
 library.add(
@@ -72,35 +73,24 @@ library.add(
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
+ReactGA.initialize("UA-219220429-1");
 
-export default function MyApp(props) {
+const MyApp = (props) => {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
 
   useEffect(() => {
     import("bootstrap/dist/js/bootstrap");
   }, []);
 
+  useEffect(() => {
+    ReactGA.set({ anonymizeIp: true });
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  });
   return (
     <CacheProvider value={emotionCache}>
       <Head>
         <title>My page</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-          strategy="afterInteractive"
-        />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}',  { 'anonymize_ip': true });
-            `,
-          }}
-        />
       </Head>
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
@@ -112,10 +102,12 @@ export default function MyApp(props) {
       </ThemeProvider>
     </CacheProvider>
   );
-}
+};
 
 MyApp.propTypes = {
   Component: PropTypes.elementType.isRequired,
   emotionCache: PropTypes.object,
   pageProps: PropTypes.object.isRequired,
 };
+
+export default withRouter(MyApp);
