@@ -84,7 +84,7 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo01, ti
         <TabPanel value={value} index={0} className="alto-tab  ">
           <div className="ps-md-5 ps-2 ms-md-5 ms-2 pe-2 row col col-md-6">
             <div className=" organization-text mt-2 mb-4   text-left">
-              {titulo}
+              {titulo01}
             </div>
 
             {texto01 != undefined &&
@@ -111,7 +111,7 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo01, ti
         <TabPanel value={value} index={1} className=" alto-tab  ">
           <div className="ps-md-5 ps-2 ms-md-5 ms-2 pe-2 row col col-md-6">
             <div className=" organization-text mt-2 mb-4  text-left ">
-              BEISPIEL VORGEHEN
+              {titulo02}
             </div>
               {texto02 != undefined &&
                 texto02.length > 0 &&
