@@ -87,10 +87,7 @@ export default function Home({ blog }) {
               <div className="mb-2 text-end font_data_blog blog-movile">
                 {fecha}
               </div>
-              <img
-                className="img-md-fluid img-blog"
-                src={`${"https://js-agileweb-backend.herokuapp.com" + url}`}
-              />
+              <img className="img-md-fluid img-blog" src={url} />
             </div>
 
             <div className="row  mt-1 mb-2">

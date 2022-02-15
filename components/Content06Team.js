@@ -14,7 +14,7 @@ export default function Content06Team({ lista_cards }) {
               <div className="col-8 col-md-4 d-lg-none justify-content-center d-flex">
                 <Card01
                   id={unCard.id}
-                  imagen={`https://js-agileweb-backend.herokuapp.com${unCard.attributes.image.data.attributes.url}`}
+                  imagen={unCard.attributes.image?.data?.attributes.url}
                   titulo={unCard.attributes.name}
                   texto={unCard.attributes.resume}
                   link={`/team/${unCard.id}`}
@@ -28,7 +28,7 @@ export default function Content06Team({ lista_cards }) {
               <div className="col-4 d-none d-lg-block  m-4 ">
                 <Card06Team
                   id={unCard.id}
-                  imagen={`https://js-agileweb-backend.herokuapp.com${unCard.attributes.image.data.attributes.url}`}
+                  imagen={unCard.attributes.image?.data?.attributes.url}
                   titulo={unCard.attributes.name}
                   titulo2={unCard.attributes.resume}
                   link={`team/${unCard.id}`}
