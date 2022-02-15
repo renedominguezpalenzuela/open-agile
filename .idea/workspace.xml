@@ -6,14 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d42f5d5a-8e90-4c1a-88e0-2ba227c4c520" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/componentes/area_superior/AreaSuperior.js" beforeDir="false" afterPath="$PROJECT_DIR$/componentes/area_superior/AreaSuperior.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/componentes/area_superior/MenuNavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/componentes/area_superior/MenuNavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Card06Team.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Card06Team.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Content06Team.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Content06Team.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/team/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/team/[id].js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/team/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/team/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/team/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/team/[id].js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/wir.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/wir.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Card01Blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Card01Blog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Card05UserBlog.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Card05UserBlog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/blog/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/blog/[id].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/blog/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/blog/[id].js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

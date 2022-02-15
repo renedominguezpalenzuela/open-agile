@@ -5,12 +5,10 @@ export default function handler(req, res) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      const blogId = data.data.filter((item) => item.id == req.query.id)[0];
+      const blogId = data.data.filter((item) => item.attributes.slug == req.query.id)[0];
       const index = data.data.indexOf(blogId);
       const before = index > 0 ? index - 1 : data.data.length - 1;
       const next = index < data.data.length - 1 ? index + 1 : 0;
-      // const filtered = blog_details.find(({ id }) => id === req.query.id);
-      // console.log(filtered);
       console.log(blogId);
       res.status(200).json({
         data: blogId,
