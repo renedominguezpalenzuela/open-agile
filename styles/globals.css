@@ -141,6 +141,30 @@ a {
   /* left: 30px; */
 }
 
+.markdowncurso > h1 {
+  font-size: 1.5em;
+  font-family: Montserrat-bold;
+  color: #24325a;
+}
+
+.markdowncurso > p {
+  font-family: Montserrat-Regular;
+  color: #24325a;
+  font-size: 1rem;
+}
+
+.markdowncurso > h3 {
+  font-family: Montserrat-Bold;
+  color: #24325a;
+  font-size: 1.2rem;
+}
+
+.markdowncurso > ul > li {
+  font-family: Montserrat-Regular;
+  color: #24325a;
+  font-size: 1rem;
+}
+
 .div_content03a {
   background-color: #eff3f7;
   /* clip-path: polygon(0 2%, 100% 0%, 100% 97%, 0% 100%); */
@@ -886,7 +910,7 @@ ul {
   list-style: none; /* Remove default bullets */
 }
 
-ul li.mybullets::before {
+.mybullets ul li::before {
   content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
   color: #f82d7c; /* Change the color */
   font-weight: bold; /* If you want it to be bold */

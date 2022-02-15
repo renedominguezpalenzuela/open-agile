@@ -1,9 +1,10 @@
-import { crashkurse_beschreibung_details } from "../../../data/data_crashkurse_beschreibung_details";
-
 export default function handler(req, res) {
-
-
-  
-  
-  res.status(200).json(crashkurse_beschreibung_details);
+  fetch(
+    "https://js-agileweb-backend.herokuapp.com/api/crashkurses?populate=%2A"
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      res.status(200).json(data);
+    })
+    .catch((err) => res.status(400).json(err));
 }

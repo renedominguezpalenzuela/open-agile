@@ -32,7 +32,7 @@ export default function Home({ cursos }) {
   const { id } = router.query;
 
   const titulo1 = "CRASHKURSE";
-
+  console.log(cursos);
   return (
     <>
       <Head>
