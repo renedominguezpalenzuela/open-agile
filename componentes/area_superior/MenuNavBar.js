@@ -46,7 +46,7 @@ export default function MenuNavBar() {
           </li>
 
           <li className="nav-item dropdown2  ">
-            <a href="/leistungen/main">
+            <a href="/leistungen">
               <div className="nav-link">LEISTUNGEN</div>
             </a>
 
@@ -55,7 +55,7 @@ export default function MenuNavBar() {
                 <li className="nav-item">
                   <a
                     className="dropdown-item color-font-dropdown"
-                    href={`/leistungen/${item.id}`}>
+                    href={`/${item.attributes.slug}`}>
                     {item.attributes.title}{" "}
                   </a>
                 </li>
@@ -75,7 +75,7 @@ export default function MenuNavBar() {
               <li className="nav-item ">
                 <a
                   className="dropdown-item color-font-dropdown"
-                  href="/team/main">
+                  href="/team">
                   UNSERE WERTE
                 </a>
               </li>

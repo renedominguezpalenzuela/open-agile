@@ -29,7 +29,7 @@ export default function Card01Lista({
                     id={unCard.id}
                     imagen={"https://js-agileweb-backend.herokuapp.com" + unCard.attributes.image.data.attributes.url}
                     titulo2={unCard.attributes.title}
-                    link={"leistungen/" + unCard.id}
+                    link={unCard.attributes.slug}
                   />
                 )}
 

@@ -7,7 +7,7 @@ export default function Card01Blog({ data }) {
     data.attributes.img.data.attributes.url;
   const titulo = data.attributes.title;
   const titulo2 = data.attributes.subtitle;
-  const link = data.id;
+  const link = data.attributes.slug;
   let cadena_sin_padding =
     "row  h-md-100  d-flex align-items-center justify-content-center ";
 

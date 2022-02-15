@@ -2,32 +2,32 @@ import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-import MenuFlotante from "../../components/MenuFlotante";
-import Footer from "../../components/Footer";
+import MenuFlotante from "../components/MenuFlotante";
+import Footer from "../components/Footer";
 
-import Content02Cursos from "../../components/Content02Cursos";
-import Content03 from "../../components/Content03";
-import Content04 from "../../components/Content04";
-import Content05 from "../../components/Content05";
-import Texto01 from "../../components/crashkurse/texto01";
-import Tabla01 from "../../components/crashkurse/tabla01";
-import Tabla02 from "../../components/crashkurse/tabla02";
+import Content02Cursos from "../components/Content02Cursos";
+import Content03 from "../components/Content03";
+import Content04 from "../components/Content04";
+import Content05 from "../components/Content05";
+import Texto01 from "../components/crashkurse/texto01";
+import Tabla01 from "../components/crashkurse/tabla01";
+import Tabla02 from "../components/crashkurse/tabla02";
 
-import Card01Lista from "../../components/Card01Lista";
-import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
-import TextoBloque01 from "../../components/textobloque01";
+import Card01Lista from "../components/Card01Lista";
+import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
+import TextoBloque01 from "../components/textobloque01";
 
-import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
+import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 
-import LeistungenTabs from "../../componentes/leistungen/LeistungenTabs";
+import LeistungenTabs from "../componentes/leistungen/LeistungenTabs";
 
-import BarraConTextoDerecha from "../../components/BarraConTextoDerecha";
-import BarraConTextoIzquierda from "../../components/BarraConTextoIzquierda";
+import BarraConTextoDerecha from "../components/BarraConTextoDerecha";
+import BarraConTextoIzquierda from "../components/BarraConTextoIzquierda";
 
-import { servidor_url } from "../../config";
-import { backend_url } from "../../config";
+import { servidor_url } from "../config";
+import { backend_url } from "../config";
 
-import ModalFormCookie from "../../components/ModalFormCookie";
+import ModalFormCookie from "../components/ModalFormCookie";
 
 export default function Home({ servicios }) {
   const router = useRouter();

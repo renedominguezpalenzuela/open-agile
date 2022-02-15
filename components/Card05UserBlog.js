@@ -3,7 +3,7 @@ let longitud_linea = 24;
 export default function Card05UserBlog({ data }) {
   const titulo = data.attributes.title;
   const titulo2 = data.attributes.subtitle;
-  const link = data.id;
+  const link = data.attributes.slug;
   return (
     <>
       <div className="card myanimacion sombra_cards redondear-card pb-1 ">

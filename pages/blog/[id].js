@@ -39,13 +39,14 @@ export default function Home({ blog }) {
     navigator.clipboard.writeText(url);
   };
 
+  const dt = new Date(blog.data.attributes.publishedAt);
   const title = blog.data.attributes.title;
   const subtitle = blog.data.attributes.title;
-  const fecha = blog.data.attributes.publishedAt;
+  const fecha = `${dt.getFullYear()}.${dt.getMonth()}.${dt.getDate()}`;
   const url = blog.data.attributes.img.data.attributes.url;
   const content = blog.data.attributes.description;
-  const link_anterior = blog.before.id;
-  const link_siguiente = blog.next.id;
+  const link_anterior = blog.before.attributes.slug;
+  const link_siguiente = blog.next.attributes.slug;
   const link_anterior_nombre = blog.before.attributes.title;
   const link_anterior_nombre2 = blog.before.attributes.subtitle;
   const link_siguiente_nombre = blog.next.attributes.title;
