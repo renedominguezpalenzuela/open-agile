@@ -1,0 +1,74 @@
+import Card05UserBlog from "./Card05UserBlog";
+
+export default function CarruselBlogs({ lista_cards }) {
+  return (
+<>
+      {/* TODO: Analizar casos en que el numero de blogs sea = 3  o menor que 3
+         */}
+
+      <div id="blog_carrusel" className="carousel slide  " data-bs-ride="carousel">
+            <div className="carousel-indicators">
+            {lista_cards.map((unDato, index) => (
+                <button type="button" data-bs-target="#blog_carrusel" data-bs-slide-to={index} className={`${index === 0 ? "active" : ""}`}></button>
+            ))}
+            </div>
+
+            <div className="carousel-inner altoCarrousel3 d-flex align-items-center ">
+               <div className=" row  h-100  "> 
+                {lista_cards.map((unCard, index) => (
+                        index<=lista_cards.length-3 ? ( 
+                        <div key={index} className={`${index === 0 ? "active" : ""} carousel-item `}>
+                            <div className="row w-100 ">
+                                <div className="col">
+                                    <Card05UserBlog id={unCard.id} imagen={unCard.image} titulo={unCard.title} titulo2={unCard.titulo2} link={unCard.link} />
+                                </div>
+                                <div className="col">
+                                <Card05UserBlog id={lista_cards[index+1].id} imagen={lista_cards[index+1].image} titulo={lista_cards[index+1].title} titulo2={lista_cards[index+1].titulo2} link={lista_cards[index+1].link} />
+                                </div>
+                                <div className="col">
+                                <Card05UserBlog id={lista_cards[index+2].id} imagen={lista_cards[index+2].image} titulo={lista_cards[index+2].title} titulo2={lista_cards[index+2].titulo2} link={lista_cards[index+2].link} />
+                                </div>
+                            </div>
+                        </div>    
+                        ) : null       
+                ))}
+
+
+
+
+                
+                <div key={lista_cards.length-2} className="carousel-item" >
+                            <div className="row w-100 ">
+                                <div className="col">
+                                  <Card05UserBlog id={lista_cards[lista_cards.length-2].id} imagen={lista_cards[lista_cards.length-2].image} titulo={lista_cards[lista_cards.length-2].title} titulo2={lista_cards[lista_cards.length-2].titulo2} link={lista_cards[lista_cards.length-2].link} />
+                                </div>
+                                <div className="col">
+                                  <Card05UserBlog id={lista_cards[lista_cards.length-2+1].id} imagen={lista_cards[lista_cards.length-2+1].image} titulo={lista_cards[lista_cards.length-2+1].title} titulo2={lista_cards[lista_cards.length-2+1].titulo2} link={lista_cards[lista_cards.length-2+1].link} />
+                                </div>
+                                <div className="col">
+                                  <Card05UserBlog id={lista_cards[0].id} imagen={lista_cards[0].image} titulo={lista_cards[0].title} titulo2={lista_cards[0].titulo2} link={lista_cards[0].link} />
+                                </div>
+                            </div>
+                </div>    
+
+               <div key={lista_cards.length-1} className="carousel-item" >
+                            <div className="row w-100 ">
+                                <div className="col">
+                                  <Card05UserBlog id={lista_cards[lista_cards.length-1].id} imagen={lista_cards[lista_cards.length-1].image} titulo={lista_cards[lista_cards.length-1].title} titulo2={lista_cards[lista_cards.length-1].titulo2} link={lista_cards[lista_cards.length-1].link} />
+                                </div>
+                                <div className="col">                                  
+                                  <Card05UserBlog id={lista_cards[0].id} imagen={lista_cards[0].image} titulo={lista_cards[0].title} titulo2={lista_cards[0].titulo2} link={lista_cards[0].link} />
+                                </div>
+                                <div className="col">
+                                  <Card05UserBlog id={lista_cards[1].id} imagen={lista_cards[1].image} titulo={lista_cards[1].title} titulo2={lista_cards[1].titulo2} link={lista_cards[1].link} />
+                                </div>
+                            </div>
+                </div>    
+              </div>
+
+            </div>
+            
+        </div>
+    </>
+  );
+}

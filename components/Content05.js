@@ -40,7 +40,7 @@ export default function Content05({ datos, color_fondo }) {
             data-bs-ride="carousel"
             data-mdb-touch="true">
             {/* TODO: crear de forma dinamica */}
-            <div className="carousel-indicators ">
+            <div className="carousel-indicators">
               <button
                 type="button"
                 data-bs-target="#MyCarousel"
