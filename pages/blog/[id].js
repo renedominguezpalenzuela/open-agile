@@ -1,48 +1,22 @@
 import Head from "next/head";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import * as React from "react";
-import Link from "next/link";
 import { useEffect } from "react";
 import MenuFlotante from "../../components/MenuFlotante";
 import Footer from "../../components/Footer";
 import ReactMarkdown from "react-markdown";
-import Content02Cursos from "../../components/Content02Cursos";
-import Content03 from "../../components/Content03";
-import Content04 from "../../components/Content04";
-import Content05 from "../../components/Content05";
-import Texto01 from "../../components/crashkurse/texto01";
-import Tabla01 from "../../components/crashkurse/tabla01";
-import Tabla02 from "../../components/crashkurse/tabla02";
-
-import Card01Lista from "../../components/Card01Lista";
 import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
-
-import ModalFormCookie from "../../components/ModalFormCookie";
-
-// import MenuSuperior from "../components/MenuSuperior";
 import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
-
 import { servidor_url } from "../../config";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faShareAlt } from "@fortawesome/free-solid-svg-icons";
-
-import { faLongArrowAltLeft } from "@fortawesome/free-solid-svg-icons";
-
 import Tooltip from "@mui/material/Tooltip";
-import ClickAwayListener from "@mui/material/ClickAwayListener";
-
 //----------------------------------------------------------------------------------------------------------
 //            Pagina inicial principal
 //----------------------------------------------------------------------------------------------------------
-
 export default function Home({ blog }) {
   const [open, setOpen] = React.useState(false);
 
@@ -87,7 +61,7 @@ export default function Home({ blog }) {
       elemento.classList.add("font_title_blogs_articles");
     }
   }, []);
-  console.log(link_siguiente_nombre);
+
   return (
     <>
       <Head>
@@ -108,10 +82,6 @@ export default function Home({ blog }) {
             <div className="row  mt-5 mb-2 d-flex align-items-center justify-content-center titulo font_title_blogs_articles">
               {title}
             </div>
-            {/* <div className="row   me-5 mt-5 mb-2 d-flex  justify-content-end font_autor_fecha">
-              {autor != undefined && autor != "" && `von ${autor} ${fecha}`}
-            </div> */}
-
             <div className="row   d-flex align-items-center justify-content-center">
               <div className="mb-2 text-end font_data_blog blog-movile">
                 {fecha}
@@ -294,10 +264,8 @@ export default function Home({ blog }) {
             </div>
           </div>
         </div>
-
         <Footer />
       </div>
-
       <MenuFlotante />
     </>
   );
@@ -391,9 +359,7 @@ export const getServerSideProps = async (context) => {
   const { id } = context.query;
   const url = `${servidor_url}/api/blog/${encodeURIComponent(id)}`;
   const res = await fetch(url);
-
   const blog = await res.json();
-
   return {
     props: {
       blog,

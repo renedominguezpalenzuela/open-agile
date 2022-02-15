@@ -1,30 +1,18 @@
 import Head from "next/head";
-import Image from "next/image";
-
 import MenuFlotante from "../components/MenuFlotante";
 import Footer from "../components/Footer";
-
 import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
-// import MenuSuperior from "../components/MenuSuperior";
-
-import TextoBloque01 from "../components/textobloque01";
-import Image01 from "../components/crashkurse/image01";
-
-import Tabla01 from "../components/crashkurse/tabla01";
-
 import AreaSuperior from "../componentes/area_superior/AreaSuperior";
-
-import BarraConTextoDerecha from "../components/BarraConTextoDerecha";
-import BarraConTextoIzquierda from "../components/BarraConTextoIzquierda";
 import Card08Job from "../components/Card08Job";
-import ModalFormCookie from "../components/ModalFormCookie";
-
 import { useState, useEffect } from "react";
+import { servidor_url } from "../config";
+import { backend_url } from "../config";
 //----------------------------------------------------------------------------------------------------------
 //           CRASHKURSE \ CRASHKURS ZUM AGILE COACH
 //----------------------------------------------------------------------------------------------------------
 
-export default function Home() {
+export default function Home({ jobs }) {
+  console.log(jobs);
   const texto1 = "JOBS";
   // const titulo2 = "Hier findest Du aktuelle Jobangebote";
   const texto2 = "HIER FINDEST DU AKTUELLE JOBANGEBOTE";
@@ -101,42 +89,29 @@ export default function Home() {
         />
 
         <div className="row d-flex justify-content-center mt-5 mb-5">
-          <div className="col-md-5  ">
-            <Card08Job
-              titulo1={titulo1}
-              titulo2={titulo2}
-              titulo_parrafo1={titulo_parrafo1}
-              parrafo1={parrafo1}
-              titulo_parrafo2={titulo_parrafo2}
-              parrafo2={parrafo2}
-              titulo_parrafo3={titulo_parrafo3}
-              parrafo3={parrafo3}
-            />
-          </div>
+          {jobs.data.map((card, key) => {
+            return (
+              <div key={key} className="col-md-5  ">
+                <Card08Job data={card} />
+              </div>
+            );
+          })}
         </div>
-
-        {/* 
-        <TextoBloque01 titulo={titulo3} />
-
-
-           <div className="mt-5"> </div>
-        <BarraConTextoDerecha titulo={texto01} texto={texto02} />
-
-        <div className="mt-5"> </div>
-        <BarraConTextoIzquierda titulo={texto03} texto={texto04} /> 
-
-
-
-    <div className="mt-5"> </div>
-        <BarraConTextoDerecha titulo={texto05} texto={texto06} /> */}
-
-        {/*Footer  */}
         <div className="mt-5"> </div>
         <Footer />
       </div>
-
-      {/*Menu Lateral oculto  */}
       <MenuFlotante />
     </>
   );
 }
+export const getServerSideProps = async (context) => {
+  const url5 = `${backend_url}/api/jobs`;
+  const res5 = await fetch(url5);
+  const jobs = await res5.json();
+
+  return {
+    props: {
+      jobs,
+    },
+  };
+};
