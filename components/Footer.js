@@ -19,15 +19,23 @@ import { useState, useEffect } from "react";
 export default function Footer() {
   const [changeCookie, setChangeCookie] = useState(false);
 
-  const [leich, setLeich] = useState({data: []});
+  const [leich, setLeich] = useState({ data: [] });
+  const [crush, setCrush] = useState({ data: [] });
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetch('/api/leistungen');
+      const data = await fetch("/api/leistungen");
       const servicios = await data.json();
       setLeich(servicios);
-    }
+    };
     fetchData();
+
+    const fetchData2 = async () => {
+      const data = await fetch("/api/curso");
+      const servicios = await data.json();
+      setCrush(servicios);
+    };
+    fetchData2();
   }, []);
 
   const handle = () => {
@@ -97,57 +105,30 @@ export default function Footer() {
             <div className="col-3  ps-2 ps-lg-5">
               <div className="font_footer_title  mt-3">Leistungen</div>
               <div className="font_facit_text_very_small mt-3">
-                {leich.data.map((item, index) => <div key={index}>
-                  <a
-                    className="color-font-dropdown mylinkhoover"
-                    href={`/leistungen/${item.id}`}>
-                    {item.attributes.title}
-                  </a>
-                </div>)}
+                {leich.data.map((item, index) => (
+                  <div key={index}>
+                    <a
+                      className="color-font-dropdown mylinkhoover"
+                      href={`/leistungen/${item.id}`}>
+                      {item.attributes.title}
+                    </a>
+                  </div>
+                ))}
               </div>
             </div>
 
             <div className="col-3 ps-5  ">
               <div className="font_footer_title mt-3">Crashkurse</div>
               <div className="font_facit_text_very_small mt-3">
-                <div>
-                  <a
-                    className="color-font-dropdown mylinkhoover"
-                    href="/crashkurse/beschreibung/1">
-                    Crashkurs zum Agile Coach{" "}
-                  </a>
-                </div>
-                <div>
-                  <a
-                    className="color-font-dropdown mylinkhoover"
-                    href="/crashkurse/beschreibung/2">
-                    Crashkurs zum Agile Facilitator{" "}
-                  </a>
-                </div>
-
-                <div>
-                  <a
-                    className="color-font-dropdown mylinkhoover"
-                    href="/crashkurse/beschreibung/3">
-                    Crashkurs zum Scrum Master{" "}
-                  </a>
-                </div>
-
-                <div>
-                  <a
-                    className="color-font-dropdown mylinkhoover"
-                    href="/crashkurse/beschreibung/4">
-                    Crashkurs Mitbestimmung in der agilen Arbeitswelt{" "}
-                  </a>
-                </div>
-
-                <div>
-                  <a
-                    className="color-font-dropdown mylinkhoover"
-                    href="/crashkurse/beschreibung/5">
-                    Online Crashkurs Selbstorganisation in agilen Teams{" "}
-                  </a>
-                </div>
+                {crush.data.map((item, index) => (
+                  <div key={index}>
+                    <a
+                      className="color-font-dropdown mylinkhoover"
+                      href={`/crashkurse/${item.id}`}>
+                      {item.attributes.page_title}
+                    </a>
+                  </div>
+                ))}
               </div>
             </div>
 

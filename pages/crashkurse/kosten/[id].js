@@ -55,8 +55,6 @@ export default function Home({ curso }) {
     link_termine_new = servidor_url + "/" + link_inhalte + link_termine;
   }
 
-  console.log(link_pdf);
-
   const [landscape, setLandscape] = useState(false);
   const [desktop_screen, setDesktop_screen] = useState(true);
   const handleResize = () => {

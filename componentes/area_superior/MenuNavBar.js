@@ -1,16 +1,22 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 export default function MenuNavBar() {
-  const [leich, setLeich] = useState({data: []})
-
+  const [leich, setLeich] = useState({ data: [] });
+  const [crush, setCrush] = useState({ data: [] });
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetch('/api/leistungen');
+      const data = await fetch("/api/leistungen");
       const servicios = await data.json();
       setLeich(servicios);
-    }
+    };
     fetchData();
+    const fetchData2 = async () => {
+      const data = await fetch("/api/curso");
+      const servicios = await data.json();
+      setCrush(servicios);
+    };
+    fetchData2();
   }, []);
 
   return (
@@ -23,47 +29,15 @@ export default function MenuNavBar() {
             </a>
 
             <ul className="dropdown-content text-start color-dropdown animate__animated animate__fadeInUp no-bullets">
-              <li className="nav-item ">
-                <a
-                  className="dropdown-item color-font-dropdown"
-                  href="/crashkurse/beschreibung/1">
-                  CRASHKURS ZUM AGILE COACH
-                </a>
-              </li>
-
-              <li className="nav-item">
-                <a
-                  className="dropdown-item color-font-dropdown"
-                  href="/crashkurse/beschreibung/2">
-                  CRASHKURS ZUM AGILE FACILITATOR
-                </a>
-              </li>
-
-              <li className="nav-item">
-                <a
-                  className="dropdown-item color-font-dropdown"
-                  href="/crashkurse/beschreibung/3">
-                  CRASHKURS ZUM SCRUM MASTER
-                </a>
-              </li>
-
-              <li className="nav-item">
-                <a
-                  className="dropdown-item color-font-dropdown"
-                  href="/crashkurse/beschreibung/4">
-                  {" "}
-                  CRASHKURS MITBESTIMMUNG IN DER AGILEN ARBEITSWELT
-                </a>
-              </li>
-
-              <li className="nav-item">
-                <a
-                  className="dropdown-item color-font-dropdown"
-                  href="/crashkurse/beschreibung/5">
-                  {" "}
-                  ONLINE CRASHKURS SELBSTORGANISATION IN AGILEN TEAMS
-                </a>
-              </li>
+              {crush.data.map((item, key) => (
+                <li key={key} className="nav-item ">
+                  <a
+                    className="dropdown-item color-font-dropdown"
+                    href={`/crashkurse/beschreibung/${item.id}`}>
+                    {item.attributes.page_title}
+                  </a>
+                </li>
+              ))}
             </ul>
           </li>
 
@@ -77,7 +51,7 @@ export default function MenuNavBar() {
             </a>
 
             <ul className="dropdown-content text-start color-dropdown animate__animated animate__fadeInUp no-bullets">
-              {leich.data.map((item, index) =>
+              {leich.data.map((item, index) => (
                 <li className="nav-item">
                   <a
                     className="dropdown-item color-font-dropdown"
@@ -85,7 +59,7 @@ export default function MenuNavBar() {
                     {item.attributes.title}{" "}
                   </a>
                 </li>
-              )}
+              ))}
             </ul>
           </li>
 
