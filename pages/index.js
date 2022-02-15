@@ -1,4 +1,5 @@
 import { servidor_url } from "../config";
+import { backend_url } from "../config";
 import Head from "next/head";
 
 //Componentes
