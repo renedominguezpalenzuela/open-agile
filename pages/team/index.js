@@ -26,7 +26,7 @@ import ModalFormCookie from "../../components/ModalFormCookie";
 
 export default function Home({uw}) {
 
-  console.log(uw)
+  
 
 
   const titulo1 = "TEAM";

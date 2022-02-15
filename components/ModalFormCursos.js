@@ -248,7 +248,7 @@ export default function ModalFormCursos({
       `,
     };
 
-    console.log(DataToSend);
+    
 
     const respuesta = await sendFormulario(DataToSend);
 

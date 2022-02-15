@@ -9,7 +9,7 @@ export default function handler(req, res) {
       const index = data.data.indexOf(blogId);
       const before = index > 0 ? index - 1 : data.data.length - 1;
       const next = index < data.data.length - 1 ? index + 1 : 0;
-      console.log(blogId);
+      
       res.status(200).json({
         data: blogId,
         before: data.data[before],

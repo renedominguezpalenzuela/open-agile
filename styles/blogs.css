@@ -22,9 +22,10 @@
   font-family: Montserrat-BoldItalic;
   color: #f82d7c;
   text-align: left;
-  font-size: 6.4vw !important;
+  /* font-size: 6.4vw !important; */
   line-height: 1;
   font-weight: 500;
+  font-size: 4rem;
   margin-bottom: 25px !important;
 
   /* letter-spacing: 4px; */

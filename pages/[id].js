@@ -33,7 +33,7 @@ export default function Home({ servicios }) {
   const router = useRouter();
   const { id } = router.query;
 
-  console.log(servicios);
+  
 
   // const { titulo2, titulo3, titulo2a, titulo, texto01, texto02, texto03 } =
   //   servicios;
