@@ -100,7 +100,7 @@ export default function Footer() {
                 {leich.data.map((item, index) => <div key={index}>
                   <a
                     className="color-font-dropdown mylinkhoover"
-                    href={`/leistungen/${item.id}`}>
+                    href={item.attributes.slug}>
                     {item.attributes.title}
                   </a>
                 </div>)}
@@ -152,7 +152,7 @@ export default function Footer() {
             </div>
 
             <div className="col-3  ps-5 ">
-              <div className="font_footer_title mt-3">Open Agile </div>
+              <div className="font_footer_title mt-3">Open Agile</div>
               <div className="font_facit_text_very_small mt-3">
                 <div>
                   <a className="color-font-dropdown mylinkhoover" href="/wir">
