@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d42f5d5a-8e90-4c1a-88e0-2ba227c4c520" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/componentes/area_superior/MenuNavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/componentes/area_superior/MenuNavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/componentes/area_superior/MenuNavBar2.js" beforeDir="false" afterPath="$PROJECT_DIR$/componentes/area_superior/MenuNavBar2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Card01Lista.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Card01Lista.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/leistungen/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/leistungen/[id].js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/leistungen/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/[id].js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/leistungen/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/leistungen/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/team/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/team/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
