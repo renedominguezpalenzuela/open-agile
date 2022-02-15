@@ -27,7 +27,7 @@ export default function Card01Lista({
                   <Card01
                     key={index}
                     id={unCard.id}
-                    imagen={"https://js-agileweb-backend.herokuapp.com" + unCard.attributes.image.data.attributes.url}
+                    imagen={unCard.attributes.image.data.attributes.url}
                     titulo2={unCard.attributes.title}
                     link={unCard.attributes.slug}
                   />
@@ -37,7 +37,7 @@ export default function Card01Lista({
                   <Card01
                     key={index}
                     id={unCard.id}
-                    imagen={"https://js-agileweb-backend.herokuapp.com" + unCard.attributes.image.data.attributes.url}
+                    imagen={unCard.attributes.image.data.attributes.url}
                     titulo={unCard.attributes.title}
                     titulo2={unCard.attributes.title}
                     // texto={unCard.text}

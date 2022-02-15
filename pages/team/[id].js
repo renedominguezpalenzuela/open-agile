@@ -1,20 +1,20 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { useRouter } from 'next/router'
-import Link from 'next/link'
+import Head from "next/head";
+import Image from "next/image";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
-import React from 'react'
+import React from "react";
 
-import MenuFlotante from '../../components/MenuFlotante'
-import MenuFlotanteBoton from '../../components/MenuFlotanteBoton'
-import Footer from '../../components/Footer'
+import MenuFlotante from "../../components/MenuFlotante";
+import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
+import Footer from "../../components/Footer";
 
-import TextoBloque01 from '../../components/textobloque01'
-import TextoSimple from '../../components/textosimple'
+import TextoBloque01 from "../../components/textobloque01";
+import TextoSimple from "../../components/textosimple";
 
-import AreaSuperior from '../../componentes/area_superior/AreaSuperior'
+import AreaSuperior from "../../componentes/area_superior/AreaSuperior";
 
-import { servidor_url } from '../../config'
+import { servidor_url } from "../../config";
 import { backend_url } from "../../config";
 
 export default function Home({ team }) {
@@ -38,14 +38,16 @@ export default function Home({ team }) {
   //   cargo,
   // } = team;
 
-  console.log(team)
+  console.log(team);
 
-  let foto2 = 'https://js-agileweb-backend.herokuapp.com' + team?.attributes?.image?.data?.attributes?.url;
+  let foto2 = team?.attributes?.image?.data?.attributes?.url;
 
   return (
     <>
       <Head>
-        <title>{'Wir'} - {team.attributes.header_title}</title>
+        <title>
+          {"Wir"} - {team.attributes.header_title}
+        </title>
         <meta name="description" content="Wir" />
         <link rel="icon" href="/favicon.ico" />
         <script async src={`${servidor_url}/js/chat.js`} />
@@ -59,7 +61,7 @@ export default function Home({ team }) {
           fondo="team"
           texto2={team.attributes.header_title}
           texto_parrafo_blanco_team={[team.attributes.description]}
-          img_team_top={'https://js-agileweb-backend.herokuapp.com' + team.attributes.imagetop.data.attributes.url}
+          img_team_top={team.attributes.imagetop.data.attributes.url}
           iconos_team={true}
           email={team.attributes.email}
           linkedin={team.attributes.linkedin}
@@ -67,11 +69,15 @@ export default function Home({ team }) {
           linea_obliqua={true}
         />
 
-        {team.attributes.button_text != undefined && team.attributes.button_text != '' && (
-          <div className="row mt-5 mb-5 text-center  ">
-            <h3 className="nombre_team"> {team.attributes.button_text.toUpperCase()} </h3>
-          </div>
-        )}
+        {team.attributes.button_text != undefined &&
+          team.attributes.button_text != "" && (
+            <div className="row mt-5 mb-5 text-center  ">
+              <h3 className="nombre_team">
+                {" "}
+                {team.attributes.button_text.toUpperCase()}{" "}
+              </h3>
+            </div>
+          )}
         <>
           <div className="row d-flex justify-content-center">
             <div className="col-9 col-md-6  font_weiterbildungen">
@@ -82,11 +88,13 @@ export default function Home({ team }) {
           <div className="row d-flex justify-content-center  ">
             <div className="col-9 col-md-6 mt-2">
               <ul>
-                  <div className="font_erfahrum_detalles  ">
-                    {team.attributes.qualifikationen.split('\n').map((item, index) =>
+                <div className="font_erfahrum_detalles  ">
+                  {team.attributes.qualifikationen
+                    .split("\n")
+                    .map((item, index) => (
                       <li className="bullets-team"> {item} </li>
-                      )}
-                  </div>
+                    ))}
+                </div>
               </ul>
             </div>
           </div>
@@ -106,11 +114,16 @@ export default function Home({ team }) {
           <div className="row d-flex justify-content-center ">
             <div className="col-md-6 col-9 mt-2 ">
               <ul>
-                  <div className="font_erfahrum_detalles  ">
-                    {team.attributes.projekterfahrungen.split('\n').map((item, index) =>
-                      <li key={index} className="bullets-team"> {item} </li>
-                    )}
-                  </div>
+                <div className="font_erfahrum_detalles  ">
+                  {team.attributes.projekterfahrungen
+                    .split("\n")
+                    .map((item, index) => (
+                      <li key={index} className="bullets-team">
+                        {" "}
+                        {item}{" "}
+                      </li>
+                    ))}
+                </div>
               </ul>
             </div>
           </div>
@@ -123,8 +136,8 @@ export default function Home({ team }) {
         <div className="row mt-1 mb-2 mt-md-3 mb-md-4 d-flex justify-content-center  ">
           <div className="col-md-6 col-9 mt-2">
             <div className="font_texto_inferior_team  ">
-              {' '}
-              {`seit 2022 bei Open Agile`}{' '}
+              {" "}
+              {`seit 2022 bei Open Agile`}{" "}
             </div>
           </div>
         </div>
@@ -133,24 +146,22 @@ export default function Home({ team }) {
           <div className="col-4 d-flex justify-content-center align-items-center ">
             <img
               className="pt-4  imagen-team"
-              src={`https://js-agileweb-backend.herokuapp.com${team.attributes.imageround.data.attributes.url}`}
+              src={team.attributes.imageround.data.attributes.url}
             />
           </div>
 
-          <div
-            className="col-7 mt-5 pt-5 pb-2  h-100"
-          >
-              <div className="row   pe-md-3 me-md-3  font_motto_team  ">
-                {team.attributes.motto_quote}
-              </div>
+          <div className="col-7 mt-5 pt-5 pb-2  h-100">
             <div className="row   pe-md-3 me-md-3  font_motto_team  ">
-                {team.attributes.motto_author}
-              </div>
+              {team.attributes.motto_quote}
+            </div>
+            <div className="row   pe-md-3 me-md-3  font_motto_team  ">
+              {team.attributes.motto_author}
+            </div>
 
             <div className=" row  mt-3 me-1  horizontal-line "></div>
 
             <div className=" row  mt-3 font_title1-team-seccion  ">
-              Motto von {team.attributes.name.split(' ')[0]}
+              Motto von {team.attributes.name.split(" ")[0]}
             </div>
 
             {/* <div className="row  mt-2 font_title2-team-seccion font_title_purple ">{cargo}</div> */}
@@ -164,19 +175,19 @@ export default function Home({ team }) {
       {/*Menu Lateral oculto  */}
       <MenuFlotante />
     </>
-  )
+  );
 }
 
 export const getServerSideProps = async (context) => {
-  const { id } = context.query
-  const url = `${backend_url}/api/team/${encodeURIComponent(id)}`
-  const res = await fetch(url)
+  const { id } = context.query;
+  const url = `${backend_url}/api/team/${encodeURIComponent(id)}`;
+  const res = await fetch(url);
 
-  const team = await res.json()
+  const team = await res.json();
 
   return {
     props: {
       team,
     },
-  }
-}
+  };
+};

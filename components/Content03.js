@@ -1,4 +1,4 @@
-export default function Content03 ({ mainlogos }) {
+export default function Content03({ mainlogos }) {
   return (
     <>
       <div id="empresas" className="color_fondo div_content03b pt-5 pb-3">
@@ -14,7 +14,10 @@ export default function Content03 ({ mainlogos }) {
           {mainlogos.data.map((unDato, index) => (
             <div key={index} className="col-2 m-3">
               <a href={unDato.attributes.website} aria-pressed="true">
-                <img className="img-fluid img-sponsors1 grayscale " src={"https://js-agileweb-backend.herokuapp.com" + unDato.attributes.logo.data.attributes.url} />
+                <img
+                  className="img-fluid img-sponsors1 grayscale "
+                  src={unDato.attributes.logo.data.attributes.url}
+                />
               </a>
             </div>
           ))}
@@ -23,5 +26,3 @@ export default function Content03 ({ mainlogos }) {
     </>
   );
 }
-
-

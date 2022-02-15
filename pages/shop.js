@@ -68,7 +68,7 @@ export default function Home({ shop }) {
                   id={oneShop.id}
                   titulo={oneShop.attributes.title}
                   texto={oneShop.attributes.description}
-                  imagen={"https://js-agileweb-backend.herokuapp.com" + oneShop.attributes.image.data.attributes.url}
+                  imagen={oneShop.attributes.image.data.attributes.url}
                   texto_boton1={oneShop.attributes.left_button_text}
                   texto_boton2={oneShop.attributes.rigth_button_text}
                   texto_alt={oneShop.attributes.title}

@@ -10,10 +10,7 @@ export default function Card05UserBlog({ data }) {
         <div className="row   g-0 pb-2">
           <img
             className=" imagen-blog "
-            src={`${
-              "https://js-agileweb-backend.herokuapp.com" +
-              data.attributes.img.data.attributes.url
-            }`}
+            src={data.attributes.img.data.attributes.url}
           />
         </div>
 

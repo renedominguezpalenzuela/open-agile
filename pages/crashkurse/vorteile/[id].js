@@ -32,11 +32,10 @@ export default function Home({ curso }) {
 
   const router = useRouter();
   const { id } = router.query;
-  const url = "https://js-agileweb-backend.herokuapp.com";
   const titulo_area_superior = curso.data.attributes.page_title;
   // const image2 = curso.data.attributes.beschreibung_image.data.attributes.url,
   const image_kosten = curso.data.attributes.vorteile_image.data
-    ? url + curso.data.attributes.vorteile_image.data.attributes.url
+    ? curso.data.attributes.vorteile_image.data.attributes.url
     : null;
 
   const link_beschreibung = `crashkurse/beschreibung/${curso.data.id}`;

@@ -2,9 +2,7 @@ import React from "react";
 
 let longitud_linea = 24;
 export default function Card01Blog({ data }) {
-  const imagen =
-    "https://js-agileweb-backend.herokuapp.com" +
-    data.attributes.img.data.attributes.url;
+  const imagen = data.attributes.img.data.attributes.url;
   const titulo = data.attributes.title;
   const titulo2 = data.attributes.subtitle;
   const link = data.attributes.slug;
