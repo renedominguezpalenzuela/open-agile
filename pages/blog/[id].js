@@ -52,16 +52,16 @@ export default function Home({ blog }) {
   const link_siguiente_nombre = blog.next.attributes.title;
   const link_siguiente_nombre2 = blog.next.attributes.subtitle;
 
-  useEffect(() => {
-    const elemento = document.querySelector(".titulo");
-    if (title.length > 18) {
-      elemento.classList.remove("font_title_blogs_articles");
-      elemento.classList.add("font_title_blogs_articles-2");
-    } else {
-      elemento.classList.remove("font_title_blogs_articles-2");
-      elemento.classList.add("font_title_blogs_articles");
-    }
-  }, []);
+  // useEffect(() => {
+  //   const elemento = document.querySelector(".titulo");
+  //   if (title.length > 18) {
+  //     elemento.classList.remove("font_title_blogs_articles");
+  //     elemento.classList.add("font_title_blogs_articles-2");
+  //   } else {
+  //     elemento.classList.remove("font_title_blogs_articles-2");
+  //     elemento.classList.add("font_title_blogs_articles");
+  //   }
+  // }, []);
 
   return (
     <>
