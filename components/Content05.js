@@ -8,6 +8,11 @@ export default function Content05({ datos, color_fondo }) {
     clase_color_carrusel = "color_carrusel_blanco";
   }
 
+  const getDt = (datea) => {
+    const dt = new Date(datea);
+    return `${dt.getDate()}.${dt.getMonth()}.${dt.getFullYear()}`;
+  }
+
   return (
     <>
       <div id="MyCarouselTitle" className={`${clase_color_carrusel} pb-1`}>
@@ -71,7 +76,7 @@ export default function Content05({ datos, color_fondo }) {
                                   </div>
                                 )}
                               <div className="font_data_vlog data_vlog_movile pt-2 position-absolute">
-                                <p>GEPOSTET AM {unDato.attributes.date}</p>
+                                <p>GEPOSTET AM {getDt(unDato.attributes.date)}</p>
                               </div>
                             </div>
                             <div>

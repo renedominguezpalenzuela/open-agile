@@ -16,7 +16,7 @@ export default function Card02({ titulo, texto, video, date }) {
               <div className="font_carrusel_video ">{texto}</div>
               <div className="data_vlog_desktop d-inline-block ms-2 mt-2">
                 <p>
-                  GEPOSTET AM {dt.getFullYear()}.{dt.getMonth()}.{dt.getDate()}
+                  GEPOSTET AM {dt.getDate()}.{dt.getMonth()}.{dt.getFullYear()}
                 </p>
               </div>
             </div>

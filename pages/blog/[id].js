@@ -42,7 +42,7 @@ export default function Home({ blog }) {
   const dt = new Date(blog.data.attributes.publishedAt);
   const title = blog.data.attributes.title;
   const subtitle = blog.data.attributes.title;
-  const fecha = `${dt.getFullYear()}.${dt.getMonth()}.${dt.getDate()}`;
+  const fecha = `${dt.getDate()}.${dt.getMonth()}.${dt.getFullYear()}`;
   const url = blog.data.attributes.img.data.attributes.url;
   const content = blog.data.attributes.description;
   const link_anterior = blog.before.attributes.slug;
