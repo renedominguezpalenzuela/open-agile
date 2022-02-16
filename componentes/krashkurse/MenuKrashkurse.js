@@ -30,7 +30,8 @@ export default function MenuKrashkurse({
             <tbody>
               <tr className=" font-card-menu-crashkurse">
                 <td>
-                  <a href={`${servidor_url}/${link_beschreibung}`}>
+                  <a
+                    href={`${servidor_url}/${link_beschreibung}#section_beschreibung`}>
                     <div className="myanimacioncursos">BESCHREIBUNG</div>
                   </a>
                 </td>
@@ -39,7 +40,7 @@ export default function MenuKrashkurse({
               </tr>
               <tr className="font-card-menu-crashkurse">
                 <td>
-                  <a href={`${servidor_url}/${link_vorteile}`}>
+                  <a href={`${servidor_url}/${link_vorteile}#section_vorteile`}>
                     <div className="myanimacioncursos">VORTEILE</div>
                   </a>
                 </td>
@@ -48,7 +49,7 @@ export default function MenuKrashkurse({
               </tr>
               <tr className="font-card-menu-crashkurse">
                 <td>
-                  <a href={`${servidor_url}/${link_inhalte}`}>
+                  <a href={`${servidor_url}/${link_inhalte}#section_inhalte`}>
                     <div className="myanimacioncursos">INHALTE</div>
                   </a>
                 </td>
@@ -67,7 +68,7 @@ export default function MenuKrashkurse({
 
               <tr className="font-card-menu-crashkurse">
                 <td>
-                  <a href={`${servidor_url}/${link_kosten}`}>
+                  <a href={`${servidor_url}/${link_kosten}#section_kosten`}>
                     <div className="myanimacioncursos">LEISTUNGEN & KOSTEN</div>
                   </a>
                 </td>
