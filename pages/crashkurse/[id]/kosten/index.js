@@ -46,13 +46,14 @@ export default function Home({ curso }) {
   const link_inhalte = `crashkurse/${curso.data.attributes.slug}/inhalte`;
   const link_leistungen = `crashkurse/${curso.data.attributes.slug}/leistungen`;
   const link_kosten = `crashkurse/${curso.data.attributes.slug}/kosten`;
-  const link_termine = "/#dates_section";
+  const link_termine = "#dates_section";
   const link_pdf = link_pdfs(curso.data.attributes.files.data);
 
   let link_termine_new = "";
   if (link_termine != undefined && link_termine.length > 0) {
     link_termine_new = servidor_url + "/" + link_inhalte + link_termine;
   }
+  const dataTable = curso.data.attributes.dateTable;
 
   const [landscape, setLandscape] = useState(false);
   const [desktop_screen, setDesktop_screen] = useState(true);
@@ -131,14 +132,14 @@ export default function Home({ curso }) {
           </div>
         </div>
 
-        {/* <Tabla03
+        {dataTable !== null && <Tabla03
           className="mt-5"
-          crashkurs_date_title={crashkurs_date_title}
-          crashkurs_date={crashkurs_date}
-          titulo2a={crashkurs_date_title}
-          precio={texto_kosten}
-          nombre_curso={nombre_curso}
-        /> */}
+          crashkurs_date_title={dataTable.title}
+          crashkurs_date={dataTable.crashkurs_date}
+          titulo2a={dataTable.subtitle}
+          precio={dataTable.price}
+          nombre_curso={dataTable.title}
+        />}
 
         {/*Footer  */}
         <Footer />
