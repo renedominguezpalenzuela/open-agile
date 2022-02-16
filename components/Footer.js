@@ -181,7 +181,9 @@ export default function Footer() {
           </div>
         </div>
         <div className="d-block d-md-none">
-          <div id="rowfoot05" className="row g-3 ps-5 me-3 ms-3 pe-5 pb-3">
+          <div
+            id="rowfoot05"
+            className="row g-3 ps-md-5 ps-4 me-3 ms-3 pe-md-5 pe-4 pb-3">
             <div className="col">
               <div className="row g-0 ">
                 <div className="col-12 d-flex pb-2 g-0 justify-content-center">
