@@ -4,7 +4,6 @@ import { formEmail } from "../config";
 import axios from "axios";
 import { useState } from "react";
 
-
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
@@ -76,20 +75,49 @@ export default function ModalFormJob({
   date2,
   day,
   frase,
-  job_title
+  job_title,
 }) {
+  const botonCerrarFormulario = useRef();
+
+  const errorIffieldEmpty = "Bitte überprüfe die Eingabe";
+  const errorIffieldWrong = "Fehler";
+
+  const [errorNombre, setErrorNombre] = React.useState(false);
+  const [texterrorNombre, setTextErrorNombre] = React.useState("");
+
   const [nombre, setNombre] = React.useState("");
   const handleChangeNombre = (event) => {
+    if (event.target.value != "") {
+      setErrorNombre(false);
+      setTextErrorNombre(null);
+    }
+
     setNombre(event.target.value);
   };
 
+  const [errorEmail, setErrorEmail] = React.useState(false);
+  const [texterrorEmail, setTextErrorEmail] = React.useState("");
+
   const [email, setEmail] = React.useState("");
   const handleChangeEmail = (event) => {
+    if (event.target.value != "") {
+      setErrorEmail(false);
+      setTextErrorEmail(null);
+    }
+
     setEmail(event.target.value);
   };
 
+  const [errorPhone, setErrorPhone] = React.useState(false);
+  const [texterrorPhone, setTextErrorPhone] = React.useState("");
+
   const [telephone, setTelephone] = React.useState("");
   const handleChangeTelephone = (event) => {
+    if (event.target.value != "") {
+      setErrorPhone(false);
+      setTextErrorPhone(null);
+    }
+
     setTelephone(event.target.value);
   };
 
@@ -103,48 +131,82 @@ export default function ModalFormJob({
     setCondicionesAGB(event.target.value);
   };
 
+  //Tratamiento de errores
+
+  const [value2, setValue2] = React.useState("");
+  const [value3, setValue3] = React.useState("");
+
   const [textoDialogo, setTextoDialogo] = React.useState("");
 
   //dialogo
   const [open, setOpen] = React.useState(false);
 
-  const handleClickOpen = () => {
+  const abrirMensajeFeedBack = () => {
     setOpen(true);
   };
 
-  const handleClose = () => {
+  const cerrarMensajeFeedBack = () => {
     setOpen(false);
   };
 
-  const texto_EnviadoCorrectamente = "Vielen Dank für Deine Bewerbung, wir melden uns in Kürze bei Dir. Dein Open Agile Team.";
-  const texto_ErrorEnDatosCheckBox = "Bitte bestätige die AGBs, um das Formular absenden zu können.";
-  const texto_ErrorEnDatos = "Bitte überprüfe Deine Eingaben und sende das Formular erneut ab.";
-  const texto_ErrorEnServidor = "Kontaktformular Error, bitte versuchen Sie es erneut.";
-  const texto_noAttachment = "Bitte füge einen Lebenslauf hinzu und sende das Formular erneut ab. Dein Open Agile Team";
-
+  const texto_EnviadoCorrectamente =
+    "Vielen Dank für Deine Bewerbung, wir melden uns in Kürze bei Dir. Dein Open Agile Team.";
+  const texto_ErrorEnDatosCheckBox =
+    "Bitte bestätige die AGBs, um das Formular absenden zu können.";
+  const texto_ErrorEnDatos =
+    "Bitte überprüfe Deine Eingaben und sende das Formular erneut ab.";
+  const texto_ErrorEnServidor =
+    "Kontaktformular Error, bitte versuchen Sie es erneut.";
+  const texto_noAttachment =
+    "Bitte füge einen Lebenslauf hinzu und sende das Formular erneut ab. Dein Open Agile Team";
 
   const eventoBotonEnviar = async () => {
+    if (nombre === "" || email === "" || telephone === "") {
+      if (nombre === "") {
+        setErrorNombre(true);
+        setTextErrorNombre(errorIffieldEmpty);
+      }
+
+      if (email === "") {
+        setErrorEmail(true);
+        setTextErrorEmail(errorIffieldEmpty);
+      }
+
+      if (telephone === "") {
+        setErrorPhone(true);
+        setTextErrorPhone(errorIffieldEmpty);
+      }
+
+      setTextoDialogo(texto_ErrorEnDatos);
+      abrirMensajeFeedBack();
+
+      return;
+    }
+
+    //Validando email
+
+    if (!isEmailValid(email)) {
+      setErrorEmail(true);
+      setTextErrorEmail(errorIffieldWrong);
+      setTextoDialogo(texto_ErrorEnDatos);
+      abrirMensajeFeedBack();
+
+      return;
+    }
+
     if (condicionesAGB != "Ja") {
       setTextoDialogo(texto_ErrorEnDatosCheckBox);
-      handleClickOpen();
+      abrirMensajeFeedBack();
       return;
     }
 
-    if (nombre === "" || email === "" || telephone === "" ) {
-      setTextoDialogo(texto_ErrorEnDatos);
-      handleClickOpen();
-      return;
-    }
-
-
-
-
-    if (fichero_seleccionado==="" || fichero_seleccionado===". . .") {
+    if (fichero_seleccionado === "" || fichero_seleccionado === ". . .") {
       setTextoDialogo(texto_noAttachment);
-      handleClickOpen();
+      abrirMensajeFeedBack();
       return;
     }
 
+    //TODO OK enviar
     const subject = "Kontaktformular";
     const DataToSend = {
       from: "Kontakt Formular",
@@ -159,26 +221,37 @@ export default function ModalFormJob({
      <strong>Telefonnummer: </strong> ${telephone} <br />
      <strong>Nachricht: </strong> ${mensaje} <br />`,
     };
-    
 
-    
+    //Recibiendo respuesta del servidor
     const respuesta = await sendFormularioAndFile(DataToSend);
-   
+
     if (respuesta.statusText === "OK") {
       setTextoDialogo(texto_EnviadoCorrectamente);
-      handleClickOpen();
-      return;
+      abrirMensajeFeedBack();
+      setTimeout(function () {
+        botonCerrarFormulario.current.click();
+      }, 1500);
+      
     }
-
 
     if (respuesta.data.cod_resp === "000") {
       setTextoDialogo(texto_EnviadoCorrectamente);
-      handleClickOpen();
-    } else {
-      setTextoDialogo(texto_ErrorEnServidor + ": " + respuesta.data.cod_resp + " - "+respuesta.data.msg);
-      handleClickOpen();
-    }
+      abrirMensajeFeedBack();
 
+      setTimeout(function () {
+        botonCerrarFormulario.current.click();
+      }, 1500);
+
+    } else {
+      setTextoDialogo(
+        texto_ErrorEnServidor +
+          ": " +
+          respuesta.data.cod_resp +
+          " - " +
+          respuesta.data.msg
+      );
+      abrirMensajeFeedBack();
+    }
   };
 
   // Subiendo fichero al servidor
@@ -231,11 +304,8 @@ export default function ModalFormJob({
     },
   };
 
-  const [value1, setValue1] = React.useState("Controlled");
-
-  const [value2, setValue2] = React.useState("Controlled");
-  const [value3, setValue3] = React.useState("Controlled");
-  const [fichero_seleccionado, setfichero_seleccionado] = React.useState(". . .");
+  const [fichero_seleccionado, setfichero_seleccionado] =
+    React.useState(". . .");
 
   const handleChange1 = (event) => {
     setValue1(event.target.value);
@@ -380,6 +450,7 @@ export default function ModalFormJob({
                 type="button"
                 className="btn-close"
                 data-bs-dismiss="modal"
+                ref={botonCerrarFormulario}
                 aria-label="Close"></button>
             </div>
 
@@ -398,6 +469,8 @@ export default function ModalFormJob({
                   InputLabelProps={fuentes2}
                   value={nombre}
                   onChange={handleChangeNombre}
+                  helperText={errorNombre ? texterrorNombre : ""}
+                  error={errorNombre}
                 />
               </div>
 
@@ -411,6 +484,8 @@ export default function ModalFormJob({
                   InputLabelProps={fuentes2}
                   value={email}
                   onChange={handleChangeEmail}
+                  helperText={errorEmail ? texterrorEmail : ""}
+                  error={errorEmail}
                 />
               </div>
 
@@ -424,6 +499,8 @@ export default function ModalFormJob({
                   InputLabelProps={fuentes2}
                   value={telephone}
                   onChange={handleChangeTelephone}
+                  helperText={errorPhone ? texterrorPhone : ""}
+                  error={errorPhone}
                 />
               </div>
 
@@ -500,7 +577,7 @@ export default function ModalFormJob({
                   <button
                     type="button"
                     className="btn btn-secondary boton_modal_form"
-                    data-bs-dismiss="modal"
+                    // data-bs-dismiss="modal"
                     onClick={eventoBotonEnviar}>
                     Jetzt Bewerbung absenden
                   </button>
@@ -516,7 +593,7 @@ export default function ModalFormJob({
                   <button
                     type="button"
                     className="btn btn-secondary boton_modal_form  mb-3 col-10"
-                    data-bs-dismiss="modal"
+                    // data-bs-dismiss="modal"
                     onClick={eventoBotonEnviar}>
                     Jetzt Bewerbung absenden
                   </button>
@@ -531,19 +608,22 @@ export default function ModalFormJob({
 
       <Dialog
         open={open}
-        onClose={handleClose}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description">
+        onClose={cerrarMensajeFeedBack}
+        disableEnforceFocus
+        // aria-labelledby="alert-dialog-title"
+        // aria-describedby="alert-dialog-description"
+      >
         {/* <DialogTitle id="alert-dialog-title">
           {"Use Google's location service?"}
         </DialogTitle> */}
         <DialogContent>
+        disableEnforceFocus
           <DialogContentText id="alert-dialog-description">
             {textoDialogo}
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} autoFocus>
+          <Button onClick={cerrarMensajeFeedBack} autoFocus>
             OK
           </Button>
         </DialogActions>
@@ -557,4 +637,9 @@ const eliminar_anno = (fecha) => {
   return fecha.substring(0, 6);
 };
 
+function isEmailValid(emailAdress) {
+  var EMAIL_REGEXP = new RegExp("^[a-z0-9]+(.[_a-z0-9]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,15})$",   "i"  );
+  // var EMAIL_REGEXP = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,20}$/;
 
+  return EMAIL_REGEXP.test(emailAdress);
+}
