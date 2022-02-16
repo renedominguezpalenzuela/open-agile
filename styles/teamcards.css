@@ -356,9 +356,16 @@ div.horizontal-line {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 400px) and (min-width: 360px) {
   .font-items-side-menu {
     font-size: 1.8rem;
+    line-height: 2rem;
+  }
+}
+
+@media (max-width: 359px) {
+  .font-items-side-menu {
+    font-size: 1.5rem;
     line-height: 2rem;
   }
 }
