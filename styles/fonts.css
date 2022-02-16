@@ -161,9 +161,15 @@
   text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
 }
 
-@media (max-width: 490px) {
+@media (max-width: 490px) and (min-width: 400px) {
   .font_title_seccion_sombra {
     font-size: 3rem !important;
+  }
+}
+
+@media (max-width: 399px) {
+  .font_title_seccion_sombra {
+    font-size: 2.5rem !important;
   }
 }
 

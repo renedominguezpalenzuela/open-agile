@@ -3,8 +3,10 @@ import React from "react";
 let longitud_linea = 24;
 export default function Card01Blog({ data }) {
   const imagen = data.attributes.img.data.attributes.url;
-  const titulo = data.attributes.title;
-  const titulo2 = data.attributes.subtitle;
+  const titulo = data.attributes.title.includes("BUCH")
+    ? ["BUCH", data.attributes.title.slice(4)]
+    : data.attributes.title;
+  const titulo2 = "";
   const link = data.attributes.slug;
   let cadena_sin_padding =
     "row  h-md-100  d-flex align-items-center justify-content-center ";
@@ -15,7 +17,7 @@ export default function Card01Blog({ data }) {
 
   return (
     <>
-      <div className="card  my_card myanimacion sombra_cards">
+      <div className="card  my_card myanimacion sombra_cards mb-3">
         {imagen != undefined && imagen != "" && (
           <img
             className="card-img-top corte_cards img-rounded  "

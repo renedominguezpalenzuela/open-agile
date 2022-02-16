@@ -95,6 +95,7 @@
     display: grid;
     align-content: center;
     align-items: center;
+    padding: 1rem 0;
   }
 
   .fechas-facilator-1,
