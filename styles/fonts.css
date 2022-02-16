@@ -212,15 +212,27 @@
   text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
 }
 
-@media (max-width: 575px) {
+@media (max-width: 575px) and (orientation: portrait) {
   .font_cards_magenta {
     font-size: 6vw;
   }
 }
 
-@media (max-width: 767px) and (min-width: 576px) {
+@media (max-width: 767px) and (min-width: 576px) and (orientation: portrait) {
   .font_cards_magenta {
     font-size: 4.5vw;
+  }
+}
+
+@media (max-width: 575px) and (orientation: landscape) {
+  .font_cards_magenta {
+    font-size: 5vw;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 576px) and (orientation: landscape) {
+  .font_cards_magenta {
+    font-size: 3vw;
   }
 }
 

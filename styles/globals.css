@@ -587,7 +587,14 @@ ul.no-bullets {
   z-index: 3;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 992px) and (orientation: landscape) {
+  .my_card {
+    width: 60%;
+    margin: 10px auto;
+  }
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
   .my_card {
     width: 85% !important;
     margin: auto;
@@ -740,12 +747,21 @@ ul.no-bullets {
   font-size: 1.2vw;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   .font-btn-card {
     font-size: 3.3vw;
   }
   .font-btn-card-quiz {
     font-size: 5.3vw;
+  }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .font-btn-card {
+    font-size: 2.5vw;
+  }
+  .font-btn-card-quiz {
+    font-size: 4.5vw;
   }
 }
 
