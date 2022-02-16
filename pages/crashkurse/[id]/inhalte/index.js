@@ -121,7 +121,7 @@ export default function Home({ curso }) {
               link_pdf={link_pdf}
             />
           </div>
-          <div className="col-md-7 pt-5 pe-md-5 " id="section_beschreibung">
+          <div className="col-md-7 pt-5 pe-md-5 " id="section_inhalte">
             <KurseContent01
               imagen={image_inhalte}
               description={curso.data.attributes.inhalte_description}

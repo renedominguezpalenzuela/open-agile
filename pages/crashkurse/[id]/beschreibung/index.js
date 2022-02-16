@@ -130,6 +130,7 @@ export default function Home({ curso }) {
               link_pdf={link_pdf}
             />
           </div>
+
           <div className="col-md-7 pt-5 pe-md-5 " id="section_beschreibung">
             <KurseContent01
               imagen={image_beschreibung}

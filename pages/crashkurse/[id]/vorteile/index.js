@@ -37,7 +37,8 @@ export default function Home({ curso }) {
   const { id } = router.query;
   const titulo_area_superior = curso.data.attributes.page_title;
   // const image2 = curso.data.attributes.beschreibung_image.data.attributes.url,
-  const image_kosten = curso.data.attributes.inhalte_image.data.attributes.url;
+  const image_vorteile =
+    curso.data.attributes.vorteile_image.data[0].attributes.url;
 
   const link_beschreibung = `crashkurse/${curso.data.attributes.slug}/beschreibung`;
   const link_vorteile = `crashkurse/${curso.data.attributes.slug}/vorteile`;
@@ -49,7 +50,7 @@ export default function Home({ curso }) {
 
   let link_termine_new = "";
   if (link_termine != undefined && link_termine.length > 0) {
-    link_termine_new = servidor_url + "/" + link_inhalte + link_termine;
+    link_termine_new = servidor_url + "/" + link_vorteile + link_termine;
   }
   const dataTable = curso.data.attributes.dateTable;
 
@@ -120,10 +121,10 @@ export default function Home({ curso }) {
               link_pdf={link_pdf}
             />
           </div>
-          <div className="col-md-7 pt-5 pe-md-5 " id="section_beschreibung">
+          <div className="col-md-7 pt-5 pe-md-5 " id="section_vorteile">
             <KurseContent01
-              imagen={image_kosten}
-              description={curso.data.attributes.kosten_description}
+              imagen={image_vorteile}
+              description={curso.data.attributes.vorteile_description}
               text_termine={"2022"}
               link_weitere_infos={link_vorteile}
             />
