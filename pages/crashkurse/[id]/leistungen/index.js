@@ -3,19 +3,20 @@ import { backend_url } from "../../../../config";
 import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
 
-import MenuKraskurse from "../../../componentes/krashkurse/MenuKrashkurse";
+import MenuKraskurse from "../../../../componentes/krashkurse/MenuKrashkurse";
 
-import AreaSuperior from "../../../componentes/area_superior/AreaSuperior";
-import KurseContent02 from "../../../componentes/krashkurse/KurseContent02";
+import AreaSuperior from "../../../../componentes/area_superior/AreaSuperior";
+import KurseContent01 from "../../../../componentes/krashkurse/KurseContent01";
 
-import MenuFlotante from "../../../components/MenuFlotante";
-import Footer from "../../../components/Footer";
-import MenuFlotanteBoton from "../../../components/MenuFlotanteBoton";
+import MenuFlotante from "../../../../components/MenuFlotante";
+import Footer from "../../../../components/Footer";
+import MenuFlotanteBoton from "../../../../components/MenuFlotanteBoton";
 
-import Tabla03 from "../../../components/crashkurse/tabla03";
+import Tabla03 from "../../../../components/crashkurse/tabla03";
 
-import ModalFormCookie from "../../../components/ModalFormCookie";
+import ModalFormCookie from "../../../../components/ModalFormCookie";
 
 export default function Home({ curso }) {
   const router = useRouter();
