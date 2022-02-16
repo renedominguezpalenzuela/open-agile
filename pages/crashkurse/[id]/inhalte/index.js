@@ -1,30 +1,33 @@
-import { servidor_url } from "../../../config";
-import { backend_url } from "../../../config";
+import { servidor_url } from "../../../../config";
+import { backend_url } from "../../../../config";
 import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
-
-import MenuKraskurse from "../../../componentes/krashkurse/MenuKrashkurse";
-
-import AreaSuperior from "../../../componentes/area_superior/AreaSuperior";
-import KurseContent01 from "../../../componentes/krashkurse/KurseContent01";
-
-import MenuFlotante from "../../../components/MenuFlotante";
-import Footer from "../../../components/Footer";
-import MenuFlotanteBoton from "../../../components/MenuFlotanteBoton";
-
-import Tabla03 from "../../../components/crashkurse/tabla03";
-
-import ModalFormCookie from "../../../components/ModalFormCookie";
-
 import { useState, useEffect } from "react";
+
+import MenuKraskurse from "../../../../componentes/krashkurse/MenuKrashkurse";
+
+import AreaSuperior from "../../../../componentes/area_superior/AreaSuperior";
+import KurseContent01 from "../../../../componentes/krashkurse/KurseContent01";
+
+import MenuFlotante from "../../../../components/MenuFlotante";
+import Footer from "../../../../components/Footer";
+import MenuFlotanteBoton from "../../../../components/MenuFlotanteBoton";
+
+import Tabla03 from "../../../../components/crashkurse/tabla03";
+
+import ModalFormCookie from "../../../../components/ModalFormCookie";
 
 export default function Home({ curso }) {
   const link_pdfs = (links) => {
     let aux = [];
 
     for (let i = 0; i < links.length; i++) {
-      aux += url + links[i].attributes.url;
+      //console.log(links[i].attributes.url);
+      aux.push({
+        path: links[i].attributes.url,
+        name: links[i].attributes.name,
+      });
     }
 
     return aux;
@@ -32,17 +35,16 @@ export default function Home({ curso }) {
 
   const router = useRouter();
   const { id } = router.query;
+
   const titulo_area_superior = curso.data.attributes.page_title;
   // const image2 = curso.data.attributes.beschreibung_image.data.attributes.url,
-  const image_kosten = curso.data.attributes.vorteile_image.data
-    ? curso.data.attributes.vorteile_image.data.attributes.url
-    : null;
+  const image_inhalte = curso.data.attributes.inhalte_image.data.attributes.url;
 
-  const link_beschreibung = `crashkurse/beschreibung/${curso.data.id}`;
-  const link_vorteile = `crashkurse/vorteile/${curso.data.id}`;
-  const link_inhalte = `crashkurse/inhalte/${curso.data.id}`;
-  const link_leistungen = `crashkurse/leistungen/${curso.data.id}`;
-  const link_kosten = `crashkurse/kosten/${curso.data.id}`;
+  const link_beschreibung = `crashkurse/${curso.data.attributes.slug}/beschreibung`;
+  const link_vorteile = `crashkurse/${curso.data.attributes.slug}/vorteile`;
+  const link_inhalte = `crashkurse/${curso.data.attributes.slug}/inhalte`;
+  const link_leistungen = `crashkurse/${curso.data.attributes.slug}/leistungen`;
+  const link_kosten = `crashkurse/${curso.data.attributes.slug}/kosten`;
   const link_termine = "/#dates_section";
   const link_pdf = link_pdfs(curso.data.attributes.files.data);
 
@@ -120,8 +122,8 @@ export default function Home({ curso }) {
           </div>
           <div className="col-md-7 pt-5 pe-md-5 " id="section_beschreibung">
             <KurseContent01
-              imagen={image_kosten}
-              description={curso.data.attributes.kosten_description}
+              imagen={image_inhalte}
+              description={curso.data.attributes.inhalte_description}
               text_termine={"2022"}
               link_weitere_infos={link_vorteile}
             />

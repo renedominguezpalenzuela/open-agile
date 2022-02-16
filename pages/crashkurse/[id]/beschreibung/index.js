@@ -1,23 +1,22 @@
-import { servidor_url } from "../../../config";
-import { backend_url } from "../../../config";
+import { servidor_url } from "../../../../config";
+import { backend_url } from "../../../../config";
 import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
-
-import MenuKraskurse from "../../../componentes/krashkurse/MenuKrashkurse";
-
-import AreaSuperior from "../../../componentes/area_superior/AreaSuperior";
-import KurseContent01 from "../../../componentes/krashkurse/KurseContent01";
-
-import MenuFlotante from "../../../components/MenuFlotante";
-import Footer from "../../../components/Footer";
-import MenuFlotanteBoton from "../../../components/MenuFlotanteBoton";
-
-import Tabla03 from "../../../components/crashkurse/tabla03";
-
-import ModalFormCookie from "../../../components/ModalFormCookie";
-
 import { useState, useEffect } from "react";
+
+import MenuKraskurse from "../../../../componentes/krashkurse/MenuKrashkurse";
+
+import AreaSuperior from "../../../../componentes/area_superior/AreaSuperior";
+import KurseContent01 from "../../../../componentes/krashkurse/KurseContent01";
+
+import MenuFlotante from "../../../../components/MenuFlotante";
+import Footer from "../../../../components/Footer";
+import MenuFlotanteBoton from "../../../../components/MenuFlotanteBoton";
+
+import Tabla03 from "../../../../components/crashkurse/tabla03";
+
+import ModalFormCookie from "../../../../components/ModalFormCookie";
 
 export default function Home({ curso }) {
   const link_pdfs = (links) => {
@@ -25,7 +24,7 @@ export default function Home({ curso }) {
 
     for (let i = 0; i < links.length; i++) {
       aux.push({
-        path: url + links[i].attributes.url,
+        path: links[i].attributes.url,
         name: links[i].attributes.name,
       });
     }
@@ -38,25 +37,26 @@ export default function Home({ curso }) {
 
   const titulo_area_superior = curso.data.attributes.page_title;
   // const image2 = curso.data.attributes.beschreibung_image.data.attributes.url,
-  const image_kosten = curso.data.attributes.kosten_image.data
-    ? curso.data.attributes.kosten_image.data.attributes.url
-    : null;
+  const image_beschreibung =
+    curso.data.attributes.beschreibung_image.data.attributes.url;
 
-  const link_beschreibung = `crashkurse/beschreibung/${curso.data.id}`;
-  const link_vorteile = `crashkurse/vorteile/${curso.data.id}`;
-  const link_inhalte = `crashkurse/inhalte/${curso.data.id}`;
-  const link_leistungen = `crashkurse/leistungen/${curso.data.id}`;
-  const link_kosten = `crashkurse/kosten/${curso.data.id}`;
+  const link_beschreibung = `crashkurse/${curso.data.attributes.slug}/beschreibung`;
+  const link_vorteile = `crashkurse/${curso.data.attributes.slug}/vorteile`;
+  const link_inhalte = `crashkurse/${curso.data.attributes.slug}/inhalte`;
+  const link_leistungen = `crashkurse/${curso.data.attributes.slug}/leistungen`;
+  const link_kosten = `crashkurse/${curso.data.attributes.slug}/kosten`;
   const link_termine = "/#dates_section";
   const link_pdf = link_pdfs(curso.data.attributes.files.data);
 
   let link_termine_new = "";
+
   if (link_termine != undefined && link_termine.length > 0) {
-    link_termine_new = servidor_url + "/" + link_inhalte + link_termine;
+    link_termine_new = servidor_url + "/" + link_beschreibung + link_termine;
   }
 
-  const [landscape, setLandscape] = useState(false);
   const [desktop_screen, setDesktop_screen] = useState(true);
+  const [landscape, setLandscape] = useState(false);
+
   const handleResize = () => {
     let ancho_screen = window.innerWidth;
     let alto_screen = window.innerHeight;
@@ -90,7 +90,13 @@ export default function Home({ curso }) {
       <div id="principal" className="container-fluid g-0">
         <MenuFlotanteBoton />
 
-        {/* <AreaSuperior fondo="ajustable" texto1={titulo_area_superior} titulo_largo={true} area_gris_nueva={true}/> */}
+        {/* <AreaSuperior
+          fondo="ajustable"
+          texto1={titulo_area_superior}
+          titulo_largo={true}
+          area_gris_nueva={true}
+          bes={true}
+        /> */}
 
         {desktop_screen ? (
           <AreaSuperior
@@ -124,8 +130,8 @@ export default function Home({ curso }) {
           </div>
           <div className="col-md-7 pt-5 pe-md-5 " id="section_beschreibung">
             <KurseContent01
-              imagen={image_kosten}
-              description={curso.data.attributes.kosten_description}
+              imagen={image_beschreibung}
+              description={curso.data.attributes.beschreibung_description}
               text_termine={"2022"}
               link_weitere_infos={link_vorteile}
             />

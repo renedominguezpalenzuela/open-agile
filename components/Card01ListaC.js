@@ -39,7 +39,7 @@ export default function Card01Lista({
                     imagen={unCard.attributes.card_image.data.attributes.url}
                     titulo={unCard.attributes.card_title}
                     titulo2={unCard.attributes.card_subtitle}
-                    link={`crashkurse/beschreibung/${unCard.id}`}
+                    link={`crashkurse/${unCard.attributes.slug}/beschreibung`}
                   />
                 )}
               </div>

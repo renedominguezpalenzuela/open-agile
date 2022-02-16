@@ -24,7 +24,7 @@ export default function MenuNavBar() {
       <nav className="navbar navbar-expand-lg navbar-light navigation   ">
         <ul className="navbar-nav ">
           <li className="nav-item dropdown2  ">
-            <a href="/crashkurse/main">
+            <a href="/crashkurse/">
               <div className="nav-link">CRASHKURSE</div>
             </a>
 
@@ -33,7 +33,7 @@ export default function MenuNavBar() {
                 <li key={key} className="nav-item ">
                   <a
                     className="dropdown-item color-font-dropdown"
-                    href={`/crashkurse/beschreibung/${item.id}`}>
+                    href={`/crashkurse/${item.attributes.slug}/beschreibung/`}>
                     {item.attributes.page_title}
                   </a>
                 </li>
@@ -51,12 +51,12 @@ export default function MenuNavBar() {
             </a>
 
             <ul className="dropdown-content text-start color-dropdown animate__animated animate__fadeInUp no-bullets">
-              {leich.data.map((item, index) => (
-                <li className="nav-item">
+              {leich.data.map((item, key) => (
+                <li key={key} className="nav-item">
                   <a
                     className="dropdown-item color-font-dropdown"
                     href={`/${item.attributes.slug}`}>
-                    {item.attributes.title}{" "}
+                    {item.attributes.title}
                   </a>
                 </li>
               ))}
@@ -73,9 +73,7 @@ export default function MenuNavBar() {
 
             <ul className="dropdown-content text-start color-dropdown animate__animated animate__fadeInUp no-bullets">
               <li className="nav-item ">
-                <a
-                  className="dropdown-item color-font-dropdown"
-                  href="/team">
+                <a className="dropdown-item color-font-dropdown" href="/team">
                   UNSERE WERTE
                 </a>
               </li>

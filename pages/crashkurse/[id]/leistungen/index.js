@@ -1,5 +1,5 @@
-import { servidor_url } from "../../../config";
-import { backend_url } from "../../../config";
+import { servidor_url } from "../../../../config";
+import { backend_url } from "../../../../config";
 import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
