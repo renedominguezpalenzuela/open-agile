@@ -617,7 +617,7 @@ export default function ModalFormJob({
           {"Use Google's location service?"}
         </DialogTitle> */}
         <DialogContent>
-        disableEnforceFocus
+        
           <DialogContentText id="alert-dialog-description">
             {textoDialogo}
           </DialogContentText>
