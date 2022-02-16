@@ -29,7 +29,7 @@ export default function Card08Job({ data }) {
 
   return (
     <>
-      <div className="card myanimacion sombra_cards redondear-card pb-2">
+      <div className="card myanimacion sombra_cards redondear-card-job pb-2">
         <div className="h-100 d-flex  align-items-center  ">
           <div className="row w-100 g-0 ">
             <div className="col-12 pt-1 ps-3 pe-3   ">
