@@ -10,7 +10,7 @@ export default function Content05({ datos, color_fondo }) {
 
   const getDt = (datea) => {
     const dt = new Date(datea);
-    return `${dt.getDate()}.${dt.getMonth()}.${dt.getFullYear()}`;
+    return `${dt.getDate()}.${dt.getMonth() + 1}.${dt.getFullYear()}`;
   }
 
   return (
@@ -97,7 +97,7 @@ export default function Content05({ datos, color_fondo }) {
                         video={unDato.attributes.link}
                         titulo={unDato.attributes.title}
                         texto={unDato.attributes.text}
-                        date={unDato.attributes.createdAt}
+                        date={unDato.attributes.date}
                       />
                     </div>
                   </div>
