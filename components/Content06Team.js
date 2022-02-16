@@ -11,7 +11,7 @@ export default function Content06Team({ lista_cards }) {
           {lista_cards.map((unCard, index) => (
             <React.Fragment key={index}>
               {/* Vista movil  */}
-              <div className="col-8 col-md-4 d-lg-none justify-content-center d-flex">
+              <div className="col-8 col-md-4 d-lg-none justify-content-center d-flex card-lands">
                 <Card01
                   id={unCard.id}
                   imagen={unCard.attributes.image?.data?.attributes.url}

@@ -573,6 +573,18 @@ ul.no-bullets {
   object-fit: cover;
 }
 
+@media (max-width: 992px) and (orientation: landscape) {
+  .card-img-top {
+    height: auto !important;
+  }
+}
+
+@media (max-width: 992px) and (orientation: landscape) {
+  .card-lands {
+    width: auto !important;
+  }
+}
+
 .my_card {
   /* max-width: 330px; */
   width: 26vw;

@@ -18,7 +18,6 @@ export default function Card01({
   texto_alt,
   link,
 }) {
-  
   let cadena_sin_padding =
     "row  h-md-100  d-flex align-items-center justify-content-center ";
 
@@ -30,7 +29,7 @@ export default function Card01({
     <>
       {/* col-md-3 */}
       {/*  <div className="  d-flex justify-content-center  " key={id}> */}
-      <div className="card  my_card myanimacion sombra_cards">
+      <div className={`card  my_card myanimacion sombra_cards`}>
         {imagen != undefined && imagen != "" && (
           <img
             className="card-img-top corte_cards img-rounded  "
