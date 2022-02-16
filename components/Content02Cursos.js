@@ -25,7 +25,12 @@ export default function Content02Cursos({ cursos, main_page }) {
         </h5>
       </div>
 
-      <div className="div_content02a   pb-5 pt-3 g-0">
+      <div
+        className={`${
+          main_page
+            ? "div_content02a   pb-5 pt-3 g-0"
+            : "div_content02c   pb-5 pt-3 g-0"
+        }`}>
         <Card01ListaC
           lista_cards={cursos}
           total_card_en_row={cursos.data.length}

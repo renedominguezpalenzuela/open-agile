@@ -128,6 +128,12 @@ a {
   clip-path: polygon(0% 2%, 100% 0%, 100% 1000%, 0% 100%);
 }
 
+.div_content02c {
+  position: relative;
+  background-color: #17979e;
+  clip-path: polygon(0% 2%, 100% 0%, 100% 1000%, 0% 100%);
+}
+
 .div_content02a {
   position: relative;
   /* background-color: #24325a; */
