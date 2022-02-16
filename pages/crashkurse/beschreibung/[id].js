@@ -23,7 +23,7 @@ export default function Home({ curso }) {
     let aux = [];
 
     for (let i = 0; i < links.length; i++) {
-      aux += url + links[i].attributes.url;
+      aux += links[i].attributes.url;
     }
 
     return aux;
