@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d42f5d5a-8e90-4c1a-88e0-2ba227c4c520" name="Changes" comment="" />
+    <list default="true" id="d42f5d5a-8e90-4c1a-88e0-2ba227c4c520" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/crashkurse/[id]/beschreibung/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/crashkurse/[id]/beschreibung/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/crashkurse/[id]/inhalte/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/crashkurse/[id]/inhalte/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/crashkurse/[id]/kosten/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/crashkurse/[id]/kosten/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/crashkurse/[id]/vorteile/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/crashkurse/[id]/vorteile/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
