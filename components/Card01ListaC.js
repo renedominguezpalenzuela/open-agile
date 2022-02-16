@@ -21,7 +21,6 @@ export default function Card01Lista({
       <div className="row mt-5 pt-3 g-4 d-flex justify-content-center ms-4 me-4 ms-md-5 me-md-5 pe-md-5 ps-md-5">
         {lista_cards.data.map((unCard, index) => {
           return (
-            // <>
             <React.Fragment key={index}>
               <div className={formato_row}>
                 {titulo_magenta != undefined && titulo_magenta && (
@@ -30,11 +29,9 @@ export default function Card01Lista({
                     id={unCard.id}
                     imagen={unCard.attributes.card_image.data.attributes.url}
                     titulo2={unCard.titulo2}
-                    // texto={unCard.text}
                     link={unCard.link}
                   />
                 )}
-
                 {(titulo_magenta === undefined || !titulo_magenta) && (
                   <Card01
                     key={index}
@@ -42,14 +39,11 @@ export default function Card01Lista({
                     imagen={unCard.attributes.card_image.data.attributes.url}
                     titulo={unCard.attributes.card_title}
                     titulo2={unCard.attributes.card_subtitle}
-                    // texto={unCard.text}
                     link={`crashkurse/beschreibung/${unCard.id}`}
                   />
                 )}
               </div>
             </React.Fragment>
-
-            // </>
           );
         })}
       </div>
