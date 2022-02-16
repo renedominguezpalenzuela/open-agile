@@ -38,6 +38,11 @@ export default function Footer() {
     fetchData2();
   }, []);
 
+  function capitalize(str) {
+    const lower = str.toLowerCase();
+    return str.charAt(0).toUpperCase() + lower.slice(1);
+  }
+
   const handle = () => {
     setChangeCookie(!changeCookie);
   };
@@ -110,7 +115,7 @@ export default function Footer() {
                     <a
                       className="color-font-dropdown mylinkhoover"
                       href={item.attributes.slug}>
-                      {item.attributes.title}
+                      {capitalize(item.attributes.title)}
                     </a>
                   </div>
                 ))}
@@ -125,7 +130,7 @@ export default function Footer() {
                     <a
                       className="color-font-dropdown mylinkhoover"
                       href={`/crashkurse/${item.id}`}>
-                      {item.attributes.page_title}
+                      {capitalize(item.attributes.page_title)}
                     </a>
                   </div>
                 ))}
