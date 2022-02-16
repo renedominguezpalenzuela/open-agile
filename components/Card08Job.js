@@ -4,7 +4,6 @@ import ReactMarkdown from "react-markdown";
 
 export default function Card08Job({ data }) {
   const titulo = data.attributes.title;
-  const url = "https://js-agileweb-backend.herokuapp.com";
   const pdf = data.attributes.pdf;
 
   const startsWithCapital = (word) => {
@@ -53,7 +52,7 @@ export default function Card08Job({ data }) {
                 <a
                   onClick={() =>
                     downloadEmployeeData(
-                      url + pdf.data.attributes.url,
+                      pdf.data.attributes.url,
                       pdf.data.attributes.name
                     )
                   }
