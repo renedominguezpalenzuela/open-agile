@@ -120,8 +120,7 @@ export default function Home({ curso }) {
               link_pdf={link_pdf}
             />
           </div>
-          <div id="section_vorteile"></div>
-          <div className="col-md-7 pt-5 pe-md-5 ">
+          <div className="col-md-7 pt-5 pe-md-5 " id="section_vorteile">
             <KurseContent01
               imagen={image_vorteile}
               description={curso.data.attributes.vorteile_description}
