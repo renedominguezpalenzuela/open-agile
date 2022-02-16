@@ -1,5 +1,7 @@
 import Card05UserBlog from "./Card05UserBlog";
 import { servidor_url } from "../config";
+import React from "react";
+
 
 export default function CarruselBlogs({ lista_cards }) {
   return (
@@ -10,7 +12,9 @@ export default function CarruselBlogs({ lista_cards }) {
       <div id="blog_carrusel" className="carousel slide" data-bs-ride="carousel"> 
         <div className="carousel-indicators">
           {lista_cards.map((unDato, index) => (
-            <button type="button" data-bs-target="#blog_carrusel"  data-bs-slide-to={index}  className={`${index === 0 ? "active" : ""}`}></button>  
+            <React.Fragment key={index}>
+            <button  type="button" data-bs-target="#blog_carrusel"  data-bs-slide-to={index}  className={`${index === 0 ? "active" : ""}`}></button>  
+            </React.Fragment>
           ))}
         </div>
 

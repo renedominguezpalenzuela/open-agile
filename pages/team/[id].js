@@ -38,7 +38,7 @@ export default function Home({ team }) {
   //   cargo,
   // } = team;
 
-  console.log(team);
+ 
 
   let foto2 = team?.attributes?.image?.data?.attributes?.url;
 

@@ -19,11 +19,12 @@ export default function Content03Carrousel({ mainlogos }) {
           <div className="carousel-indicators">
             {mainlogos.data.map((unDato, index) => (
               <button
+                key={index}
                 onClick={() => setActive(index)}
                 type="button"
                 data-bs-target="#demo"
-                data-bs-slide-to={index.toString}
-                className={index === active ? "active" : ""}></button>
+                data-bs-slide-to={index}
+                className={index === 0 ? "active" : ""}></button>
             ))}
           </div>
 
