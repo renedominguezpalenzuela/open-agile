@@ -13,7 +13,7 @@ export default function Content02Cursos({ cursos, main_page }) {
   return (
     <>
       <div
-        id="course"
+        id="crashkurse"
         className={`${
           main_page
             ? "offset-video row text-center mb-2 crash-container"

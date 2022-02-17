@@ -14,7 +14,7 @@ export default function TextoBloque01({
   return (
     <>
       {titulo_main != undefined && titulo_main != "" && (
-        <div id="course" className="row  text-center mt-5 mb-5  ">
+        <div id="crashkurse" className="row  text-center mt-5 mb-5  ">
           <h3 className="font_titulo_seccion "> {titulo_main}</h3>
         </div>
       )}

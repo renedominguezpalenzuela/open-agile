@@ -102,7 +102,7 @@ export const configurator_details = [
   {
     id: "5",
     botones: [
-      { id: "12", texto: "Leistungen", link: "/#services", tipo: "1" },
+      { id: "12", texto: "Leistungen", link: "/#leistungen", tipo: "1" },
       { id: "13", texto: "Kontaktformular", link: "", tipo: "2" },
     ],
   },

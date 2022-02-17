@@ -51,7 +51,7 @@ export default function MenuFlotante() {
             id="menu">
             <li className="nav-item">
               <a
-                href="/#course"
+                href="/#crashkurse"
                 className="nav-link text-truncate"
                 id="crashkurse_link"
                 onClick={handleClick}>
@@ -61,7 +61,7 @@ export default function MenuFlotante() {
 
             <li>
               <a
-                href="/#services"
+                href="/#leistungen"
                 className="nav-link text-truncate"
                 id="leinstungen_link"
                 onClick={handleClick}>
