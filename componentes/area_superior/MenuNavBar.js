@@ -34,7 +34,7 @@ export default function MenuNavBar() {
                   <a
                     className="dropdown-item color-font-dropdown"
                     href={`/crashkurse/${item.attributes.slug}/beschreibung/`}>
-                    {item.attributes.page_title}
+                    {item.attributes.page_title.toUpperCase()}
                   </a>
                 </li>
               ))}
@@ -56,7 +56,7 @@ export default function MenuNavBar() {
                   <a
                     className="dropdown-item color-font-dropdown"
                     href={`/${item.attributes.slug}`}>
-                    {item.attributes.title}
+                    {item.attributes.title.toUpperCase()}
                   </a>
                 </li>
               ))}

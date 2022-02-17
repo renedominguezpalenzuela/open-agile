@@ -33,8 +33,6 @@ export default function Home({ servicios }) {
   const router = useRouter();
   const { id } = router.query;
 
-  
-
   // const { titulo2, titulo3, titulo2a, titulo, texto01, texto02, texto03 } =
   //   servicios;
 
@@ -74,7 +72,7 @@ export default function Home({ servicios }) {
         <MenuFlotanteBoton />
         <AreaSuperior
           fondo="ajustable"
-          texto1={title}
+          texto1={title.toUpperCase()}
           titulo_largo={true}
           area_gris_nueva={true}
           lei={true}

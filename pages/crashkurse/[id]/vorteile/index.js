@@ -35,7 +35,7 @@ export default function Home({ curso }) {
 
   const router = useRouter();
   const { id } = router.query;
-  const titulo_area_superior = curso.data.attributes.page_title;
+  const titulo_area_superior = curso.data.attributes.page_title.toUpperCase();
   // const image2 = curso.data.attributes.beschreibung_image.data.attributes.url,
   const image_vorteile =
     curso.data.attributes.vorteile_image.data[0].attributes.url;
@@ -131,14 +131,16 @@ export default function Home({ curso }) {
           </div>
         </div>
 
-        {dataTable !== null && <Tabla03
-          className="mt-5"
-          crashkurs_date_title={dataTable.title}
-          crashkurs_date={dataTable.crashkurs_date}
-          titulo2a={dataTable.subtitle}
-          precio={dataTable.price}
-          nombre_curso={dataTable.title}
-        />}
+        {dataTable !== null && (
+          <Tabla03
+            className="mt-5"
+            crashkurs_date_title={dataTable.title}
+            crashkurs_date={dataTable.crashkurs_date}
+            titulo2a={dataTable.subtitle}
+            precio={dataTable.price}
+            nombre_curso={dataTable.title}
+          />
+        )}
 
         {/*Footer  */}
         <Footer />

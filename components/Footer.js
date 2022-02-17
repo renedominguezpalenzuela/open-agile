@@ -115,7 +115,7 @@ export default function Footer() {
                     <a
                       className="color-font-dropdown mylinkhoover"
                       href={item.attributes.slug}>
-                      {capitalize(item.attributes.title)}
+                      {item.attributes.title}
                     </a>
                   </div>
                 ))}
@@ -129,8 +129,8 @@ export default function Footer() {
                   <div key={index}>
                     <a
                       className="color-font-dropdown mylinkhoover"
-                      href={`/crashkurse/${item.id}`}>
-                      {capitalize(item.attributes.page_title)}
+                      href={`/crashkurse/${item.attributes.slug}/beschreibung`}>
+                      {item.attributes.page_title}
                     </a>
                   </div>
                 ))}
