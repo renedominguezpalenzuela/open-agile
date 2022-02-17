@@ -637,6 +637,12 @@ ul.no-bullets {
   }
 }
 
+@media (max-width: 767px) and (orientation: landscape) {
+  .my_card_home {
+    width: 60% !important;
+    margin: auto;
+  }
+}
 /* .content-card-vlog {
   top: -4.6vh;
 } */
