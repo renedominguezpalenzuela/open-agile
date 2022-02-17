@@ -59,7 +59,7 @@ export default function Home({ servicios }) {
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>{title.toUpperCase()}</title>
         <meta name="description" content={title} />
         <link rel="icon" href="/favicon.ico" />
         <script async src={`${servidor_url}/js/chat.js`} />

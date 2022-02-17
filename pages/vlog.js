@@ -28,12 +28,8 @@ import ModalFormCookie from "../components/ModalFormCookie";
 
 export default function Home({ vlog }) {
   const titulo1 = "VLOG";
-  const titulo2 = "";
-  const titulo2a = "";
 
   const titulo3 = "VLOG";
-
-  const titulo4 = "";
 
   const texto01 = [
     "Ob interessante Interviews zum Thema New Work, kurze Fachbeiträge oder einfach mal ein paar spannende Impulse für die persönliche Weiterentwicklung. In diesem Vlog wirst Du regelmäßig auf dem Laufenden gehalten. Wir freuen uns auf die Arbeitswelt von morgen! Du auch? Willst Du keinen neuen Beitrag verpassen, dann abonniere unseren YouTube-Kanal „Open Agile“ und unseren Newsletter.",
@@ -61,8 +57,8 @@ export default function Home({ vlog }) {
   return (
     <>
       <Head>
-        <title>{titulo2}</title>
-        <meta name="description" content={titulo2} />
+        <title>{titulo3}</title>
+        <meta name="description" content={titulo3} />
         <link rel="icon" href="/favicon.ico" />
         <script async src="js/chat.js" />
         <script async src="js/menu.js" />
