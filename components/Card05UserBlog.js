@@ -15,7 +15,7 @@ export default function Card05UserBlog({ data }) {
         </div>
 
         <div className="row w-100  g-0 size_blog_card d-flex  align-items-center justify-content-center ">
-          <div className="col-8  ps-2   ">
+          <div className="col-7  ps-2   ">
             {titulo != undefined && titulo != "" && (
               <>
                 <div className="ps-1 font1-card-blog ">{titulo}</div>
@@ -27,7 +27,7 @@ export default function Card05UserBlog({ data }) {
               </>
             )}
           </div>
-          <div className="col-4   d-flex  align-items-center justify-content-center ">
+          <div className="col-5   d-flex  align-items-center justify-content-center ">
             <a href={`${"blog/" + link}`}>
               <button
                 type="button"

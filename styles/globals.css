@@ -614,6 +614,12 @@ ul.no-bullets {
 }
 
 @media (max-width: 992px) and (orientation: landscape) {
+  .carousel-indicators {
+    bottom: -55px;
+  }
+}
+
+@media (max-width: 992px) and (orientation: landscape) {
   .my_card {
     width: 60%;
     margin: 10px auto;
