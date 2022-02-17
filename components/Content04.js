@@ -25,11 +25,11 @@ export default function Content04({ lista_cards, main_page }) {
     // =======
     <>
       <section>
-        <div
+        <h1
           id="blog"
           className="row justify-content-center font_title_seccion_sombra mt-3   ms-md-4">
           BLOG
-        </div>
+        </h1>
         <div className="row justify-content-center font_card_texto mt-2 ms-md-4 mb-5">
           NEW WORK, LEADERSHIP & MORE
         </div>

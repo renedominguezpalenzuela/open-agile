@@ -43,7 +43,7 @@ export default function Content01TextSinIcons({
               daten,
               impre
             )}>
-              <p> {texto1} </p>
+              <h1> {texto1} </h1>
           </div>
         )}
 
@@ -56,7 +56,7 @@ export default function Content01TextSinIcons({
               shop,
               home
             )}>
-            <div>{texto2} </div>
+            {(texto1 == undefined || texto1 == "") ? <h1>{texto2} </h1> : <div>{texto2} </div>}
 
             {texto2a != undefined && texto2a != "" && <> {texto2a} </>}
           </div>

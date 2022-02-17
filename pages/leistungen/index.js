@@ -57,7 +57,7 @@ export default function Home({ servicios }) {
 
         {/* Servicios Leistungen  */}
         <div id="services" className=" mt-5 mb-5 pb-5">
-          <h3 className="font_title_seccion_sombra "> LEISTUNGEN</h3>
+          <h1 className="font_title_seccion_sombra "> LEISTUNGEN</h1>
           <h5 className="font_second_line2 d-flex justify-content-center">
             Beratung, Training & Coaching im agilen Kontext
           </h5>
