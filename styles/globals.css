@@ -1076,7 +1076,7 @@ ul {
 .alto-leistungen-tab-contenedor-3 {
   /* height:70vh!important; */
   /* height:90%!important;  */
-  height: 450px;
+  height: 600px;
   position: relative;
 }
 
@@ -1104,9 +1104,27 @@ ul {
   }
 }
 
-@media (max-width: 449px) {
+@media (max-width: 449px) and (min-width: 420px) {
   .alto-leistungen-tab-contenedor-3 {
-    height: 680px !important;
+    height: 720px !important;
+  }
+}
+
+@media (max-width: 419px) and (min-width: 360px) {
+  .alto-leistungen-tab-contenedor-3 {
+    height: 790px !important;
+  }
+  .ubicacion-boton {
+    left: 15vw !important;
+  }
+}
+
+@media (max-width: 359px) {
+  .alto-leistungen-tab-contenedor-3 {
+    height: 920px !important;
+  }
+  .ubicacion-boton {
+    left: 20vw !important;
   }
 }
 

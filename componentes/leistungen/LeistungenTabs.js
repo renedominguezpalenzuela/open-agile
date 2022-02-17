@@ -5,7 +5,7 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import ModalFormConfigurator from "../../components/ModalFormConfigurator";
-
+import ReactMarkdown from "react-markdown";
 import { servidor_url } from "../../config";
 
 function TabPanel(props) {
@@ -40,7 +40,14 @@ function a11yProps(index) {
   };
 }
 
-export default function LeistungenTabs({ texto01, texto02, texto03, titulo01, titulo02, titulo }) {
+export default function LeistungenTabs({
+  texto01,
+  texto02,
+  texto03,
+  titulo01,
+  titulo02,
+  titulo,
+}) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -87,12 +94,13 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo01, ti
               {titulo01}
             </div>
 
-            {texto01 != undefined &&
-              texto01.length > 0 &&
-              // texto01.map((unaLinea, index) => (
-                <div className="fuente-texto-cursos">
-                  <p> {texto01}</p>
-                </div>
+            {
+              texto01 != undefined && texto01.length > 0 && (
+                // texto01.map((unaLinea, index) => (
+                <ReactMarkdown className="fuente-texto-cursos  mybullets">
+                  {texto01}
+                </ReactMarkdown>
+              )
               // ))
             }
           </div>
@@ -113,14 +121,15 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo01, ti
             <div className=" organization-text mt-2 mb-4  text-left ">
               {titulo02}
             </div>
-              {texto02 != undefined &&
-                texto02.length > 0 &&
+            {
+              texto02 != undefined && texto02.length > 0 && (
                 // texto02.map((unaLinea, index) => (
-              <div className="fuente-texto-cursos">
-                <p> {texto02}</p>
-              </div>
-                // ))
-              }
+                <ReactMarkdown className="fuente-texto-cursos  mybullets">
+                  {texto02}
+                </ReactMarkdown>
+              )
+              // ))
+            }
           </div>
 
           <div className="ubicacion-boton " onClick={() => myfuncion(2)}>
