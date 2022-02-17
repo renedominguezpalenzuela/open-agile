@@ -9,12 +9,14 @@ import ReactMarkdown from "react-markdown";
 import Card01Blog from "./Card01Blog";
 
 import CarruselBlogs from "./CarruselBlogs";
+import { useRouter } from "next/router";
 
 //----------------------------------------------------------------------------------------------------------
 //            Area de Contenido:  Blog
 //----------------------------------------------------------------------------------------------------------
 
 export default function Content04({ lista_cards, main_page }) {
+  const router = useRouter()
   return (
     // <<<<<<< HEAD
     //     <>
@@ -25,11 +27,16 @@ export default function Content04({ lista_cards, main_page }) {
     // =======
     <>
       <section>
-        <h1
+        {router.pathname !== '/' ? <h1
           id="blog"
           className="row justify-content-center font_title_seccion_sombra mt-3   ms-md-4">
           BLOG
         </h1>
+          : <h2
+            id="blog"
+            className="row justify-content-center font_title_seccion_sombra mt-3   ms-md-4">
+            BLOG
+          </h2>}
         <div className="row justify-content-center font_card_texto mt-2 ms-md-4 mb-5">
           NEW WORK, LEADERSHIP & MORE
         </div>
