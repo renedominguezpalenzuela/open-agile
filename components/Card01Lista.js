@@ -5,6 +5,7 @@ export default function Card01Lista({
   lista_cards,
   titulo_magenta,
   total_card_en_row,
+  main_page,
 }) {
   let formato_row = " col-md-4 d-flex  justify-content-center ";
 
@@ -26,6 +27,7 @@ export default function Card01Lista({
                 {titulo_magenta != undefined && titulo_magenta && (
                   <Card01
                     key={index}
+                    main_page={main_page}
                     id={unCard.id}
                     imagen={unCard.attributes.image.data.attributes.url}
                     titulo2={unCard.attributes.title}
@@ -35,6 +37,7 @@ export default function Card01Lista({
 
                 {(titulo_magenta === undefined || !titulo_magenta) && (
                   <Card01
+                    main_page={main_page}
                     key={index}
                     id={unCard.id}
                     imagen={unCard.attributes.image.data.attributes.url}

@@ -113,7 +113,7 @@ export default function Home({
         </div>
 
         {/*Unser Blog  */}
-        <Content04 lista_cards={blogs} />
+        <Content04 lista_cards={blogs} main_page={true} />
 
         {/*Carrousel videos */}
         <Content05 datos={vlog} />
@@ -125,7 +125,11 @@ export default function Home({
             Beratung, Training & Coaching im agilen Kontext
           </h5>
 
-          <Card01Lista lista_cards={servicios} titulo_magenta={true} />
+          <Card01Lista
+            lista_cards={servicios}
+            titulo_magenta={true}
+            main_page={true}
+          />
         </div>
 
         {/*Footer  */}

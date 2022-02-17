@@ -2,8 +2,6 @@ import Link from "next/link";
 
 import { servidor_url } from "../../config";
 
-
-
 import MenuNavBar from "./MenuNavBar";
 import MenuNavBar2 from "./MenuNavBar2";
 import Logo from "./Logo";
@@ -137,7 +135,11 @@ export default function AreaSuperior({
             <div className="item-img-team-top me-5">
               <img
                 className=" img-team-top  "
-                src={(img_team_top.startsWith("https://") ? img_team_top : `${servidor_url}/img/${img_team_top}`)}
+                src={
+                  img_team_top.startsWith("https://")
+                    ? img_team_top
+                    : `${servidor_url}/img/${img_team_top}`
+                }
               />
             </div>
           )}
@@ -305,7 +307,7 @@ const contenido_principal = (
         </>
       )}
 
-      <div className="mb-5">
+      <div className="mb-4">
         {iconos != undefined && iconos && <Content01Iconos />}
 
         {/*Texto_quiz_result */}

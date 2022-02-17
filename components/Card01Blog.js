@@ -1,7 +1,7 @@
 import React from "react";
 
 let longitud_linea = 24;
-export default function Card01Blog({ data }) {
+export default function Card01Blog({ data, main_page }) {
   const imagen = data.attributes.img.data.attributes.url;
   const titulo = data.attributes.title.includes("BUCH")
     ? ["BUCH", data.attributes.title.slice(4)]
@@ -17,7 +17,10 @@ export default function Card01Blog({ data }) {
 
   return (
     <>
-      <div className="card  my_card myanimacion sombra_cards mb-3">
+      <div
+        className={`card ${
+          main_page ? " my_card_home " : " my_card "
+        }  myanimacion sombra_cards mb-3`}>
         {imagen != undefined && imagen != "" && (
           <img
             className="card-img-top corte_cards img-rounded  "

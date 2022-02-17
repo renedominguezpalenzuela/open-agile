@@ -34,6 +34,7 @@ export default function Content02Cursos({ cursos, main_page }) {
         <Card01ListaC
           lista_cards={cursos}
           total_card_en_row={cursos.data.length}
+          main_page={main_page}
         />
       </div>
     </>
