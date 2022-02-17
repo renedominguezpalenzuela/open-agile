@@ -1,5 +1,6 @@
-import * as React from "react";
+
 import { formEmail } from "../config";
+import React, { useRef } from "react";
 
 import Radio from "@mui/material/Radio";
 // import RadioGroup from "@mui/material/RadioGroup";
@@ -31,13 +32,11 @@ import Box from "@mui/material/Box";
 import axios from "axios";
 import { useState } from "react";
 
-
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-
 
 import { sendFormulario } from "../components/global/sendFormulario";
 
@@ -78,71 +77,143 @@ export default function ModalFormConfigurator({
   day,
   frase,
 }) {
+
+   const botonCerrarFormulario = useRef();
+
+  
+
+  const errorIffieldEmpty = "Bitte überprüfe die Eingabe";
+  const errorIffieldWrong = "Fehler";
+
+
+  const [errorNombre, setErrorNombre] = React.useState(false);
+  const [textErrorNombre, setTextErrorNombre] = React.useState("");
+
   const [nombre, setNombre] = React.useState("");
   const handleChangeNombre = (event) => {
+
+     if (event.target.value != "") {
+      setErrorNombre(false);
+      setTextErrorNombre(null);
+    }
+
     setNombre(event.target.value);
   };
 
+  const [errorEmail, setErrorEmail] = React.useState(false);
+  const [textErrorEmail, setTextErrorEmail] = React.useState("");
+
   const [email, setEmail] = React.useState("");
   const handleChangeEmail = (event) => {
+     if (event.target.value != "") {
+      setErrorEmail(false);
+      setTextErrorEmail(null);
+    }
+
     setEmail(event.target.value);
   };
 
+  const [errorPhone, setErrorPhone] = React.useState(false);
+  const [textErrorPhone, setTextErrorPhone] = React.useState("");
+
   const [telephone, setTelephone] = React.useState("");
   const handleChangeTelephone = (event) => {
+     if (event.target.value != "") {
+      setErrorPhone(false);
+      setTextErrorPhone(null);
+    }
+
     setTelephone(event.target.value);
   };
 
+  const [errorMensaje, setErrorMensaje] = React.useState(false);
+  const [textErrorMensaje, setTextErrorMensaje] = React.useState("");
+
   const [mensaje, setMensaje] = React.useState("");
   const handleChangeMensaje = (event) => {
+     if (event.target.value != "") {
+      setErrorMensaje(false);
+      setTextErrorMensaje(null);
+    }
+
     setMensaje(event.target.value);
   };
 
-  
   const [condicionesAGB, setCondicionesAGB] = React.useState("");
   const handleChangeCondicionesAGB = (event) => {
     setCondicionesAGB(event.target.value);
   };
-
 
   const [textoDialogo, setTextoDialogo] = React.useState("");
 
   //dialogo
   const [open, setOpen] = React.useState(false);
 
-  const handleClickOpen = () => {
+  const mostrarrMensajeFeedBack = () => {
     setOpen(true);
   };
 
-  const handleClose = () => {
+  const cerrarMensajeFeedBack = () => {
     setOpen(false);
   };
 
-  const texto_EnviadoCorrectamente = "Vielen Dank für Deine Kontaktaufnahme, wir melden uns bei Dir!";
-  const texto_ErrorEnDatosCheckBox = "Bitte bestätige die AGBs, um das Formular absenden zu können.";
-  const texto_ErrorEnDatos = "Bitte überprüfe Deine Eingaben und sende das Formular erneut ab.";
-  const texto_ErrorEnServidor = "Kontaktformular Error, bitte versuchen Sie es erneut.";
+  const texto_EnviadoCorrectamente =
+    "Vielen Dank für Deine Kontaktaufnahme, wir melden uns bei Dir!";
+  const texto_ErrorEnDatosCheckBox =
+    "Bitte bestätige die AGBs, um das Formular absenden zu können.";
+  const texto_ErrorEnDatos =
+    "Bitte überprüfe Deine Eingaben und sende das Formular erneut ab.";
+  const texto_ErrorEnServidor =
+    "Kontaktformular Error, bitte versuchen Sie es erneut.";
 
   const eventoBotonEnviar = async () => {
-      if (condicionesAGB != "Ja") {
-      setTextoDialogo(texto_ErrorEnDatosCheckBox);
-      handleClickOpen();
-      return;
-    }
 
-    if (nombre === "" || email === "" || telephone==="" || mensaje==="" ) {
+
+    if (nombre === "" || email === "" || telephone === "" || mensaje === "") {
+       
+      if (nombre === "") {
+        setErrorNombre(true);
+        setTextErrorNombre(errorIffieldEmpty);
+      }
+
+      if (email === "") {
+        setErrorEmail(true);
+        setTextErrorEmail(errorIffieldEmpty);
+      }
       
+      if (telephone === "") {
+        setErrorPhone(true);
+        setTextErrorPhone(errorIffieldEmpty);
+      }
 
+      if (mensaje === "") {
+        setErrorMensaje(true);
+        setTextErrorMensaje(errorIffieldEmpty);
+      }
+       
       setTextoDialogo(texto_ErrorEnDatos);
-      handleClickOpen();
+      mostrarrMensajeFeedBack();
+      return;
+    }
+
+      if (!isEmailValid(email)) {
+      setErrorEmail(true);
+      setTextErrorEmail(errorIffieldWrong);
+      setTextoDialogo(texto_ErrorEnDatos);
+      mostrarrMensajeFeedBack();
+
+      return;
+    }
+
+        if (condicionesAGB != "Ja") {
+      setTextoDialogo(texto_ErrorEnDatosCheckBox);
+      mostrarrMensajeFeedBack();
       return;
     }
 
 
-
-
- const subject = "Contact Form";
-const DataToSend = {
+    const subject = "Contact Form";
+    const DataToSend = {
       from: subject,
       to: formEmail,
       subject: subject,
@@ -151,22 +222,28 @@ const DataToSend = {
      <strong>Name, Vorname oder Firma: </strong> ${nombre} <br />
      <strong>E-Mail Adresse: </strong> ${email} <br />
      <strong>Telefonnummer: </strong> ${telephone} <br />
-     <strong>Nachricht: </strong> ${mensaje} <br />`
+     <strong>Nachricht: </strong> ${mensaje} <br />`,
+    };
 
-
-     }
-    
     const respuesta = await sendFormulario(DataToSend);
-    
 
     if (respuesta.data.cod_resp === "000") {
       setTextoDialogo(texto_EnviadoCorrectamente);
-      handleClickOpen();
+      mostrarrMensajeFeedBack();
+      setTimeout(function () {
+        botonCerrarFormulario.current.click();
+      }, 1500);
+
     } else {
-      setTextoDialogo(texto_ErrorEnServidor + ": " + respuesta.data.cod_resp + " - "+respuesta.data.msg);
-      handleClickOpen();
+      setTextoDialogo(
+        texto_ErrorEnServidor +
+          ": " +
+          respuesta.data.cod_resp +
+          " - " +
+          respuesta.data.msg
+      );
+      mostrarrMensajeFeedBack();
     }
-  
   };
 
   const fuentes1 = {
@@ -213,8 +290,6 @@ const DataToSend = {
       color: "#ffffff",
     },
   };
-
-  
 
   const styles = {
     //  input: { color: 'blue'}, //Color de la fuente al escribir
@@ -288,6 +363,7 @@ const DataToSend = {
                 type="button"
                 className="btn-close"
                 data-bs-dismiss="modal"
+                 ref={botonCerrarFormulario}
                 aria-label="Close"></button>
             </div>
 
@@ -306,6 +382,8 @@ const DataToSend = {
                   InputLabelProps={fuentes2}
                   value={nombre}
                   onChange={handleChangeNombre}
+                  helperText={errorNombre ? textErrorNombre : ""}
+                  error={errorNombre}
                 />
               </div>
 
@@ -319,6 +397,8 @@ const DataToSend = {
                   InputLabelProps={fuentes2}
                   value={email}
                   onChange={handleChangeEmail}
+                  helperText={errorEmail ? textErrorEmail : ""}
+                  error={errorEmail}
                 />
               </div>
 
@@ -332,6 +412,8 @@ const DataToSend = {
                   InputLabelProps={fuentes2}
                   value={telephone}
                   onChange={handleChangeTelephone}
+                  helperText={errorPhone ? textErrorPhone : ""}
+                  error={errorPhone}
                 />
               </div>
 
@@ -350,10 +432,11 @@ const DataToSend = {
               </div>
 
               <div className="row d-flex justify-content-start ps-3 pe-3 mt-1">
-                <RadioGroup name="use-radio-group" defaultValue="Ja"
-                      value={condicionesAGB}
-                      onChange={handleChangeCondicionesAGB}
-                >
+                <RadioGroup
+                  name="use-radio-group"
+                  defaultValue="Ja"
+                  value={condicionesAGB}
+                  onChange={handleChangeCondicionesAGB}>
                   <MyFormControlLabel
                     value="Ja"
                     label="Ja"
@@ -379,6 +462,9 @@ const DataToSend = {
                   InputLabelProps={fuentes2}
                   value={mensaje}
                   onChange={handleChangeMensaje}
+                  helperText={errorMensaje ? textErrorMensaje : ""}
+                  error={errorMensaje}
+                  
                 />
               </div>
 
@@ -387,7 +473,7 @@ const DataToSend = {
                   <button
                     type="button"
                     className="btn btn-secondary boton_modal_form2 "
-                    data-bs-dismiss="modal"
+                    // data-bs-dismiss="modal"
                     onClick={eventoBotonEnviar}>
                     ABSENDEN
                   </button>
@@ -400,9 +486,10 @@ const DataToSend = {
 
       <Dialog
         open={open}
-        onClose={handleClose}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description">
+        onClose={cerrarMensajeFeedBack}
+        // aria-labelledby="alert-dialog-title"
+        // aria-describedby="alert-dialog-description"
+        disableEnforceFocus>
         {/* <DialogTitle id="alert-dialog-title">
           {"Use Google's location service?"}
         </DialogTitle> */}
@@ -412,7 +499,7 @@ const DataToSend = {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} autoFocus>
+          <Button onClick={cerrarMensajeFeedBack} autoFocus>
             OK
           </Button>
         </DialogActions>
@@ -425,3 +512,12 @@ const eliminar_anno = (fecha) => {
   if (fecha === undefined) return "";
   return fecha.substring(0, 6);
 };
+
+
+
+function isEmailValid(emailAdress) {
+  var EMAIL_REGEXP = new RegExp("^[a-z0-9]+(.[_a-z0-9]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,15})$",   "i"  );
+  // var EMAIL_REGEXP = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,20}$/;
+
+  return EMAIL_REGEXP.test(emailAdress);
+}

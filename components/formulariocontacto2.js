@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import  { useRef } from "react";
 import TextField from "@mui/material/TextField";
 // import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Button from "@mui/material/Button";
@@ -24,22 +25,57 @@ import { formEmail } from "../config";
 import { AlertDialogForms } from "./AlertDialogForms";
 
 export default function FormularioContacto2() {
-  const [checked1, setChecked1] = useState(false);
-  const [nombre, setNombre] = React.useState("");
-  const [correo, setCorreo] = React.useState("");
-  const [textoDialogo, setTextoDialogo] = React.useState("");
 
-  const handleChange1 = (event) => {
+    const botonCerrarFormulario = useRef();
+
+  const errorIffieldEmpty = "Bitte überprüfe die Eingabe";
+  const errorIffieldWrong = "Fehler";
+
+
+  const [checked1, setChecked1] = useState(false);
+   const handleChange1 = (event) => {
     setChecked1(event.target.checked);
   };
 
+
+  
+  const [errorNombre, setErrorNombre] = React.useState(false);
+  const [texterrorNombre, setTextErrorNombre] = React.useState("");
+
+  const [nombre, setNombre] = React.useState("");
+
   const handleChangeNombre = (event) => {
+    if (event.target.value != "") {
+      setErrorNombre(false);
+      setTextErrorNombre(null);
+    }
+
+
     setNombre(event.target.value);
   };
 
-  const handleChangeCorreo = (event) => {
+
+  const [errorEmail, setErrorEmail] = React.useState(false);
+  const [texterrorEmail, setTextErrorEmail] = React.useState("");
+
+  const [correo, setCorreo] = React.useState("");
+   const handleChangeCorreo = (event) => {
+
+    if (event.target.value != "") {
+      setErrorEmail(false);
+      setTextErrorEmail(null);
+    }
+
     setCorreo(event.target.value);
   };
+
+
+  const [textoDialogo, setTextoDialogo] = React.useState("");
+
+ 
+
+  
+ 
 
   //dialogo
   const [open, setOpen] = React.useState(false);
@@ -65,10 +101,33 @@ export default function FormularioContacto2() {
 
   const eventoBotonEnviar = async () => {
     if (nombre === "" || correo === "") {
+
+      if (nombre === "") {
+        setErrorNombre(true);
+        setTextErrorNombre(errorIffieldEmpty);
+      }
+
+      if (correo === "") {
+        setErrorEmail(true);
+        setTextErrorEmail(errorIffieldEmpty);
+      }
+
+
       
 
       setTextoDialogo(texto_ErrorEnDatos);
       handleClickOpen();
+      return;
+    }
+
+
+    
+    if (!isEmailValid(correo)) {
+      setErrorEmail(true);
+      setTextErrorEmail(errorIffieldWrong);
+      setTextoDialogo(texto_ErrorEnDatos);
+      handleClickOpen();
+
       return;
     }
 
@@ -194,6 +253,8 @@ export default function FormularioContacto2() {
             InputLabelProps={fuentes}
             value={nombre}
             onChange={handleChangeNombre}
+            helperText={errorNombre ? texterrorNombre : ""}
+            error={errorNombre}
           />
         </div>
         <div className="group item-edit2 ">
@@ -207,6 +268,8 @@ export default function FormularioContacto2() {
             InputLabelProps={fuentes}
             value={correo}
             onChange={handleChangeCorreo}
+            helperText={errorEmail ? texterrorEmail : ""}
+            error={errorEmail}
           />
         </div>{" "}
         <div className="group  item-boton1  ">
@@ -238,8 +301,8 @@ export default function FormularioContacto2() {
       <Dialog
         open={open}
         onClose={handleClose}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description">
+        disableEnforceFocus
+      >
         {/* <DialogTitle id="alert-dialog-title">
           {"Use Google's location service?"}
         </DialogTitle> */}
@@ -256,4 +319,12 @@ export default function FormularioContacto2() {
       </Dialog>
     </>
   );
+}
+
+
+function isEmailValid(emailAdress) {
+  var EMAIL_REGEXP = new RegExp("^[a-z0-9]+(.[_a-z0-9]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,15})$",   "i"  );
+  // var EMAIL_REGEXP = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,20}$/;
+
+  return EMAIL_REGEXP.test(emailAdress);
 }
