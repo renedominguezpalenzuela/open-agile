@@ -113,6 +113,7 @@ export default function Home({ curso }) {
         <div className="row  pt-md-5 pb-md-5">
           <div className={`${landscape ? "col-md-5" : "col-md-4"}`}>
             <MenuKraskurse
+              online={curso.data.id == 5 ? true : null}
               link_beschreibung={link_beschreibung}
               link_vorteile={link_vorteile}
               link_inhalte={link_inhalte}

@@ -2,7 +2,10 @@ import { servidor_url } from "../../config";
 import Image from "next/image";
 import Link from "next/link";
 
+const ONLINEURL = 'https://open-agile-academy.teachable.com/p/online-crashkurs-selbstorganisation-in-agilen-teams';
+
 export default function MenuKrashkurse({
+  online,
   link_beschreibung,
   link_vorteile,
   link_inhalte,
@@ -12,10 +15,13 @@ export default function MenuKrashkurse({
   link_pdf,
   link_boton,
 }) {
-  let link_boton_new = "#termine";
-  if (link_boton != undefined && link_boton.length > 0) {
+  console.log(online)
+  let link_boton_new = (online !== null ? ONLINEURL : "#termine");
+  if (online === null && link_boton != undefined && link_boton.length > 0) {
     link_boton_new = link_boton;
   }
+
+  console.log(link_boton_new)
 
   return (
     <>
