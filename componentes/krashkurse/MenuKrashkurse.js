@@ -68,8 +68,7 @@ export default function MenuKrashkurse({
 
               <tr className="font-card-menu-crashkurse">
                 <td>
-                  <a
-                    href={`${servidor_url}/${link_kosten}#section_leistungen-kosten`}>
+                  <a href={`${servidor_url}/${link_kosten}#section_kosten`}>
                     <div className="myanimacioncursos">LEISTUNGEN & KOSTEN</div>
                   </a>
                 </td>
@@ -117,19 +116,25 @@ export default function MenuKrashkurse({
   );
 }
 
-function downloadFile(filePath) {
-  var link = document.createElement("a");
-  link.href = filePath;
-  link.download = filePath.substr(filePath.lastIndexOf("/") + 1);
-  link.click();
-}
+const downloadEmployeeData = (path, name) => {
+  fetch(path).then((response) => {
+    response.blob().then((blob) => {
+      let url = window.URL.createObjectURL(blob);
+      ////console.log(url);
+      let a = document.createElement("a");
+      a.href = url;
+      a.download = name;
+      a.click();
+    });
+  });
+};
 
 const botonAbrirPDF = (link_pdf) => {
   //  event.preventDefault();
 
   for (let i = link_pdf.length - 1; i >= 0; i--) {
     // window.open(unPdf, "_blank");
-    downloadFile(link_pdf[i]);
+    downloadEmployeeData(link_pdf[i].path, link_pdf[i].name);
     //  window.open(unPdf, '_parent', 'download');
   }
 };

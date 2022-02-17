@@ -6,10 +6,7 @@ const qs = require("qs");
 const sendFormulario = async (datos) => {
   const url = `${backend_url}/api/forms`;
 
- 
   let bodyData = qs.stringify(datos);
-
- 
 
   try {
     const respuesta_api = await axios.post(url, bodyData, {
@@ -18,9 +15,8 @@ const sendFormulario = async (datos) => {
       },
     });
     return respuesta_api;
-   
   } catch (err) {
-    console.log("Error in sendFormulario: " + err);
+    ////console.log("Error in sendFormulario: " + err);
   }
 };
 

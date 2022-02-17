@@ -1,5 +1,11 @@
-import { vlog_details } from "../../../data/data_vlog_details";
-
 export default function handler(req, res) {
-   res.status(200).json(vlog_details);
+   fetch("https://js-agileweb-backend.herokuapp.com/api/vlogs?populate=%2A")
+     .then(response => response.json())
+     .then(data => {
+       
+        res.status(200).json(data.data);
+     })
+     .catch(err =>
+       res.status(400).json(err)
+     )
 }

@@ -1,4 +1,4 @@
-import Card01Lista from "./Card01Lista";
+import Card01ListaC from "./Card01ListaC";
 import Content02Texto from "./Content02Texto";
 import Content02Final from "./Content02Final";
 
@@ -29,9 +29,13 @@ export default function Content02Cursos({ cursos, main_page }) {
         className={`${
           main_page
             ? "div_content02a   pb-5 pt-3 g-0"
-            : "div_content02c pb-5 pt-3 g-0"
+            : "div_content02c   pb-5 pt-3 g-0"
         }`}>
-        <Card01Lista lista_cards={cursos} total_card_en_row={3} />
+        <Card01ListaC
+          lista_cards={cursos}
+          total_card_en_row={cursos.data.length}
+          main_page={main_page}
+        />
       </div>
     </>
   );

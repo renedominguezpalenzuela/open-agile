@@ -40,6 +40,12 @@
   margin-left: 0.5vw;
 }
 
+@media (min-width: 992px) {
+  .ratio-16x9-vlog {
+    --bs-aspect-ratio: 50%;
+  }
+}
+
 .container_video {
   position: relative;
   left: -10vw;

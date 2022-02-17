@@ -1,61 +1,43 @@
-//----------------------------------------------------------------------------------------------------------
-//           Menu superior
-//----------------------------------------------------------------------------------------------------------
-//TODO: Crear  componentes para cada elemento
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState, useEffect } from "react";
 
 export default function MenuNavBar() {
+  const [leich, setLeich] = useState({ data: [] });
+  const [crush, setCrush] = useState({ data: [] });
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetch("/api/leistungen");
+      const servicios = await data.json();
+      setLeich(servicios);
+    };
+    fetchData();
+    const fetchData2 = async () => {
+      const data = await fetch("/api/curso");
+      const servicios = await data.json();
+      setCrush(servicios);
+    };
+    fetchData2();
+  }, []);
+
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light navigation   ">
         <ul className="navbar-nav ">
           <li className="nav-item dropdown2  ">
-            <a href="/crashkurse/main">
+            <a href="/crashkurse/">
               <div className="nav-link">CRASHKURSE</div>
             </a>
 
             <ul className="dropdown-content text-start color-dropdown animate__animated animate__fadeInUp no-bullets">
-              <li className="nav-item ">
-                <a
-                  className="dropdown-item color-font-dropdown"
-                  href="/crashkurse/beschreibung/1">
-                  CRASHKURS ZUM AGILE COACH
-                </a>
-              </li>
-
-              <li className="nav-item">
-                <a
-                  className="dropdown-item color-font-dropdown"
-                  href="/crashkurse/beschreibung/2">
-                  CRASHKURS ZUM AGILE FACILITATOR
-                </a>
-              </li>
-
-              <li className="nav-item">
-                <a
-                  className="dropdown-item color-font-dropdown"
-                  href="/crashkurse/beschreibung/3">
-                  CRASHKURS ZUM SCRUM MASTER
-                </a>
-              </li>
-
-              <li className="nav-item">
-                <a
-                  className="dropdown-item color-font-dropdown"
-                  href="/crashkurse/beschreibung/4">
-                  {" "}
-                  CRASHKURS MITBESTIMMUNG IN DER AGILEN ARBEITSWELT
-                </a>
-              </li>
-
-              <li className="nav-item">
-                <a
-                  className="dropdown-item color-font-dropdown"
-                  href="/crashkurse/beschreibung/5">
-                  {" "}
-                  ONLINE CRASHKURS SELBSTORGANISATION IN AGILEN TEAMS
-                </a>
-              </li>
+              {crush.data.map((item, key) => (
+                <li key={key} className="nav-item ">
+                  <a
+                    className="dropdown-item color-font-dropdown"
+                    href={`/crashkurse/${item.attributes.slug}/beschreibung/`}>
+                    {item.attributes.page_title.toUpperCase()}
+                  </a>
+                </li>
+              ))}
             </ul>
           </li>
 
@@ -64,39 +46,20 @@ export default function MenuNavBar() {
           </li>
 
           <li className="nav-item dropdown2  ">
-            <a href="/leistungen/main">
+            <a href="/leistungen">
               <div className="nav-link">LEISTUNGEN</div>
             </a>
 
             <ul className="dropdown-content text-start color-dropdown animate__animated animate__fadeInUp no-bullets">
-              <li className="nav-item">
-                <a
-                  className="dropdown-item color-font-dropdown"
-                  href="/leistungen/1">
-                  ORGANISATIONSENTWICKLUNG
-                </a>
-              </li>
-
-              <li className="nav-item">
-                <a
-                  className="dropdown-item color-font-dropdown"
-                  href="/leistungen/2">
-                  INHOUSE TRAINING
-                </a>
-              </li>
-
-              <li className="nav-item">
-                <a
-                  className="dropdown-item color-font-dropdown"
-                  href="/leistungen/3">
-                  COACHING{" "}
-                </a>
-              </li>
-
-              {/* 
-          <li className="nav-item">
-            <a className="dropdown-item color-font-dropdown" href="/leistungen/4">MITBESTIMMUNG IM AGILEN KONTEXT</a>
-          </li> */}
+              {leich.data.map((item, key) => (
+                <li key={key} className="nav-item">
+                  <a
+                    className="dropdown-item color-font-dropdown"
+                    href={`/${item.attributes.slug}`}>
+                    {item.attributes.title.toUpperCase()}
+                  </a>
+                </li>
+              ))}
             </ul>
           </li>
 
@@ -110,9 +73,7 @@ export default function MenuNavBar() {
 
             <ul className="dropdown-content text-start color-dropdown animate__animated animate__fadeInUp no-bullets">
               <li className="nav-item ">
-                <a
-                  className="dropdown-item color-font-dropdown"
-                  href="/team/main">
+                <a className="dropdown-item color-font-dropdown" href="/team">
                   UNSERE WERTE
                 </a>
               </li>

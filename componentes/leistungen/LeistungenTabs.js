@@ -5,7 +5,7 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import ModalFormConfigurator from "../../components/ModalFormConfigurator";
-
+import ReactMarkdown from "react-markdown";
 import { servidor_url } from "../../config";
 
 function TabPanel(props) {
@@ -40,7 +40,14 @@ function a11yProps(index) {
   };
 }
 
-export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
+export default function LeistungenTabs({
+  texto01,
+  texto02,
+  texto03,
+  titulo01,
+  titulo02,
+  titulo,
+}) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -64,8 +71,8 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
             scrollButtons={true}
             aria-label="basic tabs example"
             centered>
-            <Tab label={`01. ${titulo}`} {...a11yProps(0)} />
-            <Tab label="02. BEISPIEL VORGEHEN" {...a11yProps(1)} />
+            <Tab label={`01. ${titulo01}`} {...a11yProps(0)} />
+            <Tab label={`02. ${titulo02}`} {...a11yProps(1)} />
             <Tab label="03. KONTAKT AUFNEHMEN" {...a11yProps(2)} />
           </Tabs>
           <Tabs
@@ -75,8 +82,8 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
             variant="scrollable"
             scrollButtons="auto"
             aria-label="basic tabs example">
-            <Tab label={`01. ${titulo}`} {...a11yProps(0)} />
-            <Tab label="02. BEISPIEL VORGEHEN" {...a11yProps(1)} />
+            <Tab label={`01. ${titulo01}`} {...a11yProps(0)} />
+            <Tab label={`02. ${titulo02}`} {...a11yProps(1)} />
             <Tab label="03. KONTAKT AUFNEHMEN" {...a11yProps(2)} />
           </Tabs>
         </Box>
@@ -84,16 +91,18 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
         <TabPanel value={value} index={0} className="alto-tab  ">
           <div className="ps-md-5 ps-2 ms-md-5 ms-2 pe-2 row col col-md-6">
             <div className=" organization-text mt-2 mb-4   text-left">
-              {titulo}
+              {titulo01}
             </div>
 
-            {texto01 != undefined &&
-              texto01.length > 0 &&
-              texto01.map((unaLinea, index) => (
-                <div className="fuente-texto-cursos" key={index}>
-                  <p> {unaLinea}</p>
-                </div>
-              ))}
+            {
+              texto01 != undefined && texto01.length > 0 && (
+                // texto01.map((unaLinea, index) => (
+                <ReactMarkdown className="fuente-texto-cursos  mybullets">
+                  {texto01}
+                </ReactMarkdown>
+              )
+              // ))
+            }
           </div>
 
           <div className="ubicacion-boton" onClick={() => myfuncion(1)}>
@@ -110,18 +119,17 @@ export default function LeistungenTabs({ texto01, texto02, texto03, titulo }) {
         <TabPanel value={value} index={1} className=" alto-tab  ">
           <div className="ps-md-5 ps-2 ms-md-5 ms-2 pe-2 row col col-md-6">
             <div className=" organization-text mt-2 mb-4  text-left ">
-              BEISPIEL VORGEHEN
+              {titulo02}
             </div>
-            <ul>
-              {texto02 != undefined &&
-                texto02.length > 0 &&
-                texto02.map((unaLinea, index) => (
-                  <li key={index} className="fuente-texto-cursos mybullets">
-                    {" "}
-                    {unaLinea}
-                  </li>
-                ))}
-            </ul>
+            {
+              texto02 != undefined && texto02.length > 0 && (
+                // texto02.map((unaLinea, index) => (
+                <ReactMarkdown className="fuente-texto-cursos  mybullets">
+                  {texto02}
+                </ReactMarkdown>
+              )
+              // ))
+            }
           </div>
 
           <div className="ubicacion-boton " onClick={() => myfuncion(2)}>

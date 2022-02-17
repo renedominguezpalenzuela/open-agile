@@ -1,23 +1,22 @@
-import { servidor_url } from "../../../config";
-import { backend_url } from "../../../config";
+import { servidor_url } from "../../../../config";
+import { backend_url } from "../../../../config";
 import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
-
-import MenuKraskurse from "../../../componentes/krashkurse/MenuKrashkurse";
-
-import AreaSuperior from "../../../componentes/area_superior/AreaSuperior";
-import KurseContent01 from "../../../componentes/krashkurse/KurseContent01";
-
-import MenuFlotante from "../../../components/MenuFlotante";
-import Footer from "../../../components/Footer";
-import MenuFlotanteBoton from "../../../components/MenuFlotanteBoton";
-
-import Tabla03 from "../../../components/crashkurse/tabla03";
-
-import ModalFormCookie from "../../../components/ModalFormCookie";
-
 import { useState, useEffect } from "react";
+
+import MenuKraskurse from "../../../../componentes/krashkurse/MenuKrashkurse";
+
+import AreaSuperior from "../../../../componentes/area_superior/AreaSuperior";
+import KurseContent01 from "../../../../componentes/krashkurse/KurseContent01";
+
+import MenuFlotante from "../../../../components/MenuFlotante";
+import Footer from "../../../../components/Footer";
+import MenuFlotanteBoton from "../../../../components/MenuFlotanteBoton";
+
+import Tabla03 from "../../../../components/crashkurse/tabla03";
+
+import ModalFormCookie from "../../../../components/ModalFormCookie";
 
 export default function Home({ curso }) {
   const router = useRouter();
@@ -27,8 +26,8 @@ export default function Home({ curso }) {
     titulo_area_superior,
     titulo_dates,
     image2,
-    image_vorteile,
-    texto_vorteile,
+    image_leistungen,
+    texto_leistungen,
     link_beschreibung,
     link_vorteile,
     link_inhalte,
@@ -48,23 +47,8 @@ export default function Home({ curso }) {
   let link_termine_new = "";
 
   if (link_termine != undefined && link_termine.length > 0) {
-    link_termine_new = servidor_url + "/" + link_vorteile + link_termine;
+    link_termine_new = servidor_url + "/" + link_leistungen + link_termine;
   }
-
-  const [desktop_screen, setDesktop_screen] = useState(true);
-  const handleResize = () => {
-    let ancho_screen = window.innerWidth;
-    if (ancho_screen > 992) {
-      setDesktop_screen(true);
-    } else {
-      setDesktop_screen(false);
-    }
-  };
-  useEffect(() => {
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   return (
     <>
@@ -77,7 +61,6 @@ export default function Home({ curso }) {
       </Head>
 
       <div id="principal" className="container-fluid g-0">
-        <ModalFormCookie id={1} tiempo={10} />
         <MenuFlotanteBoton />
 
         {/* <AreaSuperior
@@ -86,23 +69,13 @@ export default function Home({ curso }) {
           titulo_largo={true} area_gris_nueva={true}
         /> */}
 
-        {desktop_screen ? (
-          <AreaSuperior
-            fondo="ajustable"
-            texto1={titulo_area_superior}
-            titulo_muy_largo={true}
-            area_gris_nueva={true}
-            shop={true}
-          />
-        ) : (
-          <AreaSuperior
-            fondo="ajustable"
-            texto2={titulo_area_superior}
-            titulo_muy_largo={true}
-            area_gris_nueva={true}
-            shop={true}
-          />
-        )}
+        <AreaSuperior
+          fondo="ajustable"
+          texto2={titulo_area_superior}
+          titulo_muy_largo={true}
+          area_gris_nueva={true}
+          shop={true}
+        />
 
         <div className="row pt-5 pb-5">
           <div className="col-md-4 ">
@@ -117,15 +90,15 @@ export default function Home({ curso }) {
               link_boton={link_boton}
             />
           </div>
-          <div className="col-md-7 pt-5  pe-5" id="section_vorteile">
-            <KurseContent01
-              imagen={image_vorteile}
-              titulo="VORTEILE"
-              texto_plequitas={texto_vorteile}
+          <div className="col-md-7 pt-5   pe-5" id="section_leistungen-kosten">
+            <KurseContent02
+              imagen={image_leistungen}
+              titulo="LEISTUNGEN"
+              texto={texto_leistungen}
               imagen_botones={image2}
               titulo_botones={crashkurs_date_title}
               text_termine={text_termine}
-              link_weitere_infos={link_inhalte}
+              link_weitere_infos={link_kosten}
             />
           </div>
         </div>

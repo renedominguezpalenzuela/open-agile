@@ -1,26 +1,10 @@
 import { backend_url } from "../config";
 import Head from "next/head";
-import Image from "next/image";
-
 import MenuFlotante from "../components/MenuFlotante";
 import Footer from "../components/Footer";
-
 import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
-// import MenuSuperior from "../components/MenuSuperior";
-
-import TextoBloque01 from "../components/textobloque01";
-import Image01 from "../components/crashkurse/image01";
-
-import Tabla01 from "../components/crashkurse/tabla01";
-
 import AreaSuperior from "../componentes/area_superior/AreaSuperior";
-
-import BarraConTextoDerecha from "../components/BarraConTextoDerecha";
-import BarraConTextoIzquierda from "../components/BarraConTextoIzquierda";
-
 import Content04 from "../components/Content04";
-
-import ModalFormCookie from "../components/ModalFormCookie";
 
 //----------------------------------------------------------------------------------------------------------
 //           CRASHKURSE \ CRASHKURS ZUM AGILE COACH

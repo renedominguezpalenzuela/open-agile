@@ -66,14 +66,14 @@ export default function Home({ shop }) {
                 className="col-lg-4 p-3 d-flex justify-content-center card-shop-land">
                 <Card07Shop
                   id={oneShop.id}
-                  titulo={oneShop.titulo}
-                  texto={oneShop.texto}
-                  imagen={oneShop.imagen}
-                  texto_boton1={oneShop.texto_boton1}
-                  texto_boton2={oneShop.texto_boton2}
-                  texto_alt={oneShop.texto_alt}
-                  link1={oneShop.link1}
-                  link2={oneShop.link2}
+                  titulo={oneShop.attributes.title}
+                  texto={oneShop.attributes.description}
+                  imagen={oneShop.attributes.image.data.attributes.url}
+                  texto_boton1={oneShop.attributes.left_button_text}
+                  texto_boton2={oneShop.attributes.rigth_button_text}
+                  texto_alt={oneShop.attributes.title}
+                  link1={oneShop.attributes.left_button_url}
+                  link2={oneShop.attributes.rigth_button_url}
                 />
               </div>
             ))}

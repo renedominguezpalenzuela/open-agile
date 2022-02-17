@@ -5,7 +5,6 @@ import MenuFlotante from "../../components/MenuFlotante";
 import Footer from "../../components/Footer";
 
 import MenuFlotanteBoton from "../../components/MenuFlotanteBoton";
-// import MenuSuperior from "../components/MenuSuperior";
 
 import TextoBloque01 from "../../components/textobloque01";
 import Image01 from "../../components/crashkurse/image01";
@@ -25,14 +24,10 @@ import { servidor_url } from "../../config";
 
 import ModalFormCookie from "../../components/ModalFormCookie";
 
-//----------------------------------------------------------------------------------------------------------
-//           CRASHKURSE \ CRASHKURS ZUM AGILE COACH
-//----------------------------------------------------------------------------------------------------------
+export default function Home({uw}) {
 
-export default function Home() {
-  // <Head>
-  //   <script async src="js/menu.js" />
-  // </Head>
+  
+
 
   const titulo1 = "TEAM";
   const titulo2 = "UNSERE WERTE";
@@ -103,11 +98,7 @@ export default function Home() {
 
         <div className="row ms-4 mt-5 alto-team-tab-contenedor  ">
           <TeamTabs
-            texto01={texto01}
-            texto02={texto02}
-            texto03={texto03}
-            texto04={texto04}
-            texto05={texto05}
+            data={uw}
           />
         </div>
 
@@ -119,3 +110,16 @@ export default function Home() {
     </>
   );
 }
+
+export const getServerSideProps = async (context) => {
+  const url = `${servidor_url}/api/team/unsere-wertes`;
+  const res = await fetch(url);
+
+  const uw = await res.json();
+
+  return {
+    props: {
+      uw,
+    },
+  };
+};

@@ -1,5 +1,3 @@
-// import styles from "../styles/Home.module.css";
-
 import Head from "next/head";
 
 let ancho = 540;
@@ -20,16 +18,12 @@ export default function Card06Team({
   telefono,
   telefono_link
 }) {
-
-  
   return (
     <>
       <div className="card myanimacion sombra_cards redondear-card pb-2">
         <div className="row   g-0 pb-2">
-          <img   className=" imagen-team-card "  src={`${servidor_url}/img/${imagen}`}  alt={texto_alt} />
+          <img   className=" imagen-team-card "  src={imagen}  alt={texto_alt} />
         </div>
-
-      
 
         <div className="h-100 d-flex  align-items-center  ">
           <div className="row w-100 g-0 ">

@@ -33,6 +33,10 @@
   height: 9vh;
 }
 
+.redondear-car-jobs {
+  border-radius: 8px 8px 8px 8px;
+}
+
 .redondear-card {
   border-radius: 8px 8px 8px 8px;
 }

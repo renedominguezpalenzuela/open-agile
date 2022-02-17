@@ -161,9 +161,15 @@
   text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
 }
 
-@media (max-width: 490px) {
+@media (max-width: 490px) and (min-width: 400px) {
   .font_title_seccion_sombra {
     font-size: 3rem !important;
+  }
+}
+
+@media (max-width: 399px) {
+  .font_title_seccion_sombra {
+    font-size: 2.5rem !important;
   }
 }
 
@@ -206,15 +212,27 @@
   text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
 }
 
-@media (max-width: 575px) {
+@media (max-width: 575px) and (orientation: portrait) {
   .font_cards_magenta {
     font-size: 6vw;
   }
 }
 
-@media (max-width: 767px) and (min-width: 576px) {
+@media (max-width: 767px) and (min-width: 576px) and (orientation: portrait) {
   .font_cards_magenta {
     font-size: 4.5vw;
+  }
+}
+
+@media (max-width: 575px) and (orientation: landscape) {
+  .font_cards_magenta {
+    font-size: 5vw;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 576px) and (orientation: landscape) {
+  .font_cards_magenta {
+    font-size: 3vw;
   }
 }
 
@@ -439,13 +457,19 @@
   line-height: 90%;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 992px) and (orientation: landscape) {
+  .font_card_title {
+    font-size: 2.5vw;
+  }
+}
+
+@media (max-width: 575px) and (orientation: portrait) {
   .font_card_title {
     font-size: 6vw;
   }
 }
 
-@media (max-width: 767px) and (min-width: 576px) {
+@media (max-width: 767px) and (min-width: 576px) and (orientation: portrait) {
   .font_card_title {
     font-size: 3vw;
   }

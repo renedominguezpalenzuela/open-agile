@@ -1,8 +1,10 @@
-import {team_details  } from "../../../data/data_team_details";
-
-
- 
-
 export default function handler(req, res) {
-   res.status(200).json(team_details);
+   fetch("https://js-agileweb-backend.herokuapp.com/api/teams?populate=%2A")
+     .then(response => response.json())
+     .then(data => {
+        res.status(200).json(data.data);
+     })
+     .catch(err =>
+       res.status(400).json(err)
+     )
 }
