@@ -41,7 +41,7 @@
 }
 
 @media (min-width: 992px) {
-  .ratio-16x9 {
+  .ratio-16x9-vlog {
     --bs-aspect-ratio: 50%;
   }
 }
