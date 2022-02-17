@@ -85,7 +85,7 @@ export default function Home() {
         <TextoBloque01 titulo2="" texto_parrafo_array={texto05} />
 
         <div className="row mt-5 text-center mb-5 d-flex  justify-content-center ">
-          <Link href="/quiz/1">
+          <Link href="/agilecheck/1">
             <button
               type="button"
               className="btn p-3 ms-2 me-2 w-50 h-100 btn-card font-btn-card rounded-pill  ">

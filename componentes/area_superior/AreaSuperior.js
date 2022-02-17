@@ -421,7 +421,7 @@ const contenido_principal = (
         (vista_movil ? (
           <div className="row pb-5  d-flex justify-content-center align-items-center ">
             <div className="col-12 col-sm-7 col-md-5  pb-2 d-flex justify-content-center">
-              <Link href="/quiz/1" className="d-flex justify-content-center ">
+              <Link href="/agilecheck/1" className="d-flex justify-content-center ">
                 <button
                   type="button"
                   className="w-100  btn-agile-check2 font_boton_main-quiz redondeado-boton  ">
@@ -433,7 +433,7 @@ const contenido_principal = (
         ) : (
           <div>
             <div className="row mt-5 text-center mb-5 d-flex  justify-content-center ">
-              <Link href="/quiz/1">
+              <Link href="/agilecheck/1">
                 <button
                   type="button"
                   className="btn p-3 ms-2 me-2 w-50 h-100 btn-card font-btn-card rounded-pill  ">

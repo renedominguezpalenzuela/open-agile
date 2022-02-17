@@ -116,7 +116,7 @@ function setColor(Y, pagina) {
     color = color_white;
   }
 
-  const r2 = /\/quizstart/;
+  const r2 = /\/agilecheck/;
   if (r2.test(pagina)) {
     color = color_magenta;
   }
