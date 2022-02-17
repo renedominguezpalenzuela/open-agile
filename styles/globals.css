@@ -796,12 +796,28 @@ ul.no-bullets {
   }
 }
 
-@media (max-width: 767px) and (orientation: landscape) {
+@media (max-width: 767px) and (min-width: 741) and (orientation: landscape) {
   .font-btn-card {
     font-size: 2.5vw;
   }
   .font-btn-card-quiz {
     font-size: 4.5vw;
+  }
+}
+
+@media (max-width: 740px) and (orientation: landscape) {
+  .font-btn-card {
+    font-size: 2.5vw;
+  }
+  .font-btn-card-quiz {
+    margin-top: 20px;
+    font-size: 1vw;
+  }
+}
+
+@media (max-width: 740px) and (orientation: landscape) {
+  .css-rafgdb-MuiFormControlLabel-root .MuiFormControlLabel-label {
+    font-size: 2.85vh !important;
   }
 }
 

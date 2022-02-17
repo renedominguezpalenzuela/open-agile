@@ -423,7 +423,9 @@ const contenido_principal = (
         (vista_movil ? (
           <div className="row pb-5  d-flex justify-content-center align-items-center ">
             <div className="col-12 col-sm-7 col-md-5  pb-2 d-flex justify-content-center">
-              <Link href="/agilecheck/1" className="d-flex justify-content-center ">
+              <Link
+                href="/agilecheck/1"
+                className="d-flex justify-content-center ">
                 <button
                   type="button"
                   className="w-100  btn-agile-check2 font_boton_main-quiz redondeado-boton  ">

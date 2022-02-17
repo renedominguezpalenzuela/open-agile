@@ -88,7 +88,7 @@
 }
 @media (max-width: 992px) {
   .bannermain-quiz {
-    grid-template-rows: 15% auto;
+    grid-template-rows: 30% auto;
   }
   /* 
   .item-titulo {
@@ -106,7 +106,7 @@
   display: grid;
   height: 100vh;
 
-  grid-template-columns: 12% 75% 10%;
+  grid-template-columns: 12% 75% 12%;
   /* grid-template-rows: 15% 85%;  */
   /* padding-bottom: 50px; */
 
