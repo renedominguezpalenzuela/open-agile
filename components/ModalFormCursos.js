@@ -880,9 +880,9 @@ export default function ModalFormCursos({
                     </div>
                     <div className="col-10  d-flex justify-content-start">
                       <div className="row  pt-2  pb-2 ">
-                        <div className="col-12  texto-AGBS  ">
+                        {/* <div className="col-12  texto-AGBS  ">
                           {nombre_curso}
-                        </div>
+                        </div> */}
                         <div className="col-12 texto-AGBS   ">{precio}</div>
                       </div>
                     </div>
