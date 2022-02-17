@@ -120,7 +120,7 @@ const downloadEmployeeData = (path, name) => {
   fetch(path).then((response) => {
     response.blob().then((blob) => {
       let url = window.URL.createObjectURL(blob);
-      //console.log(url);
+      ////console.log(url);
       let a = document.createElement("a");
       a.href = url;
       a.download = name;

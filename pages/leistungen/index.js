@@ -66,7 +66,11 @@ export default function Home({ servicios }) {
            <h5 className="font_second_line2 d-flex justify-content-center mt-2">
            
           </h5> */}
-          <Card01Lista lista_cards={servicios} titulo_magenta={true} />
+          <Card01Lista
+            lista_cards={servicios}
+            titulo_magenta={true}
+            main_page={true}
+          />
         </div>
 
         {/*Footer  */}

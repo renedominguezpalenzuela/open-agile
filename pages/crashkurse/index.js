@@ -57,7 +57,7 @@ export default function Home({ cursos }) {
         {/* variable */}
 
         {/*Cards CRASHKURSE  */}
-        <Content02Cursos cursos={cursos} />
+        <Content02Cursos cursos={cursos} main_page={true} />
 
         {/*Footer  */}
         <Footer />

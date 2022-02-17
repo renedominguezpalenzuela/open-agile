@@ -13,7 +13,7 @@ export default function KurseContent01({
   link_weitere_infos,
   link_termine,
 }) {
-  console.log(description);
+  //console.log(description);
   return (
     <>
       <div className="row  ">

@@ -14,7 +14,7 @@ import CarruselBlogs from "./CarruselBlogs";
 //            Area de Contenido:  Blog
 //----------------------------------------------------------------------------------------------------------
 
-export default function Content04({ lista_cards }) {
+export default function Content04({ lista_cards, main_page }) {
   return (
     // <<<<<<< HEAD
     //     <>
@@ -40,7 +40,7 @@ export default function Content04({ lista_cards }) {
             {lista_cards.data.map((unCard, index) => (
               <React.Fragment key={unCard.id}>
                 {/* <Card01 id={unCard.id} imagen={unCard.image} titulo={unCard.titulo1} texto={unCard.titulo2} link={unCard.link}/> */}
-                <Card01Blog data={unCard} />
+                <Card01Blog data={unCard} main_page={main_page} />
               </React.Fragment>
             ))}
           </div>

@@ -1,5 +1,6 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useRef } from "react";
+import { useState } from "react";
 
 import { formEmail } from "../config";
 
@@ -83,45 +84,113 @@ export default function ModalFormCursos({
   nombre_curso,
   date_list,
 }) {
+  const botonCerrarFormulario = useRef();
+
+  const errorIffieldEmpty = "Bitte überprüfe die Eingabe";
+  const errorIffieldWrong = "Fehler";
+
   //Texto que aparece en el edit luego de que el usuario escribe
   //inputProps={fuentes1}
+
+  const [errorVorname, setErrorVorname] = React.useState(false);
+  const [textErrorVorname, setTextErrorVorname] = React.useState("");
+
   const [vorname, setVorname] = React.useState("");
   const handleChangeVorname = (event) => {
+    if (event.target.value != "") {
+      setErrorVorname(false);
+      setTextErrorVorname(null);
+    }
     setVorname(event.target.value);
   };
 
+  const [errorNachname, setErrorNachname] = React.useState(false);
+  const [textErrorNachname, setTextErrorNachname] = React.useState("");
+
   const [nachname, setNachname] = React.useState("");
   const handleChangeNachname = (event) => {
+    if (event.target.value != "") {
+      setErrorNachname(false);
+      setTextErrorNachname(null);
+    }
     setNachname(event.target.value);
   };
 
+  const [errorStrase1, setErrorStrase1] = React.useState(false);
+  const [textErrorStrase1, setTextErrorStrase1] = React.useState("");
+
   const [strase1, setStrase1] = React.useState("");
   const handleChangeStrase1 = (event) => {
+    if (event.target.value != "") {
+      setErrorStrase1(false);
+      setTextErrorStrase1(null);
+    }
     setStrase1(event.target.value);
   };
 
+  const [errorHausnummer1, setErrorHausnummer1] = React.useState(false);
+  const [textErrorHausnummer1, setTextErrorHausnummer1] = React.useState("");
+
   const [hausnummer1, setHausnummer1] = React.useState("");
   const handleChangeHausnummer1 = (event) => {
+    if (event.target.value != "") {
+      setErrorHausnummer1(false);
+      setTextErrorHausnummer1(null);
+    }
+
     setHausnummer1(event.target.value);
   };
 
+  const [errorPostleitzahls1, setErrorPostleitzahls1] = React.useState(false);
+  const [textErrorPostleitzahls1, setTextErrorPostleitzahls1] =
+    React.useState("");
+
   const [postleitzahls1, setPostleitzahls1] = React.useState("");
   const handleChangePostleitzahls1 = (event) => {
+    if (event.target.value != "") {
+      setErrorPostleitzahls1(false);
+      setTextErrorPostleitzahls1(null);
+    }
+
     setPostleitzahls1(event.target.value);
   };
 
+  const [errorOrt1, setErrorOrt1] = React.useState(false);
+  const [textErrorOrt1, setTextErrorOrt1] = React.useState("");
+
   const [ort1, setOrt1] = React.useState("");
   const handleChangeOrt1 = (event) => {
+    if (event.target.value != "") {
+      setErrorOrt1(false);
+      setTextErrorOrt1(null);
+    }
+
     setOrt1(event.target.value);
   };
 
+  const [errorEmail, setErrorEmail] = React.useState(false);
+  const [textErrorEmail, setTextErrorEmail] = React.useState("");
+
   const [email, setEmail] = React.useState("");
   const handleChangeEmail = (event) => {
+    if (event.target.value != "") {
+      setErrorEmail(false);
+      setTextErrorEmail(null);
+    }
+
     setEmail(event.target.value);
   };
 
+  const [errorPhone, setErrorPhone] = React.useState(false);
+  const [textErrorPhone, setTextErrorPhone] = React.useState("");
+
   const [telephone, setTelephone] = React.useState("");
   const handleChangeTelephone = (event) => {
+    if (event.target.value != "") {
+      setErrorPhone(false);
+      setTextErrorPhone(null);
+    }
+
     setTelephone(event.target.value);
   };
 
@@ -176,11 +245,11 @@ export default function ModalFormCursos({
 
   const [open, setOpen] = React.useState(false);
 
-  const handleClickOpen = () => {
+  const mostrarrMensajeFeedBack = () => {
     setOpen(true);
   };
 
-  const handleClose = () => {
+  const cerrarMensajeFeedBack = () => {
     setOpen(false);
   };
 
@@ -194,12 +263,6 @@ export default function ModalFormCursos({
     "Kontaktformular Error, bitte versuchen Sie es erneut.";
 
   const eventoBotonEnviar = async () => {
-    if (condicionesAGB != "Ja") {
-      setTextoDialogo(texto_ErrorEnDatosCheckBox);
-      handleClickOpen();
-      return;
-    }
-
     if (
       vorname === "" ||
       nachname === "" ||
@@ -210,8 +273,56 @@ export default function ModalFormCursos({
       email === "" ||
       telephone === ""
     ) {
+      if (vorname === "") {
+        setErrorVorname(true);
+        setTextErrorVorname(errorIffieldEmpty);
+      }
+
+      if (nachname === "") {
+        setErrorNachname(true);
+        setTextErrorNachname(errorIffieldEmpty);
+      }
+
+      if (strase1 === "") {
+        setErrorStrase1(true);
+        setTextErrorStrase1(errorIffieldEmpty);
+      }
+
+      if (hausnummer1 === "") {
+        setErrorHausnummer1(true);
+        setTextErrorHausnummer1(errorIffieldEmpty);
+      }
+
+      if (postleitzahls1 === "") {
+        setErrorPostleitzahls1(true);
+        setTextErrorPostleitzahls1(errorIffieldEmpty);
+      }
+
+      if (ort1 === "") {
+        setErrorOrt1(true);
+        setTextErrorOrt1(errorIffieldEmpty);
+      }
+
+      if (email === "") {
+        setErrorEmail(true);
+        setTextErrorEmail(errorIffieldEmpty);
+      }
+
+      
+      if (telephone === "") {
+        setErrorPhone(true);
+        setTextErrorPhone(errorIffieldEmpty);
+      }
+
+
       setTextoDialogo(texto_ErrorEnDatos);
-      handleClickOpen();
+      mostrarrMensajeFeedBack();
+      return;
+    }
+
+    if (condicionesAGB != "Ja") {
+      setTextoDialogo(texto_ErrorEnDatosCheckBox);
+      mostrarrMensajeFeedBack();
       return;
     }
 
@@ -248,13 +359,14 @@ export default function ModalFormCursos({
       `,
     };
 
-    
-
     const respuesta = await sendFormulario(DataToSend);
 
     if (respuesta.data.cod_resp === "000") {
       setTextoDialogo(texto_EnviadoCorrectamente);
-      handleClickOpen();
+      mostrarrMensajeFeedBack();
+      setTimeout(function () {
+        botonCerrarFormulario.current.click();
+      }, 1500);
     } else {
       setTextoDialogo(
         texto_ErrorEnServidor +
@@ -263,7 +375,7 @@ export default function ModalFormCursos({
           " - " +
           respuesta.data.msg
       );
-      handleClickOpen();
+      mostrarrMensajeFeedBack();
     }
   };
 
@@ -472,6 +584,7 @@ export default function ModalFormCursos({
                 type="button"
                 className="btn-close"
                 data-bs-dismiss="modal"
+                ref={botonCerrarFormulario}
                 aria-label="Close"></button>
             </div>
 
@@ -495,6 +608,8 @@ export default function ModalFormCursos({
                       InputLabelProps={fuentes2}
                       value={vorname}
                       onChange={handleChangeVorname}
+                      helperText={errorVorname ? textErrorVorname : ""}
+                      error={errorVorname}
                     />
                   </div>
                   <div className="row mt-2 ps-3 pe-3 d-flex justify-content-center   ">
@@ -507,6 +622,8 @@ export default function ModalFormCursos({
                       InputLabelProps={fuentes2}
                       value={nachname}
                       onChange={handleChangeNachname}
+                      helperText={errorNachname ? textErrorNachname : ""}
+                      error={errorNachname}
                     />
                   </div>
 
@@ -520,6 +637,8 @@ export default function ModalFormCursos({
                       InputLabelProps={fuentes2}
                       value={strase1}
                       onChange={handleChangeStrase1}
+                      helperText={errorStrase1 ? textErrorStrase1 : ""}
+                      error={errorStrase1}
                     />
                   </div>
 
@@ -533,6 +652,8 @@ export default function ModalFormCursos({
                       InputLabelProps={fuentes2}
                       value={hausnummer1}
                       onChange={handleChangeHausnummer1}
+                      helperText={errorHausnummer1 ? textErrorHausnummer1 : ""}
+                      error={errorHausnummer1}
                     />
                   </div>
 
@@ -546,6 +667,10 @@ export default function ModalFormCursos({
                       InputLabelProps={fuentes2}
                       value={postleitzahls1}
                       onChange={handleChangePostleitzahls1}
+                      helperText={
+                        errorPostleitzahls1 ? textErrorPostleitzahls1 : ""
+                      }
+                      error={errorPostleitzahls1}
                     />
                   </div>
 
@@ -559,6 +684,8 @@ export default function ModalFormCursos({
                       InputLabelProps={fuentes2}
                       value={ort1}
                       onChange={handleChangeOrt1}
+                      helperText={errorOrt1 ? textErrorOrt1 : ""}
+                      error={errorOrt1}
                     />
                   </div>
 
@@ -572,6 +699,8 @@ export default function ModalFormCursos({
                       InputLabelProps={fuentes2}
                       value={email}
                       onChange={handleChangeEmail}
+                      helperText={errorEmail ? textErrorEmail : ""}
+                      error={errorEmail}
                     />
                   </div>
 
@@ -585,6 +714,8 @@ export default function ModalFormCursos({
                       InputLabelProps={fuentes2}
                       value={telephone}
                       onChange={handleChangeTelephone}
+                      helperText={errorPhone ? textErrorPhone : ""}
+                      error={errorPhone}
                     />
                   </div>
 
@@ -764,7 +895,7 @@ export default function ModalFormCursos({
                   <button
                     type="button"
                     className="btn btn-secondary boton_modal_form"
-                    data-bs-dismiss="modal"
+                    // data-bs-dismiss="modal"
                     onClick={eventoBotonEnviar}>
                     Jetzt kostenpflichtig anmelden
                   </button>
@@ -777,9 +908,11 @@ export default function ModalFormCursos({
 
       <Dialog
         open={open}
-        onClose={handleClose}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description">
+        onClose={cerrarMensajeFeedBack}
+        disableEnforceFocus
+        // aria-labelledby="alert-dialog-title"
+        // aria-describedby="alert-dialog-description"
+      >
         {/* <DialogTitle id="alert-dialog-title">
           {"Use Google's location service?"}
         </DialogTitle> */}
@@ -789,7 +922,7 @@ export default function ModalFormCursos({
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} autoFocus>
+          <Button onClick={cerrarMensajeFeedBack} autoFocus>
             OK
           </Button>
         </DialogActions>

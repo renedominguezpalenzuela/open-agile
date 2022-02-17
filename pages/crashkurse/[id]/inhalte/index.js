@@ -23,7 +23,7 @@ export default function Home({ curso }) {
     let aux = [];
 
     for (let i = 0; i < links.length; i++) {
-      //console.log(links[i].attributes.url);
+      ////console.log(links[i].attributes.url);
       aux.push({
         path: links[i].attributes.url,
         name: links[i].attributes.name,

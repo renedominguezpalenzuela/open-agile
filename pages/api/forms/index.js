@@ -33,7 +33,7 @@ export default async function handler(req, res) {
       res.status(200).json({ cod_resp: "903", msg: "Error: " + data.error });
     }
   } catch (err) {
-    //console.log("Error api/forms: " + err.message);
+    ////console.log("Error api/forms: " + err.message);
     res.status(200).json({ cod_resp: "950", msg: err.message });
   }
 }

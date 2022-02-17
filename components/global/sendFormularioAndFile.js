@@ -14,7 +14,7 @@ const sendFormularioAndFile = async (datos) => {
     });
     return respuesta_api;
   } catch (err) {
-    //console.log("Error in sendFormulario: " + err);
+    ////console.log("Error in sendFormulario: " + err);
   }
 };
 
