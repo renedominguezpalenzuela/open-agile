@@ -12,7 +12,7 @@ export default function MenuKrashkurse({
   link_pdf,
   link_boton,
 }) {
-  let link_boton_new = "#dates_section";
+  let link_boton_new = "#termine";
   if (link_boton != undefined && link_boton.length > 0) {
     link_boton_new = link_boton;
   }
@@ -31,7 +31,7 @@ export default function MenuKrashkurse({
               <tr className=" font-card-menu-crashkurse">
                 <td>
                   <a
-                    href={`${servidor_url}/${link_beschreibung}#section_beschreibung`}>
+                    href={`${servidor_url}/${link_beschreibung}#abschnitt`}>
                     <div className="myanimacioncursos">BESCHREIBUNG</div>
                   </a>
                 </td>
@@ -40,7 +40,7 @@ export default function MenuKrashkurse({
               </tr>
               <tr className="font-card-menu-crashkurse">
                 <td>
-                  <a href={`${servidor_url}/${link_vorteile}#section_vorteile`}>
+                  <a href={`${servidor_url}/${link_vorteile}#abschnitt`}>
                     <div className="myanimacioncursos">VORTEILE</div>
                   </a>
                 </td>
@@ -49,7 +49,7 @@ export default function MenuKrashkurse({
               </tr>
               <tr className="font-card-menu-crashkurse">
                 <td>
-                  <a href={`${servidor_url}/${link_inhalte}#section_inhalte`}>
+                  <a href={`${servidor_url}/${link_inhalte}#abschnitt`}>
                     <div className="myanimacioncursos">INHALTE</div>
                   </a>
                 </td>
@@ -68,7 +68,7 @@ export default function MenuKrashkurse({
 
               <tr className="font-card-menu-crashkurse">
                 <td>
-                  <a href={`${servidor_url}/${link_kosten}#section_kosten`}>
+                  <a href={`${servidor_url}/${link_kosten}#abschnitt`}>
                     <div className="myanimacioncursos">LEISTUNGEN & KOSTEN</div>
                   </a>
                 </td>

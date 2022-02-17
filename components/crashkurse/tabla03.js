@@ -15,7 +15,7 @@ export default function Tabla03({
 
       {crashkurs_date.length > 0 && (
         <>
-          <div className="row mt-2 mb-4   " id="dates_section">
+          <div className="row mt-2 mb-4   " id="termine">
             <div className="titulo1-tabla3-01 text-center ">
               {titulo2a === "MITBESTIMMUNG IN DER AGILEN ARBEITSWELT" ? (
                 <>CRASHKURS {titulo2a}</>

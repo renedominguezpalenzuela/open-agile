@@ -81,7 +81,7 @@ export const crashkurse_beschreibung_details = [
     link_leistungen: "crashkurse/leistungen/1",
     link_kosten: "crashkurse/kosten/1",
     text_termine: "2022",
-    link_termine: "/#dates_section",
+    link_termine: "/#termine",
     // TODO: Agregar un indice para que determinar el primer doc a descargar debe ser Onepager
     link_pdf: [
       "/doc/Onepager_Crashkurs_Agile_Coach.pdf",
@@ -202,7 +202,7 @@ export const crashkurse_beschreibung_details = [
     link_leistungen: "crashkurse/leistungen/2",
     link_kosten: "crashkurse/kosten/2",
     text_termine: "2022",
-    link_termine: "/#dates_section",
+    link_termine: "/#termine",
 
     link_pdf: [
       "/doc/Onepager_Crashkurs_Agile_Facilitator.pdf",
@@ -339,7 +339,7 @@ export const crashkurse_beschreibung_details = [
     link_leistungen: "crashkurse/leistungen/3",
     link_kosten: "crashkurse/kosten/3",
     text_termine: "2022",
-    link_termine: "/#dates_section",
+    link_termine: "/#termine",
     link_pdf: [
       "/doc/Onepager_Crashkurs_Scrum_Master.pdf",
       "/doc/Anmeldung_zum_Crashkurs_Scrum_Master.pdf",
@@ -466,7 +466,7 @@ export const crashkurse_beschreibung_details = [
     link_leistungen: "crashkurse/leistungen/4",
     link_kosten: "crashkurse/kosten/4",
     text_termine: "2022",
-    link_termine: "/#dates_section",
+    link_termine: "/#termine",
     link_pdf: [
       "/doc/Onepager_Crashkurs_Mitbestimmung_in_der_agilen_Arbeitswelt.pdf",
       "/doc/Anmeldung_zum_Crashkurs_Mitbestimmung_in_der_agilen_Arbeitswelt.pdf",

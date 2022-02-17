@@ -45,7 +45,7 @@ export default function Home({ curso }) {
   const link_inhalte = `crashkurse/${curso.data.attributes.slug}/inhalte`;
   const link_leistungen = `crashkurse/${curso.data.attributes.slug}/leistungen`;
   const link_kosten = `crashkurse/${curso.data.attributes.slug}/kosten`;
-  const link_termine = "#dates_section";
+  const link_termine = "#termine";
   const link_pdf = link_pdfs(curso.data.attributes.files.data);
 
   let link_termine_new = "";
@@ -121,7 +121,7 @@ export default function Home({ curso }) {
               link_pdf={link_pdf}
             />
           </div>
-          <div className="col-md-7 pt-5 pe-md-5 " id="section_vorteile">
+          <div className="col-md-7 pt-5 pe-md-5 " id="abschnitt">
             <KurseContent01
               imagen={image_vorteile}
               description={curso.data.attributes.vorteile_description}

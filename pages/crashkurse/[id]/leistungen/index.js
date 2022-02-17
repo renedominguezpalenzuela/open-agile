@@ -90,7 +90,7 @@ export default function Home({ curso }) {
               link_boton={link_boton}
             />
           </div>
-          <div className="col-md-7 pt-5   pe-5" id="section_leistungen-kosten">
+          <div className="col-md-7 pt-5   pe-5" id="abschnitt">
             <KurseContent02
               imagen={image_leistungen}
               titulo="LEISTUNGEN"
