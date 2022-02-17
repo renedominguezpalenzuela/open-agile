@@ -43,15 +43,7 @@ export default function Content01TextSinIcons({
               daten,
               impre
             )}>
-            {formatText(texto1) == "ORGANISATIONS" ? (
-              <p>
-                ORGANISATIONS
-                <br />
-                ENTWICKLUNG
-              </p>
-            ) : (
-              texto1
-            )}
+              <p> {texto1} </p>
           </div>
         )}
 
