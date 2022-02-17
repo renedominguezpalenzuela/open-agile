@@ -10,9 +10,9 @@ export default function Content03({ mainlogos }) {
           VERTRAUEN OPEN AGILE
         </div>
 
-        <div className="row mt-5 mb-5 pb-5 d-flex justify-content-center align-items-center      ">
+        <div className="row mt-5 mb-5 pb-5 d-flex justify-content-center align-items-center">
           {mainlogos.data.map((unDato, index) => (
-            <div key={index} className="col-2 m-3">
+            <div key={index} className="col-2 m-5">
               <a href={unDato.attributes.website} aria-pressed="true">
                 <img
                   className="img-fluid img-sponsors1 grayscale "

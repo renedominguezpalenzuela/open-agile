@@ -613,6 +613,10 @@ ul.no-bullets {
   }
 }
 
+/* .content-card-vlog {
+  top: -4.6vh;
+} */
+
 @media only screen and (max-width: 560px) {
   .my_card {
     width: 100% !important;

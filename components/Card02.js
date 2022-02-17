@@ -7,7 +7,7 @@ export default function Card02({ titulo, texto, video, date }) {
     <>
       <div className="row g-0 mt-5  ">
         <div className="col-6  d-flex align-items-center  ">
-          <div className="shadow   texto_video_fondo me-5 ">
+          <div className="shadow   texto_video_fondo me-5 content-card-vlog">
             <div className=" font_card_title_video pt-4 d-flex justify-content-center">
               {titulo}
             </div>
@@ -16,7 +16,8 @@ export default function Card02({ titulo, texto, video, date }) {
               <div className="font_carrusel_video ">{texto}</div>
               <div className="data_vlog_desktop d-inline-block ms-2 mt-2">
                 <p>
-                  GEPOSTET AM {dt.getDate()}.{dt.getMonth() + 1}.{dt.getFullYear()}
+                  GEPOSTET AM {dt.getDate()}.{dt.getMonth() + 1}.
+                  {dt.getFullYear()}
                 </p>
               </div>
             </div>
