@@ -1,6 +1,7 @@
 import Card01ListaC from "./Card01ListaC";
 import Content02Texto from "./Content02Texto";
 import Content02Final from "./Content02Final";
+import { useRouter } from 'next/router'
 
 //----------------------------------------------------------------------------------------------------------
 //            Area de Contenido: Cards: CrashKURSE
@@ -10,6 +11,7 @@ import Content02Final from "./Content02Final";
 //Responsivo OK
 
 export default function Content02Cursos({ cursos, main_page }) {
+  const router = useRouter()
   return (
     <>
       <div
@@ -19,7 +21,7 @@ export default function Content02Cursos({ cursos, main_page }) {
             ? "offset-video row text-center mb-2 crash-container"
             : "row text-center mb-3 "
         } offset-lateral-menu`}>
-        <h1 className="font_title_seccion_sombra"> CRASHKURSE</h1>
+        {router.pathname !== '/' ? <h1 className="font_title_seccion_sombra"> CRASHKURSE</h1> : <h2 className="font_title_seccion_sombra"> CRASHKURSE</h2>}
         <h5 className="font_second_line2">
           jetzt fit machen für die Arbeitswelt von morgen
         </h5>
