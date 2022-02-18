@@ -9,51 +9,36 @@ import ReactMarkdown from "react-markdown";
 import Card01Blog from "./Card01Blog";
 
 import CarruselBlogs from "./CarruselBlogs";
-import { useRouter } from "next/router";
+import CarruselBlogMovil from "./CarruselBlogMovil";
+
 
 //----------------------------------------------------------------------------------------------------------
 //            Area de Contenido:  Blog
 //----------------------------------------------------------------------------------------------------------
 
 export default function Content04({ lista_cards, main_page }) {
-  const router = useRouter()
   return (
-    // <<<<<<< HEAD
-    //     <>
-    //       <section>
-    //         <div
-    //           id="blog"
-    //           className="row justify-content-center font_title_seccion_sombra mt-3   ms-4">
-    // =======
+
     <>
       <section>
-        {router.pathname !== '/' ? <h1
+        <div
           id="blog"
           className="row justify-content-center font_title_seccion_sombra mt-3   ms-md-4">
           BLOG
-        </h1>
-          : <h2
-            id="blog"
-            className="row justify-content-center font_title_seccion_sombra mt-3   ms-md-4">
-            BLOG
-          </h2>}
-        <div className="row justify-content-center font_card_texto mt-2 ms-md-4 mb-5">
+        </div>
+        <div className="row justify-content-center font_card_texto mt-2 ms-md-4 ">
           NEW WORK, LEADERSHIP & MORE
         </div>
 
         <div className="row  g-0 pb-5 ps-md-4 ms-3 me-3 pe-md-4 ms-md-5 me-md-5 d-flex justify-content-center">
           {/* Vista movil  */}
-          <div className="col-md-4 g-5 d-md-none">
-            {lista_cards.data.map((unCard, index) => (
-              <React.Fragment key={unCard.id}>
-                {/* <Card01 id={unCard.id} imagen={unCard.image} titulo={unCard.titulo1} texto={unCard.titulo2} link={unCard.link}/> */}
-                <Card01Blog data={unCard} main_page={main_page} />
-              </React.Fragment>
-            ))}
+          <div className="col g-0 d-md-none  pt-2 pb-3">
+            <CarruselBlogMovil lista_cards={lista_cards.data} />
+           
           </div>
 
           {/* Vista normal  */}
-          <div className="col g-4  d-none d-md-block  ">
+          <div className="col g-4  d-none d-md-block  pt-5 ">
             <CarruselBlogs lista_cards={lista_cards.data} />
           </div>
         </div>
