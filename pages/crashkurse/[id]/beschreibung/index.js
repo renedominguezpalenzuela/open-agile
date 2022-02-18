@@ -45,20 +45,14 @@ export default function Home({ curso }) {
   const link_inhalte = `crashkurse/${curso.data.attributes.slug}/inhalte`;
   const link_leistungen = `crashkurse/${curso.data.attributes.slug}/leistungen`;
   const link_kosten = `crashkurse/${curso.data.attributes.slug}/kosten`;
-  const link_termine = "#termine";
+
   const link_pdf = link_pdfs(curso.data.attributes.files.data);
-
-  let link_termine_new = "";
-
-  if (link_termine != undefined && link_termine.length > 0) {
-    link_termine_new = servidor_url + "/" + link_beschreibung + link_termine;
-  }
 
   const [desktop_screen, setDesktop_screen] = useState(true);
   const [landscape, setLandscape] = useState(false);
 
   const dataTable = curso.data.attributes.dateTable;
-
+  const link_termine = dataTable !== null ? "#termine" : "";
   const handleResize = () => {
     let ancho_screen = window.innerWidth;
     let alto_screen = window.innerHeight;
