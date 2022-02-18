@@ -1033,9 +1033,21 @@ ul {
   font-weight: bold; /* If you want it to be bold */
   display: inline-block; /* Needed to add space between the bullet and the text */
   width: 0.9em; /* Also needed for space (tweak if needed) */
-  margin-left: -1em; /* Also needed for space (tweak if needed) */
+  margin-left: -0.9em; /* Also needed for space (tweak if needed) */
   font-size: 1.5rem;
   transform: translate(0, 3.3px);
+  height: 1vh;
+}
+
+
+
+@media (max-width: 992px) {
+  .mybullets ul li::before {
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+    font-size: 1.5rem;
+    transform: translate(0, 3.3px);
+  }
 }
 
 .margen-negativo {
