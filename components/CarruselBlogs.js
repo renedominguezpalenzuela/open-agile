@@ -10,7 +10,7 @@ export default function CarruselBlogs({ lista_cards }) {
        */}
 
       <div id="blog_carrusel" className="carousel slide" data-bs-ride="carousel"> 
-        <div className="carousel-indicators">
+        <div className="carousel-indicators carousel-indicators-blog   ">
           {lista_cards.map((unDato, index) => (
             <React.Fragment key={index}>
             <button  type="button" data-bs-target="#blog_carrusel"  data-bs-slide-to={index}  className={`${index === 0 ? "active" : ""}`}></button>  
@@ -18,7 +18,7 @@ export default function CarruselBlogs({ lista_cards }) {
           ))}
         </div>
 
-        <div className="carousel-inner altoCarrousel3">
+        <div className="carousel-inner altoCarrousel3 pt-4 ">
           <div className=" row  h-100  ">
             {lista_cards.map((unCard, index) =>
               index <= lista_cards.length - 3 ? (

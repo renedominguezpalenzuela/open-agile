@@ -17,7 +17,7 @@ export default function Content06Team({ lista_cards }) {
                   imagen={unCard.attributes.image?.data?.attributes.url}
                   titulo={unCard.attributes.name}
                   texto={unCard.attributes.resume}
-                  link={`/team/${unCard.id}`}
+                  link={`team/${unCard.id}`}
                   texto_boton={unCard.attributes.button_text}
                   correo={unCard.attributes.email}
                   telefono={unCard.attributes.phone}
