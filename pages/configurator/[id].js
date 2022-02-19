@@ -43,12 +43,13 @@ export default function Configurator_Main({ configurator }) {
           fondo="gris"
           botones_configurador={configurator}
           area_gris_nueva={true}
+          no_bottom_margin={false}
         />
 
         {botones.map(
           (unBoton, index) =>
             unBoton.tipo === "2" && (
-            <ModalFormConfigurator
+              <ModalFormConfigurator
                 key={index}
                 titulo="KONTAKTFORMULAR"
                 frase="Jetzt Kontakt aufnehmen!"

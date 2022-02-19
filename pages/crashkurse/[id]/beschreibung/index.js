@@ -143,7 +143,7 @@ export default function Home({ curso }) {
             crashkurs_date={dataTable.crashkurs_date}
             titulo2a={dataTable.subtitle}
             precio={dataTable.price}
-            nombre_curso={dataTable.title}
+            nombre_curso={dataTable.subtitle}
           />
         )}
 

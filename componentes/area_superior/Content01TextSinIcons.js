@@ -27,7 +27,7 @@ export default function Content01TextSinIcons({
     <>
       <div
         className={`${
-          team ? "mt-5 mb-3 pt-3 pt-md-0 mt-md-0 pb-md-3" : "mt-4 mb-3 pb-3"
+          team ? "mt-5 mb-3 pt-5 pt-md-0 mt-md-0 pb-md-3" : "mt-4 mb-3 pb-3"
         }`}>
         {texto1 != undefined && texto1 != "" && (
           <div
