@@ -561,13 +561,18 @@ img.grayscale:hover {
   /* clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%); */
 }
 
-@media (max-width: 991px) and (orientation: landscape) {
+@media (max-width: 991px) and (min-width: 767px) and (orientation: landscape) {
+  .bannermain-team {
+    grid-template-rows: 13% 87%;
+    padding-bottom: 2rem !important;
+  }
+}
+@media (max-width: 767px) and (orientation: landscape) {
   .bannermain-team {
     grid-template-rows: 10% 90%;
     padding-bottom: 2rem !important;
   }
 }
-
 .volumen_icon_size {
   font-size: 1px !important;
 }
