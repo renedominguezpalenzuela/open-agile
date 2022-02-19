@@ -153,7 +153,7 @@ export default function AreaSuperior({
         {(vista_movil = true)}
 
         <MenuNavBar2 />
-        <div className={`${getFondo(fondo)}`}>
+        <div className={`${getFondo(fondo)}${home ? " bannermain-hhome" : ""}`}>
           <div className="item-titulo   ">
             {contenido_principal(
               texto1,

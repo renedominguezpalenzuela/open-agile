@@ -342,7 +342,7 @@
   clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
 }
 
-@media (max-height: 600px) {
+@media (max-height: 600px) and (orientation: portrait) {
   .bannermain {
     height: 85vh;
   }
@@ -392,12 +392,52 @@
   }
 }
 
-@media (max-width: 991px) and (orientation: landscape) {
+@media (max-width: 991px) and (min-width: 767px) and (orientation: landscape) {
   .bannermain {
     display: grid;
     grid-template-columns: 12% 75% 10%;
+    height: 85vh;
     align-content: space-evenly;
   }
+  .item-titulo .g-0 .mt-4 {
+    margin-top: 11vh !important;
+  }
+
+  button .mb-5 {
+    margin-bottom: 0vh !important;
+    padding-bottom: 0vh !important;
+  }
+
+  .mt-5 {
+    margin-top: 2.5vh !important;
+  }
+
+  .mb-3 {
+    margin-bottom: 1.5vh !important;
+  }
+
+  .pb-3 {
+    padding-bottom: 2.5vh !important;
+  }
+}
+
+@media (max-width: 766px) and (orientation: landscape) {
+  .bannermain-hhome {
+    display: grid;
+    grid-template-columns: 12% 75% 10%;
+    grid-template-rows: 12% 88% !important;
+    height: auto !important;
+    align-content: space-evenly;
+    padding-bottom: 20px !important;
+  }
+
+  .bannermain {
+    display: grid;
+    grid-template-columns: 12% 75% 10%;
+    height: 85vh;
+    align-content: space-evenly;
+  }
+
   .item-titulo .g-0 .mt-4 {
     margin-top: 11vh !important;
   }
