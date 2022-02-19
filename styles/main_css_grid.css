@@ -563,7 +563,7 @@ img.grayscale:hover {
 
 @media (max-width: 991px) and (orientation: landscape) {
   .bannermain-team {
-    grid-template-rows: 14% 86%;
+    grid-template-rows: 10% 90%;
     padding-bottom: 2rem !important;
   }
 }

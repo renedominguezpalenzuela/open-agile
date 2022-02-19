@@ -7,7 +7,6 @@
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-
 export default function Content01TextSinIcons({
   texto1,
   texto2,
@@ -28,7 +27,7 @@ export default function Content01TextSinIcons({
     <>
       <div
         className={`${
-          team ? "mt-5 mb-3 pt-5  pt-md-0 mt-md-0 pb-md-3" : "mt-4 mb-3 pb-3"
+          team ? "mt-5 mb-3 pt-3 pt-md-0 mt-md-0 pb-md-3" : "mt-4 mb-3 pb-3"
         }`}>
         {texto1 != undefined && texto1 != "" && (
           <div
@@ -43,7 +42,7 @@ export default function Content01TextSinIcons({
               daten,
               impre
             )}>
-              <h1> {texto1} </h1>
+            <h1> {texto1} </h1>
           </div>
         )}
 
@@ -56,7 +55,11 @@ export default function Content01TextSinIcons({
               shop,
               home
             )}>
-            {(texto1 == undefined || texto1 == "") ? <h1>{texto2} </h1> : <div>{texto2} </div>}
+            {texto1 == undefined || texto1 == "" ? (
+              <h1>{texto2} </h1>
+            ) : (
+              <div>{texto2} </div>
+            )}
 
             {texto2a != undefined && texto2a != "" && <> {texto2a} </>}
           </div>
