@@ -18,7 +18,7 @@ export default function CarruselBlogs({ lista_cards }) {
           ))}
         </div>
 
-        <div className="carousel-inner altoCarrousel3   ">
+        <div className="carousel-inner altoCarrousel3 pt-3  ">
         
           <div className=" row  h-100 w-100 ">
             {lista_cards.map((unCard, index) =>

@@ -211,6 +211,8 @@
   .altoCarrousel3 {
     height: 59vh;
   }
+
+ 
   .alto_carrusel-videos{
     height: 50vh;
   }
@@ -220,6 +222,14 @@
   width:80%;
   height:auto;
 }
+}
+
+
+@media (min-height: 601px)  and (max-height: 700px)  and (orientation: landscape) {
+   
+  .alto_carrusel-videos{
+    height: 79vh;
+  }
 }
 
 
