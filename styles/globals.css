@@ -620,6 +620,13 @@ ul.no-bullets {
 }
 
 
+@media (max-width: 992px) and (orientation: landscape) {
+  .carousel-indicators-videos {
+    bottom: -25px;
+  }
+}
+
+
 .carousel-indicators-blog {
   bottom: -35px;
 }
