@@ -2,7 +2,8 @@ import { servidor_url } from "../../config";
 import Image from "next/image";
 import Link from "next/link";
 
-const ONLINEURL = 'https://open-agile-academy.teachable.com/p/online-crashkurs-selbstorganisation-in-agilen-teams';
+const ONLINEURL =
+  "https://open-agile-academy.teachable.com/p/online-crashkurs-selbstorganisation-in-agilen-teams";
 
 export default function MenuKrashkurse({
   online,
@@ -15,13 +16,10 @@ export default function MenuKrashkurse({
   link_pdf,
   link_boton,
 }) {
-  console.log(online)
-  let link_boton_new = (online !== null ? ONLINEURL : "#termine");
+  let link_boton_new = online !== null ? ONLINEURL : "#termine";
   if (online === null && link_boton != undefined && link_boton.length > 0) {
     link_boton_new = link_boton;
   }
-
-  console.log(link_boton_new)
 
   return (
     <>
@@ -36,8 +34,7 @@ export default function MenuKrashkurse({
             <tbody>
               <tr className=" font-card-menu-crashkurse">
                 <td>
-                  <a
-                    href={`${servidor_url}/${link_beschreibung}#abschnitt`}>
+                  <a href={`${servidor_url}/${link_beschreibung}#abschnitt`}>
                     <div className="myanimacioncursos">BESCHREIBUNG</div>
                   </a>
                 </td>
