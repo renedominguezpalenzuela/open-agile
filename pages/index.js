@@ -104,11 +104,13 @@ export default function Home({
 
         {/*imagen de sponsors */}
         <div className=" d-none  d-md-block">
+        
           <Content03 mainlogos={main_logos} />
         </div>
 
         {/*imagen de sponsors */}
-        <div className=" d-md-none">
+        <div className="row   d-md-none">
+       
           <Content03Carrousel mainlogos={main_logos} />
         </div>
 
