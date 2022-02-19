@@ -12,11 +12,12 @@ export default function Content03Carrousel({ mainlogos }) {
         </div>
 
         <div className="row justify-content-center font_card_texto mt-4 ">
-          VERTRAUEN OPEN AGILE
+          VERTRAUEN OPEN AGILE 
         </div>
 
         <div id="demo" className="carousel slide  " data-bs-ride="carousel">
           <div className="carousel-indicators">
+          
             {mainlogos.data.map((unDato, index) => (
               <button
                 key={index}

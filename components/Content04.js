@@ -30,16 +30,23 @@ export default function Content04({ lista_cards, main_page }) {
           NEW WORK, LEADERSHIP & MORE
         </div>
 
-        <div className="row  g-0 pb-5 ps-md-4 ms-3 me-3 pe-md-4 ms-md-5 me-md-5 d-flex justify-content-center">
+        <div className="row   g-0 pb-5 ps-md-4 ms-3 me-3 pe-md-4 ms-md-5 me-md-5 d-flex justify-content-center">
           {/* Vista movil  */}
-          <div className="col g-0 d-md-none  pt-2 pb-3">
-            <CarruselBlogMovil lista_cards={lista_cards.data} />
+
+
+      
+
+         <div className="col g-0 d-sm-none  pt-2 pb-3"> 
+
+             <CarruselBlogMovil lista_cards={lista_cards.data} /> 
+          
            
-          </div>
+          </div>  
 
           {/* Vista normal  */}
-          <div className="col g-4  d-none d-md-block  pt-5 ">
-            <CarruselBlogs lista_cards={lista_cards.data} />
+          <div className="col g-4  d-none d-sm-block  pt-5 ">
+            
+             <CarruselBlogs lista_cards={lista_cards.data} /> 
           </div>
         </div>
       </section>
