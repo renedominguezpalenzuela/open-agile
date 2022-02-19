@@ -308,12 +308,10 @@ export default function ModalFormCursos({
         setTextErrorEmail(errorIffieldEmpty);
       }
 
-      
       if (telephone === "") {
         setErrorPhone(true);
         setTextErrorPhone(errorIffieldEmpty);
       }
-
 
       setTextoDialogo(texto_ErrorEnDatos);
       mostrarrMensajeFeedBack();
@@ -573,7 +571,7 @@ export default function ModalFormCursos({
                       <div className="d-none d-md-block col-7  subtitulo-card-crashkurse d-flex justify-content-center align-items-center ">
                         {`${eliminar_anno(date1)} - ${date2}`}
                       </div>
-                      <div className="d-block d-md-none col-7 h6 subtitulo-card-crashkurse2 d-flex justify-content-center align-items-center ">
+                      <div className="d-block d-md-none col--md-7 h6 subtitulo-card-crashkurse2 d-flex justify-content-center align-items-center ">
                         {`${eliminar_anno(date1)} - ${date2}`}
                       </div>
                     </>
