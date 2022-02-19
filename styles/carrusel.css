@@ -109,14 +109,112 @@
   /* height: 60%; */
   top: -9vh;
 }
+
+
 .altoCarrousel3 {
-  height: 50vh;
+  height: 45vh;
 }
 
 
+@media (max-height: 300px)  {
+  .altoCarrousel3 {
+    height: 80vh;
+  }
+} 
+
+
+@media  (min-height: 301px) and (max-height: 400px)  {
+  .altoCarrousel3 {
+    height: 75vh;
+  }
+} 
+
+
+
+@media (min-height: 401px)  and (max-height: 500px)  {
+  .altoCarrousel3 {
+    height: 63vh;
+  }
+} 
+
+
+@media (min-height: 501px)  and (max-height: 600px)  {
+  .altoCarrousel3 {
+    height: 46vh;
+  }
+} 
+
+
+@media (min-height: 601px)  and (max-height: 700px)  {
+  .altoCarrousel3 {
+    height: 40vh;
+  }
+}
+
+
+@media (min-height: 701px)  and (max-height: 800px)  {
+  .altoCarrousel3 {
+    height: 36vh;
+  }
+}
+
+
+
+@media (min-height: 801px)  and (max-height: 900px)  {
+  .altoCarrousel3 {
+    height: 30vh;
+  }
+}
+
+@media (min-height: 901px)  and (max-height: 1000px)  {
+  .altoCarrousel3 {
+    height: 28vh;
+  }
+}
+
+@media (min-height: 1001px)  and (max-height: 1100px)  {
+  .altoCarrousel3 {
+    height: 25vh;
+  }
+}
+
+
+@media (min-height: 1101px)  and (max-height: 1200px)  {
+  .altoCarrousel3 {
+    height: 22vh;
+  }
+}
+
+
+@media (min-height: 1201px)    {
+  .altoCarrousel3 {
+    height: 21vh;
+  }
+}
+
+@media  (max-width:992px )  {
+  .altoCarrousel3 {
+    height: 65vh;
+  }
+}
+
+
+/* 
+
+@media (max-width: 768px) and   (orientation: landscape) {
+  .altoCarrousel3-landscape {
+    height: 500px !important;
+  }
+} */
+
+
+/* 
 @media (max-width: 992px) and   (orientation: landscape) {
   .altoCarrousel3-landscape {
     height: 68vh;
   }
-}
+} */
+
+
+
 
