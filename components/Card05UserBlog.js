@@ -6,7 +6,7 @@ export default function Card05UserBlog({ data }) {
   const link = data.attributes.slug;
   return (
     <>
-      <div className="card myanimacion sombra_cards redondear-card pb-1 ">
+      <div className="card myanimacion sombra_cards redondear-card pb-1 h-100">
         <div className="row   g-0 pb-2">
           <img
             className=" imagen-blog "
@@ -14,7 +14,7 @@ export default function Card05UserBlog({ data }) {
           />
         </div>
 
-        <div className="row w-100  g-0 size_blog_card d-flex  align-items-center justify-content-center ">
+        <div className="row w-100 h-100 g-0 size_blog_card d-flex  align-items-start justify-content-center ">
           <div className="col-7  ps-2   ">
             {titulo != undefined && titulo != "" && (
               <>
@@ -27,8 +27,8 @@ export default function Card05UserBlog({ data }) {
               </>
             )}
           </div>
-          <div className="col-5   d-flex  align-items-center justify-content-center ">
-            <a href={`${"blog/" + link}`}>
+          <div className="col-5  d-flex  align-items-center justify-content-center  h-100 ">
+            <a href={`${"blog/" + link}`} className=" ">
               <button
                 type="button"
                 className="btn  btn-card-blog-new font-btn-card-blog rounded-pill  ">

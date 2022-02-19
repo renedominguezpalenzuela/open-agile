@@ -21,8 +21,9 @@ export default function CarruselBlogMovil({ lista_cards }) {
           ))}
         </div>
 
-        <div className="carousel-inner altoCarrousel3 pt-4 ">
+        <div className="carousel-inner altoCarrousel3  pt-4 ">
           <div className=" row  h-100  ">
+          
             {lista_cards.map((unCard, index) =>
              
                 <div key={index} className={`${index === 0 ? "active" : ""} carousel-item `}>

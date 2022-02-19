@@ -18,8 +18,9 @@ export default function CarruselBlogs({ lista_cards }) {
           ))}
         </div>
 
-        <div className="carousel-inner altoCarrousel3 pt-4 ">
-          <div className=" row  h-100  ">
+        <div className="carousel-inner altoCarrousel3 altoCarrousel3-landscape  ">
+        
+          <div className=" row  h-100 w-100 ">
             {lista_cards.map((unCard, index) =>
               index <= lista_cards.length - 3 ? (
                 <div key={index} className={`${index === 0 ? "active" : ""} carousel-item `}>

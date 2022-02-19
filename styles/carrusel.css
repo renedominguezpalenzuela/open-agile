@@ -112,3 +112,11 @@
 .altoCarrousel3 {
   height: 50vh;
 }
+
+
+@media (max-width: 992px) and   (orientation: landscape) {
+  .altoCarrousel3-landscape {
+    height: 68vh;
+  }
+}
+
