@@ -34,10 +34,17 @@ export default function Home({
   main_logos,
 }) {
   const [desktop_screen, setDesktop_screen] = useState(true);
+  const [vista_landscape, setVistaLandScape] = useState(false);
+
+   const [ancho_screen, setAncho] = useState(0);
+   const [alto_screen, setAlto] = useState(0);
+
+ 
 
   const handleResize = () => {
-    let ancho_screen = window.innerWidth;
-
+    setAncho(window.innerWidth);
+    setAlto(window.innerHeight);
+    
     if (ancho_screen > 992) {
       setDesktop_screen(true);
     } else {
@@ -45,10 +52,19 @@ export default function Home({
     }
   };
 
+
+
   useEffect(() => {
     handleResize();
+    // handleOrientationChange();
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    // window.addEventListener("orientationchange", handleOrientationChange);
+
+    
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      //  window.removeEventListener("orientationchange", handleOrientationChange);
+    }
   }, []);
 
   return (
@@ -115,7 +131,7 @@ export default function Home({
         </div>
 
         {/*Unser Blog  */}
-        <Content04 lista_cards={blogs} main_page={true} />
+        <Content04 lista_cards={blogs} main_page={true} ancho={ancho_screen} alto={alto_screen}/>
 
         {/*Carrousel videos */}
         <Content05 datos={vlog} />

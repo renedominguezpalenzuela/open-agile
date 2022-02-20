@@ -634,7 +634,16 @@ ul.no-bullets {
 }
 
 
-@media (max-width: 992px)  {
+.my_card_blog_mobile {
+  display: flex;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  z-index: 3;
+  height: 50vh;
+}
+
+@media (min-width:350px) and (max-width: 992px)  {
   .carousel-indicators-blog {
     bottom: -5px;
   }
