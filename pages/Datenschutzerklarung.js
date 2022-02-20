@@ -8,8 +8,6 @@ import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
 
 import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 
-
-
 import ModalFormCookie from "../components/ModalFormCookie";
 
 //----------------------------------------------------------------------------------------------------------
