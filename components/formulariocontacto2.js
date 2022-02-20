@@ -141,9 +141,9 @@ export default function FormularioContacto2() {
    
 
     const DataToSend = {
-      from: "Newsletter form",
+      from: "Newsletter Anmeldung",
       to: formEmail,
-      subject: "Newsletter form",
+      subject: "Newsletter Anmeldung",
       body: `    
       <strong>Newsletter Anmeldung</strong> <br />
       <strong>Name: </strong> ${nombre} <br />

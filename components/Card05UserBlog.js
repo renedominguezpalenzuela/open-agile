@@ -9,7 +9,7 @@ export default function Card05UserBlog({ data, dispositivo_chico }) {
       <div className="card myanimacion sombra_cards redondear-card pb-sm-3  h-100">
         <div className="row   g-0 pb-2">
           <img
-            className=" imagen-blog "
+            className={`${dispositivo_chico?"imagen-blog-small":"imagen-blog"}`}
             src={data.attributes.img.data.attributes.url}
           />
         </div>
