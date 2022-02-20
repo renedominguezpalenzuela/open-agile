@@ -145,7 +145,7 @@ export default function FormularioContacto2() {
       to: formEmail,
       subject: "Newsletter form",
       body: `    
-      <strong>Newsletter form</strong>
+      <strong>Newsletter Anmeldung</strong> <br />
       <strong>Name: </strong> ${nombre} <br />
       <strong>Email: </strong> ${correo} <br />   
       `
