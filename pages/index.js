@@ -39,17 +39,27 @@ export default function Home({
    const [ancho_screen, setAncho] = useState(0);
    const [alto_screen, setAlto] = useState(0);
 
+   const [cadena_mostrar , setCadena]=useState("Info:");
+
  
 
   const handleResize = () => {
-    setAncho(window.innerWidth);
-    setAlto(window.innerHeight);
+    // setAncho(window.innerWidth);
+    // setAlto(window.innerHeight);
+    setAncho(window.screen.width);
+    setAlto(window.screen.height);
+   
+
+  
     
     if (ancho_screen > 992) {
       setDesktop_screen(true);
     } else {
       setDesktop_screen(false);
     }
+
+
+     setCadena("Width_scr: "+window.screen.width+" Height_scr: "+window.screen.height+" | Width: "+ancho_screen+" Height: "+alto_screen+" | Desktop: "+desktop_screen+" | Browser: "+window.clientInformation.appVersion );
   };
 
 
@@ -152,7 +162,7 @@ export default function Home({
 
         {/*Footer  */}
 
-        <Footer />
+        <Footer  cadena_mostrar={cadena_mostrar}/>
       </div>
 
       {/*Menu Lateral oculto  */}

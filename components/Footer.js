@@ -16,7 +16,7 @@ import Content01Iconos from "../componentes/area_superior/Content01Iconos";
 import ModalFormCookie from "../components/ModalFormCookie";
 import { useState, useEffect } from "react";
 
-export default function Footer() {
+export default function Footer({cadena_mostrar}) {
   const [changeCookie, setChangeCookie] = useState(false);
 
   const [leich, setLeich] = useState({ data: [] });
@@ -61,6 +61,10 @@ export default function Footer() {
         <div id="rowfoot01" className="row  mb-2 mb-md-5">
           <FormularioContacto2 />
         </div>
+
+          <div  >
+                {cadena_mostrar}
+              </div>
 
         <div className="d-none d-md-block">
           <div id="rowfoot05" className="row   g-3 ps-5 me-3 ms-3 pe-5 pb-3 ">
@@ -273,6 +277,8 @@ export default function Footer() {
                 Cookies
               </div>
             </div>
+
+            
           </div>
         </div>
       </footer>
