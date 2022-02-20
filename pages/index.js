@@ -59,9 +59,9 @@ export default function Home({
     }
 
 
-    console.log(window);
+  // console.log(window);
 
-     setCadena("Width_scr: "+window.screen.width+" Height_scr: "+window.screen.height+" | Width: "+ancho_screen+" Height: "+alto_screen+"  | Browser: "+window.clientInformation.appVersion +"| next "+window.next.version+ "| OS: "+platform.description );
+     setCadena("Width_scr: "+window.screen.width+" Height_scr: "+window.screen.height+" | Width: "+ancho_screen+" Height: "+alto_screen+"  | Browser: "+window.clientInformation.appVersion +"| next "+window.next.version+ "| OS: "+window.platform.description );
   };
 
 
