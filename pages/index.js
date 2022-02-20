@@ -61,7 +61,8 @@ export default function Home({
 
   // console.log(window);
 // +"| next "+window.next.version
-     setCadena("Width_scr: "+window.screen.width+" Height_scr: "+window.screen.height+" | Width: "+ancho_screen+" Height: "+alto_screen+"  | Browser: "+window.clientInformation.appVersion + "| OS: "+window.platform.description );
+//  "| OS: "+window.platform.description 
+     setCadena("Width_scr: "+window.screen.width+" Height_scr: "+window.screen.height+" | Width: "+ancho_screen+" Height: "+alto_screen+"  | Browser: "+window.clientInformation.appVersion );
   };
 
 
