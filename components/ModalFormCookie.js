@@ -188,11 +188,12 @@ export default function ModalFormCookie({
       localStorage.removeItem("cancel");
     }
     const c = document.getElementById("chat-application");
-    if (c !== undefined && c.classList.contains("d-none")) {
+   
+    if (c !== undefined && c!==null &&  c.classList.contains("d-none")) {
       c.classList.remove("d-none");
     }
 
-    if (c !== undefined) {
+    if (c !== undefined && c!==null) {
       c.classList.add("d-block");
     }
     //guardar cookies
@@ -215,10 +216,11 @@ export default function ModalFormCookie({
   };
   const botonNoAceptar = () => {
     const c = document.getElementById("chat-application");
-    if (c !== undefined && c.classList.contains("d-block")) {
+    
+    if (c !== undefined && c!==null && c.classList.contains("d-block")) {
       c.classList.remove("d-block");
     }
-    if (c !== undefined) {
+    if (c !== undefined  && c!==null) {
       c.classList.add("d-none");
     }
     //eliminar todas las cookies
