@@ -11,7 +11,7 @@ export default function Content05({ datos, color_fondo }) {
   const getDt = (datea) => {
     const dt = new Date(datea);
     return `${dt.getDate()}.${dt.getMonth() + 1}.${dt.getFullYear()}`;
-  }
+  };
 
   return (
     <>
@@ -76,7 +76,9 @@ export default function Content05({ datos, color_fondo }) {
                                   </div>
                                 )}
                               <div className="font_data_vlog data_vlog_movile pt-2 position-absolute">
-                                <p>GEPOSTET AM {getDt(unDato.attributes.date)}</p>
+                                <p>
+                                  GEPOSTET AM {getDt(unDato.attributes.date)}
+                                </p>
                               </div>
                             </div>
                             <div>
@@ -93,6 +95,7 @@ export default function Content05({ datos, color_fondo }) {
                       </div>
                     </div>
                     <div className="d-none d-xl-block  ">
+                    
                       <Card02
                         video={unDato.attributes.link}
                         titulo={unDato.attributes.title}

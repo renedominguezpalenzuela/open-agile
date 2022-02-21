@@ -23,11 +23,12 @@ export default function Card02({ titulo, texto, video, date }) {
             </div>
           </div>
         </div>
-        <div className="col-6 ">
+        <div className="col-6  ">
           {video != undefined && video != "" && (
-            <div className="ratio ratio-16x9-vlog  container_video">
-              <ReactPlayer light={true} url={video} />
-            </div>
+           
+             <div className="   container_video   d-flex align-items-center">
+               <ReactPlayer light={true} url={video}  />
+             </div>
           )}
         </div>
       </div>
