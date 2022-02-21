@@ -46,8 +46,8 @@ export default function Home({
   const handleResize = () => {
     setAncho(window.innerWidth);
     setAlto(window.innerHeight);
-   //setAncho(window.screen.width);
-   //  setAlto(window.screen.height);
+  //  setAncho(window.screen.width);
+  //   setAlto(window.screen.height);
    
 
   
@@ -59,7 +59,8 @@ export default function Home({
     }
 
 
-  // console.log(window);
+   console.log("Desktop: "+desktop_screen);
+   console.log("ancho_screen: "+ancho_screen);
 // +"| next "+window.next.version
 //  "| OS: "+window.platform.description 
     //  setCadena("Width_scr: "+window.screen.width+" Height_scr: "+window.screen.height+" | Width: "+ancho_screen+" Height: "+alto_screen+"  | Browser: "+window.clientInformation.appVersion );
@@ -70,17 +71,15 @@ export default function Home({
 
 
   useEffect(() => {
-    handleResize();
-    // handleOrientationChange();
+     handleResize();
+    console.log("Inicializando");
     window.addEventListener("resize", handleResize);
-    // window.addEventListener("orientationchange", handleOrientationChange);
-
-    
+        
     return () => {
       window.removeEventListener("resize", handleResize);
-      //  window.removeEventListener("orientationchange", handleOrientationChange);
+    
     }
-  }, []);
+  });
 
   return (
     <>
@@ -106,6 +105,7 @@ export default function Home({
         <MenuFlotanteBoton />
 
         {desktop_screen ? (
+          
           <AreaSuperior
             fondo="gris"
             texto1="OPEN AGILE"

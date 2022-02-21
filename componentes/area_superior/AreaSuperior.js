@@ -77,6 +77,9 @@ export default function AreaSuperior({
     bottom_margin = true;
   }
 
+
+  console.log("Boton inicio quiz "+boton_inicio_quiz);
+
   return (
     <>
       {/*--------------- Mostrar si mayor o igual a lg ≥992px ------------------ */}
