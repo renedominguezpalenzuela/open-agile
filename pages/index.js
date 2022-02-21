@@ -44,10 +44,10 @@ export default function Home({
  
 
   const handleResize = () => {
-    // setAncho(window.innerWidth);
-    // setAlto(window.innerHeight);
-    setAncho(window.screen.width);
-    setAlto(window.screen.height);
+    setAncho(window.innerWidth);
+    setAlto(window.innerHeight);
+   //setAncho(window.screen.width);
+   //  setAlto(window.screen.height);
    
 
   
@@ -62,7 +62,7 @@ export default function Home({
   // console.log(window);
 // +"| next "+window.next.version
 //  "| OS: "+window.platform.description 
-     setCadena("Width_scr: "+window.screen.width+" Height_scr: "+window.screen.height+" | Width: "+ancho_screen+" Height: "+alto_screen+"  | Browser: "+window.clientInformation.appVersion );
+    //  setCadena("Width_scr: "+window.screen.width+" Height_scr: "+window.screen.height+" | Width: "+ancho_screen+" Height: "+alto_screen+"  | Browser: "+window.clientInformation.appVersion );
   };
 
 
