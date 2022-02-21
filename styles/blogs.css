@@ -36,9 +36,21 @@
   text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
 }
 
-@media (max-width: 767px) and (orientation: portrait) {
+
+
+@media  (max-width: 399px) and (orientation: portrait) {
   .font_title_blogs_articles {
-    font-size: 7.3vw !important;
+    font-size: 6vw !important;
+    margin-bottom: 25px !important;
+  }
+  
+}
+
+
+
+@media (min-width: 400px) and (max-width: 767px) and (orientation: portrait) {
+  .font_title_blogs_articles {
+    font-size: 6.3vw !important;
     margin-bottom: 25px !important;
   }
   .img-blog {
@@ -47,6 +59,8 @@
     max-width: 120% !important;
   }
 }
+
+
 
 @media (max-width: 992px) and (min-width: 767px) and (orientation: landscape) {
   .font_title_blogs_articles {
