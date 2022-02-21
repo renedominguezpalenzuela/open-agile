@@ -165,14 +165,14 @@ export default function Footer({cadena_mostrar}) {
                 </div>
 
                 <div>
-                  <Link href="/datenschutzerklarung">
-                    <a className="mylinkhoover">Datenschutz</a>
-                  </Link>
+                  <a href="/datenschutzerklarung" className="mylinkhoover">
+                    Datenschutz
+                  </a>
                 </div>
                 <div>
-                  <Link href="/impressum">
-                    <a className="mylinkhoover">Impressum</a>
-                  </Link>
+                  <a href="/impressum" className="mylinkhoover">
+                    Impressum
+                  </a>
                 </div>
                 <div>
                   <div onClick={handle} className="mylinkhoover">
@@ -262,15 +262,15 @@ export default function Footer({cadena_mostrar}) {
             <div className="row d-flex  linea_blanca_footer g-0"></div>
             <div className="font_facit_text_very_small mt-3 d-flex justify-content-center">
               <div>
-                <Link href="/datenschutzerklarung">
-                  <a className="mylinkhoover">Datenschutz</a>
-                </Link>
+                <a href="/datenschutzerklarung" className="mylinkhoover">
+                  Datenschutz
+                </a>
               </div>
               <span className="mx-1"> | </span>
               <div>
-                <Link href="/impressum">
-                  <a className="mylinkhoover">Impressum</a>
-                </Link>
+                <a href="/impressum" className="mylinkhoover">
+                  Impressum
+                </a>
               </div>
               <span className="mx-1"> | </span>
               <div onClick={handle} className="mylinkhoover">
