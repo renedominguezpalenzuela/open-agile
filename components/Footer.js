@@ -62,9 +62,9 @@ export default function Footer({cadena_mostrar}) {
           <FormularioContacto2 />
         </div>
 
-          <div  >
+          {/* <div  >
                 {cadena_mostrar}
-              </div>
+              </div> */}
 
         <div className="d-none d-md-block">
           <div id="rowfoot05" className="row   g-3 ps-5 me-3 ms-3 pe-5 pb-3 ">
