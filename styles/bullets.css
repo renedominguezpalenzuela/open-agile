@@ -33,7 +33,7 @@ ul li.bullets-leistungen::before {
 @media (min-width: 300px) and (max-width: 450px) {
   .bullets-jobs ul li::before {
     width: 3.8vw;
-    margin-left: -4.6vw;
+    margin-left: -3.8vw;
   }
 }
 
