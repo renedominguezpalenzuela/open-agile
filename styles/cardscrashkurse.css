@@ -123,6 +123,33 @@
   width: 50vw !important;
 }
 
+@media (max-width: 992px) and (min-width: 767px) and (orientation: landscape) {
+  .modal-dialog {
+    left: 50%;
+    margin-left: -35vw !important;
+    top: 5%;
+  }
+  .modal-config {
+    margin-left: -25vw !important;
+    top: 5%;
+  }
+}
+
+@media (max-width: 766px) and (orientation: landscape) {
+  .modal-dialog {
+    left: 50%;
+    margin-left: -35vw !important;
+    top: 8%;
+  }
+  .font-title-modal {
+    font-size: 2.7vw !important;
+  }
+  .modal-config {
+    margin-left: -25vw !important;
+    top: 5%;
+  }
+}
+
 @media (min-width: 992px) {
   .modal-config {
     width: 50vw !important;
@@ -130,7 +157,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   .modal-config {
     width: 90vw !important;
     padding-right: -17px !important;
@@ -139,7 +166,7 @@
     margin-left: -45vw !important;
   }
   .modal-config {
-    top: 7%;
+    top: 10%;
   }
 }
 .ancho-modal-cursos {
@@ -148,7 +175,7 @@
   width: 70vw;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px) and (orientation: portrait) {
   .ancho-modal-cursos {
     width: 50vw !important;
   }
@@ -159,10 +186,10 @@
 }
 
 .font-title-modal {
-  font-size: 3.6vw !important;
+  font-size: 3.6vw;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   .ancho-modal-cursos {
     width: 90vw !important;
     padding-right: -17px !important;
@@ -200,7 +227,7 @@
 
 .titulo-card-crashkurse-new {
   font-family: Montserrat-Black;
-  font-size: 1vw !important;
+  font-size: 1.5vw !important;
   color: #243a78;
   text-transform: uppercase;
 }
@@ -254,13 +281,13 @@
     font-size: 3vw !important;
   }
   .titulo-card-crashkurse {
-    font-size: 3.4vw !important;
+    font-size: 2.8vw !important;
   }
   .fechas-card-crashkurse {
-    font-size: 2.7vw !important;
+    font-size: 2.2vw !important;
   }
   .card-footer-crashkurse {
-    font-size: 2.5vw !important;
+    font-size: 2vw !important;
   }
   .my_card-crashkurse {
     width: auto;

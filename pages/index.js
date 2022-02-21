@@ -34,21 +34,52 @@ export default function Home({
   main_logos,
 }) {
   const [desktop_screen, setDesktop_screen] = useState(true);
+  const [vista_landscape, setVistaLandScape] = useState(false);
+
+   const [ancho_screen, setAncho] = useState(0);
+   const [alto_screen, setAlto] = useState(0);
+
+   const [cadena_mostrar , setCadena]=useState("Info:");
+
+ 
 
   const handleResize = () => {
-    let ancho_screen = window.innerWidth;
+    // setAncho(window.innerWidth);
+    // setAlto(window.innerHeight);
+    setAncho(window.screen.width);
+    setAlto(window.screen.height);
+   
 
+  
+    
     if (ancho_screen > 992) {
       setDesktop_screen(true);
     } else {
       setDesktop_screen(false);
     }
+
+
+  // console.log(window);
+// +"| next "+window.next.version
+//  "| OS: "+window.platform.description 
+     setCadena("Width_scr: "+window.screen.width+" Height_scr: "+window.screen.height+" | Width: "+ancho_screen+" Height: "+alto_screen+"  | Browser: "+window.clientInformation.appVersion );
   };
+
+
+
+
 
   useEffect(() => {
     handleResize();
+    // handleOrientationChange();
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    // window.addEventListener("orientationchange", handleOrientationChange);
+
+    
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      //  window.removeEventListener("orientationchange", handleOrientationChange);
+    }
   }, []);
 
   return (
@@ -104,16 +135,18 @@ export default function Home({
 
         {/*imagen de sponsors */}
         <div className=" d-none  d-md-block">
+        
           <Content03 mainlogos={main_logos} />
         </div>
 
         {/*imagen de sponsors */}
-        <div className=" d-md-none">
+        <div className="row   d-md-none">
+       
           <Content03Carrousel mainlogos={main_logos} />
         </div>
 
         {/*Unser Blog  */}
-        <Content04 lista_cards={blogs} main_page={true} />
+        <Content04 lista_cards={blogs} main_page={true} ancho={ancho_screen} alto={alto_screen}/>
 
         {/*Carrousel videos */}
         <Content05 datos={vlog} />
@@ -134,7 +167,7 @@ export default function Home({
 
         {/*Footer  */}
 
-        <Footer />
+        <Footer  cadena_mostrar={cadena_mostrar}/>
       </div>
 
       {/*Menu Lateral oculto  */}

@@ -29,7 +29,7 @@ export default function Content05({ datos, color_fondo }) {
             className="carousel slide"
             data-bs-ride="carousel"
             data-mdb-touch="true">
-            <div className="carousel-indicators ">
+            <div className="carousel-indicators carousel-indicators-videos pb-3 ">
               {datos.map((unDato, index) =>
                 index === 0 ? (
                   <button
@@ -51,7 +51,7 @@ export default function Content05({ datos, color_fondo }) {
                 )
               )}
             </div>
-            <div className="carousel-inner  alto_carrusel  mt-md-5">
+            <div className="carousel-inner  alto_carrusel-videos  mt-md-5">
               {datos.map((unDato, index) => {
                 return (
                   <div

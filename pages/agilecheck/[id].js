@@ -76,7 +76,7 @@ const ancho_preguntas = (preguntas) => {
   let otras_clase = "";
 
   if (ancho_maximo >= 150) {
-    return "col-10" + otras_clase;
+    return "col" + otras_clase;
   } else if (ancho_maximo >= 70 && ancho_maximo < 150) {
     return "col-8" + otras_clase;
   } else if (ancho_maximo >= 10 && ancho_maximo < 70) {

@@ -26,7 +26,7 @@ import BarraConTextoIzquierda from "../components/BarraConTextoIzquierda";
 
 import { servidor_url } from "../config";
 import { backend_url } from "../config";
-
+import { useState, useEffect } from "react";
 import ModalFormCookie from "../components/ModalFormCookie";
 
 export default function Home({ servicios }) {
@@ -56,6 +56,35 @@ export default function Home({ servicios }) {
     }
   };
 
+  const formatTitle = (title) => {
+    const [desktop_screen, setDesktop_screen] = useState(true);
+    const handleResize = () => {
+      let ancho_screen = window.innerWidth;
+      if (ancho_screen > 992) {
+        setDesktop_screen(true);
+      } else {
+        setDesktop_screen(false);
+      }
+    };
+    useEffect(() => {
+      handleResize();
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    if (title == "Organisationsentwicklung" && !desktop_screen) {
+      let aux = [];
+      aux.push(title.substr(0, 13).toUpperCase());
+      aux.push(" " + title.slice(13).toUpperCase());
+      return aux;
+    } else {
+      let aux = "";
+
+      aux = title;
+      return aux.toUpperCase();
+    }
+  };
+
   return (
     <>
       <Head>
@@ -72,7 +101,7 @@ export default function Home({ servicios }) {
         <MenuFlotanteBoton />
         <AreaSuperior
           fondo="ajustable"
-          texto1={title.toUpperCase()}
+          texto1={formatTitle(title)}
           titulo_largo={true}
           area_gris_nueva={true}
           lei={true}
