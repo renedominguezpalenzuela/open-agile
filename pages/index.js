@@ -59,8 +59,6 @@ export default function Home({
     }
 
 
-   console.log("Desktop: "+desktop_screen);
-   console.log("ancho_screen: "+ancho_screen);
 // +"| next "+window.next.version
 //  "| OS: "+window.platform.description 
     //  setCadena("Width_scr: "+window.screen.width+" Height_scr: "+window.screen.height+" | Width: "+ancho_screen+" Height: "+alto_screen+"  | Browser: "+window.clientInformation.appVersion );
@@ -72,7 +70,7 @@ export default function Home({
 
   useEffect(() => {
      handleResize();
-    console.log("Inicializando");
+ 
     window.addEventListener("resize", handleResize);
         
     return () => {

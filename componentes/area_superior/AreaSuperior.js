@@ -78,7 +78,7 @@ export default function AreaSuperior({
   }
 
 
-  console.log("Boton inicio quiz "+boton_inicio_quiz);
+
 
   return (
     <>
