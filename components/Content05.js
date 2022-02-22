@@ -29,7 +29,7 @@ export default function Content05({ datos, color_fondo }) {
             className="carousel slide"
             data-bs-ride="carousel"
             data-mdb-touch="true">
-            <div className="carousel-indicators carousel-indicators-videos pb-3 ">
+            <div className="carousel-indicators carousel-indicators-videos  ">
               {datos.map((unDato, index) =>
                 index === 0 ? (
                   <button
