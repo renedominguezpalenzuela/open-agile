@@ -254,6 +254,8 @@ function Content01andMenuWithQuestions({
     setChecked4(false);
   }, [router.asPath]);
 
+  
+
   const checkboxes = (estilo_a_aplicar) => {
     return (
       <>
@@ -400,13 +402,13 @@ function Content01andMenuWithQuestions({
         </div>
 
         <div className=" my_quiz_boton-mobile ">
-          <a href={`${next_link}`} className="  ">
+           <Link  href={`${next_link}`} className="  ">
             <button
               type="button"
               className=" btn  ps-4 pe-4   btn-card font-btn-card-quiz rounded-pill  ">
               Next
             </button>
-          </a>
+          </Link>
         </div>
 
         <div className="my_quiz_boton-home ">
