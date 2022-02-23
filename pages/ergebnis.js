@@ -55,10 +55,14 @@ export default function Home() {
 
   respuestas.forEach((unaRespuesta, index) => {
     let valor_respuesta = parseInt(unaRespuesta);
+
+    
  
     if (index > 0 && valor_respuesta > 0) {
       puntos = puntos + valor_respuesta;
     }
+
+  
   });
 
     

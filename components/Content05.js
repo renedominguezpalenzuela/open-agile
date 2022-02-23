@@ -24,7 +24,7 @@ export default function Content05({ datos, color_fondo }) {
         </div>
 
 
-        <div  id="MyCarousel"  class="carousel slide"  data-bs-ride="carousel" data-bs-interval="false"  data-mdb-touch="true">
+        <div  id="MyCarousel"  className="carousel slide"  data-bs-ride="carousel"   data-mdb-touch="true">
         {/* carousel-indicators-videos */}
           <div className="carousel-indicators   ">
               {datos.map((unDato, index) =>
