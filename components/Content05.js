@@ -16,20 +16,17 @@ export default function Content05({ datos, color_fondo }) {
   return (
     <>
       <div id="MyCarouselTitle" className={`${clase_color_carrusel} pb-1`}>
-        <div className=" row justify-content-center font_title_seccion_sombra   mt-2  pt-5">
+       <div className=" row justify-content-center font_title_seccion_sombra   mt-2  pt-5">
           VLOG
         </div>
         <div className=" row justify-content-center font_card_texto mt-2 mb-2">
           Open Agile im Dialog
         </div>
 
-        <div className=" row justify-content-center">
-          <div
-            id="MyCarousel"
-            className="carousel slide"
-            data-bs-ride="carousel"
-            data-mdb-touch="true">
-            <div className="carousel-indicators carousel-indicators-videos pb-3 ">
+
+        <div  id="MyCarousel"  class="carousel slide"  data-bs-ride="carousel" data-bs-interval="false"  data-mdb-touch="true">
+        {/* carousel-indicators-videos */}
+          <div className="carousel-indicators   ">
               {datos.map((unDato, index) =>
                 index === 0 ? (
                   <button
@@ -51,7 +48,11 @@ export default function Content05({ datos, color_fondo }) {
                 )
               )}
             </div>
-            <div className="carousel-inner  alto_carrusel-videos  mt-md-5">
+
+
+         
+
+             <div className="carousel-inner   mt-md-5 pb-5 mb-5">
               {datos.map((unDato, index) => {
                 return (
                   <div
@@ -108,7 +109,9 @@ export default function Content05({ datos, color_fondo }) {
               })}
             </div>
 
-            <button
+
+
+         <button
               className="carousel-control-prev zindex-3000 d-none d-md-block"
               type="button"
               data-bs-target="#MyCarousel"
@@ -122,7 +125,6 @@ export default function Content05({ datos, color_fondo }) {
               data-bs-slide="next">
               <span className="carousel-control-next-icon"></span>
             </button>
-          </div>
         </div>
       </div>
     </>

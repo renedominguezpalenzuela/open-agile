@@ -80,7 +80,7 @@ a {
 }
 
 .carousel-inner {
-  height: 35vw;
+  /* height: 35vw; */
 }
 
 .img-rounded {
@@ -612,7 +612,7 @@ ul.no-bullets {
   border-radius: 30px;
   z-index: 3;
 }
-
+/* 
 @media (max-width: 992px) and (orientation: landscape) {
   .carousel-indicators {
     bottom: -55px;
@@ -625,7 +625,7 @@ ul.no-bullets {
   .carousel-indicators-videos {
     bottom: -25px;
   }
-}
+} */
 
 
 
