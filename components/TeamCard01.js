@@ -25,7 +25,7 @@ export default function TeamCard01({
   <div className="col p-4 ">
     <div className="card card-rounded  w-100   my_card ">
 
-      <img className="card-img-top corte_cards img-rounded  " src={`img/${imagen}`} alt={texto_alt}/>
+      <img className="card-img-top corte_cards img-rounded  " src={`img/${imagen}`} alt={texto_alt} loading="lazy" />
 
       <div className="card-body text-center w-100    ">
      

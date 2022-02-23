@@ -16,6 +16,7 @@ export default function MenuNavBar2() {
             <img
               className="  "
               src={`${servidor_url}/img/logo/3.svg`}
+              loading="lazy" 
             />
           </a>
         </div>

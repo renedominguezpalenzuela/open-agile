@@ -67,6 +67,7 @@ export default function Content01Iconos({ footer }) {
             <img
               className={iconos_img_size(footer)}
               src={`${servidor_url}/img/xing-img.svg`}
+              loading="lazy" 
             />
             {/* "social-img"   */}
           </a>

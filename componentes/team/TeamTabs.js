@@ -144,6 +144,7 @@ function OneTab({ indice, titulo, texto, value, setValue, max }) {
             className="boton_flecha  "
             src={`${servidor_url}/img/leistungen/boton_flecha_magenta.svg`}
             alt=""
+            loading="lazy" 
           />
         </div>
       </TabPanel>

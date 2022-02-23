@@ -416,6 +416,7 @@ function Content01andMenuWithQuestions({
             <img
               className=" logo-img-quiz"
               src={`${servidor_url}/img/logo/5.svg`}
+              loading="lazy" 
             />
           </a>
         </div>

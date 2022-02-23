@@ -75,6 +75,15 @@ library.add(
 const clientSideEmotionCache = createEmotionCache();
 ReactGA.initialize("UA-219220429-1");
 
+
+export function reportWebVitals(metric) {
+  console.log("Metrics:");
+  console.log(metric);
+}
+
+
+
+
 const MyApp = (props) => {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
 

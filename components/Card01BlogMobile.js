@@ -23,6 +23,7 @@ export default function Card01BlogMobile({ data }) {
           <img
             className="card-img-top corte_cards img-rounded  "
             src={imagen}
+            loading="lazy" 
           />
         )}
 

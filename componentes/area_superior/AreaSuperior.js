@@ -143,6 +143,7 @@ export default function AreaSuperior({
                     ? img_team_top
                     : `${servidor_url}/img/${img_team_top}`
                 }
+                loading="lazy" 
               />
             </div>
           )}

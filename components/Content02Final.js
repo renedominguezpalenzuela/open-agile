@@ -5,7 +5,7 @@ export default function Content02Final() {
 
   <div id="content02-final " className="row     justify-content-center pb-5">
     <div className="col-lg-3 text-center  ">
-       <img className="img-fluid" src="img/heart.png" /> 
+       <img className="img-fluid" src="img/heart.png" loading="lazy"  /> 
 
       <p className="font_title5">Dolorem ipsum</p>
       <p className="font_title4">
@@ -19,7 +19,7 @@ export default function Content02Final() {
       </p>
     </div>
     <div className="col-lg-3 text-center   ">
-     <img className="img-fluid" src="img/arrow.png" /> 
+     <img className="img-fluid" src="img/arrow.png" loading="lazy"  /> 
 
       <p className="font_title5">dolor sit amet</p>
       <p className="font_title4">
@@ -34,7 +34,7 @@ export default function Content02Final() {
     </div>
 
     <div className="col-lg-3 text-center   ">
-       <img className="img-fluid" src="img/building.png" /> 
+       <img className="img-fluid" src="img/building.png" loading="lazy" /> 
 
       <p className="font_title5">consectetur, adipisci</p>
       <p className="font_title4">

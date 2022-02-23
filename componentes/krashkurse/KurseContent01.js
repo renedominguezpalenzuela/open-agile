@@ -18,7 +18,7 @@ export default function KurseContent01({
     <>
       <div className="row  ">
         {imagen != undefined && imagen != "" && imagen != null && (
-          <img className="img-fluid  mb-4" src={`${imagen}`} alt="" />
+          <img className="img-fluid  mb-4" src={`${imagen}`} alt="" loading="lazy" />
         )}
         <ReactMarkdown className="markdowncurso mybullets">
           {description}

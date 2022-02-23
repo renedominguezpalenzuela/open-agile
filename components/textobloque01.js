@@ -27,13 +27,13 @@ export default function TextoBloque01({
 
       <div className="row  text-center mb-4 d-flex  justify-content-center ">
         {foto2 != undefined && foto != "" && (
-          <img className="img-fluid  foto-team" src={foto2} />
+          <img className="img-fluid  foto-team" src={foto2} loading="lazy" />
         )}
       </div>
 
       <div className="row  text-center mb-4 d-flex  justify-content-center ">
         {foto != undefined && foto != "" && (
-          <img className="img-fluid  foto-team" src={`img/${foto}`} />
+          <img className="img-fluid  foto-team" src={`img/${foto}`} loading="lazy" />
         )}
       </div>
 
