@@ -17,6 +17,7 @@ export default function Content03({ mainlogos }) {
                 <img
                   className="img-fluid img-sponsors1 grayscale "
                   src={unDato.attributes.logo.data.attributes.url}
+                  loading="lazy" 
                 />
               </a>
             </div>

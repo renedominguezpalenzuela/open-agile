@@ -87,7 +87,7 @@ export default function Home({ blog }) {
               <div className="mb-2 text-end font_data_blog blog-movile">
                 {fecha}
               </div>
-              <img className="img-md-fluid img-blog" src={url} />
+              <img className="img-md-fluid img-blog" src={url} loading="lazy"  />
             </div>
 
             <div className="row  mt-1 mb-2">
@@ -194,6 +194,7 @@ export default function Home({ blog }) {
                   <img
                     className="img-fluid "
                     src={`${servidor_url}/img/blogs/flecha_azul_left.svg`}
+                    loading="lazy" 
                   />
                 </div>
 
@@ -217,6 +218,7 @@ export default function Home({ blog }) {
                   <img
                     className="img-fluid flecha"
                     src={`${servidor_url}/img/blogs/flecha_azul_rigth.svg`}
+                    loading="lazy" 
                   />
                 </div>
 
@@ -241,6 +243,7 @@ export default function Home({ blog }) {
                   <img
                     className="img-fluid w-50"
                     src={`${servidor_url}/img/blogs/flecha_azul_left.svg`}
+                    loading="lazy" 
                   />
                 </div>
               </a>
@@ -256,6 +259,7 @@ export default function Home({ blog }) {
                   <img
                     className="img-fluid flecha w-50"
                     src={`${servidor_url}/img/blogs/flecha_azul_rigth.svg`}
+                    loading="lazy" 
                   />
                 </div>
               </a>

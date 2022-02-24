@@ -38,13 +38,13 @@ export default function Card02({
             <div className="row  video_carrusel">
 
             {imagen!=undefined && image!="" &&
-               <img src={`img/${imagen}`} alt={"${texto_alt}"} className=" img_carrusel " alt="..."/> 
+               <img src={`img/${imagen}`} alt={"${texto_alt}"} className=" img_carrusel " alt="..." loading="lazy" /> 
             }
 
             {video!=undefined && video!="" &&
                
               <div className="container">
-                <iframe className="responsive-iframe" src={video}  frameBorder="3" allowFullScreen></iframe>
+                <iframe className="responsive-iframe" src={video}  frameBorder="3" allowFullScreen loading="lazy" ></iframe>
               </div>
 
             

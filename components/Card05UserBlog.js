@@ -11,6 +11,7 @@ export default function Card05UserBlog({ data, dispositivo_chico }) {
           <img
             className={`${dispositivo_chico?"imagen-blog-small":"imagen-blog"}`}
             src={data.attributes.img.data.attributes.url}
+            loading="lazy" 
           />
         </div>
 

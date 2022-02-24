@@ -22,7 +22,7 @@ export default function Content06 ({imagen,texto_alt } ) {
     </div>
 
     <div className="row mt-5 mb-5 pb-5">
-     <img className="img-fluid"  src={`img/${imagen}`} alt={`img/${texto_alt}`}/>
+     <img className="img-fluid"  src={`img/${imagen}`} alt={`img/${texto_alt}`} loading="lazy" />
 
     </div>
     </div>

@@ -26,6 +26,7 @@ export default function Card07Shop({
             className=" imagen-team-card "
             src={`${imagen}`}
             alt={texto_alt}
+            loading="lazy" 
           />
         </div>
 

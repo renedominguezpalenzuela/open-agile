@@ -25,6 +25,7 @@ export default function Card01Blog({ data, main_page }) {
           <img
             className="card-img-top corte_cards img-rounded  "
             src={imagen}
+            loading="lazy" 
           />
         )}
 

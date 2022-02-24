@@ -26,6 +26,7 @@ export default function KurseContent03({
             className="img-fluid  "
             src={`${servidor_url}/img/${imagen}`}
             alt=""
+            loading="lazy" 
           />
         )}
 

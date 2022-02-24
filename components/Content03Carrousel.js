@@ -44,6 +44,7 @@ export default function Content03Carrousel({ mainlogos }) {
                   <img
                     className="img-sponsors-size  grayscale "
                     src={unDato.attributes.logo.data.attributes.url}
+                    loading="lazy" 
                   />
                 </a>
               </div>

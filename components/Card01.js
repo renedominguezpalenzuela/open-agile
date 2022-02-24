@@ -39,6 +39,7 @@ export default function Card01({
             className="card-img-top corte_cards img-rounded  "
             src={imagen}
             alt={texto_alt}
+            loading="lazy" 
           />
         )}
 

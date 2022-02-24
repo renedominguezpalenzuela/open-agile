@@ -75,6 +75,7 @@ export default function Footer({cadena_mostrar}) {
                     <img
                       className="img-fluid logo-img-footer2"
                       src={`${servidor_url}/img/logo/5.svg`}
+                      loading="lazy" 
                     />
                   </a>
                 </div>

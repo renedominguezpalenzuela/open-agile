@@ -147,6 +147,7 @@ export default function Home({ team }) {
             <img
               className="pt-4  imagen-team"
               src={team.attributes.imageround.data.attributes.url}
+              loading="lazy" 
             />
           </div>
 

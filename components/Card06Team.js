@@ -22,7 +22,7 @@ export default function Card06Team({
     <>
       <div className="card myanimacion sombra_cards redondear-card pb-2">
         <div className="row   g-0 pb-2">
-          <img   className=" imagen-team-card "  src={imagen}  alt={texto_alt} />
+          <img   className=" imagen-team-card "  src={imagen}  alt={texto_alt} loading="lazy"  />
         </div>
 
         <div className="h-100 d-flex  align-items-center  ">
