@@ -17,7 +17,7 @@ import { useState, useEffect } from "react";
 //           CRASHKURSE \ CRASHKURS ZUM AGILE COACH
 //----------------------------------------------------------------------------------------------------------
 //https://www.amazon.de/Crashkurs-Selbstorganisation-agilen-Teams-wertschätzende/dp/3648151509/ref=sr_1_2?__mk_de_DE=ÅMÅŽÕÑ&crid=3PL0Y0OIVCT4Y&keywords=crashkurs+agil&qid=1640623312&sprefix=crashkurs+agil%2Caps%2C97&sr=8-2
-export default function Home({ shop }) {
+export default function Home({ shop , cursos_lista,  servicios_lista}) {
   const titulo_area_superior2 = "AGILITÄT FÜR ZUHAUSE UND UNTERWEGS";
   const titulo_area_superior = "DER OPEN AGILE SHOP";
 
@@ -57,6 +57,9 @@ export default function Home({ shop }) {
             titulo_muy_largo={true}
             area_gris_nueva={true}
             shop={true}
+             servicios_lista={servicios_lista} 
+            cursos_lista={cursos_lista} 
+			
           />
 
           <div className="row  mt-5 mb-5 pt-5  d-flex justify-content-center ">
@@ -80,7 +83,7 @@ export default function Home({ shop }) {
           </div>
 
           {/*Footer  */}
-          <Footer />
+         <Footer servicios_lista={servicios_lista} cursos_lista={cursos_lista} />
         </div>
 
         {/*Menu Lateral oculto  */}
@@ -96,9 +99,20 @@ export const getServerSideProps = async (context) => {
 
   const shop = await res.json();
 
+  
+  const url2 = `${backend_url}/api/leistungen`;
+  const res2 = await fetch(url2);
+  const servicios_lista = await res2.json();
+
+  const url3 = `${backend_url}/api/curso`;
+  const res3 = await fetch(url3);
+  const cursos_lista = await res3.json();
+
   return {
     props: {
       shop,
+       cursos_lista,
+      servicios_lista
     },
   };
 };

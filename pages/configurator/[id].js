@@ -60,7 +60,7 @@ export default function Configurator_Main({ configurator }) {
         )}
 
         {/*Footer  */}
-        <Footer />
+        <Footer servicios_lista={servicios_lista} cursos_lista={cursos_lista} />
       </div>
 
       {/*Menu Lateral oculto  */}

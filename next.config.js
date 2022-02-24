@@ -78,7 +78,11 @@ const redirect_routes = [
 
 module.exports = {
   reactStrictMode: true,
+   images: {
+    domains: ['js-agileweb-files.s3.us-east-2.amazonaws.com'],
+  },
   async redirects() {
     return redirect_routes
   },
+ 
 }

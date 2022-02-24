@@ -104,7 +104,8 @@
 
 .bannermain-quiz-questions {
   display: grid;
-  height: 100vh;
+  /* height: 100vh; */
+  height: auto;
 
   grid-template-columns: 12% 75% 12%;
   grid-template-rows: 15vh 85%;
