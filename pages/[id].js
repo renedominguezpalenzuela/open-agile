@@ -36,7 +36,19 @@ export default function Home({ servicios }) {
   // const { titulo2, titulo3, titulo2a, titulo, texto01, texto02, texto03 } =
   //   servicios;
 
-  const services = servicios.data.attributes;
+  let services = {
+    title: "",
+    first_tab_title: "",
+    first_tab_content: "",
+    second_tab_title: "",
+    second_tab_content: "",
+    third_tab_title: "",
+    third_tab_content: "",
+  };
+
+  if (servicios.data != undefined) {
+    services = servicios.data.attributes;
+  }
 
   const {
     title,
@@ -57,6 +69,8 @@ export default function Home({ servicios }) {
   };
 
   const formatTitle = (title) => {
+    if (title === undefined || title === "") return "";
+
     const [desktop_screen, setDesktop_screen] = useState(true);
     const handleResize = () => {
       let ancho_screen = window.innerWidth;
@@ -88,7 +102,7 @@ export default function Home({ servicios }) {
   return (
     <>
       <Head>
-        <title>{title.toUpperCase()}</title>
+        <title>{title}</title>
         <meta name="description" content={title} />
         <link rel="icon" href="/favicon.ico" />
         <script async src={`${servidor_url}/js/chat.js`} />
