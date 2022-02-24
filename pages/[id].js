@@ -129,7 +129,7 @@ export default function Home({ servicios }) {
 
 export const getServerSideProps = async (context) => {
   const { id } = context.query;
-  const url = `${servidor_url}/api/leistungen/${encodeURIComponent(id)}`;
+  const url = `${servidor_url}/api/leistungens/${encodeURIComponent(id)}`;
 
   const res = await fetch(url);
 
