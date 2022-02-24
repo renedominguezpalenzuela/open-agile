@@ -76,12 +76,15 @@ const clientSideEmotionCache = createEmotionCache();
 ReactGA.initialize("UA-219220429-1");
 
 
+
 const MyApp = (props) => {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
 
   //  useEffect(() => {
     
   //  }, []);
+
+
 
   useEffect(() => {
     import("bootstrap/dist/js/bootstrap.bundle.min");
