@@ -67,6 +67,8 @@ export default function AreaSuperior({
   bes,
   daten,
   impre,
+  servicios_lista, 
+  cursos_lista
 }) {
   let vista_movil = false;
   let bottom_margin = true;
@@ -98,7 +100,7 @@ export default function AreaSuperior({
 
           {/*    <div className="row d-none d-lg-block "> */}
           <div className="item-menu  d-flex align-items-center justify-content-center ">
-            <MenuNavBar />
+            <MenuNavBar servicios_lista={servicios_lista} cursos_lista={cursos_lista} />
           </div>
 
           <div className="item-boton   d-flex align-items-center justify-content-center">

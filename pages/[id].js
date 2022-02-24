@@ -29,7 +29,7 @@ import { backend_url } from "../config";
 import { useState, useEffect } from "react";
 import ModalFormCookie from "../components/ModalFormCookie";
 
-export default function Home({ servicios }) {
+export default function Home({ servicios, cursos_lista, servicios_lista }) {
   const router = useRouter();
   const { id } = router.query;
 
@@ -119,6 +119,8 @@ export default function Home({ servicios }) {
           titulo_largo={true}
           area_gris_nueva={true}
           lei={true}
+              servicios_lista={servicios_lista} 
+            cursos_lista={cursos_lista} 
         />
 
         <div className={` mt-5 pb-3 + ${classOftabs(id)}`}>
@@ -132,7 +134,7 @@ export default function Home({ servicios }) {
           />
         </div>
 
-        <Footer />
+        <Footer servicios_lista={servicios_lista} cursos_lista={cursos_lista} />
       </div>
 
       {/*Menu Lateral oculto  */}
@@ -149,9 +151,21 @@ export const getServerSideProps = async (context) => {
 
   const servicios = await res.json();
 
+   const url3 = `${backend_url}/api/curso`;
+  const res3 = await fetch(url3);
+  const cursos_lista = await res3.json();
+
+  
+  
+  const url2 = `${backend_url}/api/leistungen`;
+  const res2 = await fetch(url2);
+  const servicios_lista = await res2.json();
+
   return {
     props: {
       servicios,
+      cursos_lista,
+      servicios_lista
     },
   };
 };

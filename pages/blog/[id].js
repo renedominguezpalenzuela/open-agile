@@ -266,7 +266,7 @@ export default function Home({ blog }) {
             </div>
           </div>
         </div>
-        <Footer />
+       <Footer servicios_lista={servicios_lista} cursos_lista={cursos_lista} />
       </div>
       <MenuFlotante />
     </>

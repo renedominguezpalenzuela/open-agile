@@ -16,27 +16,27 @@ import Content01Iconos from "../componentes/area_superior/Content01Iconos";
 import ModalFormCookie from "../components/ModalFormCookie";
 import { useState, useEffect } from "react";
 
-export default function Footer({cadena_mostrar}) {
+export default function Footer({cadena_mostrar, servicios_lista, cursos_lista}) {
   const [changeCookie, setChangeCookie] = useState(false);
 
-  const [leich, setLeich] = useState({ data: [] });
-  const [crush, setCrush] = useState({ data: [] });
+  // const [leich, setLeich] = useState({ data: [] });
+  // const [crush, setCrush] = useState({ data: [] });
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await fetch("/api/leistungen");
-      const servicios = await data.json();
-      setLeich(servicios);
-    };
-    fetchData();
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const data = await fetch("/api/leistungen");
+  //     const servicios = await data.json();
+  //     setLeich(servicios);
+  //   };
+  //   fetchData();
 
-    const fetchData2 = async () => {
-      const data = await fetch("/api/curso");
-      const servicios = await data.json();
-      setCrush(servicios);
-    };
-    fetchData2();
-  }, []);
+  //   const fetchData2 = async () => {
+  //     const data = await fetch("/api/curso");
+  //     const servicios = await data.json();
+  //     setCrush(servicios);
+  //   };
+  //   fetchData2();
+  // }, []);
 
   function capitalize(str) {
     const lower = str.toLowerCase();
@@ -115,7 +115,7 @@ export default function Footer({cadena_mostrar}) {
             <div className="col-3  ps-2 ps-lg-5">
               <div className="font_footer_title  mt-3">Leistungen</div>
               <div className="font_facit_text_very_small mt-3">
-                {leich.data.map((item, index) => (
+                {servicios_lista.data.map((item, index) => (
                   <div key={index}>
                     <a
                       className="color-font-dropdown mylinkhoover"
@@ -130,7 +130,7 @@ export default function Footer({cadena_mostrar}) {
             <div className="col-3 ps-5  ">
               <div className="font_footer_title mt-3">Crashkurse</div>
               <div className="font_facit_text_very_small mt-3">
-                {crush.data.map((item, index) => (
+                {cursos_lista.data.map((item, index) => (
                   <div key={index}>
                     <a
                       className="color-font-dropdown mylinkhoover"

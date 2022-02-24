@@ -14,7 +14,7 @@ import ModalFormCookie from "../components/ModalFormCookie";
 //           CRASHKURSE \ CRASHKURS ZUM AGILE COACH
 //----------------------------------------------------------------------------------------------------------
 
-export default function Home() {
+export default function Home({ cursos_lista, servicios_lista }) {
   // <Head>
   //   <script async src="js/menu.js" />
   // </Head>
@@ -43,6 +43,8 @@ export default function Home() {
           titulo_muy_largo={true}
           area_gris_nueva={true}
           daten={true}
+          servicios_lista={servicios_lista}
+          cursos_lista={cursos_lista}
         />
 
         <div className="px-5 ms-md-5 mb-md-3">
@@ -731,7 +733,7 @@ export default function Home() {
           <p className="font_daten mb-5">Stand: 26.01.2022</p>
         </div>
         {/*Footer  */}
-        <Footer />
+       <Footer servicios_lista={servicios_lista} cursos_lista={cursos_lista} />
       </div>
 
       {/*Menu Lateral oculto  */}
@@ -739,3 +741,20 @@ export default function Home() {
     </>
   );
 }
+
+export const getServerSideProps = async (context) => {
+  const url2 = `${backend_url}/api/leistungen`;
+  const res2 = await fetch(url2);
+  const servicios_lista = await res2.json();
+
+  const url3 = `${backend_url}/api/curso`;
+  const res3 = await fetch(url3);
+  const cursos_lista = await res3.json();
+
+  return {
+    props: {
+      cursos_lista,
+      servicios_lista,
+    },
+  };
+};
