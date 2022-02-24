@@ -36,20 +36,18 @@ export default function Home({ servicios }) {
   // const { titulo2, titulo3, titulo2a, titulo, texto01, texto02, texto03 } =
   //   servicios;
 
-
- let services = {
-      title: "",
-      first_tab_title: "",
-      first_tab_content: "",
-      second_tab_title: "",
-      second_tab_content: "",
-      third_tab_title: "",
-      third_tab_content: "",
-    };
+  let services = {
+    title: "",
+    first_tab_title: "",
+    first_tab_content: "",
+    second_tab_title: "",
+    second_tab_content: "",
+    third_tab_title: "",
+    third_tab_content: "",
+  };
 
   if (servicios.data != undefined) {
-     services = servicios.data.attributes;
-   
+    services = servicios.data.attributes;
   }
 
   const {
