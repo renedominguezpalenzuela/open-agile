@@ -10,6 +10,9 @@ import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 
 import ModalFormCookie from "../components/ModalFormCookie";
 
+import { servidor_url } from "../config";
+import { backend_url } from "../config";
+
 //----------------------------------------------------------------------------------------------------------
 //           CRASHKURSE \ CRASHKURS ZUM AGILE COACH
 //----------------------------------------------------------------------------------------------------------

@@ -117,9 +117,7 @@ export default function Footer({cadena_mostrar, servicios_lista, cursos_lista}) 
               <div className="font_facit_text_very_small mt-3">
                 {servicios_lista.data.map((item, index) => (
                   <div key={index}>
-                    <a
-                      className="color-font-dropdown mylinkhoover"
-                      href={item.attributes.slug}>
+                    <a className="color-font-dropdown mylinkhoover" href={`${servidor_url}/${item.attributes.slug}`}>
                       {item.attributes.title}
                     </a>
                   </div>
