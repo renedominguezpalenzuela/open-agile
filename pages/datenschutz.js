@@ -53,7 +53,7 @@ export default function Home({ cursos_lista, servicios_lista }) {
         <div className="px-5 ms-md-5 mb-md-3">
           <h1 className="title_daten mt-md-5">Datenschutzerklärung</h1>
           <p className="font_daten">
-            Wir, die <span className="fw-bold">Open Agile GmbH</span>{" "}
+            Wir, die <span className="fw-bold">Open Agile GmbH</span>
             (nachfolgend „wir“), freuen uns über Ihr Interesse an unserem
             Online-Angebot unter open-agile.de (nachfolgend das
             „Online-Angebot“). Wir nehmen den Schutz Ihrer personenbezogenen
@@ -736,7 +736,7 @@ export default function Home({ cursos_lista, servicios_lista }) {
           <p className="font_daten mb-5">Stand: 26.01.2022</p>
         </div>
         {/*Footer  */}
-       <Footer servicios_lista={servicios_lista} cursos_lista={cursos_lista} />
+        <Footer servicios_lista={servicios_lista} cursos_lista={cursos_lista} />
       </div>
 
       {/*Menu Lateral oculto  */}
