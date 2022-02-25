@@ -16,7 +16,11 @@ import Content01Iconos from "../componentes/area_superior/Content01Iconos";
 import ModalFormCookie from "../components/ModalFormCookie";
 import { useState, useEffect } from "react";
 
-export default function Footer({cadena_mostrar, servicios_lista, cursos_lista}) {
+export default function Footer({
+  cadena_mostrar,
+  servicios_lista,
+  cursos_lista,
+}) {
   const [changeCookie, setChangeCookie] = useState(false);
 
   // const [leich, setLeich] = useState({ data: [] });
@@ -62,7 +66,7 @@ export default function Footer({cadena_mostrar, servicios_lista, cursos_lista}) 
           <FormularioContacto2 />
         </div>
 
-          {/* <div  >
+        {/* <div  >
                 {cadena_mostrar}
               </div> */}
 
@@ -75,7 +79,7 @@ export default function Footer({cadena_mostrar, servicios_lista, cursos_lista}) 
                     <img
                       className="img-fluid logo-img-footer2"
                       src={`${servidor_url}/img/logo/5.svg`}
-                      loading="lazy" 
+                      loading="lazy"
                     />
                   </a>
                 </div>
@@ -117,7 +121,9 @@ export default function Footer({cadena_mostrar, servicios_lista, cursos_lista}) 
               <div className="font_facit_text_very_small mt-3">
                 {servicios_lista.data.map((item, index) => (
                   <div key={index}>
-                    <a className="color-font-dropdown mylinkhoover" href={`${servidor_url}/${item.attributes.slug}`}>
+                    <a
+                      className="color-font-dropdown mylinkhoover"
+                      href={`${servidor_url}/${item.attributes.slug}`}>
                       {item.attributes.title}
                     </a>
                   </div>
@@ -164,7 +170,7 @@ export default function Footer({cadena_mostrar, servicios_lista, cursos_lista}) 
                 </div>
 
                 <div>
-                  <a href="/datenschutzerklarung" className="mylinkhoover">
+                  <a href="/datenschutz" className="mylinkhoover">
                     Datenschutz
                   </a>
                 </div>
@@ -276,8 +282,6 @@ export default function Footer({cadena_mostrar, servicios_lista, cursos_lista}) 
                 Cookies
               </div>
             </div>
-
-            
           </div>
         </div>
       </footer>
