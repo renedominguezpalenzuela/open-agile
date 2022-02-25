@@ -26,7 +26,7 @@ import ModalFormCookie from "../components/ModalFormCookie";
 //           CRASHKURSE \ CRASHKURS ZUM AGILE COACH
 //----------------------------------------------------------------------------------------------------------
 
-export default function Home({ vlog }) {
+export default function Home({ vlog, cursos_lista,  servicios_lista }) {
   const titulo1 = "VLOG";
 
   const titulo3 = "VLOG";
@@ -73,6 +73,8 @@ export default function Home({ vlog }) {
           texto_parrafo_blanco_cursos={texto03}
           texto_parrafo_plequitas={text04_bullets}
           area_gris_nueva={true}
+             servicios_lista={servicios_lista} 
+            cursos_lista={cursos_lista} 
         />
 
         {/*Carrousel  */}
@@ -81,7 +83,7 @@ export default function Home({ vlog }) {
         <div className="mt-5"> </div>
 
         {/*Footer  */}
-        <Footer />
+       <Footer servicios_lista={servicios_lista} cursos_lista={cursos_lista} />
       </div>
 
       {/*Menu Lateral oculto  */}
@@ -96,9 +98,22 @@ export const getServerSideProps = async (context) => {
   const res5 = await fetch(url5);
   const vlog = await res5.json();
 
+
+
+  const url2 = `${backend_url}/api/leistungen`;
+  const res2 = await fetch(url2);
+  const servicios_lista = await res2.json();
+
+  const url3 = `${backend_url}/api/curso`;
+  const res3 = await fetch(url3);
+  const cursos_lista = await res3.json();
+
+
   return {
     props: {
       vlog,
+        cursos_lista,
+      servicios_lista
     },
   };
 };

@@ -12,7 +12,7 @@ import Image01 from "../components/crashkurse/image01";
 
 import Tabla01 from "../components/crashkurse/tabla01";
 
-import { servidor_url } from "../config";
+import { backend_url, servidor_url } from "../config";
 
 import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 
@@ -20,7 +20,7 @@ import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 //           CRASHKURSE \ CRASHKURS ZUM AGILE COACH
 //----------------------------------------------------------------------------------------------------------
 
-export default function Home() {
+export default function Home( {cursos_lista,  servicios_lista}) {
   const titulo1 = "Wie agil ist Eure";
   const titulo2 = "Zusammenarbeit?";
   const titulo2a = "";
@@ -76,6 +76,8 @@ export default function Home() {
           boton_inicio_quiz={true}
           area_gris_nueva={false}
           linea_obliqua={true}
+           servicios_lista={servicios_lista} 
+            cursos_lista={cursos_lista} 
         />
 
         <TextoBloque01 titulo2="" texto_parrafo_array={texto02} />
@@ -95,7 +97,7 @@ export default function Home() {
         </div>
 
         {/*Footer  */}
-        <Footer />
+        <Footer servicios_lista={servicios_lista} cursos_lista={cursos_lista} />
       </div>
 
       {/*Menu Lateral oculto  */}
@@ -103,3 +105,27 @@ export default function Home() {
     </>
   );
 }
+
+
+export const getServerSideProps = async (context) => {
+
+
+  
+  const url2 = `${backend_url}/api/leistungen`;
+  const res2 = await fetch(url2);
+  const servicios_lista = await res2.json();
+
+  const url3 = `${backend_url}/api/curso`;
+  const res3 = await fetch(url3);
+  const cursos_lista = await res3.json();
+
+
+  return {
+    props: {
+
+      cursos_lista,
+      servicios_lista
+    },
+  };
+};
+

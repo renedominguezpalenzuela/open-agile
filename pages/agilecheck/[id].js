@@ -97,7 +97,7 @@ import { backend_url } from "../../config";
 //            Pagina inicial principal
 //----------------------------------------------------------------------------------------------------------
 
-export default function Home({ quiz, todas_preguntas }) {
+export default function Home({ quiz, todas_preguntas, cursos,   servicios }) {
   const router = useRouter();
   const { id } = router.query;
 
@@ -123,7 +123,7 @@ export default function Home({ quiz, todas_preguntas }) {
         <script async src={`${servidor_url}/js/menu.js`} />
       </Head>
 
-      <div className="d-none  d-md-block">
+      <div className="d-none  d-lg-block">
         <div id="principal" className="bannermain-quiz-questions ">
           <MenuFlotanteBoton />
           <div className="item-logo  d-flex align-items-center justify-content-center">
@@ -131,7 +131,8 @@ export default function Home({ quiz, todas_preguntas }) {
           </div>
 
           <div className="item-menu  d-flex align-items-center justify-content-center">
-            <MenuNavBar />
+            
+              <MenuNavBar servicios_lista={servicios} cursos_lista={cursos} />
           </div>
 
           <div className="item-boton d-flex align-items-center justify-content-center">
@@ -150,10 +151,10 @@ export default function Home({ quiz, todas_preguntas }) {
         </div>
 
         <MenuFlotante />
-        <Footer />
+       <Footer servicios_lista={servicios} cursos_lista={cursos} />
       </div>
 
-      <div className="d-md-none">
+      <div className="d-lg-none">
         <div id="principal" className=" ">
           <Content01andMenuWithQuestions
             id={id}
@@ -163,31 +164,12 @@ export default function Home({ quiz, todas_preguntas }) {
             next_link={next_link}
             total_questions={total_preguntas}
           />
-          <Footer />
+          <Footer servicios_lista={servicios} cursos_lista={cursos} />
         </div>
       </div>
     </>
   );
 }
-
-export const getServerSideProps = async (context) => {
-  const { id } = context.query;
-  const url = `${backend_url}/api/quiz/${encodeURIComponent(id)}`;
-  const res = await fetch(url);
-  const quiz = await res.json();
-
-  const url2 = `${backend_url}/api/quiz`;
-  const res2 = await fetch(url2);
-
-  const todas_preguntas = await res2.json();
-
-  return {
-    props: {
-      quiz,
-      todas_preguntas,
-    },
-  };
-};
 
 //-------------------------------------------------------------------------------------------------------------------
 //----------------- Dibuja el titulo, la pregunta, los checkboxes -------------------------------------------------------
@@ -424,3 +406,35 @@ function Content01andMenuWithQuestions({
     </>
   );
 }
+
+
+
+export const getServerSideProps = async (context) => {
+  const { id } = context.query;
+  const url = `${backend_url}/api/quiz/${encodeURIComponent(id)}`;
+  const res = await fetch(url);
+  const quiz = await res.json();
+
+  const url2 = `${backend_url}/api/quiz`;
+  const res2 = await fetch(url2);
+
+  const todas_preguntas = await res2.json();
+
+
+    const url3 = `${backend_url}/api/curso`;
+  const res3 = await fetch(url3);
+  const cursos = await res3.json();
+
+  const url4 = `${servidor_url}/api/leistungen`;
+  const res4 = await fetch(url4);
+  const servicios = await res4.json();
+
+  return {
+    props: {
+      quiz,
+      todas_preguntas,
+      cursos, 
+      servicios
+    },
+  };
+};

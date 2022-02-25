@@ -27,7 +27,7 @@ const texto_parrafo_array = [
   "Das Team von Open Agile freut sich darauf Dich zum Agile Coach, Agile Facilitator oder Scrum Master (w/d/m) auszubilden! ",
 ];
 
-export default function Home({ cursos }) {
+export default function Home({ cursos , cursos_lista,  servicios_lista}) {
   const router = useRouter();
   const { id } = router.query;
 
@@ -52,6 +52,8 @@ export default function Home({ cursos }) {
           cursos={true}
           area_gris_nueva={true}
           firma={["Dein Open Agile Team", " for better work"]}
+            servicios_lista={servicios_lista} 
+            cursos_lista={cursos_lista} 
         />
 
         {/* variable */}
@@ -60,7 +62,7 @@ export default function Home({ cursos }) {
         <Content02Cursos cursos={cursos} main_page={true} />
 
         {/*Footer  */}
-        <Footer />
+        <Footer servicios_lista={servicios_lista} cursos_lista={cursos_lista} />
       </div>
 
       {/*Menu Lateral oculto  */}
@@ -75,9 +77,21 @@ export const getServerSideProps = async (context) => {
   const res = await fetch(url);
   const cursos = await res.json();
 
+  
+  const url2 = `${backend_url}/api/leistungen`;
+  const res2 = await fetch(url2);
+  const servicios_lista = await res2.json();
+
+  const url3 = `${backend_url}/api/curso`;
+  const res3 = await fetch(url3);
+  const cursos_lista = await res3.json();
+
+
   return {
     props: {
       cursos,
+       cursos_lista,
+      servicios_lista
     },
   };
 };

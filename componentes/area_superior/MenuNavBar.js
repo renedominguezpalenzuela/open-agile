@@ -1,23 +1,23 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState, useEffect } from "react";
 
-export default function MenuNavBar() {
-  const [leich, setLeich] = useState({ data: [] });
-  const [crush, setCrush] = useState({ data: [] });
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await fetch("/api/leistungen");
-      const servicios = await data.json();
-      setLeich(servicios);
-    };
-    fetchData();
-    const fetchData2 = async () => {
-      const data = await fetch("/api/curso");
-      const servicios = await data.json();
-      setCrush(servicios);
-    };
-    fetchData2();
-  }, []);
+export default function MenuNavBar({servicios_lista, cursos_lista}) {
+  // const [leich, setLeich] = useState({ data: [] });
+  // const [crush, setCrush] = useState({ data: [] });
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const data = await fetch("/api/leistungen");
+  //     const servicios = await data.json();
+  //     setLeich(servicios);
+  //   };
+  //   fetchData();
+  //   const fetchData2 = async () => {
+  //     const data = await fetch("/api/curso");
+  //     const servicios = await data.json();
+  //     setCrush(servicios);
+  //   };
+  //   fetchData2();
+  // }, []);
 
   return (
     <>
@@ -29,7 +29,7 @@ export default function MenuNavBar() {
             </a>
 
             <ul className="dropdown-content text-start color-dropdown animate__animated animate__fadeInUp no-bullets">
-              {crush.data.map((item, key) => (
+              {cursos_lista.data.map((item, key) => (
                 <li key={key} className="nav-item ">
                   <a
                     className="dropdown-item color-font-dropdown"
@@ -51,7 +51,7 @@ export default function MenuNavBar() {
             </a>
 
             <ul className="dropdown-content text-start color-dropdown animate__animated animate__fadeInUp no-bullets">
-              {leich.data.map((item, key) => (
+              {servicios_lista.data.map((item, key) => (
                 <li key={key} className="nav-item">
                   <a
                     className="dropdown-item color-font-dropdown"

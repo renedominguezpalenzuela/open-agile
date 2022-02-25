@@ -112,6 +112,8 @@ export default function Home({
             iconos={true}
             area_gris_nueva={true}
             boton_inicio_quiz={false}
+            servicios_lista={servicios} 
+            cursos_lista={cursos} 
           />
         ) : (
           <AreaSuperior
@@ -123,6 +125,8 @@ export default function Home({
             area_gris_nueva={true}
             boton_inicio_quiz={true}
             home={1}
+            servicios_lista={servicios} 
+            cursos_lista={cursos} 
           />
         )}
 
@@ -165,7 +169,7 @@ export default function Home({
 
         {/*Footer  */}
 
-        <Footer  cadena_mostrar={cadena_mostrar}/>
+       <Footer servicios_lista={servicios} cursos_lista={cursos} />
       </div>
 
       {/*Menu Lateral oculto  */}
@@ -180,7 +184,7 @@ export const getServerSideProps = async (context) => {
   const res = await fetch(url);
   const cursos = await res.json();
 
-  const url2 = `${servidor_url}/api/leistungen`;
+  const url2 = `${backend_url}/api/leistungen`;
   const res2 = await fetch(url2);
   const servicios = await res2.json();
 

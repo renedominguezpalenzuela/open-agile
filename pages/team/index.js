@@ -24,7 +24,7 @@ import { servidor_url } from "../../config";
 
 import ModalFormCookie from "../../components/ModalFormCookie";
 
-export default function Home({uw}) {
+export default function Home({uw, cursos_lista,  servicios_lista}) {
 
   
 
@@ -92,6 +92,8 @@ export default function Home({uw}) {
           texto1={titulo2}
           titulo_largo={true}
           area_gris_nueva={true}
+           servicios_lista={servicios_lista} 
+            cursos_lista={cursos_lista} 
         />
 
         {/* <div className="row  mt-5 d-flex justify-content-center "> */}
@@ -102,7 +104,7 @@ export default function Home({uw}) {
           />
         </div>
 
-        <Footer />
+       <Footer servicios_lista={servicios_lista} cursos_lista={cursos_lista} />
       </div>
 
       {/*Menu Lateral oculto  */}
@@ -117,9 +119,19 @@ export const getServerSideProps = async (context) => {
 
   const uw = await res.json();
 
+    const url2 = `${servidor_url}/api/leistungen`;
+  const res2 = await fetch(url2);
+  const servicios_lista = await res2.json();
+
+  const url3 = `${servidor_url}/api/curso`;
+  const res3 = await fetch(url3);
+  const cursos_lista = await res3.json();
+
   return {
     props: {
       uw,
+       cursos_lista,
+      servicios_lista
     },
   };
 };

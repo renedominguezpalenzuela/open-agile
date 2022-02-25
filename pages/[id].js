@@ -29,14 +29,26 @@ import { backend_url } from "../config";
 import { useState, useEffect } from "react";
 import ModalFormCookie from "../components/ModalFormCookie";
 
-export default function Home({ servicios }) {
+export default function Home({ servicios, cursos_lista, servicios_lista }) {
   const router = useRouter();
   const { id } = router.query;
 
   // const { titulo2, titulo3, titulo2a, titulo, texto01, texto02, texto03 } =
   //   servicios;
 
-  const services = servicios.data.attributes;
+  let services = {
+    title: "",
+    first_tab_title: "",
+    first_tab_content: "",
+    second_tab_title: "",
+    second_tab_content: "",
+    third_tab_title: "",
+    third_tab_content: "",
+  };
+
+  if (servicios.data != undefined) {
+    services = servicios.data.attributes;
+  }
 
   const {
     title,
@@ -57,6 +69,8 @@ export default function Home({ servicios }) {
   };
 
   const formatTitle = (title) => {
+    if (title === undefined || title === "") return "";
+
     const [desktop_screen, setDesktop_screen] = useState(true);
     const handleResize = () => {
       let ancho_screen = window.innerWidth;
@@ -88,7 +102,7 @@ export default function Home({ servicios }) {
   return (
     <>
       <Head>
-        <title>{title.toUpperCase()}</title>
+        <title>{title}</title>
         <meta name="description" content={title} />
         <link rel="icon" href="/favicon.ico" />
         <script async src={`${servidor_url}/js/chat.js`} />
@@ -105,6 +119,8 @@ export default function Home({ servicios }) {
           titulo_largo={true}
           area_gris_nueva={true}
           lei={true}
+              servicios_lista={servicios_lista} 
+            cursos_lista={cursos_lista} 
         />
 
         <div className={` mt-5 pb-3 + ${classOftabs(id)}`}>
@@ -118,7 +134,7 @@ export default function Home({ servicios }) {
           />
         </div>
 
-        <Footer />
+        <Footer servicios_lista={servicios_lista} cursos_lista={cursos_lista} />
       </div>
 
       {/*Menu Lateral oculto  */}
@@ -129,15 +145,27 @@ export default function Home({ servicios }) {
 
 export const getServerSideProps = async (context) => {
   const { id } = context.query;
-  const url = `${servidor_url}/api/leistungen/${encodeURIComponent(id)}`;
+  const url = `${servidor_url}/api/leistungens/${encodeURIComponent(id)}`;
 
   const res = await fetch(url);
 
   const servicios = await res.json();
 
+   const url3 = `${backend_url}/api/curso`;
+  const res3 = await fetch(url3);
+  const cursos_lista = await res3.json();
+
+  
+  
+  const url2 = `${backend_url}/api/leistungen`;
+  const res2 = await fetch(url2);
+  const servicios_lista = await res2.json();
+
   return {
     props: {
       servicios,
+      cursos_lista,
+      servicios_lista
     },
   };
 };

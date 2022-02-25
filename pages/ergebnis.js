@@ -11,11 +11,11 @@ import Image01 from "../components/crashkurse/image01";
 // import Content01andMenuVacio from "../components/Content01andMenuVacio";
 import Tabla01 from "../components/crashkurse/tabla01";
 
-import MenuNavBar from "../componentes/area_superior/MenuNavBar";
+
 
 import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 
-import { servidor_url } from "../config";
+import { servidor_url, backend_url } from "../config";
 
 
 import { useRecoilValue } from "recoil";
@@ -43,7 +43,7 @@ const respuesta4 = [
   "46-60 Punkte: Ihr habt einen sehr stark ausgeprägten agilen Reifegrad. Fülle das Formular aus, damit wir Dich kontaktieren können. Gerne möchten wir mehr von Euch lernen, damit auch andere Unternehmen davon profitieren können.  ",
 ];
 
-export default function Home() {
+export default function Home({cursos_lista,  servicios_lista}) {
   const respuestas = useRecoilValue(respuestasState);
 
 
@@ -92,11 +92,12 @@ export default function Home() {
 
       <div id="principal" className="container-fluid g-0">
         <MenuFlotanteBoton />
-        <AreaSuperior no_bottom_margin={true} fondo="bannermain-quiz-result" titulo_quiz_result="Ergebnis" texto_quiz_result={mensaje} area_gris_nueva={false} botones_contacto={true} /> 
+        <AreaSuperior no_bottom_margin={true} fondo="bannermain-quiz-result" titulo_quiz_result="Ergebnis" texto_quiz_result={mensaje} area_gris_nueva={false} botones_contacto={true}   servicios_lista={servicios_lista} 
+            cursos_lista={cursos_lista} /> 
 
 
   {/*Footer  */}
-        <Footer />
+        <Footer servicios_lista={servicios_lista} cursos_lista={cursos_lista} />
       </div>
 
        <ModalFormConfigurator    titulo="KONTAKTFORMULAR"   frase="Jetzt Kontakt aufnehmen!"     id={1}    />
@@ -107,3 +108,28 @@ export default function Home() {
     </>
   );
 }
+
+
+export const getServerSideProps = async (context) => {
+
+
+  
+  const url2 = `${backend_url}/api/leistungen`;
+  const res2 = await fetch(url2);
+  const servicios_lista = await res2.json();
+
+  const url3 = `${backend_url}/api/curso`;
+  const res3 = await fetch(url3);
+  const cursos_lista = await res3.json();
+
+
+  return {
+    props: {
+
+      cursos_lista,
+      servicios_lista
+    },
+  };
+};
+
+	  

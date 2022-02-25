@@ -18,7 +18,7 @@ import Tabla03 from "../../../../components/crashkurse/tabla03";
 
 import ModalFormCookie from "../../../../components/ModalFormCookie";
 
-export default function Home({ curso }) {
+export default function Home({ curso, servicios_lista, cursos_lista }) {
   const link_pdfs = (links) => {
     let aux = [];
 
@@ -99,6 +99,8 @@ export default function Home({ curso }) {
             titulo_muy_largo={true}
             area_gris_nueva={true}
             shop={true}
+                 servicios_lista={servicios_lista} 
+            cursos_lista={cursos_lista} 
           />
         ) : (
           <AreaSuperior
@@ -107,6 +109,8 @@ export default function Home({ curso }) {
             titulo_muy_largo={true}
             area_gris_nueva={true}
             shop={true}
+                 servicios_lista={servicios_lista} 
+            cursos_lista={cursos_lista} 
           />
         )}
 
@@ -145,7 +149,7 @@ export default function Home({ curso }) {
         )}
 
         {/*Footer  */}
-        <Footer />
+       <Footer servicios_lista={servicios_lista} cursos_lista={cursos_lista} />
       </div>
 
       {/*Menu Lateral oculto  */}
@@ -161,9 +165,22 @@ export const getServerSideProps = async (context) => {
 
   const curso = await res.json();
 
+
+    
+  const url2 = `${backend_url}/api/leistungen`;
+  const res2 = await fetch(url2);
+  const servicios_lista = await res2.json();
+
+  const url3 = `${backend_url}/api/curso`;
+  const res3 = await fetch(url3);
+  const cursos_lista = await res3.json();
+
+
   return {
     props: {
       curso,
+      servicios_lista,
+      cursos_lista
     },
   };
 };

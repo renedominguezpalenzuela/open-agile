@@ -76,22 +76,17 @@ const clientSideEmotionCache = createEmotionCache();
 ReactGA.initialize("UA-219220429-1");
 
 
-export function reportWebVitals(metric) {
-  console.log("Metrics:");
-  console.log(metric);
-}
-
-
-
-
 const MyApp = (props) => {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
 
-  useEffect(() => {
-    import("bootstrap/dist/js/bootstrap");
-  }, []);
+
+  // useEffect(() => {
+  //   import("bootstrap/dist/js/bootstrap");
+  // }, []);
+
 
   useEffect(() => {
+    import("bootstrap/dist/js/bootstrap.bundle.min");
     ReactGA.set({ anonymizeIp: true });
     ReactGA.pageview(window.location.pathname + window.location.search);
   });
@@ -100,10 +95,10 @@ const MyApp = (props) => {
       <Head>
         <title>My page</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
-        <Script
+        {/* <Script
           src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"
           strategy="beforeInteractive"
-        />
+        /> */}
       </Head>
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
