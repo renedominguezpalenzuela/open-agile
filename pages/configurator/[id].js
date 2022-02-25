@@ -18,7 +18,7 @@ import ModalFormConfigurator from "../../components/ModalFormConfigurator";
 //            Pagina inicial principal
 //----------------------------------------------------------------------------------------------------------
 
-export default function Configurator_Main({ configurator }) {
+export default function Configurator_Main({ configurator,   servicios_lista, cursos_lista }) {
   const router = useRouter();
   const { id } = router.query;
   const { botones } = configurator;
@@ -44,6 +44,8 @@ export default function Configurator_Main({ configurator }) {
           botones_configurador={configurator}
           area_gris_nueva={true}
           no_bottom_margin={false}
+                servicios_lista={servicios_lista} 
+            cursos_lista={cursos_lista} 
         />
 
         {botones.map(
@@ -76,9 +78,20 @@ export const getServerSideProps = async (context) => {
 
   const configurator = await res.json();
 
+   
+  const url2 = `${backend_url}/api/leistungen`;
+  const res2 = await fetch(url2);
+  const servicios_lista = await res2.json();
+
+  const url3 = `${backend_url}/api/curso`;
+  const res3 = await fetch(url3);
+  const cursos_lista = await res3.json()
+
   return {
     props: {
       configurator,
+        servicios_lista, 
+      cursos_lista
     },
   };
 };
