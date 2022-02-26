@@ -188,12 +188,12 @@ export default function ModalFormCookie({
       localStorage.removeItem("cancel");
     }
     const c = document.getElementById("chat-application");
-   
-    if (c !== undefined && c!==null &&  c.classList.contains("d-none")) {
+
+    if (c !== undefined && c !== null && c.classList.contains("d-none")) {
       c.classList.remove("d-none");
     }
 
-    if (c !== undefined && c!==null) {
+    if (c !== undefined && c !== null) {
       c.classList.add("d-block");
     }
     //guardar cookies
@@ -216,11 +216,11 @@ export default function ModalFormCookie({
   };
   const botonNoAceptar = () => {
     const c = document.getElementById("chat-application");
-    
-    if (c !== undefined && c!==null && c.classList.contains("d-block")) {
+
+    if (c !== undefined && c !== null && c.classList.contains("d-block")) {
       c.classList.remove("d-block");
     }
-    if (c !== undefined  && c!==null) {
+    if (c !== undefined && c !== null) {
       c.classList.add("d-none");
     }
     //eliminar todas las cookies
@@ -322,7 +322,7 @@ export default function ModalFormCookie({
             </div>
           </div>
           <div className=" d-flex g-0  mt-3 pb-2 justify-content-md-start justify-content-center ms-md-4 fuente_footer_texto_form_cookie enlinea-padre">
-            <Link href="/datenschutzerklarung" className="enlinea-hijo">
+            <Link href="/datenschutz" className="enlinea-hijo">
               <a className="mylinkhoover">Datenschutz</a>
             </Link>
             <div className="enlinea-hijo ms-1 me-1"> | </div>
