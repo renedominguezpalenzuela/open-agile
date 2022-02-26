@@ -267,7 +267,7 @@ export default function Footer({
             <div className="row d-flex  linea_blanca_footer g-0"></div>
             <div className="font_facit_text_very_small mt-3 d-flex justify-content-center">
               <div>
-                <a href="/datenschutzerklarung" className="mylinkhoover">
+                <a href="/datenschutz" className="mylinkhoover">
                   Datenschutz
                 </a>
               </div>
