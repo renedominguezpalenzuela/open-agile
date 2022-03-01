@@ -59,6 +59,9 @@ import { useEffect } from "react";
 import Script from "next/script";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import { withRouter } from "next/router";
+
+import Cookies from "js-cookie";
+
 config.autoAddCss = false; /* eslint-disable import/first */
 
 library.add(
@@ -75,23 +78,36 @@ library.add(
 const clientSideEmotionCache = createEmotionCache();
 // ReactGA.initialize("UA-219220429-1");
 
-
-
 const MyApp = (props) => {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
-
 
   // useEffect(() => {
   //   import("bootstrap/dist/js/bootstrap");
   // }, []);
 
-
   useEffect(() => {
     import("bootstrap/dist/js/bootstrap.bundle.min");
-     ReactGA.initialize("UA-221745044-1");
-    ReactGA.set({ anonymizeIp: true });
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  });
+
+    const ISSERVER = typeof window === "undefined";
+    let cancelar = null;
+    if (!ISSERVER) {
+      cancelar = localStorage.getItem("cancel");
+    }
+
+    
+    //Inicialmente se comienza a usar GA,
+    //si el usuario rechaza las cookies  (cancelar=1) se deja de usar
+    //Cancelar es seteado a 1 en el formulario de cookies si no se aceptan los cookies
+
+    if (cancelar === undefined || cancelar === null) {
+      if (cancelar != "1") {
+        ReactGA.initialize("UA-221745044-1", {titleCase: false});
+        ReactGA.set({ anonymizeIp: true });
+        ReactGA.pageview(window.location.pathname + window.location.search);
+      }
+    }
+  }, []);
+
   return (
     <CacheProvider value={emotionCache}>
       <Head>
