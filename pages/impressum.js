@@ -27,7 +27,7 @@ export default function Home(  {cursos_lista,  servicios_lista}) {
   return (
     <>
       <Head>
-        <title>{titulo1.toUpperCase()}</title>
+        <title>{titulo1}</title>
         <meta name="description" content={titulo1} />
         <link rel="icon" href="/favicon.ico" />
         <script async src="js/chat.js" />

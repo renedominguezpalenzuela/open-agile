@@ -7,6 +7,8 @@ import Switch from "@mui/material/Switch";
 import { styled } from "@mui/material/styles";
 import Link from "next/link";
 
+import ReactGA from "react-ga";
+
 const styles3 = {
   ".MuiFormControlLabel-label": {
     fontFamily: "Montserrat-Bold",
@@ -186,7 +188,13 @@ export default function ModalFormCookie({
   const botonAceptar = () => {
     if (!ISSERVER) {
       localStorage.removeItem("cancel");
+      localStorage.setItem("accept_cookies", "1");
     }
+
+    ReactGA.initialize("UA-219220429-1", { titleCase: false });
+    ReactGA.set({ anonymizeIp: true });
+    ReactGA.pageview(window.location.pathname + window.location.search);
+
     const c = document.getElementById("chat-application");
 
     if (c !== undefined && c !== null && c.classList.contains("d-none")) {
@@ -215,6 +223,8 @@ export default function ModalFormCookie({
     return;
   };
   const botonNoAceptar = () => {
+    ReactGA.ga("send", "pageview", { sessionControl: "end" });
+
     const c = document.getElementById("chat-application");
 
     if (c !== undefined && c !== null && c.classList.contains("d-block")) {
@@ -226,6 +236,7 @@ export default function ModalFormCookie({
     //eliminar todas las cookies
     if (!ISSERVER) {
       localStorage.setItem("cancel", "1");
+      localStorage.setItem("accept_cookies", "0");
     }
     Cookies.remove("notwendigCheckedCookie");
     Cookies.remove("performanceCheckedCookie");
