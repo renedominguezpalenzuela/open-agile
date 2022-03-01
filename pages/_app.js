@@ -73,7 +73,8 @@ library.add(
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
-ReactGA.initialize("UA-219220429-1");
+// ReactGA.initialize("UA-219220429-1");
+
 
 
 const MyApp = (props) => {
@@ -87,6 +88,7 @@ const MyApp = (props) => {
 
   useEffect(() => {
     import("bootstrap/dist/js/bootstrap.bundle.min");
+     ReactGA.initialize("UA-221745044-1");
     ReactGA.set({ anonymizeIp: true });
     ReactGA.pageview(window.location.pathname + window.location.search);
   });
