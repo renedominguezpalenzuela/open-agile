@@ -103,7 +103,7 @@ const MyApp = (props) => {
 
     if (accept_cookies != undefined && accept_cookies != null) {
       if (accept_cookies === "1") {
-        ReactGA.initialize("UA-221745044-1", {titleCase: false});
+        ReactGA.initialize("UA-219220429-1", {titleCase: false});
         ReactGA.set({ anonymizeIp: true });
         ReactGA.pageview(window.location.pathname + window.location.search);
        
