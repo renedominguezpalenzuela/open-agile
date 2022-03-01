@@ -90,8 +90,10 @@ const MyApp = (props) => {
 
     const ISSERVER = typeof window === "undefined";
     let cancelar = null;
+    let accept_cookies = null;
     if (!ISSERVER) {
       cancelar = localStorage.getItem("cancel");
+      accept_cookies = localStorage.getItem("accept_cookies");
     }
 
     
@@ -99,13 +101,16 @@ const MyApp = (props) => {
     //si el usuario rechaza las cookies  (cancelar=1) se deja de usar
     //Cancelar es seteado a 1 en el formulario de cookies si no se aceptan los cookies
 
-    if (cancelar === undefined || cancelar === null) {
-      if (cancelar != "1") {
+    if (accept_cookies != undefined && accept_cookies != null) {
+      if (accept_cookies === "1") {
         ReactGA.initialize("UA-221745044-1", {titleCase: false});
         ReactGA.set({ anonymizeIp: true });
         ReactGA.pageview(window.location.pathname + window.location.search);
+       
       }
     }
+
+   
   }, []);
 
   return (
