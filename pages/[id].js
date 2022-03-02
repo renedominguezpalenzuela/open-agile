@@ -151,7 +151,7 @@ export const getServerSideProps = async (context) => {
 
   const servicios = await res.json();
 
-   const url3 = `${backend_url}/api/curso`;
+  const url3 = `${backend_url}/api/curso`;
   const res3 = await fetch(url3);
   const cursos_lista = await res3.json();
 

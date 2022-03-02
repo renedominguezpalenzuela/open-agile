@@ -14,10 +14,12 @@ import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faShareAlt } from "@fortawesome/free-solid-svg-icons";
 import Tooltip from "@mui/material/Tooltip";
+import { backend_url } from "../../config";
+
 //----------------------------------------------------------------------------------------------------------
 //            Pagina inicial principal
 //----------------------------------------------------------------------------------------------------------
-export default function Home({ blog }) {
+export default function Home({ blog, servicios_lista, cursos_lista }) {
   const [open, setOpen] = React.useState(false);
 
   const handleTooltipClose = () => {
@@ -76,7 +78,7 @@ export default function Home({ blog }) {
       <div id="principal" className="container-fluid g-0">
         <MenuFlotanteBoton />
 
-        <AreaSuperior texto1="BLOG" fondo="ajustable" area_gris_nueva={true} />
+        <AreaSuperior cursos_lista={cursos_lista} servicios_lista={servicios_lista} texto1="BLOG" fondo="ajustable" area_gris_nueva={true} />
 
         <div className="row   d-flex align-items-center justify-content-center">
           <div className="col-10">
@@ -362,9 +364,20 @@ export const getServerSideProps = async (context) => {
   const url = `${servidor_url}/api/blog/${encodeURIComponent(id)}`;
   const res = await fetch(url);
   const blog = await res.json();
+
+  const url2 = `${backend_url}/api/leistungen`;
+  const res2 = await fetch(url2);
+  const servicios_lista = await res2.json();
+
+  const url3 = `${backend_url}/api/curso`;
+  const res3 = await fetch(url3);
+  const cursos_lista = await res3.json();
+
   return {
     props: {
       blog,
+      servicios_lista,
+      cursos_lista
     },
   };
 };
