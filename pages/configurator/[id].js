@@ -73,10 +73,12 @@ export default function Configurator_Main({ configurator,   servicios_lista, cur
 
 export const getServerSideProps = async (context) => {
   const { id } = context.query;
-  const url = `${backend_url}/api/configurator/${encodeURIComponent(id)}`;
+  const url = `${servidor_url}/api/configurator/${encodeURIComponent(id)}`;
   const res = await fetch(url);
 
   const configurator = await res.json();
+
+
 
    
   const url2 = `${backend_url}/api/leistungen`;

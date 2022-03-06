@@ -26,7 +26,7 @@ const redirect_routes = [
   },
   {
     source: '/crashkurse/beschreibung/4',
-    destination: '/crashkurse/crashkurse/beschreibung/',
+    destination: '/crashkurse/mitbestimmung/beschreibung/',
     permanent: true,
   },
   {
