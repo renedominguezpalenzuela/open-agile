@@ -29,7 +29,7 @@ export default function ContentVideo() {
 
            {/* autobuffer="true" */}
           <video autoPlay loop  muted playsInline ref={botonVolumen} > 
-            <source src={`/video/Imagefilm_Open_Agile_Low.mp4`}  type="video/mp4" />
+            <source src={`/video/Imagefilm_Open_Agile_Low1.mp4`}  type="video/mp4" />
  
           </video>
 
