@@ -397,7 +397,7 @@ function Content01andMenuWithQuestions({
           <a href="/" className="   ">
             <img
               className=" logo-img-quiz"
-              src={`https://js-agileweb-files.s3.us-east-2.amazonaws.com/img/logo/5.svg`}
+              src={`${servidor_url}/img/logo/5.svg`}
               loading="lazy" 
             />
           </a>

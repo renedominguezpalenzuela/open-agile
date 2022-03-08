@@ -4,7 +4,7 @@
 // Contiene: Menu superior, Texto principal, Iconos de la izquierda, Boton de menu flotante
 //TODO: pasar como parametros el texto
 //TODO: Arreglar boton menu flotante, que no funciona como sticky
-
+import { servidor_url } from "../../config";
 const justificar = (footer) => {
   if (footer != undefined && footer) {
     return "justify-content-center";
@@ -63,7 +63,7 @@ export default function Content01Iconos({ footer }) {
           <a href="https://www.xing.com/pages/open-agile">
             <img
               className={iconos_img_size(footer)}
-              src={`https://js-agileweb-files.s3.us-east-2.amazonaws.com/img/xing-img.svg`}
+              src={`${servidor_url}/img/xing-img.svg`}
               loading="lazy" 
             />
             {/* "social-img"   */}

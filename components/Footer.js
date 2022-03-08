@@ -78,7 +78,7 @@ export default function Footer({
                   <a href="\">
                     <img
                       className="img-fluid logo-img-footer2"
-                      src={`https://js-agileweb-files.s3.us-east-2.amazonaws.com/img/logo/5.svg`}
+                      src={`${servidor_url}/img/logo/5.svg`}
                       loading="lazy"
                     />
                   </a>

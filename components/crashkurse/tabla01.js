@@ -52,7 +52,7 @@ const fila_dispositivo_ancho = (index, id_tabla, titulo, img, texto) => {
           <div className=" m-5 w-75 position-celda-imagen-left ">
             <div className="contenedor_tabla  ">
               <div className="mask_right pe-4  d-flex   justify-content-end">
-               <img className="image-tabla  sombra_right" src={`https://js-agileweb-files.s3.us-east-2.amazonaws.com/img/${img}`} alt="" loading="lazy"  />
+               <img className="image-tabla  sombra_right" src={`${servidor_url}/img/${img}`} alt="" loading="lazy"  />
               </div>
               <div className="tabla-titulo text-start   justificar">
                 {titulo}
@@ -74,7 +74,7 @@ const fila_dispositivo_ancho = (index, id_tabla, titulo, img, texto) => {
           <div className=" m-5 w-75 position-celda-imagen-right pb-5 ">
             <div className="contenedor_tabla ">
               <div className="mask_left  d-flex   justify-content-start">
-               <img className="image-tabla sombra_left" src={`https://js-agileweb-files.s3.us-east-2.amazonaws.com/img/${img}`} alt="" loading="lazy" />
+               <img className="image-tabla sombra_left" src={`${servidor_url}/img/${img}`} alt="" loading="lazy" />
 
               </div>
               <div className="tabla-titulo  text-end  justificar">
@@ -121,7 +121,7 @@ const fila_dispositivo_estrecho = (index, id_tabla, titulo, img, texto) => {
               </div>
 
               <div className=" ps-4 pe-4 pb-3  d-flex   justify-content-center">
-               <img className="image-tabla-estrecho  sombra_right" src={`https://js-agileweb-files.s3.us-east-2.amazonaws.com/img/${img}`} alt="" loading="lazy"  />
+               <img className="image-tabla-estrecho  sombra_right" src={`${servidor_url}/img/${img}`} alt="" loading="lazy"  />
               </div>
             
               <div className="mt-1 ps-4 pe-4">
