@@ -1,50 +1,17 @@
 import React, { useRef } from "react";
 import { formEmail } from "../config";
-
-import axios from "axios";
 import { useState } from "react";
-
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
-
 import { sendFormularioAndFile } from "../components/global/sendFormularioAndFile";
-
-import Radio from "@mui/material/Radio";
-// import RadioGroup from "@mui/material/RadioGroup";
-import RadioGroup, { useRadioGroup } from "@mui/material/RadioGroup";
+import { useRadioGroup } from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
-
-import InputAdornment from "@mui/material/InputAdornment";
-
 import { styled } from "@mui/material/styles";
-
-import FormLabel from "@mui/material/FormLabel";
-
-import InputLabel from "@mui/material/InputLabel";
-import OutlinedInput from "@mui/material/OutlinedInput";
-
-//Iconos
-import AccountCircle from "@mui/icons-material/AccountCircle";
-import Email from "@mui/icons-material/Email";
-
-// import styles from "../styles/Home.module.css";
-
-import TextField from "@mui/material/TextField";
-// import { ThemeProvider, createTheme } from '@mui/material/styles';
-import Button from "@mui/material/Button";
-import FormControl from "@mui/material/FormControl";
-
-import Box from "@mui/material/Box";
 
 const StyledFormControlLabel = styled((props) => (
   <FormControlLabel {...props} />
 ))(({ theme, checked }) => ({
   ".MuiFormControlLabel-label": {
-    color: "#243A78", //color de la letra
-    fontSize: 12, //tamano de la letra
+    color: "#243A78",
+    fontSize: 12, 
   },
 }));
 
@@ -61,10 +28,6 @@ function MyFormControlLabel(props) {
 }
 
 MyFormControlLabel.propTypes = {
-  /**
-   * The value of the component.
-   */
-  // value: PropTypes.any,
 };
 
 export default function ModalFormJob({
@@ -131,14 +94,11 @@ export default function ModalFormJob({
     setCondicionesAGB(event.target.value);
   };
 
-  //Tratamiento de errores
-
   const [value2, setValue2] = React.useState("");
   const [value3, setValue3] = React.useState("");
 
   const [textoDialogo, setTextoDialogo] = React.useState("");
 
-  //dialogo
   const [open, setOpen] = React.useState(false);
 
   const abrirMensajeFeedBack = () => {
@@ -183,8 +143,6 @@ export default function ModalFormJob({
       return;
     }
 
-    //Validando email
-
     if (!isEmailValid(email)) {
       setErrorEmail(true);
       setTextErrorEmail(errorIffieldWrong);
@@ -222,7 +180,6 @@ export default function ModalFormJob({
      <strong>Nachricht: </strong> ${mensaje} <br />`,
     };
 
-    //Recibiendo respuesta del servidor
     const respuesta = await sendFormularioAndFile(DataToSend);
 
     if (respuesta.statusText === "OK") {
@@ -254,16 +211,14 @@ export default function ModalFormJob({
     }
   };
 
-  // Subiendo fichero al servidor
   const [ficheroPath, setFicheroPath] = useState(null);
   const [ficheroBase64, setFicheroBase64] = useState(null);
   const [createObjectURL, setCreateObjectURL] = useState(null);
 
   const fuentes1 = {
     style: {
-      //fontSize: 11
-      textAlign: "left", ///Text Align
-      letterSpacing: "0.06vw", //espaciado de letras luego d escribir
+      textAlign: "left", 
+      letterSpacing: "0.06vw", 
       color: "#6B6B74",
       fontFamily: "Montserrat-Light",
     },
@@ -273,11 +228,8 @@ export default function ModalFormJob({
     height: "7px",
     padding: "0.2vw",
 
-    // fontSize: "0.9vw",
-    //  color: "#00ff00", //color del icono
-
     "& .MuiSvgIcon-root": {
-      fontSize: 14, //Tamno del inoco del radio button
+      fontSize: 14, 
     },
 
     " .MuiFormControlLabel-root": {
@@ -291,8 +243,6 @@ export default function ModalFormJob({
     },
   };
 
-  //Texto que aparece en el Edit antes de que el usuario escriba nada
-  //InputLabelProps={fuentes2}
   const fuentes2 = {
     style: { fontSize: 12, color: "#6B6B74" },
   };
@@ -347,42 +297,33 @@ export default function ModalFormJob({
   };
 
   const styles = {
-    //  input: { color: 'blue'}, //Color de la fuente al escribir
-
-    // width: { sm: 250, md: 350 }, //Ancho del control
-
     "& .MuiInputBase-root": {
-      //Aqui arriba es el elemento base - root
-      height: 50, //Ancho del edit
+      height: 50, 
 
       "& input": {
-        //Luego de escribir (Elemento)
-        textAlign: "left", ///Text Align
-        letterSpacing: "0.06vw", //espaciado de letras luego d escribir
+        textAlign: "left",
+        letterSpacing: "0.06vw", 
         color: "#6B6B74",
-        fontFamily: "Montserrat-Light", //Tipo de fuuente al escribir
+        fontFamily: "Montserrat-Light", 
       },
-      // color: "#6B6B74",            //Color de la fuente al escribir
-      // backgroundColor: "#ECE7E7",  //Color de fondo del edit
     },
 
     "& .MuiOutlinedInput-root": {
-      color: "#6B6B74", //Color de la fuente al escribir
-      backgroundColor: "#ECE7E7", //Color de fondo del edit
+      color: "#6B6B74", 
+      backgroundColor: "#ECE7E7", 
 
       "& > fieldset": {
-        //  backgroundColor: "#ECE7E7",
         borderColor: "#ECE7E7",
       },
     },
     "& .MuiOutlinedInput-root:hover": {
       "& > fieldset": {
-        borderColor: "#e4207864", //Color del borde al hacer hoover
+        borderColor: "#e4207864", 
       },
     },
 
     "& .MuiFormLabel-root": {
-      color: "#ffffff", //Color del label
+      color: "#ffffff", 
       fontFamily: "Montserrat-Regular",
     },
   };
@@ -421,7 +362,6 @@ export default function ModalFormJob({
 
   return (
     <>
-      {/* <!-- Modal --> */}
       <div
         className="modal fade"
         sx={{ paddingRight: "0px" }}
