@@ -1,12 +1,9 @@
 import Link from "next/link";
 
-import { servidor_url } from "../../config";
-
 import MenuNavBar from "./MenuNavBar";
 import MenuNavBar2 from "./MenuNavBar2";
 import Logo from "./Logo";
 import BotonAgileCheck from "./BotonAgileCheck";
-import Titulo from "./Titulo";
 import IconosIzquierda from "../../components/IconosIzquierda";
 
 import BotonesConfigurator from "./BotonesConfigurator";
@@ -17,20 +14,6 @@ import Content01TextSinIcons from "./Content01TextSinIcons";
 
 import FormularioContacto2 from "../../components/formulariocontacto2";
 
-// fondo --- define el tipo de fondo del area superior
-/*
-si no se especifica fondo = bannermain
-
-  barco   --- se pone el fondo con un barco "bannermain-quiz";
-  quiz-questions 
-  variable  ---- texto -- fondo crece en funcion del contenido
-  ajustable ---- bannermain-ajustable -- fondo se redudce en funcion del contenido
-  bannermain-quiz-questions 
-
-
- */
-
-//  titulo_largo ={true} --- reduce el fonts del titulo texto1 magenta para que quepa en una linea
 export default function AreaSuperior({
   fondo,
   texto1,
