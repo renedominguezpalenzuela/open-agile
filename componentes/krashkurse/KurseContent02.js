@@ -13,7 +13,7 @@ export default function KurseContent02({imagen, titulo, texto, imagen_botones,ti
 
 
        {imagen!=undefined && imagen!="" &&
-                     <img className="img-fluid  " src={`https://storage.googleapis.com/jsopenagile/img/${imagen}`} alt="" loading="lazy"  />
+                     <img className="img-fluid  " src={`https://js-agileweb-files.s3.us-east-2.amazonaws.com/img/${imagen}`} alt="" loading="lazy"  />
                   }
                 
 

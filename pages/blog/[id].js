@@ -195,7 +195,7 @@ export default function Home({ blog, servicios_lista, cursos_lista }) {
                 <div className="">
                   <img
                     className="img-fluid "
-                    src={`https://storage.googleapis.com/jsopenagile/img/blogs/flecha_azul_left.svg`}
+                    src={`https://js-agileweb-files.s3.us-east-2.amazonaws.com/img/blogs/flecha_azul_left.svg`}
                     loading="lazy" 
                   />
                 </div>
@@ -219,7 +219,7 @@ export default function Home({ blog, servicios_lista, cursos_lista }) {
                 <div className="">
                   <img
                     className="img-fluid flecha"
-                    src={`https://storage.googleapis.com/jsopenagile/img/blogs/flecha_azul_rigth.svg`}
+                    src={`https://js-agileweb-files.s3.us-east-2.amazonaws.com/img/blogs/flecha_azul_rigth.svg`}
                     loading="lazy" 
                   />
                 </div>
@@ -244,7 +244,7 @@ export default function Home({ blog, servicios_lista, cursos_lista }) {
                 <div className="">
                   <img
                     className="img-fluid w-50"
-                    src={`https://storage.googleapis.com/jsopenagile/img/blogs/flecha_azul_left.svg`}
+                    src={`https://js-agileweb-files.s3.us-east-2.amazonaws.com/img/blogs/flecha_azul_left.svg`}
                     loading="lazy" 
                   />
                 </div>
@@ -260,7 +260,7 @@ export default function Home({ blog, servicios_lista, cursos_lista }) {
                 <div className="">
                   <img
                     className="img-fluid flecha w-50"
-                    src={`https://storage.googleapis.com/jsopenagile/img/blogs/flecha_azul_rigth.svg`}
+                    src={`https://js-agileweb-files.s3.us-east-2.amazonaws.com/img/blogs/flecha_azul_rigth.svg`}
                     loading="lazy" 
                   />
                 </div>

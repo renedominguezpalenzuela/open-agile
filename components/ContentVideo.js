@@ -29,7 +29,7 @@ export default function ContentVideo() {
 
            {/* autobuffer="true" */}
           <video autoPlay loop  muted playsInline ref={botonVolumen} > 
-            <source src={`https://storage.googleapis.com/jsopenagile/video/Imagefilm_Open_Agile_Low1.mp4`}  type="video/mp4" />
+            <source src={`https://js-agileweb-files.s3.us-east-2.amazonaws.com/video/Imagefilm_Open_Agile_Low1.mp4`}  type="video/mp4" />
  
           </video>
 

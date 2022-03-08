@@ -24,7 +24,7 @@ export default function KurseContent03({
         {imagen != undefined && imagen != "" && (
           <img
             className="img-fluid  "
-            src={`https://storage.googleapis.com/jsopenagile/img/${imagen}`}
+            src={`https://js-agileweb-files.s3.us-east-2.amazonaws.com/img/${imagen}`}
             alt=""
             loading="lazy" 
           />

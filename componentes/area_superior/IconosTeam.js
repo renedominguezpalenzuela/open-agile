@@ -11,7 +11,7 @@ export default function IconosTeam({ phone, email, linkedin }) {
         <a href={phone}>
 
 
-          <img className=" ms-5 social-img-team "  src={`https://storage.googleapis.com/jsopenagile/img/team/phone.svg`}  loading="lazy"   />
+          <img className=" ms-5 social-img-team "  src={`https://js-agileweb-files.s3.us-east-2.amazonaws.com/img/team/phone.svg`}  loading="lazy"   />
 
    
         </a>
@@ -19,7 +19,7 @@ export default function IconosTeam({ phone, email, linkedin }) {
         <a href={linkedin}>
           <img
             className=" ms-4 social-img-team "
-            src={`https://storage.googleapis.com/jsopenagile/img/team/linkedin.svg`}
+            src={`https://js-agileweb-files.s3.us-east-2.amazonaws.com/img/team/linkedin.svg`}
             loading="lazy" 
           />
         </a>
@@ -27,7 +27,7 @@ export default function IconosTeam({ phone, email, linkedin }) {
         <a href={`mailto:${email}`}>
           <img
             className=" ms-4 social-img-team "
-            src={`https://storage.googleapis.com/jsopenagile/img/team/email.svg`}
+            src={`https://js-agileweb-files.s3.us-east-2.amazonaws.com/img/team/email.svg`}
             loading="lazy" 
           />
         </a>
