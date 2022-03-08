@@ -5,9 +5,6 @@
 //TODO: pasar como parametros el texto
 //TODO: Arreglar boton menu flotante, que no funciona como sticky
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { servidor_url } from "../../config";
-
 const justificar = (footer) => {
   if (footer != undefined && footer) {
     return "justify-content-center";
