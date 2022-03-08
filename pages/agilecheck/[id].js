@@ -397,7 +397,7 @@ function Content01andMenuWithQuestions({
           <a href="/" className="   ">
             <img
               className=" logo-img-quiz"
-              src={`${servidor_url}/img/logo/5.svg`}
+              src={`https://storage.googleapis.com/jsopenagile/img/logo/5.svg`}
               loading="lazy" 
             />
           </a>

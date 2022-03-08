@@ -68,7 +68,7 @@ export default function Content01Text({texto1, texto2, texto2a}) {
       <a href="https://www.xing.com/pages/open-agile" > 
 
            
-          <img className="social-img"  src= {`${servidor_url}/img/xing-img.svg`} loading="lazy"  /> 
+          <img className="social-img"  src= {`https://storage.googleapis.com/jsopenagile/img/xing-img.svg`} loading="lazy"  /> 
       </a>
     </div>
 

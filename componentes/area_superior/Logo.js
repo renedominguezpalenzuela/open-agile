@@ -5,7 +5,7 @@ export default function Logo() {
   return (
     <>
       <a className="ms-5 " href="/">
-        <img className="   " src={`${servidor_url}/img/logo/5.svg`} loading="lazy" />
+        <img className="   " src={`https://storage.googleapis.com/jsopenagile/img/logo/5.svg`} loading="lazy" />
       </a>
     </>
   );

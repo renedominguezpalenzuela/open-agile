@@ -143,7 +143,7 @@ export default function AreaSuperior({
                 src={
                   img_team_top.startsWith("https://")
                     ? img_team_top
-                    : `${servidor_url}/img/${img_team_top}`
+                    : `https://storage.googleapis.com/jsopenagile/img/${img_team_top}`
                 }
                 loading="lazy" 
               />

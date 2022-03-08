@@ -15,7 +15,7 @@ export default function MenuNavBar2() {
           <a className=" " href="/">
             <img
               className="  "
-              src={`${servidor_url}/img/logo/3.svg`}
+              src={`https://storage.googleapis.com/jsopenagile/img/logo/3.svg`}
               loading="lazy" 
             />
           </a>

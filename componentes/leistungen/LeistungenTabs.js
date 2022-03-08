@@ -110,7 +110,7 @@ export default function LeistungenTabs({
               className="boton_flecha "
               width={45}
               height={45}
-              src={`${servidor_url}/img/leistungen/boton_flecha_magenta.svg`}
+              src={`https://storage.googleapis.com/jsopenagile/img/leistungen/boton_flecha_magenta.svg`}
               alt=""
               loading="lazy" 
             />
@@ -138,7 +138,7 @@ export default function LeistungenTabs({
               className="boton_flecha "
               width={45}
               height={45}
-              src={`${servidor_url}/img/leistungen/boton_flecha_magenta.svg`}
+              src={`https://storage.googleapis.com/jsopenagile/img/leistungen/boton_flecha_magenta.svg`}
               alt=""
               loading="lazy" 
             />
@@ -199,7 +199,7 @@ export default function LeistungenTabs({
               className="boton_flecha "
               width={45}
               height={45}
-              src={`${servidor_url}/img/leistungen/boton_flecha_magenta.svg`}
+              src={`https://storage.googleapis.com/jsopenagile/img/leistungen/boton_flecha_magenta.svg`}
               alt=""
               loading="lazy" 
             />

@@ -142,7 +142,7 @@ function OneTab({ indice, titulo, texto, value, setValue, max }) {
             height={55}
             width={55}
             className="boton_flecha  "
-            src={`${servidor_url}/img/leistungen/boton_flecha_magenta.svg`}
+            src={`https://storage.googleapis.com/jsopenagile/img/leistungen/boton_flecha_magenta.svg`}
             alt=""
             loading="lazy" 
           />

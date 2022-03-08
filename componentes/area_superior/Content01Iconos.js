@@ -66,7 +66,7 @@ export default function Content01Iconos({ footer }) {
           <a href="https://www.xing.com/pages/open-agile">
             <img
               className={iconos_img_size(footer)}
-              src={`${servidor_url}/img/xing-img.svg`}
+              src={`https://storage.googleapis.com/jsopenagile/img/xing-img.svg`}
               loading="lazy" 
             />
             {/* "social-img"   */}

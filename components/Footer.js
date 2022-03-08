@@ -78,7 +78,7 @@ export default function Footer({
                   <a href="\">
                     <img
                       className="img-fluid logo-img-footer2"
-                      src={`${servidor_url}/img/logo/5.svg`}
+                      src={`https://storage.googleapis.com/jsopenagile/img/logo/5.svg`}
                       loading="lazy"
                     />
                   </a>

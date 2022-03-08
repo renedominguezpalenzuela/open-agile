@@ -24,7 +24,7 @@ export default function KurseContent03({
         {imagen != undefined && imagen != "" && (
           <img
             className="img-fluid  "
-            src={`${servidor_url}/img/${imagen}`}
+            src={`https://storage.googleapis.com/jsopenagile/img/${imagen}`}
             alt=""
             loading="lazy" 
           />
