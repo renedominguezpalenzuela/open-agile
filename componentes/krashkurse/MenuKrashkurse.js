@@ -60,15 +60,6 @@ export default function MenuKrashkurse({
                 <td align="right">{">"}</td>
               </tr>
 
-              {/* <tr className="font-card-menu-crashkurse">
-                <td>
-                  <Link href={`${servidor_url}/${link_leistungen}#menukurs`}>
-                    <div className="myanimacioncursos">LEISTUNGEN</div>
-                  </Link>
-                </td>
-                <td align="right">></td>
-              </tr> */}
-
               <tr className="font-card-menu-crashkurse">
                 <td>
                   <a href={`${servidor_url}/${link_kosten}#abschnitt`}>

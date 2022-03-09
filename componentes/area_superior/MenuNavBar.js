@@ -1,23 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState, useEffect } from "react";
-
 export default function MenuNavBar({servicios_lista, cursos_lista}) {
-  // const [leich, setLeich] = useState({ data: [] });
-  // const [crush, setCrush] = useState({ data: [] });
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const data = await fetch("/api/leistungen");
-  //     const servicios = await data.json();
-  //     setLeich(servicios);
-  //   };
-  //   fetchData();
-  //   const fetchData2 = async () => {
-  //     const data = await fetch("/api/curso");
-  //     const servicios = await data.json();
-  //     setCrush(servicios);
-  //   };
-  //   fetchData2();
-  // }, []);
 
   return (
     <>
@@ -108,15 +89,6 @@ export default function MenuNavBar({servicios_lista, cursos_lista}) {
               BLOG
             </a>
           </li>
-          {/* <li className="nav-item">
-        <div className="separador_menu">/</div>
-      </li> */}
-
-          {/* <li className="nav-item">
-        <a className="nav-link" href="/news">
-                NEWS
-        </a>
-      </li> */}
 
           <li className="nav-item">
             <div className="separador_menu">/</div>
