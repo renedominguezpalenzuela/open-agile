@@ -5,11 +5,11 @@ export default function Card02({ titulo, texto, video, date }) {
   const dt = new Date(date);
   return (
     <>
-      <div className="row g-0 mt-5  ">
-        <div className="col-6  d-flex align-items-center  ">
+      <div className="row g-0 mt-5 h-100  ">
+        <div className="col-6  d-flex align-items-center ">
           <div className="shadow   texto_video_fondo me-5 content-card-vlog">
             <div className=" font_card_title_video pt-4 d-flex justify-content-center">
-              {titulo}
+              {titulo} 
             </div>
             <div className=" ms-2 me-2 pb-3 contenedor_texto_overflow ">
               <div className="data_vlog_desktop d-inline-block text-end mt-1"></div>
