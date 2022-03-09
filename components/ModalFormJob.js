@@ -5,6 +5,7 @@ import { sendFormularioAndFile } from "../components/global/sendFormularioAndFil
 import { useRadioGroup } from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import { styled } from "@mui/material/styles";
+import { Button, Dialog, DialogActions, DialogContent, DialogContentText, Radio, RadioGroup, TextField } from "@mui/material";
 
 const StyledFormControlLabel = styled((props) => (
   <FormControlLabel {...props} />
