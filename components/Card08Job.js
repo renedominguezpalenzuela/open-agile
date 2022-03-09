@@ -29,10 +29,11 @@ export default function Card08Job({ data }) {
 
   return (
     <>
-      <div className="card myanimacion sombra_cards redondear-card-job pb-2">
+      <div className="card myanimacion sombra_cards redondear-card-job pb-2 alto-job-card h-100 ">
         <div className="h-100 d-flex  align-items-center  ">
-          <div className="row w-100 g-0 ">
-            <div className="col-12 pt-1 ps-3 pe-3   ">
+          <div className="row w-100 g-0 h-100">
+            <div className="col-12 pt-1 ps-3 pe-3  ">
+   
               {titulo != undefined && titulo != "" && (
                 <>
                   <div className="font1-card-job-new pt-3">
@@ -47,7 +48,7 @@ export default function Card08Job({ data }) {
                 {data.attributes.description}
               </ReactMarkdown>
             </div>
-            <div className="row mt-3 mb-2    g-0   d-flex justify-content-center">
+            <div className="row mt-3 mb-2    g-0   d-flex justify-content-center align-items-end ">
               <div className="col-6 d-flex justify-content-center ">
                 <a
                   onClick={() =>
