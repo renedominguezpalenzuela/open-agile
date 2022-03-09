@@ -51,10 +51,10 @@ export default function Home({ jobs, cursos_lista,  servicios_lista }) {
      servicios_lista={servicios_lista} 
             cursos_lista={cursos_lista} 
         />
-        <div className="row d-flex justify-content-center mt-5 mb-5">
+        <div className="row d-flex justify-content-center mt-5 mb-5 ">
           {jobs.data.map((card, key) => {
             return (
-              <div key={key} className="col-md-5  ">
+              <div key={key} className="col-md-5 pt-2 ">
                 <Card08Job data={card} />
               </div>
             );
