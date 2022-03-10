@@ -1,20 +1,8 @@
-//----------------------------------------------------------------------------------------------------------
-//          Panel Flotante oculto
-//----------------------------------------------------------------------------------------------------------
-//TODO: poner transparente y de otro color
-//TODO: agregar path de recorte
-//TODO: Arreglar los links
-//Responsividad: ERROR
-
 import Head from "next/head";
 import { useEffect, useRef } from "react";
 
 export default function MenuFlotante() {
   const boton = useRef();
-
-  // const eventoBotonSubirFichero = (event) => {
-  //   hiddenFileInput.current.click();
-  // };
 
   const handleClick = () => {
     setTimeout(function () {

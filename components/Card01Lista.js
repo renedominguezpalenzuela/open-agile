@@ -1,4 +1,7 @@
-import Card01 from "./Card01";
+import dynamic from 'next/dynamic';
+
+const Card01 = dynamic(() => import('./Card01'));
+
 import React from "react";
 
 export default function Card01Lista({

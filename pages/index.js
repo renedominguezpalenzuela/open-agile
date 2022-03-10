@@ -1,23 +1,20 @@
+import dynamic from 'next/dynamic'
 import { servidor_url } from "../config";
 import { backend_url } from "../config";
 import Head from "next/head";
 
 //Componentes
-import AreaSuperior from "../componentes/area_superior/AreaSuperior";
+const AreaSuperior = dynamic(() => import('../componentes/area_superior/AreaSuperior'));
+const Content02Cursos = dynamic(() => import('../components/Content02Cursos'));
+const Content03Carrousel = dynamic(() => import('../components/Content03Carrousel'));
+const Content03 = dynamic(() => import('../components/Content03'));
+const Content04 = dynamic(() => import('../components/Content04'));
+const Content05 = dynamic(() => import('../components/Content05'));
+const Card01Lista = dynamic(() => import('../components/Card01Lista'));
+const ContentVideo = dynamic(() => import('../components/ContentVideo'));
+const MenuFlotanteBoton = dynamic(() => import('../components/MenuFlotanteBoton'));
+const MenuFlotante = dynamic(() => import('../components/MenuFlotante'));
 
-import Content02Cursos from "../components/Content02Cursos";
-import Content03 from "../components/Content03";
-import Content03Carrousel from "../components/Content03Carrousel";
-
-import Content04 from "../components/Content04";
-import Content05 from "../components/Content05";
-
-import Card01Lista from "../components/Card01Lista";
-import ContentVideo from "../components/ContentVideo";
-
-import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
-
-import MenuFlotante from "../components/MenuFlotante";
 import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
 

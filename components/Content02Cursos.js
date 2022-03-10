@@ -1,14 +1,10 @@
-import Card01ListaC from "./Card01ListaC";
-import Content02Texto from "./Content02Texto";
-import Content02Final from "./Content02Final";
-import { useRouter } from 'next/router'
+import dynamic from 'next/dynamic';
 
-//----------------------------------------------------------------------------------------------------------
-//            Area de Contenido: Cards: CrashKURSE
-//----------------------------------------------------------------------------------------------------------
-//Contiene: Cards, y Texto en tres columnas
-//TODO: pasar como parametros los datos
-//Responsivo OK
+const Card01ListaC = dynamic(() => import('./Card01ListaC'));
+const Content02Texto = dynamic(() => import('./Content02Texto'));
+const Content02Final = dynamic(() => import('./Content02Final'));
+
+import { useRouter } from 'next/router'
 
 export default function Content02Cursos({ cursos, main_page }) {
   const router = useRouter()
