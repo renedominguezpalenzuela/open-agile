@@ -27,12 +27,12 @@ export default function Content05({ datos, color_fondo }) {
         </div>
 
 
-        <div  id="MyCarousel"  className="carousel slide"  data-bs-ride="carousel"   data-mdb-touch="true">
+        <div  id="MyCarousel"  className="carousel slide" data-bs-ride="carousel"   data-mdb-touch="true">
         {/* carousel-indicators-videos */}
-          <div className="carousel-indicators   ">
+        <div className="carousel-indicators   ">
               {datos.map((unDato, index) =>
                 index === 0 ? (
-                  <button
+                  <button 
                     key={index}
                     type="button"
                     data-bs-target="#MyCarousel"
@@ -52,19 +52,21 @@ export default function Content05({ datos, color_fondo }) {
               )}
             </div>
 
+      
 
-         
+             <div className="carousel-inner   mt-md-5 pb-5 mb-5 alto_carrusel-videos">
 
-             <div className="carousel-inner   mt-md-5 pb-5 mb-5">
+      
+
+
               {datos.map((unDato, index) => {
                 return (
-                  <div
-                    key={index}
-                    className={
-                      unDato.id == 1 ? " carousel-item active" : "carousel-item"
-                    }>
+                  //unDato.id == 1
+                  <div key={index} className={ index == 0 ? " carousel-item active" : "carousel-item"  }>
+                   
                     <div className="d-xl-none  ">
-                      <div className="row d-flex justify-content-center">
+                     
+                      <div className="row d-flex justify-content-center ">
                         <div className="col-md-6 ">
                           <div className="row sombra_cards myanimacion mt-md-5 mt-lg-4 mi-card">
                             <div className="col p-3 position-relative">
@@ -86,7 +88,7 @@ export default function Content05({ datos, color_fondo }) {
                               </div>
                             </div>
                             <div>
-                              <div className="card-body text-center">
+                              <div className="card-body text-center alto-titulo-vlog-mobile">
                                 <React.Fragment>
                                   <div className="card-text font_card_title_vlog ">
                                     {unDato.attributes.title}
@@ -98,20 +100,29 @@ export default function Content05({ datos, color_fondo }) {
                         </div>
                       </div>
                     </div>
-                    <div className="d-none d-xl-block  ">
-                    
+                  
+                    <div className="d-none d-xl-block ">
+                  
                       <Card02
                         video={unDato.attributes.link}
                         titulo={unDato.attributes.title}
                         texto={unDato.attributes.text}
                         date={unDato.attributes.date}
                       />
+                      
                     </div>
                   </div>
                 );
               })}
+
+              
+            
+
             </div>
 
+           
+
+           
 
 
          <button
