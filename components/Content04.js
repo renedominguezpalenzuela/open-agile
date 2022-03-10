@@ -1,19 +1,14 @@
-// import styles from "../styles/Home.module.css";
-//import Card03 from "./Card03";
-import Card03 from "./Card03";
-import Card01 from "./Card01";
-import Card05UserBlog from "./Card05UserBlog";
+import dynamic from 'next/dynamic';
+
+const Card03 = dynamic(() => import('./Card03'));
+const Card01 = dynamic(() => import('./Card01'));
+const Card05UserBlog = dynamic(() => import('./Card05UserBlog'));
+const Card01Blog = dynamic(() => import('./Card01Blog'));
+const CarruselBlogs = dynamic(() => import('./CarruselBlogs'));
+const CarruselBlogMovil = dynamic(() => import('./CarruselBlogMovil'));
+
 import React from "react";
-
 import ReactMarkdown from "react-markdown";
-import Card01Blog from "./Card01Blog";
-
-import CarruselBlogs from "./CarruselBlogs";
-import CarruselBlogMovil from "./CarruselBlogMovil";
-
-//----------------------------------------------------------------------------------------------------------
-//            Area de Contenido:  Blog
-//----------------------------------------------------------------------------------------------------------
 
 export default function Content04({ lista_cards, main_page, alto, ancho }) {
 

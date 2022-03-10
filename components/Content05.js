@@ -1,4 +1,7 @@
-import Card02 from "./Card02";
+import dynamic from 'next/dynamic';
+
+const Card02 = dynamic(() => import('./Card02'));
+
 import React from "react";
 import ReactPlayer from "react-player/lazy";
 
