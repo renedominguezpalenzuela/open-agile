@@ -77,6 +77,41 @@ const redirect_routes = [
 ]
 
 module.exports = {
+  swcMinify: true,
+  purge: [
+    "./pages/**/*.tsx",
+    "./pages/**/*.js",
+    "./pages/**/*.ts",
+    "./components/**/*.tsx",
+    "./components/**/*.js",
+    "./components/**/*.ts",
+  ],
+  "plugins": [
+    "postcss-flexbugs-fixes",
+    [
+      "postcss-preset-env",
+      {
+        "autoprefixer": {
+          "flexbox": "no-2009"
+        },
+        "stage": 3,
+        "features": {
+          "custom-properties": false
+        }
+      }
+    ],
+    [
+      '@fullhuman/postcss-purgecss',
+      {
+        content: [
+          './pages/**/*.{js,jsx,ts,tsx}',
+          './components/**/*.{js,jsx,ts,tsx}'
+        ],
+        defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
+        safelist: ["html", "body"]
+      }
+    ],
+  ],
   reactStrictMode: true,
    images: {
     domains: ['js-agileweb-files.s3.us-east-2.amazonaws.com'],
