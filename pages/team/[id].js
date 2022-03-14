@@ -61,7 +61,7 @@ export default function Home({ team, cursos_lista,  servicios_lista  }) {
           fondo="team"
           texto2={team.attributes.header_title}
           texto_parrafo_blanco_team={[team.attributes.description]}
-          img_team_top={team.attributes.imagetop.data.attributes.url}
+          img_team_top={team.attributes.imagetop.data.attributes.formats.small.url}
           iconos_team={true}
           email={team.attributes.email}
           linkedin={team.attributes.linkedin}
@@ -149,7 +149,7 @@ export default function Home({ team, cursos_lista,  servicios_lista  }) {
           <div className="col-4 d-flex justify-content-center align-items-center ">
             <img
               className="pt-4  imagen-team"
-              src={team.attributes.imageround.data.attributes.url}
+              src={team.attributes.imageround.data.attributes.formats.small.url}
               loading="lazy" 
             />
           </div>

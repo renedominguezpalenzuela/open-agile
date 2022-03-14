@@ -29,7 +29,7 @@ export default function Card01Lista({
                     key={index}
                     main_page={main_page}
                     id={unCard.id}
-                    imagen={unCard.attributes.card_image.data.attributes.url}
+                    imagen={unCard.attributes.card_image.data.attributes.formats.small.url}
                     titulo2={unCard.titulo2}
                     link={unCard.link}
                   />
@@ -39,7 +39,7 @@ export default function Card01Lista({
                     main_page={main_page}
                     key={index}
                     id={unCard.id}
-                    imagen={unCard.attributes.card_image.data.attributes.url}
+                    imagen={unCard.attributes.card_image.data.attributes.formats.small.url}
                     titulo={unCard.attributes.card_title}
                     titulo2={unCard.attributes.card_subtitle}
                     link={`crashkurse/${unCard.attributes.slug}/beschreibung`}

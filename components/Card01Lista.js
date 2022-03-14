@@ -32,7 +32,7 @@ export default function Card01Lista({
                     key={index}
                     main_page={main_page}
                     id={unCard.id}
-                    imagen={unCard.attributes.image.data.attributes.url}
+                    imagen={unCard.attributes.image.data.attributes.formats.small.url}
                     titulo2={unCard.attributes.spaced_title ? unCard.attributes.spaced_title : unCard.attributes.title}
                     link={unCard.attributes.slug}
                   />
@@ -43,7 +43,7 @@ export default function Card01Lista({
                     main_page={main_page}
                     key={index}
                     id={unCard.id}
-                    imagen={unCard.attributes.image.data.attributes.url}
+                    imagen={unCard.attributes.image.data.attributes.formats.small.url}
                     titulo={unCard.attributes.spaced_title ? unCard.attributes.spaced_title : unCard.attributes.title}
                     titulo2={unCard.attributes.spaced_title ? unCard.attributes.spaced_title : unCard.attributes.title}
                     // texto={unCard.text}

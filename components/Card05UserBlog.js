@@ -10,7 +10,7 @@ export default function Card05UserBlog({ data, dispositivo_chico }) {
         <div className="row   g-0 pb-2">
           <img
             className={`${dispositivo_chico?"imagen-blog-small":"imagen-blog"}`}
-            src={data.attributes.img.data.attributes.url}
+            src={data.attributes.img.data.attributes.formats.small.url}
             loading="lazy" 
           />
         </div>

@@ -71,7 +71,7 @@ export default function Home({ shop , cursos_lista,  servicios_lista}) {
                   id={oneShop.id}
                   titulo={oneShop.attributes.title}
                   texto={oneShop.attributes.description}
-                  imagen={oneShop.attributes.image.data.attributes.url}
+                  imagen={oneShop.attributes.image.data.attributes.formats.small.url}
                   texto_boton1={oneShop.attributes.left_button_text}
                   texto_boton2={oneShop.attributes.rigth_button_text}
                   texto_alt={oneShop.attributes.title}

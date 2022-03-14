@@ -16,7 +16,7 @@ export default function Content03({ mainlogos }) {
               <a href={unDato.attributes.website} aria-pressed="true">
                 <img
                   className="img-fluid img-sponsors1 grayscale "
-                  src={unDato.attributes.logo.data.attributes.url}
+                  src={unDato.attributes.logo.data.attributes.formats.small.url}
                   loading="lazy" 
                 />
               </a>
