@@ -2,7 +2,7 @@ import React from "react";
 
 let longitud_linea = 24;
 export default function Card01BlogMobile({ data }) {
-  const imagen = data.attributes.img.data.attributes.formats.small.url;
+  const imagen = data.attributes.img.data.attributes.url;
   const titulo = data.attributes.title.includes("BUCH")
     ? ["BUCH", data.attributes.title.slice(4)]
     : data.attributes.title;
