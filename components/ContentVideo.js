@@ -21,10 +21,10 @@ export default function ContentVideo() {
     <>
       <div className="  text-center contenedor_video ">
         <div className="ratio ratio-16x9 ">
-          <video autoPlay loop  muted playsInline ref={botonVolumen} > 
-            <source src={`/video/Imagefilm_Open_Agile_Low1.mp4`}  type="video/mp4" />
- 
-          </video>
+          {/*<video autoPlay loop  muted playsInline ref={botonVolumen} > */}
+          {/*  <source src={`/video/Imagefilm_Open_Agile_Low1.mp4`}  type="video/mp4" />*/}
+
+          {/*</video>*/}
 
             <div className="icono_volumen" onClick={cambiar_volument}>
 
