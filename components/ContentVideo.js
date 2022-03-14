@@ -18,7 +18,7 @@ export default function ContentVideo() {
 
   return (
     <div className="mt-20 pt-md-0" style={{
-      paddingTop: '70px'
+      paddingTop: '100px'
     }}>
       <div className="d-none d-md-block text-center contenedor_video">
         <div className="ratio ratio-16x9 ">
