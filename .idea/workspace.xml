@@ -6,20 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d42f5d5a-8e90-4c1a-88e0-2ba227c4c520" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Card01Blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Card01Blog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Card01BlogMobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Card01BlogMobile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Card01Lista.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Card01Lista.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Card01ListaC.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Card01ListaC.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Card05UserBlog.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Card05UserBlog.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Content03.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Content03.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Content03Carrousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Content03Carrousel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/blog/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/blog/[id].js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/crashkurse/[id]/beschreibung/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/crashkurse/[id]/beschreibung/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/crashkurse/[id]/inhalte/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/crashkurse/[id]/inhalte/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/crashkurse/[id]/kosten/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/crashkurse/[id]/kosten/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/shop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/team/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/team/[id].js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +56,7 @@
       <workItem from="1646946820239" duration="3212000" />
       <workItem from="1646970472057" duration="3204000" />
       <workItem from="1647203382367" duration="2896000" />
-      <workItem from="1647242345319" duration="2437000" />
+      <workItem from="1647242345319" duration="3228000" />
     </task>
     <servers />
   </component>

@@ -43,7 +43,7 @@ export default function Content03Carrousel({ mainlogos }) {
                   className="d-flex align-items-center justify-content-center">
                   <img
                     className="img-sponsors-size  grayscale "
-                    src={unDato.attributes.logo.data.attributes.formats.small.url}
+                    src={unDato.attributes.logo.data.attributes.url}
                     loading="lazy" 
                   />
                 </a>
