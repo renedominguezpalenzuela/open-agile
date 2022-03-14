@@ -2,8 +2,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faVolumeUp } from "@fortawesome/free-solid-svg-icons"; 
-import { faVolumeMute } from "@fortawesome/free-solid-svg-icons"; 
-
+import { faVolumeMute } from "@fortawesome/free-solid-svg-icons";
 import { useState, useRef  } from "react";
 
 export default function ContentVideo() {
@@ -18,13 +17,14 @@ export default function ContentVideo() {
   
 
   return (
-    <>
-      <div className="  text-center contenedor_video ">
+    <div className="mt-20 pt-md-0" style={{
+      paddingTop: '70px'
+    }}>
+      <div className="d-none d-md-block text-center contenedor_video">
         <div className="ratio ratio-16x9 ">
-          {/*<video autoPlay loop  muted playsInline ref={botonVolumen} > */}
-          {/*  <source src={`/video/Imagefilm_Open_Agile_Low1.mp4`}  type="video/mp4" />*/}
-
-          {/*</video>*/}
+          <video autoPlay loop muted playsInline ref={botonVolumen} >
+            <source src={`video/Imagefilm_Open_Agile_Low1.mp4`}  type="video/mp4" />
+          </video>
 
             <div className="icono_volumen" onClick={cambiar_volument}>
 
@@ -49,6 +49,6 @@ export default function ContentVideo() {
             </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
