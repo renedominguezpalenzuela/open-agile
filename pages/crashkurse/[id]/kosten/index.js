@@ -38,7 +38,7 @@ export default function Home({ curso, servicios_lista, cursos_lista }) {
   const titulo_area_superior = curso.data.attributes.page_title.toUpperCase();
   // const image2 = curso.data.attributes.beschreibung_image.data.attributes.url,
   const image_kosten = curso.data.attributes.kosten_image.data
-    ? curso.data.attributes.kosten_image.data.attributes.url
+    ? curso.data.attributes.kosten_image.data.attributes.formats.small.url
     : null;
 
   const link_beschreibung = `crashkurse/${curso.data.attributes.slug}/beschreibung`;

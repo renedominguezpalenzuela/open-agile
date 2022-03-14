@@ -45,7 +45,7 @@ export default function Home({ blog, servicios_lista, cursos_lista }) {
   const title = blog.data.attributes.title;
   const subtitle = blog.data.attributes.title;
   const fecha = `${dt.getDate()}.${dt.getMonth() + 1}.${dt.getFullYear()}`;
-  const url = blog.data.attributes.img.data.attributes.url;
+  const url = blog.data.attributes.img.data.attributes.formats.small.url;
   const content = blog.data.attributes.description;
   const link_anterior = blog.before.attributes.slug;
   const link_siguiente = blog.next.attributes.slug;

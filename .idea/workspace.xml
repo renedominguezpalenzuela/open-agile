@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d42f5d5a-8e90-4c1a-88e0-2ba227c4c520" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Card01BlogMobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Card01BlogMobile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +15,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="22ZBS5hihYePLx94Ri0nCXSZ5eU" />
   <component name="ProjectViewState">
@@ -47,7 +56,7 @@
       <workItem from="1646946820239" duration="3212000" />
       <workItem from="1646970472057" duration="3204000" />
       <workItem from="1647203382367" duration="2896000" />
-      <workItem from="1647242345319" duration="363000" />
+      <workItem from="1647242345319" duration="3397000" />
     </task>
     <servers />
   </component>
