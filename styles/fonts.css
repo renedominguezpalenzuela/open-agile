@@ -37,10 +37,10 @@
 /*  src: url("/fonts/Montserrat-ExtraBoldItalic.ttf");*/
 /*}*/
 
-/*@font-face {*/
-/*  font-family: Montserrat-SemiBoldItalic;*/
-/*  src: url("/fonts/Montserrat-SemiBoldItalic.ttf");*/
-/*}*/
+@font-face {
+  font-family: Montserrat-SemiBoldItalic;
+  src: url("/fonts/Montserrat-SemiBoldItalic.ttf");
+}
 
 @font-face {
   font-family: Montserrat-ExtraBold;
@@ -53,10 +53,10 @@
 /*  src: url("/fonts/Montserrat-Black.ttf");*/
 /*}*/
 
-/*@font-face {*/
-/*  font-family: Montserrat-BlackItalic;*/
-/*  src: url("/fonts/Montserrat-BlackItalic.ttf");*/
-/*}*/
+@font-face {
+  font-family: Montserrat-BlackItalic;
+  src: url("/fonts/Montserrat-BlackItalic.ttf");
+}
 
 @font-face {
   font-family: Montserrat-SemiBold;
