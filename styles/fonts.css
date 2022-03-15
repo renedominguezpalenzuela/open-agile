@@ -22,20 +22,20 @@
   font-display: swap;
 }
 
-/*@font-face {*/
-/*  font-family: Montserrat-MediumItalic;*/
-/*  src: url("/fonts/Montserrat-MediumItalic.ttf");*/
-/*}*/
+@font-face {
+  font-family: Montserrat-MediumItalic;
+  src: url("/fonts/Montserrat-MediumItalic.ttf");
+}
 
-/*@font-face {*/
-/*  font-family: Montserrat-Medium;*/
-/*  src: url("/fonts/Montserrat-Medium.ttf");*/
-/*}*/
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url("/fonts/Montserrat-Medium.ttf");
+}
 
-/*@font-face {*/
-/*  font-family: Montserrat-ExtraBoldItalic;*/
-/*  src: url("/fonts/Montserrat-ExtraBoldItalic.ttf");*/
-/*}*/
+@font-face {
+  font-family: Montserrat-ExtraBoldItalic;
+  src: url("/fonts/Montserrat-ExtraBoldItalic.ttf");
+}
 
 @font-face {
   font-family: Montserrat-SemiBoldItalic;
@@ -48,10 +48,10 @@
   font-display: swap;
 }
 
-/*@font-face {*/
-/*  font-family: Montserrat-Black;*/
-/*  src: url("/fonts/Montserrat-Black.ttf");*/
-/*}*/
+@font-face {
+  font-family: Montserrat-Black;
+  src: url("/fonts/Montserrat-Black.ttf");
+}
 
 @font-face {
   font-family: Montserrat-BlackItalic;
@@ -64,10 +64,10 @@
   font-display: swap;
 }
 
-/*@font-face {*/
-/*  font-family: Segoe-UI;*/
-/*  src: url("/fonts/segoe-ui-bold.ttf");*/
-/*}*/
+@font-face {
+  font-family: Segoe-UI;
+  src: url("/fonts/segoe-ui-bold.ttf");
+}
 
 /* Seccion 01 Principal */
 
