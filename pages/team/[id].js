@@ -149,7 +149,7 @@ export default function Home({ team, cursos_lista,  servicios_lista  }) {
           <div className="col-4 d-flex justify-content-center align-items-center ">
             <img
               className="pt-4  imagen-team"
-              src={team.attributes.imageround.data.attributes.formats.small.url}
+              src={team.attributes.imageround.data.attributes.url}
               loading="lazy" 
             />
           </div>
