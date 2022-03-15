@@ -43,7 +43,7 @@ export default function ContentVideo() {
     <div className="mt-20 pt-md-0" style={{
       paddingTop: '120px'
     }}>
-      {size.width >= 768 && <div className="text-center contenedor_video">
+      {size.width !== undefined && size.width >= 768 && <div className="text-center contenedor_video">
         <div className="ratio ratio-16x9 ">
           <video autoPlay loop muted playsInline ref={botonVolumen} >
             <source src={`video/Imagefilm_Open_Agile_Low1.mp4`}  type="video/mp4" />
