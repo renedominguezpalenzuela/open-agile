@@ -630,7 +630,7 @@ ul.no-bullets {
 
 
 .carousel-indicators-blog {
-  bottom: -35px;
+  bottom: -20px;
 }
 
 
@@ -691,6 +691,12 @@ ul.no-bullets {
 /* .content-card-vlog {
   top: -4.6vh;
 } */
+
+@media (min-width: 1700px) {
+  .carousel-indicators-blog {
+    bottom: -50px;
+  }
+}
 
 @media only screen and (max-width: 560px) {
   .my_card {

@@ -10,7 +10,7 @@ export default function CarruselBlogs({ lista_cards,  dispositivo_chico  }) {
        */}
 
       <div id="blog_carrusel" className="carousel slide" data-bs-ride="carousel"> 
-        <div className="carousel-indicators carousel-indicators-blog   ">
+        <div className="carousel-indicators carousel-indicators-blog">
           {lista_cards.map((unDato, index) => (
             <React.Fragment key={index}>
             <button  type="button" data-bs-target="#blog_carrusel"  data-bs-slide-to={index}  className={`${index === 0 ? "active" : ""}`}></button>  

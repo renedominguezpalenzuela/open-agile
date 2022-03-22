@@ -46,6 +46,12 @@
   }
 }
 
+@media (min-width: 1078px) {
+  .alto_carrusel {
+    min-height: 1650px !important;
+  }
+}
+
 .zindex-3000 {
   z-index: 3000 !important;
 }
@@ -300,7 +306,7 @@
 
 
   .altoCarrousel3 {
-    height: 21vh;
+    height: auto;
   }
   /* .alto_carrusel-videos {
     height: 47vh;
@@ -310,7 +316,7 @@
 @media (min-height: 1501px) {
 
   .altoCarrousel3 {
-    height: 21vh;
+    height: auto;
   }
   /* .alto_carrusel-videos {
     height: 45vh;
