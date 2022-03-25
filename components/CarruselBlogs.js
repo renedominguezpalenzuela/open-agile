@@ -10,15 +10,7 @@ export default function CarruselBlogs({ lista_cards,  dispositivo_chico  }) {
        */}
 
       <div id="blog_carrusel" className="carousel slide" data-bs-ride="carousel"> 
-        <div className="carousel-indicators carousel-indicators-blog">
-          {lista_cards.map((unDato, index) => (
-            <React.Fragment key={index}>
-            <button  type="button" data-bs-target="#blog_carrusel"  data-bs-slide-to={index}  className={`${index === 0 ? "active" : ""}`}></button>  
-            </React.Fragment>
-          ))}
-        </div>
-
-        <div className="carousel-inner altoCarrousel3 pt-3  ">
+        <div className="carousel-inner  pt-3  ">
         
           <div className=" row  h-100 w-100 ">
             {lista_cards.map((unCard, index) =>
@@ -79,6 +71,13 @@ export default function CarruselBlogs({ lista_cards,  dispositivo_chico  }) {
               </div>
             </div>
           </div>
+        </div>
+        <div className="carousel-indicators carousel-indicators-blog">
+          {lista_cards.map((unDato, index) => (
+            <React.Fragment key={index}>
+            <button  type="button" data-bs-target="#blog_carrusel"  data-bs-slide-to={index}  className={`${index === 0 ? "active" : ""}`}></button>  
+            </React.Fragment>
+          ))}
         </div>
       </div>
     </>
