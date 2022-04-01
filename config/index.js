@@ -11,7 +11,8 @@ export const backend_url = dev
 
 export const expire_cookies_in_days = 7;
 
-// export const formEmail = dev ? "renedp1975@gmail.com" : "kontakt@open-agile.de";
+export const formEmail = dev ? "renedp1975@gmail.com" : "kontakt@open-agile.de";
+                                                            
 
 //  "kontakt@open-agile.de";
-export const formEmail = "sam@jesamconsulting.com";
+// export const formEmail = "sam@jesamconsulting.com";
