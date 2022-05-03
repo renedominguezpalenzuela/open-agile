@@ -13,7 +13,7 @@ export default function KurseContent02({imagen, titulo, texto, imagen_botones,ti
 
 
        {imagen!=undefined && imagen!="" &&
-                     <img className="img-fluid  " src={`${servidor_url}/img/${imagen}`} alt="" />
+                     <img className="img-fluid  " src={`${servidor_url}/img/${imagen}`} alt="" loading="lazy"  />
                   }
                 
 

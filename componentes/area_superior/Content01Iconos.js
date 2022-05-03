@@ -4,10 +4,7 @@
 // Contiene: Menu superior, Texto principal, Iconos de la izquierda, Boton de menu flotante
 //TODO: pasar como parametros el texto
 //TODO: Arreglar boton menu flotante, que no funciona como sticky
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { servidor_url } from "../../config";
-
 const justificar = (footer) => {
   if (footer != undefined && footer) {
     return "justify-content-center";
@@ -67,6 +64,7 @@ export default function Content01Iconos({ footer }) {
             <img
               className={iconos_img_size(footer)}
               src={`${servidor_url}/img/xing-img.svg`}
+              loading="lazy" 
             />
             {/* "social-img"   */}
           </a>

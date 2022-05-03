@@ -10,6 +10,18 @@
   font-size: 0.8rem;
 }
 
+.markdown > h2 {
+  font-family: Montserrat-Bold;
+  color: #24325a;
+  font-size: 0.75rem;
+}
+
+.markdown > ul > li {
+  font-family: Montserrat-Regular;
+  color: #24325a;
+  font-size: 0.75rem;
+}
+
 .font1-card-job-new {
   color: #f82d7c;
   font-family: Montserrat-BoldItalic;
@@ -118,6 +130,22 @@
   /* border-color: #3edf0d  !important; */
   /* color: #ffffff !important; */
 }
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+.btn-card-blog-new {
+ 
+  width: 13vw;
+ 
+
+}
+
+.contenedor-boton-blog{
+  /* position: absolute; */
+  /* height: 30vh; */
+  /* bottom: 1px; */
+}
+}
+
 
 .btn-card-blog-new:hover
 /* .btn-card:active, */
@@ -344,9 +372,16 @@ div.horizontal-line {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 400px) and (min-width: 360px) {
   .font-items-side-menu {
     font-size: 1.8rem;
+    line-height: 2rem;
+  }
+}
+
+@media (max-width: 359px) {
+  .font-items-side-menu {
+    font-size: 1.5rem;
     line-height: 2rem;
   }
 }

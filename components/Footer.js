@@ -14,10 +14,38 @@ import Cookies from "js-cookie";
 import FormularioContacto2 from "./formulariocontacto2";
 import Content01Iconos from "../componentes/area_superior/Content01Iconos";
 import ModalFormCookie from "../components/ModalFormCookie";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export default function Footer() {
+export default function Footer({
+  cadena_mostrar,
+  servicios_lista,
+  cursos_lista,
+}) {
   const [changeCookie, setChangeCookie] = useState(false);
+
+  // const [leich, setLeich] = useState({ data: [] });
+  // const [crush, setCrush] = useState({ data: [] });
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const data = await fetch("/api/leistungen");
+  //     const servicios = await data.json();
+  //     setLeich(servicios);
+  //   };
+  //   fetchData();
+
+  //   const fetchData2 = async () => {
+  //     const data = await fetch("/api/curso");
+  //     const servicios = await data.json();
+  //     setCrush(servicios);
+  //   };
+  //   fetchData2();
+  // }, []);
+
+  function capitalize(str) {
+    const lower = str.toLowerCase();
+    return str.charAt(0).toUpperCase() + lower.slice(1);
+  }
 
   const handle = () => {
     setChangeCookie(!changeCookie);
@@ -38,6 +66,10 @@ export default function Footer() {
           <FormularioContacto2 />
         </div>
 
+        {/* <div  >
+                {cadena_mostrar}
+              </div> */}
+
         <div className="d-none d-md-block">
           <div id="rowfoot05" className="row   g-3 ps-5 me-3 ms-3 pe-5 pb-3 ">
             <div className="col-3   ">
@@ -47,6 +79,7 @@ export default function Footer() {
                     <img
                       className="img-fluid logo-img-footer2"
                       src={`${servidor_url}/img/logo/5.svg`}
+                      loading="lazy"
                     />
                   </a>
                 </div>
@@ -86,76 +119,35 @@ export default function Footer() {
             <div className="col-3  ps-2 ps-lg-5">
               <div className="font_footer_title  mt-3">Leistungen</div>
               <div className="font_facit_text_very_small mt-3">
-                <div>
-                  <a
-                    className="color-font-dropdown mylinkhoover"
-                    href="/leistungen/1">
-                    Organisationsentwicklung
-                  </a>
-                </div>
-                <div>
-                  <a
-                    className="color-font-dropdown mylinkhoover"
-                    href="/leistungen/2">
-                    Inhouse Training
-                  </a>
-                </div>
-                <div>
-                  <a
-                    className="color-font-dropdown mylinkhoover"
-                    href="/leistungen/3">
-                    Coaching
-                  </a>
-                </div>
+                {servicios_lista.data.map((item, index) => (
+                  <div key={index}>
+                    <a
+                      className="color-font-dropdown mylinkhoover"
+                      href={`${servidor_url}/${item.attributes.slug}`}>
+                      {item.attributes.title}
+                    </a>
+                  </div>
+                ))}
               </div>
             </div>
 
             <div className="col-3 ps-5  ">
               <div className="font_footer_title mt-3">Crashkurse</div>
               <div className="font_facit_text_very_small mt-3">
-                <div>
-                  <a
-                    className="color-font-dropdown mylinkhoover"
-                    href="/crashkurse/beschreibung/1">
-                    Crashkurs zum Agile Coach{" "}
-                  </a>
-                </div>
-                <div>
-                  <a
-                    className="color-font-dropdown mylinkhoover"
-                    href="/crashkurse/beschreibung/2">
-                    Crashkurs zum Agile Facilitator{" "}
-                  </a>
-                </div>
-
-                <div>
-                  <a
-                    className="color-font-dropdown mylinkhoover"
-                    href="/crashkurse/beschreibung/3">
-                    Crashkurs zum Scrum Master{" "}
-                  </a>
-                </div>
-
-                <div>
-                  <a
-                    className="color-font-dropdown mylinkhoover"
-                    href="/crashkurse/beschreibung/4">
-                    Crashkurs Mitbestimmung in der agilen Arbeitswelt{" "}
-                  </a>
-                </div>
-
-                <div>
-                  <a
-                    className="color-font-dropdown mylinkhoover"
-                    href="/crashkurse/beschreibung/5">
-                    Online Crashkurs Selbstorganisation in agilen Teams{" "}
-                  </a>
-                </div>
+                {cursos_lista.data.map((item, index) => (
+                  <div key={index}>
+                    <a
+                      className="color-font-dropdown mylinkhoover"
+                      href={`/crashkurse/${item.attributes.slug}/beschreibung`}>
+                      {item.attributes.page_title}
+                    </a>
+                  </div>
+                ))}
               </div>
             </div>
 
             <div className="col-3  ps-5 ">
-              <div className="font_footer_title mt-3">Open Agile </div>
+              <div className="font_footer_title mt-3">Open Agile</div>
               <div className="font_facit_text_very_small mt-3">
                 <div>
                   <a className="color-font-dropdown mylinkhoover" href="/wir">
@@ -178,14 +170,14 @@ export default function Footer() {
                 </div>
 
                 <div>
-                  <Link href="/datenschutzerklarung">
-                    <a className="mylinkhoover">Datenschutz</a>
-                  </Link>
+                  <a href="/datenschutz" className="mylinkhoover">
+                    Datenschutz
+                  </a>
                 </div>
                 <div>
-                  <Link href="/impressum">
-                    <a className="mylinkhoover">Impressum</a>
-                  </Link>
+                  <a href="/impressum" className="mylinkhoover">
+                    Impressum
+                  </a>
                 </div>
                 <div>
                   <div onClick={handle} className="mylinkhoover">
@@ -203,7 +195,9 @@ export default function Footer() {
           </div>
         </div>
         <div className="d-block d-md-none">
-          <div id="rowfoot05" className="row g-3 ps-5 me-3 ms-3 pe-5 pb-3">
+          <div
+            id="rowfoot05"
+            className="row g-3 ps-md-5 ps-4 me-3 ms-3 pe-md-5 pe-4 pb-3">
             <div className="col">
               <div className="row g-0 ">
                 <div className="col-12 d-flex pb-2 g-0 justify-content-center">
@@ -273,15 +267,15 @@ export default function Footer() {
             <div className="row d-flex  linea_blanca_footer g-0"></div>
             <div className="font_facit_text_very_small mt-3 d-flex justify-content-center">
               <div>
-                <Link href="/datenschutzerklarung">
-                  <a className="mylinkhoover">Datenschutz</a>
-                </Link>
+                <a href="/datenschutz" className="mylinkhoover">
+                  Datenschutz
+                </a>
               </div>
               <span className="mx-1"> | </span>
               <div>
-                <Link href="/impressum">
-                  <a className="mylinkhoover">Impressum</a>
-                </Link>
+                <a href="/impressum" className="mylinkhoover">
+                  Impressum
+                </a>
               </div>
               <span className="mx-1"> | </span>
               <div onClick={handle} className="mylinkhoover">

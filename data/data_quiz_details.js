@@ -11,7 +11,7 @@ export const quiz_details = [
                    { "letter": "d", "answer":  "0"},
                    ],
      "correct_answer" : "d",                   
-     "next_link" :"/quiz/2" ,
+     "next_link" :"/agilecheck/2" ,
      "prior_link" :"#"                  
   },
 
@@ -27,9 +27,9 @@ export const quiz_details = [
                    { "letter": "d", "answer":  "Dienender, lateraler Führungsstil (Das Team entscheidet gemeinsam im Konsent) "},
                    ],
      "correct_answer" : "d",                     
-     "next_link" :"/quiz/3" ,
+     "next_link" :"/agilecheck/3" ,
      
-     "prior_link" :"/quiz/1"                  
+     "prior_link" :"/agilecheck/1"                  
   },
 
   {
@@ -44,8 +44,8 @@ export const quiz_details = [
                    { "letter": "d", "answer":  "sind für alle Mitarbeitenden sowie für alle wesentlichen Stakeholder transparent einsichtbar und verständlich aufbereitet"},
                    ],
      "correct_answer" : "d",                     
-     "next_link" :"/quiz/4" ,
-     "prior_link" :"/quiz/2"                  
+     "next_link" :"/agilecheck/4" ,
+     "prior_link" :"/agilecheck/2"                  
   },
 
    {
@@ -60,8 +60,8 @@ export const quiz_details = [
                    { "letter": "d", "answer":  "Alle Mitarbeitenden haben neben ihrer Kerntätigkeit Raum und Zeit Ideen, Vorschläge und Projekte transparent voranzutreiben, beispielsweise in verschiedenen interdisziplinär besetzten und befristeten Projektteams. Neue Ideen werden als Chance gesehen."},
                    ],
      "correct_answer" : "d",                     
-     "next_link" :"/quiz/5" ,
-     "prior_link" :"/quiz/3"                  
+     "next_link" :"/agilecheck/5" ,
+     "prior_link" :"/agilecheck/3"                  
   },
 
   {
@@ -76,8 +76,8 @@ export const quiz_details = [
                    { "letter": "d", "answer":  "Alle Mitarbeitenden organisieren ihre Zusammenarbeit selbst innerhalb ihrer Teams."},
                    ],
      "correct_answer" : "d",                     
-     "next_link" :"/quiz/6" ,
-     "prior_link" :"/quiz/4"                  
+     "next_link" :"/agilecheck/6" ,
+     "prior_link" :"/agilecheck/4"                  
   },
 
    {
@@ -92,8 +92,8 @@ export const quiz_details = [
                    { "letter": "d", "answer":  "Das Team gibt sich anspruchsvolle Ziele regelmäßig selbst, die sich aus dem Anliegen des Unternehmens ableiten (die Ziele sind SMART: spezifisch, messbar, akzeptiert, realistisch, terminiert)"},
                    ],
      "correct_answer" : "d",                     
-     "next_link" :"/quiz/7" ,
-     "prior_link" :"/quiz/5"                  
+     "next_link" :"/agilecheck/7" ,
+     "prior_link" :"/agilecheck/5"                  
   },
 
    {
@@ -108,8 +108,8 @@ export const quiz_details = [
                    { "letter": "d", "answer":  "Mein Team arbeitet agil zusammen (ideenreich, flexibel, offen, solidarisch, leistungsfähig, hilfsbereit, unternehmensweite Transparenz)"},
                    ],
      "correct_answer" : "d",                     
-     "next_link" :"/quiz/8" ,
-     "prior_link" :"/quiz/6"                  
+     "next_link" :"/agilecheck/8" ,
+     "prior_link" :"/agilecheck/6"                  
   },
 
    {
@@ -124,8 +124,8 @@ export const quiz_details = [
                    { "letter": "d", "answer":  "4-10 Teammitglieder "},
                    ],
      "correct_answer" : "d",                     
-     "next_link" :"/quiz/9" ,
-     "prior_link" :"/quiz/7"                  
+     "next_link" :"/agilecheck/9" ,
+     "prior_link" :"/agilecheck/7"                  
   },
 
    {
@@ -140,8 +140,8 @@ export const quiz_details = [
                    { "letter": "d", "answer":  "Jeden Werktag in einem kurzen „Daily“ + einmal die Woche in einem „Weekly“ "},
                    ],
      "correct_answer" : "d",                     
-     "next_link" :"/quiz/10" ,
-     "prior_link" :"/quiz/8"                  
+     "next_link" :"/agilecheck/10" ,
+     "prior_link" :"/agilecheck/8"                  
   },
 
    {
@@ -156,8 +156,8 @@ export const quiz_details = [
                    { "letter": "d", "answer":  "Neben 1:1 Feedbacks führen wir regelmäßige Retrospektiven durch"},
                    ],
      "correct_answer" : "d",                     
-     "next_link" :"/quiz/11" ,
-     "prior_link" :"/quiz/9"                  
+     "next_link" :"/agilecheck/11" ,
+     "prior_link" :"/agilecheck/9"                  
   },
 
 
@@ -173,8 +173,8 @@ export const quiz_details = [
                    { "letter": "d", "answer":  "Trifft voll zu"},
                    ],
      "correct_answer" : "d",                     
-     "next_link" :"/quiz/12" ,
-     "prior_link" :"/quiz/10"                  
+     "next_link" :"/agilecheck/12" ,
+     "prior_link" :"/agilecheck/10"                  
   },
 
 
@@ -191,8 +191,8 @@ export const quiz_details = [
                    { "letter": "d", "answer":  "Trifft voll zu"},
                    ],
      "correct_answer" : "d",                     
-     "next_link" :"/quiz/13" ,
-     "prior_link" :"/quiz/11"                  
+     "next_link" :"/agilecheck/13" ,
+     "prior_link" :"/agilecheck/11"                  
   },
 
 
@@ -208,8 +208,8 @@ export const quiz_details = [
                    { "letter": "d", "answer":  "Trifft voll zu"},
                    ],
      "correct_answer" : "d",                     
-     "next_link" :"/quiz/14" ,
-     "prior_link" :"/quiz/12"                  
+     "next_link" :"/agilecheck/14" ,
+     "prior_link" :"/agilecheck/12"                  
   },
 
    {
@@ -224,8 +224,8 @@ export const quiz_details = [
                    { "letter": "d", "answer":  "Trifft voll zu"},
                    ],
      "correct_answer" : "d",                     
-     "next_link" :"/quiz/15" ,
-     "prior_link" :"/quiz/13"                  
+     "next_link" :"/agilecheck/15" ,
+     "prior_link" :"/agilecheck/13"                  
   },
 
   {
@@ -240,8 +240,8 @@ export const quiz_details = [
                    { "letter": "d", "answer":  "Trifft voll zu"},
                    ],
      "correct_answer" : "d",                     
-     "next_link" :"/quizresult" ,
-     "prior_link" :"/quiz/14"                  
+     "next_link" :"/ergebnis" ,
+     "prior_link" :"/agilecheck/14"                  
   },
 
 

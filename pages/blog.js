@@ -1,32 +1,16 @@
-import { servidor_url } from "../config";
+import { backend_url } from "../config";
 import Head from "next/head";
-import Image from "next/image";
-
 import MenuFlotante from "../components/MenuFlotante";
 import Footer from "../components/Footer";
-
 import MenuFlotanteBoton from "../components/MenuFlotanteBoton";
-// import MenuSuperior from "../components/MenuSuperior";
-
-import TextoBloque01 from "../components/textobloque01";
-import Image01 from "../components/crashkurse/image01";
-
-import Tabla01 from "../components/crashkurse/tabla01";
-
 import AreaSuperior from "../componentes/area_superior/AreaSuperior";
-
-import BarraConTextoDerecha from "../components/BarraConTextoDerecha";
-import BarraConTextoIzquierda from "../components/BarraConTextoIzquierda";
-
 import Content04 from "../components/Content04";
-
-import ModalFormCookie from "../components/ModalFormCookie";
 
 //----------------------------------------------------------------------------------------------------------
 //           CRASHKURSE \ CRASHKURS ZUM AGILE COACH
 //----------------------------------------------------------------------------------------------------------
 
-export default function Home({ blog_details }) {
+export default function Home({ blog_details, cursos_lista,  servicios_lista }) {
   const titulo1 = "VLOG";
   const titulo2 = "BLOG";
   const titulo2a = "";
@@ -57,6 +41,9 @@ export default function Home({ blog_details }) {
           fondo="ajustable"
           texto_parrafo_blanco_cursos={texto01}
           area_gris_nueva={true}
+           servicios_lista={servicios_lista} 
+            cursos_lista={cursos_lista} 
+			
         />
 
         {/*Unser Blog  */}
@@ -64,7 +51,7 @@ export default function Home({ blog_details }) {
         <div className="mt-5"> </div>
 
         {/*Footer  */}
-        <Footer />
+       <Footer servicios_lista={servicios_lista} cursos_lista={cursos_lista} />
       </div>
 
       {/*Menu Lateral oculto  */}
@@ -75,13 +62,25 @@ export default function Home({ blog_details }) {
 
 //Obteniendo los datos desde el servidor
 export const getServerSideProps = async (context) => {
-  const url5 = `${servidor_url}/api/blog`;
+  const url5 = `${backend_url}/api/blog`;
   const res5 = await fetch(url5);
   const blog_details = await res5.json();
+
+   
+  const url2 = `${backend_url}/api/leistungen`;
+  const res2 = await fetch(url2);
+  const servicios_lista = await res2.json();
+
+  const url3 = `${backend_url}/api/curso`;
+  const res3 = await fetch(url3);
+  const cursos_lista = await res3.json();
+
 
   return {
     props: {
       blog_details,
+       cursos_lista,
+      servicios_lista
     },
   };
 };

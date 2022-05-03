@@ -24,8 +24,9 @@ export default function Card07Shop({
         <div className="row   g-0 pb-2 pt-3 fondo_card_shop">
           <img
             className=" imagen-team-card "
-            src={`${servidor_url}/img/${imagen}`}
+            src={`${imagen}`}
             alt={texto_alt}
+            loading="lazy" 
           />
         </div>
 

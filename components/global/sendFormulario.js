@@ -1,15 +1,12 @@
-import { servidor_url } from "../../config";
+import { backend_url } from "../../config";
 import axios from "axios";
 
 const qs = require("qs");
 
 const sendFormulario = async (datos) => {
-  const url = `${servidor_url}/api/forms`;
+  const url = `${backend_url}/api/forms`;
 
- 
   let bodyData = qs.stringify(datos);
-
- 
 
   try {
     const respuesta_api = await axios.post(url, bodyData, {
@@ -18,9 +15,8 @@ const sendFormulario = async (datos) => {
       },
     });
     return respuesta_api;
-   
   } catch (err) {
-    console.log("Error in sendFormulario: " + err);
+    
   }
 };
 

@@ -1,6 +1,6 @@
-import { servidor_url } from "../../config";
 
-import MenuNavBar from "./MenuNavBar";
+
+
 import Logo from "./Logo";
 import BotonAgileCheck from "./BotonAgileCheck";
 

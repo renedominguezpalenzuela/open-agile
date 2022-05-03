@@ -1,20 +1,8 @@
-//----------------------------------------------------------------------------------------------------------
-//          Panel Flotante oculto
-//----------------------------------------------------------------------------------------------------------
-//TODO: poner transparente y de otro color
-//TODO: agregar path de recorte
-//TODO: Arreglar los links
-//Responsividad: ERROR
-
 import Head from "next/head";
 import { useEffect, useRef } from "react";
 
 export default function MenuFlotante() {
   const boton = useRef();
-
-  // const eventoBotonSubirFichero = (event) => {
-  //   hiddenFileInput.current.click();
-  // };
 
   const handleClick = () => {
     setTimeout(function () {
@@ -51,7 +39,7 @@ export default function MenuFlotante() {
             id="menu">
             <li className="nav-item">
               <a
-                href="/#course"
+                href="/#crashkurse"
                 className="nav-link text-truncate"
                 id="crashkurse_link"
                 onClick={handleClick}>
@@ -61,7 +49,7 @@ export default function MenuFlotante() {
 
             <li>
               <a
-                href="/#services"
+                href="/#leistungen"
                 className="nav-link text-truncate"
                 id="leinstungen_link"
                 onClick={handleClick}>

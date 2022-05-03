@@ -1,21 +1,25 @@
 @font-face {
   font-family: Montserrat-Regular;
   src: url("/fonts/Montserrat-Regular.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: Montserrat-Light;
   src: url("/fonts/Montserrat-Light.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: Montserrat-Bold;
   src: url("/fonts/Montserrat-Bold.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: Montserrat-BoldItalic;
   src: url("/fonts/Montserrat-BoldItalic.ttf");
+  font-display: swap;
 }
 
 @font-face {
@@ -41,6 +45,7 @@
 @font-face {
   font-family: Montserrat-ExtraBold;
   src: url("/fonts/Montserrat-ExtraBold.ttf");
+  font-display: swap;
 }
 
 @font-face {
@@ -56,6 +61,7 @@
 @font-face {
   font-family: Montserrat-SemiBold;
   src: url("/fonts/Montserrat-SemiBold.ttf");
+  font-display: swap;
 }
 
 @font-face {
@@ -161,9 +167,15 @@
   text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
 }
 
-@media (max-width: 490px) {
+@media (max-width: 490px) and (min-width: 400px) {
   .font_title_seccion_sombra {
     font-size: 3rem !important;
+  }
+}
+
+@media (max-width: 399px) {
+  .font_title_seccion_sombra {
+    font-size: 2.5rem !important;
   }
 }
 
@@ -206,15 +218,27 @@
   text-shadow: 1px 3px 5px rgb(0 0 0 / 40%);
 }
 
-@media (max-width: 575px) {
+@media (max-width: 575px) and (orientation: portrait) {
   .font_cards_magenta {
     font-size: 6vw;
   }
 }
 
-@media (max-width: 767px) and (min-width: 576px) {
+@media (max-width: 767px) and (min-width: 576px) and (orientation: portrait) {
   .font_cards_magenta {
     font-size: 4.5vw;
+  }
+}
+
+@media (max-width: 575px) and (orientation: landscape) {
+  .font_cards_magenta {
+    font-size: 5vw;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 576px) and (orientation: landscape) {
+  .font_cards_magenta {
+    font-size: 3vw;
   }
 }
 
@@ -439,13 +463,19 @@
   line-height: 90%;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 992px) and (orientation: landscape) {
+  .font_card_title {
+    font-size: 2.5vw;
+  }
+}
+
+@media (max-width: 575px) and (orientation: portrait) {
   .font_card_title {
     font-size: 6vw;
   }
 }
 
-@media (max-width: 767px) and (min-width: 576px) {
+@media (max-width: 767px) and (min-width: 576px) and (orientation: portrait) {
   .font_card_title {
     font-size: 3vw;
   }
@@ -502,7 +532,7 @@
 
 @media (max-width: 575px) {
   .font_card_title_vlog {
-    font-size: 6vw;
+    font-size: 4vw;
   }
 }
 

@@ -8,6 +8,7 @@ import AreaSuperior from "../componentes/area_superior/AreaSuperior";
 import Card07Shop from "../components/Card07Shop";
 
 import { servidor_url } from "../config";
+import { backend_url } from "../config";
 
 import ModalFormCookie from "../components/ModalFormCookie";
 import { useState, useEffect } from "react";
@@ -16,7 +17,7 @@ import { useState, useEffect } from "react";
 //           CRASHKURSE \ CRASHKURS ZUM AGILE COACH
 //----------------------------------------------------------------------------------------------------------
 //https://www.amazon.de/Crashkurs-Selbstorganisation-agilen-Teams-wertschätzende/dp/3648151509/ref=sr_1_2?__mk_de_DE=ÅMÅŽÕÑ&crid=3PL0Y0OIVCT4Y&keywords=crashkurs+agil&qid=1640623312&sprefix=crashkurs+agil%2Caps%2C97&sr=8-2
-export default function Home({ shop }) {
+export default function Home({ shop , cursos_lista,  servicios_lista}) {
   const titulo_area_superior2 = "AGILITÄT FÜR ZUHAUSE UND UNTERWEGS";
   const titulo_area_superior = "DER OPEN AGILE SHOP";
 
@@ -56,6 +57,9 @@ export default function Home({ shop }) {
             titulo_muy_largo={true}
             area_gris_nueva={true}
             shop={true}
+             servicios_lista={servicios_lista} 
+            cursos_lista={cursos_lista} 
+			
           />
 
           <div className="row  mt-5 mb-5 pt-5  d-flex justify-content-center ">
@@ -65,21 +69,21 @@ export default function Home({ shop }) {
                 className="col-lg-4 p-3 d-flex justify-content-center card-shop-land">
                 <Card07Shop
                   id={oneShop.id}
-                  titulo={oneShop.titulo}
-                  texto={oneShop.texto}
-                  imagen={oneShop.imagen}
-                  texto_boton1={oneShop.texto_boton1}
-                  texto_boton2={oneShop.texto_boton2}
-                  texto_alt={oneShop.texto_alt}
-                  link1={oneShop.link1}
-                  link2={oneShop.link2}
+                  titulo={oneShop.attributes.title}
+                  texto={oneShop.attributes.description}
+                  imagen={oneShop.attributes.image.data.attributes.formats.small.url}
+                  texto_boton1={oneShop.attributes.left_button_text}
+                  texto_boton2={oneShop.attributes.rigth_button_text}
+                  texto_alt={oneShop.attributes.title}
+                  link1={oneShop.attributes.left_button_url}
+                  link2={oneShop.attributes.rigth_button_url}
                 />
               </div>
             ))}
           </div>
 
           {/*Footer  */}
-          <Footer />
+         <Footer servicios_lista={servicios_lista} cursos_lista={cursos_lista} />
         </div>
 
         {/*Menu Lateral oculto  */}
@@ -90,14 +94,25 @@ export default function Home({ shop }) {
 }
 
 export const getServerSideProps = async (context) => {
-  const url = `${servidor_url}/api/shop`;
+  const url = `${backend_url}/api/shop`;
   const res = await fetch(url);
 
   const shop = await res.json();
 
+  
+  const url2 = `${backend_url}/api/leistungen`;
+  const res2 = await fetch(url2);
+  const servicios_lista = await res2.json();
+
+  const url3 = `${backend_url}/api/curso`;
+  const res3 = await fetch(url3);
+  const cursos_lista = await res3.json();
+
   return {
     props: {
       shop,
+       cursos_lista,
+      servicios_lista
     },
   };
 };

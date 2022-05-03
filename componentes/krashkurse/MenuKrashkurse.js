@@ -2,7 +2,11 @@ import { servidor_url } from "../../config";
 import Image from "next/image";
 import Link from "next/link";
 
+const ONLINEURL =
+  "https://open-agile-academy.teachable.com/p/online-crashkurs-selbstorganisation-in-agilen-teams";
+
 export default function MenuKrashkurse({
+  online,
   link_beschreibung,
   link_vorteile,
   link_inhalte,
@@ -12,8 +16,8 @@ export default function MenuKrashkurse({
   link_pdf,
   link_boton,
 }) {
-  let link_boton_new = "#dates_section";
-  if (link_boton != undefined && link_boton.length > 0) {
+  let link_boton_new = online !== null ? ONLINEURL : "#termine";
+  if (online === null && link_boton != undefined && link_boton.length > 0) {
     link_boton_new = link_boton;
   }
 
@@ -30,8 +34,7 @@ export default function MenuKrashkurse({
             <tbody>
               <tr className=" font-card-menu-crashkurse">
                 <td>
-                  <a
-                    href={`${servidor_url}/${link_beschreibung}#section_beschreibung`}>
+                  <a href={`${servidor_url}/${link_beschreibung}#abschnitt`}>
                     <div className="myanimacioncursos">BESCHREIBUNG</div>
                   </a>
                 </td>
@@ -40,7 +43,7 @@ export default function MenuKrashkurse({
               </tr>
               <tr className="font-card-menu-crashkurse">
                 <td>
-                  <a href={`${servidor_url}/${link_vorteile}#section_vorteile`}>
+                  <a href={`${servidor_url}/${link_vorteile}#abschnitt`}>
                     <div className="myanimacioncursos">VORTEILE</div>
                   </a>
                 </td>
@@ -49,7 +52,7 @@ export default function MenuKrashkurse({
               </tr>
               <tr className="font-card-menu-crashkurse">
                 <td>
-                  <a href={`${servidor_url}/${link_inhalte}#section_inhalte`}>
+                  <a href={`${servidor_url}/${link_inhalte}#abschnitt`}>
                     <div className="myanimacioncursos">INHALTE</div>
                   </a>
                 </td>
@@ -57,19 +60,9 @@ export default function MenuKrashkurse({
                 <td align="right">{">"}</td>
               </tr>
 
-              {/* <tr className="font-card-menu-crashkurse">
-                <td>
-                  <Link href={`${servidor_url}/${link_leistungen}#menukurs`}>
-                    <div className="myanimacioncursos">LEISTUNGEN</div>
-                  </Link>
-                </td>
-                <td align="right">></td>
-              </tr> */}
-
               <tr className="font-card-menu-crashkurse">
                 <td>
-                  <a
-                    href={`${servidor_url}/${link_kosten}#section_leistungen-kosten`}>
+                  <a href={`${servidor_url}/${link_kosten}#abschnitt`}>
                     <div className="myanimacioncursos">LEISTUNGEN & KOSTEN</div>
                   </a>
                 </td>
@@ -117,19 +110,25 @@ export default function MenuKrashkurse({
   );
 }
 
-function downloadFile(filePath) {
-  var link = document.createElement("a");
-  link.href = filePath;
-  link.download = filePath.substr(filePath.lastIndexOf("/") + 1);
-  link.click();
-}
+const downloadEmployeeData = (path, name) => {
+  fetch(path).then((response) => {
+    response.blob().then((blob) => {
+      let url = window.URL.createObjectURL(blob);
+      
+      let a = document.createElement("a");
+      a.href = url;
+      a.download = name;
+      a.click();
+    });
+  });
+};
 
 const botonAbrirPDF = (link_pdf) => {
   //  event.preventDefault();
 
   for (let i = link_pdf.length - 1; i >= 0; i--) {
     // window.open(unPdf, "_blank");
-    downloadFile(link_pdf[i]);
+    downloadEmployeeData(link_pdf[i].path, link_pdf[i].name);
     //  window.open(unPdf, '_parent', 'download');
   }
 };

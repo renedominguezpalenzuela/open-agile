@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useRef } from "react";
 import TextField from "@mui/material/TextField";
 // import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Button from "@mui/material/Button";
@@ -18,28 +19,49 @@ import { sendFormulario } from "../components/global/sendFormulario";
 
 import { pink } from "@mui/material/colors";
 
-import { servidor_url } from "../config";
 import { formEmail } from "../config";
 
 import { AlertDialogForms } from "./AlertDialogForms";
 
 export default function FormularioContacto2() {
-  const [checked1, setChecked1] = useState(false);
-  const [nombre, setNombre] = React.useState("");
-  const [correo, setCorreo] = React.useState("");
-  const [textoDialogo, setTextoDialogo] = React.useState("");
+  const botonCerrarFormulario = useRef();
 
+  const errorIffieldEmpty = "Bitte überprüfe die Eingabe";
+  const errorIffieldWrong = "Fehler";
+
+  const [checked1, setChecked1] = useState(false);
   const handleChange1 = (event) => {
     setChecked1(event.target.checked);
   };
 
+  const [errorNombre, setErrorNombre] = React.useState(false);
+  const [texterrorNombre, setTextErrorNombre] = React.useState("");
+
+  const [nombre, setNombre] = React.useState("");
+
   const handleChangeNombre = (event) => {
+    if (event.target.value != "") {
+      setErrorNombre(false);
+      setTextErrorNombre(null);
+    }
+
     setNombre(event.target.value);
   };
 
+  const [errorEmail, setErrorEmail] = React.useState(false);
+  const [texterrorEmail, setTextErrorEmail] = React.useState("");
+
+  const [correo, setCorreo] = React.useState("");
   const handleChangeCorreo = (event) => {
+    if (event.target.value != "") {
+      setErrorEmail(false);
+      setTextErrorEmail(null);
+    }
+
     setCorreo(event.target.value);
   };
+
+  const [textoDialogo, setTextoDialogo] = React.useState("");
 
   //dialogo
   const [open, setOpen] = React.useState(false);
@@ -54,57 +76,74 @@ export default function FormularioContacto2() {
 
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
-  const texto_EnviadoCorrectamente = "Vielen Dank für Deine Anmeldung zum Open Agile Newsletter!";
+  const texto_EnviadoCorrectamente =
+    "Vielen Dank für Deine Anmeldung zum Open Agile Newsletter!";
   const texto_ErrorEnDatosCheckBox =
     "Bitte bestätige die AGBs, um dich für unseren Newsletter anzumelden";
   const texto_ErrorEnDatos =
     "Bitte überprüfe Deine Eingaben und sende das Formular erneut ab.";
   const texto_ErrorEnServidor =
     "Kontaktformular Error, bitte versuchen Sie es erneut.";
-    
 
   const eventoBotonEnviar = async () => {
     if (nombre === "" || correo === "") {
-      
+      if (nombre === "") {
+        setErrorNombre(true);
+        setTextErrorNombre(errorIffieldEmpty);
+      }
+
+      if (correo === "") {
+        setErrorEmail(true);
+        setTextErrorEmail(errorIffieldEmpty);
+      }
 
       setTextoDialogo(texto_ErrorEnDatos);
       handleClickOpen();
       return;
     }
 
+    if (!isEmailValid(correo)) {
+      setErrorEmail(true);
+      setTextErrorEmail(errorIffieldWrong);
+      setTextoDialogo(texto_ErrorEnDatos);
+      handleClickOpen();
+
+      return;
+    }
+
     if (!checked1) {
-      
       setTextoDialogo(texto_ErrorEnDatosCheckBox);
       handleClickOpen();
       return;
     }
 
-   
-
     const DataToSend = {
-      from: "Newsletter form",
+      from: "Newsletter Anmeldung",
       to: formEmail,
-      subject: "Newsletter form",
+      subject: "Newsletter Anmeldung",
       body: `    
-      <strong>Newsletter form</strong>
+      <strong>Newsletter Anmeldung</strong> <br />
       <strong>Name: </strong> ${nombre} <br />
       <strong>Email: </strong> ${correo} <br />   
-      `
+      `,
     };
 
     const respuesta = await sendFormulario(DataToSend);
-
-  
 
     if (respuesta.data.cod_resp === "000") {
       setTextoDialogo(texto_EnviadoCorrectamente);
       handleClickOpen();
     } else {
-      setTextoDialogo(texto_ErrorEnServidor + ": " + respuesta.data.cod_resp + " - "+respuesta.data.msg);
+      setTextoDialogo(
+        texto_ErrorEnServidor +
+          ": " +
+          respuesta.data.cod_resp +
+          " - " +
+          respuesta.data.msg
+      );
       handleClickOpen();
     }
   };
-
 
   const styles = {
     width: { sm: 250, md: 350 },
@@ -194,6 +233,8 @@ export default function FormularioContacto2() {
             InputLabelProps={fuentes}
             value={nombre}
             onChange={handleChangeNombre}
+            helperText={errorNombre ? texterrorNombre : ""}
+            error={errorNombre}
           />
         </div>
         <div className="group item-edit2 ">
@@ -207,6 +248,8 @@ export default function FormularioContacto2() {
             InputLabelProps={fuentes}
             value={correo}
             onChange={handleChangeCorreo}
+            helperText={errorEmail ? texterrorEmail : ""}
+            error={errorEmail}
           />
         </div>{" "}
         <div className="group  item-boton1  ">
@@ -235,11 +278,7 @@ export default function FormularioContacto2() {
         </div>
       </div>
       {/* Refactorizar */}
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description">
+      <Dialog open={open} onClose={handleClose} disableEnforceFocus>
         {/* <DialogTitle id="alert-dialog-title">
           {"Use Google's location service?"}
         </DialogTitle> */}
@@ -256,4 +295,14 @@ export default function FormularioContacto2() {
       </Dialog>
     </>
   );
+}
+
+function isEmailValid(emailAdress) {
+  var EMAIL_REGEXP = new RegExp(
+    "^[a-z0-9]+(.[_a-z0-9]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,15})$",
+    "i"
+  );
+  // var EMAIL_REGEXP = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,20}$/;
+
+  return EMAIL_REGEXP.test(emailAdress);
 }

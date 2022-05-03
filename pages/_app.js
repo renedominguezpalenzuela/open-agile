@@ -54,10 +54,14 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons";
 
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-
+import ReactGA from "react-ga";
 import { useEffect } from "react";
 import Script from "next/script";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import { withRouter } from "next/router";
+
+import Cookies from "js-cookie";
+
 config.autoAddCss = false; /* eslint-disable import/first */
 
 library.add(
@@ -72,12 +76,41 @@ library.add(
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
+// ReactGA.initialize("UA-219220429-1");
 
-export default function MyApp(props) {
+const MyApp = (props) => {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
 
+  // useEffect(() => {
+  //   import("bootstrap/dist/js/bootstrap");
+  // }, []);
+
   useEffect(() => {
-    import("bootstrap/dist/js/bootstrap");
+    import("bootstrap/dist/js/bootstrap.bundle.min");
+
+    const ISSERVER = typeof window === "undefined";
+    let cancelar = null;
+    let accept_cookies = null;
+    if (!ISSERVER) {
+      cancelar = localStorage.getItem("cancel");
+      accept_cookies = localStorage.getItem("accept_cookies");
+    }
+
+    
+    //Inicialmente se comienza a usar GA,
+    //si el usuario rechaza las cookies  (cancelar=1) se deja de usar
+    //Cancelar es seteado a 1 en el formulario de cookies si no se aceptan los cookies
+
+    if (accept_cookies != undefined && accept_cookies != null) {
+      if (accept_cookies === "1") {
+        ReactGA.initialize("UA-219220429-1", {titleCase: false});
+        ReactGA.set({ anonymizeIp: true });
+        ReactGA.pageview(window.location.pathname + window.location.search);
+       
+      }
+    }
+
+   
   }, []);
 
   return (
@@ -85,19 +118,10 @@ export default function MyApp(props) {
       <Head>
         <title>My page</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=UA-219220429-1"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){window.dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'UA-219220429-1');
-          `}
-        </Script>
+        {/* <Script
+          src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"
+          strategy="beforeInteractive"
+        /> */}
       </Head>
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
@@ -109,10 +133,12 @@ export default function MyApp(props) {
       </ThemeProvider>
     </CacheProvider>
   );
-}
+};
 
 MyApp.propTypes = {
   Component: PropTypes.elementType.isRequired,
   emotionCache: PropTypes.object,
   pageProps: PropTypes.object.isRequired,
 };
+
+export default withRouter(MyApp);

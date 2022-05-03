@@ -21,7 +21,7 @@ ul li.bullets-leistungen::before {
   }
 }
 
-ul li.bullets-jobs::before {
+.bullets-jobs ul li::before {
   content: "\2022";
   color: #f82d7c;
   font-weight: bold;
@@ -31,13 +31,13 @@ ul li.bullets-jobs::before {
 }
 
 @media (min-width: 300px) and (max-width: 450px) {
-  ul li.bullets-jobs::before {
+  .bullets-jobs ul li::before {
     width: 3.8vw;
-    margin-left: -4.6vw;
+    margin-left: -3.8vw;
   }
 }
 
-ul li.bullets-blog::before {
+.bullets-blog ul li::before {
   content: "\2022";
   color: #f82d7c;
   font-weight: bold;
@@ -47,7 +47,7 @@ ul li.bullets-blog::before {
 }
 
 @media (min-width: 300px) and (max-width: 450px) {
-  ul li.bullets-blog::before {
+  .bullets-blog ul li::before {
     width: 3.8vw;
     margin-left: -3.8vw;
   }

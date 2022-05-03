@@ -14,7 +14,7 @@ export default function TextoBloque01({
   return (
     <>
       {titulo_main != undefined && titulo_main != "" && (
-        <div id="course" className="row  text-center mt-5 mb-5  ">
+        <div id="crashkurse" className="row  text-center mt-5 mb-5  ">
           <h3 className="font_titulo_seccion "> {titulo_main}</h3>
         </div>
       )}
@@ -27,13 +27,13 @@ export default function TextoBloque01({
 
       <div className="row  text-center mb-4 d-flex  justify-content-center ">
         {foto2 != undefined && foto != "" && (
-          <img className="img-fluid  foto-team" src={foto2} />
+          <img className="img-fluid  foto-team" src={foto2} loading="lazy" />
         )}
       </div>
 
       <div className="row  text-center mb-4 d-flex  justify-content-center ">
         {foto != undefined && foto != "" && (
-          <img className="img-fluid  foto-team" src={`img/${foto}`} />
+          <img className="img-fluid  foto-team" src={`img/${foto}`} loading="lazy" />
         )}
       </div>
 

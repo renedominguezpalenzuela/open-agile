@@ -39,7 +39,7 @@ export default function Content01Iconos() {
       <a href="https://www.xing.com/pages/open-agile" > 
 
            
-          <img className="social-img"  src= {`${servidor_url}/img/xing-img.svg`}  /> 
+          <img className="social-img"  src= {`${servidor_url}/img/xing-img.svg`}  loading="lazy"  /> 
       </a>
     </div>
 

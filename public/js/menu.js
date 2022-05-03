@@ -2,10 +2,11 @@ var boton = document.getElementById("boton_abrir_menu");
 var boton2 = document.getElementById("boton_new_abrir_menu2");
 var contendor_boton = document.getElementById("panel_abrir_menu");
 
-
 var texto_iconos_izquierda = document.getElementById("texto_iconos_izquierda");
 var linea_iconos_izquierda = document.getElementById("linea_iconos_izquierda");
-var boton_contacto_telefono = document.getElementById( "boton_contacto_telefono");
+var boton_contacto_telefono = document.getElementById(
+  "boton_contacto_telefono"
+);
 var boton_contacto_correo = document.getElementById("boton_contacto_correo");
 
 var crashkurse_link = document.getElementById("crashkurse_link");
@@ -15,58 +16,7 @@ var color_magenta = "#e42078";
 var color_white = "#ffffff";
 var color = color_magenta;
 
-  
-
-
-
-
 var pagina = window.location.pathname;
-
-// setColor(0, pagina);
-
-// window.addEventListener("load", (event) => {
-//   if (document.getElementById("boton_cerrar_menu")) {
-//     document.getElementById("boton_cerrar_menu").addEventListener("click", function (e) {
-//         e.preventDefault();
-//         e.stopPropagation();
-//         document.getElementById("mySidepanel").style.width = "0";
-//         document.getElementById("panel_abrir_menu").style.visibility = "visible";
-//         document.getElementById("principal").classList.remove("myblur");
-//       });
-//   }
-
-//   if (document.getElementById("boton_abrir_menu")) {
-//     document.getElementById("boton_abrir_menu").addEventListener("click", function (e) {
-//         e.preventDefault();
-//         e.stopPropagation();    
-//         document.getElementById("mySidepanel").style.width = "30vw";
-//         document.getElementById("panel_abrir_menu").style.visibility = "hidden";
-//         document.getElementById("principal").classList.add("myblur");
-//       });
-//   }
-
-//   if (boton2) {
-//     boton2.addEventListener("click", function (e) {
-//       e.preventDefault();
-//       e.stopPropagation();
-//       document.getElementById("mySidepanel").style.width = "110vw";
-//       document.getElementById("panel_abrir_menu").style.visibility = "hidden";
-//       document.getElementById("principal").classList.add("myblur");
-//     });
-//   }
-
-//   if (leinstungen_link) {
-//     leinstungen_link.addEventListener("click", cerrar_menu_lateral);
-//   }
-
-  
-//   if (crashkurse_link) {
-
-//     crashkurse_link.addEventListener("click", cerrar_menu_lateral);
-//   }
-// });
-
-// var page = path.split("/").pop();
 
 //TODO: obtener Y desde divs reales en el html
 function setColor(Y, pagina) {
@@ -85,7 +35,6 @@ function setColor(Y, pagina) {
 
       if (Y >= Y_Area_SuperiorEnd && Y < Y_CrashkurseStart) {
         color = color_magenta;
-        
       }
 
       if (Y >= Y_CrashkurseStart && Y < Y_CrashkurseKardsEnd) {
@@ -116,13 +65,12 @@ function setColor(Y, pagina) {
     color = color_white;
   }
 
-  const r2 = /\/quizstart/;
+  const r2 = /\/agilecheck/;
   if (r2.test(pagina)) {
     color = color_magenta;
   }
 
   if (boton_contacto_telefono) {
-   
     boton_contacto_telefono.style.color = color;
   }
 
@@ -139,7 +87,9 @@ function setColor(Y, pagina) {
   }
 }
 
-window.addEventListener( "scroll", function () {
+window.addEventListener(
+  "scroll",
+  function () {
     var course_top = 100;
 
     var Y = window.pageYOffset;
@@ -165,12 +115,8 @@ window.addEventListener( "scroll", function () {
   false
 );
 
-
- function cerrar_menu_lateral(e) {
-
-   
-        document.getElementById("mySidepanel").style.width = "0";
-        document.getElementById("panel_abrir_menu").style.visibility =
-          "visible";
-        document.getElementById("principal").classList.remove("myblur");
-      };
+function cerrar_menu_lateral(e) {
+  document.getElementById("mySidepanel").style.width = "0";
+  document.getElementById("panel_abrir_menu").style.visibility = "visible";
+  document.getElementById("principal").classList.remove("myblur");
+}

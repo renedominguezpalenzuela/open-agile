@@ -5,12 +5,12 @@ export const crashkurse_beschreibung_details = [
     titulo1: ["CRASHKURS"],
     titulo2: ["AGILE COACH"],
     nombre_curso: "Crashkurs zum Agile Coach",
-    image: "crashkurse/image1.jpg",
+    image: "http://localhost:3000/img/crashkurse/image1.jpg",
     link: "crashkurse/beschreibung/1",
-    image_beschreibung: "crashkurse/image1.jpg",
-    image_vorteile: "crashkurse/image3.jpg",
-    image_inhalte: "crashkurse/image4.jpg",
-    image2: "crashkurse/notes.jpg",
+    image_beschreibung: "http://localhost:3000/img/crashkurse/image1.jpg",
+    image_vorteile: "http://localhost:3000/img/crashkurse/image3.jpg",
+    image_inhalte: "http://localhost:3000/img/crashkurse/image4.jpg",
+    image2: "http://localhost:3000/img/crashkurse/notes.jpg",
     texto_beschreibung: [
       "Als Agile Coach unterstützt Du einzelne Menschen, Teams und Organisationen auf ihrem" +
         " Weg zu einer stimmigeren Arbeitswelt. Für Deine Klienten besteht oftmals der Wu" +
@@ -81,7 +81,7 @@ export const crashkurse_beschreibung_details = [
     link_leistungen: "crashkurse/leistungen/1",
     link_kosten: "crashkurse/kosten/1",
     text_termine: "2022",
-    link_termine: "/#dates_section",
+    link_termine: "/#termine",
     // TODO: Agregar un indice para que determinar el primer doc a descargar debe ser Onepager
     link_pdf: [
       "/doc/Onepager_Crashkurs_Agile_Coach.pdf",
@@ -135,12 +135,12 @@ export const crashkurse_beschreibung_details = [
     titulo1: ["CRASHKURS"],
     titulo2: ["AGILE FACILITATOR"],
     nombre_curso: "Crashkurs zum Agile Facilitator",
-    image: "crashkurse/image2.jpg",
+    image: "http://localhost:3000/img/crashkurse/image2.jpg",
     link: "crashkurse/beschreibung/2",
-    image_beschreibung: "crashkurse/image2.jpg",
-    image_inhalte: "crashkurse/image4.jpg",
-    image2: "crashkurse/notes.jpg",
-    image_vorteile: "crashkurse/image3.jpg",
+    image_beschreibung: "http://localhost:3000/img/crashkurse/image2.jpg",
+    image_inhalte: "http://localhost:3000/img/crashkurse/image4.jpg",
+    image2: "http://localhost:3000/img/crashkurse/notes.jpg",
+    image_vorteile: "http://localhost:3000/img/crashkurse/image3.jpg",
     texto_beschreibung: [
       "Als Agile Facilitator begleitest Du Dein Team in die agile Arbeitswelt. Zudem bi" +
         "st Du als Vorbild für eine lösungsorientierte- und zielgerichtete Zusammenarbeit" +
@@ -202,7 +202,7 @@ export const crashkurse_beschreibung_details = [
     link_leistungen: "crashkurse/leistungen/2",
     link_kosten: "crashkurse/kosten/2",
     text_termine: "2022",
-    link_termine: "/#dates_section",
+    link_termine: "/#termine",
 
     link_pdf: [
       "/doc/Onepager_Crashkurs_Agile_Facilitator.pdf",
@@ -275,12 +275,12 @@ export const crashkurse_beschreibung_details = [
     titulo1: ["CRASHKURS"],
     titulo2: ["SCRUM MASTER"],
     nombre_curso: "Crashkurs zum Scrum Master",
-    image_beschreibung: "crashkurse/image3.jpg",
+    image_beschreibung: "http://localhost:3000/img/crashkurse/image3.jpg",
     link: "crashkurse/beschreibung/3",
-    image: "crashkurse/image3.jpg",
-    image_vorteile: "crashkurse/image3.jpg",
-    image_inhalte: "crashkurse/image4.jpg",
-    image2: "crashkurse/notes.jpg",
+    image: "http://localhost:3000/img/crashkurse/image3.jpg",
+    image_vorteile: "http://localhost:3000/img/crashkurse/image3.jpg",
+    image_inhalte: "http://localhost:3000/img/crashkurse/image4.jpg",
+    image2: "http://localhost:3000/img/crashkurse/notes.jpg",
     texto_beschreibung: [
       "Als Scrum Master arbeitest Du nach den Werten, Prinzipien und Regeln des Agilen " +
         "Manifests und des Scrum Guides.  Zusammen mit dem Product Owner und dem Entwickl" +
@@ -339,7 +339,7 @@ export const crashkurse_beschreibung_details = [
     link_leistungen: "crashkurse/leistungen/3",
     link_kosten: "crashkurse/kosten/3",
     text_termine: "2022",
-    link_termine: "/#dates_section",
+    link_termine: "/#termine",
     link_pdf: [
       "/doc/Onepager_Crashkurs_Scrum_Master.pdf",
       "/doc/Anmeldung_zum_Crashkurs_Scrum_Master.pdf",
@@ -411,12 +411,12 @@ export const crashkurse_beschreibung_details = [
     titulo1: ["CRASHKURS"],
     titulo2: ["MITBESTIMMUNG IN DER AGILEN ARBEITSWELT"],
     nombre_curso: "Crashkurs Mitbestimmung in der agilen Arbeitswelt",
-    image_beschreibung: "crashkurse/image7.jpg",
+    image_beschreibung: "http://localhost:3000/img/crashkurse/image7.jpg",
     link: "crashkurse/beschreibung/4",
-    image: "crashkurse/image7.jpg",
-    image_vorteile: "crashkurse/image3.jpg",
-    image_inhalte: "crashkurse/image4.jpg",
-    image2: "crashkurse/notes.jpg",
+    image: "http://localhost:3000/img/crashkurse/image7.jpg",
+    image_vorteile: "http://localhost:3000/img/crashkurse/image3.jpg",
+    image_inhalte: "http://localhost:3000/img/crashkurse/image4.jpg",
+    image2: "http://localhost:3000/img/crashkurse/notes.jpg",
     texto_beschreibung: [
       "Durch die Entwicklung von Unternehmen, hin zu flexiblen und agilen Organisatione" +
         "n, verändert sich viel.",
@@ -466,7 +466,7 @@ export const crashkurse_beschreibung_details = [
     link_leistungen: "crashkurse/leistungen/4",
     link_kosten: "crashkurse/kosten/4",
     text_termine: "2022",
-    link_termine: "/#dates_section",
+    link_termine: "/#termine",
     link_pdf: [
       "/doc/Onepager_Crashkurs_Mitbestimmung_in_der_agilen_Arbeitswelt.pdf",
       "/doc/Anmeldung_zum_Crashkurs_Mitbestimmung_in_der_agilen_Arbeitswelt.pdf",
@@ -516,12 +516,12 @@ export const crashkurse_beschreibung_details = [
     titulo1: ["ONLINE CRASHKURS"],
     titulo2: ["SELBST", "ORGANISATION", "IN AGILEN TEAMS"],
     nombre_curso: "Online Crashkurs Selbstorganisation in agilen Teams",
-    image_beschreibung: "crashkurse/image8.jpg",
+    image_beschreibung: "http://localhost:3000/img/crashkurse/image8.jpg",
     link: "crashkurse/beschreibung/5",
-    image: "crashkurse/image8.jpg",
-    image_vorteile: "crashkurse/image3.jpg",
-    image_inhalte: "crashkurse/image4.jpg",
-    image2: "crashkurse/notes.jpg",
+    image: "http://localhost:3000/img/crashkurse/image8.jpg",
+    image_vorteile: "http://localhost:3000/img/crashkurse/image3.jpg",
+    image_inhalte: "http://localhost:3000/img/crashkurse/image4.jpg",
+    image2: "http://localhost:3000/img/crashkurse/notes.jpg",
     texto_beschreibung: [
       "Mit diesem Crashkurs begibst Du dich auf den Weg zu einer stimmigeren Zusammenar" +
         "beit, in der sich Mitarbeitende wertschätzend und auf Augenhöhe begegnen.",

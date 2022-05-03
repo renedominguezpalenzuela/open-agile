@@ -2,6 +2,7 @@
 import React from "react";
 
 import Head from "next/head";
+import Image from 'next/image'
 
 let ancho = 540;
 let longitud_linea = 24;
@@ -17,6 +18,7 @@ export default function Card01({
   texto_boton,
   texto_alt,
   link,
+  main_page,
 }) {
   let cadena_sin_padding =
     "row  h-md-100  d-flex align-items-center justify-content-center ";
@@ -29,16 +31,24 @@ export default function Card01({
     <>
       {/* col-md-3 */}
       {/*  <div className="  d-flex justify-content-center  " key={id}> */}
-      <div className="card  my_card myanimacion sombra_cards">
+      <div
+        className={`card ${
+          main_page ? " my_card_home " : " my_card "
+        } myanimacion sombra_cards`}>
         {imagen != undefined && imagen != "" && (
+          
           <img
             className="card-img-top corte_cards img-rounded  "
-            src={`${servidor_url}/img/${imagen}`}
+            src={imagen}
             alt={texto_alt}
+          //  layout="fill"
+          //  sizes="50vw"
+            loading="lazy" 
           />
         )}
 
-        <div className="card-body text-center    ">
+        <div className="card-body text-center">
+        
           {Array.isArray(titulo) ? (
             titulo != undefined &&
             titulo != "" &&

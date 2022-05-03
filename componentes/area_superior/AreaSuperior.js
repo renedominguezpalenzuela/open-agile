@@ -1,12 +1,9 @@
 import Link from "next/link";
 
-import { servidor_url } from "../../config";
-
 import MenuNavBar from "./MenuNavBar";
 import MenuNavBar2 from "./MenuNavBar2";
 import Logo from "./Logo";
 import BotonAgileCheck from "./BotonAgileCheck";
-import Titulo from "./Titulo";
 import IconosIzquierda from "../../components/IconosIzquierda";
 
 import BotonesConfigurator from "./BotonesConfigurator";
@@ -17,20 +14,6 @@ import Content01TextSinIcons from "./Content01TextSinIcons";
 
 import FormularioContacto2 from "../../components/formulariocontacto2";
 
-// fondo --- define el tipo de fondo del area superior
-/*
-si no se especifica fondo = bannermain
-
-  barco   --- se pone el fondo con un barco "bannermain-quiz";
-  quiz-questions 
-  variable  ---- texto -- fondo crece en funcion del contenido
-  ajustable ---- bannermain-ajustable -- fondo se redudce en funcion del contenido
-  bannermain-quiz-questions 
-
-
- */
-
-//  titulo_largo ={true} --- reduce el fonts del titulo texto1 magenta para que quepa en una linea
 export default function AreaSuperior({
   fondo,
   texto1,
@@ -67,6 +50,8 @@ export default function AreaSuperior({
   bes,
   daten,
   impre,
+  servicios_lista, 
+  cursos_lista
 }) {
   let vista_movil = false;
   let bottom_margin = true;
@@ -76,6 +61,9 @@ export default function AreaSuperior({
   } else {
     bottom_margin = true;
   }
+
+
+
 
   return (
     <>
@@ -95,7 +83,7 @@ export default function AreaSuperior({
 
           {/*    <div className="row d-none d-lg-block "> */}
           <div className="item-menu  d-flex align-items-center justify-content-center ">
-            <MenuNavBar />
+            <MenuNavBar servicios_lista={servicios_lista} cursos_lista={cursos_lista} />
           </div>
 
           <div className="item-boton   d-flex align-items-center justify-content-center">
@@ -135,7 +123,12 @@ export default function AreaSuperior({
             <div className="item-img-team-top me-5">
               <img
                 className=" img-team-top  "
-                src={`${servidor_url}/img/${img_team_top}`}
+                src={
+                  img_team_top.startsWith("https://")
+                    ? img_team_top
+                    : `${servidor_url}/img/${img_team_top}`
+                }
+                loading="lazy" 
               />
             </div>
           )}
@@ -149,7 +142,7 @@ export default function AreaSuperior({
         {(vista_movil = true)}
 
         <MenuNavBar2 />
-        <div className={`${getFondo(fondo)}`}>
+        <div className={`${getFondo(fondo)}${home ? " bannermain-hhome" : ""}`}>
           <div className="item-titulo   ">
             {contenido_principal(
               texto1,
@@ -303,7 +296,7 @@ const contenido_principal = (
         </>
       )}
 
-      <div className="mb-5">
+      <div className="mb-4">
         {iconos != undefined && iconos && <Content01Iconos />}
 
         {/*Texto_quiz_result */}
@@ -419,7 +412,9 @@ const contenido_principal = (
         (vista_movil ? (
           <div className="row pb-5  d-flex justify-content-center align-items-center ">
             <div className="col-12 col-sm-7 col-md-5  pb-2 d-flex justify-content-center">
-              <Link href="/quiz/1" className="d-flex justify-content-center ">
+              <Link
+                href="/agilecheck/1"
+                className="d-flex justify-content-center ">
                 <button
                   type="button"
                   className="w-100  btn-agile-check2 font_boton_main-quiz redondeado-boton  ">
@@ -431,7 +426,7 @@ const contenido_principal = (
         ) : (
           <div>
             <div className="row mt-5 text-center mb-5 d-flex  justify-content-center ">
-              <Link href="/quiz/1">
+              <Link href="/agilecheck/1">
                 <button
                   type="button"
                   className="btn p-3 ms-2 me-2 w-50 h-100 btn-card font-btn-card rounded-pill  ">

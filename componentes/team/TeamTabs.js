@@ -8,13 +8,8 @@ import Box from '@mui/material/Box'
 
 import { servidor_url } from '../../config'
 
-export default function TeamTabs({
-  texto01,
-  texto02,
-  texto03,
-  texto04,
-  texto05,
-}) {
+export default function TeamTabs({ data }) {
+
   const [value, setValue] = React.useState(0)
 
   const handleChange = (event, newValue) => {
@@ -22,7 +17,6 @@ export default function TeamTabs({
   }
 
   const styles = {
-    // MuiButtonBase-root-MuiTab-root
     '& .MuiButtonBase-root.MuiTab-root': {
       fontSize: 11,
     },
@@ -40,17 +34,12 @@ export default function TeamTabs({
             centered
             sx={styles}
           >
-            <Tab
-              label="Selbstorganisation und Selbstverantwortung "
-              {...a11yProps(0)}
-            />
-            <Tab label="Partnerschaftlicher Umgang " {...a11yProps(1)} />
-            <Tab label="Empowerment und Entwicklung" {...a11yProps(2)} />
-            <Tab label="Transparenz " {...a11yProps(3)} />
-            <Tab
-              label="Effizienz, Effektivität und Pragmatismus"
-              {...a11yProps(4)}
-            />
+            {data.map((item, index) => <Tab
+                key={index}
+                label={item.attributes.title}
+                {...a11yProps(index)}
+              />
+            )}
           </Tabs>
           <Tabs
             value={value}
@@ -62,55 +51,25 @@ export default function TeamTabs({
             centered
             sx={styles}
           >
-            <Tab
-              label="Selbstorganisation und Selbstverantwortung "
-              {...a11yProps(0)}
+            {data.map((item, index) => <Tab
+              key={index}
+              label={item.attributes.title}
+              {...a11yProps(index)}
             />
-            <Tab label="Partnerschaftlicher Umgang " {...a11yProps(1)} />
-            <Tab label="Empowerment und Entwicklung" {...a11yProps(2)} />
-            <Tab label="Transparenz " {...a11yProps(3)} />
-            <Tab
-              label="Effizienz, Effektivität und Pragmatismus"
-              {...a11yProps(4)}
-            />
+            )}
           </Tabs>
         </Box>
-
-        <OneTab
-          indice={0}
-          titulo="SELBSTORGANISATION UND SELBSTVERANTWORTUNG"
-          texto={texto01}
-          value={value}
-          setValue={setValue}
-        />
-        <OneTab
-          indice={1}
-          titulo="PARTNERSCHAFTLICHER UMGANG"
-          texto={texto02}
-          value={value}
-          setValue={setValue}
-        />
-        <OneTab
-          indice={2}
-          titulo="EMPOWERMENT UND ENTWICKLUNG"
-          texto={texto03}
-          value={value}
-          setValue={setValue}
-        />
-        <OneTab
-          indice={3}
-          titulo="TRANSPARENZ"
-          texto={texto04}
-          value={value}
-          setValue={setValue}
-        />
-        <OneTab
-          indice={4}
-          titulo="EFFIZIENZ, EFFEKTIVITÄT UND PRAGMATISMUS"
-          texto={texto05}
-          value={value}
-          setValue={setValue}
-        />
+        <div>
+        {data.map((item, index) => <OneTab
+            max={data.length - 1}
+            indice={index}
+            titulo={item.attributes.title}
+            texto={item.attributes.description}
+            value={value}
+            setValue={setValue}
+          />
+        )}
+        </div>
       </Box>
     </>
   )
@@ -149,10 +108,10 @@ function a11yProps(index) {
   }
 }
 
-function OneTab({ indice, titulo, texto, value, setValue }) {
+function OneTab({ indice, titulo, texto, value, setValue, max }) {
   const myfuncion = () => {
     let proximo_indice = indice + 1
-    if (proximo_indice > 4) {
+    if (proximo_indice > max) {
       proximo_indice = 0
     }
 
@@ -168,13 +127,14 @@ function OneTab({ indice, titulo, texto, value, setValue }) {
           <div className="fuente-titulo-team-tab mt-2 mb-4">{titulo}</div>
 
           {texto != undefined &&
-            texto.length > 0 &&
-            texto.map((unaLinea, index) => (
-              <div className="fuente-texto-cursos" key={index}>
-                {unaLinea}
-                <p />
-              </div>
-            ))}
+          texto.length > 0 &&
+          // texto.map((unaLinea, index) => (
+            <div className="fuente-texto-cursos">
+              {texto}
+              <p />
+            </div>
+          // ))
+          }
         </div>
 
         <div onClick={myfuncion} className="ubicacion-boton-team">
@@ -184,6 +144,7 @@ function OneTab({ indice, titulo, texto, value, setValue }) {
             className="boton_flecha  "
             src={`${servidor_url}/img/leistungen/boton_flecha_magenta.svg`}
             alt=""
+            loading="lazy" 
           />
         </div>
       </TabPanel>

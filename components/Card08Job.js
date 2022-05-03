@@ -1,100 +1,62 @@
-// import styles from "../styles/Home.module.css";
-
-import Head from "next/head";
-let ancho = 540;
 let longitud_linea = 24;
-
-import { servidor_url } from "../config";
-
 import ModalFormJob from "./ModalFormJob";
+import ReactMarkdown from "react-markdown";
 
-export default function Card08Job({
-  id,
-  titulo1,
-  titulo2,
-  titulo_parrafo1,
-  parrafo1,
-  titulo_parrafo2,
-  parrafo2,
-  titulo_parrafo3,
-  parrafo3,
-}) {
+export default function Card08Job({ data }) {
+  const titulo = data.attributes.title;
+  const pdf = data.attributes.pdf;
+
+  const startsWithCapital = (word) => {
+    return word.charCodeAt(0) >= 65 && word.charCodeAt(0) <= 90;
+  };
+
+  const formatTitle = (titulo) => {
+    const aux = titulo.split(" ");
+    let titulo1 = aux[0];
+    let titulo2 = "";
+    for (let i = 1; i < aux.length; i++) {
+      if (startsWithCapital(aux[i])) {
+        for (let j = i; j < aux.length; j++) {
+          titulo2 += " " + aux[j];
+        }
+        break;
+      } else {
+        titulo1 += " " + aux[i];
+      }
+    }
+    return { titulo1: titulo1, titulo2: titulo2 };
+  };
+
   return (
     <>
-      <div className="card myanimacion sombra_cards redondear-card pb-2">
-        <div className="h-100 d-flex  align-items-center  ">
-          <div className="row w-100 g-0 ">
-            <div className="col-12 pt-1 ps-3 pe-3   ">
-              {titulo1 != undefined && titulo1 != "" && (
+      <div className="card myanimacion sombra_cards redondear-card-job pb-2 alto-job-card h-100  ">
+        <div className="h-100 d-flex  align-items-center   ">
+          <div className="row w-100 g-0 h-100">
+            <div className="col-12 pt-1 ps-3 pe-3  ">
+   
+              {titulo != undefined && titulo != "" && (
                 <>
-                  <div className="font1-card-job-new pt-3">{titulo1}</div>
-                </>
-              )}
-
-              {titulo2 != undefined && titulo2 != "" && (
-                <>
-                  <div className="font1-card-job-new pt-1">{titulo2}</div>
-                </>
-              )}
-
-              {titulo_parrafo1 != undefined && titulo_parrafo1 != "" && (
-                <>
-                  <div className="font2-card-job pt-2 mt-3">
-                    {titulo_parrafo1}
+                  <div className="font1-card-job-new pt-3">
+                    {formatTitle(titulo).titulo1}
+                  </div>
+                  <div className="font1-card-job-new pb-3">
+                    {formatTitle(titulo).titulo2}
                   </div>
                 </>
               )}
-
-              <ul>
-                {parrafo1 != undefined &&
-                  parrafo1.length > 0 &&
-                  parrafo1.map((unaLinea, index) => (
-                    <li key={index} className="font3-card-job bullets-jobs">
-                      {unaLinea}
-                    </li>
-                  ))}
-              </ul>
-
-              {titulo_parrafo2 != undefined && titulo_parrafo2 != "" && (
-                <>
-                  <div className="font2-card-job pt-2">{titulo_parrafo2}</div>
-                </>
-              )}
-
-              <ul>
-                {parrafo2 != undefined &&
-                  parrafo2.length > 0 &&
-                  parrafo2.map((unaLinea, index) => (
-                    <div key={index} className="">
-                      <li className=" font3-card-job bullets-jobs">
-                        {unaLinea}
-                      </li>
-                    </div>
-                  ))}
-              </ul>
-
-              {titulo_parrafo3 != undefined && titulo_parrafo3 != "" && (
-                <>
-                  <div className="font2-card-job pt-2">{titulo_parrafo3}</div>
-                </>
-              )}
-
-              <ul>
-                {parrafo3 != undefined &&
-                  parrafo3.length > 0 &&
-                  parrafo3.map((unaLinea, index) => (
-                    <li key={index} className="font3-card-job bullets-jobs">
-                      {unaLinea}
-                    </li>
-                  ))}
-              </ul>
+              <ReactMarkdown className="markdown bullets-jobs">
+                {data.attributes.description}
+              </ReactMarkdown>
             </div>
-
-            <div className="row mt-3 mb-2    g-0   d-flex justify-content-center">
+            <div className="row mt-3 mb-2    g-0   d-flex justify-content-center align-items-end ">
               <div className="col-6 d-flex justify-content-center ">
                 <a
-                  href={"/doc/Stellenanzeige.pdf"}
-                  download="Stellenanzeige.pdf"
+                  onClick={() =>
+                    downloadEmployeeData(
+                      pdf.data.attributes.url,
+                      pdf.data.attributes.name
+                    )
+                  }
                   className="btn  btn-card-job font-btn-card-shop rounded-pill">
                   PDF-DOWNLOAD
                 </a>
@@ -112,7 +74,6 @@ export default function Card08Job({
           </div>
         </div>
       </div>
-
       <ModalFormJob
         id={1}
         quartal={1}
@@ -120,24 +81,31 @@ export default function Card08Job({
         frase="Jetzt Kontakt aufnehmen!"
         day={""}
         link={""}
-        job_title={titulo1 + " " + titulo2}
+        job_title={titulo}
       />
     </>
   );
 }
+const downloadEmployeeData = (path, name) => {
+  fetch(path).then((response) => {
+    response.blob().then((blob) => {
+      let url = window.URL.createObjectURL(blob);
+      let a = document.createElement("a");
+      a.href = url;
+      a.download = name;
+      a.click();
+    });
+  });
+};
 
 function procesarTextoLargo(texto) {
   return <> {texto}</>;
-
   let texto_devolver = "";
   let separador = " ";
-
   if (texto.substring(longitud_linea, longitud_linea + 1) === " ") {
     separador = "-";
   }
-
   //TODO: si coincide el guion con un espaciom no poner
-
   if (texto.length > longitud_linea) {
     return (
       <>

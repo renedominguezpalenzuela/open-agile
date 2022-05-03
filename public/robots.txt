@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://open-agile.de/sitemap.xml

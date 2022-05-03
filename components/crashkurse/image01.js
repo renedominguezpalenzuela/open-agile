@@ -17,7 +17,7 @@ export default function Image01({image}) {
         <div className="card mb-3" style={{width: ancho+'vw'}}>
             <div className="row no-gutters">
                 <div className="col">
-                    <img src={`img/${image}`} className="card-img" alt="..."/>
+                    <img src={`img/${image}`} className="card-img" alt="..." loading="lazy" />
                 </div>
                 <div className="col">
                     <div className="card-body">

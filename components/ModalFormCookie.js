@@ -7,6 +7,8 @@ import Switch from "@mui/material/Switch";
 import { styled } from "@mui/material/styles";
 import Link from "next/link";
 
+import ReactGA from "react-ga";
+
 const styles3 = {
   ".MuiFormControlLabel-label": {
     fontFamily: "Montserrat-Bold",
@@ -80,7 +82,11 @@ export default function ModalFormCookie({
   // const [mostrarVentanaCookies, SetmostrarVentanaCookies] = useState(false);
 
   let first_time = Cookies.get("first_time");
-  let cancelar = Cookies.get("cancel");
+  const ISSERVER = typeof window === "undefined";
+  let cancelar = null;
+  if (!ISSERVER) {
+    cancelar = localStorage.getItem("cancel");
+  }
   if (first_time === undefined || first_time === "true") {
     first_time = true;
   } else {
@@ -97,7 +103,9 @@ export default function ModalFormCookie({
       Cookies.remove("performanceCheckedCookie");
       Cookies.remove("funktionalCheckedCookie");
       Cookies.remove("first_time");
-      Cookies.remove("cancel");
+      if (!ISSERVER) {
+        localStorage.removeItem("cancel");
+      }
       setReset(false);
     }
 
@@ -178,13 +186,22 @@ export default function ModalFormCookie({
   // }, [mostrar]);
 
   const botonAceptar = () => {
-    Cookies.remove("cancel");
+    if (!ISSERVER) {
+      localStorage.removeItem("cancel");
+      localStorage.setItem("accept_cookies", "1");
+    }
+
+    ReactGA.initialize("UA-219220429-1", { titleCase: false });
+    ReactGA.set({ anonymizeIp: true });
+    ReactGA.pageview(window.location.pathname + window.location.search);
+
     const c = document.getElementById("chat-application");
-    if (c !== undefined && c.classList.contains("d-none")) {
+
+    if (c !== undefined && c !== null && c.classList.contains("d-none")) {
       c.classList.remove("d-none");
     }
 
-    if (c !== undefined) {
+    if (c !== undefined && c !== null) {
       c.classList.add("d-block");
     }
     //guardar cookies
@@ -206,21 +223,25 @@ export default function ModalFormCookie({
     return;
   };
   const botonNoAceptar = () => {
+    ReactGA.ga("send", "pageview", { sessionControl: "end" });
+
     const c = document.getElementById("chat-application");
-    if (c !== undefined && c.classList.contains("d-block")) {
+
+    if (c !== undefined && c !== null && c.classList.contains("d-block")) {
       c.classList.remove("d-block");
     }
-    if (c !== undefined) {
+    if (c !== undefined && c !== null) {
       c.classList.add("d-none");
     }
     //eliminar todas las cookies
-    Cookies.set("cancel", true);
+    if (!ISSERVER) {
+      localStorage.setItem("cancel", "1");
+      localStorage.setItem("accept_cookies", "0");
+    }
     Cookies.remove("notwendigCheckedCookie");
     Cookies.remove("performanceCheckedCookie");
     Cookies.remove("funktionalCheckedCookie");
     Cookies.remove("first_time");
-    Cookies.set("first_time", false, null);
-
     setShowMe(false);
     return;
   };
@@ -312,7 +333,7 @@ export default function ModalFormCookie({
             </div>
           </div>
           <div className=" d-flex g-0  mt-3 pb-2 justify-content-md-start justify-content-center ms-md-4 fuente_footer_texto_form_cookie enlinea-padre">
-            <Link href="/datenschutzerklarung" className="enlinea-hijo">
+            <Link href="/datenschutz" className="enlinea-hijo">
               <a className="mylinkhoover">Datenschutz</a>
             </Link>
             <div className="enlinea-hijo ms-1 me-1"> | </div>

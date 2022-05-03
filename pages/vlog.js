@@ -1,4 +1,4 @@
-import { servidor_url } from "../config";
+import { backend_url } from "../config";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -26,14 +26,10 @@ import ModalFormCookie from "../components/ModalFormCookie";
 //           CRASHKURSE \ CRASHKURS ZUM AGILE COACH
 //----------------------------------------------------------------------------------------------------------
 
-export default function Home({ vlog }) {
+export default function Home({ vlog, cursos_lista,  servicios_lista }) {
   const titulo1 = "VLOG";
-  const titulo2 = "";
-  const titulo2a = "";
 
   const titulo3 = "VLOG";
-
-  const titulo4 = "";
 
   const texto01 = [
     "Ob interessante Interviews zum Thema New Work, kurze Fachbeiträge oder einfach mal ein paar spannende Impulse für die persönliche Weiterentwicklung. In diesem Vlog wirst Du regelmäßig auf dem Laufenden gehalten. Wir freuen uns auf die Arbeitswelt von morgen! Du auch? Willst Du keinen neuen Beitrag verpassen, dann abonniere unseren YouTube-Kanal „Open Agile“ und unseren Newsletter.",
@@ -61,8 +57,8 @@ export default function Home({ vlog }) {
   return (
     <>
       <Head>
-        <title>{titulo2}</title>
-        <meta name="description" content={titulo2} />
+        <title>{titulo3}</title>
+        <meta name="description" content={titulo3} />
         <link rel="icon" href="/favicon.ico" />
         <script async src="js/chat.js" />
         <script async src="js/menu.js" />
@@ -77,6 +73,8 @@ export default function Home({ vlog }) {
           texto_parrafo_blanco_cursos={texto03}
           texto_parrafo_plequitas={text04_bullets}
           area_gris_nueva={true}
+             servicios_lista={servicios_lista} 
+            cursos_lista={cursos_lista} 
         />
 
         {/*Carrousel  */}
@@ -85,7 +83,7 @@ export default function Home({ vlog }) {
         <div className="mt-5"> </div>
 
         {/*Footer  */}
-        <Footer />
+       <Footer servicios_lista={servicios_lista} cursos_lista={cursos_lista} />
       </div>
 
       {/*Menu Lateral oculto  */}
@@ -96,13 +94,26 @@ export default function Home({ vlog }) {
 
 //Obteniendo los datos desde el servidor
 export const getServerSideProps = async (context) => {
-  const url5 = `${servidor_url}/api/vlog`;
+  const url5 = `${backend_url}/api/vlog`;
   const res5 = await fetch(url5);
   const vlog = await res5.json();
+
+
+
+  const url2 = `${backend_url}/api/leistungen`;
+  const res2 = await fetch(url2);
+  const servicios_lista = await res2.json();
+
+  const url3 = `${backend_url}/api/curso`;
+  const res3 = await fetch(url3);
+  const cursos_lista = await res3.json();
+
 
   return {
     props: {
       vlog,
+        cursos_lista,
+      servicios_lista
     },
   };
 };
