@@ -1,6 +1,6 @@
 export default function handler(req, res) {
   fetch(
-    `https://js-agileweb-backend.herokuapp.com/api/crashkurses?populate=%2A`
+    `https://openagilestrapi.herokuapp.com/api/crashkurses?populate=%2A`
   )
     .then((response) => response.json())
     .then((data) => {

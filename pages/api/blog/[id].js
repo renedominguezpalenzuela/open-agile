@@ -1,6 +1,6 @@
 export default function handler(req, res) {
   const url =
-    "https://js-agileweb-backend.herokuapp.com/api/blogs?populate=%2A";
+    "https://openagilestrapi.herokuapp.com/api/blogs?populate=%2A";
 
   fetch(url)
     .then((response) => response.json())
